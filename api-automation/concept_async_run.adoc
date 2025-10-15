@@ -1,0 +1,53 @@
+---
+permalink: api-automation/concept_async_run.html 
+sidebar: sidebar 
+keywords: job, objects, asynchronous, processes 
+summary: Active IQ Unified Manager stellt die Jobs-API bereit, die Informationen zu den Jobs abruft, die während der Ausführung anderer APIs ausgeführt werden. Sie müssen wissen, wie die asynchrone Verarbeitung mithilfe des Job-Objekts funktioniert. 
+---
+= Jobobjekte asynchrone Prozesse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager bietet die `jobs` API, die Informationen zu den Jobs abruft, die während der Ausführung anderer APIs ausgeführt werden. Sie müssen wissen, wie die asynchrone Verarbeitung mithilfe des Job-Objekts funktioniert.
+
+Die Ausführung einiger API-Aufrufe, insbesondere jener zum Hinzufügen oder Ändern von Ressourcen, kann länger dauern als die Ausführung anderer Aufrufe.  Unified Manager verarbeitet diese lang andauernden Anfragen asynchron.
+
+
+
+== Asynchrone Anforderungen, beschrieben mithilfe des Job-Objekts
+
+Nach einem asynchron ausgeführten API-Aufruf zeigt der HTTP-Antwortcode 202 an, dass die Anfrage erfolgreich validiert und akzeptiert, aber noch nicht abgeschlossen wurde. Die Anfrage wird als Hintergrundaufgabe verarbeitet, die nach der ersten HTTP-Antwort an den Client weiterläuft. Die Antwort enthält das Job-Objekt, das die Anfrage verankert, einschließlich seiner eindeutigen Kennung.
+
+
+
+== Abfragen des mit einer API-Anforderung verknüpften Job-Objekts
+
+Das in der HTTP-Antwort zurückgegebene Job-Objekt enthält mehrere Eigenschaften. Sie können die Statuseigenschaft abfragen, um festzustellen, ob die Anforderung erfolgreich abgeschlossen wurde. Ein Job-Objekt kann einen der folgenden Zustände aufweisen:
+
+* `NORMAL`
+* `WARNING`
+* `PARTIAL_FAILURES`
+* `ERROR`
+
+
+Es gibt zwei Techniken, die Sie beim Abfragen eines Job-Objekts verwenden können, um einen Endzustand für die Aufgabe zu erkennen (entweder Erfolg oder Misserfolg):
+
+* Standard-Polling-Anfrage: Der aktuelle Jobstatus wird sofort zurückgegeben.
+* Lange Polling-Anforderung: Wenn der Job-Status wechselt zu `NORMAL, ERROR,` oder `PARTIAL_FAILURES.`
+
+
+
+
+== Schritte in einer asynchronen Anfrage
+
+Sie können das folgende allgemeine Verfahren verwenden, um einen asynchronen API-Aufruf abzuschließen:
+
+. Führen Sie den asynchronen API-Aufruf aus.
+. Erhalten Sie eine HTTP-Antwort 202, die die erfolgreiche Annahme der Anfrage anzeigt.
+. Extrahieren Sie die Kennung für das Job-Objekt aus dem Antworttext.
+. Warten Sie innerhalb einer Schleife, bis das Job-Objekt den Endzustand erreicht `NORMAL, ERROR,` oder `PARTIAL_FAILURES.`
+. Überprüfen Sie den Endstatus des Jobs und rufen Sie das Jobergebnis ab.
+

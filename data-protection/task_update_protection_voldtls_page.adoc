@@ -1,0 +1,59 @@
+---
+permalink: data-protection/task_update_protection_voldtls_page.html 
+sidebar: sidebar 
+keywords: initialize, update, protection, relationships, volume, health details page 
+summary: Sie können eine erstmalige Baseline-Übertragung für eine neue Schutzbeziehung durchführen oder eine Beziehung aktualisieren, wenn sie bereits initialisiert ist und Sie eine manuelle, ungeplante inkrementelle Aktualisierung durchführen möchten, um die Daten sofort zu übertragen. 
+---
+= Initialisieren oder aktualisieren Sie Schutzbeziehungen auf der Seite „Volume-/Integritätsdetails“.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine erstmalige Baseline-Übertragung für eine neue Schutzbeziehung durchführen oder eine Beziehung aktualisieren, wenn sie bereits initialisiert ist und Sie eine manuelle, ungeplante inkrementelle Aktualisierung durchführen möchten, um die Daten sofort zu übertragen.
+
+*HINWEIS*: Sie können durch Konsistenzgruppen geschützte Volumes nicht initialisieren oder aktualisieren.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen die OnCommand Workflow Automation eingerichtet haben.
+
+
+.Schritte
+. Suchen Sie auf der Registerkarte *Schutz* der Detailseite *Volume/Integrität* in der Topologie die Schutzbeziehung, die Sie initialisieren oder aktualisieren möchten, und klicken Sie dann mit der rechten Maustaste darauf.
+. Wählen Sie im Menü *Initialisieren/Aktualisieren*.
++
+Alternativ können Sie im Menü *Aktionen* die Option *Beziehung* > *Initialisieren/Aktualisieren* auswählen, um die Beziehung zu initialisieren oder zu aktualisieren, deren Details Sie gerade anzeigen.
+
++
+Das Dialogfeld „Initialisieren/Aktualisieren“ wird angezeigt.
+
+. Wählen Sie auf der Registerkarte *Übertragungsoptionen* eine Übertragungspriorität und die maximale Übertragungsrate aus.
+. Klicken Sie auf *Quell-Snapshot-Kopien* und dann in der Spalte *Snapshot-Kopie* auf *Standard*.
++
+Das Dialogfeld „Quell-Snapshot-Kopie auswählen“ wird angezeigt.
+
+. Wenn Sie eine vorhandene Snapshot-Kopie angeben möchten, anstatt die Standard-Snapshot-Kopie zu übertragen, klicken Sie auf *Vorhandene Snapshot-Kopie* und wählen Sie eine Snapshot-Kopie aus der Liste aus.
+. Klicken Sie auf *Senden*.
++
+Sie kehren zum Dialogfeld „Initialisieren/Aktualisieren“ zurück.
+
+. Wenn Sie mehr als eine Quelle zum Initialisieren oder Aktualisieren ausgewählt haben, klicken Sie auf *Standard* für die nächste Lese-/Schreibquelle, für die Sie eine vorhandene Snapshot-Kopie angeben möchten.
++
+Sie können für Datenschutzvolumes keine andere Snapshot-Kopie auswählen.
+
+. Klicken Sie auf *Senden*, um den Initialisierungs- oder Aktualisierungsauftrag zu starten.
++
+Der Initialisierungs- oder Aktualisierungsauftrag wird gestartet, Sie werden zur Seite mit den Volume-/Integritätsdetails zurückgeleitet und oben auf der Seite wird ein Auftragslink angezeigt.
+
+. *Optional:* Klicken Sie auf der Detailseite *Volume/Integrität* auf *Jobs anzeigen*, um den Status jedes Initialisierungs- oder Aktualisierungsjobs zu verfolgen.
++
+Es wird eine gefilterte Liste mit Jobs angezeigt.
+
+. *Optional:* Klicken Sie auf jeden Job, um seine Details anzuzeigen.
+. *Optional:* Klicken Sie in Ihrem Browser auf den Zurück-Pfeil, um zur Detailseite *Volumen/Gesundheit* zurückzukehren.
++
+Der Initialisierungs- oder Aktualisierungsvorgang ist abgeschlossen, wenn alle Jobaufgaben erfolgreich abgeschlossen wurden.
+
+

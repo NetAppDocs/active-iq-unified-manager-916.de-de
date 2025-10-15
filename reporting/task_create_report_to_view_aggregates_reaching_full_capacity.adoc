@@ -1,0 +1,41 @@
+---
+permalink: reporting/task_create_report_to_view_aggregates_reaching_full_capacity.html 
+sidebar: sidebar 
+keywords: create, report, view, aggregates, reaching, full capacity 
+summary: Sie können einen Bericht erstellen, um die Aggregate zu ermitteln, die ihre volle Kapazität erreichen, sodass Sie mehr Kapazität hinzufügen oder Arbeitslasten auf andere Aggregate verschieben können. 
+---
+= Erstellen Sie einen Bericht, um anzuzeigen, wann Aggregate ihre volle Kapazität erreichen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um die Aggregate zu ermitteln, die ihre volle Kapazität erreichen, sodass Sie mehr Kapazität hinzufügen oder Arbeitslasten auf andere Aggregate verschieben können.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Führen Sie die folgenden Schritte aus, um eine benutzerdefinierte Ansicht zu erstellen, die Aggregate anzeigt, die ihre volle Kapazität erreichen, und planen Sie dann die Generierung eines Berichts für diese Ansicht.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Aggregate*.
+. Wählen Sie im Menü „Ansicht“ die Option „Kapazität“ > „Alle Aggregate“ aus.
+. Wählen Sie *Anzeigen/Ausblenden*, um alle Spalten zu entfernen, die Sie nicht im Bericht haben möchten.
+. Klicken Sie auf das Filtersymbol, fügen Sie den folgenden Filter hinzu und klicken Sie dann auf *Filter anwenden*:
++
+** Tage bis zur vollständigen Fertigstellung weniger als 45 Tage
+
+
+. Klicken Sie oben auf die Spalte „Tage bis zur vollen Kapazität“, um die Ergebnisse nach der geringsten Anzahl von Tagen zu sortieren, die bis zum Erreichen der vollen Kapazität verbleiben.
+. Speichern Sie die Ansicht unter einem bestimmten Namen, der widerspiegelt, was die Ansicht anzeigt, z. B. „Tage bis zur vollen Gesamtkapazität“, und klicken Sie auf das Häkchen (image:../media/blue_check.gif[""] ).
+. Klicken Sie auf der Inventarseite auf die Schaltfläche *Geplante Berichte*.
+. Klicken Sie auf *Zeitplan hinzufügen*, um der Seite *Berichtszeitpläne* eine neue Zeile hinzuzufügen, damit Sie die Zeitplanmerkmale für den neuen Bericht definieren können.
+. Geben Sie einen Namen für den Berichtszeitplan ein und füllen Sie die anderen Berichtsfelder aus. Klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""] ) am Ende der Zeile.
++
+Der Bericht wird sofort testweise versendet.  Anschließend wird der Bericht generiert und in der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Basierend auf den im Bericht angezeigten Ergebnissen möchten Sie möglicherweise den Speicher auf Aggregaten erhöhen, die ihre volle Kapazität erreichen.  Darüber hinaus möchten Sie möglicherweise den Schwellenwert „Tage bis zur vollen Kapazität“ auf mehr als die standardmäßigen 7 Tage erhöhen, damit Sie Ereignisse erhalten, die Ihnen mehr Zeit geben, auf knapp werdenden Speicherplatz in Aggregaten zu reagieren.

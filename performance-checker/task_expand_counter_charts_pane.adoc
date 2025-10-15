@@ -1,0 +1,38 @@
+---
+permalink: performance-checker/task_expand_counter_charts_pane.html 
+sidebar: sidebar 
+keywords: expand, counter, charts, pane 
+summary: Sie können den Bereich „Zählerdiagramme“ erweitern, damit die Diagramme größer und besser lesbar sind. 
+---
+= Erweitern Sie den Bereich „Zählerdiagramme“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Bereich „Zählerdiagramme“ erweitern, damit die Diagramme größer und besser lesbar sind.
+
+Nachdem Sie die Vergleichsobjekte und den Zeitbereich für die Zähler definiert haben, können Sie einen größeren Bereich mit Zählerdiagrammen anzeigen.  Mit der Schaltfläche *<* in der Mitte des Performance Explorer-Fensters können Sie den Bereich erweitern.
+
+.Schritt
+. Erweitern oder verkleinern Sie den Bereich *Zählerdiagramme*.
+
+
+|===
+| Zu... | Machen Sie Folgendes... 
+
+
+ a| 
+Erweitern Sie den Bereich „Zählerdiagramme“, sodass er der Seitenbreite entspricht.
+ a| 
+Klicken Sie auf die Schaltfläche *<*
+
+
+
+ a| 
+Reduzieren Sie den Bereich „Counter Charts“ auf die rechte Hälfte der Seite
+ a| 
+Klicken Sie auf die Schaltfläche *>*
+
+|===

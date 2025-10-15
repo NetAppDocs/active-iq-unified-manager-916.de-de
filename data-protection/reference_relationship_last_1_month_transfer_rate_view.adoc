@@ -1,0 +1,37 @@
+---
+permalink: data-protection/reference_relationship_last_1_month_transfer_rate_view.html 
+sidebar: sidebar 
+keywords: relationship, 1 month, transfer rate, view 
+summary: 'Mit der Ansicht „Beziehung: Übertragungsrate des letzten Monats“ können Sie das täglich übertragene Datenvolumen für Datenträger in asynchronen Beziehungen analysieren.  Auf dieser Seite finden Sie auch Einzelheiten zu den täglichen Übertragungen und zur Zeit, die zum Abschließen des Übertragungsvorgangs für Volumes und Storage-VMs erforderlich ist.' 
+---
+= Beziehung: Ansicht der Übertragungsrate des letzten Monats
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit der Ansicht „Beziehung: Übertragungsrate des letzten Monats“ können Sie das täglich übertragene Datenvolumen für Datenträger in asynchronen Beziehungen analysieren.  Auf dieser Seite finden Sie auch Einzelheiten zu den täglichen Übertragungen und zur Zeit, die zum Abschließen des Übertragungsvorgangs für Volumes und Storage-VMs erforderlich ist.
+
+Mit den Steuerelementen oben auf der Seite können Sie Suchvorgänge durchführen, um bestimmte Objekte zu finden, Filter erstellen und anwenden, um die Liste der angezeigten Daten einzugrenzen, Spalten auf der Seite hinzufügen/entfernen/neu anordnen und die Daten auf der Seite in eine CSV-, PDF- oder XLSX-Datei exportieren.  Nachdem Sie die Seite angepasst haben, können Sie die Ergebnisse als benutzerdefinierte Ansicht speichern und dann einen Bericht dieser Daten planen, der regelmäßig generiert und per E-Mail versendet wird.  Wenn Sie beispielsweise Volume-Beziehungen anzeigen möchten, können Sie entweder auf das Menü *Speicher* > *Volumes* > *Beziehung: Übertragungsrate des letzten Monats* zugreifen oder auf das Menü *Schutz* > *Beziehungen* > *Beziehungen: Übertragungsrate des letzten Monats* und den *Filter* verwenden, um nur Daten für Volumes anzuzeigen.
+
+* *Gesamtübertragungsgröße*
++
+Zeigt die Gesamtgröße der Volumeübertragung in Gigabyte an.
+
+* *Tag*
++
+Zeigt den Tag an, an dem die Volumenübertragung initiiert wurde.
+
+* *Endzeit*
++
+Zeigt die Endzeit der Volumenübertragung mit Datum an.
+
+
+
+*Verwandte Informationen*
+
+* Informationen zur Ansicht *Relationship: MetroCluster* finden Sie unterlink:../storage-mgmt/task_monitor_metrocluster_configurations.html["Überwachung von MetroCluster -Konfigurationen"] .
+* Informationen zur Ansicht *Beziehung: Transferstatus des letzten Monats* finden Sie unterlink:../data-protection/reference_relationship_last_1_month_transfer_status_view.html["Beziehung: Ansicht des Übertragungsstatus des letzten Monats"] .
+* Informationen zur Ansicht *Beziehung: Alle Beziehungen* finden Sie unterlink:../data-protection/reference_relationship_last_1_month_transfer_rate_view.html["Beziehung: Ansicht der Übertragungsrate des letzten Monats"]
+

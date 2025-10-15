@@ -1,0 +1,60 @@
+---
+permalink: events/reference_event_setup_page.html 
+sidebar: sidebar 
+keywords: event, setup, page, command, buttons, list, view 
+summary: Auf der Seite „Ereigniseinrichtung“ wird die Liste der deaktivierten Ereignisse angezeigt und es werden Informationen wie der zugehörige Objekttyp und der Schweregrad des Ereignisses bereitgestellt.  Sie können auch Aufgaben wie das globale Deaktivieren oder Aktivieren von Ereignissen ausführen. 
+---
+= Seite „Ereigniseinrichtung“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Ereigniseinrichtung“ wird die Liste der deaktivierten Ereignisse angezeigt und es werden Informationen wie der zugehörige Objekttyp und der Schweregrad des Ereignisses bereitgestellt.  Sie können auch Aufgaben wie das globale Deaktivieren oder Aktivieren von Ereignissen ausführen.
+
+Sie können auf diese Seite nur zugreifen, wenn Sie über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+
+== Befehlsschaltflächen
+
+Mit den Befehlsschaltflächen können Sie für ausgewählte Ereignisse die folgenden Aufgaben ausführen:
+
+* *Deaktivieren*
++
+Öffnet das Dialogfeld „Ereignisse deaktivieren“, in dem Sie Ereignisse deaktivieren können.
+
+* *Aktivieren*
++
+Aktiviert ausgewählte Ereignisse, die Sie zuvor deaktiviert hatten.
+
+* *Upload-Regeln*
++
+Öffnet das Dialogfeld „Regeln hochladen“, das es Sites ohne externen Netzwerkzugriff ermöglicht, die Active IQ Regeldatei manuell in Unified Manager hochzuladen.  Die Regeln werden für Cluster- AutoSupport -Nachrichten ausgeführt, um Ereignisse für Systemkonfiguration, Verkabelung, Best Practice und Verfügbarkeit zu generieren, wie von der Active IQ Plattform definiert.
+
+* *EMS-Events abonnieren*
++
+Startet das Dialogfeld „EMS-Ereignisse abonnieren“, in dem Sie den Empfang bestimmter Event Management System (EMS)-Ereignisse von den Clustern abonnieren können, die Sie überwachen.  Das EMS sammelt Informationen zu Ereignissen, die im Cluster auftreten.  Wenn eine Benachrichtigung für ein abonniertes EMS-Ereignis eingeht, wird ein Unified Manager-Ereignis mit dem entsprechenden Schweregrad generiert.
+
+
+
+
+
+== Listenansicht
+
+In der Listenansicht werden (in Tabellenform) Informationen zu deaktivierten Ereignissen angezeigt.  Mithilfe der Spaltenfilter können Sie die angezeigten Daten anpassen.
+
+* *Ereignis*
++
+Zeigt den Namen des deaktivierten Ereignisses an.
+
+* *Schwere*
++
+Zeigt den Schweregrad des Ereignisses an.  Der Schweregrad kann „Kritisch“, „Fehler“, „Warnung“ oder „Information“ sein.
+
+* *Quellentyp*
++
+Zeigt den Quelltyp an, für den das Ereignis generiert wird.
+
+

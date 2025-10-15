@@ -1,0 +1,33 @@
+---
+permalink: events/reference_flash_card_events.html 
+sidebar: sidebar 
+keywords: flash, card, events, impact area, availability 
+summary: Flashkartenereignisse liefern Ihnen Informationen zum Status der auf den Knoten in Ihrem Rechenzentrum installierten Flashkarten, sodass Sie diese auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad. 
+---
+= Flashkartenereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Flashkartenereignisse liefern Ihnen Informationen zum Status der auf den Knoten in Ihrem Rechenzentrum installierten Flashkarten, sodass Sie diese auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad.
+
+
+
+== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+Karteikarten offline (ocumEvtFlashCardOffline)
+ a| 
+Vorfall
+ a| 
+Node
+ a| 
+Kritisch
+
+|===

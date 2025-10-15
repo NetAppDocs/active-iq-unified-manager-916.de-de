@@ -1,0 +1,181 @@
+---
+permalink: config/reference_remote_authentication_page.html 
+sidebar: sidebar 
+keywords: remote authentication, page 
+summary: Sie können die Seite „Remote-Authentifizierung“ verwenden, um Unified Manager für die Kommunikation mit Ihrem Authentifizierungsserver zu konfigurieren, um Remote-Benutzer zu authentifizieren, die versuchen, sich bei der Unified Manager-Web-Benutzeroberfläche anzumelden. 
+---
+= Seite „Remote-Authentifizierung“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Seite „Remote-Authentifizierung“ verwenden, um Unified Manager für die Kommunikation mit Ihrem Authentifizierungsserver zu konfigurieren, um Remote-Benutzer zu authentifizieren, die versuchen, sich bei der Unified Manager-Web-Benutzeroberfläche anzumelden.
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Nachdem Sie das Kontrollkästchen „Remote-Authentifizierung aktivieren“ aktiviert haben, können Sie die Remote-Authentifizierung mithilfe eines Authentifizierungsservers aktivieren.
+
+* *Authentifizierungsdienst*
++
+Ermöglicht Ihnen, den Verwaltungsserver so zu konfigurieren, dass Benutzer bei Verzeichnisdienstanbietern wie Active Directory oder OpenLDAP authentifiziert werden, oder Ihren eigenen Authentifizierungsmechanismus anzugeben.  Sie können einen Authentifizierungsdienst nur angeben, wenn Sie die Remote-Authentifizierung aktiviert haben.
+
++
+** *Active Directory*
++
+*** Administratorname
++
+Gibt den Administratornamen des Authentifizierungsservers an.
+
+*** Passwort
++
+Gibt das Kennwort für den Zugriff auf den Authentifizierungsserver an.
+
+*** Basis-Distinguished Name
++
+Gibt den Standort der Remote-Benutzer im Authentifizierungsserver an.  Wenn der Domänenname des Authentifizierungsservers beispielsweise +ou@domain.com+ lautet, dann ist der Basis-Distinguished Name *cn=ou,dc=domain,dc=com*.
+
+*** Verschachtelte Gruppensuche deaktivieren
++
+Gibt an, ob die Option zur Suche verschachtelter Gruppen aktiviert oder deaktiviert werden soll.  Standardmäßig ist diese Option deaktiviert.  Wenn Sie Active Directory verwenden, können Sie die Authentifizierung beschleunigen, indem Sie die Unterstützung für verschachtelte Gruppen deaktivieren.
+
+*** Sichere Verbindung verwenden
++
+Gibt den Authentifizierungsdienst an, der für die Kommunikation mit Authentifizierungsservern verwendet wird.
+
+
+
+** *OpenLDAP*
++
+*** Definierter Name binden
++
+Gibt den Bind-Distinguished Name an, der zusammen mit dem Basis-Distinguished Name verwendet wird, um Remotebenutzer im Authentifizierungsserver zu finden.
+
+*** Bind-Passwort
++
+Gibt das Kennwort für den Zugriff auf den Authentifizierungsserver an.
+
+*** Basis-Distinguished Name
++
+Gibt den Standort der Remote-Benutzer im Authentifizierungsserver an.  Wenn der Domänenname des Authentifizierungsservers beispielsweise +ou@domain.com+ lautet, dann ist der Basis-Distinguished Name *cn=ou,dc=domain,dc=com*.
+
+*** Sichere Verbindung verwenden
++
+Gibt an, dass Secure LDAP für die Kommunikation mit LDAP-Authentifizierungsservern verwendet wird.
+
+
+
+** *Andere*
++
+*** Definierter Name binden
++
+Gibt den Bind-Distinguished Name an, der zusammen mit dem Basis-Distinguished Name verwendet wird, um Remotebenutzer auf dem von Ihnen konfigurierten Authentifizierungsserver zu finden.
+
+*** Bind-Passwort
++
+Gibt das Kennwort für den Zugriff auf den Authentifizierungsserver an.
+
+*** Basis-Distinguished Name
++
+Gibt den Standort der Remote-Benutzer im Authentifizierungsserver an.  Wenn der Domänenname des Authentifizierungsservers beispielsweise +ou@domain.com+ lautet, dann ist der Basis-Distinguished Name *cn=ou,dc=domain,dc=com*.
+
+*** Protokollversion
++
+Gibt die von Ihrem Authentifizierungsserver unterstützte Version des Lightweight Directory Access Protocol (LDAP) an.  Sie können festlegen, ob die Protokollversion automatisch erkannt werden soll oder die Version auf 2 oder 3 einstellen.
+
+*** Benutzernamenattribut
++
+Gibt den Namen des Attributs im Authentifizierungsserver an, das die Benutzeranmeldenamen enthält, die vom Verwaltungsserver authentifiziert werden sollen.
+
+*** Gruppenmitgliedschaftsattribut
++
+Gibt einen Wert an, der Remotebenutzern die Mitgliedschaft in der Management-Server-Gruppe basierend auf einem Attribut und Wert zuweist, die im Authentifizierungsserver des Benutzers angegeben sind.
+
+*** UGID
++
+Wenn die Remote-Benutzer als Mitglieder eines GroupOfUniqueNames-Objekts im Authentifizierungsserver enthalten sind, können Sie mit dieser Option den Remote-Benutzern die Gruppenmitgliedschaft des Verwaltungsservers basierend auf einem angegebenen Attribut in diesem GroupOfUniqueNames-Objekt zuweisen.
+
+*** Verschachtelte Gruppensuche deaktivieren
++
+Gibt an, ob die Option zur Suche verschachtelter Gruppen aktiviert oder deaktiviert werden soll.  Standardmäßig ist diese Option deaktiviert.  Wenn Sie Active Directory verwenden, können Sie die Authentifizierung beschleunigen, indem Sie die Unterstützung für verschachtelte Gruppen deaktivieren.
+
+*** Mitglied
++
+Gibt den Attributnamen an, den Ihr Authentifizierungsserver zum Speichern von Informationen über die einzelnen Mitglieder einer Gruppe verwendet.
+
+*** Benutzerobjektklasse
++
+Gibt die Objektklasse eines Benutzers im Remote-Authentifizierungsserver an.
+
+*** Gruppenobjektklasse
++
+Gibt die Objektklasse aller Gruppen im Remote-Authentifizierungsserver an.
+
++
+
+NOTE: Die Werte, die Sie für die Attribute _Member_, _User Object Class_ und _Group Object Class_ eingeben, sollten mit denen übereinstimmen, die Sie in Ihren Active Directory-, OpenLDAP- und LDAP-Konfigurationen hinzugefügt haben.  Andernfalls kann die Authentifizierung fehlschlagen.
+
+*** Sichere Verbindung verwenden
++
+Gibt den Authentifizierungsdienst an, der für die Kommunikation mit Authentifizierungsservern verwendet wird.
+
+
+
+
+
++
+[NOTE]
+====
+Wenn Sie den Authentifizierungsdienst ändern möchten, stellen Sie sicher, dass Sie alle vorhandenen Authentifizierungsserver löschen und neue Authentifizierungsserver hinzufügen.
+
+====
+
+
+
+
+== Bereich „Authentifizierungsserver“
+
+Im Bereich „Authentifizierungsserver“ werden die Authentifizierungsserver angezeigt, mit denen der Verwaltungsserver kommuniziert, um Remotebenutzer zu finden und zu authentifizieren.  Die Anmeldeinformationen für Remotebenutzer oder -gruppen werden vom Authentifizierungsserver verwaltet.
+
+* *Befehlsschaltflächen*
++
+Ermöglicht Ihnen das Hinzufügen, Bearbeiten oder Löschen von Authentifizierungsservern.
+
++
+** Hinzufügen
++
+Ermöglicht Ihnen, einen Authentifizierungsserver hinzuzufügen.
+
++
+Wenn der Authentifizierungsserver, den Sie hinzufügen, Teil eines Hochverfügbarkeitspaars ist (das dieselbe Datenbank verwendet), können Sie auch den Partnerauthentifizierungsserver hinzufügen.  Dadurch kann der Verwaltungsserver mit dem Partner kommunizieren, wenn einer der Authentifizierungsserver nicht erreichbar ist.
+
+** Bearbeiten
++
+Ermöglicht Ihnen, die Einstellungen für einen ausgewählten Authentifizierungsserver zu bearbeiten.
+
+** Löschen
++
+Löscht die ausgewählten Authentifizierungsserver.
+
+
+
+* *Name oder IP-Adresse*
++
+Zeigt den Hostnamen oder die IP-Adresse des Authentifizierungsservers an, der zur Authentifizierung des Benutzers auf dem Verwaltungsserver verwendet wird.
+
+* *Hafen*
++
+Zeigt die Portnummer des Authentifizierungsservers an.
+
+* *Authentifizierung testen*
++
+Diese Schaltfläche validiert die Konfiguration Ihres Authentifizierungsservers durch Authentifizierung eines Remotebenutzers oder einer Remotegruppe.
+
++
+Wenn Sie beim Testen nur den Benutzernamen angeben, sucht der Verwaltungsserver im Authentifizierungsserver nach dem Remotebenutzer, authentifiziert den Benutzer jedoch nicht.  Wenn Sie sowohl den Benutzernamen als auch das Kennwort angeben, sucht und authentifiziert der Verwaltungsserver den Remotebenutzer.
+
++
+Sie können die Authentifizierung nicht testen, wenn die Remote-Authentifizierung deaktiviert ist.
+
+

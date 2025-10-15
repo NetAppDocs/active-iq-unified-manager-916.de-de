@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/reference_cluster_summary_page_opm.html 
+sidebar: sidebar 
+keywords: performance, cluster, summary page 
+summary: Die Seite „Leistungscluster-Zusammenfassung“ bietet eine Zusammenfassung der aktiven Ereignisse, der IOPS-Leistung und der MB/s-Leistung für einen Cluster.  Diese Seite enthält auch die Gesamtzahl der Speicherobjekte im Cluster. 
+---
+= Seite „Zusammenfassung des Leistungsclusters“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Seite „Leistungscluster-Zusammenfassung“ bietet eine Zusammenfassung der aktiven Ereignisse, der IOPS-Leistung und der MB/s-Leistung für einen Cluster.  Diese Seite enthält auch die Gesamtzahl der Speicherobjekte im Cluster.

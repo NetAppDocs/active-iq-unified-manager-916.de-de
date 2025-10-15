@@ -1,0 +1,36 @@
+---
+permalink: reporting/task_create_report_to_view_failed_or_successful_volume_transfers.html 
+sidebar: sidebar 
+keywords: create, report, view, failed, successful, volume, transfer 
+summary: Sie können einen Bericht erstellen, der den Status von Volumenübertragungen anzeigt.  In diesem Bericht können Sie sowohl fehlgeschlagene als auch erfolgreiche Volumenübertragungen anzeigen. 
+---
+= Erstellen Sie einen Bericht, um fehlgeschlagene oder erfolgreiche Volumeübertragungen anzuzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, der den Status von Volumenübertragungen anzeigt.  In diesem Bericht können Sie sowohl fehlgeschlagene als auch erfolgreiche Volumenübertragungen anzeigen.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Führen Sie die folgenden Schritte aus, um eine benutzerdefinierte Ansicht zu erstellen, die anzeigt, welche Übertragungen fehlgeschlagen und welche erfolgreich waren, und planen Sie dann die Generierung eines Berichts für diese Ansicht.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Volumes*.
+. Wählen Sie im Menü „Ansicht“ die Option „Beziehung“ > „Übertragungsstatus des letzten Monats“ aus.
+. Wählen Sie *Anzeigen/Ausblenden*, um alle Spalten zu entfernen, die Sie nicht im Bericht haben möchten.
+. Ziehen Sie die Spalte „Operationsergebnis“ in die Nähe der Spalte „Status“.
+. Klicken Sie oben auf die Spalte „Operationsergebnis“, um die Volumes nach Status zu sortieren.
+. Speichern Sie die Ansicht unter einem bestimmten Namen, der widerspiegelt, was die Ansicht anzeigt, z. B. „Volumes nach Übertragungsstatus“.
+. Klicken Sie auf der Inventarseite auf die Schaltfläche *Geplante Berichte*.
+. Geben Sie einen Namen für den Berichtszeitplan ein und füllen Sie die anderen Berichtsfelder aus. Klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""] ) am Ende der Zeile.
++
+Der Bericht wird sofort testweise versendet.  Anschließend wird der Bericht generiert und in der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Anhand der im Bericht angezeigten Ergebnisse können Sie den Übertragungsstatus untersuchen.

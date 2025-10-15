@@ -1,0 +1,184 @@
+---
+permalink: data-protection/reference_select_source_snapshot_copy_dialog_box.html 
+sidebar: sidebar 
+keywords: select, source, snapshot, copy, dialog box 
+summary: Sie verwenden das Dialogfeld „Quell-Snapshot-Kopie auswählen“, um eine bestimmte Snapshot-Kopie zum Übertragen von Daten zwischen Schutzbeziehungen auszuwählen, oder Sie wählen das Standardverhalten aus, das davon abhängt, ob Sie eine Beziehung initialisieren, aktualisieren oder neu synchronisieren und ob es sich bei der Beziehung um einen SnapMirror oder SnapVault handelt. 
+---
+= Dialogfeld „Quell-Snapshot-Kopie auswählen“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie verwenden das Dialogfeld „Quell-Snapshot-Kopie auswählen“, um eine bestimmte Snapshot-Kopie zum Übertragen von Daten zwischen Schutzbeziehungen auszuwählen, oder Sie wählen das Standardverhalten aus, das davon abhängt, ob Sie eine Beziehung initialisieren, aktualisieren oder neu synchronisieren und ob es sich bei der Beziehung um einen SnapMirror oder SnapVault handelt.
+
+
+
+== Standard
+
+Ermöglicht Ihnen, das Standardverhalten auszuwählen, um zu bestimmen, welche Snapshot-Kopie zum Initialisieren, Aktualisieren und erneuten Synchronisieren von Übertragungen für SnapVault und SnapMirror -Beziehungen verwendet wird.
+
+Wenn Sie eine SnapVault -Übertragung durchführen, ist das Standardverhalten für jeden Vorgang wie folgt:
+
+[cols="3*"]
+|===
+| Betrieb | Standardmäßiges SnapVault -Verhalten, wenn die Quelle Lese-/Schreibzugriff hat | Standardmäßiges SnapVault -Verhalten, wenn die Quelle Datenschutz (DP) ist 
+
+
+ a| 
+Initialisieren
+ a| 
+Erstellt eine neue Snapshot-Kopie und überträgt sie.
+ a| 
+Überträgt die zuletzt exportierte Snapshot-Kopie.
+
+
+
+ a| 
+Aktualisieren
+ a| 
+Überträgt nur gekennzeichnete Snapshot-Kopien, wie in der Richtlinie angegeben.
+ a| 
+Überträgt die zuletzt exportierte Snapshot-Kopie.
+
+
+
+ a| 
+Neu synchronisieren
+ a| 
+Überträgt alle gekennzeichneten Snapshot-Kopien, die nach der neuesten gemeinsamen Snapshot-Kopie erstellt wurden.
+ a| 
+Überträgt die neueste beschriftete Snapshot-Kopie.
+
+|===
+Wenn Sie eine SnapMirror -Übertragung durchführen, ist das Standardverhalten für jeden Vorgang wie folgt:
+
+[cols="3*"]
+|===
+| Betrieb | Standardmäßiges SnapMirror -Verhalten | Standardmäßiges SnapMirror Verhalten, wenn die Beziehung der zweite Hop in einer SnapMirror zu SnapMirror Kaskade ist 
+
+
+ a| 
+Initialisieren
+ a| 
+Erstellt eine neue Snapshot-Kopie und überträgt diese und alle Snapshot-Kopien, die vor der neuen Snapshot-Kopie erstellt wurden.
+ a| 
+Überträgt alle Snapshot-Kopien von der Quelle.
+
+
+
+ a| 
+Aktualisieren
+ a| 
+Erstellt eine neue Snapshot-Kopie und überträgt diese und alle Snapshot-Kopien, die vor der neuen Snapshot-Kopie erstellt wurden.
+ a| 
+Überträgt alle Snapshot-Kopien.
+
+
+
+ a| 
+Neu synchronisieren
+ a| 
+Erstellt eine neue Snapshot-Kopie und überträgt dann alle Snapshot-Kopien von der Quelle.
+ a| 
+Überträgt alle Snapshot-Kopien vom sekundären Volume auf das tertiäre Volume und löscht alle Daten, die nach der Erstellung der neuesten gemeinsamen Snapshot-Kopie hinzugefügt wurden.
+
+|===
+
+
+== Vorhandene Snapshot-Kopie
+
+Ermöglicht Ihnen, eine vorhandene Snapshot-Kopie aus der Liste auszuwählen, wenn die Auswahl einer Snapshot-Kopie für diesen Vorgang zulässig ist.
+
+* *Schnappschusskopie*
++
+Zeigt die vorhandenen Snapshot-Kopien an, aus denen Sie für eine Übertragung auswählen können.
+
+* *Erstellungsdatum*
++
+Zeigt das Datum und die Uhrzeit der Erstellung der Snapshot-Kopie an.  Snapshot-Kopien werden in der Reihenfolge der aktuellsten bis zur ältesten aufgelistet, wobei die aktuellsten ganz oben in der Liste stehen.
+
+
+
+Wenn Sie eine SnapVault Übertragung durchführen und eine vorhandene Snapshot-Kopie auswählen möchten, um sie von einer Quelle zu einem Ziel zu übertragen, ist das Verhalten für jeden Vorgang wie folgt:
+
+[cols="3*"]
+|===
+| Betrieb | SnapVault -Verhalten beim Angeben einer Snapshot-Kopie | SnapVault -Verhalten beim Angeben einer Snapshot-Kopie in einer Kaskade 
+
+
+ a| 
+Initialisieren
+ a| 
+Überträgt die angegebene Snapshot-Kopie.
+ a| 
+Die Auswahl der Quell-Snapshot-Kopie wird für Datensicherungsvolumes nicht unterstützt.
+
+
+
+ a| 
+Aktualisieren
+ a| 
+Überträgt die angegebene Snapshot-Kopie.
+ a| 
+Die Auswahl der Quell-Snapshot-Kopie wird für Datensicherungsvolumes nicht unterstützt.
+
+
+
+ a| 
+Neu synchronisieren
+ a| 
+Überträgt die ausgewählte Snapshot-Kopie.
+ a| 
+Die Auswahl der Quell-Snapshot-Kopie wird für Datensicherungsvolumes nicht unterstützt.
+
+|===
+Wenn Sie eine SnapMirror Übertragung durchführen und eine vorhandene Snapshot-Kopie auswählen möchten, um sie von einer Quelle zu einem Ziel zu übertragen, ist das Verhalten für jeden Vorgang wie folgt:
+
+[cols="3*"]
+|===
+| Betrieb | SnapMirror -Verhalten beim Angeben einer Snapshot-Kopie | SnapMirror -Verhalten beim Angeben einer Snapshot-Kopie in einer Kaskade 
+
+
+ a| 
+Initialisieren
+ a| 
+Überträgt alle Snapshot-Kopien auf der Quelle bis zur angegebenen Snapshot-Kopie.
+ a| 
+Die Auswahl der Quell-Snapshot-Kopie wird für Datensicherungsvolumes nicht unterstützt.
+
+
+
+ a| 
+Aktualisieren
+ a| 
+Überträgt alle Snapshot-Kopien auf der Quelle bis zur angegebenen Snapshot-Kopie.
+ a| 
+Die Auswahl der Quell-Snapshot-Kopie wird für Datensicherungsvolumes nicht unterstützt.
+
+
+
+ a| 
+Neu synchronisieren
+ a| 
+Überträgt alle Snapshot-Kopien von der Quelle bis zur ausgewählten Snapshot-Kopie und löscht dann alle Daten, die nach der Erstellung der neuesten gemeinsamen Snapshot-Kopie hinzugefügt wurden.
+ a| 
+Die Auswahl der Quell-Snapshot-Kopie wird für Datensicherungsvolumes nicht unterstützt.
+
+|===
+
+
+== Befehlsschaltflächen
+
+Mit den Befehlsschaltflächen können Sie die folgenden Aufgaben ausführen:
+
+* *Einreichen*
++
+Übermittelt Ihre Auswahl und schließt das Dialogfeld „Quell-Snapshot-Kopie auswählen“.
+
+* *Stornieren*
++
+Verwirft Ihre Auswahl und schließt das Dialogfeld „Quell-Snapshot-Kopie auswählen“.
+
+

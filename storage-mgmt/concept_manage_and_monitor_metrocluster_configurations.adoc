@@ -1,0 +1,14 @@
+---
+permalink: storage-mgmt/concept_manage_and_monitor_metrocluster_configurations.html 
+sidebar: sidebar 
+keywords: manage, monitor, metrocluster, configurations 
+summary: Die Überwachungsunterstützung für MetroCluster Konfigurationen in der Unified Manager-Web-Benutzeroberfläche ermöglicht es Ihnen, Ihre MetroCluster Konfiguration auf Verbindungsprobleme zu überprüfen.  Durch die frühzeitige Erkennung eines Konnektivitätsproblems können Sie Ihre MetroCluster -Konfigurationen effektiv verwalten. 
+---
+= Verwalten und Überwachen von MetroCluster -Konfigurationen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Überwachungsunterstützung für MetroCluster -Konfigurationen in der Unified Manager-Web-Benutzeroberfläche ermöglicht es Ihnen, Ihre MetroCluster Konfigurationen über FC und IP auf Verbindungsprobleme zu überprüfen.  Durch die frühzeitige Erkennung eines Konnektivitätsproblems können Sie Ihre MetroCluster -Konfigurationen effektiv verwalten.

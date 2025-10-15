@@ -1,0 +1,30 @@
+---
+permalink: storage-mgmt/concept_overview_of_quota_process_um_6_1.html 
+sidebar: sidebar 
+keywords: overview, quota, process 
+summary: Quoten können weich oder hart sein.  Weiche Kontingente veranlassen ONTAP , eine Benachrichtigung zu senden, wenn bestimmte Grenzwerte überschritten werden, und harte Kontingente verhindern, dass ein Schreibvorgang erfolgreich ist, wenn bestimmte Grenzwerte überschritten werden. 
+---
+= Überblick über den Quotenprozess
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quoten können weich oder hart sein.  Weiche Kontingente veranlassen ONTAP , eine Benachrichtigung zu senden, wenn bestimmte Grenzwerte überschritten werden, und harte Kontingente verhindern, dass ein Schreibvorgang erfolgreich ist, wenn bestimmte Grenzwerte überschritten werden.
+
+Wenn ONTAP von einem Benutzer oder einer Benutzergruppe eine Anforderung zum Schreiben auf ein FlexVol volume erhält, prüft es, ob auf diesem Volume Kontingente für den Benutzer oder die Benutzergruppe aktiviert sind, und ermittelt Folgendes:
+
+* Ob die harte Grenze erreicht wird
++
+Wenn ja, schlägt der Schreibvorgang fehl, wenn das harte Limit erreicht ist und die Benachrichtigung zum harten Kontingent gesendet wird.
+
+* Ob das Soft-Limit überschritten wird
++
+Wenn ja, ist der Schreibvorgang erfolgreich, wenn das Soft-Limit überschritten wird und die Soft-Quota-Benachrichtigung gesendet wird.
+
+* Ob ein Schreibvorgang das Soft-Limit nicht überschreitet
++
+Wenn ja, ist der Schreibvorgang erfolgreich und es wird keine Benachrichtigung gesendet.
+
+

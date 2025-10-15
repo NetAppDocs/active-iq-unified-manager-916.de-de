@@ -1,0 +1,44 @@
+---
+permalink: data-protection/task_create_snapmirror_and_snapvault_schedules.html 
+sidebar: sidebar 
+keywords: create, snapmirror, snapvault, schedules 
+summary: Sie können einfache oder erweiterte SnapMirror und SnapVault -Zeitpläne erstellen, um automatische Datenschutzübertragungen auf einem Quell- oder Primärvolume zu ermöglichen, sodass Übertragungen je nachdem, wie oft sich die Daten auf Ihren Volumes ändern, häufiger oder seltener stattfinden. 
+---
+= Erstellen Sie SnapMirror und SnapVault -Zeitpläne
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einfache oder erweiterte SnapMirror und SnapVault -Zeitpläne erstellen, um automatische Datenschutzübertragungen auf einem Quell- oder Primärvolume zu ermöglichen, sodass Übertragungen je nachdem, wie oft sich die Daten auf Ihren Volumes ändern, häufiger oder seltener stattfinden.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen den Bereich „Zielinformationen“ im Dialogfeld „Schutz konfigurieren“ bereits ausgefüllt haben.
+* Sie müssen die Workflow-Automatisierung eingerichtet haben, um diese Aufgabe auszuführen.
+
+
+.Schritte
+. Klicken Sie auf der Registerkarte * SnapMirror* oder * SnapVault* des Dialogfelds * Schutz konfigurieren * im Bereich * Beziehungseinstellungen * auf den Link * Zeitplan erstellen *.
++
+Das Dialogfeld „Zeitplan erstellen“ wird angezeigt.
+
+. Geben Sie im Feld *Zeitplanname* den Namen ein, den Sie dem Zeitplan geben möchten.
+. Wähle eine der folgenden:
++
+** *Basic*
++
+Wählen Sie diese Option aus, wenn Sie einen einfachen Intervallplan erstellen möchten.
+
+** *Fortschrittlich*
++
+Wählen Sie aus, ob Sie einen Zeitplan im Cron-Stil erstellen möchten.
+
+
+
+. Klicken Sie auf *Erstellen*.
++
+Der neue Zeitplan wird in der Dropdown-Liste „SnapMirror -Zeitplan“ oder „SnapVault -Zeitplan“ angezeigt.
+
+

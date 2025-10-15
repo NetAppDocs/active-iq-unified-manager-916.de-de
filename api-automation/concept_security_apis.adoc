@@ -1,0 +1,54 @@
+---
+permalink: api-automation/concept_security_apis.html 
+sidebar: sidebar 
+keywords: manage, user 
+summary: Sie können die APIs in der Sicherheitskategorie verwenden, um den Benutzerzugriff auf ausgewählte Clusterobjekte in Active IQ Unified Manager zu steuern.  Sie können lokale Benutzer oder Datenbankbenutzer hinzufügen.  Sie können auch Remotebenutzer oder -gruppen hinzufügen, die zu einem Authentifizierungsserver gehören.  Basierend auf den Berechtigungen der Rollen, die Sie den Benutzern zuweisen, können diese die Speicherobjekte verwalten oder die Daten in Unified Manager anzeigen. 
+---
+= Verwalten von Benutzern mithilfe von APIs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die APIs in der `security` Kategorie zur Steuerung des Benutzerzugriffs auf ausgewählte Clusterobjekte im Active IQ Unified Manager.  Sie können lokale Benutzer oder Datenbankbenutzer hinzufügen.  Sie können auch Remotebenutzer oder -gruppen hinzufügen, die zu einem Authentifizierungsserver gehören.  Basierend auf den Berechtigungen der Rollen, die Sie den Benutzern zuweisen, können diese die Speicherobjekte verwalten oder die Daten in Unified Manager anzeigen.
+
+[NOTE]
+====
+Zum Ausführen dieser Vorgänge müssen Sie über die Rolle „Anwendungsadministrator“ verfügen.  Sie können zum Konfigurieren dieser Einstellungen auch die Web-Benutzeroberfläche von Unified Manager verwenden.
+
+====
+Die APIs unter der `security` Kategorie verwenden Sie den Benutzerparameter, also den Benutzernamen und nicht den Schlüsselparameter als eindeutige Kennung für die Benutzerentität.
+
+[cols="3*"]
+|===
+| HTTP-Verb | Weg | Beschreibung 
+
+
+ a| 
+`GET`
+
+`POST`
+ a| 
+`/security/users`
+
+`/security/users`
+ a| 
+Sie können diese Methoden verwenden, um die Details von Benutzern abzurufen oder neue Benutzer zu Unified Manager hinzuzufügen.
+
+Sie können den Benutzern basierend auf ihren Benutzertypen bestimmte Rollen zuweisen.  Beim Hinzufügen von Benutzern müssen Sie Kennwörter für den lokalen Benutzer, den Wartungsbenutzer und den Datenbankbenutzer angeben.
+
+
+
+ a| 
+`GET`
+
+`PATCH`
+
+`DELETE`
+ a| 
+`/security/users/\{name}`
+ a| 
+Mit der GET-Methode können Sie alle Details eines Benutzers abrufen, z. B. Name, E-Mail-Adresse, Rolle und Autorisierungstyp.  Mit der PATCH-Methode können Sie die Details aktualisieren.  Mit der DELETE-Methode können Sie den Benutzer entfernen.
+
+|===

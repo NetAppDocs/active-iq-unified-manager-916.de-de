@@ -1,0 +1,63 @@
+---
+permalink: performance-checker/task_respond_to_dynamic_performance_event.html 
+sidebar: sidebar 
+keywords: dynamic, performance, qos, policy, group, throttling 
+summary: 'Sie können Unified Manager verwenden, um ein Leistungsereignis zu untersuchen, das durch eine Quality of Service (QoS)-Richtliniengruppe verursacht wird, die den Arbeitslastdurchsatz (MB/s) drosselt.  Durch die Drosselung erhöhten sich die Reaktionszeiten (Latenz) der Volumen-Workloads in der Richtliniengruppe.  Anhand der Ereignisinformationen können Sie feststellen, ob neue Grenzwerte für die Richtliniengruppen erforderlich sind, um die Drosselung zu beenden.' 
+---
+= Reagieren Sie auf ein dynamisches Leistungsereignis, das durch die Drosselung der QoS-Richtliniengruppe verursacht wird
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Unified Manager verwenden, um ein Leistungsereignis zu untersuchen, das durch eine Quality of Service (QoS)-Richtliniengruppe verursacht wird, die den Arbeitslastdurchsatz (MB/s) drosselt.  Durch die Drosselung erhöhten sich die Reaktionszeiten (Latenz) der Volumen-Workloads in der Richtliniengruppe.  Anhand der Ereignisinformationen können Sie feststellen, ob neue Grenzwerte für die Richtliniengruppen erforderlich sind, um die Drosselung zu beenden.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Es müssen neue, anerkannte oder veraltete Leistungsereignisse vorliegen.
+
+
+.Schritte
+. Zeigen Sie die Seite *Ereignisdetails* an, um Informationen zum Ereignis anzuzeigen.
+. Lesen Sie die *Beschreibung*, in der die Namen der von der Drosselung betroffenen Workloads angezeigt werden.
++
+[NOTE]
+====
+Die Beschreibung kann für Opfer und Täter die gleiche Arbeitsbelastung anzeigen, da die Arbeitsbelastung durch die Drosselung selbst zum Opfer wird.
+
+====
+. Notieren Sie den Namen des Datenträgers mithilfe einer Anwendung wie beispielsweise einem Texteditor.
++
+Sie können nach dem Datenträgernamen suchen, um ihn später zu finden.
+
+. Wählen Sie in den Diagrammen „Workload-Latenz“ und „Workload-Auslastung“ *Bully Workloads* aus.
+. Bewegen Sie den Cursor über die Diagramme, um die wichtigsten benutzerdefinierten Arbeitslasten anzuzeigen, die sich auf die Richtliniengruppe auswirken.
++
+Die Arbeitslast am Anfang der Liste weist die größte Abweichung auf und hat zur Drosselung geführt.  Die Aktivität ist der Prozentsatz des Richtliniengruppenlimits, der von jeder Arbeitslast verwendet wird.
+
+. Klicken Sie im Bereich *Vorgeschlagene Aktionen* auf die Schaltfläche *Arbeitslast analysieren* für die höchste Arbeitslast.
+. Legen Sie auf der Seite „Arbeitslastanalyse“ das Latenzdiagramm so fest, dass alle Clusterkomponenten angezeigt werden, und das Durchsatzdiagramm, um die Aufschlüsselung anzuzeigen.
++
+Die Aufschlüsselungsdiagramme werden unter dem Latenzdiagramm und dem IOPS-Diagramm angezeigt.
+
+. Vergleichen Sie die QoS-Grenzwerte im Diagramm *Latenz*, um zu sehen, welcher Drosselungsgrad die Latenz zum Zeitpunkt des Ereignisses beeinflusst hat.
++
+Die QoS-Richtliniengruppe verfügt über einen maximalen Durchsatz von 1.000 Operationen pro Sekunde (op/sec), der von den darin enthaltenen Arbeitslasten insgesamt nicht überschritten werden kann.  Zum Zeitpunkt des Ereignisses hatten die Workloads in der Richtliniengruppe einen kombinierten Durchsatz von über 1.200 Operationen/Sek., was dazu führte, dass die Richtliniengruppe ihre Aktivität auf 1.000 Operationen/Sek. drosselte.
+
+. Vergleichen Sie die Werte für die *Lese-/Schreiblatenz* mit den Werten für *Lese-/Schreibvorgänge/Sonstiges*.
++
+Beide Diagramme zeigen eine hohe Anzahl von Leseanforderungen mit hoher Latenz, aber die Anzahl der Anforderungen und die Latenzzeit für Schreibanforderungen sind gering.  Mithilfe dieser Werte können Sie feststellen, ob ein hoher Durchsatz oder eine hohe Anzahl von Vorgängen die Latenz erhöht hat.  Sie können diese Werte verwenden, wenn Sie sich entscheiden, eine Richtliniengruppenbeschränkung für den Durchsatz oder die Vorgänge festzulegen.
+
+. Verwenden Sie ONTAP System Manager, um das aktuelle Limit der Richtliniengruppe auf 1.300 Operationen/Sek. zu erhöhen.
+. Kehren Sie nach einem Tag zu Unified Manager zurück und geben Sie die Arbeitslast, die Sie in Schritt 3 aufgezeichnet haben, auf der Seite *Arbeitslastanalyse* ein.
+. Wählen Sie das Diagramm „Durchsatzaufschlüsselung“ aus.
++
+Das Diagramm „Lesen/Schreiben/Sonstiges“ wird angezeigt.
+
+. Zeigen Sie oben auf der Seite mit dem Cursor auf das Symbol „Ereignis ändern“ (image:../media/opm_change_icon.gif["Symbol „Ereignis ändern“"] ) für die Änderung des Richtliniengruppenlimits.
+. Vergleichen Sie das Diagramm *Lesen/Schreiben/Sonstiges* mit dem Diagramm *Latenz*.
++
+Die Lese- und Schreibanforderungen sind dieselben, aber die Drosselung wurde gestoppt und die Latenz hat abgenommen.
+
+

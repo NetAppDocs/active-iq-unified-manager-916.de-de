@@ -1,0 +1,68 @@
+---
+permalink: events/reference_dynamic_performance_event_chart_details.html 
+sidebar: sidebar 
+keywords: dynamic, performance, event, chart, details 
+summary: Bei dynamischen Leistungsereignissen werden im Abschnitt „Systemdiagnose“ der Seite „Ereignisdetails“ die wichtigsten Workloads mit der höchsten Latenz oder Nutzung der umkämpften Clusterkomponente aufgelistet.  Die Leistungsstatistiken basieren auf dem Zeitpunkt, zu dem das Leistungsereignis erkannt wurde, bis zum Zeitpunkt der letzten Ereignisanalyse.  Die Diagramme zeigen auch historische Leistungsstatistiken für die umstrittene Clusterkomponente an. 
+---
+= Details zum dynamischen Leistungsereignisdiagramm
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei dynamischen Leistungsereignissen werden im Abschnitt „Systemdiagnose“ der Seite „Ereignisdetails“ die wichtigsten Workloads mit der höchsten Latenz oder Nutzung der umkämpften Clusterkomponente aufgelistet.
+
+Die Leistungsstatistiken basieren auf dem Zeitpunkt, zu dem das Leistungsereignis erkannt wurde, bis zum Zeitpunkt der letzten Ereignisanalyse.  Die Diagramme zeigen auch historische Leistungsstatistiken für die umstrittene Clusterkomponente an.
+
+Sie können beispielsweise Workloads mit hoher Auslastung einer Komponente identifizieren, um zu bestimmen, welche Workload auf eine weniger ausgelastete Komponente verschoben werden soll.  Durch die Verschiebung der Arbeitslast würde der Arbeitsaufwand für die aktuelle Komponente verringert und die Komponente möglicherweise aus dem Wettbewerb genommen.  Oben in diesem Abschnitt stehen der Zeit- und Datumsbereich, in dem ein Ereignis erkannt und zuletzt analysiert wurde.  Bei aktiven Ereignissen (neu oder bestätigt) wird die letzte analysierte Zeit aktualisiert.
+
+Die Latenz- und Aktivitätsdiagramme zeigen die Namen der wichtigsten Workloads an, wenn Sie mit dem Cursor über das Diagramm fahren.  Wenn Sie auf das Menü „Workload-Typ“ rechts neben dem Diagramm klicken, können Sie die Workloads nach ihrer Rolle im Ereignis sortieren, einschließlich _Haie_, _Mobber_ oder _Opfer_. Außerdem werden Details zu ihrer Latenz und ihrer Nutzung der umstrittenen Clusterkomponente angezeigt.  Sie können den tatsächlichen Wert mit dem erwarteten Wert vergleichen, um zu sehen, wann die Arbeitslast außerhalb des erwarteten Latenz- oder Nutzungsbereichs lag.  Weitere Informationen finden Sie unterlink:..//performance-checker/concept_types_of_workloads_monitored_by_unified_manager.html["Von Unified Manager überwachte Workloadtypen"] .
+
+[NOTE]
+====
+Wenn Sie nach der Spitzenabweichung der Latenz sortieren, werden systemdefinierte Workloads nicht in der Tabelle angezeigt, da die Latenz nur für benutzerdefinierte Workloads gilt.  Workloads mit sehr niedrigen Latenzwerten werden in der Tabelle nicht angezeigt.
+
+====
+Weitere Informationen zu den dynamischen Leistungsschwellenwerten finden Sie unterlink:../performance-checker/concept_analyze_events_from_dynamic_performance_thresholds.html["Analysieren von Ereignissen anhand dynamischer Leistungsschwellenwerte"] .
+
+Informationen dazu, wie Unified Manager die Arbeitslasten bewertet und die Sortierreihenfolge bestimmt, finden Sie unterlink:../performance-checker/concept_how_um_determines_performance_impact_for_incident.html["So ermittelt Unified Manager die Leistungsauswirkungen eines Ereignisses"] .
+
+Die Daten in den Diagrammen zeigen Leistungsstatistiken der letzten 24 Stunden vor der letzten Ereignisanalyse.  Die tatsächlichen und erwarteten Werte für jede Arbeitslast basieren auf der Zeit, in der die Arbeitslast am Ereignis beteiligt war.  Beispielsweise kann eine Arbeitslast in ein Ereignis verwickelt werden, nachdem das Ereignis erkannt wurde, sodass ihre Leistungsstatistiken möglicherweise nicht mit den Werten zum Zeitpunkt der Ereigniserkennung übereinstimmen.  Standardmäßig werden die Workloads nach der Spitzenabweichung (höchsten Abweichung) bei der Latenz sortiert.
+
+[NOTE]
+====
+Da Unified Manager maximal 30 Tage lang 5-minütige historische Leistungs- und Ereignisdaten speichert, werden keine Leistungsdaten angezeigt, wenn das Ereignis älter als 30 Tage ist.
+
+====
+* *Spalte „Workload sortieren“*
++
+** *Latenzdiagramm*
++
+Zeigt die Auswirkungen des Ereignisses auf die Latenz der Arbeitslast während der letzten Analyse an.
+
+** *Spalte „Komponentennutzung“*
++
+Zeigt Details zur Arbeitslastnutzung der konkurrierenden Clusterkomponente an.  In den Diagrammen ist die tatsächliche Nutzung als blaue Linie dargestellt.  Ein roter Balken hebt die Ereignisdauer vom Erkennungszeitpunkt bis zum letzten analysierten Zeitpunkt hervor. Weitere Informationen finden Sie unter link:../performance-checker/reference_workload_performance_measurement_values.html["Messwerte für die Workload-Leistung"].
+
++
+[NOTE]
+====
+Für die Netzwerkkomponente wird diese Spalte nicht angezeigt, da die Netzwerkleistungsstatistiken aus Aktivitäten außerhalb des Clusters stammen.
+
+====
+** *Komponentenverwendung*
++
+Zeigt den Nutzungsverlauf in Prozent für die Netzwerkverarbeitung, Datenverarbeitung und Aggregatkomponenten oder den Aktivitätsverlauf in Prozent für die QoS-Richtliniengruppenkomponente an.  Für die Netzwerk- oder Verbindungskomponenten wird das Diagramm nicht angezeigt.  Sie können auf die Statistiken zeigen, um die Nutzungsstatistiken zu einem bestimmten Zeitpunkt anzuzeigen.
+
+** *Gesamtverlauf der Schreibvorgänge in MB/s*
++
+Zeigt nur für die MetroCluster -Ressourcenkomponente den gesamten Schreibdurchsatz in Megabyte pro Sekunde (MBps) für alle Volume-Workloads an, die in einer MetroCluster -Konfiguration auf den Partnercluster gespiegelt werden.
+
+** *Ereignisverlauf*
++
+Zeigt rot schattierte Linien an, um die historischen Ereignisse für die umstrittene Komponente anzuzeigen.  Bei veralteten Ereignissen zeigt das Diagramm Ereignisse an, die vor der Erkennung des ausgewählten Ereignisses und nach seiner Lösung aufgetreten sind.
+
+
+
+

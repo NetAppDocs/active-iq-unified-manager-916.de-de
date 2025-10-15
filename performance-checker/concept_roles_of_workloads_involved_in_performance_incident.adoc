@@ -1,0 +1,49 @@
+---
+permalink: performance-checker/concept_roles_of_workloads_involved_in_performance_incident.html 
+sidebar: sidebar 
+keywords: roles, workloads, involved, performance, event 
+summary: Unified Manager verwendet Rollen, um die Beteiligung einer Arbeitslast an einem Leistungsereignis zu identifizieren.  Zu den Rollen gehören Opfer, Tyrannen und Haie.  Eine benutzerdefinierte Arbeitslast kann gleichzeitig Opfer, Tyrann und Hai sein. 
+---
+= Rollen der an einem Leistungsereignis beteiligten Workloads
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager verwendet Rollen, um die Beteiligung einer Arbeitslast an einem Leistungsereignis zu identifizieren.  Zu den Rollen gehören Opfer, Tyrannen und Haie.  Eine benutzerdefinierte Arbeitslast kann gleichzeitig Opfer, Tyrann und Hai sein.
+
+|===
+| Rolle | Beschreibung 
+
+
+ a| 
+Opfer
+ a| 
+Eine benutzerdefinierte Arbeitslast, deren Leistung aufgrund anderer Arbeitslasten, sogenannter „Bullies“, die eine Clusterkomponente übermäßig beanspruchen, abgenommen hat.  Als Opfer werden nur benutzerdefinierte Workloads identifiziert.  Unified Manager identifiziert die Arbeitslast der Opfer anhand ihrer Latenzabweichung, wobei die tatsächliche Latenz während eines Ereignisses im Vergleich zur Latenzprognose (erwarteter Bereich) stark angestiegen ist.
+
+
+
+ a| 
+Schikanieren
+ a| 
+Eine benutzerdefinierte oder systemdefinierte Arbeitslast, deren übermäßige Nutzung einer Clusterkomponente zu einer Leistungsminderung anderer Arbeitslasten, sogenannter Opfer, geführt hat.  Unified Manager identifiziert problematische Workloads anhand ihrer Abweichung bei der Nutzung einer Clusterkomponente, wobei die tatsächliche Nutzung während eines Ereignisses stark über den erwarteten Nutzungsbereich hinausgeht.
+
+
+
+ a| 
+Hai
+ a| 
+Eine benutzerdefinierte Arbeitslast mit der höchsten Nutzung einer Clusterkomponente im Vergleich zu allen an einem Ereignis beteiligten Arbeitslasten.  Unified Manager identifiziert Shark-Workloads basierend auf ihrer Nutzung einer Clusterkomponente während eines Ereignisses.
+
+|===
+Workloads auf einem Cluster können viele Clusterkomponenten gemeinsam nutzen, beispielsweise Aggregate und die CPU für die Netzwerk- und Datenverarbeitung.  Wenn eine Arbeitslast, beispielsweise ein Volume, die Nutzung einer Clusterkomponente so weit erhöht, dass die Komponente die Arbeitslastanforderungen nicht mehr effizient erfüllen kann, liegt ein Konflikt mit der Komponente vor.  Die Arbeitslast, die eine Clusterkomponente überbeansprucht, ist ein Tyrann.  Die anderen Workloads, die diese Komponenten gemeinsam nutzen und deren Leistung durch den Mobber beeinträchtigt wird, sind die Opfer.  Auch Aktivitäten von systemdefinierten Workloads, wie etwa Deduplizierung oder Snapshot-Kopien, können zu „Mobbing“ eskalieren.
+
+Wenn Unified Manager ein Ereignis erkennt, identifiziert es alle beteiligten Workloads und Clusterkomponenten, einschließlich der Bully-Workloads, die das Ereignis verursacht haben, der Clusterkomponente, um die es geht, und der Opfer-Workloads, deren Leistung aufgrund der erhöhten Aktivität der Bully-Workloads abgenommen hat.
+
+[NOTE]
+====
+Wenn Unified Manager die schädlichen Workloads nicht identifizieren kann, gibt er nur Warnmeldungen zu den betroffenen Workloads und der betroffenen Clusterkomponente aus.
+
+====
+Unified Manager kann Arbeitslasten identifizieren, die Opfer von Mobbing-Arbeitslasten sind, und auch erkennen, wann diese Arbeitslasten zu Mobbing-Arbeitslasten werden.  Eine Arbeitsbelastung kann sich selbst zum Tyrannen machen.  Beispielsweise führt eine Hochleistungs-Workload, die durch eine Richtliniengruppenbeschränkung gedrosselt wird, dazu, dass alle Workloads in der Richtliniengruppe gedrosselt werden, einschließlich der eigenen Workloads.  Eine Arbeitsbelastung, die in einem laufenden Leistungsereignis als Tyrann oder Opfer auftritt, kann ihre Rolle ändern oder nicht länger an dem Ereignis teilnehmen.

@@ -1,0 +1,28 @@
+---
+permalink: health-checker/reference_description_of_predefined_annotation_values.html 
+sidebar: sidebar 
+keywords: description, predefined, annotation values 
+summary: Datenpriorität ist eine vordefinierte Anmerkung mit den Werten „Missionskritisch“, „Hoch“ und „Niedrig“.  Mit diesen Werten können Sie Speicherobjekte basierend auf der Priorität der darin enthaltenen Daten mit Anmerkungen versehen.  Sie können die vordefinierten Anmerkungswerte weder bearbeiten noch löschen. 
+---
+= Beschreibung vordefinierter Annotationswerte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+*Datenpriorität* ist eine vordefinierte Anmerkung mit den Werten „Missionskritisch“, „Hoch“ und „Niedrig“.  Mit diesen Werten können Sie Speicherobjekte basierend auf der Priorität der darin enthaltenen Daten mit Anmerkungen versehen.  Sie können die vordefinierten Anmerkungswerte weder bearbeiten noch löschen.
+
+* *Datenpriorität:Missionskritisch*
++
+Diese Annotation wird auf Speicherobjekte angewendet, die unternehmenskritische Daten enthalten.  Beispielsweise können Objekte, die Produktionsanwendungen enthalten, als unternehmenskritisch betrachtet werden.
+
+* *Datenpriorität: Hoch*
++
+Diese Annotation wird auf Speicherobjekte angewendet, die Daten mit hoher Priorität enthalten.  Beispielsweise können Objekte, die Geschäftsanwendungen hosten, als Objekte mit hoher Priorität betrachtet werden.
+
+* *Datenpriorität: Niedrig*
++
+Diese Annotation wird auf Speicherobjekte angewendet, die Daten mit niedriger Priorität enthalten.  Beispielsweise können Objekte, die sich auf sekundären Speicherorten wie Sicherungs- und Spiegelzielen befinden, eine niedrige Priorität haben.
+
+

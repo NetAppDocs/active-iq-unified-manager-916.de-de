@@ -1,0 +1,99 @@
+---
+permalink: events/reference_storage_failover_settings_events.html 
+sidebar: sidebar 
+keywords: storage, failover, settings, events, impact area, availability 
+summary: 'Ereignisse der Speicherfailover-Einstellungen (SFO) liefern Ihnen Informationen darüber, ob Ihr Speicherfailover deaktiviert oder nicht konfiguriert ist, sodass Sie es auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad.' 
+---
+= Ereignisse der Speicherfailovereinstellungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ereignisse der Speicherfailover-Einstellungen (SFO) liefern Ihnen Informationen darüber, ob Ihr Speicherfailover deaktiviert oder nicht konfiguriert ist, sodass Sie es auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad.
+
+
+
+== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+Speicher-Failover-Verbindung: Eine oder mehrere Verbindungen sind ausgefallen (ocumEvtSfoInterconnectOneOrMoreLinksDown)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Warnung
+
+
+
+ a| 
+Speicherfailover deaktiviert (ocumEvtSfoSettingsDisabled)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Fehler
+
+
+
+ a| 
+Speicherfailover nicht konfiguriert (ocumEvtSfoSettingsNotConfigured)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Fehler
+
+
+
+ a| 
+Speicher-Failover-Status – Übernahme (ocumEvtSfoStateTakeover)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Warnung
+
+
+
+ a| 
+Speicherfailoverstatus – teilweise Rückgabe (ocumEvtSfoStatePartialGiveback)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Fehler
+
+
+
+ a| 
+Speicher-Failover-Knotenstatus „Down“ (ocumEvtSfoNodeStatusDown)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Fehler
+
+
+
+ a| 
+Speicher-Failover-Übernahme nicht möglich (ocumEvtSfoTakeoverNotPossible)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Fehler
+
+|===

@@ -1,0 +1,24 @@
+---
+permalink: health-checker/task_edit_group_actions.html 
+sidebar: sidebar 
+keywords: edit, group actions 
+summary: Sie können die Gruppenaktionsparameter bearbeiten, die Sie in Unified Manager konfiguriert haben, z. B. den Gruppenaktionsnamen, die Beschreibung, den zugehörigen Gruppennamen und die Parameter des Aktionstyps. 
+---
+= Gruppenaktionen bearbeiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Gruppenaktionsparameter bearbeiten, die Sie in Unified Manager konfiguriert haben, z. B. den Gruppenaktionsnamen, die Beschreibung, den zugehörigen Gruppennamen und die Parameter des Aktionstyps.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Gruppen*.
+. Wählen Sie auf der Registerkarte *Gruppenaktionen* die Gruppenaktion aus, die Sie bearbeiten möchten, und klicken Sie dann auf *Bearbeiten*.
+. Ändern Sie im Dialogfeld *Gruppenaktion bearbeiten* den Gruppenaktionsnamen, die Beschreibung, den zugehörigen Gruppennamen und die Parameter des Aktionstyps nach Bedarf.
+. Klicken Sie auf *Speichern*.
+

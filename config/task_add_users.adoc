@@ -1,0 +1,35 @@
+---
+permalink: config/task_add_users.html 
+sidebar: sidebar 
+keywords: add, users 
+summary: Sie können lokale Benutzer oder Datenbankbenutzer über die Seite „Benutzer“ hinzufügen.  Sie können auch Remotebenutzer oder -gruppen hinzufügen, die zu einem Authentifizierungsserver gehören.  Sie können diesen Benutzern Rollen zuweisen und basierend auf den Berechtigungen der Rollen können Benutzer die Speicherobjekte und Daten mit Unified Manager verwalten oder die Daten in einer Datenbank anzeigen. 
+---
+= Benutzer hinzufügen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können lokale Benutzer oder Datenbankbenutzer über die Seite „Benutzer“ hinzufügen.  Sie können auch Remotebenutzer oder -gruppen hinzufügen, die zu einem Authentifizierungsserver gehören.  Sie können diesen Benutzern Rollen zuweisen und basierend auf den Berechtigungen der Rollen können Benutzer die Speicherobjekte und Daten mit Unified Manager verwalten oder die Daten in einer Datenbank anzeigen.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ verfügen.
+* Um einen Remote-Benutzer oder eine Remote-Gruppe hinzuzufügen, müssen Sie die Remote-Authentifizierung aktiviert und Ihren Authentifizierungsserver konfiguriert haben.
+* Wenn Sie die SAML-Authentifizierung so konfigurieren möchten, dass ein Identitätsanbieter (IdP) Benutzer authentifiziert, die auf die grafische Benutzeroberfläche zugreifen, stellen Sie sicher, dass diese Benutzer als „Remote“-Benutzer definiert sind.
++
+Der Zugriff auf die Benutzeroberfläche ist für Benutzer vom Typ „`local`“ oder „`maintenance`“ nicht zulässig, wenn die SAML-Authentifizierung aktiviert ist.
+
+
+
+Wenn Sie eine Gruppe aus Windows Active Directory hinzufügen, können sich alle direkten Mitglieder und verschachtelten Untergruppen bei Unified Manager authentifizieren, sofern verschachtelte Untergruppen nicht deaktiviert sind.  Wenn Sie eine Gruppe von OpenLDAP oder anderen Authentifizierungsdiensten hinzufügen, können sich nur die direkten Mitglieder dieser Gruppe bei Unified Manager authentifizieren.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Allgemein* > *Benutzer*.
+. Klicken Sie auf der Seite „Benutzer“ auf *Hinzufügen*.
+. Wählen Sie im Dialogfeld „Benutzer hinzufügen“ den Benutzertyp aus, den Sie hinzufügen möchten, und geben Sie die erforderlichen Informationen ein.
++
+Beim Eingeben der erforderlichen Benutzerinformationen müssen Sie eine E-Mail-Adresse angeben, die für diesen Benutzer eindeutig ist.  Sie müssen die Angabe von E-Mail-Adressen vermeiden, die von mehreren Benutzern gemeinsam genutzt werden.
+
+. Klicken Sie auf *Hinzufügen*.
+

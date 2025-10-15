@@ -1,0 +1,52 @@
+---
+permalink: events/concept_event_state_definitions.html 
+sidebar: sidebar 
+keywords: event, state, definitions 
+summary: Anhand des Status eines Ereignisses können Sie feststellen, ob eine entsprechende Korrekturmaßnahme erforderlich ist.  Ein Ereignis kann „Neu“, „Bestätigt“, „Gelöst“ oder „Veraltet“ sein.  Beachten Sie, dass sowohl neue als auch bestätigte Ereignisse als aktive Ereignisse betrachtet werden. 
+---
+= Ereignisstatusdefinitionen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Anhand des Status eines Ereignisses können Sie feststellen, ob eine entsprechende Korrekturmaßnahme erforderlich ist.  Ein Ereignis kann „Neu“, „Bestätigt“, „Gelöst“ oder „Veraltet“ sein.  Beachten Sie, dass sowohl neue als auch bestätigte Ereignisse als aktive Ereignisse betrachtet werden.
+
+Die Ereigniszustände sind wie folgt:
+
+* *Neu*
++
+Der Status eines neuen Ereignisses.
+
+* *Anerkannt*
++
+Der Status eines Ereignisses, wenn Sie es bestätigt haben.
+
+* *Gelöst*
++
+Der Status eines Ereignisses, wenn es als gelöst markiert ist.
+
+* *Veraltet*
++
+Der Status eines Ereignisses, wenn es automatisch korrigiert wird oder wenn die Ursache des Ereignisses nicht mehr gültig ist.
+
++
+[NOTE]
+====
+Sie können ein veraltetes Ereignis weder bestätigen noch beheben.
+
+====
+
+
+
+
+== Beispiel für verschiedene Zustände eines Ereignisses
+
+Die folgenden Beispiele veranschaulichen die manuellen und automatischen Ereignisstatusänderungen.
+
+Wenn das Ereignis „Cluster nicht erreichbar“ ausgelöst wird, ist der Ereignisstatus „Neu“.  Wenn Sie das Ereignis bestätigen, ändert sich der Ereignisstatus in „Bestätigt“.  Wenn Sie eine entsprechende Korrekturmaßnahme ergriffen haben, müssen Sie das Ereignis als gelöst markieren.  Der Ereignisstatus ändert sich dann in „Gelöst“.
+
+Wenn das Ereignis „Cluster nicht erreichbar“ aufgrund eines Stromausfalls generiert wird, nimmt der Cluster nach Wiederherstellung der Stromversorgung seinen Betrieb ohne Eingriff des Administrators wieder auf.  Daher ist das Ereignis „Cluster nicht erreichbar“ nicht mehr gültig und der Ereignisstatus ändert sich im nächsten Überwachungszyklus in „Veraltet“.
+
+Unified Manager sendet eine Warnung, wenn ein Ereignis den Status „Veraltet“ oder „Gelöst“ hat.  Die Betreffzeile und der Inhalt einer E-Mail-Benachrichtigung geben Auskunft über den Ereignisstatus.  Ein SNMP-Trap enthält auch Informationen zum Ereignisstatus.

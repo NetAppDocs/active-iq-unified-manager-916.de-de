@@ -1,0 +1,408 @@
+---
+permalink: events/reference_lun_events.html 
+sidebar: sidebar 
+keywords: lun, events, impact area, availability, capacity, configuration, performance 
+summary: LUN-Ereignisse liefern Ihnen Informationen zum Status Ihrer LUNs, sodass Sie diese auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad. 
+---
+= LUN-Ereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+LUN-Ereignisse liefern Ihnen Informationen zum Status Ihrer LUNs, sodass Sie diese auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad.
+
+
+
+== Wirkungsbereich: Verfügbarkeit
+
+Ein Sternchen (*) kennzeichnet EMS-Ereignisse, die in Unified Manager-Ereignisse konvertiert wurden.
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+LUN offline (ocumEvtLunOffline)
+ a| 
+Vorfall
+ a| 
+LUN
+ a| 
+Kritisch
+
+
+
+ a| 
+LUN zerstört *(lunDestroy)
+ a| 
+Ereignis
+ a| 
+LUN
+ a| 
+Information
+
+
+
+ a| 
+LUN mit nicht unterstütztem Betriebssystem in igroup (igroupUnsupportedOsType) zugeordnet
+ a| 
+Vorfall
+ a| 
+LUN
+ a| 
+Warnung
+
+
+
+ a| 
+Einzelner aktiver Pfad zum Zugriff auf LUN (ocumEvtLunSingleActivePath)
+ a| 
+Risiko
+ a| 
+LUN
+ a| 
+Warnung
+
+
+
+ a| 
+Keine aktiven Pfade zum Zugriff auf LUN (ocumEvtLunNotReachable)
+ a| 
+Vorfall
+ a| 
+LUN
+ a| 
+Kritisch
+
+
+
+ a| 
+Keine optimierten Pfade für den Zugriff auf LUN (ocumEvtLunOptimizedPathInactive)
+ a| 
+Risiko
+ a| 
+LUN
+ a| 
+Warnung
+
+
+
+ a| 
+Keine Pfade für den Zugriff auf LUN vom HA-Partner (ocumEvtLunHaPathInactive)
+ a| 
+Risiko
+ a| 
+LUN
+ a| 
+Warnung
+
+
+
+ a| 
+Kein Pfad zum Zugriff auf LUN von einem Knoten im HA-Paar (ocumEvtLunNodePathStatusDown)
+ a| 
+Risiko
+ a| 
+LUN
+ a| 
+Fehler
+
+|===
+
+
+== Wirkungsbereich: Kapazität
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+Nicht genügend Speicherplatz für LUN-Snapshot-Kopie (ocumEvtLunSnapshotNotPossible)
+ a| 
+Risiko
+ a| 
+Volumen
+ a| 
+Warnung
+
+|===
+
+
+== Wirkungsbereich: Konfiguration
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+LUN mit nicht unterstütztem Betriebssystem in igroup (igroupUnsupportedOsType) zugeordnet
+ a| 
+Risiko
+ a| 
+LUN
+ a| 
+Warnung
+
+|===
+
+
+== Wirkungsbereich: Leistung
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+Kritischer LUN-IOPS-Schwellenwert überschritten (ocumLunIopsIncident)
+ a| 
+Vorfall
+ a| 
+LUN
+ a| 
+Kritisch
+
+
+
+ a| 
+LUN-IOPS-Warnschwelle überschritten (ocumLunIopsWarning)
+ a| 
+Risiko
+ a| 
+LUN
+ a| 
+Warnung
+
+
+
+ a| 
+Kritischer Schwellenwert für LUN MB/s überschritten (ocumLunMbpsIncident)
+ a| 
+Vorfall
+ a| 
+LUN
+ a| 
+Kritisch
+
+
+
+ a| 
+LUN-MB/s-Warnschwelle überschritten (ocumLunMbpsWarning)
+ a| 
+Risiko
+ a| 
+LUN
+ a| 
+Warnung
+
+
+
+ a| 
+Kritischer Schwellenwert für LUN-Latenz ms/op überschritten (ocumLunLatencyIncident)
+ a| 
+Vorfall
+ a| 
+LUN
+ a| 
+Kritisch
+
+
+
+ a| 
+LUN-Latenz ms/op-Warnschwelle überschritten (ocumLunLatencyWarning)
+ a| 
+Risiko
+ a| 
+LUN
+ a| 
+Warnung
+
+
+
+ a| 
+Kritischer Schwellenwert für LUN-Latenz und IOPS überschritten (ocumLunLatencyIopsIncident)
+ a| 
+Vorfall
+ a| 
+LUN
+ a| 
+Kritisch
+
+
+
+ a| 
+Schwellenwert für LUN-Latenz und IOPS-Warnung überschritten (ocumLunLatencyIopsWarning)
+ a| 
+Risiko
+ a| 
+LUN
+ a| 
+Warnung
+
+
+
+ a| 
+LUN-Latenz und kritischer MB/s-Schwellenwert überschritten (ocumLunLatencyMbpsIncident)
+ a| 
+Vorfall
+ a| 
+LUN
+ a| 
+Kritisch
+
+
+
+ a| 
+LUN-Latenz und MB/s-Warnschwelle überschritten (ocumLunLatencyMbpsWarning)
+ a| 
+Risiko
+ a| 
+LUN
+ a| 
+Warnung
+
+
+
+ a| 
+Kritischer Schwellenwert für LUN-Latenz und genutzte Gesamtleistungskapazität überschritten (ocumLunLatencyAggregatePerfCapacityUsedIncident)
+ a| 
+Vorfall
+ a| 
+LUN
+ a| 
+Kritisch
+
+
+
+ a| 
+Warnschwelle für LUN-Latenz und genutzte Gesamtleistungskapazität überschritten (ocumLunLatencyAggregatePerfCapacityUsedWarning)
+ a| 
+Risiko
+ a| 
+LUN
+ a| 
+Warnung
+
+
+
+ a| 
+Kritischer Schwellenwert für LUN-Latenz und Gesamtauslastung überschritten (ocumLunLatencyAggregateUtilizationIncident)
+ a| 
+Vorfall
+ a| 
+LUN
+ a| 
+Kritisch
+
+
+
+ a| 
+Warnschwelle für LUN-Latenz und Gesamtauslastung überschritten (ocumLunLatencyAggregateUtilizationWarning)
+ a| 
+Risiko
+ a| 
+LUN
+ a| 
+Warnung
+
+
+
+ a| 
+Kritischer Schwellenwert für LUN-Latenz und genutzte Knotenleistungskapazität überschritten (ocumLunLatencyNodePerfCapacityUsedIncident)
+ a| 
+Vorfall
+ a| 
+LUN
+ a| 
+Kritisch
+
+
+
+ a| 
+Warnschwelle für LUN-Latenz und Knotenleistung bei genutzter Kapazität überschritten (ocumLunLatencyNodePerfCapacityUsedWarning)
+ a| 
+Risiko
+ a| 
+LUN
+ a| 
+Warnung
+
+
+
+ a| 
+Verwendete LUN-Latenz und Knotenleistungskapazität – kritischer Übernahmeschwellenwert überschritten (ocumLunLatencyAggregatePerfCapacityUsedTakeoverIncident)
+ a| 
+Vorfall
+ a| 
+LUN
+ a| 
+Kritisch
+
+
+
+ a| 
+Verwendete LUN-Latenz und Knotenleistungskapazität – Schwellenwert für Übernahmewarnung überschritten (ocumLunLatencyAggregatePerfCapacityUsedTakeoverWarning)
+ a| 
+Risiko
+ a| 
+LUN
+ a| 
+Warnung
+
+
+
+ a| 
+Kritischer Schwellenwert für LUN-Latenz und Knotenauslastung überschritten (ocumLunLatencyNodeUtilizationIncident)
+ a| 
+Vorfall
+ a| 
+LUN
+ a| 
+Kritisch
+
+
+
+ a| 
+Warnschwelle für LUN-Latenz und Knotenauslastung überschritten (ocumLunLatencyNodeUtilizationWarning)
+ a| 
+Risiko
+ a| 
+LUN
+ a| 
+Warnung
+
+
+
+ a| 
+Warnschwelle für maximale IOPS von QoS LUN überschritten (ocumQosLunMaxIopsWarning)
+ a| 
+Risiko
+ a| 
+LUN
+ a| 
+Warnung
+
+
+
+ a| 
+QoS LUN Max MB/s-Warnschwelle überschritten (ocumQosLunMaxMbpsWarning)
+ a| 
+Risiko
+ a| 
+LUN
+ a| 
+Warnung
+
+
+
+ a| 
+Der Latenzschwellenwert der Workload-LUN wurde gemäß der Leistungs-Servicelevel-Richtlinie überschritten (ocumConformanceLatencyWarning).
+ a| 
+Risiko
+ a| 
+LUN
+ a| 
+Warnung
+
+|===

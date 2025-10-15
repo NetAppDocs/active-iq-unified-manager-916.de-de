@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/concept_manage_performance_using_perf_capacity_available_iops.html 
+sidebar: sidebar 
+keywords: managing, performance, performance, capacity, available, iops, information 
+summary: Die Leistungskapazität gibt an, wie viel Durchsatz Sie aus einer Ressource herausholen können, ohne die Nutzleistung dieser Ressource zu überschreiten.  Bei der Betrachtung mithilfe vorhandener Leistungsindikatoren ist die Leistungskapazität der Punkt, an dem Sie die maximale Auslastung eines Knotens oder Aggregats erreichen, bevor die Latenz zum Problem wird. 
+---
+= Verwalten Sie die Leistung mithilfe von Leistungskapazität und verfügbaren IOPS-Informationen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die _Leistungskapazität_ gibt an, wie viel Durchsatz Sie aus einer Ressource herausholen können, ohne die Nutzleistung dieser Ressource zu überschreiten.  Bei der Betrachtung mithilfe vorhandener Leistungsindikatoren ist die Leistungskapazität der Punkt, an dem Sie die maximale Auslastung eines Knotens oder Aggregats erreichen, bevor die Latenz zum Problem wird.
+
+Unified Manager sammelt Leistungskapazitätsstatistiken von Knoten und Aggregaten in jedem Cluster.  _Ausgenutzte Leistungskapazität_ ist der Prozentsatz der Leistungskapazität, der aktuell genutzt wird, und _Freie Leistungskapazität_ ist der Prozentsatz der Leistungskapazität, der noch verfügbar ist.
+
+Während die freie Leistungskapazität einen Prozentsatz der noch verfügbaren Ressource angibt, gibt _verfügbare IOPS_ die Anzahl der IOPS an, die der Ressource hinzugefügt werden können, bevor die maximale Leistungskapazität erreicht wird.  Durch die Verwendung dieser Metrik können Sie sicher sein, dass Sie einer Ressource Workloads mit einer vorgegebenen Anzahl von IOPS hinzufügen können.
+
+Die Überwachung der Leistungskapazitätsinformationen bietet folgende Vorteile:
+
+* Hilft bei der Bereitstellung und dem Ausgleich von Arbeitsabläufen.
+* Hilft Ihnen, die Überlastung eines Knotens oder die Nutzung seiner Ressourcen über den optimalen Punkt hinaus zu verhindern und so den Bedarf an Fehlerbehebung zu reduzieren.
+* Hilft Ihnen, präziser zu bestimmen, wo zusätzliche Speicherausrüstung benötigt werden könnte.
+

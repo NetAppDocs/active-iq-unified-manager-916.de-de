@@ -1,0 +1,14 @@
+---
+permalink: health-checker/concept_understand_groups.html 
+sidebar: sidebar 
+keywords: understand, groups 
+summary: Sie können in Unified Manager Gruppen erstellen, um Speicherobjekte zu verwalten.  Wenn Sie sich mit den Konzepten von Gruppen auskennen und wissen, wie Sie durch Gruppenregeln Speicherobjekte zu einer Gruppe hinzufügen können, können Sie die Speicherobjekte in Ihrer Umgebung besser verwalten. 
+---
+= Gruppen verstehen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können in Unified Manager Gruppen erstellen, um Speicherobjekte zu verwalten.  Wenn Sie sich mit den Konzepten von Gruppen auskennen und wissen, wie Sie durch Gruppenregeln Speicherobjekte zu einer Gruppe hinzufügen können, können Sie die Speicherobjekte in Ihrer Umgebung besser verwalten.

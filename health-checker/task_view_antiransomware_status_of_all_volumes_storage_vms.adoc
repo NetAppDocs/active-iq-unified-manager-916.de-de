@@ -1,0 +1,44 @@
+---
+permalink: health-checker/task_view_antiransomware_status_of_all_volumes_storage_vms.html 
+sidebar: sidebar 
+keywords: view, anti-ransomware status, volumes, storage VMs, SVMs 
+summary: Sie können eine Liste aller Volumes und Speicher-VMs und deren aktuellen Anti-Ransomware-Status anzeigen, sodass Sie feststellen können, ob die Daten auf Ihren Volumes ausreichend vor Ransomware-Angriffen geschützt sind. 
+---
+= Anzeigen des Anti-Ransomware-Status aller Volumes und Speicher-VMs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Liste aller Volumes und Storage-VMs (SVMs) und deren aktuellen Anti-Ransomware-Status anzeigen, sodass Sie feststellen können, ob die Daten auf Ihren Volumes und SVMs ausreichend vor Ransomware-Angriffen geschützt sind.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Weitere Informationen zu den verschiedenen Anti-Ransomware-Status finden Sie unterlink:https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html#system-manager-procedure["ONTAP: Anti-Ransomware aktivieren"] .
+
+
+
+== Zeigen Sie Sicherheitsdetails aller Volumes mit Anti-Ransomware-Erkennung an
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Volumes*.
+. Wählen Sie im Menü „Ansicht“ die Option „Integrität“ > „Sicherheit“ > „Anti-Ransomware“
+. In der Ansicht *Sicherheit: Anti-Ransomware* können Sie nach den verschiedenen Feldern sortieren oder den Filter verwenden.
+
+
+
+NOTE: Anti-Ransomware wird nicht für Offline-Volumes, eingeschränkte Volumes, SnapLock Volumes, FlexGroup Volumes, FlexCache Volumes, reine SAN-Volumes, Volumes gestoppter Speicher-VMs, Root-Volumes von Speicher-VMs oder Datensicherungs-Volumes unterstützt.
+
+
+
+== Sicherheitsdetails aller Storage-VMs mit Anti-Ransomware-Erkennung anzeigen
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher > Speicher-VMs*.
+. Wählen Sie *Ansicht > Sicherheit > Anti-Ransomware*.  Es wird eine Liste der SVMs mit dem Anti-Ransomware-Status angezeigt.
+
+
+
+NOTE: Die Anti-Ransomware-Überwachung wird auf Speicher-VMs, bei denen das NAS-Protokoll nicht aktiviert ist, nicht unterstützt.

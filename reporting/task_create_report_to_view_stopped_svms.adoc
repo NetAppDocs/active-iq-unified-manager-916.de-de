@@ -1,0 +1,41 @@
+---
+permalink: reporting/task_create_report_to_view_stopped_svms.html 
+sidebar: sidebar 
+keywords: create, report, view, stopped, storage VMs 
+summary: Sie können einen Bericht erstellen, um eine Liste aller gestoppten SVMs anzuzeigen. 
+---
+= Erstellen Sie einen Bericht zum Anzeigen gestoppter Speicher-VMs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um eine Liste aller gestoppten SVMs anzuzeigen.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Führen Sie die folgenden Schritte aus, um eine benutzerdefinierte Ansicht zu erstellen, die gestoppte Speicher-VMs anzeigt, und planen Sie dann die Generierung eines Berichts für diese Ansicht.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Speicher-VMs*.
+. Wählen Sie im Menü „Ansicht“ die Option „Integrität“ > „Alle Speicher-VMs“ aus.
+. Wählen Sie *Anzeigen/Ausblenden*, um alle Spalten zu entfernen, die Sie nicht im Bericht haben möchten.
+. Ziehen Sie die Spalte „Status“ in die Nähe der Spalte „Speicher-VM“.
+. Klicken Sie auf das Filtersymbol, fügen Sie den folgenden Filter hinzu und klicken Sie dann auf *Filter anwenden*:
++
+** Status ist „Gestoppt“
+
+
+. Speichern Sie die Ansicht unter einem bestimmten Namen, der widerspiegelt, was die Ansicht anzeigt, z. B. „Gestoppte SVMs“, und klicken Sie auf das Häkchen (image:../media/blue_check.gif[""] ).
+. Klicken Sie auf der Inventarseite auf die Schaltfläche *Geplante Berichte*.
+. Klicken Sie auf *Zeitplan hinzufügen*, um der Seite *Berichtszeitpläne* eine neue Zeile hinzuzufügen, damit Sie die Zeitplanmerkmale für den neuen Bericht definieren können.
+. Geben Sie einen Namen für den Berichtszeitplan ein und füllen Sie die anderen Berichtsfelder aus. Klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""] ) am Ende der Zeile.
++
+Der Bericht wird sofort testweise versendet.  Anschließend wird der Bericht generiert und in der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Basierend auf den im Bericht angezeigten Ergebnissen möchten Sie möglicherweise untersuchen, warum die SVM gestoppt wurde, um festzustellen, ob Sie die gestoppten SVMs neu starten sollten.

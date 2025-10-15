@@ -1,0 +1,24 @@
+---
+permalink: events/task_configure_event_retention_settings.html 
+sidebar: sidebar 
+keywords: configure, event, retention, settings 
+summary: Sie können die Anzahl der Monate angeben, die ein Ereignis auf dem Unified Manager-Server aufbewahrt wird, bevor es automatisch gelöscht wird. 
+---
+= Konfigurieren der Ereignisaufbewahrungseinstellungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Anzahl der Monate angeben, die ein Ereignis auf dem Unified Manager-Server aufbewahrt wird, bevor es automatisch gelöscht wird.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ verfügen.
+
+Das Aufbewahren von Ereignissen für mehr als 6 Monate kann die Serverleistung beeinträchtigen und wird nicht empfohlen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Allgemein* > *Datenaufbewahrung*.
+. Wählen Sie auf der Seite *Datenaufbewahrung* den Schieberegler im Bereich „Ereignisaufbewahrung“ aus, verschieben Sie ihn auf die Anzahl der Monate, die Ereignisse aufbewahrt werden sollen, und klicken Sie auf *Speichern*.
+

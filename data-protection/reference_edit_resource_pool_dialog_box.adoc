@@ -1,0 +1,46 @@
+---
+permalink: data-protection/reference_edit_resource_pool_dialog_box.html 
+sidebar: sidebar 
+keywords: edit, resource pool, dialog box 
+summary: Sie können das Dialogfeld „Ressourcenpool bearbeiten“ verwenden, um den Namen und die Beschreibung eines vorhandenen Ressourcenpools zu ändern.  Wenn beispielsweise der ursprüngliche Name und die Beschreibung ungenau oder falsch sind, können Sie sie ändern, sodass sie präziser sind. 
+---
+= Dialogfeld „Ressourcenpool bearbeiten“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das Dialogfeld „Ressourcenpool bearbeiten“ verwenden, um den Namen und die Beschreibung eines vorhandenen Ressourcenpools zu ändern.  Wenn beispielsweise der ursprüngliche Name und die Beschreibung ungenau oder falsch sind, können Sie sie ändern, sodass sie präziser sind.
+
+
+
+== Textfelder
+
+Über die Textfelder können Sie die folgenden Informationen für den ausgewählten Ressourcenpool ändern:
+
+* *Name des Ressourcenpools*
++
+Ermöglicht Ihnen, einen neuen Namen einzugeben.
+
+* *Beschreibung*
++
+Ermöglicht Ihnen, eine neue Beschreibung einzugeben.
+
+
+
+
+
+== Befehlsschaltflächen
+
+Mit den Befehlsschaltflächen können Sie die folgenden Aufgaben ausführen:
+
+* *Speichern*
++
+Speichert die Änderungen am Namen und der Beschreibung des Ressourcenpools.
+
+* *Stornieren*
++
+Verwirft die Änderungen und schließt das Dialogfeld „Ressourcenpool bearbeiten“.
+
+

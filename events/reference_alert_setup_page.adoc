@@ -1,0 +1,126 @@
+---
+permalink: events/reference_alert_setup_page.html 
+sidebar: sidebar 
+keywords: alert, setup, page, command buttons, list view, details area 
+summary: Auf der Seite „Alarm-Setup“ wird eine Liste mit Alarmen angezeigt und es werden Informationen zu Alarmnamen, Status, Benachrichtigungsmethode und Benachrichtigungshäufigkeit bereitgestellt.  Sie können auf dieser Seite auch Warnungen hinzufügen, bearbeiten, entfernen, aktivieren oder deaktivieren. 
+---
+= Seite „Alarm-Setup“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Alarm-Setup“ wird eine Liste mit Alarmen angezeigt und es werden Informationen zu Alarmnamen, Status, Benachrichtigungsmethode und Benachrichtigungshäufigkeit bereitgestellt.  Sie können auf dieser Seite auch Warnungen hinzufügen, bearbeiten, entfernen, aktivieren oder deaktivieren.
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+
+== Befehlsschaltflächen
+
+* *Hinzufügen*
++
+Zeigt das Dialogfeld „Warnung hinzufügen“ an, in dem Sie neue Warnungen hinzufügen können.
+
+* *Bearbeiten*
++
+Zeigt das Dialogfeld „Warnung bearbeiten“ an, in dem Sie ausgewählte Warnungen bearbeiten können.
+
+* *Löschen*
++
+Löscht die ausgewählten Warnungen.
+
+* *Aktivieren*
++
+Aktiviert das Senden von Benachrichtigungen für die ausgewählten Warnungen.
+
+* *Deaktivieren*
++
+Deaktiviert die ausgewählten Warnungen, wenn Sie das Senden von Benachrichtigungen vorübergehend beenden möchten.
+
+* *Prüfen*
++
+Testet die ausgewählten Warnungen, um ihre Konfiguration nach dem Hinzufügen oder Bearbeiten zu überprüfen.
+
+* *Warnungen für gelöste und veraltete Ereignisse*
++
+Ermöglicht Ihnen, das Senden von Warnungen zu aktivieren oder zu deaktivieren, wenn Ereignisse in den Status „Gelöst“ oder „Veraltet“ verschoben werden.  Dies kann dazu beitragen, dass Benutzer keine unnötigen Benachrichtigungen erhalten.
+
+
+
+
+
+== Listenansicht
+
+Die Listenansicht zeigt in tabellarischer Form Informationen zu den erstellten Warnungen an.  Mithilfe der Spaltenfilter können Sie die angezeigten Daten anpassen.  Sie können auch eine Warnung auswählen, um im Detailbereich weitere Informationen dazu anzuzeigen.
+
+* *Status*
++
+Gibt an, ob eine Warnung aktiviert ist (image:../media/alert_status_enabled.gif[""] ) oder deaktiviert (image:../media/alert_status_disabled.gif[""] ).
+
+* *Alarm*
++
+Zeigt den Namen der Warnung an.
+
+* *Beschreibung*
++
+Zeigt eine Beschreibung für die Warnung an.
+
+* *Benachrichtigungsmethode*
++
+Zeigt die für die Warnung ausgewählte Benachrichtigungsmethode an.  Sie können Benutzer per E-Mail oder SNMP-Traps benachrichtigen.
+
+* *Benachrichtigungshäufigkeit*
++
+Gibt die Häufigkeit (in Minuten) an, mit der der Verwaltungsserver weiterhin Benachrichtigungen sendet, bis das Ereignis bestätigt, gelöst oder in den Status „Veraltet“ versetzt wird.
+
+
+
+
+
+== Detailbereich
+
+Der Detailbereich bietet weitere Informationen zur ausgewählten Warnung.
+
+* *Name der Warnung*
++
+Zeigt den Namen der Warnung an.
+
+* *Alarmbeschreibung*
++
+Zeigt eine Beschreibung für die Warnung an.
+
+* *Veranstaltungen*
++
+Zeigt die Ereignisse an, für die Sie den Alarm auslösen möchten.
+
+* *Ressourcen*
++
+Zeigt die Ressourcen an, für die Sie den Alarm auslösen möchten.
+
+* *Beinhaltet*
++
+Zeigt die Gruppe von Ressourcen an, für die Sie den Alarm auslösen möchten.
+
+* *Ausgeschlossen*
++
+Zeigt die Gruppe von Ressourcen an, für die Sie den Alarm nicht auslösen möchten.
+
+* *Benachrichtigungsmethode*
++
+Zeigt die Benachrichtigungsmethode für die Warnung an.
+
+* *Benachrichtigungshäufigkeit*
++
+Zeigt die Häufigkeit an, mit der der Verwaltungsserver weiterhin Warnbenachrichtigungen sendet, bis das Ereignis bestätigt, behoben oder in den Status „Veraltet“ versetzt wird.
+
+* *Skriptname*
++
+Zeigt den Namen des Skripts an, das mit der ausgewählten Warnung verknüpft ist.  Dieses Skript wird ausgeführt, wenn eine Warnung generiert wird.
+
+* *E-Mail-Empfänger*
++
+Zeigt die E-Mail-Adressen der Benutzer an, die die Warnbenachrichtigung erhalten.
+
+

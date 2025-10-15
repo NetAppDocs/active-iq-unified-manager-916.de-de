@@ -1,0 +1,78 @@
+---
+permalink: performance-checker/task_assign_performance_threshold_policies_to_storage_objects.html 
+sidebar: sidebar 
+keywords: assign, performance, threshold, policies, storage, objects 
+summary: Sie weisen einem Speicherobjekt eine benutzerdefinierte Leistungsschwellenwertrichtlinie zu, sodass Unified Manager ein Ereignis meldet, wenn der Wert des Leistungsindikators die Richtlinieneinstellung überschreitet. 
+---
+= Zuweisen von Leistungsschwellenwertrichtlinien zu Speicherobjekten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie weisen einem Speicherobjekt eine benutzerdefinierte Leistungsschwellenwertrichtlinie zu, sodass Unified Manager ein Ereignis meldet, wenn der Wert des Leistungsindikators die Richtlinieneinstellung überschreitet.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ verfügen.
+
+Die Leistungsschwellenwertrichtlinie(n), die Sie auf das Objekt anwenden möchten, muss/müssen vorhanden sein.
+
+Sie können jeweils nur eine Leistungsrichtlinie auf ein Objekt oder eine Gruppe von Objekten anwenden.
+
+Sie können jedem Speicherobjekt maximal drei Schwellenwertrichtlinien zuweisen.  Wenn beim Zuweisen von Richtlinien zu mehreren Objekten einem der Objekte bereits die maximale Anzahl an Richtlinien zugewiesen ist, führt Unified Manager die folgenden Aktionen aus:
+
+* Wendet die Richtlinie auf alle ausgewählten Objekte an, die ihr Maximum noch nicht erreicht haben.
+* Ignoriert die Objekte, die die maximale Anzahl an Richtlinien erreicht haben
+* Zeigt eine Meldung an, dass die Richtlinie nicht allen Objekten zugewiesen wurde
+
+
+.Schritte
+. Wählen Sie auf der Seite „Leistungsinventar“ eines beliebigen Speicherobjekts das Objekt bzw. die Objekte aus, denen Sie eine Schwellenwertrichtlinie zuweisen möchten:
++
+|===
+| So weisen Sie Schwellenwerte zu: | Klicken... 
+
+
+ a| 
+Ein einzelnes Objekt
+ a| 
+Das Kontrollkästchen links neben diesem Objekt.
+
+
+
+ a| 
+Mehrere Objekte
+ a| 
+Das Kontrollkästchen links neben jedem Objekt.
+
+
+
+ a| 
+Alle Objekte auf der Seite
+ a| 
+Derimage:../media/select_dropdown_65_png.gif["Dropdown-Symbol auswählen"] Dropdown-Feld und wählen Sie *Alle Objekte auf dieser Seite auswählen*.
+
+
+
+ a| 
+Alle Objekte des gleichen Typs
+ a| 
+Derimage:../media/select_dropdown_65_png.gif["Dropdown-Symbol auswählen"] Dropdown-Feld und wählen Sie *Alle Objekte auswählen*.
+
+|===
++
+Sie können die Sortier- und Filterfunktion verwenden, um die Liste der Objekte auf der Inventarseite zu verfeinern und so die Anwendung von Schwellenwertrichtlinien auf viele Objekte zu vereinfachen.
+
+. Treffen Sie Ihre Auswahl und klicken Sie dann auf *Richtlinie für Leistungsschwellenwerte zuweisen*.
++
+Die Seite „Richtlinie für Leistungsschwellenwerte zuweisen“ wird angezeigt und enthält eine Liste der Schwellenwertrichtlinien, die für diesen bestimmten Speicherobjekttyp vorhanden sind.
+
+. Klicken Sie auf die einzelnen Richtlinien, um die Details der Leistungsschwellenwerteinstellungen anzuzeigen und zu überprüfen, ob Sie die richtige Schwellenwertrichtlinie ausgewählt haben.
+. Nachdem Sie die entsprechende Schwellenwertrichtlinie ausgewählt haben, klicken Sie auf *Richtlinie zuweisen*.
++
+Eine Erfolgsmeldung oben auf der Seite bestätigt, dass die Schwellenwertrichtlinie dem oder den Objekten zugewiesen wurde, und bietet einen Link zur Seite „Warnmeldungen“, damit Sie die Warnmeldungseinstellungen für dieses Objekt und diese Richtlinie konfigurieren können.
+
+
+
+Wenn Sie Warnmeldungen per E-Mail oder als SNMP-Trap erhalten möchten, um Sie darüber zu informieren, dass ein bestimmtes Leistungsereignis generiert wurde, müssen Sie die Warnmeldungseinstellungen auf der Seite „Warnmeldungseinrichtung“ konfigurieren.

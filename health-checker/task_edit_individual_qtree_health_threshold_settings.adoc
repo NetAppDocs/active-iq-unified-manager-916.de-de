@@ -1,0 +1,31 @@
+---
+permalink: health-checker/task_edit_individual_qtree_health_threshold_settings.html 
+sidebar: sidebar 
+keywords: edit, individual, qtree, health, threshold, settings 
+summary: Sie können die Integritätsschwellenwerteinstellungen für die Qtree-Kapazität für einen oder mehrere Qtrees bearbeiten.  Wenn ein Schwellenwert überschritten wird, werden Warnungen generiert und Sie erhalten Benachrichtigungen.  Diese Benachrichtigungen helfen Ihnen, basierend auf dem generierten Ereignis vorbeugende Maßnahmen zu ergreifen. 
+---
+= Bearbeiten Sie die individuellen Qtree-Integritätsschwellenwerteinstellungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Integritätsschwellenwerteinstellungen für die Qtree-Kapazität für einen oder mehrere Qtrees bearbeiten.  Wenn ein Schwellenwert überschritten wird, werden Warnungen generiert und Sie erhalten Benachrichtigungen.  Diese Benachrichtigungen helfen Ihnen, basierend auf dem generierten Ereignis vorbeugende Maßnahmen zu ergreifen.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Basierend auf Änderungen der Schwellenwerte werden im nächsten Überwachungszyklus Ereignisse generiert oder verworfen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Qtrees*.
+. Wählen Sie in der Ansicht *Kapazität: Alle Qtrees* einen oder mehrere Qtrees aus und klicken Sie dann auf *Schwellenwerte bearbeiten*.
+. Ändern Sie im Dialogfeld *Qtree-Schwellenwerte bearbeiten* die Kapazitätsschwellenwerte für den oder die ausgewählten Qtrees und klicken Sie auf *Speichern*.
++
+[NOTE]
+====
+Sie können auch einzelne Qtree-Schwellenwerte auf der Registerkarte „Qtrees“ auf der Seite „Storage VM / Health Details“ festlegen.
+
+====
+

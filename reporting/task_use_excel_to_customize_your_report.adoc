@@ -1,0 +1,54 @@
+---
+permalink: reporting/task_use_excel_to_customize_your_report.html 
+sidebar: sidebar 
+keywords: excel, customize, report 
+summary: 'Nachdem Sie die Ansicht gespeichert haben, können Sie sie im Excel-Arbeitsmappenformat (.xlsx) herunterladen.  Wenn Sie die Excel-Datei öffnen, können Sie erweiterte Excel-Funktionen verwenden, um Ihren Bericht anzupassen.' 
+---
+= Verwenden Sie Excel, um Ihren Bericht anzupassen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie die Ansicht gespeichert haben, können Sie sie im Excel-Arbeitsmappenformat (.xlsx) herunterladen.  Wenn Sie die Excel-Datei öffnen, können Sie erweiterte Excel-Funktionen verwenden, um Ihren Bericht anzupassen.
+
+.Bevor Sie beginnen
+Sie können nur eine Excel-Arbeitsmappendatei mit der Erweiterung .xlsx hochladen.
+
+Zu den erweiterten Excel-Funktionen, die Sie in Ihrem Bericht verwenden können, gehören beispielsweise:
+
+* Mehrspaltige Sortierung
+* Komplexe Filterung
+* Pivot-Tabellen
+* Diagramme
+
+
+[NOTE]
+====
+* Die heruntergeladene Excel-Datei verwendet den Standarddateinamen für die Ansicht, nicht Ihren gespeicherten Namen.
++
+** Das Format ist `<View Area>-<Day>-<Month>-<Year>-<Hour>-<Minute>-<Second>.xlsx.`
+** Beispielsweise eine benutzerdefinierte gespeicherte Ansicht mit dem Namen `Volumes-not online` hat einen Dateinamen von `health-volumes-05-May-2020-19-18-00.xlsx` wenn an diesem Tag und zu dieser Uhrzeit gespeichert.
+
+
+* Sie können der Excel-Datei Blätter hinzufügen, vorhandene Blätter jedoch nicht ändern.
++
+** Verändern Sie die vorhandenen Blätter, Daten und Informationen nicht.  Kopieren Sie die Daten stattdessen auf eine neue Seite, die Sie erstellen.
+** Eine Ausnahme von der obigen Regel besteht darin, dass Sie auf der Seite „Daten“ Formeln erstellen können.  Verwenden Sie die Datenseitenformeln, um Diagramme auf neuen Seiten zu erstellen.
+** Geben Sie einem neuen Blatt keine Daten oder Informationen.
+
+
+* Wenn eine benutzerdefinierte Excel-Datei vorhanden ist, ist neben dem Menüpunkt *Berichte* > *Excel hochladen* ein Häkchen angezeigt.  Beim Download der Excel-Datei wird die Version mit den Anpassungen verwendet.image:../media/upload_excel.png["Ein UI-Screenshot, der zeigt, wie Excel in Berichte hochgeladen wird."]
+
+
+====
+.Schritte
+. Öffnen Sie die Standardansicht, die benutzerdefinierte oder die gespeicherte Ansicht, die Sie als Grundlage für Ihren Bericht verwenden möchten.
+. Wählen Sie *Berichte* > *Excel herunterladen*.
+. Speichern Sie die Datei. Die Datei wird in Ihrem Download-Ordner gespeichert.
+. Öffnen Sie die gespeicherte Datei in Excel.  Verschieben Sie die Datei nicht an einen neuen Speicherort. Wenn Sie Ihre Arbeit an einem anderen Ort erledigen, speichern Sie die Datei vor dem Hochladen unter dem ursprünglichen Dateinamen wieder am ursprünglichen Speicherort.
+. Passen Sie die Datei mithilfe von Excel-Funktionen wie komplexen Sortierungen, mehrschichtigen Filtern, Pivot-Tabellen oder Diagrammen an.  Weitere Informationen finden Sie in der Microsoft® Excel-Dokumentation.
+. Wählen Sie *Berichte* > *Excel hochladen* und wählen Sie die Datei aus, die Sie geändert haben.  Die zuletzt heruntergeladene Datei wird vom selben Dateispeicherort hochgeladen.
+. Senden Sie sich selbst einen Testbericht mit der Funktion *Geplante Berichte*.
+

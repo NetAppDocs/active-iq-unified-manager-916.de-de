@@ -1,0 +1,23 @@
+---
+permalink: data-protection/task_abort_jobs.html 
+sidebar: sidebar 
+keywords: abort, jobs 
+summary: Auf der Seite „Jobs“ können Sie einen Job abbrechen, wenn seine Fertigstellung zu lange dauert, zu viele Fehler auftreten oder er nicht mehr benötigt wird.  Sie können einen Job nur abbrechen, wenn sein Status und Typ dies zulassen.  Sie können jeden laufenden Job abbrechen. 
+---
+= Jobs abbrechen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Jobs“ können Sie einen Job abbrechen, wenn seine Fertigstellung zu lange dauert, zu viele Fehler auftreten oder er nicht mehr benötigt wird.  Sie können einen Job nur abbrechen, wenn sein Status und Typ dies zulassen.  Sie können jeden laufenden Job abbrechen.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Schutz* > *Jobs*.
+. Wählen Sie aus der Jobliste einen Job aus und klicken Sie dann auf *Abbrechen*.
+. Klicken Sie in der Bestätigungsaufforderung auf *Ja*, um den ausgewählten Auftrag abzubrechen.
+

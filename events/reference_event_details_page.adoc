@@ -1,0 +1,87 @@
+---
+permalink: events/reference_event_details_page.html 
+sidebar: sidebar 
+keywords: event, details, page 
+summary: Auf der Seite „Ereignisdetails“ können Sie die Details eines ausgewählten Ereignisses anzeigen, z. B. den Schweregrad des Ereignisses, die Auswirkungsstufe, den Auswirkungsbereich und die Ereignisquelle.  Sie können auch zusätzliche Informationen zu möglichen Abhilfemaßnahmen zur Behebung des Problems anzeigen. 
+---
+= Seite mit Veranstaltungsdetails
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Ereignisdetails“ können Sie die Details eines ausgewählten Ereignisses anzeigen, z. B. den Schweregrad des Ereignisses, die Auswirkungsstufe, den Auswirkungsbereich und die Ereignisquelle.  Sie können auch zusätzliche Informationen zu möglichen Abhilfemaßnahmen zur Behebung des Problems anzeigen.
+
+* *Veranstaltungsname*
++
+Der Name des Ereignisses und die Uhrzeit, zu der das Ereignis zuletzt gesehen wurde.
+
++
+Bei Nichtleistungsereignissen sind die zuletzt angezeigten Informationen nicht bekannt, solange sich das Ereignis im Status „Neu“ oder „Bestätigt“ befindet, und werden daher ausgeblendet.
+
+* *Veranstaltungsbeschreibung*
++
+Eine kurze Beschreibung des Ereignisses.
+
++
+In einigen Fällen wird in der Ereignisbeschreibung ein Grund für die Auslösung des Ereignisses angegeben.
+
+* *Umstrittene Komponente*
++
+Bei dynamischen Leistungsereignissen werden in diesem Abschnitt Symbole angezeigt, die die logischen und physischen Komponenten des Clusters darstellen.  Wenn eine Komponente umstritten ist, wird ihr Symbol eingekreist und rot hervorgehoben.
+
++
+Eine Beschreibung der hier angezeigten Komponenten finden Sie unter _Clusterkomponenten und warum sie miteinander in Konflikt geraten können_.
+
+
+
+Die Abschnitte „Ereignisinformationen“, „Systemdiagnose“ und „Vorgeschlagene Maßnahmen“ werden in anderen Themen beschrieben.
+
+
+
+== Befehlsschaltflächen
+
+Mit den Befehlsschaltflächen können Sie die folgenden Aufgaben ausführen:
+
+* *Notizensymbol*
++
+Ermöglicht Ihnen, eine Notiz zum Ereignis hinzuzufügen oder zu aktualisieren und alle von anderen Benutzern hinterlassenen Notizen zu überprüfen.
+
+
+
+*Aktionsmenü*
+
+* *Mir zuweisen*
++
+Weist Ihnen das Ereignis zu.
+
+* *Anderen zuweisen*
++
+Öffnet das Dialogfeld „Besitzer zuweisen“, in dem Sie das Ereignis anderen Benutzern zuweisen oder neu zuweisen können.
+
++
+Wenn Sie einem Benutzer ein Ereignis zuweisen, werden der Name des Benutzers und die Uhrzeit der Ereigniszuweisung in der Ereignisliste für die ausgewählten Ereignisse hinzugefügt.
+
++
+Sie können die Zuweisung von Ereignissen auch aufheben, indem Sie das Eigentümerfeld leer lassen.
+
+* *Anerkennen*
++
+Bestätigt die ausgewählten Ereignisse, sodass Sie nicht weiterhin wiederholt Warnbenachrichtigungen erhalten.
+
++
+Wenn Sie ein Ereignis bestätigen, werden Ihr Benutzername und die Uhrzeit, zu der Sie das Ereignis bestätigt haben, der Ereignisliste (Bestätigt von) für die ausgewählten Ereignisse hinzugefügt.  Wenn Sie ein Ereignis bestätigen, übernehmen Sie die Verantwortung für die Verwaltung dieses Ereignisses.
+
+* *Als gelöst markieren*
++
+Ermöglicht Ihnen, den Ereignisstatus in „Gelöst“ zu ändern.
+
++
+Wenn Sie ein Ereignis lösen, werden Ihr Benutzername und der Zeitpunkt der Lösung des Ereignisses in der Ereignisliste (Gelöst von) für die ausgewählten Ereignisse hinzugefügt.  Nachdem Sie Korrekturmaßnahmen für das Ereignis ergriffen haben, müssen Sie das Ereignis als gelöst markieren.
+
+* *Benachrichtigung hinzufügen*
++
+Zeigt das Dialogfeld „Warnung hinzufügen“ an, in dem Sie eine Warnung für das ausgewählte Ereignis hinzufügen können.
+
+

@@ -1,0 +1,74 @@
+---
+permalink: storage-mgmt/task_export_storage_data_as_reports.html 
+sidebar: sidebar 
+keywords: export, storage, data, reports 
+summary: Sie können Speicherdaten in verschiedenen Ausgabeformaten exportieren und die exportierten Daten dann zum Erstellen von Berichten verwenden.  Wenn beispielsweise 10 kritische Ereignisse nicht behoben wurden, können Sie die Daten von der Inventarseite der Ereignisverwaltung exportieren, um einen Bericht zu erstellen, und den Bericht dann an Administratoren senden, die die Probleme beheben können. 
+---
+= Speicherdaten als Berichte exportieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Speicherdaten in verschiedenen Ausgabeformaten exportieren und die exportierten Daten dann zum Erstellen von Berichten verwenden.  Wenn beispielsweise 10 kritische Ereignisse nicht behoben wurden, können Sie die Daten von der Inventarseite der Ereignisverwaltung exportieren, um einen Bericht zu erstellen, und den Bericht dann an Administratoren senden, die die Probleme beheben können.
+
+Sie können Daten in eine `.csv` Datei, `.xlsx` Datei oder `.pdf` Dokument von den Inventarseiten *Speicher* und *Netzwerk* und verwenden Sie die exportierten Daten zum Erstellen von Berichten.  Es gibt andere Stellen im Produkt, an denen nur `.csv` oder `.pdf` Dateien können generiert werden.
+
+.Schritte
+. Führen Sie eine der folgenden Aktionen aus:
++
+|===
+| Wenn Sie exportieren möchten... | Machen Sie Folgendes... 
+
+
+ a| 
+Details zum Speicherobjektbestand
+ a| 
+Klicken Sie im linken Navigationsmenü auf *Speicher* oder *Netzwerk* und wählen Sie dann ein Speicherobjekt aus.  Wählen Sie eine der vom System bereitgestellten Ansichten oder eine beliebige benutzerdefinierte Ansicht, die Sie erstellt haben.
+
+
+
+ a| 
+Details zur QoS-Richtliniengruppe
+ a| 
+Klicken Sie im linken Navigationsmenü auf *Speicher* > *QoS-Richtliniengruppen*.
+
+
+
+ a| 
+Details zur Speicherkapazität und zum Schutzverlauf
+ a| 
+Klicken Sie auf *Speicher* > *Aggregate* oder *Speicher* > *Volumes* und wählen Sie dann ein einzelnes Aggregat oder Volume aus.
+
+
+
+ a| 
+Veranstaltungsdetails
+ a| 
+Klicken Sie im linken Navigationsmenü auf *Eventverwaltung*.
+
+
+
+ a| 
+Leistungsdetails der Top 10-Speicherobjekte
+ a| 
+Klicken Sie auf *Speicher* > *Cluster* > *Leistung: Alle Cluster*, wählen Sie dann einen Cluster aus und wählen Sie die Registerkarte *Top-Performer*.  Wählen Sie dann ein Speicherobjekt und einen Leistungsindikator aus.
+
+|===
+. Klicken Sie auf die Schaltfläche *Berichte* (oder auf einigen UI-Seiten auf die Schaltfläche *Exportieren*).
+. Klicken Sie auf *CSV herunterladen*, *PDF herunterladen* oder *Excel herunterladen*, um die Exportanforderung zu bestätigen.
++
+Auf der Registerkarte „Top Performers“ können Sie einen Bericht mit den Statistiken für den einzelnen Cluster, den Sie gerade anzeigen, oder für alle Cluster im Rechenzentrum herunterladen.
+
++
+Die Datei wird heruntergeladen.
+
+. Öffnen Sie die Datei in der entsprechenden Anwendung.
+
+
+*Verwandte Informationen*
+
+link:["Seite „Integrität/Cluster-Inventar“"]
+
+link:../reporting/task_schedule_report.html["Planen eines Berichts"]

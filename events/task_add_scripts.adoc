@@ -1,0 +1,75 @@
+---
+permalink: events/task_add_scripts.html 
+sidebar: sidebar 
+keywords: add, scripts 
+summary: Sie können in Unified Manager Skripte hinzufügen und die Skripte mit Warnungen verknüpfen.  Diese Skripte werden automatisch ausgeführt, wenn eine Warnung generiert wird, und ermöglichen es Ihnen, Informationen zu Speicherobjekten zu erhalten, für die das Ereignis generiert wird. 
+---
+= Skripts hinzufügen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können in Unified Manager Skripte hinzufügen und die Skripte mit Warnungen verknüpfen.  Diese Skripte werden automatisch ausgeführt, wenn eine Warnung generiert wird, und ermöglichen es Ihnen, Informationen zu Speicherobjekten zu erhalten, für die das Ereignis generiert wird.
+
+.Bevor Sie beginnen
+* Sie müssen die Skripte erstellt und gespeichert haben, die Sie dem Unified Manager-Server hinzufügen möchten.
+* Die unterstützten Dateiformate für Skripte sind Perl, Shell, PowerShell, Python und `.bat` Dateien.
++
+|===
+| Plattform, auf der Unified Manager installiert ist | Unterstützte Sprachen 
+
+
+ a| 
+VMware
+ a| 
+Perl- und Shell-Skripte
+
+
+
+ a| 
+Linux
+ a| 
+Perl-, Python- und Shell-Skripte
+
+
+
+ a| 
+Windows
+ a| 
+PowerShell-, Perl-, Python- und .bat-Skripte
+
+|===
++
+** Für Perl-Skripte muss Perl auf dem Unified Manager-Server installiert sein.  Bei VMware-Installationen wird Perl 5 standardmäßig installiert und Skripte unterstützen nur das, was Perl 5 unterstützt.  Wenn Perl nach Unified Manager installiert wurde, müssen Sie den Unified Manager-Server neu starten.
+** Für PowerShell-Skripte muss auf dem Windows-Server die entsprechende PowerShell-Ausführungsrichtlinie festgelegt werden, damit die Skripte ausgeführt werden können.
+
+
++
+[NOTE]
+====
+Wenn Ihr Skript Protokolldateien erstellt, um den Fortschritt des Warnskripts zu verfolgen, müssen Sie sicherstellen, dass die Protokolldateien nicht irgendwo im Installationsordner von Unified Manager erstellt werden.
+
+====
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Sie können benutzerdefinierte Skripte hochladen und Ereignisdetails zur Warnung sammeln.
+
+[NOTE]
+====
+Wenn diese Funktion in der Benutzeroberfläche nicht verfügbar ist, liegt das daran, dass Ihr Administrator sie deaktiviert hat.  Bei Bedarf können Sie diese Funktion unter *Speicherverwaltung* > *Funktionseinstellungen* aktivieren.
+
+====
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Skripte*.
+. Klicken Sie auf der Seite *Skripte* auf *Hinzufügen*.
+. Klicken Sie im Dialogfeld *Skript hinzufügen* auf *Durchsuchen*, um Ihre Skriptdatei auszuwählen.
+. Geben Sie eine Beschreibung für das ausgewählte Skript ein.
+. Klicken Sie auf *Hinzufügen*.
+
+
+*Verwandte Informationen*
+
+link:../config/task_enable_and_disable_ability_to_upload_scripts.html["Aktivieren und Deaktivieren der Möglichkeit zum Hochladen von Skripten"]

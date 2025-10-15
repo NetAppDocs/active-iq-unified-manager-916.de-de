@@ -1,0 +1,39 @@
+---
+permalink: performance-checker/concept_sources_of_performance_events.html 
+sidebar: sidebar 
+keywords: sources, performance, events 
+summary: 'Leistungsereignisse sind Probleme im Zusammenhang mit der Arbeitslastleistung auf einem Cluster.  Sie helfen Ihnen, Speicherobjekte mit langsamen Reaktionszeiten (auch als hohe Latenz bezeichnet) zu identifizieren.  Zusammen mit anderen gleichzeitig aufgetretenen Integritätsereignissen können Sie die Probleme ermitteln, die möglicherweise die langsamen Reaktionszeiten verursacht oder dazu beigetragen haben.' 
+---
+= Quellen von Leistungsereignissen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Leistungsereignisse sind Probleme im Zusammenhang mit der Arbeitslastleistung auf einem Cluster.  Sie helfen Ihnen, Speicherobjekte mit langsamen Reaktionszeiten (auch als hohe Latenz bezeichnet) zu identifizieren.  Zusammen mit anderen gleichzeitig aufgetretenen Integritätsereignissen können Sie die Probleme ermitteln, die möglicherweise die langsamen Reaktionszeiten verursacht oder dazu beigetragen haben.
+
+Unified Manager empfängt Leistungsereignisse aus den folgenden Quellen:
+
+* *Benutzerdefinierte Leistungsschwellenwert-Richtlinienereignisse*
++
+Leistungsprobleme aufgrund von benutzerdefinierten Schwellenwerten, die Sie festgelegt haben.  Sie konfigurieren Richtlinien für Leistungsschwellenwerte für Speicherobjekte, beispielsweise Aggregate und Volumes, sodass Ereignisse generiert werden, wenn ein Schwellenwert für einen Leistungsindikator überschritten wurde.
+
++
+Sie müssen eine Richtlinie für Leistungsschwellenwerte definieren und sie einem Speicherobjekt zuweisen, um diese Ereignisse zu empfangen.
+
+* *Systemdefinierte Richtlinienereignisse für Leistungsschwellenwerte*
++
+Leistungsprobleme basierend auf systemdefinierten Schwellenwerten.  Diese Schwellenwertrichtlinien sind in der Installation von Unified Manager enthalten, um häufige Leistungsprobleme abzudecken.
+
++
+Diese Schwellenwertrichtlinien sind standardmäßig aktiviert und möglicherweise werden kurz nach dem Hinzufügen eines Clusters Ereignisse angezeigt.
+
+* *Dynamische Leistungsschwellenereignisse*
++
+Leistungsprobleme, die auf Ausfälle oder Fehler in einer IT-Infrastruktur oder auf eine Überbeanspruchung der Clusterressourcen durch Workloads zurückzuführen sind.  Die Ursache dieser Ereignisse kann ein einfaches Problem sein, das sich im Laufe der Zeit von selbst behebt oder durch eine Reparatur oder Konfigurationsänderung behoben werden kann.  Ein dynamisches Schwellenwertereignis zeigt an, dass die Workloads auf einem ONTAP -System aufgrund anderer Workloads mit hoher Nutzung gemeinsam genutzter Clusterkomponenten langsam sind.
+
++
+Diese Schwellenwerte sind standardmäßig aktiviert und Sie sehen möglicherweise Ereignisse, nachdem drei Tage lang Daten aus einem neuen Cluster erfasst wurden.
+
+

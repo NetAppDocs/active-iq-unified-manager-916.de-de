@@ -1,0 +1,50 @@
+---
+permalink: performance-checker/concept_performance_threshold_policies_when_object_is_moved.html 
+sidebar: sidebar 
+keywords: happens, performance, threshold, policies, object, moved 
+summary: Da den Speicherobjekten Leistungsschwellenwertrichtlinien zugewiesen sind, bleiben beim Verschieben eines Objekts alle zugewiesenen Schwellenwertrichtlinien auch nach Abschluss der Verschiebung mit dem Objekt verknüpft.  Wenn Sie beispielsweise ein Volume oder eine LUN in ein anderes Aggregat verschieben, sind die Schwellenwertrichtlinien für das Volume oder die LUN auf dem neuen Aggregat weiterhin aktiv. 
+---
+= Was passiert mit Leistungsschwellenwertrichtlinien, wenn ein Objekt verschoben wird?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Da den Speicherobjekten Leistungsschwellenwertrichtlinien zugewiesen sind, bleiben beim Verschieben eines Objekts alle zugewiesenen Schwellenwertrichtlinien auch nach Abschluss der Verschiebung mit dem Objekt verknüpft.  Wenn Sie beispielsweise ein Volume oder eine LUN in ein anderes Aggregat verschieben, sind die Schwellenwertrichtlinien für das Volume oder die LUN auf dem neuen Aggregat weiterhin aktiv.
+
+Wenn für die Schwellenwertrichtlinie eine sekundäre Zählerbedingung vorhanden ist (eine Kombinationsrichtlinie), z. B. wenn einem Aggregat oder einem Knoten eine zusätzliche Bedingung zugewiesen ist, wird die sekundäre Zählerbedingung auf das neue Aggregat oder den neuen Knoten angewendet, auf das bzw. den das Volume oder die LUN verschoben wurde.
+
+Wenn neue aktive Ereignisse für Objekte vorhanden sind, die die geänderte Schwellenwertrichtlinie verwenden, werden die Ereignisse als veraltet markiert und die Schwellenwertrichtlinie beginnt mit der Überwachung des Zählers als neu definierte Schwellenwertrichtlinie.
+
+Ein Volume-Verschiebevorgang veranlasst ONTAP , ein Informationsänderungsereignis zu senden.  In der Ereigniszeitleiste auf der Seite „Performance Explorer“ und der Seite „Workload-Analyse“ wird ein Symbol für ein Änderungsereignis angezeigt, um den Zeitpunkt anzuzeigen, zu dem der Verschiebungsvorgang abgeschlossen wurde.
+
+[NOTE]
+====
+Wenn Sie ein Objekt in einen anderen Cluster verschieben, wird die benutzerdefinierte Schwellenwertrichtlinie aus dem Objekt entfernt.  Falls erforderlich, müssen Sie dem Objekt nach Abschluss des Verschiebevorgangs eine Schwellenwertrichtlinie zuweisen.  Dynamische und systemdefinierte Schwellenwertrichtlinien werden jedoch automatisch auf ein Objekt angewendet, nachdem es in einen neuen Cluster verschoben wurde.
+
+====
+
+
+== Schwellenwertrichtlinienfunktionalität während der HA-Übernahme und -Rückgabe
+
+Wenn in einer Hochverfügbarkeitskonfiguration (HA) ein Übernahme- oder Rückgabevorgang stattfindet, behalten Objekte, die von einem Knoten zum anderen verschoben werden, ihre Schwellenwertrichtlinien auf dieselbe Weise bei wie bei manuellen Verschiebungsvorgängen.  Da Unified Manager alle 15 Minuten nach Änderungen an der Clusterkonfiguration sucht, werden die Auswirkungen der Umstellung auf den neuen Knoten erst bei der nächsten Abfrage der Clusterkonfiguration erkannt.
+
+[NOTE]
+====
+Wenn innerhalb des 15-minütigen Erfassungszeitraums für Konfigurationsänderungen sowohl ein Übernahme- als auch ein Rückgabevorgang stattfinden, werden die Leistungsstatistiken möglicherweise nicht von einem Knoten zum anderen verschoben.
+
+====
+
+
+== Schwellenwertrichtlinienfunktionalität während der Aggregatverlagerung
+
+Wenn Sie ein Aggregat von einem Knoten zu einem anderen Knoten verschieben, indem Sie `aggregate relocation start` Befehl werden sowohl einzelne als auch kombinierte Schwellenwertrichtlinien für alle Objekte beibehalten und der Knotenteil der Schwellenwertrichtlinie wird auf den neuen Knoten angewendet.
+
+
+
+== Schwellenwertrichtlinienfunktionalität während der MetroCluster -Umschaltung
+
+Objekte, die in einer MetroCluster -Konfiguration von einem Cluster zu einem anderen Cluster verschoben werden, behalten ihre benutzerdefinierten Schwellenwertrichtlinieneinstellungen nicht bei.  Bei Bedarf können Sie Schwellenwertrichtlinien auf die Volumes und LUNs anwenden, die in den Partnercluster verschoben wurden.  Nachdem ein Objekt wieder in seinen ursprünglichen Cluster verschoben wurde, wird die benutzerdefinierte Schwellenwertrichtlinie automatisch erneut angewendet.
+
+Weitere Informationen finden Sie unterlink:../storage-mgmt/concept_volume_behavior_during_switchover_and_switchback.html["Lautstärkeverhalten beim Umschalten und Zurückschalten"] .

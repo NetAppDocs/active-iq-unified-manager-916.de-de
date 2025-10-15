@@ -1,0 +1,38 @@
+---
+permalink: config/reference_definitions_of_user_types.html 
+sidebar: sidebar 
+keywords: definitions, user types 
+summary: Ein Benutzertyp gibt die Art des Kontos an, das der Benutzer besitzt, und umfasst Remotebenutzer, Remotegruppen, lokale Benutzer, Datenbankbenutzer und Wartungsbenutzer.  Jeder dieser Typen hat seine eigene Rolle, die von einem Benutzer mit der Rolle „Administrator“ zugewiesen wird. 
+---
+= Definitionen von Benutzertypen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein Benutzertyp gibt die Art des Kontos an, das der Benutzer besitzt, und umfasst Remotebenutzer, Remotegruppen, lokale Benutzer, Datenbankbenutzer und Wartungsbenutzer.  Jeder dieser Typen hat seine eigene Rolle, die von einem Benutzer mit der Rolle „Administrator“ zugewiesen wird.
+
+Es gibt folgende Unified Manager-Benutzertypen:
+
+* *Wartungsbenutzer*
++
+Wird während der Erstkonfiguration von Unified Manager erstellt.  Anschließend legt der Wartungsbenutzer weitere Benutzer an und weist ihnen Rollen zu.  Der Wartungsbenutzer ist auch der einzige Benutzer mit Zugriff auf die Wartungskonsole.  Wenn Unified Manager auf einem Red Hat Enterprise Linux-System installiert wird, erhält der Wartungsbenutzer den Benutzernamen „umadmin“.
+
+* *Lokaler Benutzer*
++
+Greift auf die Unified Manager-Benutzeroberfläche zu und führt Funktionen basierend auf der Rolle aus, die vom Wartungsbenutzer oder einem Benutzer mit der Rolle „Anwendungsadministrator“ zugewiesen wurde.
+
+* *Remote-Gruppe*
++
+Eine Gruppe von Benutzern, die mit den auf dem Authentifizierungsserver gespeicherten Anmeldeinformationen auf die Unified Manager-Benutzeroberfläche zugreifen.  Der Name dieses Kontos sollte mit dem Namen einer auf dem Authentifizierungsserver gespeicherten Gruppe übereinstimmen.  Alle Benutzer innerhalb der Remote-Gruppe erhalten mit ihren individuellen Benutzeranmeldeinformationen Zugriff auf die Unified Manager-Benutzeroberfläche.  Remote-Gruppen können Funktionen entsprechend ihrer zugewiesenen Rollen ausführen.
+
+* *Remote-Benutzer*
++
+Greift mit den auf dem Authentifizierungsserver gespeicherten Anmeldeinformationen auf die Unified Manager-Benutzeroberfläche zu.  Ein Remote-Benutzer führt Funktionen basierend auf der Rolle aus, die ihm vom Wartungsbenutzer oder einem Benutzer mit der Rolle „Anwendungsadministrator“ zugewiesen wurde.
+
+* *Datenbankbenutzer*
++
+Hat schreibgeschützten Zugriff auf Daten in der Unified Manager-Datenbank, keinen Zugriff auf die Unified Manager-Weboberfläche oder die Wartungskonsole und kann keine API-Aufrufe ausführen.
+
+

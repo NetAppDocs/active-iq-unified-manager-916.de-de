@@ -1,0 +1,228 @@
+---
+permalink: config/reference_unified_manager_roles_and_capabilities.html 
+sidebar: sidebar 
+keywords: unified manager, user, roles, capabilities 
+summary: Basierend auf Ihrer zugewiesenen Benutzerrolle können Sie bestimmen, welche Vorgänge Sie in Unified Manager ausführen können. 
+---
+= Unified Manager-Benutzerrollen und -Funktionen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Basierend auf Ihrer zugewiesenen Benutzerrolle können Sie bestimmen, welche Vorgänge Sie in Unified Manager ausführen können.
+
+In der folgenden Tabelle sind die Funktionen aufgeführt, die jede Benutzerrolle ausführen kann:
+
+[cols="6*"]
+|===
+| Funktion | Operator | Speicheradministrator | Anwendungsadministrator | Integrationsschema | Berichtsschema 
+
+
+ a| 
+Anzeigen von Speichersysteminformationen
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+
+
+
+ a| 
+Weitere Daten wie Verlaufsdaten und Kapazitätstrends anzeigen
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+
+
+
+ a| 
+Ereignisse anzeigen, zuweisen und lösen
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Anzeigen von Speicherdienstobjekten wie SVM-Zuordnungen und Ressourcenpools
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Schwellenwertrichtlinien anzeigen
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Verwalten Sie Speicherdienstobjekte wie SVM-Zuordnungen und Ressourcenpools
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Definieren von Warnungen
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Verwalten von Speicherverwaltungsoptionen
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Verwalten von Speicherverwaltungsrichtlinien
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Benutzer verwalten
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Verwalten von Verwaltungsoptionen
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Definieren von Schwellenwertrichtlinien
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Verwalten des Datenbankzugriffs
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Verwalten Sie die Integration mit WFA und gewähren Sie Zugriff auf die Datenbankansichten
+ a| 
+ a| 
+ a| 
+ a| 
+•
+ a| 
+
+
+
+ a| 
+Planen und Speichern von Berichten
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Führen Sie „Fix It“-Vorgänge über Verwaltungsaktionen aus
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Gewähren Sie schreibgeschützten Zugriff auf Datenbankansichten
+ a| 
+ a| 
+ a| 
+ a| 
+ a| 
+•
+
+|===

@@ -1,0 +1,55 @@
+---
+permalink: health-checker/task_resolve_storage_failover_interconnect_link_down_condition.html 
+sidebar: sidebar 
+keywords: scan, resolve, storage, failover, interconnect link, conditions 
+summary: Dieser Workflow bietet ein Beispiel dafür, wie Sie nach ausgefallenen Speicher-Failover-Verbindungsverbindungen suchen, diese auswerten und beheben können.  In diesem Szenario sind Sie ein Administrator, der Unified Manager verwendet, um nach Speicher-Failover-Risiken zu suchen, bevor Sie ein ONTAP -Versionsupgrade auf Ihren Knoten starten. 
+---
+= Suchen und beheben Sie Verbindungsausfälle bei Speicher-Failovern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dieser Workflow bietet ein Beispiel dafür, wie Sie nach ausgefallenen Speicher-Failover-Verbindungsverbindungen suchen, diese auswerten und beheben können.  In diesem Szenario sind Sie ein Administrator, der Unified Manager verwendet, um nach Speicher-Failover-Risiken zu suchen, bevor Sie ein ONTAP -Versionsupgrade auf Ihren Knoten starten.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Wenn die Speicher-Failover-Verbindungen zwischen HA-Paarknoten während eines unterbrechungsfreien Upgradeversuchs fehlschlagen, schlägt das Upgrade fehl.  Daher ist es üblich, dass der Administrator vor Beginn eines Upgrades die Zuverlässigkeit des Speicher-Failovers auf den für das Upgrade vorgesehenen Clusterknoten überwacht und bestätigt.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Event Management*.
+. Wählen Sie auf der Inventarseite *Event Management* die Option *Active Availability-Ereignisse* aus.
+. Klicken Sie oben in der Spalte *Name* der Inventarseite *Event Management* aufimage:../media/filtericon_um60.png["Symbol für Spaltenfilter"] und geben Sie ein `*failover` in das Textfeld, um die Anzeige des Ereignisses auf Speicherfailover-bezogene Ereignisse zu beschränken.
++
+Alle vergangenen Ereignisse im Zusammenhang mit Speicher-Failover-Bedingungen werden angezeigt.
+
++
+In diesem Szenario zeigt der Unified Manager im Abschnitt „Verfügbarkeitsvorfälle“ das Ereignis „Storage Failover Interconnect One or More Links Down“ an.
+
+. Wenn auf der Inventarseite *Ereignisverwaltung* ein oder mehrere Ereignisse im Zusammenhang mit dem Speicherfailover angezeigt werden, führen Sie die folgenden Schritte aus:
++
+.. Klicken Sie auf den Link zum Ereignistitel, um die Ereignisdetails für dieses Ereignis anzuzeigen.
++
+In diesem Beispiel klicken Sie auf den Ereignistitel „Storage Failover Interconnect One or More Links Down“.
+
++
+Die Seite mit den Ereignisdetails für dieses Ereignis wird angezeigt.
+
+.. Auf der Seite „Ereignisdetails“ können Sie eine oder mehrere der folgenden Aufgaben ausführen:
++
+*** Überprüfen Sie die Fehlermeldung im Feld „Ursache“ und bewerten Sie das Problem.
+*** Weisen Sie das Ereignis einem Administrator zu.
+*** Bestätigen Sie das Ereignis.
+
+
+
+
+
+
+*Verwandte Informationen*
+
+link:../events/reference_event_details_page.html["Seite mit Veranstaltungsdetails"]
+
+link:../config/reference_unified_manager_roles_and_capabilities.html["Unified Manager-Benutzerrollen und -Funktionen"]

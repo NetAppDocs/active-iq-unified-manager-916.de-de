@@ -1,0 +1,51 @@
+---
+permalink: health-checker/concept_unified_manager_health_monitoring_features.html 
+sidebar: sidebar 
+keywords: unified manager, health, monitor, features 
+summary: Unified Manager basiert auf einer Serverinfrastruktur, die Skalierbarkeit, Supportfähigkeit und erweiterte Überwachungs- und Benachrichtigungsfunktionen bietet.  Unified Manager unterstützt die Überwachung von Systemen, auf denen ONTAP -Software ausgeführt wird. 
+---
+= Unified Manager-Funktionen zur Integritätsüberwachung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager basiert auf einer Serverinfrastruktur, die Skalierbarkeit, Supportfähigkeit und erweiterte Überwachungs- und Benachrichtigungsfunktionen bietet.  Unified Manager unterstützt die Überwachung von Systemen, auf denen ONTAP -Software ausgeführt wird.
+
+Unified Manager umfasst die folgenden Funktionen:
+
+* Erkennung, Überwachung und Benachrichtigungen für Systeme, auf denen ONTAP -Software installiert ist:
++
+** Physische Objekte: Knoten, Festplatten, Festplattenregale, SFO-Paare, Ports und Flash-Cache
+** Logische Objekte: Cluster, Storage Virtual Machines (SVMs), Aggregate, Volumes, LUNs, Namespaces, Qtrees, LIFs, Snapshot-Kopien, Junction-Pfade, NFS-Freigaben, SMB-Freigaben, Benutzer- und Gruppenkontingente, QoS-Richtliniengruppen und Initiatorgruppen
+** Protokolle: CIFS, NFS, FC, iSCSI, NVMe und FCoE
+** Speichereffizienz: SSD-Aggregate, Flash Pool-Aggregate, FabricPool -Aggregate, Deduplizierung und Komprimierung
+** Schutz: SnapMirror -Beziehungen (synchron und asynchron) und SnapVault -Beziehungen
+
+
+* Anzeigen des Cluster-Erkennungs- und Überwachungsstatus
+* MetroCluster über FC- und IP-Konfigurationen: Anzeigen und Überwachen der Konfiguration, Probleme und des Verbindungsstatus der Clusterkomponenten.  MetroCluster -Switches und -Bridges für MetroCluster über FC-Konfigurationen
+* Verbesserte Warn-, Ereignis- und Schwellenwertinfrastruktur
+* LDAP, LDAPS, SAML-Authentifizierung und lokale Benutzerunterstützung
+* RBAC (für einen vordefinierten Satz von Rollen)
+* AutoSupport und Support-Paket
+* Verbessertes Dashboard zur Anzeige von Kapazität, Verfügbarkeit, Schutz und Leistungszustand der Umgebung
+* Interoperabilität der Volume-Verschiebung, Verlauf der Volume-Verschiebung und Verlauf der Änderungen am Junction-Pfad
+* Der Bereich „Auswirkungsumfang“ zeigt grafisch die Ressourcen an, die von Ereignissen wie „Einige ausgefallene Festplatten“, „MetroCluster Aggregate Mirroring Degraded“ und „MetroCluster Spare Disks Left Behind“ betroffen sind.
+* Möglicher Effektbereich, der die Auswirkungen der MetroCluster -Ereignisse anzeigt
+* Im Bereich „Vorgeschlagene Korrekturmaßnahmen“ werden die Maßnahmen angezeigt, die zur Behebung von Ereignissen wie „Einige ausgefallene Festplatten“, „MetroCluster Aggregate Mirroring Degraded“ und „MetroCluster Spare Disks Left Behind“ durchgeführt werden können.
+* Der Bereich „Ressourcen, die betroffen sein könnten“ zeigt die Ressourcen an, die von Ereignissen wie dem Ereignis „Volume offline“, dem Ereignis „Volume eingeschränkt“ und dem Ereignis „Thin-Provisioned Volume Space At Risk“ betroffen sein könnten.
+* Unterstützung für SVMs mit FlexVol oder FlexGroup -Volumes
+* Unterstützung für die Überwachung von Knotenstammvolumes
+* Verbesserte Überwachung von Snapshot-Kopien, einschließlich der Berechnung des wiederherstellbaren Speicherplatzes und der Löschung von Snapshot-Kopien
+* Anmerkungen zu Speicherobjekten
+* Berichterstellung und Verwaltung von Speicherobjektinformationen wie physische und logische Kapazität, Auslastung, Platzeinsparungen, Leistung und verwandte Ereignisse
+* Integration mit OnCommand Workflow Automation zur Ausführung von Workflows
++
+Der Storage Automation Store enthält NetApp-zertifizierte automatisierte Speicher-Workflow-Pakete, die für die Verwendung mit OnCommand Workflow Automation (WFA) entwickelt wurden.  Sie können die Pakete herunterladen und sie dann in WFA importieren, um sie auszuführen.  Die automatisierten Workflows sind hier verfügbar:
+
++
+https://automationstore.netapp.com["Speicherautomatisierungs-Shop"]
+
+

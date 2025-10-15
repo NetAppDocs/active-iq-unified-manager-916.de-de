@@ -1,0 +1,83 @@
+---
+permalink: storage-mgmt/concept_monitor_and_manage_clusters_from_dashboard.html 
+sidebar: sidebar 
+keywords: monitor, manage, clusters, dashboard 
+summary: Das Dashboard bietet auf einen Blick kumulative Informationen zum aktuellen Zustand Ihrer überwachten ONTAP Systeme.  Das Dashboard bietet „Panels“, mit denen Sie die Gesamtkapazität, Leistung und Sicherheitsintegrität der von Ihnen überwachten Cluster beurteilen können. 
+---
+= Überwachen und verwalten Sie Cluster über das Dashboard
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Dashboard bietet auf einen Blick kumulative Informationen zum aktuellen Zustand Ihrer überwachten ONTAP Systeme.  Das Dashboard bietet „Panels“, mit denen Sie die Gesamtkapazität, Leistung und Sicherheitsintegrität der von Ihnen überwachten Cluster beurteilen können.
+
+Darüber hinaus gibt es bestimmte ONTAP Probleme, die Sie direkt über die Benutzeroberfläche des Unified Managers beheben können, anstatt den ONTAP System Manager oder die ONTAP CLI verwenden zu müssen.
+
+Oben im Dashboard können Sie auswählen, ob die Panels Informationen für alle überwachten Cluster oder für einen einzelnen Cluster anzeigen.  Sie können zunächst den Status aller Cluster anzeigen und dann einen Drilldown zu einzelnen Clustern durchführen, wenn Sie detaillierte Informationen anzeigen möchten.
+
+[NOTE]
+====
+Je nach Ihrer Konfiguration werden einige der unten aufgeführten Bereiche möglicherweise nicht auf der Seite angezeigt.
+
+====
+|===
+| Paneele | Beschreibung 
+
+
+ a| 
+Verwaltungsmaßnahmen
+ a| 
+Wenn Unified Manager ein Problem diagnostizieren und eine einzelne Lösung dafür ermitteln kann, werden diese Lösungen in diesem Bereich mit einer Schaltfläche *Fix It* angezeigt.
+
+
+
+ a| 
+Kapazität
+ a| 
+Zeigt die gesamte und genutzte Kapazität für die lokale und die Cloud-Ebene sowie die Anzahl der Tage an, bis die lokale Kapazität die Obergrenze erreicht.
+
+
+
+ a| 
+Leistungskapazität
+ a| 
+Zeigt den Leistungskapazitätswert für jeden Cluster und die Anzahl der Tage an, bis die Leistungskapazität die Obergrenze erreicht.
+
+
+
+ a| 
+Arbeitslast-IOPS
+ a| 
+Zeigt die Gesamtzahl der Workloads an, die derzeit in einem bestimmten IOPS-Bereich ausgeführt werden.
+
+
+
+ a| 
+Workload-Leistung
+ a| 
+Zeigt die Gesamtzahl der konformen und nicht konformen Workloads an, die jedem definierten Performance-Service-Level zugewiesen sind.
+
+
+
+ a| 
+Sicherheit
+ a| 
+Zeigt die Anzahl der Cluster an, die konform oder nicht konform sind, die Anzahl der SVMs, die konform oder nicht konform sind, und die Anzahl der Volumes, die verschlüsselt oder nicht verschlüsselt sind.
+
+
+
+ a| 
+Schutz
+ a| 
+Zeigt die Anzahl der Storage-VMs an, die durch eine SVM-DR-Beziehung geschützt sind, die durch eine SnapMirror Beziehung geschützten Volumes, die durch Snapshot geschützten Volumes und die durch MetroCluster geschützten Cluster.
+
+
+
+ a| 
+Nutzungsübersicht
+ a| 
+Zeigt Cluster sortiert nach höchstem IOPS, höchstem Durchsatz (MBps) oder höchster genutzter physischer Kapazität an.
+
+|===

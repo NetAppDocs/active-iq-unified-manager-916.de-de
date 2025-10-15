@@ -1,0 +1,14 @@
+---
+permalink: events/concept_how_object_status_is_computed.html 
+sidebar: sidebar 
+keywords: object, status, computed 
+summary: Der Objektstatus wird durch das schwerwiegendste Ereignis bestimmt, das derzeit den Status „Neu“ oder „Bestätigt“ aufweist.  Wenn beispielsweise der Status eines Objekts „Fehler“ lautet, weist eines der Ereignisse des Objekts den Schweregrad „Fehler“ auf.  Wenn Korrekturmaßnahmen ergriffen wurden, wechselt der Ereignisstatus zu „Gelöst“. 
+---
+= So wird der Objektstatus berechnet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Objektstatus wird durch das schwerwiegendste Ereignis bestimmt, das derzeit den Status „Neu“ oder „Bestätigt“ aufweist.  Wenn beispielsweise der Status eines Objekts „Fehler“ lautet, weist eines der Ereignisse des Objekts den Schweregrad „Fehler“ auf.  Wenn Korrekturmaßnahmen ergriffen wurden, wechselt der Ereignisstatus zu „Gelöst“.

@@ -1,0 +1,31 @@
+---
+permalink: events/task_test_alerts.html 
+sidebar: sidebar 
+keywords: test, alerts 
+summary: Sie können eine Warnung testen, um zu überprüfen, ob Sie sie richtig konfiguriert haben.  Wenn ein Ereignis ausgelöst wird, wird eine Warnung generiert und eine Warn-E-Mail an die konfigurierten Empfänger gesendet.  Mithilfe der Testwarnung können Sie überprüfen, ob die Benachrichtigung gesendet und Ihr Skript ausgeführt wird. 
+---
+= Testwarnungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Warnung testen, um zu überprüfen, ob Sie sie richtig konfiguriert haben.  Wenn ein Ereignis ausgelöst wird, wird eine Warnung generiert und eine Warn-E-Mail an die konfigurierten Empfänger gesendet.  Mithilfe der Testwarnung können Sie überprüfen, ob die Benachrichtigung gesendet und Ihr Skript ausgeführt wird.
+
+.Bevor Sie beginnen
+* Sie müssen Benachrichtigungseinstellungen wie die E-Mail-Adresse der Empfänger, den SMTP-Server und den SNMP-Trap konfiguriert haben.
++
+Der Unified Manager-Server kann diese Einstellungen verwenden, um Benachrichtigungen an Benutzer zu senden, wenn ein Ereignis generiert wird.
+
+* Sie müssen ein Skript zugewiesen und so konfiguriert haben, dass es ausgeführt wird, wenn die Warnung generiert wird.
+* Sie müssen über die Rolle „Anwendungsadministrator“ verfügen.
+
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Alarm-Setup*.
+. Wählen Sie auf der Seite *Alarm-Setup* den Alarm aus, den Sie testen möchten, und klicken Sie dann auf *Test*.
++
+Eine Test-Benachrichtigungs-E-Mail wird an die E-Mail-Adressen gesendet, die Sie beim Erstellen der Benachrichtigung angegeben haben.
+
+

@@ -1,0 +1,77 @@
+---
+permalink: performance-checker/reference_top_performers_page.html 
+sidebar: sidebar 
+keywords: top, performers, page 
+summary: 'Auf der Seite „Top-Performer“ werden die Speicherobjekte angezeigt, die basierend auf dem von Ihnen ausgewählten Leistungsindikator die höchste oder die niedrigste Leistung aufweisen.  Beispielsweise können Sie in der Kategorie „Storage-VMs“ die SVMs anzeigen, die die höchsten IOPS, die höchste Latenz oder die niedrigsten MB/s aufweisen.  Auf dieser Seite wird auch angezeigt, ob einer der Top-Performer aktive Leistungsereignisse (neu oder anerkannt) hat.' 
+---
+= Seite „Top-Performer“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Top-Performer“ werden die Speicherobjekte angezeigt, die basierend auf dem von Ihnen ausgewählten Leistungsindikator die höchste oder die niedrigste Leistung aufweisen.  Beispielsweise können Sie in der Kategorie „Storage-VMs“ die SVMs anzeigen, die die höchsten IOPS, die höchste Latenz oder die niedrigsten MB/s aufweisen.  Auf dieser Seite wird auch angezeigt, ob einer der Top-Performer aktive Leistungsereignisse (neu oder anerkannt) hat.
+
+Auf der Seite „Top-Performer“ werden maximal 10 Exemplare jedes Objekts angezeigt.  Beachten Sie, dass das Volume-Objekt sowohl FlexVol Volumes als auch FlexGroup -Volumes enthält.
+
+* *Zeitraum*
++
+Sie können einen Zeitraum für die Anzeige der Top-Performer auswählen. Der ausgewählte Zeitraum gilt für alle Speicherobjekte.  Verfügbare Zeitbereiche:
+
++
+** Letzte Stunde
+** Letzte 24 Stunden
+** Letzte 72 Stunden (Standard)
+** Letzte 7 Tage
+
+
+* *Metrisch*
++
+Klicken Sie auf das Menü *Metrik*, um einen anderen Zähler auszuwählen.  Zähleroptionen sind für den Objekttyp eindeutig.  Verfügbare Zähler für das Objekt *Volumes* sind beispielsweise *Latenz*, *IOPS* und *MB/s*.  Durch Ändern des Zählers werden die Paneldaten mit den Leistungsträgern basierend auf dem ausgewählten Zähler neu geladen.
+
++
+Verfügbare Zähler:
+
++
+** Latenz
+** IOPS
+** MB/s
+** Verwendete Leistungskapazität (für Knoten und Aggregate)
+** Auslastung (für Knoten und Aggregate)
+
+
+* *Sortieren*
++
+Klicken Sie auf das Menü *Sortieren*, um eine aufsteigende oder absteigende Sortierung für das ausgewählte Objekt und den ausgewählten Zähler auszuwählen.  Die Optionen sind *Vom Höchsten zum Niedrigsten* und *Vom Niedrigsten zum Höchsten*.  Mit diesen Optionen können Sie die Objekte mit der höchsten oder der niedrigsten Leistung anzeigen.
+
+* *Thekenbar*
++
+Der Zählerbalken im Diagramm zeigt die Leistungsstatistiken für jedes Objekt, dargestellt als Balken für dieses Element.  Die Balkendiagramme sind farbcodiert.  Wenn der Zähler keinen Leistungsschwellenwert überschreitet, wird der Zählerbalken blau angezeigt.  Wenn eine Grenzwertverletzung aktiv ist (ein neues oder bestätigtes Ereignis), wird der Balken in der Farbe des Ereignisses angezeigt: Warnereignisse werden in Gelb angezeigt (image:../media/treemapstatus_warning_png.gif["Symbol für TreeMap – Warnstatus"] ) und kritische Ereignisse werden in Rot angezeigt (image:../media/treemapred_png.gif["Symbol für TreeMap – Farbe Rot"] ).  Grenzwertüberschreitungen werden außerdem durch Schweregradsymbole für Warnungen und kritische Ereignisse angezeigt.
+
++
+image::../media/top_10_example.gif[Ein UI-Screenshot, der die Leistungsstatistiken für jedes Objekt zeigt, das als Zählerbalken im Diagramm dargestellt wird.]
+
++
+Für jedes Diagramm zeigt die X-Achse die Leistungsstärksten für den ausgewählten Objekttyp an.  Auf der Y-Achse werden die für den ausgewählten Zähler geltenden Einheiten angezeigt.  Durch Klicken auf den Objektnamen-Link unter jedem vertikalen Balkendiagrammelement gelangen Sie zur Performance-Landingpage für das ausgewählte Objekt.
+
+* *Schweregrad-Ereignisindikator*
++
+Das Symbol für den Indikator *Schweregradereignis* wird links neben dem Objektnamen für aktive kritische Ereignisse angezeigt (image:../media/sev_critical_um60.png["Symbol für den Schweregrad des Ereignisses – kritisch"] ) oder Warnung (image:../media/sev_warning_um60.png["Symbol für den Schweregrad des Ereignisses – Warnung"] ) Ereignisse in den Diagrammen der Top-Performer.  Klicken Sie auf das Indikatorsymbol *Schweregradereignis*, um Folgendes anzuzeigen:
+
++
+** *Ein Ereignis*
++
+Navigiert zur Seite mit den Veranstaltungsdetails für diese Veranstaltung.
+
+** *Zwei oder mehr Ereignisse*
++
+Navigiert zur Seite „Ereignisinventar“, die gefiltert ist, um alle Ereignisse für das ausgewählte Objekt anzuzeigen.
+
+
+
+* *Exportieren-Schaltfläche*
++
+Erstellt eine `.csv` Datei, die die Daten enthält, die in der Zählerleiste angezeigt werden.  Sie können die Datei entweder für den einzelnen Cluster erstellen, den Sie gerade anzeigen, oder für alle Cluster im Rechenzentrum.
+
+

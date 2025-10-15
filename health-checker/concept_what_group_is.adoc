@@ -1,0 +1,22 @@
+---
+permalink: health-checker/concept_what_group_is.html 
+sidebar: sidebar 
+keywords: group 
+summary: 'Eine Gruppe ist eine dynamische Sammlung heterogener Speicherobjekte (Cluster, SVMs oder Volumes).  Sie können in Unified Manager Gruppen erstellen, um eine Reihe von Speicherobjekten einfach zu verwalten.  Die Mitglieder einer Gruppe können sich ändern, abhängig von den Speicherobjekten, die zu einem bestimmten Zeitpunkt von Unified Manager überwacht werden.' 
+---
+= Was eine Gruppe ist
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Gruppe ist eine dynamische Sammlung heterogener Speicherobjekte (Cluster, SVMs oder Volumes).  Sie können in Unified Manager Gruppen erstellen, um eine Reihe von Speicherobjekten einfach zu verwalten.  Die Mitglieder einer Gruppe können sich ändern, abhängig von den Speicherobjekten, die zu einem bestimmten Zeitpunkt von Unified Manager überwacht werden.
+
+* Jede Gruppe hat einen eindeutigen Namen.
+* Sie müssen für jede Gruppe mindestens eine Gruppenregel konfigurieren.
+* Sie können einer Gruppe mehr als eine Gruppenregel zuordnen.
+* Jede Gruppe kann mehrere Arten von Speicherobjekten wie Cluster, SVMs oder Volumes enthalten.
+* Speicherobjekte werden einer Gruppe dynamisch hinzugefügt, je nachdem, wann eine Gruppenregel erstellt wird oder wann Unified Manager einen Überwachungszyklus abschließt.
+* Sie können Aktionen gleichzeitig auf alle Speicherobjekte in einer Gruppe anwenden, beispielsweise Schwellenwerte für Volumes festlegen.
+

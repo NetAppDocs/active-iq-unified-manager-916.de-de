@@ -1,0 +1,36 @@
+---
+permalink: performance-checker/task_search_on_object_inventory_performance_pages.html 
+sidebar: sidebar 
+keywords: object, inventory, performance, pages 
+summary: Sie können auf den Seiten zur Objektinventarleistung nach Zeichenfolgen suchen.  Verwenden Sie das Suchfeld oben rechts auf der Seite, um Daten schnell anhand des Objektnamens oder des Richtliniennamens zu finden.  Auf diese Weise können Sie schnell bestimmte Objekte und die zugehörigen Daten finden oder Richtlinien schnell finden und zugehörige Richtlinienobjektdaten anzeigen. 
+---
+= Suche auf den Seiten zur Objektinventarleistung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können auf den Seiten zur Objektinventarleistung nach Zeichenfolgen suchen.  Verwenden Sie das Suchfeld oben rechts auf der Seite, um Daten schnell anhand des Objektnamens oder des Richtliniennamens zu finden.  Auf diese Weise können Sie schnell bestimmte Objekte und die zugehörigen Daten finden oder Richtlinien schnell finden und zugehörige Richtlinienobjektdaten anzeigen.
+
+.Schritt
+. Führen Sie je nach Ihren Suchanforderungen eine der folgenden Optionen aus:
++
+|===
+| So finden Sie dies ... | Geben Sie Folgendes ein... 
+
+
+ a| 
+Ein bestimmtes Objekt
+ a| 
+Geben Sie den Objektnamen in das Feld *Suchen* ein und klicken Sie auf *Suchen*.  Das gesuchte Objekt und die zugehörigen Daten werden angezeigt.
+
+
+
+ a| 
+Eine benutzerdefinierte Leistungsschwellenrichtlinie
+ a| 
+Geben Sie den gesamten oder einen Teil des Richtliniennamens in das Feld *Suchen* ein und klicken Sie auf *Suchen*.  Es werden die Objekte angezeigt, die der gesuchten Richtlinie zugeordnet sind.
+
+|===
+

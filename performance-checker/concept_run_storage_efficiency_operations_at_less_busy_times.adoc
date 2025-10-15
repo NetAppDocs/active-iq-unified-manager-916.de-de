@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_run_storage_efficiency_operations_at_less_busy_times.html 
+sidebar: sidebar 
+keywords: run, storage, efficiency, operations, less, busy, times 
+summary: Sie können die Richtlinie oder den Zeitplan für Speichereffizienzvorgänge so ändern, dass sie ausgeführt werden, wenn die betroffenen Volume-Workloads weniger ausgelastet sind. 
+---
+= Führen Sie Speichereffizienzvorgänge in weniger ausgelasteten Zeiten durch
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Richtlinie oder den Zeitplan für Speichereffizienzvorgänge so ändern, dass sie ausgeführt werden, wenn die betroffenen Volume-Workloads weniger ausgelastet sind.
+
+Speichereffizienzvorgänge können einen großen Teil der CPU-Ressourcen des Clusters beanspruchen und die Volumes, auf denen die Vorgänge ausgeführt werden, stark belasten.  Wenn die betroffenen Volumes gleichzeitig mit der Ausführung der Speichereffizienzvorgänge eine hohe Aktivität aufweisen, kann sich ihre Latenz erhöhen und ein Ereignis auslösen.
+
+Auf der Seite „Ereignisdetails“ werden im Abschnitt „Systemdiagnose“ die Arbeitslasten in der QoS-Richtliniengruppe nach Spitzenabweichung der Aktivität angezeigt, um die problematischsten Arbeitslasten zu identifizieren.  Wenn oben in der Tabelle „Speichereffizienz“ angezeigt wird, belasten diese Vorgänge die Arbeitslast der Opfer.  Indem Sie die Effizienzrichtlinie oder den Zeitplan so ändern, dass die Ausführung zu Zeiten erfolgt, in denen diese Workloads weniger ausgelastet sind, können Sie verhindern, dass die Speichereffizienzvorgänge zu Konflikten in einem Cluster führen.
+
+Sie können ONTAP System Manager zum Verwalten von Effizienzrichtlinien verwenden.  Sie können die ONTAP -Befehle verwenden, um Effizienzrichtlinien und Zeitpläne zu verwalten.

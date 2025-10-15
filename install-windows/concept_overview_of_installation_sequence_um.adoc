@@ -1,0 +1,18 @@
+---
+permalink: install-windows/concept_overview_of_installation_sequence_um.html 
+sidebar: sidebar 
+keywords: overview, installation, sequence 
+summary: Der Installationsworkflow beschreibt die Aufgaben, die Sie ausführen müssen, bevor Sie Unified Manager verwenden können. 
+---
+= Übersicht über den Installationsablauf
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Installationsworkflow beschreibt die Aufgaben, die Sie ausführen müssen, bevor Sie Unified Manager verwenden können.
+
+In diesen Abschnitten werden alle im folgenden Arbeitsablauf angezeigten Elemente beschrieben.
+
+image::../media/overall_um_install_flow.png[Gesamtablauf der UM-Installation]

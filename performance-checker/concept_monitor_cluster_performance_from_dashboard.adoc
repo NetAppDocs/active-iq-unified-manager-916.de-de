@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept_monitor_cluster_performance_from_dashboard.html 
+sidebar: sidebar 
+keywords: monitor, cluster, performance, dashboard 
+summary: Das Unified Manager-Dashboard bietet einige Bereiche, die den allgemeinen Leistungsstatus aller Cluster anzeigen, die von dieser Instanz von Unified Manager überwacht werden.  Damit können Sie die Gesamtleistung der verwalteten Cluster beurteilen und alle identifizierten spezifischen Ereignisse schnell notieren, lokalisieren oder zur Lösung zuweisen. 
+---
+= Überwachen Sie die Clusterleistung vom Dashboard aus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Unified Manager-Dashboard bietet einige Bereiche, die den allgemeinen Leistungsstatus aller Cluster anzeigen, die von dieser Instanz von Unified Manager überwacht werden.  Damit können Sie die Gesamtleistung der verwalteten Cluster beurteilen und alle identifizierten spezifischen Ereignisse schnell notieren, lokalisieren oder zur Lösung zuweisen.

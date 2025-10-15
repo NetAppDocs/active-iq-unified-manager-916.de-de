@@ -1,0 +1,18 @@
+---
+permalink: data-protection/concept_monitor_storage_vm_disaster_recovery_relationships.html 
+sidebar: sidebar 
+keywords: disaster recovery, monitor, storage vm protection, relationships 
+summary: Active IQ Unified Manager unterstützt die Überwachung von Disaster-Recovery-Beziehungen zwischen Speicher-VMs und ermöglicht so eine Disaster-Recovery auf der Granularitätsebene einer Speicher-VM.  Die Notfallwiederherstellung der Speicher-VM ermöglicht die Wiederherstellung der in den einzelnen Volumes der Speicher-VM vorhandenen Daten und die Wiederherstellung der Speicher-VM-Konfiguration. 
+---
+= Überwachen der Schutzbeziehungen für Storage-VM-Disaster-Recovery
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager unterstützt die Überwachung von Disaster-Recovery-Beziehungen zwischen Speicher-VMs und ermöglicht so eine Disaster-Recovery auf der Granularitätsebene einer Speicher-VM.  Die Notfallwiederherstellung der Speicher-VM ermöglicht die Wiederherstellung der in den einzelnen Volumes der Speicher-VM vorhandenen Daten und die Wiederherstellung der Speicher-VM-Konfiguration.
+
+Um eine asynchrone Notfallwiederherstellung zu ermöglichen, wird eine Speicher-VM-DR-Beziehung von der Quell-Speicher-VM zur Ziel-Speicher-VM erstellt.  Sie können auswählen, ob die gesamte oder eine Teilmenge der Speicher-VM-Konfiguration (ohne Netzwerk- und Protokollkonfiguration) zusammen mit den Datenvolumes basierend auf der Cluster-Einrichtung repliziert werden soll.
+
+Nachdem die Disaster-Recovery-Beziehung der Speicher-VM konfiguriert wurde und die Quell-Speicher-VM aufgrund eines Hardwarefehlers oder einer Umweltkatastrophe nicht mehr verfügbar ist, wird die Ziel-Speicher-VM gestartet, die den Datenzugriff mit der geringsten Unterbrechung ermöglicht.  Wenn die Quellspeicher-VM verfügbar wird, wird sie auf ähnliche Weise mit der Zielspeicher-VM neu synchronisiert. Anschließend wird die Quelle neu gestartet, um Daten bereitzustellen.  Sie können SnapMirror -Befehle verwenden, um die Disaster-Recovery-Beziehung zwischen Speicher-VMs zu konfigurieren und zu verwalten.

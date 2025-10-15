@@ -1,0 +1,66 @@
+---
+permalink: config/reference_additional_menu_options.html 
+sidebar: sidebar 
+keywords: additional menu, options 
+summary: Mit den folgenden Menüoptionen können Sie verschiedene Verwaltungsaufgaben auf dem Unified Manager-Server ausführen. 
+---
+= Zusätzliche Menüoptionen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit den folgenden Menüoptionen können Sie verschiedene Verwaltungsaufgaben auf dem Unified Manager-Server ausführen.
+
+Folgende Menüoptionen stehen zur Verfügung:
+
+* *Serverzertifikat zurücksetzen*
++
+Generiert das HTTPS-Serverzertifikat neu.
+
++
+Sie können das Serverzertifikat in der Unified Manager-GUI neu generieren, indem Sie auf *Allgemein* > *HTTPS-Zertifikate* > *HTTPS-Zertifikat neu generieren* klicken.
+
+* *SAML-Authentifizierung deaktivieren*
++
+Deaktiviert die SAML-Authentifizierung, sodass der Identitätsanbieter (IdP) keine Anmeldeauthentifizierung mehr für Benutzer bereitstellt, die auf die Unified Manager-GUI zugreifen.  Diese Konsolenoption wird normalerweise verwendet, wenn ein Problem mit dem IdP-Server oder der SAML-Konfiguration den Zugriff der Benutzer auf die Unified Manager-GUI blockiert.
+
+* *Externer Datenanbieter*
++
+Bietet Optionen zum Verbinden von Unified Manager mit einem externen Datenanbieter.  Nachdem Sie die Verbindung hergestellt haben, werden Leistungsdaten an einen externen Server gesendet, sodass Speicherleistungsexperten die Leistungsmetriken mithilfe von Software von Drittanbietern aufzeichnen können. Die folgenden Optionen werden angezeigt:
+
++
+** *Serverkonfiguration anzeigen* – Zeigt die aktuellen Verbindungs- und Konfigurationseinstellungen für einen externen Datenanbieter an.
+** *Serververbindung hinzufügen/ändern* – Ermöglicht Ihnen, neue Verbindungseinstellungen für einen externen Datenanbieter einzugeben oder vorhandene Einstellungen zu ändern.
+** *Serverkonfiguration ändern* – Ermöglicht Ihnen, neue Konfigurationseinstellungen für einen externen Datenanbieter einzugeben oder vorhandene Einstellungen zu ändern.
+** *Serververbindung löschen* – Löscht die Verbindung zu einem externen Datenanbieter.
++
+Nachdem die Verbindung gelöscht wurde, verliert Unified Manager seine Verbindung zum externen Server.
+
+
+
+* *Backup-Wiederherstellung*
++
+Weitere Informationen finden Sie in den Themen unterlink:../health-checker/concept_manage_backup_and_restore_operations.html["Verwalten von Sicherungs- und Wiederherstellungsvorgängen"] .
+
+* *Konfiguration des Leistungsabfrageintervalls*
++
+Bietet eine Option zum Konfigurieren, wie häufig Unified Manager Leistungsstatistikdaten von Clustern sammelt.  Das Standarderfassungsintervall beträgt 5 Minuten.
+
++
+Sie können dieses Intervall auf 10 oder 15 Minuten ändern, wenn Sie feststellen, dass Sammlungen aus großen Clustern nicht rechtzeitig abgeschlossen werden.
+
+* *Anwendungsports anzeigen/ändern*
++
+Bietet eine Option zum Ändern der Standardports, die Unified Manager für HTTP- und HTTPS-Protokolle verwendet, falls dies aus Sicherheitsgründen erforderlich ist.  Die Standardports sind 80 für HTTP und 443 für HTTPS.
+
+* *Zugriff auf MySQL-Port 3306 kontrollieren*
++
+Steuert den Hostzugriff auf den MySQL-Standardport 3306.  Aus Sicherheitsgründen ist der Zugriff über diesen Port während einer Neuinstallation von Unified Manager auf Linux-, Windows- und VMware vSphere-Systemen nur auf localhost beschränkt.  Mit dieser Option können Sie die Sichtbarkeit dieses Ports zwischen dem lokalen Host und den Remote-Hosts umschalten. Das heißt, wenn er in Ihrer Umgebung nur für den lokalen Host aktiviert ist, können Sie diesen Port auch für Remote-Hosts verfügbar machen.  Alternativ können Sie, wenn die Option für alle Hosts aktiviert ist, den Zugriff auf diesen Port nur auf den lokalen Host beschränken.  Wenn der Zugriff auf Remote-Hosts zuvor aktiviert wurde, bleibt die Konfiguration in einem Upgrade-Szenario erhalten.  Sie sollten die Firewall-Einstellungen auf Windows-Systemen überprüfen, nachdem Sie die Port-Sichtbarkeit umgeschaltet haben, und die Firewall-Einstellungen deaktivieren, wenn die Einstellungen so konfiguriert sind, dass der Zugriff auf MySQL-Port 3306 eingeschränkt ist.
+
+* *Ausfahrt*
++
+Beendet das Wartungskonsolenmenü.
+
+

@@ -1,0 +1,41 @@
+---
+permalink: health-checker/task_resolve_capacity_issues.html 
+sidebar: sidebar 
+keywords: resolve, capacity issues 
+summary: Dieser Workflow bietet ein Beispiel dafür, wie Sie ein Kapazitätsproblem lösen können.  In diesem Szenario sind Sie ein Administrator oder Operator und greifen auf die Dashboard-Seite des Unified Managers zu, um zu sehen, ob bei einem der überwachten Speicherobjekte Kapazitätsprobleme vorliegen.  Sie möchten die mögliche Ursache des Problems ermitteln und eine Lösung dafür finden. 
+---
+= Beheben Sie Kapazitätsprobleme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dieser Workflow bietet ein Beispiel dafür, wie Sie ein Kapazitätsproblem lösen können.  In diesem Szenario sind Sie ein Administrator oder Operator und greifen auf die Dashboard-Seite des Unified Managers zu, um zu sehen, ob bei einem der überwachten Speicherobjekte Kapazitätsprobleme vorliegen.  Sie möchten die mögliche Ursache des Problems ermitteln und eine Lösung dafür finden.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Suchen Sie auf der Dashboard-Seite im Kapazitätsbereich unter der Dropdown-Liste „Ereignisse“ nach einem Fehlerereignis „Volume Space Full“.
+
+.Schritte
+. Klicken Sie im Bereich *Kapazität* der Seite *Dashboard* auf den Namen des Fehlerereignisses „Volume-Speicherplatz voll“.
++
+Die Seite mit den Ereignisdetails für den Fehler wird angezeigt.
+
+. Auf der Detailseite *Ereignis* können Sie eine oder mehrere der folgenden Aufgaben ausführen:
++
+** Überprüfen Sie die Fehlermeldung im Feld „Ursache“ und klicken Sie auf die Vorschläge unter „Vorgeschlagene Abhilfemaßnahmen“, um Beschreibungen möglicher Abhilfemaßnahmen zu überprüfen.
+** Klicken Sie im Feld „Quelle“ auf den Objektnamen (in diesem Fall ein Volume), um Details zum Objekt zu erhalten.
+** Suchen Sie nach Notizen, die möglicherweise zu diesem Ereignis hinzugefügt wurden.
+** Fügen Sie dem Ereignis eine Notiz hinzu.
+** Weisen Sie das Ereignis einem anderen Benutzer zu.
+** Bestätigen Sie das Ereignis.
+** Markieren Sie das Ereignis als gelöst.
+
+
+
+
+*Verwandte Informationen*
+
+link:../events/reference_event_details_page.html["Seite mit Veranstaltungsdetails"]

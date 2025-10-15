@@ -1,0 +1,29 @@
+---
+permalink: events/reference_what_system_diagnosis_section_displays.html 
+sidebar: sidebar 
+keywords: system, diagnosis, section, displays 
+summary: Der Abschnitt „Systemdiagnose“ auf der Seite „Ereignisdetails“ enthält Informationen, die Ihnen bei der Diagnose von Problemen helfen können, die möglicherweise für das Ereignis verantwortlich waren. 
+---
+= Was der Abschnitt „Systemdiagnose“ anzeigt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Abschnitt „Systemdiagnose“ auf der Seite „Ereignisdetails“ enthält Informationen, die Ihnen bei der Diagnose von Problemen helfen können, die möglicherweise für das Ereignis verantwortlich waren.
+
+Dieser Bereich wird nur bei manchen Veranstaltungen angezeigt.
+
+Einige Leistungsereignisse stellen Diagramme bereit, die für das jeweilige ausgelöste Ereignis relevant sind.  Normalerweise umfasst dies ein IOPS- oder MBps-Diagramm und ein Latenzdiagramm für die letzten zehn Tage.  Bei dieser Anordnung können Sie sehen, welche Speicherkomponenten die Latenz am stärksten beeinflussen oder von der Latenz betroffen sind, wenn das Ereignis aktiv ist.
+
+Für dynamische Leistungsereignisse werden die folgenden Diagramme angezeigt:
+
+* Arbeitslastlatenz – Zeigt den Verlauf der Latenz für die Arbeitslasten der Top-Opfer, Bullys oder Sharks bei der umstrittenen Komponente an.
+* Workload-Aktivität – Zeigt Details zur Workload-Nutzung der konkurrierenden Clusterkomponente an.
+* Ressourcenaktivität – Zeigen Sie historische Leistungsstatistiken für die umstrittene Clusterkomponente an.
+
+
+Andere Diagramme werden angezeigt, wenn einige Clusterkomponenten miteinander konkurrieren.
+
+Andere Ereignisse liefern eine kurze Beschreibung der Art der Analyse, die das System am Speicherobjekt durchführt.  In einigen Fällen gibt es eine oder mehrere Zeilen, eine für jede analysierte Komponente, für systemdefinierte Leistungsrichtlinien, die mehrere Leistungsindikatoren analysieren.  In diesem Szenario wird neben der Diagnose ein grünes oder rotes Symbol angezeigt, um anzugeben, ob bei dieser bestimmten Diagnose ein Problem gefunden wurde oder nicht.

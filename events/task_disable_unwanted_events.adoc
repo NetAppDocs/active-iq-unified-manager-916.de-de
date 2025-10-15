@@ -1,0 +1,51 @@
+---
+permalink: events/task_disable_unwanted_events.html 
+sidebar: sidebar 
+keywords: disable, unwanted, events 
+summary: Alle Ereignisse sind standardmäßig aktiviert.  Sie können Ereignisse global deaktivieren, um die Generierung von Benachrichtigungen für Ereignisse zu verhindern, die in Ihrer Umgebung nicht wichtig sind.  Sie können deaktivierte Ereignisse aktivieren, wenn Sie den Empfang von Benachrichtigungen dafür wieder aufnehmen möchten. 
+---
+= Deaktivieren Sie unerwünschte Ereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Alle Ereignisse sind standardmäßig aktiviert.  Sie können Ereignisse global deaktivieren, um die Generierung von Benachrichtigungen für Ereignisse zu verhindern, die in Ihrer Umgebung nicht wichtig sind.  Sie können deaktivierte Ereignisse aktivieren, wenn Sie den Empfang von Benachrichtigungen dafür wieder aufnehmen möchten.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Wenn Sie Ereignisse deaktivieren, werden die zuvor generierten Ereignisse im System als veraltet markiert und die für diese Ereignisse konfigurierten Warnungen werden nicht ausgelöst.  Wenn Sie deaktivierte Ereignisse aktivieren, werden die Benachrichtigungen für diese Ereignisse ab dem nächsten Überwachungszyklus generiert.
+
+Wenn Sie ein Ereignis für ein Objekt deaktivieren (z. B. das `vol offline` Ereignis) und Sie das Ereignis später aktivieren, generiert Unified Manager keine neuen Ereignisse für Objekte, die offline gingen, als das Ereignis deaktiviert war.  Unified Manager generiert nur dann ein neues Ereignis, wenn sich der Objektstatus ändert, nachdem das Ereignis erneut aktiviert wurde.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Ereigniseinrichtung*.
+. Deaktivieren oder aktivieren Sie Ereignisse auf der Seite *Ereignis-Setup*, indem Sie eine der folgenden Optionen auswählen:
++
+|===
+| Wenn Sie wollen... | Dann tun Sie Folgendes ... 
+
+
+ a| 
+Ereignisse deaktivieren
+ a| 
+.. Klicken Sie auf *Deaktivieren*.
+.. Wählen Sie im Dialogfeld „Ereignisse deaktivieren“ den Schweregrad des Ereignisses aus.
+.. Wählen Sie in der Spalte „Übereinstimmende Ereignisse“ die Ereignisse aus, die Sie basierend auf dem Schweregrad des Ereignisses deaktivieren möchten, und klicken Sie dann auf den Rechtspfeil, um diese Ereignisse in die Spalte „Ereignisse deaktivieren“ zu verschieben.
+.. Klicken Sie auf *Speichern und schließen*.
+.. Überprüfen Sie, ob die von Ihnen deaktivierten Ereignisse in der Listenansicht der Seite „Ereigniseinrichtung“ angezeigt werden.
+
+
+
+
+ a| 
+Ereignisse aktivieren
+ a| 
+.. Aktivieren Sie das Kontrollkästchen für das oder die Ereignisse, die Sie aktivieren möchten.
+.. Klicken Sie auf *Aktivieren*.
+
+
+|===
+

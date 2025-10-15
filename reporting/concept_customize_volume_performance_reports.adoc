@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_volume_performance_reports.html 
+sidebar: sidebar 
+keywords: customize, volume, performance, reports 
+summary: Diese benutzerdefinierten Beispielberichte sollen Ihnen dabei helfen, potenzielle Probleme im Zusammenhang mit der Lautstärkeleistung zu erkennen und darauf zu reagieren. 
+---
+= Anpassen von Volume-Leistungsberichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Diese benutzerdefinierten Beispielberichte sollen Ihnen dabei helfen, potenzielle Probleme im Zusammenhang mit der Lautstärkeleistung zu erkennen und darauf zu reagieren.

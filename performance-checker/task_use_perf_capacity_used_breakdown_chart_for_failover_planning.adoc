@@ -1,0 +1,46 @@
+---
+permalink: performance-checker/task_use_perf_capacity_used_breakdown_chart_for_failover_planning.html 
+sidebar: sidebar 
+keywords: performance, capacity, used, breakdown, chart, failover, planning 
+summary: Das detaillierte Diagramm „Verwendete Leistungskapazität – Aufschlüsselung“ zeigt die für den primären Knoten und den Partnerknoten verwendete Leistungskapazität.  Außerdem wird die Menge der freien Leistungskapazität auf dem geschätzten Übernahmeknoten angezeigt.  Mithilfe dieser Informationen können Sie feststellen, ob bei einem Ausfall des Partnerknotens möglicherweise ein Leistungsproblem auftritt. 
+---
+= Verwenden Sie das Diagramm „Aufschlüsselung der genutzten Leistungskapazität“ für die Failover-Planung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das detaillierte Diagramm „Verwendete Leistungskapazität – Aufschlüsselung“ zeigt die für den primären Knoten und den Partnerknoten verwendete Leistungskapazität.  Außerdem wird die Menge der freien Leistungskapazität auf dem geschätzten Übernahmeknoten angezeigt.  Mithilfe dieser Informationen können Sie feststellen, ob bei einem Ausfall des Partnerknotens möglicherweise ein Leistungsproblem auftritt.
+
+Das Aufschlüsselungsdiagramm zeigt nicht nur die gesamte für die Knoten genutzte Leistungskapazität an, sondern unterteilt die Werte für jeden Knoten auch in Benutzerprotokolle und Hintergrundprozesse.
+
+* Benutzerprotokolle sind die E/A-Vorgänge von Benutzeranwendungen zum und vom Cluster.
+* Hintergrundprozesse sind die internen Systemprozesse, die an der Speichereffizienz, der Datenreplikation und der Systemintegrität beteiligt sind.
+
+
+Mit dieser zusätzlichen Detailebene können Sie feststellen, ob ein Leistungsproblem durch die Anwendungsaktivität des Benutzers oder durch Hintergrundsystemprozesse wie Deduplizierung, RAID-Rekonstruktion, Festplattenbereinigung und SnapMirror Kopien verursacht wird.
+
+.Schritte
+. Gehen Sie zur Seite *Leistung/Knoten-Failover-Planung* für den Knoten, der als geschätzter Übernahmeknoten dienen soll.
+. Wählen Sie im Auswahlfeld *Zeitbereich* den Zeitraum aus, für den die historischen Statistiken im Zählerraster und in den Zählerdiagrammen angezeigt werden.
++
+Die Zählerdiagramme mit Statistiken für den Primärknoten, den Partnerknoten und den geschätzten Übernahmeknoten werden angezeigt.
+
+. Wählen Sie aus der Liste *Diagramme auswählen* die Option *Perf.  Verwendete Kapazität*.
+. Im *Perf.  Wählen Sie im Diagramm „Kapazitätsnutzung“ die Option „Aufschlüsselung“ und klicken Sie auf „Zoom-Ansicht“.
++
+Das detaillierte Diagramm für Perf.  Die verwendete Kapazität wird angezeigt.
+
++
+image::../media/headroom_advanced_zoom_chart.gif[Ein UI-Screenshot, der das detaillierte Diagramm für Perf zeigt.  Verwendete Kapazität.]
+
+. Bewegen Sie den Cursor über das detaillierte Diagramm, um die Informationen zur genutzten Leistungskapazität im Popup-Fenster anzuzeigen.
++
+Die Perf.  Der Prozentsatz der freien Kapazität ist die auf dem geschätzten Übernahmeknoten verfügbare Leistungskapazität.  Es gibt an, wie viel Leistungskapazität nach einem Failover auf dem Übernahmeknoten übrig bleibt.  Wenn der Wert 0 % beträgt, führt ein Failover dazu, dass die Latenz auf dem Übernahmeknoten auf ein inakzeptables Niveau ansteigt.
+
+. Erwägen Sie Korrekturmaßnahmen, um einen niedrigen Leistungskapazitäts-Freiprozentsatz zu vermeiden.
++
+Wenn Sie planen, zur Knotenwartung ein Failover einzuleiten, wählen Sie einen Zeitpunkt für den Ausfall des Partnerknotens, bei dem der Prozentsatz der freien Leistungskapazität nicht bei 0 liegt.
+
+

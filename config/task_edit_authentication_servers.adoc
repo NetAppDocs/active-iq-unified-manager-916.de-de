@@ -1,0 +1,25 @@
+---
+permalink: config/task_edit_authentication_servers.html 
+sidebar: sidebar 
+keywords: edit, authentication servers 
+summary: Sie können den Port ändern, den der Unified Manager-Server zur Kommunikation mit Ihrem Authentifizierungsserver verwendet. 
+---
+= Authentifizierungsserver bearbeiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Port ändern, den der Unified Manager-Server zur Kommunikation mit Ihrem Authentifizierungsserver verwendet.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ verfügen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Allgemein* > *Remote-Authentifizierung*.
+. Aktivieren Sie das Kontrollkästchen *Verschachtelte Gruppensuche deaktivieren*.
+. Wählen Sie im Bereich *Authentifizierungsserver* den Authentifizierungsserver aus, den Sie bearbeiten möchten, und klicken Sie dann auf *Bearbeiten*.
+. Bearbeiten Sie im Dialogfeld *Authentifizierungsserver bearbeiten* die Portdetails.
+. Klicken Sie auf *Speichern*.
+

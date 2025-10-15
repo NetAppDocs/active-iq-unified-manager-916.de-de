@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/concept_what_performance_capacity_used_is.html 
+sidebar: sidebar 
+keywords: performance, capacity, used 
+summary: Mithilfe des Leistungsindikators „Verwendete Leistungskapazität“ können Sie feststellen, ob die Leistung eines Knotens oder eines Aggregats einen Punkt erreicht, an dem die Leistung bei zunehmender Arbeitslast nachlassen könnte.  Es kann Ihnen auch zeigen, ob ein Knoten oder Aggregat derzeit während bestimmter Zeiträume überbeansprucht wird.  Die verwendete Leistungskapazität ähnelt der Auslastung, bietet jedoch mehr Einblick in die verfügbaren Leistungskapazitäten einer physischen Ressource für eine bestimmte Arbeitslast. 
+---
+= Welche Leistungsfähigkeit wird genutzt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe des Leistungsindikators „Verwendete Leistungskapazität“ können Sie feststellen, ob die Leistung eines Knotens oder eines Aggregats einen Punkt erreicht, an dem die Leistung bei zunehmender Arbeitslast nachlassen könnte.  Es kann Ihnen auch zeigen, ob ein Knoten oder Aggregat derzeit während bestimmter Zeiträume überbeansprucht wird.  Die verwendete Leistungskapazität ähnelt der Auslastung, bietet jedoch mehr Einblick in die verfügbaren Leistungskapazitäten einer physischen Ressource für eine bestimmte Arbeitslast.
+
+Die optimal genutzte Leistungskapazität ist der Punkt, an dem ein Knoten oder ein Aggregat eine optimale Auslastung und Latenz (Reaktionszeit) aufweist und effizient genutzt wird.  In der folgenden Abbildung wird eine Beispielkurve der Latenz im Vergleich zur Auslastung für ein Aggregat angezeigt.
+
+image::../media/headroom_chart.gif[Ein UI-Screenshot, der eine Beispielkurve der Latenz im Vergleich zur Auslastung für ein Aggregat zeigt.]
+
+In diesem Beispiel gibt der _Betriebspunkt_ an, dass das Aggregat derzeit mit einer Auslastung von 50 % und einer Latenz von 1,0 ms/Operation arbeitet.  Basierend auf den aus dem Aggregat erfassten Statistiken ermittelt Unified Manager, dass für dieses Aggregat zusätzliche Leistungskapazität verfügbar ist.  In diesem Beispiel wird der _optimale Punkt_ als der Punkt identifiziert, an dem das Aggregat zu 80 % ausgelastet ist und eine Latenz von 2,0 ms/Operation aufweist.  Daher können Sie diesem Aggregat weitere Volumes und LUNs hinzufügen, sodass Ihre Systeme effizienter genutzt werden.
+
+Der Zähler für die genutzte Leistungskapazität dürfte einen höheren Wert aufweisen als der Zähler „Auslastung“, da die Leistungskapazität die Latenz zusätzlich beeinflusst.  Wenn beispielsweise ein Knoten oder Aggregat zu 70 % ausgelastet ist, kann der Leistungskapazitätswert je nach Latenzwert im Bereich von 80 % bis 100 % liegen.
+
+In einigen Fällen kann der Auslastungszähler auf der Dashboard-Seite jedoch höher sein.  Dies ist normal, da das Dashboard die aktuellen Zählerwerte in jedem Erfassungszeitraum aktualisiert. Es zeigt keine Durchschnittswerte über einen bestimmten Zeitraum an, wie die anderen Seiten in der Benutzeroberfläche von Unified Manager.  Der Leistungskapazitätszähler eignet sich am besten als Indikator für die über einen bestimmten Zeitraum gemittelte Leistung, während der Auslastungszähler am besten zur Ermittlung der momentanen Nutzung einer Ressource verwendet wird.

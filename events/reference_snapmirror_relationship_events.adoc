@@ -1,0 +1,194 @@
+---
+permalink: events/reference_snapmirror_relationship_events.html 
+sidebar: sidebar 
+keywords: snapmirror, relationship, events, impact area, protection 
+summary: SnapMirror Beziehungsereignisse liefern Ihnen Informationen zum Status Ihrer asynchronen und synchronen SnapMirror Beziehungen, sodass Sie diese auf potenzielle Probleme überwachen können.  Asynchrone SnapMirror Beziehungsereignisse werden sowohl für Storage-VMs als auch für Volumes generiert, synchrone SnapMirror -Beziehungsereignisse werden jedoch nur für Volume-Beziehungen generiert.  Für Bestandteilvolumes, die Teil von Storage-VM-Notfallwiederherstellungsbeziehungen sind, werden keine Ereignisse generiert.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad. 
+---
+= SnapMirror -Beziehungsereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapMirror Beziehungsereignisse liefern Ihnen Informationen zum Status Ihrer asynchronen und synchronen SnapMirror Beziehungen, sodass Sie diese auf potenzielle Probleme überwachen können.  Asynchrone SnapMirror Beziehungsereignisse werden sowohl für Storage-VMs als auch für Volumes generiert, synchrone SnapMirror -Beziehungsereignisse werden jedoch nur für Volume-Beziehungen generiert.  Für Bestandteilvolumes, die Teil von Storage-VM-Notfallwiederherstellungsbeziehungen sind, werden keine Ereignisse generiert.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad.
+
+
+
+== Aufprallbereich: Schutz
+
+Ein Sternchen (*) kennzeichnet EMS-Ereignisse, die in Unified Manager-Ereignisse konvertiert wurden.
+
+[NOTE]
+====
+Die SnapMirror -Beziehungsereignisse werden für Storage-VMs generiert, die durch die Notfallwiederherstellung von Storage-VMs geschützt sind, jedoch nicht für Beziehungen zwischen Bestandteilobjekten.
+
+====
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+Spiegelreplikation fehlerhaft (ocumEvtSnapmirrorRelationshipUnhealthy)
+ a| 
+Risiko
+ a| 
+SnapMirror -Beziehung
+ a| 
+Warnung
+
+
+
+ a| 
+Abgebrochene Spiegelreplikation (ocumEvtSnapmirrorRelationshipStateBrokenoff)
+ a| 
+Risiko
+ a| 
+SnapMirror -Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Initialisierung der Spiegelreplikation fehlgeschlagen (ocumEvtSnapmirrorRelationshipInitializeFailed)
+ a| 
+Risiko
+ a| 
+SnapMirror -Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Aktualisierung der Spiegelreplikation fehlgeschlagen (ocumEvtSnapmirrorRelationshipUpdateFailed)
+ a| 
+Risiko
+ a| 
+SnapMirror -Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Verzögerungsfehler bei der Spiegelreplikation (ocumEvtSnapMirrorRelationshipLagError)
+ a| 
+Risiko
+ a| 
+SnapMirror -Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Warnung bei Verzögerung bei Spiegelreplikation (ocumEvtSnapMirrorRelationshipLagWarning)
+ a| 
+Risiko
+ a| 
+SnapMirror -Beziehung
+ a| 
+Warnung
+
+
+
+ a| 
+Neusynchronisierung der Spiegelreplikation fehlgeschlagen (ocumEvtSnapmirrorRelationshipResyncFailed)
+ a| 
+Risiko
+ a| 
+SnapMirror -Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Synchrone Replikation nicht synchron *(syncSnapmirrorRelationshipOutofsync)
+ a| 
+Risiko
+ a| 
+SnapMirror -Beziehung
+ a| 
+Warnung
+
+
+
+ a| 
+Synchrone Replikation wiederhergestellt *(syncSnapmirrorRelationshipInSync)
+ a| 
+Ereignis
+ a| 
+SnapMirror -Beziehung
+ a| 
+Information
+
+
+
+ a| 
+Automatische Neusynchronisierung der synchronen Replikation fehlgeschlagen *(syncSnapmirrorRelationshipAutoSyncRetryFailed)
+ a| 
+Risiko
+ a| 
+SnapMirror -Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Ontap Mediator wird zum Cluster hinzugefügt (snapmirrorMediatorAdded)
+ a| 
+Ereignis
+ a| 
+Cluster
+ a| 
+Information
+
+
+
+ a| 
+Ontap Mediator wird aus dem Cluster entfernt (snapmirrorMediatorRemoved)
+ a| 
+Ereignis
+ a| 
+Cluster
+ a| 
+Information
+
+
+
+ a| 
+Ontap Mediator ist vom Cluster aus nicht erreichbar (snapmirrorMediatorUnreachable)
+ a| 
+Risiko
+ a| 
+Vermittler
+ a| 
+Warnung
+
+
+
+ a| 
+Auf Ontap Mediator kann vom Cluster aus nicht zugegriffen werden (SnapmirrorMediator falsch konfiguriert).
+ a| 
+Risiko
+ a| 
+Vermittler
+ a| 
+Fehler
+
+
+
+ a| 
+Die Ontap Mediator-Konnektivität wurde wiederhergestellt, ist neu synchronisiert und bereit für die aktive Synchronisierung mit SnapMirror (snapmirrorMediatorInQuorum).
+ a| 
+Ereignis
+ a| 
+Vermittler
+ a| 
+Information
+
+|===

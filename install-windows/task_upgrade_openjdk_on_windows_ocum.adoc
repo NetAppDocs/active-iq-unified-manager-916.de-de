@@ -1,0 +1,45 @@
+---
+permalink: install-windows/task_upgrade_openjdk_on_windows_ocum.html 
+sidebar: sidebar 
+keywords: openjdk, jre, upgrade 
+summary: Sie können auf dem Windows-Server, auf dem Unified Manager installiert ist, ein Upgrade auf eine neuere Version von OpenJDK durchführen, um Fixes für Sicherheitslücken zu erhalten. 
+---
+= OpenJDK aktualisieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können auf dem Windows-Server, auf dem Unified Manager installiert ist, ein Upgrade auf eine neuere Version von OpenJDK durchführen, um Fixes für Sicherheitslücken zu erhalten.
+
+.Bevor Sie beginnen
+Sie müssen über Windows-Administratorrechte für das System verfügen, auf dem Unified Manager installiert ist.
+
+Sie können OpenJDK-Versionen innerhalb von Versionsfamilien aktualisieren.  Sie können beispielsweise von OpenJDK 11.0.16 auf OpenJDK 11.0.18 aktualisieren, aber nicht direkt von OpenJDK 11 auf OpenJDK 12.
+
+.Schritte
+. Melden Sie sich als Administratorbenutzer auf dem Unified Manager-Hostcomputer an.
+. Laden Sie die entsprechende Version von OpenJDK (64-Bit) von der OpenJDK-Site auf das Zielsystem herunter.
++
+Laden Sie beispielsweise herunter `jdk-11.0.18_windows-x64_bin.zip from https://www.oracle.com/in/java/technologies/javase/jdk11-archive-downloads.html` .
+
++
+
+NOTE: Zum Herunterladen der Datei ist ein Oracle-Konto erforderlich.  Wenn Sie kein Oracle-Konto haben, gehen Sie zulink:https://login.oracle.com/mysso/signon.jsp?request_id=007["Oracle-Kontoanmeldung"] Seite, um eine zu erstellen.
+
+. Verwenden Sie die Windows-Dienstekonsole, um die folgenden Unified Manager-Dienste zu stoppen:
++
+** NetApp Active IQ Acquisition Service (Ocie-au)
+** NetApp Active IQ Management Server-Dienst (Oncommandsvc)
+
+
+. Erweitern Sie die `zip` Datei.
+. Kopieren Sie die Verzeichnisse und Dateien aus dem resultierenden `jdk` Verzeichnis (zum Beispiel `jdk-11.0.18` an den Ort, an dem Java installiert ist.  Beispiel: `C:\Program Files\NetApp\JDK\`
+. Starten Sie die Unified Manager-Dienste mithilfe der Windows-Dienstekonsole:
++
+** NetApp Active IQ Management Server-Dienst (Oncommandsvc)
+** NetApp Active IQ Acquisition Service (Ocie-au)
+
+
+

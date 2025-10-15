@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/concept_understand_root_object.html 
+sidebar: sidebar 
+keywords: understand, root, object 
+summary: Das Stammobjekt ist die Basislinie, anhand derer andere Objektvergleiche durchgeführt werden.  Auf diese Weise können Sie die Daten anderer Objekte mit denen des Stammobjekts vergleichen und anzeigen. Dadurch erhalten Sie eine Leistungsdatenanalyse, die Ihnen bei der Fehlerbehebung und Verbesserung der Objektleistung hilft. 
+---
+= Verstehen Sie das Stammobjekt
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Stammobjekt ist die Basislinie, anhand derer andere Objektvergleiche durchgeführt werden.  Auf diese Weise können Sie die Daten anderer Objekte mit denen des Stammobjekts vergleichen und anzeigen. Dadurch erhalten Sie eine Leistungsdatenanalyse, die Ihnen bei der Fehlerbehebung und Verbesserung der Objektleistung hilft.
+
+Der Name des Stammobjekts wird oben im Vergleichsbereich angezeigt.  Zusätzliche Objekte werden unterhalb des Stammobjekts angezeigt.  Obwohl es keine Begrenzung für die Anzahl zusätzlicher Objekte gibt, die Sie zum Vergleichsbereich hinzufügen können, ist nur ein Stammobjekt zulässig.  Daten für das Stammobjekt werden automatisch in den Diagrammen im Bereich „Zählerdiagramme“ angezeigt.
+
+Sie können das Stammobjekt nicht ändern. Es ist immer auf die Objektseite eingestellt, die Sie gerade anzeigen.  Wenn Sie beispielsweise die Volume Performance Explorer-Seite von Volume1 öffnen, ist Volume1 das Stammobjekt und kann nicht geändert werden.  Wenn Sie einen Vergleich mit einem anderen Stammobjekt durchführen möchten, müssen Sie auf den Link für ein Objekt klicken und dessen Zielseite öffnen.
+
+[NOTE]
+====
+Ereignisse und Schwellenwerte werden nur für Stammobjekte angezeigt.
+
+====

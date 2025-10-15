@@ -1,0 +1,14 @@
+---
+permalink: health-checker/concept_tasks_and_information_related_to_several_workflows.html 
+sidebar: sidebar 
+keywords: tasks, information, workflows 
+summary: 'Einige Aufgaben und Referenztexte, die Ihnen beim Verstehen und Abschließen eines Workflows helfen können, sind vielen Workflows in Unified Manager gemeinsam, darunter das Hinzufügen und Überprüfen von Notizen zu einem Ereignis, das Zuweisen eines Ereignisses, das Bestätigen und Auflösen von Ereignissen sowie Details zu Volumes, virtuellen Speichermaschinen (SVMs), Aggregaten usw.' 
+---
+= Aufgaben und Informationen zu verschiedenen Arbeitsabläufen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Einige Aufgaben und Referenztexte, die Ihnen beim Verstehen und Abschließen eines Workflows helfen können, sind vielen Workflows in Unified Manager gemeinsam, darunter das Hinzufügen und Überprüfen von Notizen zu einem Ereignis, das Zuweisen eines Ereignisses, das Bestätigen und Auflösen von Ereignissen sowie Details zu Volumes, virtuellen Speichermaschinen (SVMs), Aggregaten usw.

@@ -1,0 +1,67 @@
+---
+permalink: install-vapp/qsg-vapp.html 
+sidebar: sidebar 
+keywords: quick start guide, getting started, QSG, VMWare QSG, vApp QSG, quick installation 
+summary: Kurzanleitung für Unified Manager auf der VMWare vSphere-Plattform. 
+---
+= Schnellstartanleitung für VMware-Installationen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die `.tar` Datei, die ein Stammzertifikat enthält, ein `README` Datei und eine `OVA` Datei und stellen Sie den Unified Manager als virtuelle Appliance bereit.
+
+
+
+== Systemanforderungen
+
+* Betriebssystem: VMware ESXi 8.0
+* Arbeitsspeicher: 12 GB
+* CPU: 9572 MHz gesamt
+* Freier Speicherplatz: 5 GB (Thin Provisioning), 152 GB (Thick Provisioning)
+
+
+Ausführliche Systemanforderungen finden Sie imlink:../install-vapp/concept_requirements_for_installing_unified_manager.html["Voraussetzungen für die Installation von Unified Manager"] Undlink:http://mysupport.netapp.com/matrix["Interoperabilitätsmatrix"] .
+
+
+
+== Installieren Sie Active IQ Unified Manager
+
+
+
+=== Laden Sie das Installationsprogramm herunter
+
+. Laden Sie die `.tar` Datei, die ein Stammzertifikat enthält, ein `README` Datei und eine `OVA` Datei.
+. Speichern Sie die Datei in einem lokalen Verzeichnis oder Netzwerkverzeichnis, auf das Ihr vSphere-Client zugreifen kann.
+. In dem Verzeichnis, in das Sie die `.tar` Datei, geben Sie die `tar -xvzf ActiveIQUnifiedManager-<version>.tar.gz` Befehl.  + Die erforderlichen `OVA` Datei, ein Stammzertifikat und ein `README` Datei werden in das Zielverzeichnis entpackt.
+
+
+
+
+=== Integrität überprüfen
+
+Sie können die Integrität der `OVA` Datei, indem Sie die Schritte in der `README` Datei.
+
+
+
+=== Unified Manager installieren
+
+. Klicken Sie im vSphere Client auf *Datei > OVF-Vorlage bereitstellen*.
+. Suchen Sie die OVA-Datei und verwenden Sie den Assistenten, um die virtuelle Appliance auf dem ESXi-Server bereitzustellen.
+. Auf der Seite „Überprüfungsdetails“ im Abschnitt „Herausgeber“ wird die Meldung `Entrust Code Signing - OVCS2 (Trusted certificate)` bestätigt die Integrität der heruntergeladenen `OVA` Datei.  Für die Nachricht `Entrust Code Signing - OVCS2 (Invalid certificate)` , aktualisieren Sie den VMware vCenter Server auf Version 7.0U3E oder höher.
+. Füllen Sie auf der Seite „Vorlage anpassen“ auf der Registerkarte „Eigenschaften“ die Felder entsprechend dem von Ihnen durchgeführten Installationstyp aus:
++
+** Geben Sie für die statische Konfiguration die erforderlichen Informationen in alle Felder ein.  Das Hinzufügen von Informationen für das Feld *Sekundärer DNS* ist nicht erforderlich.
+** Geben Sie für DHCP mit IPv4 in keinem Feld Informationen ein.
+** Aktivieren Sie für DHCP mit IPv6 das Kontrollkästchen „Automatische IPv6-Adressierung aktivieren“.  Fügen Sie in keinem anderen Feld Informationen hinzu.
+
+
+. Schalten Sie die VM ein.
+. Klicken Sie auf die Registerkarte „Konsole“, um den ersten Startvorgang anzuzeigen.
+. Konfigurieren Sie die Zeitzone.
+. Geben Sie einen Unified Manager-Wartungsbenutzernamen und ein Kennwort ein.
+
+
+Am Ende der Installation werden die Informationen zur Verbindung mit der Unified Manager-Web-Benutzeroberfläche angezeigt.

@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/reference_understand_and_use_node_failover_planning_page.html 
+sidebar: sidebar 
+keywords: understanding, node, failover, planning page 
+summary: 'Auf der Seite „Leistung/Knoten-Failover-Planung“ werden die Leistungseinbußen für einen Knoten geschätzt, wenn der Hochverfügbarkeits-Partnerknoten (HA) des Knotens ausfällt.  Unified Manager stützt seine Schätzungen auf die historische Leistung der Knoten im HA-Paar.' 
+---
+= Verstehen und Verwenden der Seite „Knoten-Failover-Planung“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Leistung/Knoten-Failover-Planung“ werden die Leistungseinbußen für einen Knoten geschätzt, wenn der Hochverfügbarkeits-Partnerknoten (HA) des Knotens ausfällt.  Unified Manager stützt seine Schätzungen auf die historische Leistung der Knoten im HA-Paar.
+
+Durch die Abschätzung der Auswirkungen eines Failovers auf die Leistung können Sie in den folgenden Szenarien planen:
+
+* Wenn ein Failover die geschätzte Leistung des Übernahmeknotens dauerhaft auf ein inakzeptables Niveau verschlechtert, können Sie Korrekturmaßnahmen in Betracht ziehen, um die Leistungseinbußen durch ein Failover zu reduzieren.
+* Bevor Sie ein manuelles Failover zur Durchführung von Hardwarewartungsaufgaben einleiten, können Sie abschätzen, wie sich das Failover auf die Leistung des Übernahmeknotens auswirkt, um den besten Zeitpunkt für die Durchführung der Aufgabe zu bestimmen.
+

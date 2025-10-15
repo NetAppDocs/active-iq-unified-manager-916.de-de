@@ -1,0 +1,48 @@
+---
+permalink: data-protection/task_reverse_protection_relationships.html 
+sidebar: sidebar 
+keywords: reverse, protection, relationships, volume, relationships page 
+summary: Wenn das Quellvolume in Ihrer Schutzbeziehung durch einen Notfall deaktiviert wird, können Sie das Zielvolume zum Bereitstellen von Daten verwenden, indem Sie es in ein Lese-/Schreibvolume konvertieren, während Sie die Quelle reparieren oder ersetzen.  Wenn die Quelle wieder zum Empfangen von Daten verfügbar ist, können Sie den umgekehrten Resynchronisierungsvorgang verwenden, um die Beziehung in umgekehrter Richtung herzustellen und die Daten auf der Quelle mit den Daten auf dem Lese-/Schreibziel zu synchronisieren. 
+---
+= Umkehren von Schutzbeziehungen auf der Seite „Volume-Beziehungen“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn das Quellvolume in Ihrer Schutzbeziehung durch einen Notfall deaktiviert wird, können Sie das Zielvolume zum Bereitstellen von Daten verwenden, indem Sie es in ein Lese-/Schreibvolume konvertieren, während Sie die Quelle reparieren oder ersetzen.  Wenn die Quelle wieder zum Empfangen von Daten verfügbar ist, können Sie den umgekehrten Resynchronisierungsvorgang verwenden, um die Beziehung in umgekehrter Richtung herzustellen und die Daten auf der Quelle mit den Daten auf dem Lese-/Schreibziel zu synchronisieren.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen die Workflow-Automatisierung eingerichtet haben.
+* Bei der Beziehung darf es sich nicht um eine SnapVault -Beziehung handeln.
+* Es muss bereits ein Schutzverhältnis bestehen.
+* Das Schutzverhältnis muss aufgelöst werden.
+* Sowohl die Quelle als auch das Ziel müssen online sein.
+* Die Quelle darf nicht das Ziel eines anderen Datensicherungsvolumes sein.
+* Wenn Sie diese Aufgabe ausführen, werden Daten auf der Quelle gelöscht, die neuer sind als die Daten auf der gemeinsamen Snapshot-Kopie.
+* Für umgekehrte Resynchronisierungsbeziehungen erstellte Richtlinien und Zeitpläne sind dieselben wie für die ursprüngliche Schutzbeziehung.
++
+Wenn keine Richtlinien und Zeitpläne vorhanden sind, werden sie erstellt.
+
+
+
+.Schritte
+. Wählen Sie auf der Seite *Volume-Beziehungen* ein oder mehrere Volumes mit Beziehungen aus, die Sie umkehren möchten, und klicken Sie in der Symbolleiste auf *Reverse Resync*.
++
+Das Dialogfeld „Umgekehrte Neusynchronisierung“ wird angezeigt.
+
+. Überprüfen Sie, ob die im Dialogfeld *Reverse Resync* angezeigten Beziehungen diejenigen sind, für die Sie den umgekehrten Resynchronisierungsvorgang durchführen möchten, und klicken Sie dann auf *Senden*.
++
+Der umgekehrte Resynchronisierungsvorgang wird gestartet, Sie werden zur Seite „Volume-Beziehungen“ zurückgeleitet und oben auf der Seite wird ein Job-Link angezeigt.
+
+. *Optional:* Klicken Sie auf der Seite *Volume-Beziehungen* auf *Jobs anzeigen*, um den Status jedes umgekehrten Resynchronisierungsjobs zu verfolgen.
++
+Es wird eine gefilterte Liste der mit diesem Vorgang verbundenen Jobs angezeigt.
+
+. *Optional:* Klicken Sie in Ihrem Browser auf den Pfeil *Zurück*, um zur Seite *Volumenbeziehungen* zurückzukehren.
++
+Der umgekehrte Resynchronisierungsvorgang ist abgeschlossen, wenn alle Jobaufgaben erfolgreich abgeschlossen wurden.
+
+

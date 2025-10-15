@@ -1,0 +1,47 @@
+---
+permalink: performance-checker/task_display_information_about_performance_event.html 
+sidebar: sidebar 
+keywords: display, information, performance, events 
+summary: Auf der Inventarseite der Ereignisverwaltung können Sie eine Liste aller Leistungsereignisse auf den Clustern anzeigen, die von Unified Manager überwacht werden.  Durch Anzeigen dieser Informationen können Sie die kritischsten Ereignisse ermitteln und dann detaillierte Informationen abrufen, um die Ursache des Ereignisses zu ermitteln. 
+---
+= Informationen zu Leistungsereignissen anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Inventarseite der Ereignisverwaltung können Sie eine Liste aller Leistungsereignisse auf den Clustern anzeigen, die von Unified Manager überwacht werden.  Durch Anzeigen dieser Informationen können Sie die kritischsten Ereignisse ermitteln und dann detaillierte Informationen abrufen, um die Ursache des Ereignisses zu ermitteln.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Die Liste der Ereignisse ist nach der Erkennungszeit sortiert, wobei die aktuellsten Ereignisse zuerst aufgeführt werden.  Sie können auf eine Spaltenüberschrift klicken, um die Ereignisse basierend auf dieser Spalte zu sortieren.  Sie können beispielsweise nach der Spalte „Status“ sortieren, um Ereignisse nach Schweregrad anzuzeigen.  Wenn Sie nach einem bestimmten Ereignis oder einem bestimmten Ereignistyp suchen, können Sie die Filter- und Suchmechanismen verwenden, um die Liste der in der Liste angezeigten Ereignisse zu verfeinern.
+
+Auf dieser Seite werden Ereignisse aus allen Quellen angezeigt:
+
+* Benutzerdefinierte Richtlinie für Leistungsschwellenwerte
+* Systemdefinierte Richtlinie für Leistungsschwellenwerte
+* Dynamische Leistungsschwelle
+
+
+In der Spalte „Ereignistyp“ wird die Quelle des Ereignisses aufgeführt.  Sie können ein Ereignis auswählen, um auf der Seite mit den Ereignisdetails Details zum Ereignis anzuzeigen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Event Management*.
+. Wählen Sie im Menü „Ansicht“ die Option „Aktive Leistungsereignisse“ aus.
++
+Auf der Seite werden alle neuen und bestätigten Leistungsereignisse angezeigt, die in den letzten 7 Tagen generiert wurden.
+
+. Suchen Sie ein Ereignis, das Sie analysieren möchten, und klicken Sie auf den Ereignisnamen.
++
+Die Detailseite für das Ereignis wird angezeigt.
+
++
+[NOTE]
+====
+Sie können die Detailseite für ein Ereignis auch anzeigen, indem Sie auf der Performance Explorer-Seite und in einer Warn-E-Mail auf den Link zum Ereignisnamen klicken.
+
+====
+

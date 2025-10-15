@@ -1,0 +1,30 @@
+---
+permalink: health-checker/task_retrieve_support_bundle_using_windows_client.html 
+sidebar: sidebar 
+keywords: retrieve, support bundle, windows client 
+summary: Wenn Sie ein Windows-Benutzer sind, können Sie ein Tool herunterladen und installieren, um das Support-Paket von Ihrem Unified Manager-Server abzurufen.  Sie können das Support-Paket an den technischen Support senden, um eine detailliertere Diagnose eines Problems zu erhalten.  Filezilla oder WinSCP sind Beispiele für Tools, die Sie verwenden können. 
+---
+= Abrufen des Support-Pakets mit einem Windows-Client
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie ein Windows-Benutzer sind, können Sie ein Tool herunterladen und installieren, um das Support-Paket von Ihrem Unified Manager-Server abzurufen.  Sie können das Support-Paket an den technischen Support senden, um eine detailliertere Diagnose eines Problems zu erhalten.  Filezilla oder WinSCP sind Beispiele für Tools, die Sie verwenden können.
+
+.Bevor Sie beginnen
+Sie müssen der Wartungsbenutzer sein, um diese Aufgabe auszuführen.
+
+Sie müssen ein Tool verwenden, das SCP oder SFTP unterstützt.
+
+.Schritte
+. Laden Sie ein Tool herunter und installieren Sie es, um das Support-Paket abzurufen.
+. Öffnen Sie das Tool.
+. Stellen Sie über SFTP eine Verbindung zu Ihrem Unified Manager-Verwaltungsserver her.
++
+Das Tool zeigt den Inhalt des Verzeichnisses /support an und Sie können alle vorhandenen Support-Pakete anzeigen.
+
+. Wählen Sie das Zielverzeichnis für das Support-Paket aus, das Sie kopieren möchten.
+. Wählen Sie das Support-Paket aus, das Sie kopieren möchten, und verwenden Sie das Tool, um die Datei vom Unified Manager-Server auf Ihr lokales System zu kopieren.
+

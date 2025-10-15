@@ -1,0 +1,47 @@
+---
+permalink: config/task_create_database_user.html 
+sidebar: sidebar 
+keywords: create, database, user 
+summary: Um eine Verbindung zwischen Workflow Automation und Unified Manager zu unterstützen oder auf Datenbankansichten zuzugreifen, müssen Sie zunächst einen Datenbankbenutzer mit der Rolle „Integrationsschema“ oder „Berichtsschema“ in der Unified Manager-Web-Benutzeroberfläche erstellen. 
+---
+= Erstellen eines Datenbankbenutzers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um eine Verbindung zwischen Workflow Automation und Unified Manager zu unterstützen oder auf Datenbankansichten zuzugreifen, müssen Sie zunächst einen Datenbankbenutzer mit der Rolle „Integrationsschema“ oder „Berichtsschema“ in der Unified Manager-Web-Benutzeroberfläche erstellen.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ verfügen.
+
+Datenbankbenutzer ermöglichen die Integration mit Workflow Automation und den Zugriff auf berichtsspezifische Datenbankansichten.  Datenbankbenutzer haben keinen Zugriff auf die Unified Manager-Web-Benutzeroberfläche oder die Wartungskonsole und können keine API-Aufrufe ausführen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Allgemein* > *Benutzer*.
+. Klicken Sie auf der Seite „Benutzer“ auf *Hinzufügen*.
+. Wählen Sie im Dialogfeld „Benutzer hinzufügen“ in der Dropdownliste „Typ“ die Option „Datenbankbenutzer“ aus.
+. Geben Sie einen Namen und ein Kennwort für den Datenbankbenutzer ein.
+. Wählen Sie in der Dropdownliste *Rolle* die entsprechende Rolle aus.
++
+[cols="2*"]
+|===
+| Wenn Sie... | Wählen Sie diese Rolle 
+
+
+ a| 
+Unified Manager mit Workflow-Automatisierung verbinden
+ a| 
+Integrationsschema
+
+
+
+ a| 
+Zugriff auf Berichte und andere Datenbankansichten
+ a| 
+Berichtsschema
+
+|===
+. Klicken Sie auf *Hinzufügen*.
+

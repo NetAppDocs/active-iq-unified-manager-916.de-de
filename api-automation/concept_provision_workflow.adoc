@@ -1,0 +1,37 @@
+---
+permalink: api-automation/concept_provision_workflow.html 
+sidebar: sidebar 
+keywords: workflow, workload, management 
+summary: 'Mit Active IQ Unified Manager können Sie Speicher-Workloads (LUNs, NFS-Dateifreigaben und CIFS-Freigaben) bereitstellen und ändern.  Die Bereitstellung umfasst mehrere Schritte, von der Erstellung der Storage Virtual Machine (SVM) bis zur Anwendung von Performance Service Level- und Storage Efficiency Policies auf die Speicher-Workloads.  Das Ändern von Workloads umfasst die Schritte zum Ändern bestimmter Parameter und zum Aktivieren zusätzlicher Funktionen.' 
+---
+= API-Workflows für das Workload-Management
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit Active IQ Unified Manager können Sie Speicher-Workloads (LUNs, NFS-Dateifreigaben und CIFS-Freigaben) bereitstellen und ändern.  Die Bereitstellung umfasst mehrere Schritte, von der Erstellung der Storage Virtual Machine (SVM) bis zur Anwendung von Performance Service Level- und Storage Efficiency Policies auf die Speicher-Workloads.  Das Ändern von Workloads umfasst die Schritte zum Ändern bestimmter Parameter und zum Aktivieren zusätzlicher Funktionen.
+
+Folgende Arbeitsabläufe werden beschrieben:
+
+* Workflow für die Bereitstellung von Storage Virtual Machines (SVMs) auf Unified Manager.
++
+[NOTE]
+====
+Dieser Workflow muss vor der Bereitstellung von LUNs oder Dateifreigaben auf Unified Manager durchgeführt werden.
+
+====
+* Bereitstellung von Dateifreigaben.
+* Bereitstellung von LUNs.
+* Ändern von LUNs und Dateifreigaben (anhand des Beispiels zum Aktualisieren des Performance Service Level-Parameters für die Speicher-Workloads).
+* Ändern einer NFS-Dateifreigabe zur Unterstützung des CIFS-Protokolls
+* Ändern von Workloads zum Upgrade von QoS auf AQoS
+
+
+[NOTE]
+====
+Stellen Sie für jeden Bereitstellungsworkflow (LUN und Dateifreigaben) sicher, dass Sie den Workflow zum Überprüfen der SVMs auf den Clustern abgeschlossen haben.
+
+====
+Sie müssen auch die Empfehlungen und Einschränkungen lesen, bevor Sie die einzelnen APIs in den Workflows verwenden.  Die relevanten Details der APIs finden Sie in den einzelnen Abschnitten, die in den zugehörigen Konzepten und Referenzen aufgeführt sind.

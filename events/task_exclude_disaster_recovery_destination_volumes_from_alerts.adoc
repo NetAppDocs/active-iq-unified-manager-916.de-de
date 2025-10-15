@@ -1,0 +1,40 @@
+---
+permalink: events/task_exclude_disaster_recovery_destination_volumes_from_alerts.html 
+sidebar: sidebar 
+keywords: exclude, disaster, recovery, destination, volumes, generate, alerts 
+summary: Beim Konfigurieren von Volumewarnungen können Sie im Dialogfeld „Warnung“ eine Zeichenfolge angeben, die ein Volume oder eine Gruppe von Volumes identifiziert.  Wenn Sie jedoch die Notfallwiederherstellung für SVMs konfiguriert haben, haben Quell- und Zielvolumes denselben Namen, sodass Sie für beide Volumes Warnungen erhalten. 
+---
+= Ausschließen von Disaster Recovery-Zielvolumes von der Generierung von Warnungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Beim Konfigurieren von Volumewarnungen können Sie im Dialogfeld „Warnung“ eine Zeichenfolge angeben, die ein Volume oder eine Gruppe von Volumes identifiziert.  Wenn Sie jedoch die Notfallwiederherstellung für SVMs konfiguriert haben, haben Quell- und Zielvolumes denselben Namen, sodass Sie für beide Volumes Warnungen erhalten.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Sie können Warnungen für Zielvolumes zur Notfallwiederherstellung deaktivieren, indem Sie Volumes ausschließen, die den Namen der Ziel-SVM haben.  Dies ist möglich, da die Kennung für Volume-Ereignisse sowohl den SVM-Namen als auch den Volume-Namen im Format „<svm_name>:/<volume_name>“ enthält.
+
+Das folgende Beispiel zeigt, wie Sie Warnungen für das Volume „vol1“ auf der primären SVM „vs1“ erstellen, aber die Generierung der Warnung auf einem Volume mit demselben Namen auf der SVM „vs1-dr“ ausschließen.
+
+Führen Sie im Dialogfeld „Warnung hinzufügen“ die folgenden Schritte aus:
+
+.Schritte
+. Klicken Sie auf *Name* und geben Sie einen Namen und eine Beschreibung für die Warnung ein.
+. Klicken Sie auf *Ressourcen* und wählen Sie dann die Registerkarte *Einschließen*.
++
+.. Wählen Sie *Volume* aus der Dropdown-Liste und geben Sie dann*`vol1` * im Feld *Name enthält*, um die Volumes anzuzeigen, deren Name „vol1“ enthält.
+.. Wählen Sie *+<<All Volumes whose name contains 'vol1'>> +* aus dem Bereich *Verfügbare Ressourcen* und verschieben Sie es in den Bereich *Ausgewählte Ressourcen*.
+
+
+. Wählen Sie die Registerkarte *Ausschließen*, wählen Sie *Volume*, geben Sie ein*`vs1-dr` * in das Feld *Name enthält* ein und klicken Sie dann auf *Hinzufügen*.
++
+Dadurch wird verhindert, dass die Warnung für das Volume „vol1“ auf SVM „vs1-dr“ generiert wird.
+
+. Klicken Sie auf *Ereignisse* und wählen Sie das oder die Ereignisse aus, die Sie auf das oder die Volumes anwenden möchten.
+. Klicken Sie auf *Aktionen* und wählen Sie dann im Feld *Diese Benutzer benachrichtigen* den Namen des Benutzers aus, der die Warn-E-Mail erhalten soll.
+. Konfigurieren Sie auf dieser Seite alle anderen Optionen zum Ausgeben von SNMP-Traps und Ausführen eines Skripts und klicken Sie dann auf *Speichern*.
+

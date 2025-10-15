@@ -1,0 +1,21 @@
+---
+permalink: config/concept_manage_feature_settings.html 
+sidebar: sidebar 
+keywords: uploading scripts, api gateway, slo or policy-based storage management, timeout, active iq platform events 
+summary: Auf der Seite „Funktionseinstellungen“ können Sie bestimmte Funktionen in Active IQ Unified Manager aktivieren und deaktivieren.  Dazu gehören das Erstellen und Verwalten von Speicherobjekten basierend auf Richtlinien, das Aktivieren des API-Gateways, das Hochladen von Skripts zum Verwalten von Warnungen, das Timeout einer Web-UI-Sitzung basierend auf der Inaktivitätszeit und das Deaktivieren des Empfangs von Active IQ Plattformereignissen. 
+---
+= Funktionseinstellungen verwalten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Funktionseinstellungen“ können Sie bestimmte Funktionen in Active IQ Unified Manager aktivieren und deaktivieren.  Dazu gehören das Erstellen und Verwalten von Speicherobjekten basierend auf Richtlinien, das Aktivieren des API-Gateways und des Anmeldebanners, das Hochladen von Skripts zum Verwalten von Warnungen, das Timeout einer Web-UI-Sitzung basierend auf der Inaktivitätszeit und das Deaktivieren des Empfangs von Active IQ Plattformereignissen.
+
+[NOTE]
+====
+Die Seite „Funktionseinstellungen“ ist nur für Benutzer mit der Rolle „Anwendungsadministrator“ verfügbar.
+
+====
+Informationen zum Hochladen von Skripten finden Sie unterlink:task_enable_and_disable_ability_to_upload_scripts.html["Aktivieren und Deaktivieren des Skript-Uploads"] .

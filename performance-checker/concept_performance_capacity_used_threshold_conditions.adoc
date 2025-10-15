@@ -1,0 +1,53 @@
+---
+permalink: performance-checker/concept_performance_capacity_used_threshold_conditions.html 
+sidebar: sidebar 
+keywords: performance, capacity, threshold, conditions 
+summary: Sie können benutzerdefinierte Richtlinien für Leistungsschwellenwerte erstellen, sodass Ereignisse ausgelöst werden, wenn der Wert für die genutzte Leistungskapazität für einen Knoten oder ein Aggregat die definierte Einstellung für den Schwellenwert für die genutzte Leistungskapazität überschreitet. 
+---
+= Leistungskapazität genutzte Leistungsschwellenbedingungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können benutzerdefinierte Richtlinien für Leistungsschwellenwerte erstellen, sodass Ereignisse ausgelöst werden, wenn der Wert für die genutzte Leistungskapazität für einen Knoten oder ein Aggregat die definierte Einstellung für den Schwellenwert für die genutzte Leistungskapazität überschreitet.
+
+Darüber hinaus können Knoten mit einer Schwellenwertrichtlinie „`Übernahme der genutzten Leistungskapazität`“ konfiguriert werden.  Diese Schwellenwertrichtlinie summiert die Statistiken zur verwendeten Leistungskapazität für beide Knoten in einem HA-Paar, um zu bestimmen, ob einem der Knoten bei einem Ausfall des anderen Knotens die Kapazität fehlen würde.  Da die Arbeitslast während des Failovers die Kombination der Arbeitslasten der beiden Partnerknoten ist, kann auf beide Knoten dieselbe Übernahmerichtlinie für die genutzte Leistungskapazität angewendet werden.
+
+[NOTE]
+====
+Diese Äquivalenz der genutzten Leistungskapazität gilt im Allgemeinen zwischen Knoten.  Wenn jedoch über den Failover-Partner deutlich mehr knotenübergreifender Datenverkehr für einen der Knoten bestimmt ist, kann die Gesamtleistungskapazität, die beim Ausführen aller Workloads auf einem Partnerknoten im Vergleich zum anderen Partnerknoten verwendet wird, je nachdem, welcher Knoten ausgefallen ist, leicht unterschiedlich sein.
+
+====
+Die Bedingungen für die genutzte Leistungskapazität können auch als sekundäre Leistungsschwellenwerteinstellungen verwendet werden, um beim Definieren von Schwellenwerten für LUNs und Volumes eine kombinierte Schwellenwertrichtlinie zu erstellen.  Die Bedingung „Leistungskapazität genutzt“ wird auf das Aggregat oder den Knoten angewendet, auf dem sich das Volume oder die LUN befindet.  Sie können beispielsweise eine kombinierte Schwellenwertrichtlinie anhand der folgenden Kriterien erstellen:
+
+|===
+| Speicherobjekt | Leistungsindikator | Warnschwelle | Kritischer Schwellenwert | Dauer 
+
+
+ a| 
+Volumen
+ a| 
+Latenz
+ a| 
+15 ms/Operation
+ a| 
+25 ms/Operation
+ a| 
+20 Minuten
+
+
+
+ a| 
+Aggregat
+ a| 
+Ausgenutzte Leistungskapazität
+ a| 
+80 %
+ a| 
+95 %
+ a| 
+
+|===
+Kombinationsschwellenwertrichtlinien führen dazu, dass ein Ereignis nur dann generiert wird, wenn beide Bedingungen während der gesamten Dauer verletzt werden.

@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_how_um_determines_performance_impact_for_incident.html 
+sidebar: sidebar 
+keywords: unified manager, determines, performance, impact, event 
+summary: 'Unified Manager verwendet die Abweichung bei Aktivität, Auslastung, Schreibdurchsatz, Clusterkomponentennutzung oder E/A-Latenz (Reaktionszeit) für eine Arbeitslast, um das Ausmaß der Auswirkungen auf die Arbeitslastleistung zu bestimmen.  Diese Informationen bestimmen die Rolle der einzelnen Arbeitslasten im Ereignis und ihre Rangfolge auf der Seite mit den Ereignisdetails.' 
+---
+= So ermittelt Unified Manager die Leistungsauswirkungen eines Ereignisses
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager verwendet die Abweichung bei Aktivität, Auslastung, Schreibdurchsatz, Clusterkomponentennutzung oder E/A-Latenz (Reaktionszeit) für eine Arbeitslast, um das Ausmaß der Auswirkungen auf die Arbeitslastleistung zu bestimmen.  Diese Informationen bestimmen die Rolle der einzelnen Arbeitslasten im Ereignis und ihre Rangfolge auf der Seite mit den Ereignisdetails.
+
+Unified Manager vergleicht die zuletzt analysierten Werte für eine Arbeitslast mit dem erwarteten Wertebereich (Latenzprognose).  Die Differenz zwischen den zuletzt analysierten Werten und dem erwarteten Wertebereich identifiziert die Workloads, deren Leistung durch das Ereignis am stärksten beeinträchtigt wurde.
+
+Angenommen, ein Cluster enthält zwei Workloads: Workload A und Workload B. Die Latenzprognose für Workload A beträgt 5–10 Millisekunden pro Vorgang (ms/Operation) und die tatsächliche Latenz liegt normalerweise bei etwa 7 ms/Operation.  Die Latenzprognose für Workload B beträgt 10–20 ms/Operation und die tatsächliche Latenz liegt normalerweise bei etwa 15 ms/Operation.  Beide Workloads liegen deutlich innerhalb ihrer Latenzprognose.  Aufgrund von Konflikten im Cluster erhöht sich die Latenz beider Workloads auf 40 ms/Operation, wodurch der dynamische Leistungsschwellenwert, der die Obergrenze der Latenzprognose darstellt, überschritten wird und Ereignisse ausgelöst werden.  Die Abweichung der Latenz von den erwarteten Werten zu den Werten über dem Leistungsschwellenwert beträgt für Workload A etwa 33 ms/Op, und die Abweichung für Workload B beträgt etwa 25 ms/Op.  Die Latenz beider Workloads steigt auf 40 ms/op, Workload A hatte jedoch die größeren Auswirkungen auf die Leistung, da sie mit 33 ms/op die höhere Latenzabweichung aufwies.
+
+Auf der Seite „Ereignisdetails“ im Abschnitt „Systemdiagnose“ können Sie Workloads nach ihrer Abweichung bei Aktivität, Auslastung oder Durchsatz für eine Clusterkomponente sortieren.  Sie können Workloads auch nach Latenz sortieren.  Wenn Sie eine Sortieroption auswählen, analysiert Unified Manager die Abweichung bei Aktivität, Auslastung, Durchsatz oder Latenz seit der Erkennung des Ereignisses von den erwarteten Werten, um die Sortierreihenfolge der Arbeitslast zu bestimmen.  Für die Latenz stehen die roten Punkte (image:../media/opm_incident_icon_png.gif["Warnsymbol für den Leistungsmanager"] ) weisen auf das Überschreiten einer Leistungsschwelle durch eine betroffene Arbeitslast und die daraus resultierenden Auswirkungen auf die Latenz hin.  Jeder rote Punkt zeigt eine höhere Abweichung bei der Latenz an, wodurch Sie die betroffenen Workloads identifizieren können, deren Latenz durch ein Ereignis am stärksten beeinträchtigt wurde.

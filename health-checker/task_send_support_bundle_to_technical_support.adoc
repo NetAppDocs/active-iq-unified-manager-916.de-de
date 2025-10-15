@@ -1,0 +1,27 @@
+---
+permalink: health-checker/task_send_support_bundle_to_technical_support.html 
+sidebar: sidebar 
+keywords: support bundle, technical support 
+summary: Wenn ein Problem detailliertere Diagnose- und Fehlerbehebungsinformationen erfordert, als eine AutoSupport -Nachricht bietet, können Sie ein Support-Paket an den technischen Support senden. 
+---
+= Senden Sie ein Support-Paket an den technischen Support
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn ein Problem detailliertere Diagnose- und Fehlerbehebungsinformationen erfordert, als eine AutoSupport -Nachricht bietet, können Sie ein Support-Paket an den technischen Support senden.
+
+.Bevor Sie beginnen
+Sie müssen Zugriff auf das Support-Paket haben, um es an den technischen Support senden zu können.
+
+Sie müssen über eine Fallnummer verfügen, die über die Website des technischen Supports generiert wurde.
+
+.Schritte
+. Melden Sie sich bei der NetApp Support-Site an.
+. Laden Sie die Datei hoch.
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Miscellaneous/How_to_upload_a_file_to_NetApp["So laden Sie eine Datei zu NetApp hoch"]
+
+

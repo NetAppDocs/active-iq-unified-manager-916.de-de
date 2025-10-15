@@ -1,0 +1,44 @@
+---
+permalink: events/reference_metrocluster_bridge_events.html 
+sidebar: sidebar 
+keywords: metrocluster, bridge, events, impact area, availability 
+summary: MetroCluster Bridge-Ereignisse liefern Ihnen Informationen zum Status der Brücken, sodass Sie diese auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad. 
+---
+= MetroCluster Bridge-Ereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MetroCluster Bridge-Ereignisse liefern Ihnen Informationen zum Status der Bridges, sodass Sie potenzielle Probleme in einer MetroCluster über-FC-Konfiguration überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad.
+
+
+
+== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+Brücke nicht erreichbar (ocumEvtBridgeUnreachable)
+ a| 
+Vorfall
+ a| 
+MetroCluster Brücke
+ a| 
+Kritisch
+
+
+
+ a| 
+Brückentemperatur anormal (ocumEvtBridgeTemperatureAbnormal)
+ a| 
+Vorfall
+ a| 
+MetroCluster Brücke
+ a| 
+Kritisch
+
+|===

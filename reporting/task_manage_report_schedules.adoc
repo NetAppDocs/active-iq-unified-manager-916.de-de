@@ -1,0 +1,61 @@
+---
+permalink: reporting/task_manage_report_schedules.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können Ihre Berichtszeitpläne auf der Seite „Berichtszeitpläne“ verwalten.  Sie können vorhandene Zeitpläne anzeigen, ändern oder löschen. 
+---
+= Berichtszeitpläne verwalten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Ihre Berichtszeitpläne auf der Seite „Berichtszeitpläne“ verwalten.  Sie können vorhandene Zeitpläne anzeigen, ändern oder löschen.
+
+[NOTE]
+.Bevor Sie beginnen
+====
+Sie können auf der Seite „Berichtszeitpläne“ keine neuen Berichte planen.  Sie können geplante Berichte nur von den Objektinventarseiten hinzufügen.
+
+====
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Berichtszeitpläne*.
+. Auf der Seite „Berichtszeitpläne“:
++
+[cols="2*"]
+|===
+| Wenn Sie wollen... | Dann... 
+
+
+ a| 
+Einen vorhandenen Zeitplan anzeigen
+ a| 
+Blättern Sie mithilfe der Bildlaufleisten und Seitensteuerelemente durch die Liste der vorhandenen Berichte.
+
+
+
+ a| 
+Bearbeiten eines vorhandenen Zeitplans
+ a| 
+.. Klicken Sie auf das Symbol „Mehr“image:../media/more_icon.gif[""] für den Zeitplan, den Sie verwenden möchten.
+.. Klicken Sie auf *Bearbeiten*.
+.. Nehmen Sie die erforderlichen Änderungen vor.
+.. Klicken Sie auf das Häkchen, um Ihre Änderungen zu speichern.
+
+
+
+
+ a| 
+Löschen eines vorhandenen Zeitplans
+ a| 
+.. Klicken Sie auf das Symbol „Mehr“image:../media/more_icon.gif[""] für den Zeitplan, den Sie verwenden möchten.
+.. Klicken Sie auf *Löschen*.
+.. Bestätigen Sie Ihre Entscheidung.
+
+
+|===
+

@@ -1,0 +1,35 @@
+---
+permalink: events/task_schedule_maintenance_window_to_disable_cluster_notifications.html 
+sidebar: sidebar 
+keywords: schedule, maintenance, window, disable, cluster, event, notifications 
+summary: Wenn Sie für einen Cluster eine Ausfallzeit planen, beispielsweise um den Cluster zu aktualisieren oder einen der Knoten zu verschieben, können Sie die Ereignisse und Warnungen unterdrücken, die normalerweise während dieses Zeitraums generiert würden, indem Sie ein Wartungsfenster für Unified Manager planen. 
+---
+= Planen Sie ein Wartungsfenster, um Cluster-Ereignisbenachrichtigungen zu deaktivieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie für einen Cluster eine Ausfallzeit planen, beispielsweise um den Cluster zu aktualisieren oder einen der Knoten zu verschieben, können Sie die Ereignisse und Warnungen unterdrücken, die normalerweise während dieses Zeitraums generiert würden, indem Sie ein Wartungsfenster für Unified Manager planen.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Während eines Wartungsfensters werden die Ereignisse, die sich auf alle Objekte in diesem Cluster beziehen, weiterhin generiert, sie werden jedoch nicht auf der Ereignisseite angezeigt und es werden keine Warnungen oder andere Arten von Benachrichtigungen für diese Ereignisse gesendet.
+
+Die von Ihnen für das Wartungsfenster eingegebene Zeit basiert auf der Zeit auf dem Unified Manager-Server.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Cluster-Setup*.
+. Wählen Sie in der Spalte *Wartungsmodus* für den Cluster den Schieberegler aus und verschieben Sie ihn nach rechts.
++
+Das Kalenderfenster wird angezeigt.
+
+. Wählen Sie Start- und Enddatum sowie -uhrzeit für das Wartungsfenster aus und klicken Sie auf *Übernehmen*.
++
+Neben dem Schieberegler erscheint die Meldung „Geplant“.
+
+
+
+Wenn die Startzeit erreicht ist, wechselt der Cluster in den Wartungsmodus und ein Ereignis „Object Maintenance Window Started“ wird generiert.

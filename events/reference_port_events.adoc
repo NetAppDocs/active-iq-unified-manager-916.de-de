@@ -1,0 +1,128 @@
+---
+permalink: events/reference_port_events.html 
+sidebar: sidebar 
+keywords: port, events, impact area, availability, performance 
+summary: Portereignisse liefern Ihnen den Status von Cluster-Ports, sodass Sie Änderungen oder Probleme am Port überwachen können, beispielsweise ob der Port ausgefallen ist. 
+---
+= Hafenereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Portereignisse liefern Ihnen den Status von Cluster-Ports, sodass Sie Änderungen oder Probleme am Port überwachen können, beispielsweise ob der Port ausgefallen ist.
+
+
+
+== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+Portstatus deaktiviert (ocumEvtPortStatusDown)
+ a| 
+Vorfall
+ a| 
+Node
+ a| 
+Kritisch
+
+|===
+
+
+== Wirkungsbereich: Leistung
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+Kritischer Schwellenwert für Netzwerkport MB/s überschritten (ocumNetworkPortMbpsIncident)
+ a| 
+Vorfall
+ a| 
+Hafen
+ a| 
+Kritisch
+
+
+
+ a| 
+Warnschwelle für Netzwerkport MB/s überschritten (ocumNetworkPortMbpsWarning)
+ a| 
+Risiko
+ a| 
+Hafen
+ a| 
+Warnung
+
+
+
+ a| 
+FCP-Port MB/s kritischer Schwellenwert überschritten (ocumFcpPortMbpsIncident)
+ a| 
+Vorfall
+ a| 
+Hafen
+ a| 
+Kritisch
+
+
+
+ a| 
+FCP-Port MB/s-Warnschwelle überschritten (ocumFcpPortMbpsWarning)
+ a| 
+Risiko
+ a| 
+Hafen
+ a| 
+Warnung
+
+
+
+ a| 
+Kritischer Schwellenwert für Netzwerk-Port-Auslastung überschritten (ocumNetworkPortUtilizationIncident)
+ a| 
+Vorfall
+ a| 
+Hafen
+ a| 
+Kritisch
+
+
+
+ a| 
+Warnschwelle für Netzwerk-Port-Auslastung überschritten (ocumNetworkPortUtilizationWarning)
+ a| 
+Risiko
+ a| 
+Hafen
+ a| 
+Warnung
+
+
+
+ a| 
+Kritischer Schwellenwert für FCP-Portauslastung überschritten (ocumFcpPortUtilizationIncident)
+ a| 
+Vorfall
+ a| 
+Hafen
+ a| 
+Kritisch
+
+
+
+ a| 
+Warnschwelle für FCP-Portauslastung überschritten (ocumFcpPortUtilizationWarning)
+ a| 
+Risiko
+ a| 
+Hafen
+ a| 
+Warnung
+
+|===

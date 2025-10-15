@@ -1,0 +1,36 @@
+---
+permalink: data-protection/task_resolve_protection_job_failure.html 
+sidebar: sidebar 
+keywords: resolve, protection, job failure 
+summary: Dieser Workflow bietet ein Beispiel dafür, wie Sie einen Schutzauftragsfehler über das Unified Manager-Dashboard identifizieren und beheben können. 
+---
+= Beheben eines Schutzauftragsfehlers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dieser Workflow bietet ein Beispiel dafür, wie Sie einen Schutzauftragsfehler über das Unified Manager-Dashboard identifizieren und beheben können.
+
+.Bevor Sie beginnen
+Da für einige Aufgaben in diesem Workflow eine Anmeldung mit der Administratorrolle erforderlich ist, müssen Sie mit den für die Verwendung verschiedener Funktionen erforderlichen Rollen vertraut sein.
+
+In diesem Szenario greifen Sie auf die Dashboard-Seite zu, um zu sehen, ob es Probleme mit Ihren Schutzaufträgen gibt.  Im Bereich „Schutzvorfall“ stellen Sie fest, dass ein Vorfall „Job beendet“ vorliegt, der den Fehler „Schutzauftrag fehlgeschlagen“ auf einem Volume anzeigt.  Sie untersuchen diesen Fehler, um die mögliche Ursache und mögliche Lösung zu ermitteln.
+
+.Schritte
+. Klicken Sie im Bereich „Schutzvorfälle“ des Dashboard-Bereichs „Ungelöste Vorfälle und Risiken“ auf das Ereignis „Schutzauftrag fehlgeschlagen“.
++
+[TIP]
+====
+Der verlinkte Text zur Veranstaltung hat die Form `object_name:/object_name - Error Name` , wie zum Beispiel `cluster2_src_svm:/cluster2_src_vol2 - Protection Job Failed` .
+
+====
++
+Die Seite mit den Ereignisdetails für den fehlgeschlagenen Schutzauftrag wird angezeigt.
+
+. Überprüfen Sie die Fehlermeldung im Feld „Ursache“ des Bereichs „Zusammenfassung“, um das Problem zu ermitteln und mögliche Korrekturmaßnahmen zu bewerten.
++
+Sehenlink:task_identify_problem_for_failed_protection_job.html["Identifizieren des Problems und Ausführen von Korrekturmaßnahmen für einen fehlgeschlagenen Schutzauftrag"] .
+
+

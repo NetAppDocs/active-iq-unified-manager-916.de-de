@@ -1,0 +1,47 @@
+---
+permalink: performance-checker/task_select_performance_charts_to_display.html 
+sidebar: sidebar 
+keywords: select, performance, charts, display 
+summary: Über die Dropdownliste „Diagramme auswählen“ können Sie die Typen von Leistungsindikatordiagrammen auswählen, die im Bereich „Indikatordiagramme“ angezeigt werden sollen.  Auf diese Weise können Sie je nach Ihren Leistungsanforderungen bestimmte Daten und Zähler anzeigen. 
+---
+= Wählen Sie die anzuzeigenden Leistungsdiagramme aus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Über die Dropdownliste „Diagramme auswählen“ können Sie die Typen von Leistungsindikatordiagrammen auswählen, die im Bereich „Indikatordiagramme“ angezeigt werden sollen.  Auf diese Weise können Sie je nach Ihren Leistungsanforderungen bestimmte Daten und Zähler anzeigen.
+
+.Schritte
+. Klicken Sie im Bereich *Zählerdiagramme* auf die Dropdownliste *Diagramme auswählen*.
+. Diagramme hinzufügen oder entfernen:
++
+|===
+| Zu... | Machen Sie Folgendes... 
+
+
+ a| 
+Einzelne Diagramme hinzufügen oder entfernen
+ a| 
+Klicken Sie auf die Kontrollkästchen neben den Diagrammen, die Sie ein- oder ausblenden möchten
+
+
+
+ a| 
+Alle Diagramme hinzufügen
+ a| 
+Klicken Sie auf *Alles auswählen*
+
+
+
+ a| 
+Alle Diagramme entfernen
+ a| 
+Klicken Sie auf *Auswahl aufheben*
+
+|===
++
+Ihre Diagrammauswahl wird im Bereich „Zählerdiagramme“ angezeigt.  Beachten Sie, dass beim Hinzufügen von Diagrammen die neuen Diagramme in den Bereich „Zählerdiagramme“ eingefügt werden, um der Reihenfolge der in der Dropdownliste „Diagramme auswählen“ aufgeführten Diagramme zu entsprechen.  Zum Auswählen weiterer Diagramme ist möglicherweise zusätzliches Scrollen erforderlich.
+
+

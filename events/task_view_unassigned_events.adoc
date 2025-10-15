@@ -1,0 +1,25 @@
+---
+permalink: events/task_view_unassigned_events.html 
+sidebar: sidebar 
+keywords: view, unassigned, events 
+summary: Sie können nicht zugewiesene Ereignisse anzeigen und dann jedes davon einem Benutzer zuweisen, der sie lösen kann. 
+---
+= Nicht zugewiesene Ereignisse anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können nicht zugewiesene Ereignisse anzeigen und dann jedes davon einem Benutzer zuweisen, der sie lösen kann.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Event Management*.
++
+Standardmäßig werden neue und bestätigte Ereignisse auf der Inventarseite der Ereignisverwaltung angezeigt.
+
+. Wählen Sie im Bereich *Filter* im Bereich *Zugewiesen an* die Filteroption *Nicht zugewiesen* aus.
+

@@ -1,0 +1,21 @@
+---
+permalink: performance-checker/task_display_counter_charts_zoom_view.html 
+sidebar: sidebar 
+keywords: display, counter charts, zoom, view 
+summary: Die Zoomansicht der Zählerdiagramme bietet eine höhere Detailgenauigkeit für das ausgewählte Zählerdiagramm und die zugehörige Zeitleiste.  Dadurch werden die Daten des Zählerdiagramms vergrößert, sodass Sie einen besseren Einblick in Leistungsereignisse und deren zugrunde liegende Ursachen erhalten. 
+---
+= Anzeigen der Zoomansicht der Zählerdiagramme
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Zoomansicht der Zählerdiagramme bietet eine höhere Detailgenauigkeit für das ausgewählte Zählerdiagramm und die zugehörige Zeitleiste.  Dadurch werden die Daten des Zählerdiagramms vergrößert, sodass Sie einen besseren Einblick in Leistungsereignisse und deren zugrunde liegende Ursachen erhalten.
+
+Sie können die Zoomansicht der Zählerdiagramme für jedes Zählerdiagramm anzeigen.
+
+.Schritte
+. Klicken Sie auf *Zoom-Ansicht*, um das ausgewählte Diagramm in einem neuen Browserfenster zu öffnen.
+. Wenn Sie ein Aufschlüsselungsdiagramm anzeigen und dann auf *Zoom-Ansicht* klicken, wird das Aufschlüsselungsdiagramm in der Zoom-Ansicht angezeigt.  Sie können in der Zoomansicht *Gesamt* auswählen, wenn Sie die Ansichtsoption ändern möchten.
+

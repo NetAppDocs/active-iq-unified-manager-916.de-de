@@ -1,0 +1,66 @@
+---
+permalink: performance-checker/task_respond_to_cluster_imbalance_performance_events.html 
+sidebar: sidebar 
+keywords: cluster, imbalance, performance, events 
+summary: Unified Manager generiert Warnereignisse zu Cluster-Ungleichgewichten, wenn ein Knoten in einem Cluster mit einer viel höheren Last als andere Knoten arbeitet und daher möglicherweise die Arbeitslastlatenzen beeinträchtigt.  Diese systemdefinierten Ereignisse bieten die Möglichkeit, potenzielle Leistungsprobleme zu beheben, bevor viele Workloads von der Latenz betroffen sind. 
+---
+= Reagieren auf Leistungsereignisse aufgrund von Clusterungleichgewichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager generiert Warnereignisse zu Cluster-Ungleichgewichten, wenn ein Knoten in einem Cluster mit einer viel höheren Last als andere Knoten arbeitet und daher möglicherweise die Arbeitslastlatenzen beeinträchtigt.  Diese systemdefinierten Ereignisse bieten die Möglichkeit, potenzielle Leistungsprobleme zu beheben, bevor viele Workloads von der Latenz betroffen sind.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Unified Manager generiert Warnereignisse bei Verstößen gegen die Schwellenwertrichtlinie für Clusterungleichgewichte, indem er den Wert der genutzten Leistungskapazität für alle Knoten im Cluster vergleicht, um festzustellen, ob zwischen den Knoten ein Lastunterschied von 30 % besteht.
+
+Mithilfe dieser Schritte können Sie die folgenden Ressourcen identifizieren, sodass Sie leistungsstarke Workloads auf einen Knoten mit geringerer Auslastung verschieben können:
+
+* Die Knoten im selben Cluster, die weniger genutzt werden
+* Die Aggregate auf dem neuen Knoten, die am wenigsten genutzt werden
+* Die leistungsstärksten Volumes auf dem aktuellen Knoten
+
+
+.Schritte
+. Zeigen Sie die Detailseite *Ereignis* an, um Informationen zum Ereignis anzuzeigen.
+. Überprüfen Sie die *Beschreibung*, in der die Schwellenwertüberschreitung beschrieben wird, die das Ereignis verursacht hat.
++
+Beispielsweise weist die Meldung „Der Zähler für die genutzte Leistungskapazität weist auf einen Lastunterschied von 62 % zwischen den Knoten im Cluster Dallas-1-8 hin und hat basierend auf dem Systemschwellenwert von 30 % ein WARNUNG-Ereignis ausgelöst“ darauf hin, dass die Leistungskapazität auf einem der Knoten überbeansprucht ist und die Knotenleistung beeinträchtigt.
+
+. Lesen Sie den Text in den *Vorgeschlagenen Aktionen*, um ein Volume mit hoher Leistung vom Knoten mit dem höchsten Wert für die genutzte Leistungskapazität auf einen Knoten mit dem niedrigsten Wert für die genutzte Leistungskapazität zu verschieben.
+. Identifizieren Sie die Knoten mit dem höchsten und niedrigsten Wert für die genutzte Leistungskapazität:
++
+.. Klicken Sie im Abschnitt *Ereignisinformationen* auf den Namen des Quellclusters.
+.. Klicken Sie auf der Seite *Cluster-/Leistungsübersicht* im Bereich *Verwaltete Objekte* auf *Knoten*.
+.. Sortieren Sie auf der Inventarseite *Knoten* die Knoten nach der Spalte *Verwendete Leistungskapazität*.
+.. Identifizieren Sie die Knoten mit dem höchsten und niedrigsten Wert für die genutzte Leistungskapazität und notieren Sie sich die Namen.
+
+
+. Identifizieren Sie das Volume mit den meisten IOPS auf dem Knoten mit dem höchsten Wert für die genutzte Leistungskapazität:
++
+.. Klicken Sie auf den Knoten mit dem höchsten Wert für die genutzte Leistungskapazität.
+.. Wählen Sie auf der Seite *Knoten-/Leistungs-Explorer* im Menü *Anzeigen und Vergleichen* die Option *Aggregate auf diesem Knoten* aus.
+.. Klicken Sie auf das Aggregat mit dem höchsten Wert für die genutzte Leistungskapazität.
+.. Wählen Sie auf der Seite *Aggregate/Performance Explorer* im Menü *Anzeigen und Vergleichen* die Option *Volumes auf diesem Aggregat* aus.
+.. Sortieren Sie die Volumes nach der Spalte *IOPS* und notieren Sie den Namen des Volumes mit den meisten IOPS sowie den Namen des Aggregats, in dem sich das Volume befindet.
+
+
+. Identifizieren Sie das Aggregat mit der niedrigsten Auslastung auf dem Knoten, der den niedrigsten Wert für die genutzte Leistungskapazität aufweist:
++
+.. Klicken Sie auf *Speicher* > *Aggregate*, um die Inventarseite *Aggregate* anzuzeigen.
+.. Wählen Sie die Ansicht *Leistung: Alle Aggregate*.
+.. Klicken Sie auf die Schaltfläche *Filter* und fügen Sie einen Filter hinzu, bei dem „Knoten“ dem Namen des Knotens mit dem niedrigsten Wert für die genutzte Leistungskapazität entspricht, den Sie in Schritt 4 notiert haben.
+.. Notieren Sie den Namen des Aggregats mit dem niedrigsten Wert für die genutzte Leistungskapazität.
+
+
+. Verschieben Sie das Volume vom überlasteten Knoten auf das Aggregat, das Sie als gering ausgelastet auf dem neuen Knoten identifiziert haben.
++
+Sie können den Verschiebevorgang mithilfe von ONTAP System Manager, OnCommand Workflow Automation, ONTAP -Befehlen oder einer Kombination dieser Tools durchführen.
+
+
+
+Überprüfen Sie nach einigen Tagen, ob Sie von diesem Cluster dasselbe Cluster-Ungleichgewichtsereignis erhalten.

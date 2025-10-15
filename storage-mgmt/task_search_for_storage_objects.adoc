@@ -1,0 +1,59 @@
+---
+permalink: storage-mgmt/task_search_for_storage_objects.html 
+sidebar: sidebar 
+keywords: search, storage, objects 
+summary: Um schnell auf ein bestimmtes Objekt zuzugreifen, können Sie das Feld „Alle Speicherobjekte durchsuchen“ oben in der Menüleiste verwenden.  Mit dieser Methode der globalen Suche über alle Objekte hinweg können Sie bestimmte Objekte schnell nach Typ finden.  Die Suchergebnisse werden nach Speicherobjekttyp sortiert und Sie können sie mithilfe des Dropdown-Menüs weiter nach Objekt filtern. 
+---
+= Suche nach Speicherobjekten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um schnell auf ein bestimmtes Objekt zuzugreifen, können Sie das Feld *Alle Speicherobjekte durchsuchen* oben in der Menüleiste verwenden.  Mit dieser Methode der globalen Suche über alle Objekte hinweg können Sie bestimmte Objekte schnell nach Typ finden.  Die Suchergebnisse werden nach Speicherobjekttyp sortiert und Sie können sie mithilfe des Dropdown-Menüs weiter nach Objekt filtern.
+
+.Bevor Sie beginnen
+* Zum Ausführen dieser Aufgabe müssen Sie eine der folgenden Rollen innehaben: Operator, Anwendungsadministrator oder Speicheradministrator.
+* Eine gültige Suche muss mindestens drei Zeichen enthalten.
+
+
+Bei Verwendung des Dropdown-Menüwerts „Alle“ zeigt die globale Suche die Gesamtzahl der gefundenen Ergebnisse in allen Objektkategorien an; maximal 25 Suchergebnisse pro Objektkategorie.  Sie können einen bestimmten Objekttyp aus dem Dropdown-Menü auswählen, um die Suche innerhalb eines bestimmten Objekttyps zu verfeinern.  In diesem Fall ist die zurückgegebene Liste nicht auf die Top 25 Objekte beschränkt.
+
+Zu den Objekttypen, nach denen Sie suchen können, gehören:
+
+* Cluster
+* Nodes
+* Speicher-VMs
+* Aggregate
+* Bände
+* Qtrees
+* SMB-Aktien
+* NFS-Freigaben
+* Benutzer- oder Gruppenkontingente
+* LUNs
+* NVMe-Namespaces
+* Initiatorgruppen
+* Initiatoren
+* Konsistenzgruppe
+
+
+Durch Eingabe eines Workload-Namens wird die Liste der Workloads unter der entsprechenden Volume- oder LUN-Kategorie zurückgegeben.
+
+Sie können in den Suchergebnissen auf ein beliebiges Objekt klicken, um zur Seite mit den Integritätsdetails für dieses Objekt zu navigieren.  Wenn für ein Objekt keine direkte Integritätsseite vorhanden ist, wird die Integritätsseite des übergeordneten Objekts angezeigt.  Wenn Sie beispielsweise nach einer bestimmten LUN suchen, wird die SVM-Detailseite angezeigt, auf der sich die LUN befindet.
+
+[NOTE]
+====
+Ports und LIFs können in der globalen Suchleiste nicht durchsucht werden.
+
+====
+.Schritte
+. Wählen Sie einen Objekttyp aus dem Menü aus, um die Suchergebnisse auf nur einen einzigen Objekttyp zu verfeinern.
+. Geben Sie mindestens drei Zeichen des Objektnamens in das Feld *Alle Speicherobjekte durchsuchen* ein.
++
+In diesem Beispiel ist im Dropdownfeld der Objekttyp „Volumes“ ausgewählt.  Wenn Sie „vol1“ in das Feld *Alle Speicherobjekte durchsuchen* eingeben, wird eine Liste aller Volumes angezeigt, deren Namen diese Zeichen enthalten.
+
++
+image::../media/opm_search_field_jpg.gif[Suchfeld im Unified Manager]
+
+

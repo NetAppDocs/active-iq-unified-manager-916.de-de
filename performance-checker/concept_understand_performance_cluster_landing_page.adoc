@@ -1,0 +1,26 @@
+---
+permalink: performance-checker/concept_understand_performance_cluster_landing_page.html 
+sidebar: sidebar 
+keywords: understand, performance, cluster, landing page 
+summary: Die Zielseite des Leistungsclusters bietet eine allgemeine Leistungsübersicht eines ausgewählten Clusters, wobei der Schwerpunkt auf dem Leistungsstatus der zehn wichtigsten Objekte innerhalb des Clusters liegt.  Leistungsprobleme werden oben auf der Seite im Bereich „Alle Ereignisse in diesem Cluster“ angezeigt. 
+---
+= Die Zielseite des Performance-Clusters verstehen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Zielseite des Leistungsclusters bietet eine allgemeine Leistungsübersicht eines ausgewählten Clusters, wobei der Schwerpunkt auf dem Leistungsstatus der zehn wichtigsten Objekte innerhalb des Clusters liegt.  Leistungsprobleme werden oben auf der Seite im Bereich „Alle Ereignisse in diesem Cluster“ angezeigt.
+
+Die Zielseite des Performance-Clusters bietet einen allgemeinen Überblick über jeden Cluster, der von einer Instanz von Unified Manager verwaltet wird.  Auf dieser Seite erhalten Sie Informationen zu Ereignissen und zur Leistung und können Cluster überwachen und Fehler beheben.  Das folgende Bild zeigt ein Beispiel der Performance Cluster-Landingpage für den Cluster mit dem Namen opm-mobility:
+
+image::../media/opm_cluster_landing_page_draft.gif[Ein UI-Screenshot, der ein Beispiel der Performance Cluster-Landingpage für den Cluster namens opm-mobility zeigt.]
+
+Die Ereignisanzahl auf der Seite „Clusterzusammenfassung“ stimmt möglicherweise nicht mit der Ereignisanzahl auf der Seite „Leistungsereignisinventar“ überein.  Dies liegt daran, dass auf der Seite „Clusterübersicht“ in den Latenz- und Auslastungsbalken jeweils ein Ereignis angezeigt werden kann, wenn Richtlinien für kombinierte Schwellenwerte verletzt wurden, während auf der Seite „Leistungsereignisinventar“ nur ein Ereignis angezeigt wird, wenn eine kombinierte Richtlinie verletzt wurde.
+
+[NOTE]
+====
+Wenn ein Cluster nicht mehr von Unified Manager verwaltet wird, wird oben auf der Seite rechts neben dem Clusternamen der Status *Entfernt* angezeigt.
+
+====

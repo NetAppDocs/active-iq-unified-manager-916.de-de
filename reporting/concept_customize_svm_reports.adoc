@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_svm_reports.html 
+sidebar: sidebar 
+keywords: customize, storage, vm reports 
+summary: Sie können Speicher-VM-Berichte erstellen, um Volume-Informationen zu analysieren und den Gesamtzustand und die Speicherverfügbarkeit anzuzeigen.  Sie können beispielsweise Berichte erstellen, um anzuzeigen, dass SVMs die maximale Volumeanzahl erreichen, und um gestoppte SVMs zu analysieren. 
+---
+= Anpassen von Speicher-VM-Berichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Speicher-VM-Berichte erstellen, um Volume-Informationen zu analysieren und den Gesamtzustand und die Speicherverfügbarkeit anzuzeigen.  Sie können beispielsweise Berichte erstellen, um anzuzeigen, dass SVMs die maximale Volumeanzahl erreichen, und um gestoppte SVMs zu analysieren.

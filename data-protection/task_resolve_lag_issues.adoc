@@ -1,0 +1,56 @@
+---
+permalink: data-protection/task_resolve_lag_issues.html 
+sidebar: sidebar 
+keywords: resolve, lag, issues 
+summary: Dieser Arbeitsablauf bietet ein Beispiel dafür, wie Sie ein Verzögerungsproblem lösen können.  In diesem Szenario sind Sie ein Administrator oder Operator, der auf die Unified Manager-Dashboard-Seite zugreift, um zu sehen, ob es Probleme mit Ihren Schutzbeziehungen gibt, und um, falls vorhanden, Lösungen zu finden. 
+---
+= Beheben von Verzögerungsproblemen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dieser Arbeitsablauf bietet ein Beispiel dafür, wie Sie ein Verzögerungsproblem lösen können.  In diesem Szenario greifen Sie als Administrator oder Operator auf die Unified ManagerDashboard-Seite zu, um zu sehen, ob es Probleme mit Ihren Schutzbeziehungen gibt, und um gegebenenfalls Lösungen zu finden.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Auf der Dashboard-Seite sehen Sie sich den Bereich „Ungelöste Vorfälle und Risiken“ an und sehen im Schutzbereich unter „Schutzrisiken“ einen SnapMirror -Verzögerungsfehler.
+
+.Schritte
+. Suchen Sie im Bereich *Schutz* auf der Seite *Dashboard* nach dem Fehler „SnapMirror -Beziehungsverzögerung“ und klicken Sie darauf.
++
+Die Seite mit den Ereignisdetails für das Verzögerungsfehlerereignis wird angezeigt.
+
+. Auf der Detailseite *Ereignis* können Sie eine oder mehrere der folgenden Aufgaben ausführen:
++
+** Überprüfen Sie die Fehlermeldung im Feld „Ursache“ des Bereichs „Zusammenfassung“, um festzustellen, ob Korrekturmaßnahmen vorgeschlagen werden.
+** Klicken Sie im Feld „Quelle“ des Bereichs „Zusammenfassung“ auf den Objektnamen (in diesem Fall ein Volume), um Details zum Volume zu erhalten.
+** Suchen Sie nach Notizen, die möglicherweise zu diesem Ereignis hinzugefügt wurden.
+** Fügen Sie dem Ereignis eine Notiz hinzu.
+** Weisen Sie das Ereignis einem bestimmten Benutzer zu.
+** Bestätigen oder beheben Sie das Ereignis.
+
+
+. In diesem Szenario klicken Sie auf den Objektnamen (in diesem Fall ein Volume) im Feld „Quelle“ des Bereichs „Zusammenfassung“, um Details zum Volume zu erhalten.
++
+Die Registerkarte „Schutz“ der Seite „Volume-/Integritätsdetails“ wird angezeigt.
+
+. Im Reiter *Schutz* sehen Sie sich das Topologiediagramm an.
++
+Sie stellen fest, dass das Volume mit dem Verzögerungsfehler das letzte Volume in einer SnapMirror Kaskade mit drei Volumes ist.  Das von Ihnen ausgewählte Volume ist dunkelgrau umrandet und eine doppelte orange Linie vom Quellvolume weist auf einen SnapMirror Beziehungsfehler hin.
+
++
+image::../media/topology_cascade_lag_error.gif[SnapMirror -Lag-Kaskadentopologie]
+
+. Klicken Sie auf jedes der Volumes in der SnapMirror Kaskade.
++
+Wenn Sie die einzelnen Volumes auswählen, ändern sich die Schutzinformationen in den Bereichen „Zusammenfassung“, „Topologie“, „Verlauf“, „Ereignisse“, „Verwandte Geräte“ und „Verwandte Warnungen“, um Details anzuzeigen, die für das ausgewählte Volume relevant sind.
+
+. Sie sehen sich den Bereich *Zusammenfassung* an und positionieren den Cursor über dem Informationssymbol im Feld *Aktualisierungsplan* für jeden Band.
++
+In diesem Szenario beachten Sie, dass die SnapMirror -Richtlinie DPDefault ist und der SnapMirror -Zeitplan stündlich fünf Minuten nach der vollen Stunde aktualisiert wird.  Sie stellen fest, dass alle Volumes in der Beziehung gleichzeitig versuchen, eine SnapMirror -Übertragung abzuschließen.
+
+. Um das Verzögerungsproblem zu beheben, ändern Sie die Zeitpläne für zwei der kaskadierten Volumes, sodass jedes Ziel eine SnapMirror Übertragung beginnt, nachdem seine Quelle eine Übertragung abgeschlossen hat.
+

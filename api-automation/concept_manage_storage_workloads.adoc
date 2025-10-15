@@ -1,0 +1,14 @@
+---
+permalink: api-automation/concept_manage_storage_workloads.html 
+sidebar: sidebar 
+keywords: manage, workloads 
+summary: Die hier beschriebenen APIs decken verschiedene Funktionen der Speicherverwaltung ab, z. B. das Anzeigen von Speicher-Workloads, das Erstellen von LUNs und Dateifreigaben, das Verwalten von Leistungsserviceleveln und Speichereffizienzrichtlinien sowie das Zuweisen der Richtlinien zu Speicher-Workloads. 
+---
+= Verwalten von Workloads mithilfe von APIs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die hier beschriebenen APIs decken verschiedene Funktionen der Speicherverwaltung ab, z. B. das Anzeigen von Speicher-Workloads, das Erstellen von LUNs und Dateifreigaben, das Verwalten von Leistungsserviceleveln und Speichereffizienzrichtlinien sowie das Zuweisen der Richtlinien zu Speicher-Workloads.

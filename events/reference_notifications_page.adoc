@@ -1,0 +1,122 @@
+---
+permalink: events/reference_notifications_page.html 
+sidebar: sidebar 
+keywords: notifications page, email, smtp, server, snmp 
+summary: Sie können den Unified Manager-Server so konfigurieren, dass er Benachrichtigungen sendet, wenn ein Ereignis generiert oder einem Benutzer zugewiesen wird.  Sie können auch die Benachrichtigungsmechanismen konfigurieren.  Beispielsweise können Benachrichtigungen als E-Mails oder SNMP-Traps versendet werden. 
+---
+= Benachrichtigungsseite
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Unified Manager-Server so konfigurieren, dass er Benachrichtigungen sendet, wenn ein Ereignis generiert oder einem Benutzer zugewiesen wird.  Sie können auch die Benachrichtigungsmechanismen konfigurieren.  Beispielsweise können Benachrichtigungen als E-Mails oder SNMP-Traps versendet werden.
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+
+== E-Mail
+
+In diesem Bereich können Sie die folgenden E-Mail-Einstellungen für Warnbenachrichtigungen konfigurieren:
+
+* *Absenderadresse*
++
+Gibt die E-Mail-Adresse an, von der die Warnbenachrichtigung gesendet wird.  Dieser Wert wird auch als Absenderadresse für einen Bericht verwendet, wenn dieser freigegeben wird.  Wenn die Absenderadresse bereits mit der Adresse „ActiveIQUnifiedManager@localhost.com“ ausgefüllt ist, sollten Sie sie in eine echte, funktionierende E-Mail-Adresse ändern, um sicherzustellen, dass alle E-Mail-Benachrichtigungen erfolgreich zugestellt werden.
+
+
+
+
+
+== SMTP-Server
+
+In diesem Bereich können Sie die folgenden SMTP-Servereinstellungen konfigurieren:
+
+* *Hostname oder IP-Adresse*
++
+Gibt den Hostnamen Ihres SMTP-Hostservers an, der zum Senden der Warnbenachrichtigung an die angegebenen Empfänger verwendet wird.
+
+* *Benutzername*
++
+Gibt den SMTP-Benutzernamen an.  Der SMTP-Benutzername ist nur erforderlich, wenn SMTPAUTH im SMTP-Server aktiviert ist.
+
+* *Passwort*
++
+Gibt das SMTP-Passwort an.  Der SMTP-Benutzername ist nur erforderlich, wenn SMTPAUTH im SMTP-Server aktiviert ist.
+
+* *Hafen*
++
+Gibt den Port an, der vom SMTP-Hostserver zum Senden von Warnbenachrichtigungen verwendet wird.
+
++
+Der Standardwert ist 25.
+
+* *START/TLS verwenden*
++
+Durch Aktivieren dieses Kontrollkästchens wird eine sichere Kommunikation zwischen dem SMTP-Server und dem Verwaltungsserver mithilfe der TLS/SSL-Protokolle (auch als start_tls und StartTLS bezeichnet) gewährleistet.
+
+* *SSL verwenden*
++
+Durch Aktivieren dieses Kontrollkästchens wird eine sichere Kommunikation zwischen dem SMTP-Server und dem Verwaltungsserver mithilfe des SSL-Protokolls gewährleistet.
+
+
+
+
+
+== SNMP
+
+In diesem Bereich können Sie die folgenden SNMP-Trap-Einstellungen konfigurieren:
+
+* *Version*
++
+Gibt die SNMP-Version an, die Sie je nach der Art der erforderlichen Sicherheit verwenden möchten.  Zu den Optionen gehören Version 1, Version 3, Version 3 mit Authentifizierung und Version 3 mit Authentifizierung und Verschlüsselung.  Der Standardwert ist Version 1.
+
+* *Trap-Zielhost*
++
+Gibt den Hostnamen oder die IP-Adresse (IPv4 oder IPv6) an, die die vom Verwaltungsserver gesendeten SNMP-Traps empfängt.  Um mehrere Trap-Ziele anzugeben, trennen Sie jeden Host durch ein Komma.
+
++
+[NOTE]
+====
+Alle anderen SNMP-Einstellungen, wie beispielsweise „Version“ und „Ausgehender Port“, müssen für alle Hosts in der Liste gleich sein.
+
+====
+* *Ausgehender Trap-Port*
++
+Gibt den Port an, über den der SNMP-Server die Traps empfängt, die vom Management-Server gesendet werden.
+
++
+Der Standardwert ist 162.
+
+* *Gemeinschaft*
++
+Der Community-String für den Zugriff auf den Host.
+
+* *Motor-ID*
++
+Gibt die eindeutige Kennung des SNMP-Agenten an und wird automatisch vom Verwaltungsserver generiert.  Engine ID ist mit SNMP Version 3, SNMP Version 3 mit Authentifizierung und SNMP Version 3 mit Authentifizierung und Verschlüsselung verfügbar.
+
+* *Benutzername*
++
+Gibt den SNMP-Benutzernamen an.  Der Benutzername ist mit SNMP Version 3, SNMP Version 3 mit Authentifizierung und SNMP Version 3 mit Authentifizierung und Verschlüsselung verfügbar.
+
+* *Authentifizierungsprotokoll*
++
+Gibt das zur Authentifizierung eines Benutzers verwendete Protokoll an.  Zu den Protokolloptionen gehören MD5 und SHA.  MD5 ist der Standardwert.  Das Authentifizierungsprotokoll ist mit SNMP Version 3 mit Authentifizierung und SNMP Version 3 mit Authentifizierung und Verschlüsselung verfügbar.
+
+* *Authentifizierungskennwort*
++
+Gibt das Kennwort an, das bei der Authentifizierung eines Benutzers verwendet wird.  Das Authentifizierungskennwort ist mit SNMP Version 3 mit Authentifizierung und SNMP Version 3 mit Authentifizierung und Verschlüsselung verfügbar.
+
+* *Datenschutzprotokoll*
++
+Gibt das Datenschutzprotokoll an, das zum Verschlüsseln von SNMP-Nachrichten verwendet wird.  Zu den Protokolloptionen gehören AES 128 und DES.  Der Standardwert ist AES 128.  Das Datenschutzprotokoll ist mit SNMP Version 3 mit Authentifizierung und Verschlüsselung verfügbar.
+
+* *Datenschutz-Passwort*
++
+Gibt das Kennwort bei Verwendung des Datenschutzprotokolls an.  Ein Datenschutzkennwort ist mit SNMP Version 3 mit Authentifizierung und Verschlüsselung verfügbar.
+
+
+
+Weitere Informationen zu SNMP-Objekten und Traps finden Sie im Downloadbereichlink:https://mysupport.netapp.com/site/tools/tool-eula/aiqum-mib["Active IQ Unified Manager MIB"^] von der NetApp Support-Site.

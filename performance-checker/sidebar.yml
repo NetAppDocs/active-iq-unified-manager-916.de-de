@@ -1,0 +1,381 @@
+---
+section: performance-checker
+title: Überwachen und Verwalten der Clusterleistung
+entries:
+- title: Einführung in die Leistungsüberwachung von Active IQ Unified Manager
+  url: "/performance-checker/concept_introduction_to_unified_manager_performance_monitoring.html"
+  entries:
+  - title: Leistungsüberwachungsfunktionen von Unified Manager
+    url: "/performance-checker/concept_unified_manager_performance_monitoring_features.html"
+  - title: Unified Manager-Schnittstellen zur Verwaltung der Speichersystemleistung
+    url: "/performance-checker/concept_um_interfaces_used_to_manage_storage_system_performance.html"
+  - title: Clusterkonfiguration und Leistungsdatenerfassungsaktivität
+    url: "/performance-checker/concept_cluster_configuration_and_performance_data_collection_activity.html"
+  - title: Was ein Datenkontinuitätserfassungszyklus ist
+    url: "/performance-checker/concept_what_data_continuity_collection_cycle_is.html"
+  - title: Was der Zeitstempel in erfassten Daten und Ereignissen bedeutet
+    url: "/performance-checker/concept_what_timestamp_means_in_collected_data_and_events.html"
+- title: Navigieren durch Leistungsworkflows in der Unified Manager-GUI
+  url: "/performance-checker/concept_navigate_performance_workflows_in_unified_manager_ui.html"
+  entries:
+  - title: Melden Sie sich bei der Benutzeroberfläche an
+    url: "/performance-checker/task_log_in_to_gui.html"
+  - title: Grafische Oberfläche und Navigationspfade
+    url: "/performance-checker/concept_graphical_interface_and_navigational_paths.html"
+    entries:
+    - title: Überwachen Sie die Clusterobjektnavigation
+      url: "/performance-checker/concept_monitor_cluster_object_navigation.html"
+    - title: Navigation zur Überwachung der Clusterleistung
+      url: "/performance-checker/concept_monitor_cluster_performance_navigation.html"
+    - title: Navigation zur Ereignisuntersuchung
+      url: "/performance-checker/concept_event_investigation_navigation.html"
+  - title: Suche nach Speicherobjekten
+    url: "/performance-checker/concept_search_for_storage_objects.html"
+  - title: Inhalt der Inventarseite filtern
+    url: "/performance-checker/task_filter_inventory_page_content.html"
+- title: Überwachen Sie die Clusterleistung vom Dashboard aus
+  url: "/performance-checker/concept_monitor_cluster_performance_from_dashboard.html"
+  entries:
+  - title: Leistungsbereiche auf dem Dashboard verstehen
+    url: "/performance-checker/concept_understand_performance_panels_on_dashboard.html"
+  - title: Leistungsbannernachrichten und -beschreibungen
+    url: "/performance-checker/reference_performance_dashboard_cluster_banner_messages.html"
+  - title: Ändern des Erfassungsintervalls für Leistungsstatistiken
+    url: "/performance-checker/task_change_performance_statistics_collection_interval.html"
+- title: Beheben von Workload-Problemen mit dem Workload-Analyzer
+  url: "/performance-checker/concept_troubleshooting_workloads_using_workload_analyzer.html"
+  entries:
+  - title: Welche Daten zeigt der Workload Analyzer an
+    url: "/performance-checker/reference_what_data_does_workload_analyzer_display.html"
+  - title: Wann würde ich den Workload-Analyzer verwenden?
+    url: "/performance-checker/concept_when_would_i_use_workload_analyzer.html"
+  - title: Verwenden des Workload-Analysators
+    url: "/performance-checker/task_use_workload_analyzer.html"
+- title: Überwachen Sie die Clusterleistung von der Zielseite des Leistungsclusters
+    aus
+  url: "/performance-checker/concept_monitor_cluster_performance_from_cluster_landing_page.html"
+  entries:
+  - title: Die Zielseite des Performance-Clusters verstehen
+    url: "/performance-checker/concept_understand_performance_cluster_landing_page.html"
+  - title: Zielseite des Performance-Clusters
+    url: "/performance-checker/reference_performance_cluster_landing_page.html"
+    entries:
+    - title: Seite „Zusammenfassung des Leistungsclusters“
+      url: "/performance-checker/reference_cluster_summary_page_opm.html"
+      entries:
+      - title: Bereich „Cluster-Leistungsereignisse“
+        url: "/performance-checker/reference_cluster_performance_events_pane.html"
+      - title: Bereich „Verwaltete Objekte“
+        url: "/performance-checker/reference_managed_objects_pane.html"
+    - title: Seite „Top-Performer“
+      url: "/performance-checker/reference_top_performers_page.html"
+- title: Überwachen Sie die Leistung mithilfe der Leistungsinventarseiten
+  url: "/performance-checker/concept_monitor_performance_using_object_performance.html"
+  entries:
+  - title: Anzeigen der Leistungsinventarseiten für alle Speicherobjekte
+    url: "/performance-checker/performance-view-all.html"
+  - title: Inhalt der Inventarseite „Performance verfeinern“
+    url: "/performance-checker/concept_refine_object_inventory_performance_page_content.html"
+    entries:
+    - title: Suche auf den Seiten zur Objektinventarleistung
+      url: "/performance-checker/task_search_on_object_inventory_performance_pages.html"
+    - title: Sortieren auf den Seiten zur Objektinventarleistung
+      url: "/performance-checker/task_sort_on_object_inventory_performance_pages.html"
+    - title: Filtern Sie Daten auf den Seiten zur Objektbestandsleistung
+      url: "/performance-checker/task_filter_on_object_inventory_performance_pages.html"
+  - title: Informieren Sie sich über die Empfehlungen des Unified Managers zur Datenschichtung
+      in der Cloud.
+    url: "/performance-checker/concept_understand_um_recommendations_to_tier_data_to_cloud.html"
+- title: Überwachen der Leistung mithilfe der Performance Explorer-Seiten
+  url: "/performance-checker/concept_monitor_performance_using_performance_explorer_pages.html"
+  entries:
+  - title: Verstehen Sie das Stammobjekt
+    url: "/performance-checker/concept_understand_root_object.html"
+  - title: Wenden Sie Filter an, um die Liste der korrelierten Objekte im Raster zu
+      reduzieren
+    url: "/performance-checker/concept_apply_filtering_to_correlated_objects.html"
+  - title: Festlegen eines Zeitbereichs für korrelierte Objekte
+    url: "/performance-checker/task_specify_correlated_objects_time_range.html"
+    entries:
+    - title: Wählen Sie einen vordefinierten Zeitraum
+      url: "/performance-checker/task_select_predefined_time_range.html"
+    - title: Geben Sie einen benutzerdefinierten Zeitraum an
+      url: "/performance-checker/task_specify_custom_time_range.html"
+  - title: Definieren Sie die Liste der korrelierten Objekte für die grafische Vergleichsdarstellung
+    url: "/performance-checker/task_define_list_of_correlated_objects_for_comparison_graphing.html"
+  - title: Zählerdiagramme verstehen
+    url: "/performance-checker/concept_understand_counter_charts.html"
+  - title: Arten von Leistungsindikatordiagrammen
+    url: "/performance-checker/reference_types_of_performance_counter_charts.html"
+  - title: Wählen Sie die anzuzeigenden Leistungsdiagramme aus
+    url: "/performance-checker/task_select_performance_charts_to_display.html"
+  - title: Erweitern Sie den Bereich „Zählerdiagramme“
+    url: "/performance-checker/task_expand_counter_charts_pane.html"
+  - title: Ändern Sie den Fokus der Counter Charts auf einen kürzeren Zeitraum
+    url: "/performance-checker/task_change_counter_charts_focus_to_smaller_period_of_time.html"
+  - title: Ereignisdetails in der Ereigniszeitleiste anzeigen
+    url: "/performance-checker/task_view_event_details_in_performance_explorer_events_timeline.html"
+  - title: Zählerdiagramme Zoomansicht
+    url: "/performance-checker/concept_counter_charts_zoom_view.html"
+    entries:
+    - title: Anzeigen der Zoomansicht der Zählerdiagramme
+      url: "/performance-checker/task_display_counter_charts_zoom_view.html"
+    - title: Geben Sie den Zeitbereich in der Zoomansicht an
+      url: "/performance-checker/task_specify_time_range_in_zoom_view.html"
+    - title: Wählen Sie Leistungsschwellenwerte in der Zoomansicht der Zählerdiagramme
+        aus
+      url: "/performance-checker/task_select_performance_thresholds_in_zoom_view.html"
+  - title: Anzeigen der Volume-Latenz nach Clusterkomponente
+    url: "/performance-checker/task_view_volume_latency_by_cluster_component.html"
+  - title: SVM-IOPS-Verkehr nach Protokoll anzeigen
+    url: "/performance-checker/task_view_svm_iops_traffic_by_protocol.html"
+  - title: Zeigen Sie Volume- und LUN-Latenzdiagramme an, um die Leistungsgarantie
+      zu überprüfen
+    url: "/performance-checker/task_view_volume_and_lun_latency_charts_to_verify_performance_guarantee.html"
+  - title: Leistung aller SAN-Array-Cluster anzeigen
+    url: "/performance-checker/task_view_performance_status_of_all_san_array_clusters.html"
+  - title: Anzeigen von Knoten-IOPS basierend auf Workloads, die sich nur auf dem
+      lokalen Knoten befinden
+    url: "/performance-checker/task_view_node_iops_based_on_workloads_on_local_node.html"
+  - title: Komponenten der Objekt-Landingpages
+    url: "/performance-checker/concept_components_of_object_landing_pages_opm.html"
+    entries:
+    - title: Zusammenfassungsseite
+      url: "/performance-checker/reference_summary_page_opm.html"
+    - title: Komponenten der Performance Explorer-Seite
+      url: "/performance-checker/concept_components_of_performance_explorer_page.html"
+- title: Verwalten der Leistung mithilfe von QoS-Richtliniengruppeninformationen
+  url: "/performance-checker/concept_manage_performance_using_qos_policy_group_information.html"
+  entries:
+  - title: So kann Speicher-QoS den Workload-Durchsatz steuern
+    url: "/performance-checker/concept_how_storage_qos_can_control_workload_throughput.html"
+  - title: Alle auf allen Clustern verfügbaren QoS-Richtliniengruppen anzeigen
+    url: "/performance-checker/task_view_all_qos_policy_groups_available_on_all_clusters.html"
+  - title: Anzeigen von Volumes oder LUNs, die sich in derselben QoS-Richtliniengruppe
+      befinden
+    url: "/performance-checker/task_view_volumes_or_luns_in_same_qos_policy_group.html"
+  - title: Anzeigen der QoS-Richtliniengruppeneinstellungen, die auf bestimmte Volumes
+      oder LUNs angewendet werden
+    url: "/performance-checker/task_view_qos_policy_group_settings_for_volumes_or_luns.html"
+  - title: Zeigen Sie Leistungsdiagramme an, um Volumes oder LUNs zu vergleichen,
+      die sich in derselben QoS-Richtliniengruppe befinden
+    url: "/performance-checker/task_view_performance_charts_to_compare_volumes_or_luns_in_qos_policy.html"
+  - title: So werden verschiedene Arten von QoS-Richtlinien in den Durchsatzdiagrammen
+      angezeigt
+    url: "/performance-checker/concept_how_qos_policies_are_displayed_in_throughput_charts.html"
+  - title: Anzeigen der minimalen und maximalen QoS-Einstellungen für die Arbeitslast
+      im Performance Explorer
+    url: "/performance-checker/task_view_workload_qos_minimum_and_maximum_settings.html"
+- title: Verwalten Sie die Leistung mithilfe von Leistungskapazität und verfügbaren
+    IOPS-Informationen
+  url: "/performance-checker/concept_manage_performance_using_perf_capacity_available_iops.html"
+  entries:
+  - title: Welche Leistungsfähigkeit wird genutzt
+    url: "/performance-checker/concept_what_performance_capacity_used_is.html"
+  - title: Was der Leistungskapazitäts-Gebrauchswert bedeutet
+    url: "/performance-checker/concept_what_used_headroom_value_means.html"
+  - title: Welche IOPS sind verfügbar?
+    url: "/performance-checker/concept_what_available_iops_is.html"
+  - title: Anzeigen der verwendeten Knoten- und aggregierten Leistungskapazitätswerte
+    url: "/performance-checker/concept_view_node_and_aggregate_performance_capacity_used_values.html"
+  - title: Knoten anzeigen und verfügbare IOPS-Werte aggregieren
+    url: "/performance-checker/concept_view_node_and_aggregate_available_iops_values.html"
+  - title: Zeigen Sie Leistungskapazitätsindikatordiagramme an, um Probleme zu identifizieren
+    url: "/performance-checker/task_view_performance_capacity_counter_charts_to_identify_issues.html"
+  - title: Leistungskapazität genutzte Leistungsschwellenbedingungen
+    url: "/performance-checker/concept_performance_capacity_used_threshold_conditions.html"
+  - title: Verwenden Sie den Leistungskapazitätszähler, um die Leistung zu verwalten
+    url: "/performance-checker/concept_use_performance_capacity_used_counter.html"
+- title: Verstehen und Verwenden der Seite „Knoten-Failover-Planung“
+  url: "/performance-checker/reference_understand_and_use_node_failover_planning_page.html"
+  entries:
+  - title: Verwenden Sie die Seite „Knoten-Failover-Planung“, um Korrekturmaßnahmen
+      festzulegen
+    url: "/performance-checker/concept_use_failover_planning_page_to_determine_corrective_actions.html"
+  - title: Komponenten der Seite „Knoten-Failover-Planung“
+    url: "/performance-checker/reference_components_of_node_failover_planning_page.html"
+  - title: Verwenden einer Schwellenwertrichtlinie mit der Seite „Knoten-Failover-Planung“
+    url: "/performance-checker/concept_use_threshold_policy_with_node_failover_planning_page.html"
+  - title: Verwenden Sie das Diagramm „Aufschlüsselung der genutzten Leistungskapazität“
+      für die Failover-Planung
+    url: "/performance-checker/task_use_perf_capacity_used_breakdown_chart_for_failover_planning.html"
+- title: Sammeln Sie Daten und überwachen Sie die Workload-Leistung
+  url: "/performance-checker/concept_collect_data_and_monitor_workload_performance.html"
+  entries:
+  - title: Von Unified Manager überwachte Workloadtypen
+    url: "/performance-checker/concept_types_of_workloads_monitored_by_unified_manager.html"
+  - title: Messwerte für die Workload-Leistung
+    url: "/performance-checker/reference_workload_performance_measurement_values.html"
+  - title: Was ist der erwartete Leistungsbereich
+    url: "/performance-checker/concept_what_expected_range_of_performance_is.html"
+  - title: Wie die Latenzprognose in der Leistungsanalyse verwendet wird
+    url: "/performance-checker/reference_how_expected_range_is_used_in_performance_analysis.html"
+  - title: So nutzt Unified Manager die Workload-Latenz, um Leistungsprobleme zu identifizieren
+    url: "/performance-checker/concept_how_unified_manager_uses_workload_response_time.html"
+  - title: Wie Clustervorgänge die Workload-Latenz beeinflussen können
+    url: "/performance-checker/concept_how_cluster_operations_can_affect_workload_latency.html"
+  - title: Leistungsüberwachung von MetroCluster -Konfigurationen
+    url: "/performance-checker/concept_performance_monitor_of_metrocluster_configurations.html"
+- title: Leistungsereignisse und Warnungen verstehen
+  url: "/performance-checker/concept_understand_performance_events_and_alerts.html"
+  entries:
+  - title: Quellen von Leistungsereignissen
+    url: "/performance-checker/concept_sources_of_performance_events.html"
+  - title: Schweregradtypen von Leistungsereignissen
+    url: "/performance-checker/reference_performance_event_severity_types.html"
+  - title: Von Unified Manager erkannte Konfigurationsänderungen
+    url: "/performance-checker/concept_cluster_configuration_changes_detected_by_unified_manager.html"
+  - title: Arten systemdefinierter Richtlinien für Leistungsschwellenwerte
+    url: "/performance-checker/reference_types_of_system_defined_performance_threshold_policies.html"
+  - title: Analyse und Benachrichtigung von Leistungsereignissen
+    url: "/performance-checker/reference_performance_event_analysis_and_notification.html"
+  - title: So ermittelt Unified Manager die Leistungsauswirkungen eines Ereignisses
+    url: "/performance-checker/concept_how_um_determines_performance_impact_for_incident.html"
+  - title: Clusterkomponenten und warum sie kontrovers diskutiert werden können
+    url: "/performance-checker/concept_cluster_components_and_why_they_can_be_in_contention.html"
+  - title: Rollen der an einem Leistungsereignis beteiligten Workloads
+    url: "/performance-checker/concept_roles_of_workloads_involved_in_performance_incident.html"
+- title: Leistungsschwellenwerte verwalten
+  url: "/performance-checker/concept_manage_performance_thresholds.html"
+  entries:
+  - title: Funktionsweise benutzerdefinierter Leistungsschwellenwertrichtlinien
+    url: "/performance-checker/concept_how_user_defined_performance_threshold_policies_work.html"
+  - title: Was passiert, wenn eine Leistungsschwellenrichtlinie verletzt wird?
+    url: "/performance-checker/concept_what_happens_when_performance_threshold_policy_is_breached.html"
+  - title: Welche Leistungsindikatoren können mithilfe von Schwellenwerten verfolgt
+      werden?
+    url: "/performance-checker/reference_what_performance_metrics_can_be_monitored_using_thresholds.html"
+  - title: Welche Objekte und Zähler können in Kombinationsschwellenwertrichtlinien
+      verwendet werden?
+    url: "/performance-checker/reference_what_objects_can_be_used_in_threshold_policies.html"
+  - title: Erstellen Sie benutzerdefinierte Richtlinien für Leistungsschwellenwerte
+    url: "/performance-checker/task_create_user_defined_performance_threshold_policies.html"
+  - title: Zuweisen von Leistungsschwellenwertrichtlinien zu Speicherobjekten
+    url: "/performance-checker/task_assign_performance_threshold_policies_to_storage_objects.html"
+  - title: Richtlinien für Leistungsschwellenwerte anzeigen
+    url: "/performance-checker/task_view_performance_threshold_policies.html"
+  - title: Bearbeiten benutzerdefinierter Richtlinien für Leistungsschwellenwerte
+    url: "/performance-checker/task_edit_user_defined_performance_threshold_policies.html"
+  - title: Entfernen Sie Leistungsschwellenwertrichtlinien aus Speicherobjekten
+    url: "/performance-checker/task_remove_performance_threshold_policies_from_storage_objects.html"
+  - title: Was passiert, wenn eine Leistungsschwellenwertrichtlinie geändert wird?
+    url: "/performance-checker/concept_what_happens_when_performance_threshold_policy_is_changed.html"
+  - title: Was passiert mit Leistungsschwellenwertrichtlinien, wenn ein Objekt verschoben
+      wird?
+    url: "/performance-checker/concept_performance_threshold_policies_when_object_is_moved.html"
+- title: Analysieren von Leistungsereignissen
+  url: "/performance-checker/concept_analyze_performance_events.html"
+  entries:
+  - title: Informationen zu Leistungsereignissen anzeigen
+    url: "/performance-checker/task_display_information_about_performance_event.html"
+  - title: Analysieren Sie Ereignisse anhand benutzerdefinierter Leistungsschwellenwerte
+    url: "/performance-checker/concept_analyze_events_from_user_defined_performance_thresholds.html"
+    entries:
+    - title: Reagieren Sie auf benutzerdefinierte Leistungsschwellenwertereignisse
+      url: "/performance-checker/task_respond_to_user_defined_performance_threshold_events.html"
+  - title: Analysieren Sie Ereignisse anhand systemdefinierter Leistungsschwellenwerte
+    url: "/performance-checker/concept_analyze_events_from_system_defined_performance_thresholds.html"
+    entries:
+    - title: Reagieren auf systemdefinierte Leistungsschwellenereignisse
+      url: "/performance-checker/task_respond_to_system_defined_performance_threshold_events.html"
+    - title: Reagieren auf Leistungsereignisse der QoS-Richtliniengruppe
+      url: "/performance-checker/task_respond_to_system_defined_qos_policy_group_performance_event.html"
+    - title: Verstehen Sie Ereignisse aus adaptiven QoS-Richtlinien mit einer definierten
+        Blockgröße
+      url: "/performance-checker/concept_understand_events_from_adaptive_qos_policies.html"
+    - title: Reagieren Sie auf Leistungsereignisse bei überlasteten Knotenressourcen
+      url: "/performance-checker/task_respond_to_system_defined_node_resources_overutilized.html"
+    - title: Reagieren auf Leistungsereignisse aufgrund von Clusterungleichgewichten
+      url: "/performance-checker/task_respond_to_cluster_imbalance_performance_events.html"
+  - title: Analysieren Sie Ereignisse anhand dynamischer Leistungsschwellenwerte
+    url: "/performance-checker/concept_analyze_events_from_dynamic_performance_thresholds.html"
+    entries:
+    - title: Identifizieren Sie die Arbeitslasten der Opfer, die an einem dynamischen
+        Leistungsereignis beteiligt sind
+      url: "/performance-checker/task_identify_victim_workloads_involved_in_performance_event.html"
+    - title: Identifizieren Sie die Arbeitsbelastung, die bei einem dynamischen Leistungsereignis
+        auftritt.
+      url: "/performance-checker/task_identify_bully_workloads_involved_in_performance_event.html"
+    - title: Identifizieren Sie die an einem dynamischen Leistungsereignis beteiligten
+        Shark-Workloads
+      url: "/performance-checker/task_identify_shark_workloads_involved_in_performance_event.html"
+    - title: Leistungsereignisanalyse für eine MetroCluster -Konfiguration
+      url: "/performance-checker/concept_performance_incident_analysis_for_metrocluster_configuration.html"
+      entries:
+      - title: Analysieren Sie ein dynamisches Leistungsereignis auf einem Cluster
+          in einer MetroCluster -Konfiguration
+        url: "/performance-checker/task_analyze_performance_incident_on_cluster_in_metrocluster.html"
+      - title: Analysieren Sie ein dynamisches Leistungsereignis für einen Remote-Cluster
+          in einer MetroCluster -Konfiguration
+        url: "/performance-checker/task_analyze_performance_incident_in_metrocluster.html"
+    - title: Reagieren Sie auf ein dynamisches Leistungsereignis, das durch die Drosselung
+        der QoS-Richtliniengruppe verursacht wird
+      url: "/performance-checker/task_respond_to_dynamic_performance_event.html"
+    - title: Reagieren auf ein dynamisches Leistungsereignis, das durch einen Datenträgerfehler
+        verursacht wurde
+      url: "/performance-checker/task_respond_to_performance_incident_caused_by_disk_failure.html"
+    - title: Reagieren Sie auf ein dynamisches Leistungsereignis, das durch die HA-Übernahme
+        verursacht wurde
+      url: "/performance-checker/task_respond_to_performance_incident_caused_by_ha_takeover.html"
+- title: Beheben von Leistungsereignissen
+  url: "/performance-checker/reference_resolve_performance_events.html"
+  entries:
+  - title: Bestätigen Sie, dass die Latenz im erwarteten Bereich liegt
+    url: "/performance-checker/concept_confirm_that_response_time_is_within_expected_range.html"
+  - title: Überprüfen Sie die Auswirkungen von Konfigurationsänderungen auf die Workload-Leistung
+    url: "/performance-checker/concept_review_impact_of_configuration_changes.html"
+  - title: Optionen zur Verbesserung der Workload-Leistung auf der Clientseite
+    url: "/performance-checker/concept_options_for_improving_workload_performance_from_client.html"
+  - title: Suchen Sie nach Client- oder Netzwerkproblemen
+    url: "/performance-checker/concept_check_for_client_or_network_issues.html"
+  - title: Überprüfen Sie, ob andere Volumes in der QoS-Richtliniengruppe ungewöhnlich
+      hohe Aktivität aufweisen
+    url: "/performance-checker/concept_verify_qos_policy_group.html"
+  - title: Logische Schnittstellen (LIFs) verschieben
+    url: "/performance-checker/concept_move_logical_interfaces.html"
+  - title: Führen Sie Speichereffizienzvorgänge in weniger ausgelasteten Zeiten durch
+    url: "/performance-checker/concept_run_storage_efficiency_operations_at_less_busy_times.html"
+    entries:
+    - title: Was ist Speichereffizienz?
+      url: "/performance-checker/concept_what_storage_efficiency_is.html"
+  - title: Hinzufügen von Datenträgern und Neuzuweisung von Daten
+    url: "/performance-checker/concept_add_disks_and_reallocate_data.html"
+  - title: So kann die Aktivierung von Flash Cache auf einem Knoten die Workload-Leistung
+      verbessern
+    url: "/performance-checker/reference_how_enabling_flash_cache_improve_workload_performance.html"
+  - title: So kann die Aktivierung von Flash Pool auf einem Speicheraggregat die Workload-Leistung
+      verbessern
+    url: "/performance-checker/concept_how_enabling_flash_pool_can_improve_workload_performance.html"
+  - title: Integritätsprüfung der MetroCluster -Konfiguration
+    url: "/performance-checker/concept_metrocluster_configuration_health_check.html"
+  - title: Überprüfung der MetroCluster -Konfiguration
+    url: "/performance-checker/concept_metrocluster_configuration_verification.html"
+  - title: Verschieben von Workloads in ein anderes Aggregat
+    url: "/performance-checker/task_move_workloads_to_different_aggregate.html"
+  - title: Verschieben von Workloads auf einen anderen Knoten
+    url: "/performance-checker/task_move_workloads_to_different_node.html"
+  - title: Verschieben von Workloads in ein Aggregat auf einem anderen Knoten
+    url: "/performance-checker/task_move_workloads_to_an_aggregate_on_different_node.html"
+  - title: Verschieben Sie Workloads auf einen Knoten in einem anderen HA-Paar
+    url: "/performance-checker/task_move_workloads_to_node_in_different_ha_pair.html"
+  - title: Verschieben Sie Workloads auf einen anderen Knoten in einem anderen HA-Paar
+    url: "/performance-checker/task_move_workloads_to_another_node_in_different_ha_pair.html"
+  - title: Verwenden Sie QoS-Richtlinieneinstellungen, um die Arbeit an diesem Knoten
+      zu priorisieren
+    url: "/performance-checker/concept_use_qos_policy_settings_to_prioritize_work_on_this_node.html"
+  - title: Entfernen inaktiver Volumes und LUNs
+    url: "/performance-checker/concept_remove_inactive_volumes_and_luns.html"
+  - title: Fügen Sie Datenträger hinzu und führen Sie eine Rekonstruktion des Gesamtlayouts
+      durch
+    url: "/performance-checker/concept_add_disks_and_perform_aggregate_layout_reconstruction.html"
+- title: Einrichten einer Verbindung zwischen einem Unified Manager-Server und einem
+    externen Datenanbieter
+  url: "/performance-checker/concept_set_up_connection_between_um_and_external_data_provider.html"
+  entries:
+  - title: Leistungsdaten, die an einen externen Server gesendet werden können
+    url: "/performance-checker/reference_performance_data_that_can_be_sent_to_an_external_server.html"
+  - title: Richten Sie Graphite ein, um Leistungsdaten von Unified Manager zu erhalten
+    url: "/performance-checker/concept_set_up_graphite_to_receive_performance_data.html"
+  - title: Konfigurieren einer Verbindung von einem Unified Manager-Server zu einem
+      externen Datenanbieter
+    url: "/performance-checker/task_configure_connection_between_um_server_and_external_data_provider.html"

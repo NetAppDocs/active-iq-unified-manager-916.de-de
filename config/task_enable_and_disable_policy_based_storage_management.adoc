@@ -1,0 +1,78 @@
+---
+permalink: config/task_enable_and_disable_policy_based_storage_management.html 
+sidebar: sidebar 
+keywords: provisioning, performance service levels, storage management, enable, disable, policy-based 
+summary: 'Ab Unified Manager 9.7 können Sie Speicher-Workloads (Volumes und LUNs) auf Ihren ONTAP Clustern bereitstellen und diese Workloads basierend auf zugewiesenen Leistungsserviceleveln verwalten.  Diese Funktionalität ähnelt dem Erstellen von Workloads im ONTAP System Manager und dem Anhängen von QoS-Richtlinien. Bei Anwendung mit Unified Manager können Sie jedoch Workloads über alle Cluster hinweg bereitstellen und verwalten, die Ihre Unified Manager-Instanz überwacht.' 
+---
+= Aktivieren und Deaktivieren der richtlinienbasierten Speicherverwaltung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ab Unified Manager 9.7 können Sie Speicher-Workloads (Volumes und LUNs) auf Ihren ONTAP Clustern bereitstellen und diese Workloads basierend auf zugewiesenen Leistungsserviceleveln verwalten.  Diese Funktionalität ähnelt dem Erstellen von Workloads im ONTAP System Manager und dem Anhängen von QoS-Richtlinien. Bei Anwendung mit Unified Manager können Sie jedoch Workloads über alle Cluster hinweg bereitstellen und verwalten, die Ihre Unified Manager-Instanz überwacht.
+
+Sie müssen über die Rolle „Anwendungsadministrator“ verfügen.
+
+Diese Option ist standardmäßig aktiviert, Sie können sie jedoch deaktivieren, wenn Sie Workloads nicht mit Unified Manager bereitstellen und verwalten möchten.
+
+Wenn diese Option aktiviert ist, werden in der Benutzeroberfläche viele neue Elemente bereitgestellt:
+
+[cols="2*"]
+|===
+| Neue Inhalte | Standort 
+
+
+ a| 
+Eine Seite zum Bereitstellen neuer Workloads
+ a| 
+Verfügbar unter *Allgemeine Aufgaben* > *Bereitstellung*
+
+
+
+ a| 
+Eine Seite zum Erstellen von Richtlinien für Leistungsservicelevel
+ a| 
+Verfügbar unter *Einstellungen* > *Richtlinien* > *Leistungs-Servicelevel*
+
+
+
+ a| 
+Eine Seite zum Erstellen von Richtlinien zur Leistungsspeichereffizienz
+ a| 
+Verfügbar unter *Einstellungen* > *Richtlinien* > *Speichereffizienz*
+
+
+
+ a| 
+Panels, die Ihre aktuelle Workload-Leistung und Workload-IOPS beschreiben
+ a| 
+Verfügbar über das Dashboard
+
+|===
+Weitere Informationen zu diesen Seiten und dieser Funktionalität finden Sie in der Online-Hilfe des Produkts.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Allgemein* > *Funktionseinstellungen*.
+. Deaktivieren oder aktivieren Sie auf der Seite *Funktionseinstellungen* die richtlinienbasierte Speicherverwaltung, indem Sie eine der folgenden Optionen auswählen:
++
+[cols="2*"]
+|===
+| Wenn Sie wollen... | Dann tun Sie Folgendes ... 
+
+
+ a| 
+Deaktivieren Sie die richtlinienbasierte Speicherverwaltung
+ a| 
+Bewegen Sie im Bereich *Richtlinienbasierte Speicherverwaltung* den Schieberegler nach links.
+
+
+
+ a| 
+Aktivieren Sie die richtlinienbasierte Speicherverwaltung
+ a| 
+Bewegen Sie im Bereich *Richtlinienbasierte Speicherverwaltung* den Schieberegler nach rechts.
+
+|===
+

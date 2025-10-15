@@ -1,0 +1,43 @@
+---
+permalink: data-protection/task_abort_an_active_data_protection_transfer.html 
+sidebar: sidebar 
+keywords: abort, active data protection, transfer, volume relationships page, SnapMirror active sync 
+summary: Sie können eine aktive Datensicherungsübertragung abbrechen, wenn Sie eine laufende SnapMirror -Replikation stoppen möchten.  Sie können den Neustart-Checkpoint auch für Übertragungen löschen, die auf die Basisübertragung folgen.  Sie können eine Übertragung abbrechen, wenn ein Konflikt mit einem anderen Vorgang auftritt, beispielsweise einer Volumeverschiebung. 
+---
+= Brechen Sie eine aktive Datenschutzübertragung von der Seite „Volume-Beziehungen“ ab
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine aktive Datensicherungsübertragung abbrechen, wenn Sie eine laufende SnapMirror -Replikation stoppen möchten.  Sie können den Neustart-Checkpoint auch für Übertragungen löschen, die auf die Basisübertragung folgen.  Sie können eine Übertragung abbrechen, wenn ein Konflikt mit einem anderen Vorgang auftritt, beispielsweise einer Volumeverschiebung.
+
+
+NOTE: Sie können Volume-Beziehungen, die durch die Konsistenzgruppe geschützt sind, nicht abbrechen.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen die Workflow-Automatisierung eingerichtet haben.
+
+
+Die Abbruchaktion wird in den folgenden Fällen nicht angezeigt:
+
+* Wenn die RBAC-Einstellungen diese Aktion nicht zulassen: zum Beispiel, wenn Sie nur über Operator-Berechtigungen verfügen
+* Wenn die Volume-ID unbekannt ist: beispielsweise, wenn Sie eine Intercluster-Beziehung haben und der Zielcluster noch nicht erkannt wurde
+
+
+Sie können den Neustart-Checkpoint für eine Baseline-Übertragung nicht löschen.
+
+.Schritte
+. Um Übertragungen für eine oder mehrere Schutzbeziehungen abzubrechen, wählen Sie auf der Seite *Volume-Beziehungen* ein oder mehrere Volumes aus und klicken Sie in der Symbolleiste auf *Abbrechen*.
++
+Das Dialogfeld „Übertragung abbrechen“ wird angezeigt.
+
+. Wenn Sie den Neustart-Checkpoint für eine Übertragung löschen möchten, bei der es sich nicht um eine Basislinienübertragung handelt, wählen Sie *Checkpoints löschen*.
+. Klicken Sie auf *Weiter*.
++
+Das Dialogfeld „Übertragung abbrechen“ wird geschlossen und der Status des Abbruchauftrags wird oben auf der Seite „Volume-Beziehungen“ zusammen mit einem Link zu den Auftragsdetails angezeigt.
+
+. *Optional:* Klicken Sie auf den Link *Details anzeigen*, um zur Detailseite des *Auftrags* zu gelangen und dort weitere Einzelheiten zu erfahren und den Auftragsfortschritt anzuzeigen.
+

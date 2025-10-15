@@ -1,0 +1,23 @@
+---
+permalink: events/task_delete_alerts.html 
+sidebar: sidebar 
+keywords: delete, alerts 
+summary: Sie können eine Warnung löschen, wenn sie nicht mehr benötigt wird.  Sie können beispielsweise eine Warnung löschen, die für eine bestimmte Ressource erstellt wurde, wenn diese Ressource nicht mehr von Unified Manager überwacht wird. 
+---
+= Benachrichtigungen löschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Warnung löschen, wenn sie nicht mehr benötigt wird.  Sie können beispielsweise eine Warnung löschen, die für eine bestimmte Ressource erstellt wurde, wenn diese Ressource nicht mehr von Unified Manager überwacht wird.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ verfügen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Alarm-Setup*.
+. Wählen Sie auf der Seite *Alarm-Setup* die Alarme aus, die Sie löschen möchten, und klicken Sie auf *Löschen*.
+. Klicken Sie auf *Ja*, um die Löschanforderung zu bestätigen.
+

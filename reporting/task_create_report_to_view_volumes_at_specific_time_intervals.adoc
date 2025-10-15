@@ -1,0 +1,41 @@
+---
+permalink: reporting/task_create_report_to_view_volumes_at_specific_time_intervals.html 
+sidebar: sidebar 
+keywords: create, report, view, volume, transfer, trends, specific, time intervals 
+summary: Sie können einen Bericht erstellen, der Volumenübertragungstrends in bestimmten Zeitintervallen anzeigt. 
+---
+= Erstellen Sie einen Bericht, um Volumenübertragungstrends in bestimmten Zeitintervallen anzuzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, der Volumenübertragungstrends in bestimmten Zeitintervallen anzeigt.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Führen Sie die folgenden Schritte aus, um eine benutzerdefinierte Ansicht für Volumes in bestimmten Zeitintervallen zu erstellen und dann die Erstellung eines Berichts für diese Ansicht zu planen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Volumes*.
+. Wählen Sie im Menü „Ansicht“ die Option „Beziehung“ > „Übertragungsstatus des letzten Monats“ aus.
+. Wählen Sie *Anzeigen/Ausblenden*, um alle Spalten zu entfernen, die Sie nicht im Bericht haben möchten.
+. Ziehen Sie die Spalte „Übertragungsdauer“ in die Nähe der Spalte „Betriebsergebnis“.
+. Klicken Sie auf das Filtersymbol, fügen Sie den folgenden Filter hinzu und klicken Sie dann auf *Filter anwenden*:
++
+** Transfer-Endzeit in den letzten 7 Tagen
+
+
+. Klicken Sie oben auf die Spalte „Übertragungsdauer“, um die Datenträger nach Zeitintervall zu sortieren.
+. Speichern Sie die Ansicht unter einem bestimmten Namen, der widerspiegelt, was die Ansicht anzeigt, z. B. „Volumes nach Dauer“.
+. Klicken Sie auf der Inventarseite auf die Schaltfläche *Geplante Berichte*.
+. Geben Sie einen Namen für den Berichtszeitplan ein, legen Sie die Häufigkeit auf *Wöchentlich* fest, füllen Sie die anderen Berichtsfelder aus und klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""] ) am Ende der Zeile.
++
+Der Bericht wird sofort testweise versendet.  Anschließend wird der Bericht generiert und in der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Anhand der im Bericht angezeigten Ergebnisse können Sie die Übertragungszeitintervalle untersuchen.

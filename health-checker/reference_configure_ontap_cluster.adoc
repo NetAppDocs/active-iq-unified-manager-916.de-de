@@ -1,0 +1,37 @@
+---
+permalink: health-checker/reference_configure_ontap_cluster.html 
+sidebar: sidebar 
+keywords: netapp, snapshot copy, copies, backup, windows, configure, ontap, cluster 
+summary: Sie müssen einige Vorkonfigurationsschritte auf ONTAP -Clustern durchführen, bevor Sie Active IQ Unified Manager mithilfe einer Snapshot-Kopie auf Windows-Systemen sichern und wiederherstellen können. 
+---
+= ONTAP Cluster konfigurieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen einige Vorkonfigurationsschritte auf ONTAP -Clustern durchführen, bevor Sie Active IQ Unified Manager mithilfe einer Snapshot-Kopie auf Windows-Systemen sichern und wiederherstellen können.
+
+Sie können den ONTAP Cluster entweder über die Eingabeaufforderung oder die Benutzeroberfläche des System Managers konfigurieren.  Die Konfiguration des ONTAP Clusters umfasst die Konfiguration von Daten-LIFs, die als iSCSI-LIFs der Speicher-VM zugewiesen werden können.  Der nächste Schritt besteht darin, eine iSCSI-fähige Speicher-VM über die Benutzeroberfläche des System Managers zu konfigurieren.  Sie müssen eine statische Netzwerkroute für diese Speicher-VM konfigurieren, um zu steuern, wie LIFs das Netzwerk für ausgehenden Datenverkehr verwenden.
+
+[NOTE]
+====
+Sie sollten über ein dediziertes Volume und eine LUN für die Sicherungskonfiguration verfügen.  Das ausgewählte Volume sollte nur eine LUN enthalten.  Die Größe der LUN sollte mindestens doppelt so groß sein wie die Datengröße, die voraussichtlich von Active IQ Unified Manager verarbeitet wird.
+
+====
+Sie müssen die folgende Konfiguration durchführen:
+
+.Schritte
+. Konfigurieren Sie eine iSCSI-fähige Speicher-VM oder verwenden Sie eine vorhandene Speicher-VM mit derselben Konfiguration.
+. Konfigurieren Sie eine Netzwerkroute für die konfigurierte Speicher-VM.
+. Konfigurieren Sie ein Volume mit entsprechender Kapazität und einer einzelnen LUN darin und stellen Sie sicher, dass das Volume nur für diese LUN reserviert ist.
++
+
+NOTE: In einem Szenario, in dem die LUN im System Manager erstellt wird, kann das Aufheben der Zuordnung der LUN dazu führen, dass die igroup gelöscht wird und die Wiederherstellung fehlschlägt.  Um dieses Szenario zu vermeiden, stellen Sie sicher, dass beim Erstellen einer LUN diese explizit erstellt und nicht gelöscht wird, wenn die Zuordnung der LUN aufgehoben wird.
+
+. Konfigurieren Sie eine Initiatorgruppe in der Speicher-VM.
+. Konfigurieren Sie einen Portsatz.
+. Integrieren Sie die Igroup mit dem Portset.
+. Ordnen Sie die LUN der igroup zu.
+

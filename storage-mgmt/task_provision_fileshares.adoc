@@ -1,0 +1,61 @@
+---
+permalink: storage-mgmt/task_provision_fileshares.html 
+sidebar: sidebar 
+keywords: provision, file, share, volumes 
+summary: 'Sie können auf der Seite „Workload bereitstellen“ Dateifreigabevolumes erstellen, die CIFS/SMB- und NFS-Protokolle auf einem vorhandenen Cluster und einer Storage Virtual Machine (Storage-VM) unterstützen.' 
+---
+= Bereitstellen von Dateifreigabevolumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können auf der Seite „Workload bereitstellen“ Dateifreigabevolumes erstellen, die CIFS/SMB- und NFS-Protokolle auf einem vorhandenen Cluster und einer Storage Virtual Machine (Storage-VM) unterstützen.
+
+.Bevor Sie beginnen
+* Die Speicher-VM muss über Speicherplatz für die Bereitstellung des Dateifreigabevolumes verfügen.
+* Einer oder beide der SMB- und NFS-Dienste sollten auf Ihrer Speicher-VM aktiviert sein.
+* Um den Performance Service Level (PSL) und die Storage Efficiency Policy (SEP) für die Arbeitslast auszuwählen und zuzuweisen, müssen die Richtlinien erstellt worden sein, bevor Sie mit der Erstellung der Arbeitslast beginnen.
+
+
+.Schritte
+. Fügen Sie auf der Seite *Workload bereitstellen* den Namen der Workload hinzu, die Sie erstellen möchten, und wählen Sie dann den Cluster aus der verfügbaren Liste aus.
+. Basierend auf dem von Ihnen ausgewählten Cluster filtert das Feld *STORAGE VM* die verfügbaren Speicher-VMs für diesen Cluster.  Wählen Sie die erforderliche Speicher-VM aus der Liste aus.
++
+Basierend auf den auf der Speicher-VM unterstützten SMB- und NFS-Diensten wird die NAS-Option im Abschnitt „Hostinformationen“ aktiviert.
+
+. Weisen Sie im Abschnitt „Speicher und Optimierung“ die Speicherkapazität und PSL sowie optional einen SEP für die Arbeitslast zu.
++
+Die Spezifikationen für das SEP werden der LUN zugewiesen und die Definitionen für das PSL werden beim Erstellen auf die Arbeitslast angewendet.
+
+. Aktivieren Sie das Kontrollkästchen *Leistungsgrenzen erzwingen*, wenn Sie die PSL erzwingen möchten, die Sie der Arbeitslast zugewiesen haben.
++
+Durch die Zuweisung einer PSL zu einer Arbeitslast wird sichergestellt, dass das Aggregat, auf dem die Arbeitslast erstellt wird, die in der jeweiligen Richtlinie definierten Leistungs- und Kapazitätsziele unterstützen kann.  Wenn beispielsweise einer Arbeitslast die PSL „Extreme Performance“ zugewiesen wird, sollte das Aggregat, auf dem die Arbeitslast bereitgestellt werden soll, in der Lage sein, die Leistungs- und Kapazitätsziele der Richtlinie „Extreme Performance“ zu unterstützen, beispielsweise SSD-Speicher.
+
++
+[NOTE]
+====
+Wenn Sie dieses Kontrollkästchen nicht aktivieren, wird die PSL nicht auf die Arbeitslast angewendet und der Status der Arbeitslast wird auf dem Dashboard als „Nicht zugewiesen“ angezeigt.
+
+====
+. Wählen Sie die Option *NAS*.
++
+Wenn die Option *NAS* nicht aktiviert ist, überprüfen Sie, ob die von Ihnen ausgewählte Speicher-VM SMB oder NFS oder beides unterstützt.
+
++
+[NOTE]
+====
+Wenn Ihre Speicher-VM sowohl für SMB- als auch für NFS-Dienste aktiviert ist, können Sie die Kontrollkästchen *Freigabe über NFS* und *Freigabe über SMB* aktivieren und eine Dateifreigabe erstellen, die sowohl NFS- als auch SMB-Protokolle unterstützt.  Wenn Sie entweder eine SMB- oder eine CIFS-Freigabe erstellen möchten, aktivieren Sie nur das jeweilige Kontrollkästchen.
+
+====
+. Geben Sie für NFS-Dateifreigabevolumes die IP-Adresse des Hosts oder Netzwerks an, um auf das Dateifreigabevolume zuzugreifen.  Sie können durch Kommas getrennte Werte für mehrere Hosts eingeben.
++
+Beim Hinzufügen der Host-IP-Adresse wird eine interne Prüfung ausgeführt, um die Hostdetails mit der Speicher-VM abzugleichen, und die Exportrichtlinie für diesen Host wird erstellt oder, falls eine vorhandene Richtlinie vorhanden ist, wird sie wiederverwendet.  Wenn mehrere NFS-Freigaben für denselben Host erstellt werden, wird eine verfügbare Exportrichtlinie für denselben Host mit übereinstimmenden Regeln für alle Dateifreigaben wiederverwendet.  Die Funktion zum Festlegen von Regeln einzelner Richtlinien oder zum Wiederverwenden von Richtlinien durch die Bereitstellung bestimmter Richtlinienschlüssel ist verfügbar, wenn Sie die NFS-Freigabe mithilfe von APIs bereitstellen.
+
+. Geben Sie für eine SMB-Freigabe an, welche Benutzer oder Benutzergruppen auf die SMB-Freigabe zugreifen können, und weisen Sie die erforderlichen Berechtigungen zu.  Für jede Benutzergruppe wird während der Erstellung der Dateifreigabe eine neue Zugriffskontrollliste (ACL) generiert.
+. Klicken Sie auf *Speichern*.
++
+Die Arbeitslast wird der Liste der Speicherarbeitslasten hinzugefügt.
+
+

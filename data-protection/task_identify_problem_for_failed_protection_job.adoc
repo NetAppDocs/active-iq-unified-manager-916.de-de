@@ -1,0 +1,127 @@
+---
+permalink: data-protection/task_identify_problem_for_failed_protection_job.html 
+sidebar: sidebar 
+keywords: identify, problem, perform, corrective actions, failed, protection job 
+summary: Sie überprüfen die Fehlermeldung zum Auftragsfehler im Feld „Ursache“ auf der Seite „Ereignisdetails“ und stellen fest, dass der Auftrag aufgrund eines Snapshot-Kopierfehlers fehlgeschlagen ist.  Anschließend fahren Sie mit der Seite mit den Volumen-/Gesundheitsdetails fort, um weitere Informationen zu erhalten. 
+---
+= Identifizieren Sie das Problem und führen Sie Korrekturmaßnahmen für einen fehlgeschlagenen Schutzjob durch
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie überprüfen die Fehlermeldung zum Auftragsfehler im Feld „Ursache“ auf der Seite „Ereignisdetails“ und stellen fest, dass der Auftrag aufgrund eines Snapshot-Kopierfehlers fehlgeschlagen ist.  Anschließend fahren Sie mit der Seite mit den Volumen-/Gesundheitsdetails fort, um weitere Informationen zu erhalten.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ verfügen.
+
+Die im Feld „Ursache“ auf der Seite „Ereignisdetails“ angegebene Fehlermeldung enthält den folgenden Text zum fehlgeschlagenen Auftrag:
+
+[listing]
+----
+Protection Job Failed. Reason: (Transfer operation for
+relationship 'cluster2_src_svm:cluster2_src_vol2->cluster3_dst_svm:
+managed_svc2_vol3' ended unsuccessfully. Last error reported by
+Data ONTAP: Failed to create Snapshot copy 0426cluster2_src_vol2snap
+on volume cluster2_src_svm:cluster2_src_vol2. (CSM: An operation
+failed due to an ONC RPC failure.)
+Job Details
+----
+Diese Nachricht enthält die folgenden Informationen:
+
+* Ein Sicherungs- oder Spiegelungsauftrag wurde nicht erfolgreich abgeschlossen.
++
+Der Auftrag beinhaltete eine Schutzbeziehung zwischen dem Quellvolume `cluster2_src_vol2` auf dem virtuellen Server `cluster2_src_svm` und das Zielvolumen `managed_svc2_vol3` auf dem virtuellen Server mit dem Namen `cluster3_dst_svm` .
+
+* Ein Snapshot-Kopierauftrag ist fehlgeschlagen für `0426cluster2_src_vol2snap` auf dem Quellvolume `cluster2_src_svm:/cluster2_src_vol2` .
+
+
+In diesem Szenario können Sie die Ursache und mögliche Korrekturmaßnahmen für den Auftragsfehler ermitteln.  Um den Fehler zu beheben, müssen Sie jedoch entweder auf die Web-Benutzeroberfläche des System Managers oder auf die ONTAP CLI-Befehle zugreifen.
+
+.Schritte
+. Sie überprüfen die Fehlermeldung und stellen fest, dass ein Snapshot-Kopierauftrag auf dem Quellvolume fehlgeschlagen ist, was darauf hindeutet, dass wahrscheinlich ein Problem mit Ihrem Quellvolume vorliegt.
++
+Optional könnten Sie am Ende der Fehlermeldung auf den Link *Jobdetails* klicken, für die Zwecke dieses Szenarios möchten wir dies jedoch nicht tun.
+
+. Sie entscheiden, dass Sie versuchen möchten, das Ereignis zu beheben, und gehen daher wie folgt vor:
++
+.. Klicken Sie auf die Schaltfläche *Zuweisen an* und wählen Sie *Mich* aus dem Menü.
+.. Klicken Sie auf die Schaltfläche *Bestätigen*, damit Sie keine weiteren Warnmeldungen mehr erhalten, wenn für das Ereignis Warnmeldungen festgelegt wurden.
+.. Optional können Sie auch Notizen zur Veranstaltung hinzufügen.
+
+
+. Klicken Sie im Bereich *Zusammenfassung* auf das Feld *Quelle*, um Details zum Quellvolume anzuzeigen.
++
+Das Feld *Quelle* enthält den Namen des Quellobjekts: in diesem Fall das Volume, auf dem der Snapshot-Kopierauftrag geplant war.
+
++
+Die Seite mit den Volumen-/Gesundheitsdetails wird angezeigt für `cluster2_src_vol2` , zeigt den Inhalt der Registerkarte „Schutz“.
+
+. Wenn Sie sich das Schutztopologiediagramm ansehen, sehen Sie ein Fehlersymbol, das mit dem ersten Volume in der Topologie verknüpft ist, bei dem es sich um das Quellvolume für die SnapMirror -Beziehung handelt.
++
+Sie sehen auch die horizontalen Balken im Symbol des Quellvolumes, die die für dieses Volume festgelegten Warn- und Fehlerschwellenwerte anzeigen.
+
++
+image::../media/um_topology_cascade_job_failure.gif[Kaskadentopologie bei Jobfehlern]
+
+. Sie platzieren den Cursor über dem Fehlersymbol, um das Popup-Dialogfeld mit den Schwellenwerteinstellungen anzuzeigen. Sie sehen, dass das Volume den Fehlerschwellenwert überschritten hat, was auf ein Kapazitätsproblem hinweist.
+. Klicken Sie auf die Registerkarte *Kapazität*.
++
+Kapazitätsinformationen zum Volumen `cluster2_src_vol2` angezeigt.
+
+. Im Bereich *Kapazität* sehen Sie, dass im Balkendiagramm ein Fehlersymbol angezeigt wird, das wiederum darauf hinweist, dass die Volume-Kapazität den für das Volume festgelegten Schwellenwert überschritten hat.
+. Unter dem Kapazitätsdiagramm sehen Sie, dass die automatische Volumevergrößerung deaktiviert und eine Volume-Speicherplatzgarantie festgelegt wurde.
++
+Sie könnten sich dafür entscheiden, die automatische Vergrößerung zu aktivieren, aber für die Zwecke dieses Szenarios entscheiden Sie sich, weitere Untersuchungen durchzuführen, bevor Sie eine Entscheidung darüber treffen, wie das Kapazitätsproblem gelöst werden soll.
+
+. Sie scrollen nach unten zur Liste *Ereignisse* und sehen, dass die Ereignisse „Schutzauftrag fehlgeschlagen“, „Volumen in Tagen bis zur Volllast“ und „Volumenspeicher voll“ generiert wurden.
+. Klicken Sie in der Liste *Ereignisse* auf das Ereignis *Volume Space Full*, um weitere Informationen zu erhalten, da Sie entschieden haben, dass dieses Ereignis für Ihr Kapazitätsproblem am relevantesten erscheint.
++
+Auf der Seite „Ereignisdetails“ wird das Ereignis „Volumenspeicher voll“ für das Quellvolume angezeigt.
+
+. Im Bereich *Zusammenfassung* lesen Sie das Feld Ursache für das Ereignis: `The full threshold set at 90% is breached. 45.38 MB (95.54%) of 47.50 MB is used` .
+. Unter dem Bereich „Zusammenfassung“ werden die vorgeschlagenen Korrekturmaßnahmen angezeigt.
++
+[TIP]
+====
+Die vorgeschlagenen Korrekturmaßnahmen werden nur für einige Ereignisse angezeigt, daher wird dieser Bereich nicht für alle Ereignistypen angezeigt.
+
+====
++
+Sie klicken sich durch die Liste der vorgeschlagenen Aktionen, die Sie zur Behebung des Ereignisses „Vollspeicherplatz voll“ durchführen können:
+
++
+** Aktivieren Sie die automatische Vergrößerung auf diesem Volume.
+** Ändern Sie die Größe des Volumes.
+** Aktivieren und führen Sie die Deduplizierung auf diesem Volume aus.
+** Aktivieren und führen Sie die Komprimierung auf diesem Datenträger aus.
+
+
+. Sie entscheiden sich, die automatische Vergrößerung auf dem Volume zu aktivieren. Dazu müssen Sie jedoch den verfügbaren freien Speicherplatz auf dem übergeordneten Aggregat und die aktuelle Volume-Wachstumsrate ermitteln:
++
+.. Schauen Sie sich das übergeordnete Aggregat an. `cluster2_src_aggr1` , im Bereich *Verwandte Geräte*.
++
+[TIP]
+====
+Sie können auf den Namen des Aggregats klicken, um weitere Details zum Aggregat zu erhalten.
+
+====
++
+Sie stellen fest, dass das Aggregat über ausreichend Speicherplatz verfügt, um die automatische Volumevergrößerung zu ermöglichen.
+
+.. Sehen Sie sich oben auf der Seite das Symbol an, das auf einen kritischen Vorfall hinweist, und lesen Sie den Text unter dem Symbol.
++
+Sie stellen fest: „Tage bis zur Vollendung: Weniger als ein Tag | Tägliche Wachstumsrate: 5,4 %“.
+
+
+
+. Gehen Sie zum System Manager oder greifen Sie auf die ONTAP CLI zu, um die `volume autogrow` Option.
++
+[TIP]
+====
+Notieren Sie sich die Namen des Volumes und des Aggregats, damit Sie sie beim Aktivieren der automatischen Vergrößerung zur Hand haben.
+
+====
+. Kehren Sie nach der Lösung des Kapazitätsproblems zur Detailseite des Unified Manager-Ereignisses zurück und markieren Sie das Ereignis als gelöst.
+

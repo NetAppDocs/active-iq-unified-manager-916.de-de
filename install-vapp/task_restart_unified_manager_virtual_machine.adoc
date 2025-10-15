@@ -1,0 +1,26 @@
+---
+permalink: install-vapp/task_restart_unified_manager_virtual_machine.html 
+sidebar: sidebar 
+keywords: restart, unified manager, virtual, machine 
+summary: 'Sie können die virtuelle Maschine (VM) von Unified Manager über die Wartungskonsole neu starten.  Sie sollten die VM neu starten, nachdem Sie ein neues Sicherheitszertifikat generiert haben oder wenn ein Problem mit der VM vorliegt.' 
+---
+= Starten Sie die virtuelle Unified Manager-Maschine neu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die virtuelle Maschine (VM) von Unified Manager über die Wartungskonsole neu starten.  Sie sollten die VM neu starten, nachdem Sie ein neues Sicherheitszertifikat generiert haben oder wenn ein Problem mit der VM vorliegt.
+
+.Bevor Sie beginnen
+* Die virtuelle Appliance sollte eingeschaltet sein.
+* Sie sollten als Wartungsbenutzer bei der Unified Manager-Wartungskonsole angemeldet sein.
+
+
+Sie können die virtuelle Maschine auch von vSphere aus neu starten, indem Sie die VMware-Option „Gast neu starten“ verwenden. Siehe https://developer.broadcom.com/powercli/latest/vmware.vimautomation.core/commands/restart-vmguest/["das Cmdlet „Restart-VMGuest“ in der VMware vSphere PowerCLI CMDLET-Referenz von Broadcom."^]
+
+.Schritte
+. Wählen Sie in der Wartungskonsole *Systemkonfiguration* > *Virtuelle Maschine neu starten*.
+. Starten Sie die Unified Manager-Web-Benutzeroberfläche in Ihrem Browser und melden Sie sich an.
+

@@ -1,0 +1,35 @@
+---
+permalink: performance-checker/concept_search_for_storage_objects.html 
+sidebar: sidebar 
+keywords: search, storage, objects 
+summary: Um schnell auf ein bestimmtes Objekt zuzugreifen, können Sie das Feld „Alle Speicherobjekte durchsuchen“ oben in der Menüleiste verwenden.  Mit dieser Methode der globalen Suche über alle Objekte hinweg können Sie bestimmte Objekte schnell nach Typ finden.  Die Suchergebnisse werden nach Speicherobjekttyp sortiert und Sie können sie mithilfe des Dropdown-Menüs filtern.  Eine gültige Suche muss mindestens drei Zeichen enthalten. 
+---
+= Suche nach Speicherobjekten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um schnell auf ein bestimmtes Objekt zuzugreifen, können Sie das Feld *Alle Speicherobjekte durchsuchen* oben in der Menüleiste verwenden.  Mit dieser Methode der globalen Suche über alle Objekte hinweg können Sie bestimmte Objekte schnell nach Typ finden.  Die Suchergebnisse werden nach Speicherobjekttyp sortiert und Sie können sie mithilfe des Dropdown-Menüs filtern.  Eine gültige Suche muss mindestens drei Zeichen enthalten.
+
+Die globale Suche zeigt die Gesamtzahl der Ergebnisse an, es sind jedoch nur die ersten 25 Suchergebnisse zugänglich.  Aus diesem Grund kann die globale Suchfunktion als ein Schnellzugriffstool zum Auffinden bestimmter Elemente betrachtet werden, wenn Sie wissen, welche Elemente Sie schnell finden möchten.  Um vollständige Suchergebnisse zu erhalten, können Sie die Suche auf den Objektinventarseiten und die zugehörige Filterfunktion verwenden.
+
+Sie können auf das Dropdown-Feld klicken und *Alle* auswählen, um gleichzeitig in allen Objekten und Ereignissen zu suchen.  Alternativ können Sie auf das Dropdown-Feld klicken, um den Objekttyp anzugeben.  Geben Sie mindestens drei Zeichen des Objekt- oder Ereignisnamens in das Feld *Alle Speicherobjekte durchsuchen* ein und drücken Sie dann die *Eingabetaste*, um die Suchergebnisse anzuzeigen, z. B.:
+
+* Cluster: Clusternamen
+* Knoten: Knotennamen
+* Aggregate: Aggregatnamen
+* SVMs: SVM-Namen
+* Datenträger: Datenträgernamen
+* LUNs: LUN-Pfade
+
+
+image::../media/opm_search_field_jpg.gif[Suchfeld im Unified Manager]
+
+[NOTE]
+====
+LIFs und Ports können in der globalen Suchleiste nicht durchsucht werden.
+
+====
+In diesem Beispiel ist im Dropdown-Feld der Objekttyp „Volume“ ausgewählt.  Wenn Sie „`vol`“ in das Feld *Alle Speicherobjekte durchsuchen* eingeben, wird eine Liste aller Volumes angezeigt, deren Namen diese Zeichen enthalten.  Bei der Objektsuche können Sie auf ein beliebiges Suchergebnis klicken, um zur Performance Explorer-Seite dieses Objekts zu navigieren.  Bei der Ereignissuche gelangen Sie durch Klicken auf ein Element im Suchergebnis zur Seite mit den Ereignisdetails.

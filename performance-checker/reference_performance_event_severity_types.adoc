@@ -1,0 +1,45 @@
+---
+permalink: performance-checker/reference_performance_event_severity_types.html 
+sidebar: sidebar 
+keywords: performance, event, severity, types 
+summary: Jedem Leistungsereignis ist ein Schweregrad zugeordnet, der Ihnen dabei hilft, die Ereignisse zu priorisieren, die sofortige Korrekturmaßnahmen erfordern. 
+---
+= Schweregradtypen von Leistungsereignissen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Jedem Leistungsereignis ist ein Schweregrad zugeordnet, der Ihnen dabei hilft, die Ereignisse zu priorisieren, die sofortige Korrekturmaßnahmen erfordern.
+
+* *Kritisch*
++
+Es ist ein Leistungsereignis aufgetreten, das zu einer Dienstunterbrechung führen kann, wenn nicht sofort Abhilfemaßnahmen ergriffen werden.
+
++
+Kritische Ereignisse werden nur ab benutzerdefinierten Schwellenwerten gesendet.
+
+* *Warnung*
++
+Ein Leistungsindikator für ein Clusterobjekt liegt außerhalb des normalen Bereichs und sollte überwacht werden, um sicherzustellen, dass er nicht den kritischen Schweregrad erreicht.  Ereignisse dieses Schweregrads verursachen keine Dienstunterbrechung und es sind möglicherweise keine sofortigen Korrekturmaßnahmen erforderlich.
+
++
+Warnereignisse werden von benutzerdefinierten, systemdefinierten oder dynamischen Schwellenwerten gesendet.
+
+* *Information*
++
+Das Ereignis tritt ein, wenn ein neues Objekt erkannt oder eine Benutzeraktion ausgeführt wird.  Wenn beispielsweise ein Speicherobjekt gelöscht wird oder Konfigurationsänderungen vorgenommen werden, wird das Ereignis mit dem Schweregrad „Informationen“ generiert.
+
++
+Informationsereignisse werden direkt von ONTAP gesendet, wenn eine Konfigurationsänderung erkannt wird.
+
+
+
+Weitere Informationen finden Sie unter den folgenden Links:
+
+* link:../events/concept_what_happens_when_an_event_is_received.html["Was passiert, wenn ein Ereignis empfangen wird?"]
+* link:../events/concept_what_information_is_contained_in_an_alert_email.html["Welche Informationen sind in einer Warn-E-Mail enthalten?"]
+* link:../events/task_add_alerts.html["Hinzufügen von Warnungen"]
+* link:../events/task_add_alerts_for_performance_events.html["Hinzufügen von Warnungen für Leistungsereignisse"]
+

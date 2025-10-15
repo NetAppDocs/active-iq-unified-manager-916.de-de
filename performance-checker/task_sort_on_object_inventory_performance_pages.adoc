@@ -1,0 +1,23 @@
+---
+permalink: performance-checker/task_sort_on_object_inventory_performance_pages.html 
+sidebar: sidebar 
+keywords: sort, object, inventory, performance, pages 
+summary: Sie können alle Daten auf den Seiten zur Objektinventarleistung nach jeder Spalte in aufsteigender oder absteigender Reihenfolge sortieren.  Auf diese Weise können Sie schnell Objektinventardaten finden, was bei der Leistungsprüfung oder beim Beginn eines Fehlerbehebungsprozesses hilfreich ist. 
+---
+= Sortieren auf den Seiten zur Objektinventarleistung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können alle Daten auf den Seiten zur Objektinventarleistung nach jeder Spalte in aufsteigender oder absteigender Reihenfolge sortieren.  Auf diese Weise können Sie schnell Objektinventardaten finden, was bei der Leistungsprüfung oder beim Beginn eines Fehlerbehebungsprozesses hilfreich ist.
+
+Die zum Sortieren ausgewählte Spalte wird durch einen hervorgehobenen Spaltennamen und ein Pfeilsymbol angezeigt, das rechts neben dem Namen die Sortierrichtung angibt.  Ein Aufwärtspfeil zeigt eine aufsteigende Reihenfolge an, ein Abwärtspfeil eine absteigende Reihenfolge.  Die Standardsortierreihenfolge ist nach *Status* (Ereigniskritikalität) in absteigender Reihenfolge, wobei die kritischsten Leistungsereignisse zuerst aufgeführt werden.
+
+.Schritt
+. Sie können auf einen Spaltennamen klicken, um die Sortierreihenfolge der Spalte in aufsteigender oder absteigender Reihenfolge umzuschalten.
++
+Der Inhalt der Seite „Objektbestandsleistung“ wird basierend auf der ausgewählten Spalte in aufsteigender oder absteigender Reihenfolge sortiert.
+
+

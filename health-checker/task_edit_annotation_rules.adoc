@@ -1,0 +1,29 @@
+---
+permalink: health-checker/task_edit_annotation_rules.html 
+sidebar: sidebar 
+keywords: edit, annotation rules 
+summary: Sie können Anmerkungsregeln bearbeiten, um die Bedingungsgruppen und Bedingungen innerhalb der Bedingungsgruppe zu ändern und so Anmerkungen zu Speicherobjekten hinzuzufügen oder daraus zu entfernen. 
+---
+= Bearbeiten von Anmerkungsregeln
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Anmerkungsregeln bearbeiten, um die Bedingungsgruppen und Bedingungen innerhalb der Bedingungsgruppe zu ändern und so Anmerkungen zu Speicherobjekten hinzuzufügen oder daraus zu entfernen.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Anmerkungen werden von Speicherobjekten getrennt, wenn Sie die zugehörigen Anmerkungsregeln bearbeiten.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Anmerkungen*.
+. Wählen Sie auf der Registerkarte *Anmerkungsregeln* die Anmerkungsregel aus, die Sie bearbeiten möchten, und klicken Sie dann auf *Aktionen* > *Bearbeiten*.
+. Ändern Sie im Dialogfeld *Anmerkungsregel bearbeiten* den Regelnamen, den Anmerkungsnamen und -wert, die Bedingungsgruppen und die Bedingungen nach Bedarf.
++
+Sie können den Zielobjekttyp für eine Anmerkungsregel nicht ändern.
+
+. Klicken Sie auf *Speichern*.
+

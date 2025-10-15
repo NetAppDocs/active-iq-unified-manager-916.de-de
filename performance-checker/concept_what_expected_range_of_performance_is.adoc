@@ -1,0 +1,32 @@
+---
+permalink: performance-checker/concept_what_expected_range_of_performance_is.html 
+sidebar: sidebar 
+keywords: expected, range, performance, latency, forecast, formed 
+summary: Die Latenzprognose ist eine Vorhersage der zu einem bestimmten Zeitpunkt zu erwartenden oberen und unteren Leistungswerte.  Bei der Workload-Latenz bilden die oberen Werte die Leistungsschwelle.  Wenn der tatsächliche Wert den Leistungsschwellenwert überschreitet, löst Unified Manager ein dynamisches Leistungsereignis aus. 
+---
+= Was ist der erwartete Leistungsbereich
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Latenzprognose ist eine Vorhersage der zu einem bestimmten Zeitpunkt zu erwartenden oberen und unteren Leistungswerte.  Bei der Workload-Latenz bilden die oberen Werte die Leistungsschwelle.  Wenn der tatsächliche Wert den Leistungsschwellenwert überschreitet, löst Unified Manager ein dynamisches Leistungsereignis aus.
+
+Während der regulären Geschäftszeiten zwischen 9:00 und 17:00 Uhr überprüfen die meisten Mitarbeiter ihre E-Mails beispielsweise zwischen 9:00 und 10:30 Uhr. Die erhöhte Nachfrage nach den E-Mail-Servern bedeutet in dieser Zeit eine erhöhte Arbeitslast im Back-End-Speicher.  Mitarbeitern fällt möglicherweise eine langsame Reaktionszeit ihrer E-Mail-Clients auf.
+
+Während der Mittagspause zwischen 12:00 und 13:00 Uhr und am Ende des Arbeitstages nach 17:00 Uhr sind die meisten Mitarbeiter wahrscheinlich nicht an ihren Computern.  Die Nachfrage nach E-Mail-Servern sinkt in der Regel, wodurch auch die Nachfrage nach Back-End-Speicher sinkt.  Alternativ könnten geplante Arbeitslastvorgänge wie Speichersicherungen oder Virenscans nach 17:00 Uhr beginnen und die Aktivität auf dem Back-End-Speicher erhöhen.
+
+Über mehrere Tage hinweg bestimmt die Zunahme und Abnahme der Arbeitslastaktivität den erwarteten Aktivitätsbereich (Latenzprognose) mit oberen und unteren Grenzen für eine Arbeitslast.  Wenn die tatsächliche Arbeitslastaktivität für ein Objekt außerhalb der oberen oder unteren Grenzen liegt und für einen bestimmten Zeitraum außerhalb der Grenzen bleibt, kann dies darauf hinweisen, dass das Objekt über- oder unterbeansprucht wird.
+
+
+
+== Wie die Latenzprognose erstellt wird
+
+Unified Manager muss mindestens 3 Tage Workload-Aktivität erfassen, bevor er mit der Analyse beginnen kann und bevor die Latenzprognose für die E/A-Reaktionszeit in der GUI angezeigt werden kann.  Die erforderliche Mindestdatenerfassung berücksichtigt nicht alle Änderungen, die durch die Arbeitslastaktivität entstehen.  Nach der Erfassung der Aktivitäten der ersten drei Tage passt Unified Manager die Latenzprognose alle 24 Stunden um 0:00 Uhr an, um Änderungen der Arbeitslastaktivität widerzuspiegeln und einen genaueren dynamischen Leistungsschwellenwert festzulegen.
+
+[NOTE]
+====
+Durch die Sommerzeit (DST) wird die Systemzeit geändert, wodurch sich die Latenzprognose der Leistungsstatistiken für überwachte Workloads ändert.  Unified Manager beginnt sofort mit der Korrektur der Latenzprognose, was etwa 15 Tage dauert.  Während dieser Zeit können Sie Unified Manager weiterhin verwenden. Da Unified Manager jedoch die Latenzprognose zum Erkennen dynamischer Ereignisse verwendet, sind einige Ereignisse möglicherweise nicht genau.  Vor der Zeitumstellung erkannte Ereignisse sind davon nicht betroffen.
+
+====

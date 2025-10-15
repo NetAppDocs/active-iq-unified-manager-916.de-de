@@ -1,0 +1,26 @@
+---
+permalink: performance-checker/concept_verify_qos_policy_group.html 
+sidebar: sidebar 
+keywords: verify, volumes, qos, policy, group, unusually, high, activity 
+summary: 'Sie können die Workloads in der Quality of Service-Richtliniengruppe (QoS) mit der größten Aktivitätsänderung überprüfen, um festzustellen, ob mehr als eine Workload das Ereignis verursacht hat.  Sie können auch sehen, ob andere Workloads weiterhin das festgelegte Durchsatzlimit überschreiten oder ob sie wieder innerhalb ihres erwarteten Aktivitätsbereichs liegen.' 
+---
+= Überprüfen Sie, ob andere Volumes in der QoS-Richtliniengruppe ungewöhnlich hohe Aktivität aufweisen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Workloads in der Quality of Service (QoS)-Richtliniengruppe mit der größten Aktivitätsänderung überprüfen, um festzustellen, ob mehr als eine Workload das Ereignis verursacht hat.  Sie können auch sehen, ob andere Workloads weiterhin das festgelegte Durchsatzlimit überschreiten oder ob sie wieder innerhalb ihres erwarteten Aktivitätsbereichs liegen.
+
+Auf der Seite „Ereignisdetails“ im Abschnitt „Systemdiagnose“ können Sie die Workloads nach der höchsten Aktivitätsabweichung sortieren, um die Workloads mit der größten Aktivitätsänderung oben in der Tabelle anzuzeigen.  Bei diesen Arbeitslasten kann es sich möglicherweise um die „Bullys“ handeln, deren Aktivität den festgelegten Grenzwert überschritten hat und die möglicherweise das Ereignis verursacht haben.
+
+Sie können für jede Volume-Arbeitslast zur Seite „Arbeitslastanalyse“ navigieren, um deren IOPS-Aktivität zu überprüfen.  Wenn die Arbeitsbelastung in Zeiten mit sehr hoher Betriebsaktivität auftritt, könnte dies zu dem Ereignis beigetragen haben.  Sie können die Richtliniengruppeneinstellungen für die Arbeitslast ändern oder die Arbeitslast in eine andere Richtliniengruppe verschieben.
+
+Sie können den ONTAP System Manager oder die ONTAP CLI-Befehle wie folgt verwenden, um Richtliniengruppen zu verwalten:
+
+* Erstellen Sie eine Richtliniengruppe.
+* Fügen Sie Workloads einer Richtliniengruppe hinzu oder entfernen Sie sie.
+* Verschieben Sie eine Arbeitslast zwischen Richtliniengruppen.
+* Ändern Sie die Durchsatzgrenze einer Richtliniengruppe.
+

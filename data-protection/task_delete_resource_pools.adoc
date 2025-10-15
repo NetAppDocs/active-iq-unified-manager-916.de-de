@@ -1,0 +1,28 @@
+---
+permalink: data-protection/task_delete_resource_pools.html 
+sidebar: sidebar 
+keywords: delete, resource, pools 
+summary: Sie können Ressourcenpools löschen, wenn sie nicht mehr benötigt werden.  Beispielsweise möchten Sie möglicherweise die Mitgliedsaggregate eines Ressourcenpools auf mehrere andere Ressourcenpools umverteilen, wodurch der ursprüngliche Ressourcenpool obsolet wird. 
+---
+= Ressourcenpools löschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Ressourcenpools löschen, wenn sie nicht mehr benötigt werden.  Beispielsweise möchten Sie möglicherweise die Mitgliedsaggregate eines Ressourcenpools auf mehrere andere Ressourcenpools umverteilen, wodurch der ursprüngliche Ressourcenpool obsolet wird.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Die Schaltfläche *Löschen* ist nur aktiviert, wenn mindestens ein Ressourcenpool ausgewählt ist.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Schutz* > *Ressourcenpools*.
+. Wählen Sie den Ressourcenpool aus, den Sie löschen möchten.
+. Klicken Sie auf *Löschen*.
++
+Der Ressourcenpool wird aus der Ressourcenpoolliste entfernt und seine Aggregate werden aus der Mitgliederliste entfernt.
+
+

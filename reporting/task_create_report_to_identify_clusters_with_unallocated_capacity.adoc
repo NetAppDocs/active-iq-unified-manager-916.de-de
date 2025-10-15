@@ -1,0 +1,42 @@
+---
+permalink: reporting/task_create_report_to_identify_clusters_with_unallocated_capacity.html 
+sidebar: sidebar 
+keywords: clusters, unallocated, LUN, capacity, indentify, additional, workloads 
+summary: 'Sie können einen Bericht erstellen, um die Cluster mit der größten nicht zugewiesenen LUN-Kapazität (über 0,5 TB) zu ermitteln und so zu ermitteln, wo Sie zusätzliche Workloads hinzufügen können.' 
+---
+= Erstellen Sie einen Bericht, um Cluster mit der größten nicht zugewiesenen LUN-Kapazität zu identifizieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um die Cluster mit der größten nicht zugewiesenen LUN-Kapazität (über 0,5 TB) zu ermitteln und so zu ermitteln, wo Sie zusätzliche Workloads hinzufügen können.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Führen Sie die folgenden Schritte aus, um eine benutzerdefinierte Ansicht zu erstellen, die Cluster mit der größten nicht zugewiesenen LUN-Kapazität anzeigt, und planen Sie dann die Generierung eines Berichts für diese Ansicht.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Cluster*.
+. Wählen Sie im Menü „Ansicht“ die Option „Kapazität“ > „Alle Cluster“ aus.
+. Wählen Sie *Anzeigen/Ausblenden*, um alle Spalten zu entfernen, die Sie nicht im Bericht haben möchten.
+. Ziehen Sie die Spalte „Nicht zugewiesene LUN-Kapazität“ in die Nähe der Spalte „HA-Paar“.
+. Klicken Sie auf das Filtersymbol, fügen Sie den folgenden Filter hinzu und klicken Sie dann auf *Filter anwenden*:
++
+** Nicht zugewiesene LUN-Kapazität größer als 0,5 TB
+
+
+. Klicken Sie oben auf die Spalte „Nicht zugewiesene LUN-Kapazität“, um die Ergebnisse nach der größten Menge nicht zugewiesener LUN-Kapazität zu sortieren.
+. Speichern Sie die Ansicht unter einem bestimmten Namen, der widerspiegelt, was die Ansicht anzeigt, z. B. „Größte nicht zugewiesene LUN-Kapazität“, und klicken Sie auf das Häkchen (image:../media/blue_check.gif[""] ).
+. Klicken Sie auf der Inventarseite auf die Schaltfläche *Geplante Berichte*.
+. Klicken Sie auf *Zeitplan hinzufügen*, um der Seite „Berichtszeitpläne“ eine neue Zeile hinzuzufügen, damit Sie die Zeitplanmerkmale für den neuen Bericht definieren können.
+. Geben Sie einen Namen für den Berichtszeitplan ein und füllen Sie die anderen Berichtsfelder aus. Klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""] ) am Ende der Zeile.
++
+Der Bericht wird sofort testweise versendet.  Anschließend wird der Bericht generiert und in der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Basierend auf den im Bericht angezeigten Ergebnissen möchten Sie möglicherweise die nicht zugewiesene LUN-Kapazität des Clusters verwenden.

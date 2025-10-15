@@ -1,0 +1,44 @@
+---
+permalink: events/reference_inodes_events.html 
+sidebar: sidebar 
+keywords: inodes, events, impact area, capacity 
+summary: Inode-Ereignisse liefern Informationen, wenn der Inode voll oder fast voll ist, sodass Sie ihn auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad. 
+---
+= Inodes-Ereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Inode-Ereignisse liefern Informationen, wenn der Inode voll oder fast voll ist, sodass Sie ihn auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad.
+
+
+
+== Wirkungsbereich: Kapazität
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+Inodes fast voll (ocumEvtInodesAlmostFull)
+ a| 
+Risiko
+ a| 
+Volumen
+ a| 
+Warnung
+
+
+
+ a| 
+Inodes voll (ocumEvtInodesFull)
+ a| 
+Risiko
+ a| 
+Volumen
+ a| 
+Fehler
+
+|===

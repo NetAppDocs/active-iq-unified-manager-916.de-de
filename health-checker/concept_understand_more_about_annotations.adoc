@@ -1,0 +1,14 @@
+---
+permalink: health-checker/concept_understand_more_about_annotations.html 
+sidebar: sidebar 
+keywords: understand, annotations 
+summary: Wenn Sie die Konzepte zu Anmerkungen verstehen, können Sie die Ereignisse im Zusammenhang mit den Speicherobjekten in Ihrer Umgebung besser verwalten. 
+---
+= Erfahren Sie mehr über Anmerkungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie die Konzepte zu Anmerkungen verstehen, können Sie die Ereignisse im Zusammenhang mit den Speicherobjekten in Ihrer Umgebung besser verwalten.

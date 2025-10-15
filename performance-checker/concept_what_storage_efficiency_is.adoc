@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/concept_what_storage_efficiency_is.html 
+sidebar: sidebar 
+keywords: storage, efficiency 
+summary: 'Durch Speichereffizienz können Sie die maximale Datenmenge zu den niedrigsten Kosten speichern und schnelles Datenwachstum bewältigen, während Sie weniger Speicherplatz verbrauchen.  Die NetApp Strategie für Speichereffizienz basiert auf der integrierten Grundlage der Speichervirtualisierung und des einheitlichen Speichers, die durch das zentrale ONTAP Betriebssystem und das Write Anywhere File Layout (WAFL)-Dateisystem bereitgestellt werden.' 
+---
+= Was ist Speichereffizienz?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Durch Speichereffizienz können Sie die maximale Datenmenge zu den niedrigsten Kosten speichern und schnelles Datenwachstum bewältigen, während Sie weniger Speicherplatz verbrauchen.  Die NetApp Strategie für Speichereffizienz basiert auf der integrierten Grundlage der Speichervirtualisierung und des einheitlichen Speichers, die durch das zentrale ONTAP Betriebssystem und das Write Anywhere File Layout (WAFL)-Dateisystem bereitgestellt werden.
+
+Zur Speichereffizienz gehört der Einsatz von Technologien wie Thin Provisioning, Snapshot Copy, Deduplizierung, Datenkomprimierung, FlexClone, Thin Replication mit SnapVault und Volume SnapMirror, RAID-DP, Flash Cache, Flash Pool Aggregate und FabricPool-fähige Aggregate, die dazu beitragen, die Speicherauslastung zu erhöhen und die Speicherkosten zu senken.
+
+Die einheitliche Speicherarchitektur ermöglicht Ihnen die effiziente Konsolidierung eines Storage Area Network (SAN), eines Network Attached Storage (NAS) und eines Sekundärspeichers auf einer einzigen Plattform.
+
+Festplattenlaufwerke mit hoher Dichte, wie z. B. SATA-Laufwerke (Serial Advanced Technology Attachment), die innerhalb eines Flash Pool-Aggregats oder mit Flash Cache- und RAID-DP-Technologie konfiguriert sind, steigern die Effizienz, ohne die Leistung und Ausfallsicherheit zu beeinträchtigen.
+
+Ein FabricPool-fähiges Aggregat umfasst ein reines SSD-Aggregat oder HDD-Aggregat (ab ONTAP 9.8) als lokale Leistungsebene und einen Objektspeicher, den Sie als Cloud-Ebene angeben.  Durch die Konfiguration von FabricPool können Sie verwalten, auf welcher Speicherebene (der lokalen Ebene oder der Cloud-Ebene) Daten gespeichert werden sollen, je nachdem, ob häufig auf die Daten zugegriffen wird.
+
+Technologien wie Thin Provisioning, Snapshot Copy, Deduplizierung, Datenkomprimierung, Thin Replication mit SnapVault und Volume SnapMirror sowie FlexClone bieten größere Einsparungen.  Sie können diese Technologien einzeln oder zusammen verwenden, um maximale Speichereffizienz zu erreichen.

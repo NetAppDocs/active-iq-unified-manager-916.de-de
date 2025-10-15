@@ -1,0 +1,73 @@
+---
+permalink: data-protection/reference_relationship_last_1_month_transfer_status_view.html 
+sidebar: sidebar 
+keywords: relationship, 1 month, transfer status, view 
+summary: 'Mit der Ansicht „Beziehung: Übertragungsstatus des letzten Monats“ können Sie die Übertragungstrends über einen bestimmten Zeitraum für Volumes und Speicher-VMs in asynchronen Beziehungen analysieren.  Auf dieser Seite wird auch angezeigt, ob die Übertragung erfolgreich war oder fehlgeschlagen ist.' 
+---
+= Beziehung: Ansicht des Übertragungsstatus des letzten Monats
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit der Ansicht „Beziehung: Übertragungsstatus des letzten Monats“ können Sie die Übertragungstrends über einen bestimmten Zeitraum für Volumes und Speicher-VMs in asynchronen Beziehungen analysieren.  Auf dieser Seite wird auch angezeigt, ob die Übertragung erfolgreich war oder fehlgeschlagen ist.
+
+Mit den Steuerelementen oben auf der Seite können Sie Suchen durchführen, um bestimmte Objekte zu finden, Filter erstellen und anwenden, um die Liste der angezeigten Daten einzugrenzen, Spalten auf der Seite hinzufügen/entfernen/neu anordnen und die Daten auf der Seite in ein `.csv` , `.pdf` , oder `.xlsx` Datei.  Nachdem Sie die Seite angepasst haben, können Sie die Ergebnisse als benutzerdefinierte Ansicht speichern und dann einen Bericht dieser Daten planen, der regelmäßig generiert und per E-Mail versendet wird.  Sie können die Option *Filter* verwenden, um nur ausgewählte Speichersysteme anzuzeigen, z. B. nur Volumes oder nur Speicher-VMs.  Derselbe Bericht wird auf der Speicherseite und nur für die ausgewählte Speichereinheit angezeigt.  Wenn Sie beispielsweise Volume-Beziehungen anzeigen möchten, können Sie entweder über das Menü *Speicher* > *Speicher-VMs* > *Beziehung: Übertragungsstatus des letzten Monats* oder über das Menü *Schutz* > *Beziehungen* > *Beziehung: Übertragungsstatus des letzten Monats* auf den Bericht „Beziehung: Übertragungsstatus des letzten Monats“ für die Storage-VMs zugreifen und den *Filter* verwenden, um nur Daten für Volumes anzuzeigen.
+
+* *Quellvolumen*
++
+Zeigt den Namen des Quellvolumes an.
+
+* *Zielvolumen*
++
+Zeigt den Namen des Zielvolumes an.
+
+* *Operationstyp*
++
+Zeigt die Art der Volumenübertragung an.
+
+* *Operationsergebnis*
++
+Zeigt an, ob die Volumeübertragung erfolgreich war.
+
+* *Übertragungsstartzeit*
++
+Zeigt die Startzeit der Volumeübertragung an.
+
+* *Endzeit der Übertragung*
++
+Zeigt die Endzeit der Volumeübertragung an.
+
+* *Transferdauer*
++
+Zeigt die Zeit (in Stunden) an, die zum Abschließen der Volumeübertragung benötigt wurde.
+
+* *Übertragungsgröße*
++
+Zeigt die Größe (in MB) des übertragenen Datenträgers an.
+
+* *Quelle SVM*
++
+Zeigt den Namen der virtuellen Speichermaschine (SVM) an.
+
+* *Quellcluster*
++
+Zeigt den Namen des Quellclusters an.
+
+* *Ziel-SVM*
++
+Zeigt den Ziel-SVM-Namen an.
+
+* *Zielcluster*
++
+Zeigt den Namen des Zielclusters an.
+
+
+
+*Verwandte Informationen*
+
+* Informationen zur Ansicht *Beziehung: Alle Beziehungen* finden Sie unterlink:../data-protection/reference_relationship_all_relationships_view.html["Beziehung: Ansicht „Alle Beziehungen“"] .
+* Informationen zur Ansicht *Relationship: MetroCluster* finden Sie unterlink:../storage-mgmt/task_monitor_metrocluster_configurations.html["Überwachung von MetroCluster -Konfigurationen"] .
+* Informationen zur Ansicht *Beziehung: Alle Beziehungen* finden Sie unterlink:../data-protection/reference_relationship_last_1_month_transfer_rate_view.html["Beziehung: Ansicht der Übertragungsrate des letzten Monats"] .
+

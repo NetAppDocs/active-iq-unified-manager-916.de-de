@@ -1,0 +1,31 @@
+---
+permalink: storage-mgmt/task_view_status_of_management_actions_to_fix.html 
+sidebar: sidebar 
+keywords: view, status, management, actions, chosen, fix 
+summary: Sie können den Status aller Verwaltungsaktionen, die Sie zur Behebung ausgewählt haben, auf der Seite „Verwaltungsaktionen“ anzeigen.  Die meisten Aktionen werden ziemlich schnell als „Abgeschlossen“ angezeigt, nachdem Unified Manager den ONTAP -Befehl an den Cluster gesendet hat.  Einige Aktionen, beispielsweise das Verschieben eines Volumes, können jedoch länger dauern. 
+---
+= Zeigen Sie den Status der Verwaltungsaktionen an, die Sie beheben möchten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Status aller Verwaltungsaktionen, die Sie zur Behebung ausgewählt haben, auf der Seite „Verwaltungsaktionen“ anzeigen.  Die meisten Aktionen werden ziemlich schnell als *Abgeschlossen* angezeigt, nachdem Unified Manager den ONTAP -Befehl an den Cluster gesendet hat.  Einige Aktionen, beispielsweise das Verschieben eines Volumes, können jedoch länger dauern.
+
+Auf der Seite „Verwaltungsaktionen“ stehen drei Filter zur Verfügung:
+
+* *Abgeschlossen* zeigt sowohl erfolgreich abgeschlossene als auch fehlgeschlagene Verwaltungsaktionen an.  *Fehlgeschlagene* Aktionen geben einen Grund für den Fehler an, sodass Sie das Problem manuell beheben können.
+* *In Bearbeitung* zeigt sowohl die Verwaltungsmaßnahmen an, die gerade umgesetzt werden, als auch die, deren Umsetzung geplant ist.
+* *Empfohlen* zeigt alle Verwaltungsaktionen an, die derzeit für alle überwachten Cluster aktiv sind.
+
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Verwaltungsaktionen*.  Alternativ klicken Sie aufimage:../media/more_icon.gif["Mehr-Symbol"] oben im Bereich *Verwaltungsaktionen* auf dem *Dashboard* und wählen Sie die Ansicht aus, die Sie anzeigen möchten.
++
+Die Seite „Verwaltungsaktionen“ wird angezeigt.
+
+. Sie können auf das Caret-Symbol neben der Verwaltungsaktion im Feld *Beschreibung* klicken, um Details zum Problem und den Befehl anzuzeigen, der zum Beheben des Problems verwendet wird.
+. Um alle *fehlgeschlagenen* Aktionen anzuzeigen, sortieren Sie nach der Spalte *Status* in der Ansicht *Abgeschlossen*.  Sie können das *Filter*-Tool für denselben Zweck verwenden.
+. Wenn Sie weitere Informationen zu einer fehlgeschlagenen Verwaltungsaktion anzeigen möchten oder wenn Sie eine empfohlene Verwaltungsaktion korrigieren möchten, können Sie im erweiterten Bereich auf *Ereignisdetails anzeigen* klicken, nachdem Sie auf das Caret-Symbol neben der Verwaltungsaktion geklickt haben.  Auf dieser Seite ist eine Schaltfläche „Fix It“ verfügbar.
+

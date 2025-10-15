@@ -1,0 +1,39 @@
+---
+permalink: install-vapp/task_download_unified_manager_ova_file.html 
+sidebar: sidebar 
+keywords: download, unified manager, installation, file 
+summary: Laden Sie die Installationsdatei für Unified Manager von der NetApp Support-Site herunter, um Unified Manager als virtuelle Appliance bereitzustellen. 
+---
+= Laden Sie die Unified Manager-Installationsdatei herunter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Laden Sie die Installationsdatei für Unified Manager von der NetApp Support-Site herunter, um Unified Manager als virtuelle Appliance bereitzustellen.
+
+.Bevor Sie beginnen
+Sie sollten über die Anmeldeinformationen für die NetApp Support-Site verfügen.
+
+Die Installationsdatei ist eine `.tar` Datei, die ein Stammzertifikat enthält, ein `README` Datei und eine `OVA` Datei mit der für eine virtuelle Appliance konfigurierten Unified Manager-Software.
+
+.Schritte
+. Melden Sie sich bei der NetApp Support-Site an und navigieren Sie zur Download-Seite für Unified Manager:
++
+https://mysupport.netapp.com/site/products/all/details/activeiq-unified-manager/downloads-tab["NetApp Support Site"]
+
+. Wählen Sie die erforderliche Version von Unified Manager aus und akzeptieren Sie die Endbenutzer-Lizenzvereinbarung (EULA).
+. Laden Sie die `.tar` Datei für die VMware vSphere-Installation in ein lokales Verzeichnis oder Netzwerkverzeichnis, auf das Ihr vSphere-Client zugreifen kann.
+. Überprüfen Sie die Prüfsumme, um sicherzustellen, dass die Software korrekt heruntergeladen wurde.
+. Navigieren Sie zu dem Verzeichnis, in das Sie die `.tar` Datei und geben Sie den folgenden Befehl in Ihr Terminalfenster ein, um das Unified Manager-Paket zu erweitern:
++
+[listing]
+----
+tar -xvzf ActiveIQUnifiedManager-<version>.tar.gz
+----
++
+Die erforderlichen `OVA` Datei, ein Stammzertifikat und ein `README` Datei für Unified Manager werden in das Zielverzeichnis entpackt.
+
+. Überprüfen Sie die Integrität der `OVA` Datei, indem Sie die Schritte in der `README` Datei.
+

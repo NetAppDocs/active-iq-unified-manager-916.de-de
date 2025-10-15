@@ -1,0 +1,107 @@
+---
+permalink: data-protection/reference_restore_dialog_box.html 
+sidebar: sidebar 
+keywords: restore, dialog box 
+summary: Sie können das Dialogfeld „Wiederherstellen“ verwenden, um Daten aus einer bestimmten Snapshot-Kopie auf einem Volume wiederherzustellen. 
+---
+= Dialogfeld „Wiederherstellen“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das Dialogfeld „Wiederherstellen“ verwenden, um Daten aus einer bestimmten Snapshot-Kopie auf einem Volume wiederherzustellen.
+
+
+
+== Wiederherstellen von
+
+Im Bereich „Wiederherstellen von“ können Sie angeben, von wo aus Sie die Daten wiederherstellen möchten.
+
+* *Volumen*
++
+Gibt das Volume an, von dem Sie Daten wiederherstellen möchten.  Standardmäßig ist das Volume ausgewählt, auf dem Sie die Wiederherstellungsaktion gestartet haben.  Sie können ein anderes Volume aus der Dropdown-Liste auswählen, die alle Volumes mit Schutzbeziehungen zu dem Volume enthält, auf dem Sie die Wiederherstellungsaktion initiiert haben.
+
+* *Schnappschusskopie*
++
+Gibt an, welche Snapshot-Kopie Sie zum Wiederherstellen der Daten verwenden möchten.  Standardmäßig ist die aktuellste Snapshot-Kopie ausgewählt.  Sie können auch eine andere Snapshot-Kopie aus der Dropdown-Liste auswählen.  Die Snapshot-Kopierliste ändert sich je nach ausgewähltem Volume.
+
+* *Listen Sie maximal 995 Dateien und Verzeichnisse auf*
++
+Standardmäßig werden maximal 995 Objekte in der Liste angezeigt.  Sie können dieses Kontrollkästchen deaktivieren, wenn Sie alle Objekte innerhalb des ausgewählten Volumes anzeigen möchten.  Dieser Vorgang kann einige Zeit dauern, wenn die Anzahl der Elemente sehr groß ist.
+
+
+
+
+
+== Auswählen der wiederherzustellenden Elemente
+
+Im Bereich „Elemente zum Wiederherstellen auswählen“ können Sie entweder das gesamte Volume oder bestimmte Dateien und Ordner auswählen, die Sie wiederherstellen möchten.  Sie können maximal 10 Dateien, Ordner oder eine Kombination aus beidem auswählen.  Wenn die maximale Anzahl von Elementen ausgewählt ist, werden die Kontrollkästchen zur Elementauswahl deaktiviert.
+
+* *Pfadfeld*
++
+Zeigt den Pfad zu den Daten an, die Sie wiederherstellen möchten.  Sie können entweder zu dem Ordner und den Dateien navigieren, die Sie wiederherstellen möchten, oder den Pfad eingeben.  Dieses Feld ist leer, bis Sie einen Pfad auswählen oder eingeben.  Klickenimage:../media/icon_upfolder.gif["Upfolder-Symbol"] Nachdem Sie einen Pfad ausgewählt haben, gelangen Sie in der Verzeichnisstruktur eine Ebene nach oben.
+
+* *Ordner- und Dateiliste*
++
+Zeigt den Inhalt des von Ihnen eingegebenen Pfads an.  Standardmäßig wird zunächst der Stammordner angezeigt.  Durch Klicken auf einen Ordnernamen wird der Inhalt des Ordners angezeigt.
+
+
+
+Sie können die wiederherzustellenden Elemente wie folgt auswählen:
+
+* Wenn Sie den Pfad mit einem bestimmten Dateinamen im Pfadfeld eingeben, wird die angegebene Datei in den Ordnern und Dateien angezeigt.
+* Wenn Sie einen Pfad eingeben, ohne eine bestimmte Datei anzugeben, wird der Inhalt des Ordners in der Liste „Ordner und Dateien“ angezeigt und Sie können bis zu 10 Dateien, Ordner oder eine Kombination aus beidem zur Wiederherstellung auswählen.
++
+Wenn ein Ordner mehr als 995 Elemente enthält, wird eine Meldung angezeigt, die darauf hinweist, dass zu viele Elemente zum Anzeigen vorhanden sind. Wenn Sie mit dem Vorgang fortfahren, werden alle Elemente im angegebenen Ordner wiederhergestellt.  Sie können das Kontrollkästchen „Maximal 995 Dateien und Verzeichnisse auflisten“ deaktivieren, wenn Sie alle Objekte innerhalb des ausgewählten Volumes anzeigen möchten.
+
+
+
+[NOTE]
+====
+Sie können NTFS-Dateistreams nicht wiederherstellen.
+
+====
+
+
+== Wiederherstellen in
+
+Im Bereich „Wiederherstellen nach“ können Sie angeben, wo Sie die Daten wiederherstellen möchten.
+
+* *Ursprünglicher Speicherort in Volume_Name*
++
+Stellt die ausgewählten Daten in dem Verzeichnis auf der Quelle wieder her, aus dem die Daten ursprünglich gesichert wurden.
+
+* *Alternativer Standort*
++
+Stellt die ausgewählten Daten an einem neuen Speicherort wieder her:
+
++
+** Wiederherstellungspfad
++
+Gibt einen alternativen Pfad zum Wiederherstellen der ausgewählten Daten an.  Der Pfad muss bereits vorhanden sein.  Sie können die Schaltfläche *Durchsuchen* verwenden, um zu dem Speicherort zu navigieren, an dem die Daten wiederhergestellt werden sollen, oder Sie können den Pfad manuell im Format „Cluster://svm/Volume/Pfad“ eingeben.
+
+** Verzeichnishierarchie beibehalten
++
+Wenn diese Option aktiviert ist, bleibt die Struktur der Originaldatei oder des Originalverzeichnisses erhalten.  Wenn die Quelle beispielsweise /A/B/C/myFile.txt und das Ziel /X/Y/Z ist, stellt Unified Manager die Daten mithilfe der folgenden Verzeichnisstruktur auf dem Ziel wieder her: /X/Y/Z/A/B/C/myFile.txt.
+
+
+
+
+
+
+
+== Befehlsschaltflächen
+
+Mit den Befehlsschaltflächen können Sie die folgenden Aufgaben ausführen:
+
+* *Stornieren*
++
+Verwirft Ihre Auswahl und schließt das Dialogfeld „Wiederherstellen“.
+
+* *Wiederherstellen*
++
+Wendet Ihre Auswahl an und beginnt mit dem Wiederherstellungsprozess.
+
+

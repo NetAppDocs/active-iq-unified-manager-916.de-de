@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept_use_performance_capacity_used_counter.html 
+sidebar: sidebar 
+keywords: performance, capacity, counter, manage, performance 
+summary: Normalerweise möchten Unternehmen mit einem Prozentsatz der genutzten Leistungskapazität von unter 100 arbeiten, damit die Ressourcen effizient genutzt werden und gleichzeitig zusätzliche Leistungskapazität zur Unterstützung der Nachfrage in Spitzenzeiten reserviert bleibt.  Mithilfe von Schwellenwertrichtlinien können Sie anpassen, wann Warnmeldungen für Werte zur Kapazitätsauslastung bei hoher Leistung gesendet werden. 
+---
+= Verwenden Sie den Leistungskapazitätszähler, um die Leistung zu verwalten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Normalerweise möchten Unternehmen mit einem Prozentsatz der genutzten Leistungskapazität von unter 100 arbeiten, damit die Ressourcen effizient genutzt werden und gleichzeitig zusätzliche Leistungskapazität zur Unterstützung der Nachfrage in Spitzenzeiten reserviert bleibt.  Mithilfe von Schwellenwertrichtlinien können Sie anpassen, wann Warnmeldungen für Werte zur Kapazitätsauslastung bei hoher Leistung gesendet werden.
+
+Sie können anhand Ihrer Leistungsanforderungen konkrete Ziele festlegen.  Beispielsweise könnten Finanzdienstleistungsunternehmen mehr Leistungskapazität reservieren, um die rechtzeitige Ausführung von Handelsgeschäften zu gewährleisten.  Diese Unternehmen möchten möglicherweise Schwellenwerte für die genutzte Leistungskapazität im Bereich von 70–80 Prozent festlegen.  Fertigungsunternehmen mit geringeren Margen könnten sich dafür entscheiden, weniger Leistungskapazität zu reservieren, wenn sie bereit sind, Leistungsrisiken einzugehen, um die IT-Kosten besser im Griff zu haben.  Diese Unternehmen legen möglicherweise Schwellenwerte für die Auslastung der Leistungskapazität im Bereich von 85 bis 95 Prozent fest.
+
+Wenn der Wert der genutzten Leistungskapazität den in einer benutzerdefinierten Schwellenwertrichtlinie festgelegten Prozentsatz überschreitet, sendet Unified Manager eine Warn-E-Mail und fügt das Ereignis der Seite „Ereignisinventar“ hinzu.  Auf diese Weise können Sie potenzielle Probleme beheben, bevor sie die Leistung beeinträchtigen.  Diese Ereignisse können auch als Indikatoren dafür verwendet werden, dass Sie Workload-Verschiebungen und Änderungen innerhalb Ihrer Knoten und Aggregate vornehmen müssen.

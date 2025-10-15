@@ -1,0 +1,16 @@
+---
+permalink: install-windows/concept_what_unified_manager_server_does.html 
+sidebar: sidebar 
+keywords: unified manager, server 
+summary: 'Die Unified Manager-Serverinfrastruktur besteht aus einer Datenerfassungseinheit, einer Datenbank und einem Anwendungsserver.  Es bietet Infrastrukturdienste wie Erkennung, Überwachung, rollenbasierte Zugriffskontrolle (RBAC), Auditing und Protokollierung.' 
+---
+= Was der Unified Manager-Server macht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Unified Manager-Serverinfrastruktur besteht aus einer Datenerfassungseinheit, einer Datenbank und einem Anwendungsserver.  Es bietet Infrastrukturdienste wie Erkennung, Überwachung, rollenbasierte Zugriffskontrolle (RBAC), Auditing und Protokollierung.
+
+Unified Manager sammelt Clusterinformationen, speichert die Daten in der Datenbank und analysiert die Daten, um festzustellen, ob Clusterprobleme vorliegen.

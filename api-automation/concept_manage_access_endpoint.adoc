@@ -1,0 +1,98 @@
+---
+permalink: api-automation/concept_manage_access_endpoint.html 
+sidebar: sidebar 
+keywords: manage, endpoints, access 
+summary: 'Sie müssen Zugriffsendpunkte oder logische Schnittstellen (LIFs) erstellen, die für die Bereitstellung von Storage Virtual Machines (SVMs), LUNs und Dateifreigaben erforderlich sind.  Sie können die Zugriffsendpunkte für die SVMs, LUNs oder Dateifreigaben in Ihrer Active IQ Unified Manager Umgebung anzeigen, erstellen, ändern und löschen.' 
+---
+= Verwalten von Zugriffsendpunkten mithilfe von APIs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen Zugriffsendpunkte oder logische Schnittstellen (LIFs) erstellen, die für die Bereitstellung von Storage Virtual Machines (SVMs), LUNs und Dateifreigaben erforderlich sind.  Sie können die Zugriffsendpunkte für die SVMs, LUNs oder Dateifreigaben in Ihrer Active IQ Unified Manager Umgebung anzeigen, erstellen, ändern und löschen.
+
+
+
+== Zugriffsendpunkte anzeigen
+
+Sie können eine Liste der Zugriffsendpunkte in Ihrer Unified Manager-Umgebung mithilfe der folgenden Methode anzeigen.  Um eine Liste der Zugriffsendpunkte einer bestimmten SVM, LUN oder Dateifreigabe abzufragen, müssen Sie die eindeutige Kennung für die SVM, LUN oder Dateifreigabe eingeben.  Sie können auch den eindeutigen Zugriffsendpunktschlüssel eingeben, um die Details des jeweiligen Zugriffsendpunkts abzurufen.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Speicheranbieter
+ a| 
+ERHALTEN
+ a| 
+`/storage-provider/access-endpoints`
+
+`/storage-provider/access-endpoints/\{key}`
+
+|===
+
+
+== Hinzufügen von Zugriffsendpunkten
+
+Sie können benutzerdefinierte Zugriffsendpunkte erstellen und ihnen die erforderlichen Eigenschaften zuweisen.  Sie müssen die Details des Zugriffsendpunkts, den Sie erstellen möchten, als Eingabeparameter eingeben.  Sie können diese API oder den System Manager oder die ONTAP CLI verwenden, um auf jedem Knoten einen Zugriffsendpunkt zu erstellen.  Für die Erstellung von Zugriffsendpunkten werden sowohl IPv4- als auch IPv6-Adressen unterstützt.
+
+[NOTE]
+====
+Sie müssen Ihre SVM mit einer Mindestanzahl von Zugriffsendpunkten pro Knoten konfigurieren, um die Bereitstellung von LUNs und Dateifreigaben erfolgreich zu gestalten.  Sie sollten Ihre SVM mit mindestens zwei Zugriffsendpunkten pro Knoten konfigurieren, von denen einer das CIFS- und/oder NFS-Protokoll und der andere das iSCSI- oder FCP-Protokoll unterstützt.
+
+====
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Speicheranbieter
+ a| 
+POST
+ a| 
+`/storage-provider/access-endpoints`
+
+|===
+
+
+== Löschen von Zugriffsendpunkten
+
+Sie können einen bestimmten Zugriffsendpunkt mit der folgenden Methode löschen.  Sie müssen den Zugriffsendpunktschlüssel als Eingabeparameter angeben, um einen bestimmten Zugriffsendpunkt zu löschen.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Speicheranbieter
+ a| 
+LÖSCHEN
+ a| 
+`/storage-provider/access-endpoints/\{key}`
+
+|===
+
+
+== Zugriffsendpunkte ändern
+
+Sie können einen Zugriffsendpunkt ändern und seine Eigenschaften aktualisieren, indem Sie die folgende Methode verwenden.  Sie müssen den Zugriffsendpunktschlüssel angeben, um einen bestimmten Zugriffsendpunkt zu ändern.  Sie müssen außerdem die Eigenschaft, die Sie aktualisieren möchten, zusammen mit ihrem Wert eingeben.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Speicheranbieter
+ a| 
+PATCH
+ a| 
+`/storage-provider/access-endpoints/\{key}`
+
+|===

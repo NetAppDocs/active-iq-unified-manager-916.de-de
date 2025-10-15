@@ -1,0 +1,16 @@
+---
+permalink: config/concept_what_diagnostic_user_does.html 
+sidebar: sidebar 
+keywords: diagnostic, user, capabilities 
+summary: Der Zweck des Diagnosezugriffs besteht darin, dem technischen Support die Unterstützung bei der Fehlerbehebung zu ermöglichen. Sie sollten ihn nur verwenden, wenn Sie vom technischen Support dazu aufgefordert werden. 
+---
+= Diagnosefunktionen für Benutzer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Zweck des Diagnosezugriffs besteht darin, dem technischen Support die Unterstützung bei der Fehlerbehebung zu ermöglichen. Sie sollten ihn nur verwenden, wenn Sie vom technischen Support dazu aufgefordert werden.
+
+Der Diagnosebenutzer kann auf Anweisung des technischen Supports Befehle auf Betriebssystemebene zur Fehlerbehebung ausführen.

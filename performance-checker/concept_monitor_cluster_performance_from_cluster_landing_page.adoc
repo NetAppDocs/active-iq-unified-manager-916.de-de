@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept_monitor_cluster_performance_from_cluster_landing_page.html 
+sidebar: sidebar 
+keywords: monitor, cluster, performance, performance, cluster, landing, page 
+summary: Auf der Zielseite des Leistungsclusters wird der allgemeine Leistungsstatus eines ausgewählten Clusters angezeigt, der von einer Instanz von Unified Manager überwacht wird.  Auf dieser Seite können Sie die Gesamtleistung eines bestimmten Clusters beurteilen und erkannte clusterspezifische Ereignisse schnell notieren, lokalisieren oder zur Lösung zuweisen. 
+---
+= Überwachen Sie die Clusterleistung von der Zielseite des Leistungsclusters aus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Zielseite des Leistungsclusters wird der allgemeine Leistungsstatus eines ausgewählten Clusters angezeigt, der von einer Instanz von Unified Manager überwacht wird.  Auf dieser Seite können Sie die Gesamtleistung eines bestimmten Clusters beurteilen und erkannte clusterspezifische Ereignisse schnell notieren, lokalisieren oder zur Lösung zuweisen.

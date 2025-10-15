@@ -1,0 +1,24 @@
+---
+permalink: config/task_set_session_timeout_CLI.html 
+sidebar: sidebar 
+keywords: session timeout, CLI, maximum 
+summary: Sie können mithilfe der CLI einen maximalen Sitzungs-Timeout-Wert für Unified Manager festlegen, sodass die Sitzung nach einer bestimmten Zeit automatisch beendet wird. 
+---
+= Legen Sie das Sitzungs-Timeout über die CLI fest
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können mithilfe der CLI einen maximalen Sitzungs-Timeout-Wert für Unified Manager festlegen, sodass die Sitzung nach einer bestimmten Zeit automatisch beendet wird.  Standardmäßig ist Ihr Sitzungs-Timeout auf den Maximalwert von 4.320 Minuten (72 Stunden) eingestellt.  Dies bedeutet, dass Ihre Sitzung nach 72 Stunden automatisch endet, auch wenn Sie angemeldet sind und Unified Manager aktiv verwenden.
+
+.Informationen zu diesem Vorgang
+Sie müssen über die Rolle „Anwendungsadministrator“ verfügen.
+
+Die Einstellung für das Sitzungs-Timeout wirkt sich auf alle angemeldeten Benutzersitzungen aus.
+
+.Schritte
+. Melden Sie sich bei der Unified Manager CLI an, indem Sie den `um cli login` Befehl.  Verwenden Sie zur Authentifizierung einen gültigen Benutzernamen und ein gültiges Passwort.
+. Geben Sie den `um option set max.session.timeout.value=<in mins>` Befehl zum Ändern des Sitzungs-Timeout-Werts.
+

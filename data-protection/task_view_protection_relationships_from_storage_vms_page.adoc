@@ -1,0 +1,27 @@
+---
+permalink: data-protection/task_view_protection_relationships_from_storage_vms_page.html 
+sidebar: sidebar 
+keywords: storage vm, viewing protection relationships 
+summary: Auf der Seite „Speicher-VMs“ können Sie den Status der Notfallwiederherstellungsbeziehungen vorhandener Speicher-VMs anzeigen. 
+---
+= Schutzbeziehungen auf der Seite „Speicher-VMs“ anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Storage-VMs“ können Sie den Status der Disaster-Recovery-Beziehungen vorhandener Storage-VMs anzeigen.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Sie können auch Details der Schutzbeziehungen prüfen, einschließlich Übertragungs- und Verzögerungsstatus sowie Quell- und Zieldetails.  Sie können Berichte planen oder vorhandene Berichte im gewünschten Format herunterladen.  Mit der Schaltfläche *Anzeigen/Ausblenden* können Sie den Berichten die erforderlichen Spalten hinzufügen, da diese standardmäßig nicht angezeigt werden.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *STORAGE* > *Storage-VMs*.
+. Wählen Sie im Menü *ANSICHT* die Option *Beziehung* > *Alle Beziehungen*.
++
+Die Ansicht „Beziehung: Alle Beziehungen“ wird mit allen konfigurierten Speicher-VMs angezeigt.
+
+

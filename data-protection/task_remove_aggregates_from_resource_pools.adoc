@@ -1,0 +1,39 @@
+---
+permalink: data-protection/task_remove_aggregates_from_resource_pools.html 
+sidebar: sidebar 
+keywords: remove, aggregates, resource pools 
+summary: Sie können Aggregate aus einem vorhandenen Ressourcenpool entfernen, beispielsweise wenn Sie ein Aggregat für einen anderen Zweck verwenden möchten. 
+---
+= Entfernen von Aggregaten aus Ressourcenpools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Aggregate aus einem vorhandenen Ressourcenpool entfernen, beispielsweise wenn Sie ein Aggregat für einen anderen Zweck verwenden möchten.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Mitglieder des Ressourcenpools werden nur angezeigt, wenn ein Ressourcenpool ausgewählt ist.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Schutz* > *Ressourcenpools*.
+. Wählen Sie den Ressourcenpool aus, aus dem Sie Mitgliedsaggregate entfernen möchten.
++
+Die Liste der Mitgliedsaggregate wird im Bereich „Mitglieder“ angezeigt.
+
+. Wählen Sie ein oder mehrere Aggregate aus.
++
+Die Schaltfläche *Entfernen* ist aktiviert.
+
+. Klicken Sie auf *Entfernen*.
++
+Es wird ein Warndialogfeld angezeigt.
+
+. Klicken Sie auf *Ja*, um fortzufahren.
++
+Die ausgewählten Aggregate werden aus dem Bereich „Mitglieder“ entfernt.
+
+

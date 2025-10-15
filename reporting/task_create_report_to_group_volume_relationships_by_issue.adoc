@@ -1,0 +1,36 @@
+---
+permalink: reporting/task_create_report_to_group_volume_relationships_by_issue.html 
+sidebar: sidebar 
+keywords: create, report, group, volume, relationships, issue 
+summary: Sie können einen Bericht erstellen, der Volumenbeziehungen nach Ausgabe gruppiert. 
+---
+= Erstellen Sie einen Bericht, um Volumenbeziehungen nach Problem zu gruppieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, der Volumenbeziehungen nach Ausgabe gruppiert.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Führen Sie die folgenden Schritte aus, um eine benutzerdefinierte Ansicht zu erstellen, die Volumenbeziehungen nach Ausgabe gruppiert, und planen Sie dann die Generierung eines Berichts für diese Ansicht.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Volumes*.
+. Wählen Sie im Menü „Ansicht“ die Option „Beziehung“ > „Alle Beziehungen“ aus.
+. Wählen Sie *Anzeigen/Ausblenden*, um alle Spalten zu entfernen, die Sie nicht im Bericht haben möchten.
+. Ziehen Sie die Spalte „Unhealthy Reason“ in die Nähe der Spalte „State“.
+. Klicken Sie oben auf die Spalte „Unhealthy Reason“, um die Bände nach Problem zu gruppieren.
+. Speichern Sie die Ansicht unter einem bestimmten Namen, der widerspiegelt, was die Ansicht anzeigt, z. B. „Vol-Beziehungen nach Problem“.
+. Klicken Sie auf der Inventarseite auf die Schaltfläche *Geplante Berichte*.
+. Geben Sie einen Namen für den Berichtszeitplan ein und füllen Sie die anderen Berichtsfelder aus. Klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""] ) am Ende der Zeile.
++
+Der Bericht wird sofort testweise versendet.  Anschließend wird der Bericht generiert und in der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Anhand der im Bericht angezeigten Ergebnisse können Sie die Quelle und die Auswirkungen jedes Problemtyps untersuchen.

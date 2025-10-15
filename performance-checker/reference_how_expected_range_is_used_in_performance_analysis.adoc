@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/reference_how_expected_range_is_used_in_performance_analysis.html 
+sidebar: sidebar 
+keywords: latency, forecast, performance, analysis 
+summary: 'Unified Manager verwendet die Latenzprognose, um die typische E/A-Latenz (Reaktionszeit) der Aktivität für Ihre überwachten Workloads darzustellen.  Sie werden benachrichtigt, wenn die tatsächliche Latenz für eine Arbeitslast über den oberen Grenzen der Latenzprognose liegt. Dadurch wird ein dynamisches Leistungsereignis ausgelöst, sodass Sie das Leistungsproblem analysieren und Korrekturmaßnahmen zu seiner Behebung ergreifen können.' 
+---
+= Wie die Latenzprognose in der Leistungsanalyse verwendet wird
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager verwendet die Latenzprognose, um die typische E/A-Latenz (Reaktionszeit) der Aktivität für Ihre überwachten Workloads darzustellen.  Sie werden benachrichtigt, wenn die tatsächliche Latenz für eine Arbeitslast über den oberen Grenzen der Latenzprognose liegt. Dadurch wird ein dynamisches Leistungsereignis ausgelöst, sodass Sie das Leistungsproblem analysieren und Korrekturmaßnahmen zu seiner Behebung ergreifen können.
+
+Die Latenzprognose legt die Leistungsbasis für die Arbeitslast fest.  Im Laufe der Zeit lernt Unified Manager aus früheren Leistungsmessungen, um die erwarteten Leistungs- und Aktivitätsniveaus für die Arbeitslast vorherzusagen.  Die Obergrenze des erwarteten Bereichs legt die dynamische Leistungsschwelle fest.  Unified Manager verwendet die Basislinie, um zu bestimmen, wann die tatsächliche Latenz über oder unter einem Schwellenwert oder außerhalb der Grenzen des erwarteten Bereichs liegt.  Durch den Vergleich der Ist-Werte mit den Soll-Werten wird ein Leistungsprofil für die Arbeitsbelastung erstellt.
+
+Wenn die tatsächliche Latenz für eine Arbeitslast den dynamischen Leistungsschwellenwert überschreitet, ist die Latenz aufgrund von Konflikten bei einer Clusterkomponente hoch und die Arbeitslast wird langsamer ausgeführt als erwartet.  Auch die Leistung anderer Workloads, die dieselben Clusterkomponenten gemeinsam nutzen, kann langsamer sein als erwartet.
+
+Unified Manager analysiert das Ereignis der Schwellenwertüberschreitung und ermittelt, ob es sich bei der Aktivität um ein Leistungsereignis handelt.  Wenn die hohe Arbeitslastaktivität über einen längeren Zeitraum, beispielsweise mehrere Stunden, konstant bleibt, betrachtet Unified Manager die Aktivität als normal und passt die Latenzprognose dynamisch an, um den neuen dynamischen Leistungsschwellenwert zu bilden.
+
+Bei manchen Workloads kann die Aktivität konstant niedrig sein, sodass die Latenzprognose im Zeitverlauf keine hohe Änderungsrate aufweist.  Um die Anzahl der Ereignisse während der Analyse von Leistungsereignissen zu minimieren, löst Unified Manager nur für Volumes mit geringer Aktivität ein Ereignis aus, deren Vorgänge und Latenzen viel höher als erwartet sind.
+
+image::../media/opm_expected_range_jpg.png[Erwarteter Bereich für die Latenz in Unified Manager]
+
+In diesem Beispiel beträgt die Latenz für ein Volume in Grau höchstens 3,5 Millisekunden pro Vorgang (ms/op) und höchstens 5,5 ms/op.  Wenn die tatsächliche Latenz (blau) aufgrund einer zeitweiligen Spitze im Netzwerkverkehr oder einer Konfliktsituation bei einer Clusterkomponente plötzlich auf 10 ms/Operation ansteigt, liegt sie über der Latenzprognose und hat den dynamischen Leistungsschwellenwert überschritten.
+
+Wenn der Netzwerkverkehr abgenommen hat oder die Clusterkomponente nicht mehr im Konflikt steht, kehrt die Latenz in den Bereich der Latenzprognose zurück.  Wenn die Latenz über einen längeren Zeitraum bei oder über 10 ms/Operation bleibt, müssen Sie möglicherweise Korrekturmaßnahmen ergreifen, um das Ereignis zu beheben.

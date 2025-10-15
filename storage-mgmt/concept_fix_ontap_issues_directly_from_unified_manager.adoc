@@ -1,0 +1,24 @@
+---
+permalink: storage-mgmt/concept_fix_ontap_issues_directly_from_unified_manager.html 
+sidebar: sidebar 
+keywords: fix, ontap, issues, directly, unified manager, fix it, fix-it, remediation 
+summary: Sie können bestimmte ONTAP Probleme direkt über die Benutzeroberfläche des Unified Managers beheben, anstatt den ONTAP System Manager oder die ONTAP CLI verwenden zu müssen.  Die Option „Verwaltungsaktionen“ bietet Korrekturen für eine Reihe von ONTAP Problemen, die Unified Manager-Ereignisse ausgelöst haben. 
+---
+= Verwalten Sie ONTAP -Probleme oder -Funktionen direkt vom Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können bestimmte ONTAP Probleme beheben oder bestimmte ONTAP Funktionen direkt über die Unified Manager-Benutzeroberfläche verwalten, anstatt den ONTAP System Manager oder die ONTAP CLI verwenden zu müssen.  Die Option „Verwaltungsaktionen“ bietet Korrekturen für eine Reihe von ONTAP Problemen, die Unified Manager-Ereignisse ausgelöst haben.
+
+Sie können Probleme direkt auf der Seite „Verwaltungsaktionen“ beheben, indem Sie im linken Navigationsbereich die Option *Verwaltungsaktionen* auswählen.  Verwaltungsaktionen sind auch im Bereich „Verwaltungsaktionen“ auf dem Dashboard, auf der Seite mit den Ereignisdetails und in der Auswahl „Arbeitslastanalyse“ im linken Navigationsmenü verfügbar.
+
+Es gibt bestimmte Probleme, die Unified Manager gründlich diagnostizieren und eine einzige Lösung bereitstellen kann.  Für bestimmte ONTAP Funktionen, wie z. B. die Anti-Ransomware-Überwachung, führt Unified Manager interne Prüfungen durch und empfiehlt bestimmte Maßnahmen.  Sofern verfügbar, werden diese Lösungen in den Verwaltungsaktionen mit der Schaltfläche *Fix It* angezeigt.  Klicken Sie auf die Schaltfläche *Fix It*, um das Problem zu beheben.  Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Unified Manager sendet ONTAP -Befehle an den Cluster, um die angeforderte Korrektur vorzunehmen.  Wenn die Korrektur abgeschlossen ist, ist das Ereignis veraltet.
+
+Einige Verwaltungsaktionen ermöglichen es Ihnen, dasselbe Problem auf mehreren Speicherobjekten mithilfe der Schaltfläche *Alles beheben* zu beheben.  Beispielsweise kann es bei 5 Volumes das Ereignis „Volume-Speicherplatz voll“ geben, das durch Klicken auf die Verwaltungsaktion *Alles beheben* für „Volume-Autovergrößerung aktivieren“ behoben werden könnte.  Mit einem Klick können Sie dieses Problem auf 5 Volumes beheben.
+
+Informationen zu den ONTAP -Problemen und -Funktionen, die Sie mithilfe der automatischen Behebung verwalten können, finden Sie unterlink:../storage-mgmt/reference_what_ontap_issues_can_unified_manager_fix.html["Welche Probleme kann Unified Manager beheben?"] .

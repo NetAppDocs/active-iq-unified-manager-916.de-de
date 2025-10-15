@@ -1,0 +1,28 @@
+---
+permalink: health-checker/concept_how_group_actions_work_on_storage_objects.html 
+sidebar: sidebar 
+keywords: group actions, work, storage, objects 
+summary: Eine Gruppenaktion ist ein Vorgang, der für alle Speicherobjekte in einer Gruppe ausgeführt wird.  Sie können beispielsweise die Aktion „Volume-Schwellenwertgruppe“ so konfigurieren, dass die Volume-Schwellenwerte aller Volumes in einer Gruppe gleichzeitig geändert werden. 
+---
+= So funktionieren Gruppenaktionen bei Speicherobjekten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Gruppenaktion ist ein Vorgang, der für alle Speicherobjekte in einer Gruppe ausgeführt wird.  Sie können beispielsweise die Aktion „Volume-Schwellenwertgruppe“ so konfigurieren, dass die Volume-Schwellenwerte aller Volumes in einer Gruppe gleichzeitig geändert werden.
+
+Gruppen unterstützen eindeutige Gruppenaktionstypen.  Sie können eine Gruppe mit nur einem Gruppenaktionstyp für den Volume-Integritätsschwellenwert haben.  Sie können jedoch für dieselbe Gruppe einen anderen Gruppenaktionstyp konfigurieren, sofern verfügbar.  Der Rang einer Gruppenaktion bestimmt die Reihenfolge, in der die Aktion auf Speicherobjekte angewendet wird.  Die Detailseite eines Speicherobjekts bietet Informationen darüber, welche Gruppenaktion auf das Speicherobjekt angewendet wird.
+
+
+
+== Beispiel für einzigartige Gruppenaktionen
+
+Stellen Sie sich ein Volume A vor, das zu den Gruppen G1 und G2 gehört. Für diese Gruppen sind die folgenden Volume-Integritätsschwellenwert-Gruppenaktionen konfiguriert:
+
+* `Change_capacity_threshold`Gruppenaktion mit Rang 1, zur Konfiguration der Kapazität des Volumes
+* `Change_snapshot_copies`Gruppenaktion mit Rang 2, zum Konfigurieren der Snapshot-Kopien des Volumes
+
+
+Der `Change_capacity_threshold` Gruppenaktionen haben immer Vorrang vor der `Change_snapshot_copies` Gruppenaktion und wird auf Volume A angewendet. Wenn Unified Manager einen Überwachungszyklus abschließt, werden die mit dem Integritätsschwellenwert verbundenen Ereignisse von Volume A gemäß der `Change_capacity_threshold` Gruppenaktion.  Sie können für die Gruppenaktionen G1 und G2 keinen anderen Volumenschwellenwerttyp konfigurieren.

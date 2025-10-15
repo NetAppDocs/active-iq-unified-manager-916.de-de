@@ -1,0 +1,115 @@
+---
+permalink: health-checker/concept_how_annotation_rules_work_in_unified_manager.html 
+sidebar: sidebar 
+keywords: annotation rules, work, unified manager 
+summary: 'Eine Annotationsregel ist ein von Ihnen definiertes Kriterium zum Annotieren von Speicherobjekten (Volumes, Clustern oder Storage Virtual Machines (SVMs)).  Sie können zum Definieren von Anmerkungsregeln entweder Bedingungsgruppen oder Bedingungen verwenden.' 
+---
+= So funktionieren Anmerkungsregeln in Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Annotationsregel ist ein von Ihnen definiertes Kriterium zum Annotieren von Speicherobjekten (Volumes, Clustern oder Storage Virtual Machines (SVMs)).  Sie können zum Definieren von Anmerkungsregeln entweder Bedingungsgruppen oder Bedingungen verwenden.
+
+* Sie müssen einer Anmerkung eine Anmerkungsregel zuordnen.
+* Sie müssen einer Anmerkungsregel einen Objekttyp zuordnen. Einer Anmerkungsregel kann nur ein Objekttyp zugeordnet werden.
+* Unified Manager fügt nach jedem Überwachungszyklus oder beim Erstellen, Bearbeiten, Löschen oder Neuordnen einer Regel Anmerkungen zu Speicherobjekten hinzu oder entfernt sie.
+* Eine Anmerkungsregel kann eine oder mehrere Bedingungsgruppen haben und jede Bedingungsgruppe kann eine oder mehrere Bedingungen haben.
+* Speicherobjekte können mehrere Anmerkungen haben.  Eine Annotationsregel für eine bestimmte Annotation kann in den Regelbedingungen auch unterschiedliche Annotationen verwenden, um bereits annotierten Objekten eine weitere Annotation hinzuzufügen.
+
+
+
+
+== Bedingungen
+
+Sie können mehrere Bedingungsgruppen erstellen und jede Bedingungsgruppe kann eine oder mehrere Bedingungen haben.  Sie können alle definierten Bedingungsgruppen in einer Annotationsregel einer Annotation anwenden, um Speicherobjekte zu annotieren.
+
+Bedingungen innerhalb einer Bedingungsgruppe werden mit einem logischen UND ausgeführt.  Alle Bedingungen einer Bedingungsgruppe müssen erfüllt sein.  Wenn Sie eine Anmerkungsregel erstellen oder ändern, wird eine Bedingung erstellt, die nur diejenigen Speicherobjekte anwendet, auswählt und mit Anmerkungen versieht, die alle Bedingungen in der Bedingungsgruppe erfüllen.  Sie können mehrere Bedingungen innerhalb einer Bedingungsgruppe verwenden, wenn Sie den Umfang der zu kommentierenden Speicherobjekte eingrenzen möchten.
+
+Sie können Bedingungen mit Speicherobjekten erstellen, indem Sie die folgenden Operanden und Operatoren verwenden und den erforderlichen Wert angeben.
+
+[cols="2*"]
+|===
+| Speicherobjekttyp | Anwendbare Operanden 
+
+
+ a| 
+Volumen
+ a| 
+* Objektname
+* Name des besitzenden Clusters
+* Name des besitzenden SVM
+* Anmerkungen
+
+
+
+
+ a| 
+SVM
+ a| 
+* Objektname
+* Name des besitzenden Clusters
+* Anmerkungen
+
+
+
+
+ a| 
+Cluster
+ a| 
+* Objektname
+* Anmerkungen
+
+
+|===
+Wenn Sie eine Annotation als Operand für ein beliebiges Speicherobjekt auswählen, ist der Operator „Ist“ verfügbar.  Für alle anderen Operanden können Sie als Operator entweder „Ist“ oder „Enthält“ auswählen.  Wenn Sie den Operator „Ist“ auswählen, wird die Bedingung auf eine genaue Übereinstimmung des Operandenwerts mit dem für den ausgewählten Operanden bereitgestellten Wert ausgewertet.  Wenn Sie den Operator „Enthält“ auswählen, wird die Bedingung ausgewertet, um eines der folgenden Kriterien zu erfüllen:
+
+* Der Operandenwert entspricht genau dem Wert des ausgewählten Operanden.
+* Der Operandenwert enthält den für den ausgewählten Operanden bereitgestellten Wert.
+
+
+
+
+== Beispiel einer Annotationsregel mit Bedingungen
+
+Betrachten Sie eine Anmerkungsregel mit einer Bedingungsgruppe für ein Volume mit den folgenden zwei Bedingungen:
+
+* Name enthält „`vol`“
+* Der SVM-Name lautet „`data_svm`“
+
+
+Diese Annotationsregel versieht alle Volumes, deren Namen „`vol`“ enthalten und die auf SVMs mit dem Namen „`data_svm`“ gehostet werden, mit der ausgewählten Annotation und dem Annotationstyp.
+
+
+
+== Bedingungsgruppen
+
+Bedingungsgruppen werden mithilfe eines logischen ODER ausgeführt und dann auf Speicherobjekte angewendet.  Um annotiert zu werden, müssen die Speicherobjekte die Anforderungen einer der Bedingungsgruppen erfüllen.  Die Speicherobjekte, die die Bedingungen aller Bedingungsgruppen erfüllen, werden annotiert.  Mithilfe von Bedingungsgruppen können Sie den Umfang der zu annotierenden Speicherobjekte erweitern.
+
+
+
+== Beispiel einer Annotationsregel mit Bedingungsgruppen
+
+Betrachten Sie eine Anmerkungsregel mit zwei Bedingungsgruppen für ein Volume. Jede Gruppe enthält die folgenden zwei Bedingungen:
+
+* Bedingungsgruppe 1
++
+** Name enthält „`vol`“
+** Der SVM-Name lautet „`data_svm`“. Diese Bedingungsgruppe kommentiert alle Volumes, deren Namen „`vol`“ enthalten und die auf SVMs mit dem Namen „`data_svm`“ gehostet werden.
+
+
+* Bedingungsgruppe 2
++
+** Name enthält „`vol`“
+** Der Annotationswert von data-priority ist „`critical`“. Diese Bedingungsgruppe annotiert alle Volumes, deren Namen „`vol`“ enthalten und die mit dem Annotationswert data-priority als „`critical`“ annotiert sind.
+
+
+
+
+Wenn eine Annotationsregel, die diese beiden Bedingungsgruppen enthält, auf Speicherobjekte angewendet wird, werden die folgenden Speicherobjekte annotiert:
+
+* Alle Volumes, deren Namen „`vol`“ enthalten und die auf SVM mit dem Namen „`data_svm`“ gehostet werden.
+* Alle Datenträger, deren Name „`vol`“ enthält und die mit dem Datenprioritätsannotationswert „`critical`“ annotiert sind.
+

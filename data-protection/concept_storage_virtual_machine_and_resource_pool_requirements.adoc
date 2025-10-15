@@ -1,0 +1,33 @@
+---
+permalink: data-protection/concept_storage_virtual_machine_and_resource_pool_requirements.html 
+sidebar: sidebar 
+keywords: svm, resource pool requirements, support, storage services 
+summary: 'Sie können die Konformität in Partneranwendungen besser sicherstellen, wenn Sie einige SVM-Zuordnungs- und Ressourcenpoolanforderungen beachten, die spezifisch für Speicherdienste sind: beispielsweise, wenn Sie SVM zuordnen und Ressourcenpools in Unified Manager erstellen, um eine Schutztopologie in einem von einer Partneranwendung bereitgestellten Speicherdienst zu unterstützen.' 
+---
+= SVM- und Ressourcenpoolanforderungen zur Unterstützung von Speicherdiensten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Konformität in Partneranwendungen besser sicherstellen, wenn Sie einige SVM-Zuordnungs- und Ressourcenpoolanforderungen beachten, die spezifisch für Speicherdienste sind: beispielsweise, wenn Sie SVM zuordnen und Ressourcenpools in Unified Manager erstellen, um eine Schutztopologie in einem von einer Partneranwendung bereitgestellten Speicherdienst zu unterstützen.
+
+Einige Anwendungen arbeiten mit dem Unified Manager-Server zusammen, um Dienste bereitzustellen, die den SnapMirror oder SnapVault -Backup-Schutz zwischen Quellvolumes und Schutzvolumes an sekundären oder tertiären Standorten automatisch konfigurieren und ausführen.  Um diese Schutzspeicherdienste zu unterstützen, müssen Sie Unified Manager verwenden, um die erforderlichen SVM-Zuordnungen und Ressourcenpools zu konfigurieren.
+
+Um den Single-Hop- oder kaskadierten Schutz des Speicherdienstes zu unterstützen, einschließlich der Replikation von einer SnapMirror Quelle oder einem SnapVault Primärvolume entweder zum Ziel SnapMirror oder zu SnapVault -Sicherungsvolumes, die sich an sekundären oder tertiären Standorten befinden, müssen Sie die folgenden Anforderungen beachten:
+
+* SVM-Zuordnungen müssen zwischen dem SVM, das die SnapMirror Quelle oder das SnapVault Primärvolume enthält, und jedem SVM konfiguriert werden, auf dem sich entweder ein Sekundärvolume oder ein Tertiärvolume befindet.
++
+** Um beispielsweise eine Schutztopologie zu unterstützen, in der sich das Quellvolume Vol_A auf SVM_1, das sekundäre SnapMirror -Zielvolume Vol_B auf SVM_2 und das tertiäre SnapVault Sicherungsvolume Vol_C auf SVM_3 befindet, müssen Sie die Unified Manager-Web-Benutzeroberfläche verwenden, um eine SnapMirror Zuordnung zwischen SVM_1 und SVM_2 und eine SnapVault -Sicherungszuordnung zwischen SVM_1 und SVM_3 zu konfigurieren.
++
+In diesem Beispiel ist keine SnapMirror Zuordnung oder SnapVault -Sicherungszuordnung zwischen SVM_2 und SVM_3 erforderlich und wird nicht verwendet.
+
+** Um eine Schutztopologie zu unterstützen, in der sich sowohl das Quellvolume Vol_A als auch das SnapMirror Zielvolume Vol_B auf SVM_1 befinden, müssen Sie eine SnapMirror Zuordnung zwischen SVM_1 und SVM_1 konfigurieren.
+
+
+* Die Ressourcenpools müssen Cluster-Aggregatressourcen enthalten, die den zugehörigen SVMs zur Verfügung stehen.
++
+Sie konfigurieren Ressourcenpools über die Web-Benutzeroberfläche von Unified Manager und weisen dann über die Partneranwendung die sekundären Ziel- und tertiären Zielknoten des Speicherdienstes zu.
+
+

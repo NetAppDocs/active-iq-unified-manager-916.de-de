@@ -1,0 +1,31 @@
+---
+permalink: data-protection/task_edit_protection_relationships_from_protection_volume.html 
+sidebar: sidebar 
+keywords: edit, protection, relationships, volume, relationships, page 
+summary: Sie können vorhandene Schutzbeziehungen bearbeiten, um die maximale Übertragungsrate, die Schutzrichtlinie oder den Schutzzeitplan zu ändern.  Sie können eine Beziehung bearbeiten, um die für Übertragungen verwendete Bandbreite zu verringern oder die Häufigkeit geplanter Übertragungen zu erhöhen, da sich die Daten häufig ändern. 
+---
+= Bearbeiten Sie Schutzbeziehungen auf der Seite „Volume-Beziehungen“.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können vorhandene Schutzbeziehungen bearbeiten, um die maximale Übertragungsrate, die Schutzrichtlinie oder den Schutzzeitplan zu ändern.  Sie können eine Beziehung bearbeiten, um die für Übertragungen verwendete Bandbreite zu verringern oder die Häufigkeit geplanter Übertragungen zu erhöhen, da sich die Daten häufig ändern.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Die ausgewählten Volumes müssen Ziele mit Schutzbeziehung sein.  Sie können Beziehungen nicht bearbeiten, wenn Quellvolumes, Load-Sharing-Volumes oder Volumes ausgewählt sind, die nicht das Ziel einer SnapMirror oder SnapVault -Beziehung sind.
+
+.Schritte
+. Wählen Sie auf der Seite *Volume-Beziehungen* in der Volume-Liste ein oder mehrere Volumes in derselben SVM aus, für die Sie die Beziehungseinstellungen bearbeiten möchten, und wählen Sie dann in der Symbolleiste *Bearbeiten* aus.
++
+Das Dialogfeld „Beziehung bearbeiten“ wird angezeigt.
+
+. Bearbeiten Sie im Dialogfeld *Beziehung bearbeiten* nach Bedarf die maximale Übertragungsrate, die Schutzrichtlinie oder den Schutzzeitplan.
+. Klicken Sie auf *Übernehmen*.
++
+Die Änderungen werden auf die ausgewählten Beziehungen angewendet.
+
+

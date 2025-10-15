@@ -1,0 +1,44 @@
+---
+permalink: events/reference_service_processor_events.html 
+sidebar: sidebar 
+keywords: service, processor, events, impact area, availability 
+summary: Serviceprozessorereignisse liefern Ihnen Informationen zum Status Ihres Prozessors, sodass Sie ihn auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad. 
+---
+= Serviceprozessorereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Serviceprozessorereignisse liefern Ihnen Informationen zum Status Ihres Prozessors, sodass Sie ihn auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad.
+
+
+
+== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+Serviceprozessor nicht konfiguriert (ocumEvtServiceProcessorNotConfigured)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Warnung
+
+
+
+ a| 
+Serviceprozessor offline (ocumEvtServiceProcessorOffline)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Fehler
+
+|===

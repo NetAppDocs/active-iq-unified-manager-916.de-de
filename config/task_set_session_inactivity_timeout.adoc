@@ -1,0 +1,48 @@
+---
+permalink: config/task_set_session_inactivity_timeout.html 
+sidebar: sidebar 
+keywords: inactivity, timeout 
+summary: 'Sie können den Inaktivitäts-Timeout-Wert für Unified Manager angeben, sodass die Sitzung nach einer bestimmten Zeit automatisch beendet wird.  Standardmäßig ist das Timeout auf 4.320 Minuten (72 Stunden) eingestellt.' 
+---
+= Festlegen des Sitzungs-Inaktivitäts-Timeouts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Inaktivitäts-Timeout-Wert für Unified Manager angeben, sodass die Sitzung nach einer bestimmten Zeit der Inaktivität automatisch beendet wird.  Standardmäßig ist das Timeout auf 4.320 Minuten (72 Stunden) eingestellt.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ verfügen.
+
+Diese Einstellung wirkt sich auf alle angemeldeten Benutzersitzungen aus.
+
+[NOTE]
+====
+Diese Option ist nicht verfügbar, wenn Sie die SAML-Authentifizierung (Security Assertion Markup Language) aktiviert haben.
+
+====
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Allgemein* > *Funktionseinstellungen*.
+. Geben Sie auf der Seite *Funktionseinstellungen* das Inaktivitäts-Timeout an, indem Sie eine der folgenden Optionen auswählen:
++
+[cols="2*"]
+|===
+| Wenn Sie wollen... | Dann tun Sie Folgendes ... 
+
+
+ a| 
+Legen Sie kein Timeout fest, sodass die Sitzung nie automatisch geschlossen wird
+ a| 
+Bewegen Sie im Bereich *Inaktivitäts-Timeout* den Schieberegler nach links (Aus) und klicken Sie auf *Übernehmen*.
+
+
+
+ a| 
+Legen Sie eine bestimmte Anzahl von Minuten als Timeout-Wert fest
+ a| 
+Bewegen Sie im Bereich *Inaktivitäts-Timeout* den Schieberegler nach rechts (Ein), geben Sie den Wert für das Inaktivitäts-Timeout in Minuten an und klicken Sie auf *Übernehmen*.
+
+|===
+

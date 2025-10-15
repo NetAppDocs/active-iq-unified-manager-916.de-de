@@ -1,0 +1,16 @@
+---
+permalink: health-checker/concept_monitor_and_troubleshoot_data_availability.html 
+sidebar: sidebar 
+keywords: monitor, troubleshoot, data availability 
+summary: Unified Manager überwacht die Zuverlässigkeit, mit der autorisierte Benutzer auf Ihre gespeicherten Daten zugreifen können, weist Sie auf Bedingungen hin, die diesen Zugriff blockieren oder behindern, und ermöglicht Ihnen, diese Bedingungen zu diagnostizieren und ihre Lösung zuzuweisen und zu verfolgen. 
+---
+= Überwachen und Beheben von Problemen mit der Datenverfügbarkeit
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager überwacht die Zuverlässigkeit, mit der autorisierte Benutzer auf Ihre gespeicherten Daten zugreifen können, weist Sie auf Bedingungen hin, die diesen Zugriff blockieren oder behindern, und ermöglicht Ihnen, diese Bedingungen zu diagnostizieren und ihre Lösung zuzuweisen und zu verfolgen.
+
+Die Themen zum Verfügbarkeits-Workflow in diesem Abschnitt beschreiben Beispiele dafür, wie ein Speicheradministrator die Unified Manager-Web-Benutzeroberfläche verwenden kann, um Hardware- und Softwarezustände zu erkennen, zu diagnostizieren und zur Behebung zuzuweisen, die sich negativ auf die Datenverfügbarkeit auswirken.

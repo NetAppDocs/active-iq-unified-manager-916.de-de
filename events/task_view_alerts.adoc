@@ -1,0 +1,24 @@
+---
+permalink: events/task_view_alerts.html 
+sidebar: sidebar 
+keywords: view, alerts 
+summary: Sie können die Liste der Warnungen, die für verschiedene Ereignisse erstellt werden, auf der Seite „Warnungseinrichtung“ anzeigen.  Sie können auch Alarmeigenschaften wie die Alarmbeschreibung, Benachrichtigungsmethode und -häufigkeit, Ereignisse, die den Alarm auslösen, E-Mail-Empfänger der Alarme und betroffene Ressourcen wie Cluster, Aggregate und Volumes anzeigen. 
+---
+= Warnungen anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Liste der Warnungen, die für verschiedene Ereignisse erstellt werden, auf der Seite „Warnungseinrichtung“ anzeigen.  Sie können auch Alarmeigenschaften wie die Alarmbeschreibung, Benachrichtigungsmethode und -häufigkeit, Ereignisse, die den Alarm auslösen, E-Mail-Empfänger der Alarme und betroffene Ressourcen wie Cluster, Aggregate und Volumes anzeigen.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+.Schritt
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Alarm-Setup*.
++
+Die Liste der Warnungen wird auf der Seite „Warnungseinrichtung“ angezeigt.
+
+

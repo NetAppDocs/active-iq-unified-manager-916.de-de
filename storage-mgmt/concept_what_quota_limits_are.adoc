@@ -1,0 +1,18 @@
+---
+permalink: storage-mgmt/concept_what_quota_limits_are.html 
+sidebar: sidebar 
+keywords: quota, limits 
+summary: Benutzerkontingentgrenzen sind Werte, die der Unified Manager-Server verwendet, um zu bewerten, ob sich der Speicherplatzverbrauch eines Benutzers der Grenze nähert oder die durch die Benutzerkontingentgrenze festgelegte Grenze erreicht hat.  Wenn das weiche Limit überschritten oder das harte Limit erreicht wird, generiert der Unified Manager-Server Benutzerkontingentereignisse. 
+---
+= Welche Kontingentgrenzen gibt es
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Benutzerkontingentgrenzen sind Werte, die der Unified Manager-Server verwendet, um zu bewerten, ob sich der Speicherplatzverbrauch eines Benutzers der Grenze nähert oder die durch die Benutzerkontingentgrenze festgelegte Grenze erreicht hat.  Wenn das weiche Limit überschritten oder das harte Limit erreicht wird, generiert der Unified Manager-Server Benutzerkontingentereignisse.
+
+Standardmäßig sendet der Unified Manager-Server eine Benachrichtigungs-E-Mail an Benutzer, die das weiche Kontingentlimit überschritten oder das harte Kontingentlimit erreicht haben und für die Benutzerkontingentereignisse konfiguriert sind.  Benutzer mit der Rolle „Anwendungsadministrator“ können Warnmeldungen konfigurieren, die die angegebenen Empfänger über Benutzer- oder Benutzergruppenkontingentereignisse benachrichtigen.
+
+Sie können Kontingentgrenzen entweder mit dem ONTAP System Manager oder der ONTAP CLI festlegen.

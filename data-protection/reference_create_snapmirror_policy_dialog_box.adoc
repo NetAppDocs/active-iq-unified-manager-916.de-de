@@ -1,0 +1,67 @@
+---
+permalink: data-protection/reference_create_snapmirror_policy_dialog_box.html 
+sidebar: sidebar 
+keywords: create, snapmirror, policy, dialog box 
+summary: Im Dialogfeld „SnapMirror -Richtlinie erstellen“ können Sie eine Richtlinie erstellen, um die Priorität für SnapMirror Übertragungen festzulegen.  Sie verwenden Richtlinien, um die Effizienz der Übertragungen von der Quelle zum Ziel zu maximieren. 
+---
+= Dialogfeld „SnapMirror -Richtlinie erstellen“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „SnapMirror -Richtlinie erstellen“ können Sie eine Richtlinie erstellen, um die Priorität für SnapMirror Übertragungen festzulegen.  Sie verwenden Richtlinien, um die Effizienz der Übertragungen von der Quelle zum Ziel zu maximieren.
+
+* *Zielcluster*
++
+Der Name des Clusters, den Sie auf der Registerkarte „SnapMirror “ des Dialogfelds „Schutz konfigurieren“ ausgewählt haben.
+
+* *Ziel-SVM*
++
+Der Name der SVM, die Sie auf der Registerkarte „SnapMirror “ des Dialogfelds „Schutz konfigurieren“ ausgewählt haben.
+
+* *Richtlinienname*
++
+Der Name, den Sie für die neue Richtlinie angeben.  Richtliniennamen können aus den Zeichen A bis Z, a bis z, 0 bis 9, Punkt (.), Bindestrich (-) und Unterstrich (_) bestehen.
+
+* *Transferpriorität*
++
+Die Priorität, mit der eine Übertragung für asynchrone Vorgänge ausgeführt wird.  Sie können entweder „Normal“ oder „Niedrig“ auswählen.  Übertragungsbeziehungen mit Richtlinien, die eine normale Übertragungspriorität festlegen, werden vor denen mit Richtlinien ausgeführt, die eine niedrige Übertragungspriorität festlegen.
+
+* *Kommentar*
++
+Ein optionales Feld, in dem Sie Kommentare zur Richtlinie hinzufügen können.
+
+* *Transfer-Neustart*
++
+Gibt an, welche Neustartaktion ausgeführt werden soll, wenn eine Übertragung durch einen Abbruchvorgang oder einen anderen Fehlertyp, beispielsweise einen Netzwerkausfall, unterbrochen wird.  Sie können eine der folgenden Optionen auswählen:
+
++
+** Stets
++
+Gibt an, dass vor dem Neustart einer Übertragung eine neue Snapshot-Kopie erstellt wird. Anschließend wird die Übertragung (sofern vorhanden) von einem Prüfpunkt aus neu gestartet, gefolgt von einer inkrementellen Übertragung von der neu erstellten Snapshot-Kopie.
+
+** Niemals
++
+Gibt an, dass unterbrochene Übertragungen nie neu gestartet werden.
+
+
+
+
+
+
+
+== Befehlsschaltflächen
+
+Mit den Befehlsschaltflächen können Sie die folgenden Aufgaben ausführen:
+
+* *Stornieren*
++
+Verwirft die Auswahl und schließt das Dialogfeld „Schutz konfigurieren“.
+
+* *Anwenden*
++
+Wendet Ihre Auswahl an und beginnt mit dem Schutzvorgang.
+
+

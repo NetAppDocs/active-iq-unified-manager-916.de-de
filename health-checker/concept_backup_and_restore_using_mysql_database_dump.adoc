@@ -1,0 +1,34 @@
+---
+permalink: health-checker/concept_backup_and_restore_using_mysql_database_dump.html 
+sidebar: sidebar 
+keywords: backup, restore, using, mysql, database, dump, snapshot copy, copies 
+summary: Ein MySQL-Datenbank-Dump-Backup ist eine Kopie der Active IQ Unified Manager -Datenbank und der Konfigurationsdateien, die Sie im Falle eines Systemausfalls oder Datenverlusts verwenden können.  Sie können eine Sicherung so planen, dass sie an ein lokales oder ein Remoteziel geschrieben wird.  Es wird dringend empfohlen, einen Remote-Standort außerhalb des Active IQ Unified Manager Hostsystems zu definieren. 
+---
+= Sichern und Wiederherstellen mithilfe eines MySQL-Datenbank-Dumps
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein MySQL-Datenbank-Dump-Backup ist eine Kopie der Active IQ Unified Manager -Datenbank und der Konfigurationsdateien, die Sie im Falle eines Systemausfalls oder Datenverlusts verwenden können.  Sie können eine Sicherung so planen, dass sie an ein lokales oder ein Remoteziel geschrieben wird.  Es wird dringend empfohlen, einen Remote-Standort außerhalb des Active IQ Unified Manager Hostsystems zu definieren.
+
+[NOTE]
+====
+Der MySQL-Datenbank-Dump ist der Standard-Sicherungsmechanismus, wenn Unified Manager auf einem Linux- und Windows-Server installiert ist.  Wenn Unified Manager jedoch eine große Anzahl von Clustern und Knoten verwaltet oder die Fertigstellung Ihrer MySQL-Sicherungen viele Stunden dauert, können Sie mithilfe von Snapshot-Kopien eine Sicherung durchführen.  Diese Funktionalität ist unter Red Hat Enterprise Linux und Windows verfügbar.
+
+====
+Eine Datenbank-Dump-Sicherung besteht aus einer einzelnen Datei im Sicherungsverzeichnis und einer oder mehreren Dateien im Datenbank-Repository-Verzeichnis.  Die Datei im Sicherungsverzeichnis ist sehr klein, da sie nur einen Zeiger auf die Dateien im Datenbank-Repository-Verzeichnis enthält, die zum erneuten Erstellen der Sicherung erforderlich sind.
+
+Wenn Sie zum ersten Mal eine Datenbanksicherung erstellen, wird eine einzelne Datei im Sicherungsverzeichnis und eine vollständige Sicherungsdatei im Datenbank-Repository-Verzeichnis erstellt.  Wenn Sie das nächste Mal eine Sicherung erstellen, wird eine einzelne Datei im Sicherungsverzeichnis und eine inkrementelle Sicherungsdatei im Datenbank-Repository-Verzeichnis erstellt, die die Unterschiede zur vollständigen Sicherungsdatei enthält.  Dieser Vorgang wird fortgesetzt, während Sie weitere Sicherungen erstellen, bis die maximale Aufbewahrungseinstellung erreicht ist, wie in der folgenden Abbildung dargestellt.
+
+image::../media/database_backup.gif[Datenbanksicherung]
+
+[NOTE]
+====
+Benennen Sie keine der Sicherungsdateien in diesen beiden Verzeichnissen um und entfernen Sie sie auch nicht, da sonst alle nachfolgenden Wiederherstellungsvorgänge fehlschlagen.
+
+====
+Wenn Sie Ihre Sicherungsdateien auf das lokale System schreiben, sollten Sie einen Prozess zum Kopieren der Sicherungsdateien an einen Remote-Speicherort einleiten, damit sie verfügbar sind, falls ein Systemproblem auftritt, das eine vollständige Wiederherstellung erfordert.
+
+Vor Beginn eines Sicherungsvorgangs führt Active IQ Unified Manager eine Integritätsprüfung durch, um sicherzustellen, dass alle erforderlichen Sicherungsdateien und Sicherungsverzeichnisse vorhanden und beschreibbar sind.  Außerdem wird überprüft, ob auf dem System genügend Speicherplatz zum Erstellen der Sicherungsdatei vorhanden ist.

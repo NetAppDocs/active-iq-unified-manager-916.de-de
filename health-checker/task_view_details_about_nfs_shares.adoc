@@ -1,0 +1,48 @@
+---
+permalink: health-checker/task_view_details_about_nfs_shares.html 
+sidebar: sidebar 
+keywords: view, details, nfs shares 
+summary: 'Sie können Details zu allen NFS-Freigaben anzeigen, z. B. deren Status, den mit dem Volume verknüpften Pfad (FlexGroup Volumes oder FlexVol -Volumes), die Zugriffsebenen der Clients auf die NFS-Freigaben und die für die exportierten Volumes definierte Exportrichtlinie.  Verwenden Sie die Ansicht „Integrität: Alle NFS-Freigaben“, um alle NFS-Freigaben auf allen überwachten Clustern anzuzeigen, und verwenden Sie die Seite „Speicher-VM/Integritätsdetails“, um alle NFS-Freigaben auf einer bestimmten virtuellen Speichermaschine (SVM) anzuzeigen.' 
+---
+= Details zu NFS-Freigaben anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Details zu allen NFS-Freigaben anzeigen, z. B. deren Status, den mit dem Volume verknüpften Pfad (FlexGroup Volumes oder FlexVol -Volumes), die Zugriffsebenen der Clients auf die NFS-Freigaben und die für die exportierten Volumes definierte Exportrichtlinie.  Verwenden Sie die Ansicht „Integrität: Alle NFS-Freigaben“, um alle NFS-Freigaben auf allen überwachten Clustern anzuzeigen, und verwenden Sie die Seite „Speicher-VM/Integritätsdetails“, um alle NFS-Freigaben auf einer bestimmten virtuellen Speichermaschine (SVM) anzuzeigen.
+
+.Bevor Sie beginnen
+* Die NFS-Lizenz muss auf dem Cluster aktiviert sein.
+* Netzwerkschnittstellen, die die NFS-Freigaben bedienen, müssen konfiguriert werden.
+* Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+.Schritt
+. Führen Sie im linken Navigationsbereich die folgenden Schritte aus, je nachdem, ob Sie alle NFS-Freigaben oder nur die NFS-Freigaben für eine bestimmte SVM anzeigen möchten.
++
+[cols="2*"]
+|===
+| Zu... | Befolgen Sie diese Schritte... 
+
+
+ a| 
+Alle NFS-Freigaben anzeigen
+ a| 
+Klicken Sie auf *Speicher* > *NFS-Freigaben*
+
+
+
+ a| 
+NFS-Freigaben für einzelne SVM anzeigen
+ a| 
+.. Klicken Sie auf *Speicher* > *Speicher-VMs*
+.. Klicken Sie auf die SVM, für die Sie die Details der NFS-Freigaben anzeigen möchten.
+.. Klicken Sie auf der Seite „Storage VM / Health Details“ auf die Registerkarte *NFS Shares*.
+
+
+|===
+
+
+Weitere Informationen finden Sie unterlink:../storage-mgmt/task_provision_fileshares.html["Bereitstellen von Dateifreigabevolumes"] Undlink:../api-automation/concept_provision_file_share.html["Bereitstellung von CIFS- und NFS-Dateifreigaben mithilfe von APIs"] .

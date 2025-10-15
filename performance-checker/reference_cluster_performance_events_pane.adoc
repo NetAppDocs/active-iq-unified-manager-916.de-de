@@ -1,0 +1,68 @@
+---
+permalink: performance-checker/reference_cluster_performance_events_pane.html 
+sidebar: sidebar 
+keywords: cluster, performance, events, pane, counter 
+summary: Im Bereich „Cluster-Leistungsereignisse“ werden Leistungsstatistiken und alle aktiven Ereignisse für den Cluster angezeigt.  Dies ist besonders hilfreich bei der Überwachung Ihrer Cluster und aller clusterbezogenen Leistungen und Ereignisse. 
+---
+= Bereich „Cluster-Leistungsereignisse“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Bereich „Cluster-Leistungsereignisse“ werden Leistungsstatistiken und alle aktiven Ereignisse für den Cluster angezeigt.  Dies ist besonders hilfreich bei der Überwachung Ihrer Cluster und aller clusterbezogenen Leistungen und Ereignisse.
+
+
+
+== Alle Ereignisse in diesem Clusterbereich
+
+Im Bereich „Alle Ereignisse in diesem Cluster“ werden alle aktiven Cluster-Leistungsereignisse der letzten 72 Stunden angezeigt.  Ganz links wird die Gesamtzahl der aktiven Ereignisse angezeigt. Diese Zahl stellt die Summe aller neuen und bestätigten Ereignisse für alle Speicherobjekte in diesem Cluster dar.  Sie können auf den Link „Gesamtzahl aktiver Ereignisse“ klicken, um zur Seite „Ereignisinventar“ zu navigieren, die gefiltert ist, um diese Ereignisse anzuzeigen.
+
+Das Balkendiagramm „Gesamtzahl aktiver Ereignisse“ für den Cluster zeigt die Gesamtzahl der aktiven kritischen Ereignisse und Warnereignisse an:
+
+* Latenz (gesamt für Knoten, Aggregate, SVMs, Volumes, LUNs und Namespaces)
+* IOPS (Gesamt für Cluster, Knoten, Aggregate, SVMs, Volumes, LUNs und Namespaces)
+* MB/s (insgesamt für Cluster, Knoten, Aggregate, SVMs, Volumes, LUNs, Namespaces, Ports und LIFs)
+* Ausgenutzte Leistungskapazität (Gesamt für Knoten und Aggregate)
+* Auslastung (Gesamt für Knoten, Aggregate und Ports)
+* Sonstiges (Cache-Fehlerquote für Volumes)
+
+
+Die Liste enthält aktive Leistungsereignisse, die durch benutzerdefinierte Schwellenwertrichtlinien, systemdefinierte Schwellenwertrichtlinien und dynamische Schwellenwerte ausgelöst werden.
+
+Diagrammdaten (vertikale Zählerbalken) werden in Rot angezeigt (image:../media/treemapred_png.gif["Symbol für TreeMap – Farbe Rot"] ) für kritische Ereignisse und Gelb (image:../media/treemapstatus_warning_png.gif["Symbol für TreeMap – Warnstatus"] ) für Warnereignisse.  Positionieren Sie Ihren Cursor über jedem vertikalen Zählerbalken, um den tatsächlichen Typ und die Anzahl der Ereignisse anzuzeigen.  Sie können auf *Aktualisieren* klicken, um die Zählerfelddaten zu aktualisieren.
+
+Sie können kritische Ereignisse und Warnereignisse im Leistungsdiagramm „Gesamtzahl aktiver Ereignisse“ ein- oder ausblenden, indem Sie in der Legende auf die Symbole *Kritisch* und *Warnung* klicken.  Wenn Sie bestimmte Ereignistypen ausblenden, werden die Legendensymbole grau angezeigt.
+
+
+
+== Thekenpaneele
+
+Die Zählerfelder zeigen die Clusteraktivität und Leistungsereignisse der letzten 72 Stunden an und umfassen die folgenden Zähler:
+
+* *IOPS-Zählerpanel*
++
+IOPS gibt die Betriebsgeschwindigkeit des Clusters in der Anzahl der Eingabe-/Ausgabevorgänge pro Sekunde an.  Dieses Zählerfeld bietet einen allgemeinen Überblick über den IOPS-Zustand des Clusters für den vorangegangenen 72-Stunden-Zeitraum.  Sie können Ihren Cursor über die Trendlinie des Diagramms positionieren, um den IOPS-Wert für einen bestimmten Zeitraum anzuzeigen.
+
+* *MB/s-Zählerfeld*
++
+MB/s gibt an, wie viele Daten in Megabyte pro Sekunde zum und vom Cluster übertragen wurden.  Dieses Zählerfeld bietet einen umfassenden Überblick über den MB/s-Zustand des Clusters für den vorangegangenen 72-Stunden-Zeitraum.  Sie können Ihren Cursor über die Trendlinie des Diagramms positionieren, um den MB/s-Wert für einen bestimmten Zeitraum anzuzeigen.
+
+
+
+Die Zahl oben rechts im Diagramm im grauen Balken ist der Durchschnittswert der letzten 72 Stunden.  Die unten und oben im Trendliniendiagramm angezeigten Zahlen stellen die Mindest- und Höchstwerte für den letzten 72-Stunden-Zeitraum dar.  Der graue Balken unter dem Diagramm enthält die Anzahl der aktiven (neuen und bestätigten) Ereignisse und veralteten Ereignisse aus dem letzten 72-Stunden-Zeitraum.
+
+Die Zählertafeln enthalten zwei Arten von Ereignissen:
+
+* *Aktiv*
++
+Zeigt an, dass das Leistungsereignis derzeit aktiv ist (neu oder bestätigt).  Das Problem, das das Ereignis verursacht hat, hat sich nicht von selbst behoben oder wurde nicht gelöst.  Der Leistungsindikator für das Speicherobjekt bleibt über dem Leistungsschwellenwert.
+
+* *Veraltet*
++
+Zeigt an, dass das Ereignis nicht mehr aktiv ist.  Das Problem, das das Ereignis verursacht hat, hat sich von selbst behoben oder wurde gelöst.  Der Leistungsindikator für das Speicherobjekt liegt nicht mehr über dem Leistungsschwellenwert.
+
+
+
+Bei *aktiven Ereignissen* können Sie, sofern es ein Ereignis gibt, den Cursor über das Ereignissymbol bewegen und auf die Ereignisnummer klicken, um zur entsprechenden Seite mit den Ereignisdetails zu gelangen.  Wenn mehr als ein Ereignis vorliegt, können Sie auf *Alle Ereignisse anzeigen* klicken, um die Seite „Ereignisinventar“ anzuzeigen, die so gefiltert ist, dass alle Ereignisse für den ausgewählten Objektzählertyp angezeigt werden.

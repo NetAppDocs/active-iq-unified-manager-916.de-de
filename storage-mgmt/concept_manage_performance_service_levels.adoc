@@ -1,0 +1,267 @@
+---
+permalink: storage-mgmt/concept_manage_performance_service_levels.html 
+sidebar: sidebar 
+keywords: manage, performance service level, PSL, User-defined, system-defined PSL, bursty, Database PSL, extreme PSL, beyond extreme PSL 
+summary: Berechnung und Verwaltung des Leistungsservicelevels. 
+---
+= Leistungsservice-Levels
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit einem Performance Service Level (PSL) können Sie die Leistungs- und Speicherziele für eine Arbeitslast definieren.  Sie können einer Arbeitslast beim ersten Erstellen der Arbeitslast oder später durch Bearbeiten der Arbeitslast eine PSL zuweisen.
+
+Die Verwaltung und Überwachung von Speicherressourcen basieren auf Service Level Objectives (SLOs).  SLOs werden durch Service Level Agreements definiert, die auf der erforderlichen Leistung und Kapazität basieren.  In Unified Manager beziehen sich SLOs auf die PSL-Definitionen der Anwendungen, die auf NetApp -Speicher ausgeführt werden.  Speicherdienste unterscheiden sich anhand der Leistung und Nutzung der zugrunde liegenden Ressourcen.  Eine PSL ist eine Beschreibung der Speicherdienstziele.  Ein PSL ermöglicht dem Speicheranbieter, die Leistungs- und Kapazitätsziele für die Arbeitslast anzugeben.  Wenn Sie einer Workload eine PSL zuweisen, wird die entsprechende Workload auf ONTAP anhand ihrer Leistungs- und Kapazitätsziele verwaltet.  Jeder PSL wird durch Spitzen-, erwartete und absolute Mindest-IOPs sowie die erwartete Latenz bestimmt.
+
+Unified Manager verfügt über die folgenden PSL-Typen:
+
+* *Systemdefiniert*: Unified Manager bietet einige vorgefertigte Richtlinien, die nicht geändert werden können.  Diese vordefinierten PSLs sind:
++
+** Extreme Leistung
+** Performance
+** Wert
++
+Die PSLs „Extreme Performance“, „Performance“ und „Value“ sind für die meisten gängigen Speicher-Workloads in einem Rechenzentrum anwendbar.
+
++
+Unified Manager bietet außerdem drei Performance Service Levels für Datenbankanwendungen.  Dabei handelt es sich um PSLs mit extrem hoher Leistung, die Burst-IOPS unterstützen und für Datenbankanwendungen mit den höchsten Durchsatzanforderungen geeignet sind.
+
+** Extreme für Datenbankprotokolle
+** Extreme für gemeinsam genutzte Datenbankdaten
+** Extreme für Datenbankdaten
+
+
+* *Benutzerdefiniert*: Wenn die vordefinierten Performance Service Levels Ihren Anforderungen nicht entsprechen, können Sie neue PSLs erstellen, die Ihren Anforderungen entsprechen.  Weitere Informationen finden Sie unterlink:../storage-mgmt/task_create_and_edit_psls.html["Erstellen und Bearbeiten von Performance-Service-Levels"] .
+* *Beyond Extreme*: Die Beyond Extreme PSLs sind die vom System empfohlenen PSLs, die für Arbeitslasten vorgeschlagen werden, die höhere IOPs als Extreme erfordern.  Die Workloads werden intern anhand ihrer IOPS, Kapazität und Latenz analysiert und für jeden dieser Workloads wird auf dem Bildschirm *Speicher > Workloads > Alle Workloads* ein Beyond Extreme PSL empfohlen.  Sie können die PSLs auf die Workloads anwenden, um eine optimale Leistung sicherzustellen.
++
+Die IOPs-Parameter für die Workloads werden dynamisch generiert, abhängig vom Workload-Verhalten, und an den Namen der Beyond Extreme PSL im Format angehängt `Beyond Extreme <number-(peak IOPS/TB)> <number(expected IOPS/TB)>` .  Wenn das System beispielsweise eine Arbeitslast ermittelt, die die Spitzen- und erwarteten IOPs aufweist, `106345` Und `37929` bzw. die für die Arbeitslast generierte Beyond Extreme PSL wird wie folgt benannt: `Beyond Extreme 106345 37929` .  Obwohl diese PSLs vom System empfohlen werden, werden sie bei der Zuweisung zu Workloads als gekennzeichnet. `User-defined` im Typ.
+
+
+
+
+
+== Verwalten Sie Arbeitslasten durch die Zuweisung von PSLs
+
+Sie können auf PSLs über die Seite *Richtlinien* > *Leistungs-Servicelevel* und mithilfe der APIs des Speicheranbieters zugreifen.  Die Verwaltung von Speicher-Workloads durch die Zuweisung von PSLs ist praktisch, da Sie die Speicher-Workloads nicht einzeln verwalten müssen.  Alle Änderungen können auch durch die Neuzuweisung einer anderen PSL verwaltet werden, anstatt sie einzeln zu verwalten.  Unified Manager hilft Ihnen, Ihren Arbeitslasten PSLs basierend auf internen Bewertungen und Empfehlungen zuzuweisen.
+
+Informationen zum Zuweisen systemseitig empfohlener PSLs zu Workloads finden Sie unterlink:..//storage-mgmt/concept_assign_policies_on_workloads.html#assign-system-recommended-psls-to-workloads["Zuweisen von vom System empfohlenen PSLs zu Workloads"]
+
+Auf der Seite „Performance Service Levels“ werden die verfügbaren PSL-Richtlinien aufgelistet und Sie können diese hinzufügen, bearbeiten und löschen.
+
+
+NOTE: Sie können keine PSL ändern, die systemdefiniert ist oder die derzeit einer Arbeitslast zugewiesen ist.  Sie können keine PSL löschen, die einer Arbeitslast zugewiesen ist oder die einzige verfügbare PSL ist.
+
+Auf dieser Seite werden die folgenden Informationen angezeigt:
+
+|===
+| Feld | Beschreibung 
+
+
+ a| 
+Name
+ a| 
+Name der PSL.
+
+
+
+ a| 
+Typ
+ a| 
+Ob die Richtlinie systemdefiniert oder benutzerdefiniert ist.
+
+
+
+ a| 
+Erwartete IOPS/TB
+ a| 
+Mindestanzahl an IOPS, die eine Anwendung voraussichtlich auf einer LUN oder Dateifreigabe ausführen kann.  „Erwartete IOPS“ gibt die minimal erwarteten zugewiesenen IOPS basierend auf der zugewiesenen Größe des Speicherobjekts an.
+
+
+
+ a| 
+Spitzen-IOPS/TB
+ a| 
+Maximale Anzahl von IOPS, die eine Anwendung auf einer LUN oder Dateifreigabe ausführen kann.  Peak IOPS gibt die maximal möglichen zugewiesenen IOPS an, basierend auf der Größe des zugewiesenen Speicherobjekts oder der Größe des verwendeten Speicherobjekts.
+
+Spitzen-IOPS basieren auf einer Zuweisungsrichtlinie.  Die Zuweisungsrichtlinie lautet entweder „zugewiesener Speicherplatz“ oder „verwendeter Speicherplatz“.  Wenn die Zuweisungsrichtlinie auf „zugewiesener Speicherplatz“ eingestellt ist, wird der Spitzen-IOPS basierend auf der Größe des Speicherobjekts berechnet.  Wenn die Zuweisungsrichtlinie auf „Verwendeter Speicherplatz“ eingestellt ist, wird der Spitzen-IOPS basierend auf der im Speicherobjekt gespeicherten Datenmenge berechnet, wobei die Speichereffizienz berücksichtigt wird.  Standardmäßig ist die Zuweisungsrichtlinie auf „genutzter Speicherplatz“ eingestellt.
+
+
+
+ a| 
+Absolutes Minimum an IOPS
+ a| 
+Der absolute Mindest-IOPS-Wert wird als Überschreibung verwendet, wenn der erwartete IOPS-Wert unter diesem Wert liegt.  Die Standardwerte der systemdefinierten PSLs sind die folgenden:
+
+* Extreme Leistung: Wenn erwartete IOPS >= 6144/TB, dann absolutes Minimum an IOPS = 1000
+* Leistung: Wenn erwartete IOPS >= 2048/TB und < 6144/TB, dann absolutes Minimum an IOPS = 500
+* Wert: Wenn die erwarteten IOPS >= 128/TB und < 2048/TB sind, dann ist der absolute Mindest-IOPS = 75
+
+
+Die Standardwerte der systemdefinierten Datenbank-PSLs sind die folgenden:
+
+* Extrem für Datenbankprotokolle: Wenn erwartete IOPS >= 22528, dann absolutes Minimum an IOPS = 4000
+* Extrem für gemeinsam genutzte Datenbankdaten: Wenn erwartete IOPS >= 16384, dann absolutes Minimum an IOPS = 2000
+* Extrem für Datenbankdaten: Wenn erwartete IOPS >= 12288, dann absolutes Minimum an IOPS = 2000
+
+
+Der höhere Wert des absoluten IOPS-Mindestwerts für benutzerdefinierte PSLs kann maximal 75.000 betragen.  Der niedrigere Wert berechnet sich wie folgt:
+
+1000/erwartete Latenz
+
+
+
+ a| 
+Erwartete Latenz
+ a| 
+Erwartete Latenz für Speicher-IOPS in Millisekunden pro Vorgang (ms/op).
+
+
+
+ a| 
+Kapazität
+ a| 
+Gesamte verfügbare und genutzte Kapazität in den Clustern.
+
+
+
+ a| 
+Arbeitslasten
+ a| 
+Anzahl der Speicher-Workloads, denen die PSL zugewiesen wurde.
+
+|===
+Informationen dazu, wie die Spitzen-IOPS und die erwarteten IOPs dazu beitragen, eine konsistente differenzierte Leistung auf ONTAP Clustern zu erzielen, finden Sie im folgenden KB-Artikel:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/Active_IQ_Unified_Manager/What_is_Performance_Budgeting%3F["Was ist Performance Budgeting?"]
+
+
+
+=== Ereignisse, die für Workloads generiert werden, die den durch PSLs definierten Schwellenwert überschreiten
+
+Beachten Sie, dass Unified Manager eines der folgenden Ereignisse generiert, um Sie auf ein potenzielles Leistungsproblem hinzuweisen, wenn die Arbeitslasten in der letzten Stunde 30 % der Zeit den erwarteten Latenzwert überschritten haben:
+
+* Latenzschwelle für Workload-Volumen überschritten, wie in der Service-Level-Richtlinie für die Leistung definiert
+* Der in der Service-Level-Richtlinie für die Leistung definierte Schwellenwert für die Arbeitslast-LUN-Latenz wurde überschritten.
+
+
+Möglicherweise möchten Sie die Arbeitslast analysieren, um herauszufinden, was die höheren Latenzwerte verursacht.
+
+Weitere Informationen finden Sie unter den folgenden Links:
+
+* link:../events/reference_volume_events.html#impact-area-performance["Volumenereignisse"]
+* link:../performance-checker/concept_what_happens_when_performance_threshold_policy_is_breached.html["Was passiert, wenn eine Leistungsschwellenrichtlinie verletzt wird?"]
+* link:..//performance-checker/concept_how_unified_manager_uses_workload_response_time.html["So nutzt Unified Manager die Workload-Latenz, um Leistungsprobleme zu identifizieren"]
+* link:../performance-checker/concept_what_performance_events_are.html["Was sind Performance-Ereignisse"]
+
+
+
+
+=== Systemdefinierte PSLs
+
+Die folgende Tabelle enthält Informationen zu den systemdefinierten PSLs:
+
+|===
+| Leistungsservicelevel | Beschreibung und Anwendungsfall | Erwartete Latenz (ms/op) | Spitzen-IOPS | Erwartete IOPS | Absolutes Minimum an IOPS 
+
+
+ a| 
+Extreme Leistung
+ a| 
+Bietet extrem hohen Durchsatz bei sehr geringer Latenz
+
+Ideal für latenzempfindliche Anwendungen
+ a| 
+1
+ a| 
+12288
+ a| 
+6144
+ a| 
+1000
+
+
+
+ a| 
+Performance
+ a| 
+Bietet hohen Durchsatz bei geringer Latenz
+
+Ideal für Datenbank- und virtualisierte Anwendungen
+ a| 
+2
+ a| 
+4096
+ a| 
+2048
+ a| 
+500
+
+
+
+ a| 
+Wert
+ a| 
+Bietet hohe Speicherkapazität und moderate Latenz
+
+Ideal für Anwendungen mit hoher Kapazität wie E-Mail, Webinhalte, Dateifreigaben und Sicherungsziele
+ a| 
+17
+ a| 
+512
+ a| 
+128
+ a| 
+75
+
+
+
+ a| 
+Extreme für Datenbankprotokolle
+ a| 
+Bietet maximalen Durchsatz bei niedrigster Latenz.
+
+Ideal für Datenbankanwendungen, die Datenbankprotokolle unterstützen.  Diese PSL bietet den höchsten Durchsatz, da Datenbankprotokolle extrem stoßweise auftreten und die Protokollierung ständig erforderlich ist.
+ a| 
+1
+ a| 
+45056
+ a| 
+22528
+ a| 
+4000
+
+
+
+ a| 
+Extreme für gemeinsam genutzte Datenbankdaten
+ a| 
+Bietet einen sehr hohen Durchsatz bei geringster Latenz.
+
+Ideal für Datenbankanwendungen: Daten, die in einem gemeinsamen Datenspeicher gespeichert, aber datenbankübergreifend genutzt werden.
+ a| 
+1
+ a| 
+32768
+ a| 
+16384
+ a| 
+2000
+
+
+
+ a| 
+Extreme für Datenbankdaten
+ a| 
+Bietet hohen Durchsatz bei geringster Latenz.
+
+Ideal für Daten aus Datenbankanwendungen, wie Datenbanktabelleninformationen und Metadaten.
+ a| 
+1
+ a| 
+24576
+ a| 
+12288
+ a| 
+2000
+
+|===

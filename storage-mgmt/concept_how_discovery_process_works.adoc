@@ -1,0 +1,28 @@
+---
+permalink: storage-mgmt/concept_how_discovery_process_works.html 
+sidebar: sidebar 
+keywords: cluster, discovery, process, works 
+summary: Nachdem Sie Unified Manager einen Cluster hinzugefügt haben, erkennt der Server die Clusterobjekte und fügt sie seiner Datenbank hinzu.  Wenn Sie verstehen, wie der Erkennungsprozess funktioniert, können Sie die Cluster und deren Objekte Ihrer Organisation besser verwalten. 
+---
+= So funktioniert der Cluster-Erkennungsprozess
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie Unified Manager einen Cluster hinzugefügt haben, erkennt der Server die Clusterobjekte und fügt sie seiner Datenbank hinzu.  Wenn Sie verstehen, wie der Erkennungsprozess funktioniert, können Sie die Cluster und deren Objekte Ihrer Organisation besser verwalten.
+
+Das Überwachungsintervall zum Sammeln von Clusterkonfigurationsinformationen beträgt 15 Minuten.  Nachdem Sie beispielsweise einen Cluster hinzugefügt haben, dauert es 15 Minuten, bis die Clusterobjekte in der Unified Manager-Benutzeroberfläche angezeigt werden.  Dieser Zeitrahmen gilt auch für Änderungen an einem Cluster.  Wenn Sie beispielsweise einem SVM in einem Cluster zwei neue Volumes hinzufügen, werden Ihnen diese neuen Objekte nach dem nächsten Abfrageintervall, das bis zu 15 Minuten dauern kann, in der Benutzeroberfläche angezeigt.
+
+Das folgende Bild veranschaulicht den Erkennungsprozess:
+
+image::../media/discovery_process_oc_6_0.gif[So funktioniert der Discovery-Prozess]
+
+Nachdem alle Objekte für einen neuen Cluster erkannt wurden, beginnt Unified Manager mit der Erfassung historischer Leistungsdaten der letzten 15 Tage.  Diese Statistiken werden mithilfe der Funktion zur Datenkontinuitätserfassung erfasst.  Mit dieser Funktion erhalten Sie unmittelbar nach dem Hinzufügen eines Clusters Leistungsinformationen für mehr als zwei Wochen.  Nachdem der Datenkontinuitätserfassungszyklus abgeschlossen ist, werden standardmäßig alle fünf Minuten Echtzeitdaten zur Clusterleistung erfasst.
+
+[NOTE]
+====
+Da die Erfassung von 15 Tagen Leistungsdaten CPU-intensiv ist, wird empfohlen, das Hinzufügen neuer Cluster zu staffeln, damit Abfragen zur Datenkontinuitätserfassung nicht auf zu vielen Clustern gleichzeitig ausgeführt werden.
+
+====

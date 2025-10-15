@@ -1,0 +1,85 @@
+---
+permalink: data-protection/reference_initialize_update_relationship_dialog_box.html 
+sidebar: sidebar 
+keywords: initialize, update, dialog box 
+summary: Über das Dialogfeld „Initialisieren/Aktualisieren“ können Sie eine erstmalige Baseline-Übertragung für eine neue Schutzbeziehung durchführen oder eine Beziehung aktualisieren, wenn diese bereits initialisiert ist und Sie eine manuelle, ungeplante, inkrementelle Aktualisierung durchführen möchten. 
+---
+= Dialogfeld „Initialisieren/Aktualisieren“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Über das Dialogfeld „Initialisieren/Aktualisieren“ können Sie eine erstmalige Baseline-Übertragung für eine neue Schutzbeziehung durchführen oder eine Beziehung aktualisieren, wenn diese bereits initialisiert ist und Sie eine manuelle, ungeplante, inkrementelle Aktualisierung durchführen möchten.
+
+
+
+== Registerkarte „Übertragungsoptionen“
+
+Auf der Registerkarte „Übertragungsoptionen“ können Sie die Initialisierungspriorität einer Übertragung und die während der Übertragungen verwendete Bandbreite ändern.
+
+* *Transferpriorität*
++
+Die Priorität, mit der die Übertragung ausgeführt wird.  Sie können entweder „Normal“ oder „Niedrig“ auswählen.  Beziehungen mit Richtlinien, die eine normale Übertragungspriorität angeben, werden vor denen ausgeführt, die eine niedrige Übertragungspriorität angeben.  Standardmäßig ist „Normal“ ausgewählt.
+
+* *Maximale Übertragungsrate*
++
+Gibt die maximale Rate an, mit der Daten zwischen Clustern über das Netzwerk übertragen werden.  Wenn Sie keine maximale Übertragungsrate verwenden möchten, ist die Basisübertragung zwischen Beziehungen unbegrenzt.  Wenn Sie mehr als eine Beziehung mit unterschiedlichen maximalen Übertragungsraten auswählen, können Sie eine der folgenden Einstellungen für die maximale Übertragungsrate angeben:
+
++
+** Verwenden Sie die Werte, die Sie beim Einrichten oder Bearbeiten einzelner Beziehungen angegeben haben.
++
+Wenn diese Option ausgewählt ist, verwenden Initialisierungs- und Aktualisierungsvorgänge die maximale Übertragungsrate, die zum Zeitpunkt der Erstellung oder Bearbeitung jeder Beziehung angegeben wurde.  Dieses Feld ist nur verfügbar, wenn mehrere Beziehungen mit unterschiedlichen Übertragungsraten initialisiert oder aktualisiert werden.
+
+** Unbegrenzt
++
+Gibt an, dass für Übertragungen zwischen Beziehungen keine Bandbreitenbeschränkung besteht.  Dieses Feld ist nur verfügbar, wenn mehrere Beziehungen mit unterschiedlichen Übertragungsraten initialisiert oder aktualisiert werden.
+
+** Bandbreite begrenzen auf
++
+Wenn diese Option ausgewählt ist, wird die Netzwerkbandbreite auf den von Ihnen angegebenen Wert begrenzt.  Sie können einen numerischen Wert eingeben und dann entweder Kilobyte pro Sekunde (KBps), Megabyte pro Sekunde (MBps), Gigabyte pro Sekunde (GBps) oder Terabyte pro Sekunde (TBps) auswählen.  Die von Ihnen angegebene maximale Übertragungsrate muss größer als 1 KBps und kleiner als 4 TBps sein.
+
+
+
+
+
+
+
+== Registerkarte „Quell-Snapshot-Kopien“
+
+Auf der Registerkarte „Quell-Snapshot-Kopien“ werden die folgenden Informationen zur Quell-Snapshot-Kopie angezeigt, die für die Baseline-Übertragung verwendet wird:
+
+* *Quellvolumen*
++
+Zeigt die Namen der entsprechenden Quellvolumes an.
+
+* *Zielvolumen*
++
+Zeigt die Namen der ausgewählten Zielvolumes an.
+
+* *Quellentyp*
++
+Zeigt den Datenträgertyp an.  Der Typ kann entweder Lesen/Schreiben oder Datenschutz sein.
+
+* *Schnappschusskopie*
++
+Zeigt die Snapshot-Kopie an, die für die Datenübertragung verwendet wird.  Wenn Sie auf den Wert „Snapshot-Kopie“ klicken, wird das Dialogfeld „Quell-Snapshot-Kopie auswählen“ angezeigt, in dem Sie je nach Art Ihrer Schutzbeziehung und der von Ihnen ausgeführten Operation eine bestimmte Snapshot-Kopie für Ihre Übertragung auswählen können.  Die Option zum Angeben einer anderen Snapshot-Kopie ist für Quellen vom Typ „Datenschutz“ nicht verfügbar.
+
+
+
+
+
+== Befehlsschaltflächen
+
+Mit den Befehlsschaltflächen können Sie die folgenden Aufgaben ausführen:
+
+* *Stornieren*
++
+Verwirft Ihre Auswahl und schließt das Dialogfeld „Initialisieren/Aktualisieren“.
+
+* *Einreichen*
++
+Speichert Ihre Auswahl und startet den Initialisierungs- oder Aktualisierungsjob.
+
+

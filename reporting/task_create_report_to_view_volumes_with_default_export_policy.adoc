@@ -1,0 +1,40 @@
+---
+permalink: reporting/task_create_report_to_view_volumes_with_default_export_policy.html 
+sidebar: sidebar 
+keywords: create, report, view, volumes, default, export, policy 
+summary: Sie können einen Bericht erstellen, um Volumes zu finden, die die Standardexportrichtlinie verwenden. 
+---
+= Erstellen Sie einen Bericht, um Volumes anzuzeigen, die die Standardexportrichtlinie verwenden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um Volumes zu finden, die die Standardexportrichtlinie verwenden.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Führen Sie die folgenden Schritte aus, um eine benutzerdefinierte Ansicht für Volumes zu erstellen, die die Standardexportrichtlinie verwenden, und planen Sie dann die Generierung eines Berichts für diese Ansicht.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *NFS-Freigaben*.
+. Wählen Sie *Anzeigen/Ausblenden*, um alle Spalten zu entfernen, die Sie nicht im Bericht haben möchten.
+. Ziehen Sie die Spalte „Exportrichtlinie“ in die Nähe der Spalte „Volumen“.
+. Klicken Sie auf das Filtersymbol, fügen Sie den folgenden Filter hinzu und klicken Sie dann auf *Filter anwenden*:
++
+** Exportrichtlinie enthält Standard
+
+
+. Speichern Sie die Ansicht unter einem bestimmten Namen, der widerspiegelt, was die Ansicht anzeigt, z. B. „Volumes mit einer Standardexportrichtlinie“, und klicken Sie auf das Häkchen (image:../media/blue_check.gif[""] ).
+. Klicken Sie auf der Inventarseite auf die Schaltfläche *Geplante Berichte*.
+. Klicken Sie auf *Zeitplan hinzufügen*, um der Seite „Berichtszeitpläne“ eine neue Zeile hinzuzufügen, damit Sie die Zeitplanmerkmale für den neuen Bericht definieren können.
+. Geben Sie einen Namen für den Berichtszeitplan ein und füllen Sie die anderen Berichtsfelder aus. Klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""] ) am Ende der Zeile.
++
+Der Bericht wird sofort testweise versendet.  Anschließend wird der Bericht generiert und in der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Basierend auf den im Bericht angezeigten Ergebnissen möchten Sie möglicherweise eine benutzerdefinierte Exportrichtlinie konfigurieren.

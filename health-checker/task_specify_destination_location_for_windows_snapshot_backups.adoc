@@ -1,0 +1,49 @@
+---
+permalink: health-checker/task_specify_destination_location_for_windows_snapshot_backups.html 
+sidebar: sidebar 
+keywords: specify, destination location, windows, snapshot copy, copies 
+summary: Sie sollten den Zielspeicherort für Active IQ Unified Manager Snapshot-Kopien auf einem Volume konfigurieren, das Sie bereits in einem Ihrer ONTAP Cluster konfiguriert haben.  Sie sollten die Wartungskonsole verwenden, um den Standort zu definieren. 
+---
+= Geben Sie den Zielspeicherort für Snapshot-Kopien unter Windows an
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten den Zielspeicherort für Active IQ Unified Manager Snapshot-Kopien auf einem Volume konfigurieren, das Sie bereits in einem Ihrer ONTAP Cluster konfiguriert haben.  Sie sollten die Wartungskonsole verwenden, um den Standort zu definieren.
+
+* Sie müssen über Administratorrechte für den Windows-Host verfügen, auf dem Active IQ Unified Manager installiert ist.
+* Sie müssen über eine Benutzer-ID und ein Kennwort verfügen, die Sie zum Anmelden bei der Wartungskonsole des Unified Manager-Servers berechtigen.
+* Sie müssen über die Cluster-Management-IP-Adresse, den Namen der Speicher-VM, den Namen des Volumes, den LUN-Namen sowie den Benutzernamen und das Kennwort des Speichersystems verfügen.
+* Sie müssen das Volume als Netzwerklaufwerk auf dem Active IQ Unified Manager Host bereitgestellt haben und über das Bereitstellungslaufwerk verfügen.
+
+
+.Schritte
+. Stellen Sie mithilfe von Power Shell eine Verbindung zur IP-Adresse oder zum vollqualifizierten Domänennamen des Active IQ Unified Manager Systems her.
+. Melden Sie sich mit dem Namen und Kennwort des Wartungsbenutzers (umadmin) beim System an.
+. Geben Sie den Befehl ein `maintenance_console` und drücken Sie die Eingabetaste.
+. Geben Sie im *Hauptmenü* der Wartungskonsole die Nummer für die Option *Backup-Wiederherstellung* ein.
+. Geben Sie die Nummer für * NetApp Snapshot Backup konfigurieren* ein.
+. Geben Sie die Nummer ein, um iSCSI zu konfigurieren.
+. Überprüfen Sie die Informationen, die Sie angeben müssen, und geben Sie dann die Nummer für *Backup-Konfigurationsdetails eingeben* ein.
+. Um das Volume zu identifizieren, auf das der Snapshot geschrieben wird, geben Sie die IP-Adresse der Cluster-Management-Schnittstelle, den Namen der Speicher-VM, den Namen des Volumes, den LUN-Namen, den Benutzernamen und das Kennwort des Speichersystems sowie das Mount-Laufwerk ein.
+. Überprüfen Sie diese Informationen und geben Sie `y` .
++
+Das System führt die folgenden Aufgaben aus:
+
++
+** Speicher-VM ist validiert
+** Volumen ist validiert
+** Laufwerk einbinden und Status wird validiert
+** Existenz und Status der LUN
+** Existenz eines Netzlaufwerks
+** Das Vorhandensein des empfohlenen Speicherplatzes (mehr als das Doppelte des MySQL-Datenverzeichnisses) auf dem bereitgestellten Volume wird überprüft
+** LUN-Pfad, der der dedizierten LUN im Volume entspricht
+** igroup-Name
+** GUID des Volumes, auf dem das Netzlaufwerk eingebunden ist
+** iSCSI-Initiator zur Kommunikation mit ONTAP
+
+
+. Beenden Sie die Wartungskonsole und starten Sie die Active IQ Unified Manager Schnittstelle, um einen Zeitplan für Snapshot-Kopien zu erstellen.
+

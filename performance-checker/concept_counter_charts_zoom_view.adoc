@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_counter_charts_zoom_view.html 
+sidebar: sidebar 
+keywords: counter, charts, zoom, view 
+summary: Die Zählerdiagramme bieten eine Zoomansicht, mit der Sie Leistungsdetails über den von Ihnen angegebenen Zeitraum vergrößern können.  Dadurch können Sie Leistungsdetails und Ereignisse mit einer viel höheren Granularität anzeigen, was bei der Behebung von Leistungsproblemen von Vorteil ist. 
+---
+= Zählerdiagramme Zoomansicht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Zählerdiagramme bieten eine Zoomansicht, mit der Sie Leistungsdetails über den von Ihnen angegebenen Zeitraum vergrößern können.  Dadurch können Sie Leistungsdetails und Ereignisse mit einer viel höheren Granularität anzeigen, was bei der Behebung von Leistungsproblemen von Vorteil ist.
+
+Bei der Anzeige in der Zoom-Ansicht bieten einige der Aufschlüsselungsdiagramme zusätzliche Informationen als die, die angezeigt werden, wenn sich das Diagramm nicht in der Zoom-Ansicht befindet.  Beispielsweise werden auf den Zoom-Ansichtsseiten des Aufschlüsselungsdiagramms „IOPS“, „IOPS/TB“ und „MBps“ QoS-Richtlinienwerte für Volumes und LUNs angezeigt, wenn diese in ONTAP festgelegt wurden.
+
+[NOTE]
+====
+Für systemdefinierte Richtlinien für Leistungsschwellenwerte sind in der Liste *Richtlinien* nur die Richtlinien „Knotenressourcen überlastet“ und „QoS-Durchsatzlimit überschritten“ verfügbar.  Die anderen systemdefinierten Schwellenwertrichtlinien sind derzeit nicht verfügbar.
+
+====

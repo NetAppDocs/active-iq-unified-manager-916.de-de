@@ -1,0 +1,311 @@
+---
+permalink: events/reference_supported_unified_manager_cli_commands.html 
+sidebar: sidebar 
+keywords: supported, unified manager, cli, commands, cmd, um cli, um run, 
+summary: Als Speicheradministrator können Sie die CLI-Befehle verwenden, um Abfragen zu den Speicherobjekten durchzuführen, beispielsweise zu Clustern, Aggregaten, Volumes, Qtrees und LUNs. 
+---
+= Unterstützte Unified Manager CLI-Befehle
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Als Speicheradministrator können Sie die CLI-Befehle verwenden, um Abfragen zu den Speicherobjekten durchzuführen, beispielsweise zu Clustern, Aggregaten, Volumes, Qtrees und LUNs.  Sie können die CLI-Befehle verwenden, um die interne Datenbank des Unified Managers und die ONTAP Datenbank abzufragen.  Sie können CLI-Befehle auch in Skripten verwenden, die zu Beginn oder am Ende eines Vorgangs oder beim Auslösen einer Warnung ausgeführt werden.
+
+Allen Befehlen muss der Befehl vorangestellt werden `um cli login` und einen gültigen Benutzernamen und ein gültiges Passwort zur Authentifizierung.
+
+
+NOTE: Stellen Sie zum Ausführen des Befehls _um run_ sicher, dass Ihr Konto über den Anwendungszugriff _console_ verfügt.
+
+|===
+| CLI-Befehl | Beschreibung | Ausgabe 
+
+
+ a| 
+`um cli login -u <username> [-p <password>]`
+ a| 
+Meldet sich bei der CLI an.  Aus Sicherheitsgründen sollten Sie nach der Option „-u“ nur den Benutzernamen eingeben.  Bei dieser Verwendung werden Sie zur Eingabe des Kennworts aufgefordert und das Kennwort wird nicht im Verlauf oder in der Prozesstabelle erfasst.  Die Sitzung läuft drei Stunden nach der Anmeldung ab, danach muss sich der Benutzer erneut anmelden.
+ a| 
+Zeigt die entsprechende Meldung an.
+
+
+
+ a| 
+`um cli logout`
+ a| 
+Meldet sich von der CLI ab.
+ a| 
+Zeigt die entsprechende Meldung an.
+
+
+
+ a| 
+`um help`
+ a| 
+Zeigt alle Unterbefehle der ersten Ebene an.
+ a| 
+Zeigt alle Unterbefehle der ersten Ebene an.
+
+
+
+ a| 
+`um run cmd [ -t <timeout> ] <cluster> <command>`
+ a| 
+Die einfachste Möglichkeit, einen Befehl auf einem oder mehreren Hosts auszuführen.  Wird hauptsächlich für Alarmskripte verwendet, um einen Vorgang auf ONTAP abzurufen oder auszuführen.  Das optionale Timeout-Argument legt ein maximales Zeitlimit (in Sekunden) fest, das für die Ausführung des Befehls auf dem Client erforderlich ist.  Der Standardwert ist 0 (ewig warten).
+ a| 
+Wie von ONTAP erhalten.
+
+
+
+ a| 
+`um run query <sql command>`
+ a| 
+Führt eine SQL-Abfrage aus.  Es sind nur Abfragen zulässig, die aus der Datenbank lesen.  Aktualisierungs-, Einfüge- oder Löschvorgänge werden nicht unterstützt.
+ a| 
+Die Ergebnisse werden in tabellarischer Form angezeigt.  Wenn ein leerer Satz zurückgegeben wird oder ein Syntaxfehler oder eine fehlerhafte Anfrage vorliegt, wird die entsprechende Fehlermeldung angezeigt.
+
+
+
+ a| 
+`um datasource add -u <username> -P <password> [ -t <protocol> ] [ -p <port> ] <hostname-or-ip>`
+ a| 
+Fügt der Liste der verwalteten Speichersysteme eine Datenquelle hinzu.  Eine Datenquelle beschreibt, wie Verbindungen zu Speichersystemen hergestellt werden.  Beim Hinzufügen einer Datenquelle müssen die Optionen -u (Benutzername) und -P (Passwort) angegeben werden.  Die Option -t (Protokoll) gibt das für die Kommunikation mit dem Cluster verwendete Protokoll an (http oder https).  Wenn das Protokoll nicht angegeben ist, werden beide Protokolle versucht. Die Option -p (Port) gibt den Port an, der für die Kommunikation mit dem Cluster verwendet wird.  Wenn der Port nicht angegeben ist, wird der Standardwert des entsprechenden Protokolls versucht.  Dieser Befehl kann nur vom Speicheradministrator ausgeführt werden.
+ a| 
+Der Benutzer wird aufgefordert, das Zertifikat zu akzeptieren, und die entsprechende Meldung wird gedruckt.
+
+
+
+ a| 
+`um datasource list [ <datasource-id>]`
+ a| 
+Zeigt die Datenquellen für verwaltete Speichersysteme an.
+ a| 
+Zeigt die folgenden Werte im Tabellenformat an: `ID Address Port, Protocol Acquisition Status, Analysis Status, Communication status, Acquisition Message, and Analysis Message` .
+
+
+
+ a| 
+`um datasource modify [ -h <hostname-or-ip> ] [ -u <username> ] [ -P <password> ] [ -t <protocol> ] [ -p <port> ] <datasource-id>`
+ a| 
+Ändert eine oder mehrere Datenquellenoptionen.  Kann nur vom Speicheradministrator ausgeführt werden.
+ a| 
+Zeigt die entsprechende Meldung an.
+
+
+
+ a| 
+`um datasource remove <datasource-id>`
+ a| 
+Entfernt die Datenquelle (Cluster) aus Unified Manager.
+ a| 
+Zeigt die entsprechende Meldung an.
+
+
+
+ a| 
+`um option list [ <option> .. ]`
+ a| 
+Listet alle Optionen auf, die Sie mit dem Befehl „Set“ konfigurieren können.
+ a| 
+Zeigt die folgenden Werte im Tabellenformat an: `Name, Value, Default Value, and Requires Restart.`
+
+
+
+ a| 
+`um option set <option-name>=<option-value> [ <option-name>=<option-value> ... ]`
+ a| 
+Legt eine oder mehrere Optionen fest.  Der Befehl kann nur vom Speicheradministrator ausgeführt werden.
+ a| 
+Zeigt die entsprechende Meldung an.
+
+
+
+ a| 
+`um version`
+ a| 
+Zeigt die Softwareversion von Unified Manager an.
+ a| 
+`Version ("9.6")`
+
+
+
+ a| 
+`um lun list [-q] [ -ObjectType <object-id>]`
+ a| 
+Listet die LUNs nach dem Filtern nach dem angegebenen Objekt auf.  -q ist für alle Befehle anwendbar, um keinen Header anzuzeigen.  ObjectType kann LUN, Qtree, Cluster, Volume, Quota oder SVM sein.
+
+Beispiel:
+
+*`um lun list -cluster 1`*
+
+In diesem Beispiel ist „-cluster“ der Objekttyp und „1“ die Objekt-ID.  Der Befehl listet alle LUNs innerhalb des Clusters mit der ID 1 auf.
+ a| 
+Zeigt die folgenden Werte im Tabellenformat an: `ID and LUN path.`
+
+
+
+ a| 
+`um svm list [-q] [ -ObjectType <object-id>]`
+ a| 
+Listet die Speicher-VMs nach dem Filtern nach dem angegebenen Objekt auf.  ObjectType kann LUN, Qtree, Cluster, Volume, Quota oder SVM sein.
+
+Beispiel:
+
+*`um svm list -cluster 1`*
+
+In diesem Beispiel ist „-cluster“ der Objekttyp und „1“ die Objekt-ID.  Der Befehl listet alle Speicher-VMs innerhalb des Clusters mit der ID 1 auf.
+ a| 
+Zeigt die folgenden Werte im Tabellenformat an: `Name and Cluster ID.`
+
+
+
+ a| 
+`um qtree list [-q] [ -ObjectType <object-id>]`
+ a| 
+Listet die Qtrees nach dem Filtern nach dem angegebenen Objekt auf.  -q ist für alle Befehle anwendbar, um keinen Header anzuzeigen.  ObjectType kann LUN, Qtree, Cluster, Volume, Quota oder SVM sein.
+
+Beispiel:
+
+*`um qtree list -cluster 1`*
+
+In diesem Beispiel ist „-cluster“ der Objekttyp und „1“ die Objekt-ID.  Der Befehl listet alle Qtrees innerhalb des Clusters mit der ID 1 auf.
+ a| 
+Zeigt die folgenden Werte im Tabellenformat an: `Qtree ID and Qtree Name.`
+
+
+
+ a| 
+`um disk list [-q] [-ObjectType <object-id>]`
+ a| 
+Listet die Datenträger nach dem Filtern nach dem angegebenen Objekt auf.  ObjectType kann Disk, Aggr, Node oder Cluster sein.
+
+Beispiel:
+
+*`um disk list -cluster 1`*
+
+In diesem Beispiel ist „-cluster“ der Objekttyp und „1“ die Objekt-ID.  Der Befehl listet alle Festplatten innerhalb des Clusters mit der ID 1 auf.
+ a| 
+Zeigt die folgenden Werte in tabellarischer Form an `ObjectType and object-id` .
+
+
+
+ a| 
+`um cluster list [-q] [-ObjectType <object-id>]`
+ a| 
+Listet die Cluster nach dem Filtern nach dem angegebenen Objekt auf.  ObjectType kann Disk, Aggr, Node, Cluster, LUN, Qtree, Volume, Quota oder SVM sein.
+
+Beispiel:
+
+*`um cluster list -aggr 1`*
+
+In diesem Beispiel ist „-aggr“ der Objekttyp und „1“ die Objekt-ID.  Der Befehl listet den Cluster auf, zu dem das Aggregat mit der ID 1 gehört.
+ a| 
+Zeigt die folgenden Werte im Tabellenformat an: `Name, Full Name, Serial Number, Datasource Id, Last Refresh Time, and Resource Key` .
+
+
+
+ a| 
+`um cluster node list [-q] [-ObjectType <object-id>]`
+ a| 
+Listet die Clusterknoten nach dem Filtern nach dem angegebenen Objekt auf.  ObjectType kann Disk, Aggr, Node oder Cluster sein.
+
+Beispiel:
+
+*`um cluster node list -cluster 1`*
+
+In diesem Beispiel ist „-cluster“ der Objekttyp und „1“ die Objekt-ID.  Der Befehl listet alle Knoten innerhalb des Clusters mit der ID 1 auf.
+ a| 
+Zeigt die folgenden Werte in tabellarischer Form an `Name and Cluster ID` .
+
+
+
+ a| 
+`um volume list [-q] [-ObjectType <object-id>]`
+ a| 
+Listet die Datenträger nach dem Filtern nach dem angegebenen Objekt auf.  ObjectType kann LUN, Qtree, Cluster, Volume, Quota, SVM oder Aggregat sein.
+
+Beispiel:
+
+*`um volume list -cluster 1`*
+
+In diesem Beispiel ist „-cluster“ der Objekttyp und „1“ die Objekt-ID.  Der Befehl listet alle Volumes innerhalb des Clusters mit der ID 1 auf.
+ a| 
+Zeigt die folgenden Werte in tabellarischer Form an `Volume ID and Volume Name` .
+
+
+
+ a| 
+`um quota user list [-q] [-ObjectType <object-id>]`
+ a| 
+Listet die Kontingentbenutzer nach dem Filtern nach dem angegebenen Objekt auf.  ObjectType kann qtree, Cluster, Volume, Quota oder SVM sein.
+
+Beispiel:
+
+*`um quota user list -cluster 1`*
+
+In diesem Beispiel ist „-cluster“ der Objekttyp und „1“ die Objekt-ID.  Der Befehl listet alle Kontingentbenutzer innerhalb des Clusters mit der ID 1 auf.
+ a| 
+Zeigt die folgenden Werte in tabellarischer Form an `ID, Name, SID and Email` .
+
+
+
+ a| 
+`um aggr list [-q] [-ObjectType <object-id>]`
+ a| 
+Listet die Aggregate nach dem Filtern nach dem angegebenen Objekt auf.  ObjectType kann Disk, Aggr, Node, Cluster oder Volume sein.
+
+Beispiel:
+
+*`um aggr list -cluster 1`*
+
+In diesem Beispiel ist „-cluster“ der Objekttyp und „1“ die Objekt-ID.  Der Befehl listet alle Aggregate innerhalb des Clusters mit der ID 1 auf.
+ a| 
+Zeigt die folgenden Werte in tabellarischer Form an `Aggr ID, and Aggr Name` .
+
+
+
+ a| 
+`um event ack <event-ids>`
+ a| 
+Bestätigt ein oder mehrere Ereignisse.
+ a| 
+Zeigt die entsprechende Meldung an.
+
+
+
+ a| 
+`um event resolve <event-ids>`
+ a| 
+Löst ein oder mehrere Ereignisse auf.
+ a| 
+Zeigt die entsprechende Meldung an.
+
+
+
+ a| 
+`um event assign -u <username> <event-id>`
+ a| 
+Weist einem Benutzer ein Ereignis zu.
+ a| 
+Zeigt die entsprechende Meldung an.
+
+
+
+ a| 
+`um event list [ -s <source> ] [ -S <event-state-filter-list>.. ] [ <event-id> .. ]`
+ a| 
+Listet die vom System oder Benutzer generierten Ereignisse auf.  Filtert Ereignisse basierend auf Quelle, Status und IDs.
+ a| 
+Zeigt die folgenden Werte in tabellarischer Form an `Source, Source type, Name, Severity, State, User and Timestamp` .
+
+
+
+ a| 
+`um backup restore -f <backup_file_path_and_name>`
+ a| 
+Stellt eine MySQL-Datenbanksicherung mithilfe von .7z-Dateien wieder her.
+ a| 
+Zeigt die entsprechende Meldung an.
+
+|===

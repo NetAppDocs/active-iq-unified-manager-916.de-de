@@ -1,0 +1,20 @@
+---
+permalink: reporting/concept_schedule_reports.html 
+sidebar: sidebar 
+keywords: scheduling, reports 
+summary: Nachdem Sie eine Ansicht erstellt haben, die Sie wiederverwenden und als Bericht freigeben möchten, können Sie sie mit Active IQ Unified Manager planen.  Sie können geplante Berichte verwalten und die Empfänger und die Verteilungshäufigkeit für jeden Berichtszeitplan ändern. 
+---
+= Berichte planen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie eine Ansicht erstellt haben, die Sie wiederverwenden und als Bericht freigeben möchten, können Sie sie mit Active IQ Unified Manager planen.  Sie können geplante Berichte verwalten und die Empfänger und die Verteilungshäufigkeit für jeden Berichtszeitplan ändern.
+
+Sie können die meisten Ansichten oder Inventarseiten im Unified Manager planen.  Ausnahmen sind Ereignisse. Dabei handelt es sich um Berichte, die Sie als CSV-Dateien herunterladen können. Sie können jedoch keine Ereignisse zur Neugenerierung und Freigabe planen.  Sie können die Dashboards, Favoriten oder Konfigurationsseiten auch nicht herunterladen oder planen.
+
+Ab Active IQ Unified Manager 9.8 können Sie Ansichten im Microsoft® Excel-Format herunterladen und anpassen.  Sie können erweiterte Excel-Funktionen wie komplexe Sortierungen, Ebenenfilter, Pivot-Tabellen und Diagramme verwenden.  Wenn Sie mit dem resultierenden Excel-Bericht zufrieden sind, können Sie die Excel-Datei hochladen, um sie bei jeder Planung und Freigabe des Berichts zu verwenden.
+
+Sie können die integrierten Ansichten oder die von Ihnen angepassten Ansichten planen.  Sie können den zu sendenden Dateityp auswählen: CSV, PDF oder XSLX.  Wenn Sie einen Bericht zum ersten Mal planen, können Sie ihn herunterladen und sich selbst als einzigen Empfänger festlegen, der den Bericht sehen kann, so wie ihn auch Ihre Empfänger sehen werden.

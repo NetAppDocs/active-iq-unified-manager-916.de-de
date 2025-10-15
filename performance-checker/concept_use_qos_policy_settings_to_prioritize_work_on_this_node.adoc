@@ -1,0 +1,26 @@
+---
+permalink: performance-checker/concept_use_qos_policy_settings_to_prioritize_work_on_this_node.html 
+sidebar: sidebar 
+keywords: qos, policy, settings, prioritize, work, node 
+summary: 'Sie können für eine QoS-Richtliniengruppe ein Limit festlegen, um die E/A-pro-Sekunde (IOPS) oder den MBps-Durchsatz für die darin enthaltenen Workloads zu steuern.  Wenn sich Workloads in einer Richtliniengruppe ohne festgelegte Begrenzung befinden, beispielsweise in der Standardrichtliniengruppe, oder die festgelegte Begrenzung Ihren Anforderungen nicht entspricht, können Sie die festgelegte Begrenzung erhöhen oder die Workloads in eine neue oder vorhandene Richtliniengruppe verschieben, die über die gewünschte Begrenzung verfügt.' 
+---
+= Verwenden Sie QoS-Richtlinieneinstellungen, um die Arbeit an diesem Knoten zu priorisieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können für eine QoS-Richtliniengruppe ein Limit festlegen, um die E/A-pro-Sekunde (IOPS) oder den MBps-Durchsatz für die darin enthaltenen Workloads zu steuern.  Wenn sich Workloads in einer Richtliniengruppe ohne festgelegte Begrenzung befinden, beispielsweise in der Standardrichtliniengruppe, oder die festgelegte Begrenzung Ihren Anforderungen nicht entspricht, können Sie die festgelegte Begrenzung erhöhen oder die Workloads in eine neue oder vorhandene Richtliniengruppe verschieben, die über die gewünschte Begrenzung verfügt.
+
+Wenn ein Leistungsereignis auf einem Knoten durch Arbeitslasten verursacht wird, die die Knotenressourcen überbeanspruchen, wird in der Ereignisbeschreibung auf der Seite „Ereignisdetails“ ein Link zur Liste der betroffenen Volumes angezeigt.  Auf der Seite „Leistung/Volumes“ können Sie die betroffenen Volumes nach IOPS und MBps sortieren, um zu sehen, welche Workloads die höchste Auslastung aufweisen, die möglicherweise zu dem Ereignis beigetragen hat.
+
+Indem den Volumes, die die Knotenressourcen übermäßig nutzen, eine restriktivere Richtliniengruppeneinstellung zugewiesen wird, drosselt die Richtliniengruppe die Arbeitslasten, um ihre Aktivität einzuschränken, wodurch die Nutzung der Ressourcen auf diesem Knoten reduziert werden kann.
+
+Sie können ONTAP System Manager oder die ONTAP -Befehle verwenden, um Richtliniengruppen zu verwalten, einschließlich der folgenden Aufgaben:
+
+* Erstellen einer Richtliniengruppe
+* Hinzufügen oder Entfernen von Workloads in einer Richtliniengruppe
+* Verschieben einer Arbeitslast zwischen Richtliniengruppen
+* Ändern des Durchsatzlimits einer Richtliniengruppe
+

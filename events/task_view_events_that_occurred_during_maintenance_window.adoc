@@ -1,0 +1,31 @@
+---
+permalink: events/task_view_events_that_occurred_during_maintenance_window.html 
+sidebar: sidebar 
+keywords: view, events, occurred, maintenance, window 
+summary: Bei Bedarf können Sie die Ereignisse anzeigen, die während eines Unified Manager-Wartungsfensters für alle Speicherobjekte generiert wurden.  Die meisten Ereignisse werden im Status „Veraltet“ angezeigt, sobald das Wartungsfenster abgeschlossen ist und alle Systemressourcen wieder betriebsbereit sind. 
+---
+= Anzeigen von Ereignissen, die während eines Wartungsfensters aufgetreten sind
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei Bedarf können Sie die Ereignisse anzeigen, die während eines Unified Manager-Wartungsfensters für alle Speicherobjekte generiert wurden.  Die meisten Ereignisse werden im Status „Veraltet“ angezeigt, sobald das Wartungsfenster abgeschlossen ist und alle Systemressourcen wieder betriebsbereit sind.
+
+.Bevor Sie beginnen
+Es muss mindestens ein Wartungsfenster abgeschlossen sein, bevor Ereignisse verfügbar sind.
+
+Ereignisse, die während eines Wartungsfensters aufgetreten sind, werden standardmäßig nicht auf der Inventarseite der Ereignisverwaltung angezeigt.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Ereignisse*.
++
+Standardmäßig werden alle aktiven (neuen und bestätigten) Ereignisse auf der Inventarseite der Ereignisverwaltung angezeigt.
+
+. Wählen Sie im Ansichtsbereich die Option *Alle während der Wartung generierten Ereignisse*.
++
+Die Liste der Ereignisse, die in den letzten 7 Tagen von allen Wartungsfenstersitzungen und von allen Clustern ausgelöst wurden, wird angezeigt.
+
+. Wenn für einen einzelnen Cluster mehrere Wartungsfenster vorhanden waren, können Sie auf das Kalendersymbol *Ausgelöste Zeit* klicken und den Zeitraum für die Wartungsfensterereignisse auswählen, die Sie anzeigen möchten.
+

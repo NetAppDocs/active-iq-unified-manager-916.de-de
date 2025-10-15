@@ -1,0 +1,87 @@
+---
+permalink: storage-mgmt/reference_email_notification_format_page.html 
+sidebar: sidebar 
+keywords: email, notification, format, page 
+summary: 'Auf der Seite „E-Mail-Benachrichtigungsformat“ werden die Regeln der E-Mail angezeigt, die an einen Benutzer oder eine Benutzergruppe gesendet wird, wenn ein kontingentbezogenes Problem vorliegt (weiches Limit überschritten oder hartes Limit erreicht).' 
+---
+= Seite „E-Mail-Benachrichtigungsformat“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „E-Mail-Benachrichtigungsformat“ werden die Regeln der E-Mail angezeigt, die an einen Benutzer oder eine Benutzergruppe gesendet wird, wenn ein kontingentbezogenes Problem vorliegt (weiches Limit überschritten oder hartes Limit erreicht).
+
+Die E-Mail-Benachrichtigung wird nur gesendet, wenn die folgenden Benutzer- oder Benutzergruppenkontingentereignisse generiert werden: Weiches Limit für Speicherplatz des Benutzer- oder Gruppenkontingents überschritten, Weiches Limit für Dateianzahl des Benutzer- oder Gruppenkontingents überschritten, Hartes Limit für Speicherplatz des Benutzer- oder Gruppenkontingents erreicht oder Hartes Limit für Dateianzahl des Benutzer- oder Gruppenkontingents erreicht.
+
+* *Aus*
++
+Zeigt die E-Mail-Adresse an, von der die E-Mail gesendet wird. Sie können diese Adresse ändern.  Standardmäßig ist dies die auf der Benachrichtigungsseite angegebene E-Mail-Adresse.
+
+* *Thema*
++
+Zeigt den Betreff der Benachrichtigungs-E-Mail an.
+
+* *E-Mail-Details*
++
+Zeigt den Text der Benachrichtigungs-E-Mail an.  Sie können den Text Ihren Anforderungen entsprechend ändern.  Sie können beispielsweise Informationen zu den Quotenattributen bereitstellen und die Anzahl der Schlüsselwörter reduzieren.  Sie sollten die Schlüsselwörter jedoch nicht ändern.
+
++
+Gültige Schlüsselwörter sind wie folgt:
+
++
+** $EVENT_NAME
++
+Gibt den Ereignisnamen an, der die E-Mail-Benachrichtigung verursacht hat.
+
+** $QUOTA_TARGET
++
+Gibt den Qtree oder das Volume an, auf das das Kontingent anwendbar ist.
+
+** $QUOTA_USED_PERCENT
++
+Gibt den Prozentsatz des Festplatten-Hardlimits, des Festplatten-Softlimits, des Datei-Hardlimits oder des Datei-Softlimits an, der vom Benutzer oder der Benutzergruppe verwendet wird.
+
+** $QUOTA_LIMIT
++
+Gibt das Festplattenlimit oder das Dateilimit an, das vom Benutzer oder der Benutzergruppe erreicht wird. Dabei wird eines der folgenden Ereignisse generiert:
+
++
+*** Hartes Limit für Benutzer- oder Gruppenkontingentspeicherplatz erreicht
+*** Soft-Limit für Benutzer- oder Gruppenkontingent-Festplattenspeicher erreicht
+*** Festes Limit für die Anzahl der Benutzer- oder Gruppenkontingentedateien erreicht
+*** Soft-Limit für die Anzahl der Benutzer- oder Gruppenkontingentedateien erreicht
+
+
+** $QUOTA_USED
++
+Gibt den belegten Speicherplatz oder die Anzahl der vom Benutzer oder der Benutzergruppe erstellten Dateien an.
+
+** $QUOTA_USER
++
+Gibt den Benutzer- oder Benutzergruppennamen an.
+
+
+
+
+
+
+
+== Befehlsschaltflächen
+
+Mit den Befehlsschaltflächen können Sie die am E-Mail-Benachrichtigungsformat vorgenommenen Änderungen in der Vorschau anzeigen, speichern oder abbrechen:
+
+* *Vorschau*
++
+Zeigt eine Vorschau der Benachrichtigungs-E-Mail an.
+
+* *Auf Werkseinstellungen zurücksetzen*
++
+Ermöglicht Ihnen, das Benachrichtigungsformat auf die werkseitigen Standardwerte zurückzusetzen.
+
+* *Speichern*
++
+Speichert die am Benachrichtigungsformat vorgenommenen Änderungen.
+
+

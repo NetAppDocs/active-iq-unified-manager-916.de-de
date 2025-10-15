@@ -1,0 +1,34 @@
+---
+permalink: reporting/task_create_report_to_view_volume_transfers_based_on_transfer_size.html 
+sidebar: sidebar 
+keywords: create, report, view, volume, transfers, transfer size 
+summary: Sie können einen Bericht erstellen, um Volumenübertragungen basierend auf der Übertragungsgröße anzuzeigen. 
+---
+= Erstellen Sie einen Bericht, um Volumenübertragungen basierend auf der Übertragungsgröße anzuzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um Volumenübertragungen basierend auf der Übertragungsgröße anzuzeigen.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Führen Sie die folgenden Schritte aus, um eine benutzerdefinierte Ansicht für Volumenübertragungen basierend auf der Übertragungsgröße zu erstellen und planen Sie dann die Generierung eines Berichts für diese Ansicht.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Volumes*.
+. Wählen Sie im Menü „Ansicht“ die Option „Beziehung“ > „Übertragungsrate des letzten Monats“ aus.
+. Klicken Sie oben auf die Spalte „Gesamtübertragungsgröße“, um die Volumenübertragungen nach Größe zu sortieren.
+. Speichern Sie die Ansicht unter einem bestimmten Namen, der widerspiegelt, was die Ansicht anzeigt, z. B. „Volumes nach Übertragungsgröße“.
+. Klicken Sie auf der Inventarseite auf die Schaltfläche *Geplante Berichte*.
+. Geben Sie einen Namen für den Berichtszeitplan ein und füllen Sie die anderen Berichtsfelder aus. Klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""] ) am Ende der Zeile.
++
+Der Bericht wird sofort testweise versendet.  Anschließend wird der Bericht generiert und in der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Anhand der im Bericht angezeigten Ergebnisse können Sie die Volumenbeziehungen nach Übertragungsgröße untersuchen.

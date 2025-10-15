@@ -1,0 +1,55 @@
+---
+permalink: storage-mgmt/task_add_space_to_data_disk_of_microsoft_windows.html 
+sidebar: sidebar 
+keywords: add space, logica, drive, microsoft windows server 
+summary: Wenn Sie den Speicherplatz für die Unified Manager-Datenbank erhöhen müssen, können Sie die Kapazität des logischen Laufwerks erhöhen, auf dem Unified Manager installiert ist. 
+---
+= Fügen Sie dem logischen Laufwerk des Microsoft Windows-Servers Speicherplatz hinzu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie den Speicherplatz für die Unified Manager-Datenbank erhöhen müssen, können Sie die Kapazität des logischen Laufwerks erhöhen, auf dem Unified Manager installiert ist.
+
+.Bevor Sie beginnen
+Sie müssen über Windows-Administratorrechte verfügen.
+
+Wir empfehlen Ihnen, die Unified Manager-Datenbank zu sichern, bevor Sie Speicherplatz hinzufügen.
+
+.Schritte
+. Melden Sie sich als Administrator bei dem Windows-Server an, auf dem Sie Speicherplatz hinzufügen möchten.
+. Führen Sie den Schritt aus, der der Methode entspricht, mit der Sie mehr Speicherplatz hinzufügen möchten:
++
+|===
+| Option | Beschreibung 
+
+
+ a| 
+Erhöhen Sie auf einem physischen Server die Kapazität des logischen Laufwerks, auf dem der Unified Manager-Server installiert ist.
+ a| 
+Befolgen Sie die Schritte im Microsoft-Thema:
+
+https://technet.microsoft.com/en-us/library/cc771473(v=ws.11).aspx["Erweitern eines Basisvolumes"]
+
+
+
+ a| 
+Fügen Sie auf einem physischen Server ein Festplattenlaufwerk hinzu.
+ a| 
+Befolgen Sie die Schritte im Microsoft-Thema:
+
+https://msdn.microsoft.com/en-us/library/dd163551.aspx["Hinzufügen von Festplattenlaufwerken"]
+
+
+
+ a| 
+Erhöhen Sie auf einer virtuellen Maschine die Größe einer Festplattenpartition.
+ a| 
+Befolgen Sie die Schritte im VMware-Thema:
+
+https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1004071["Erhöhen der Größe einer Festplattenpartition"]
+
+|===
+

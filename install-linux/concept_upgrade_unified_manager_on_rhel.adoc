@@ -1,0 +1,18 @@
+---
+permalink: install-linux/concept_upgrade_unified_manager_on_rhel.html 
+sidebar: sidebar 
+keywords: upgrade, unified manager, red hat enterprise, linux 
+summary: Sie können Unified Manager aktualisieren, wenn eine neue Softwareversion verfügbar ist. 
+---
+= Upgrade von Unified Manager auf Red Hat Enterprise Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Unified Manager aktualisieren, wenn eine neue Version verfügbar ist.
+
+Patch-Versionen der Unified Manager-Software werden, sofern sie von NetApp bereitgestellt werden, mit demselben Verfahren wie neue Versionen installiert.
+
+Wenn Unified Manager mit einer Instanz von OnCommand Workflow Automation gekoppelt ist und für beide Produkte neue Softwareversionen verfügbar sind, müssen Sie die beiden Produkte trennen und nach der Durchführung der Upgrades eine neue Workflow Automation-Verbindung einrichten.  Wenn Sie ein Upgrade nur für eines der Produkte durchführen, sollten Sie sich nach dem Upgrade bei Workflow Automation anmelden und überprüfen, ob weiterhin Daten vom Unified Manager abgerufen werden.

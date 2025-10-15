@@ -1,0 +1,80 @@
+---
+permalink: performance-checker/reference_performance_data_that_can_be_sent_to_an_external_server.html 
+sidebar: sidebar 
+keywords: performance, data, external, server 
+summary: Unified Manager sammelt eine Vielzahl von Leistungsdaten von allen Clustern, die er überwacht.  Sie können bestimmte Datengruppen an einen externen Server senden. 
+---
+= Leistungsdaten, die an einen externen Server gesendet werden können
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager sammelt eine Vielzahl von Leistungsdaten von allen Clustern, die er überwacht.  Sie können bestimmte Datengruppen an einen externen Server senden.
+
+Abhängig von den Leistungsdaten, die Sie grafisch darstellen möchten, können Sie eine der folgenden Statistikgruppen senden:
+
+|===
+| Statistikgruppe | Daten enthalten | Details 
+
+
+ a| 
+Leistungsmonitor
+ a| 
+Leistungsstatistiken auf hoher Ebene für die folgenden Objekte:
+
+* LUNs
+* Bände
+
+ a| 
+Diese Gruppe bietet die gesamten IOPS oder Latenz für alle LUNs und Volumes in allen überwachten Clustern.
+
+Diese Gruppe bietet die geringste Anzahl an Statistiken.
+
+
+
+ a| 
+Ressourcennutzung
+ a| 
+Statistiken zur Ressourcennutzung für die folgenden Objekte:
+
+* Nodes
+* Aggregate
+
+ a| 
+Diese Gruppe bietet Nutzungsstatistiken für den Knoten und aggregierte physische Ressourcen in allen überwachten Clustern.
+
+Es stellt auch die in der Leistungsmonitorgruppe gesammelten Statistiken bereit.
+
+
+
+ a| 
+Drilldown
+ a| 
+Low-Level-Lese-/Schreib- und Protokollstatistiken für alle verfolgten Objekte:
+
+* Nodes
+* Aggregate
+* LUNs
+* Bände
+* Festplatten
+* LIFs
+* Anschlüsse/Netzwerkkarten
+
+ a| 
+Diese Gruppe bietet Lese-/Schreib- und Protokollaufschlüsselungen für alle sieben verfolgten Objekttypen in allen überwachten Clustern.
+
+Es stellt außerdem die in der Gruppe „Leistungsmonitor“ und in der Gruppe „Ressourcennutzung“ gesammelten Statistiken bereit.
+
+Diese Gruppe bietet die größte Anzahl an Statistiken.
+
+|===
+[NOTE]
+====
+Wenn der Name eines Clusters oder Clusterobjekts auf dem Speichersystem geändert wird, enthalten sowohl das alte als auch das neue Objekt Leistungsdaten auf dem externen Server (genannt „metric_path“).  Die beiden Objekte werden nicht als dasselbe Objekt korreliert.  Wenn Sie beispielsweise den Namen eines Volumes von „`volume1_acct`“ in „`acct_vol1`“ ändern, werden alte Leistungsdaten für das alte Volume und neue Leistungsdaten für das neue Volume angezeigt.
+
+====
+Eine Liste aller Leistungsindikatoren, die an einen externen Datenanbieter gesendet werden können, finden Sie im Knowledge Base-Artikel 30096.
+
+https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Infrastructure_Management%2FActive_IQ_Unified_Manager%2FWhat_are_the_ActiveIQ_Unified_Manager_performance_counters_that_can_be_exported_to_an_External_Data_Provider%253F["Unified Manager-Leistungsindikatoren, die an einen externen Datenanbieter exportiert werden können"]

@@ -1,0 +1,16 @@
+---
+permalink: reporting/concept_customize_aggregate_capacity_reports.html 
+sidebar: sidebar 
+keywords: customize, aggregate, capacity, reports 
+summary: Diese benutzerdefinierten Beispielberichte sollen Ihnen dabei helfen, potenzielle Probleme im Zusammenhang mit der Gesamtspeicherkapazität zu erkennen und darauf zu reagieren. 
+---
+= Anpassen aggregierter Kapazitätsberichte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Diese benutzerdefinierten Beispielberichte sollen Ihnen dabei helfen, potenzielle Probleme im Zusammenhang mit der Gesamtspeicherkapazität zu erkennen und darauf zu reagieren.
+
+Die Berichte in diesem Abschnitt sind lediglich Beispiele, die Ihnen dabei helfen sollen, zu verstehen, wie Sie Berichte über die Gesamtkapazität erstellen, um die Ressourcen Ihres Speichersystems zu überwachen.

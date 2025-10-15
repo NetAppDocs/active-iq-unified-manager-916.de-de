@@ -1,0 +1,33 @@
+---
+permalink: performance-checker/task_change_counter_charts_focus_to_smaller_period_of_time.html 
+sidebar: sidebar 
+keywords: change, counter, charts, focus, shorter, period, time 
+summary: Sie können den Zeitbereich mit der Maus verkleinern, um sich auf einen bestimmten Zeitraum im Bereich „Zählerdiagramm“ oder im Fenster „Zählerdiagramm-Zoomansicht“ zu konzentrieren.  Dadurch erhalten Sie eine detailliertere und mikroskopischere Ansicht aller Teile der Zeitleiste mit Leistungsdaten, Ereignissen und Schwellenwerten. 
+---
+= Ändern Sie den Fokus der Counter Charts auf einen kürzeren Zeitraum
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Zeitbereich mit der Maus verkleinern, um sich auf einen bestimmten Zeitraum im Bereich „Zählerdiagramm“ oder im Fenster „Zählerdiagramm-Zoomansicht“ zu konzentrieren.  Dadurch erhalten Sie eine detailliertere und mikroskopischere Ansicht aller Teile der Zeitleiste mit Leistungsdaten, Ereignissen und Schwellenwerten.
+
+.Bevor Sie beginnen
+Um anzuzeigen, dass diese Funktionalität aktiv ist, muss sich der Cursor in eine Lupe verwandelt haben.
+
+[NOTE]
+====
+Bei Verwendung dieser Funktion, die die Zeitleiste ändert, um Werte anzuzeigen, die der detaillierteren Anzeige entsprechen, ändert sich der Zeit- und Datumsbereich im *Zeitbereich*-Selektor nicht gegenüber den ursprünglichen Werten für das Diagramm.
+
+====
+.Schritte
+. Um in einen bestimmten Zeitraum hineinzuzoomen, klicken Sie mit der Lupe und ziehen Sie die Maus, um den Bereich hervorzuheben, den Sie im Detail sehen möchten.
++
+Die Zählerwerte für den von Ihnen ausgewählten Zeitraum füllen das Zählerdiagramm.
+
+. Um zum ursprünglichen Zeitraum zurückzukehren, der im Auswahlfeld *Zeitbereich* festgelegt wurde, klicken Sie auf die Schaltfläche *Diagrammzoom zurücksetzen*.
++
+Das Zählerdiagramm wird in seinem ursprünglichen Zustand angezeigt.
+
+

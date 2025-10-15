@@ -1,0 +1,33 @@
+---
+permalink: config/task_add_space_to_data_disk_of_vmware_virtual_machine.html 
+sidebar: sidebar 
+keywords: add, space, data, disk, vmware, virtual, machine 
+summary: Wenn Sie den Speicherplatz auf der Datenfestplatte für die Unified Manager-Datenbank erhöhen müssen, können Sie nach der Installation Kapazität hinzufügen, indem Sie den Speicherplatz mithilfe der Unified Manager-Wartungskonsole erhöhen. 
+---
+= Fügen Sie Speicherplatz zur Datenfestplatte der virtuellen VMware-Maschine hinzu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie den Speicherplatz auf der Datenfestplatte für die Unified Manager-Datenbank erhöhen müssen, können Sie nach der Installation Kapazität hinzufügen, indem Sie den Speicherplatz mithilfe der Unified Manager-Wartungskonsole erhöhen.
+
+.Bevor Sie beginnen
+* Sie müssen Zugriff auf den vSphere-Client haben.
+* Auf der virtuellen Maschine dürfen keine Snapshots lokal gespeichert sein.
+* Sie müssen über die Anmeldeinformationen des Wartungsbenutzers verfügen.
+
+
+Wir empfehlen Ihnen, Ihre virtuelle Maschine zu sichern, bevor Sie die Größe virtueller Festplatten erhöhen.
+
+.Schritte
+. Wählen Sie im vSphere-Client die virtuelle Maschine Unified Manager aus und fügen Sie dann mehr Festplattenkapazität zu Daten hinzu `disk 3` .  Weitere Informationen finden Sie in der VMware-Dokumentation.
++
+In einigen seltenen Fällen verwendet die Unified Manager-Bereitstellung „Festplatte 2“ für die Datenfestplatte anstelle von „Festplatte 3“.  Wenn dies bei Ihrer Bereitstellung der Fall ist, erhöhen Sie den Speicherplatz auf der größeren Festplatte.  Auf der Datenfestplatte ist immer mehr Speicherplatz vorhanden als auf der anderen Festplatte.
+
+. Wählen Sie im vSphere-Client die virtuelle Maschine Unified Manager und dann die Registerkarte *Konsole* aus.
+. Klicken Sie in das Konsolenfenster und melden Sie sich dann mit Ihrem Benutzernamen und Kennwort bei der Wartungskonsole an.
+. Geben Sie im Hauptmenü die Nummer für die Option *Systemkonfiguration* ein.
+. Geben Sie im Systemkonfigurationsmenü die Zahl für die Option *Datenträgergröße erhöhen* ein.
+

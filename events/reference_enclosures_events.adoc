@@ -1,0 +1,101 @@
+---
+permalink: events/reference_enclosures_events.html 
+sidebar: sidebar 
+keywords: enclosures, events, impact area, availability, configuration 
+summary: Gehäuseereignisse liefern Ihnen Informationen zum Status der Festplattengehäuse in Ihrem Rechenzentrum, sodass Sie diese auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad. 
+---
+= Anlagen Veranstaltungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gehäuseereignisse liefern Ihnen Informationen zum Status der Festplattengehäuse in Ihrem Rechenzentrum, sodass Sie diese auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad.
+
+
+
+== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+Festplatten-Shelf-Lüfter ausgefallen (ocumEvtShelfFanFailed)
+ a| 
+Vorfall
+ a| 
+Ablageboden
+ a| 
+Kritisch
+
+
+
+ a| 
+Ausfall der Stromversorgung des Festplattenregals (ocumEvtShelfPowerSupplyFailed)
+ a| 
+Vorfall
+ a| 
+Ablageboden
+ a| 
+Kritisch
+
+
+
+ a| 
+Disk Shelf Multipath nicht konfiguriert (ocumDiskShelfConnectivityNotInMultiPath)
+
+Dieses Ereignis gilt nicht für:
+
+* Cluster, die sich in einer MetroCluster -Konfiguration befinden
+* Die folgenden Plattformen: FAS2554, FAS2552, FAS2520 und FAS2240
+
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Warnung
+
+
+
+ a| 
+Disk Shelf-Pfadfehler (ocumDiskShelfConnectivityPathFailure)
+ a| 
+Risiko
+ a| 
+Lagerregal
+ a| 
+Warnung
+
+|===
+
+
+== Wirkungsbereich: Konfiguration
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+Disk Shelf erkannt (Nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Node
+ a| 
+Information
+
+
+
+ a| 
+Festplattenregale entfernt (nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Node
+ a| 
+Information
+
+|===

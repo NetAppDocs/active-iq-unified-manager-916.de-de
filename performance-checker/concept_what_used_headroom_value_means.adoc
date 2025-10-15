@@ -1,0 +1,38 @@
+---
+permalink: performance-checker/concept_what_used_headroom_value_means.html 
+sidebar: sidebar 
+keywords: performance, capacity, value, means 
+summary: Der Wert der genutzten Leistungskapazität hilft Ihnen, die Knoten und Aggregate zu identifizieren, die derzeit über- oder unterausgelastet sind.  Auf diese Weise können Sie Arbeitslasten neu verteilen, um Ihre Speicherressourcen effizienter zu nutzen. 
+---
+= Was der Leistungskapazitäts-Gebrauchswert bedeutet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Wert der genutzten Leistungskapazität hilft Ihnen, die Knoten und Aggregate zu identifizieren, die derzeit über- oder unterausgelastet sind.  Auf diese Weise können Sie Arbeitslasten neu verteilen, um Ihre Speicherressourcen effizienter zu nutzen.
+
+Die folgende Abbildung zeigt die Latenz-Auslastungskurve für eine Ressource und identifiziert mit farbigen Punkten drei Bereiche, in denen sich der aktuelle Betriebspunkt befinden könnte.
+
+image::../media/headroom_chart_over_under.gif[Ein UI-Screenshot, der die Latenz-Auslastungskurve für eine Ressource zeigt.]
+
+* Ein Prozentsatz der Leistungsauslastung von 100 liegt am optimalen Punkt.
++
+Ressourcen werden an dieser Stelle effizient genutzt.
+
+* Ein Prozentsatz der genutzten Leistungskapazität über 100 weist darauf hin, dass der Knoten oder das Aggregat überlastet ist und die Leistung der Workloads nicht optimal ist.
++
+Der Ressource sollten keine neuen Workloads hinzugefügt werden und die vorhandenen Workloads müssen möglicherweise neu verteilt werden.
+
+* Ein Prozentsatz der genutzten Leistungskapazität unter 100 weist darauf hin, dass der Knoten oder das Aggregat nicht ausreichend ausgelastet ist und die Ressourcen nicht effektiv genutzt werden.
++
+Der Ressource können weitere Workloads hinzugefügt werden.
+
+
+
+[NOTE]
+====
+Im Gegensatz zur Auslastung kann der Prozentsatz der genutzten Leistungskapazität über 100 % liegen.  Es gibt keinen maximalen Prozentsatz, aber bei einer Überauslastung der Ressourcen liegen diese normalerweise im Bereich zwischen 110 % und 140 %.  Höhere Prozentsätze weisen auf eine Ressource mit schwerwiegenden Problemen hin.
+
+====

@@ -1,0 +1,66 @@
+---
+permalink: events/reference_volume_move_status_events.html 
+sidebar: sidebar 
+keywords: volume, move, status, events, impact area, capacity 
+summary: Statusereignisse zur Volumeverschiebung informieren Sie über den Status Ihrer Volumeverschiebung, sodass Sie diese auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad. 
+---
+= Statusereignisse für die Volumeverschiebung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Statusereignisse zur Volumeverschiebung informieren Sie über den Status Ihrer Volumeverschiebung, sodass Sie diese auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad.
+
+
+
+== Wirkungsbereich: Kapazität
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+Status der Datenträgerverschiebung: In Bearbeitung (Nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Volumen
+ a| 
+Information
+
+
+
+ a| 
+Status der Volumeverschiebung – Fehlgeschlagen (ocumEvtVolumeMoveFailed)
+ a| 
+Risiko
+ a| 
+Volumen
+ a| 
+Fehler
+
+
+
+ a| 
+Status der Datenträgerverschiebung: Abgeschlossen (Nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Volumen
+ a| 
+Information
+
+
+
+ a| 
+Volume-Verschiebung – Umstellung verschoben (ocumEvtVolumeMoveCutoverDeferred)
+ a| 
+Risiko
+ a| 
+Volumen
+ a| 
+Warnung
+
+|===

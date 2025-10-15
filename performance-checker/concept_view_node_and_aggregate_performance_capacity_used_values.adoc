@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/concept_view_node_and_aggregate_performance_capacity_used_values.html 
+sidebar: sidebar 
+keywords: view, node, aggregate, performance, capacity, used, values 
+summary: Sie können die Werte der genutzten Leistungskapazität für alle Knoten oder für alle Aggregate in einem Cluster überwachen oder Details für einen einzelnen Knoten oder ein Aggregat anzeigen. 
+---
+= Anzeigen der verwendeten Knoten- und aggregierten Leistungskapazitätswerte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Werte der genutzten Leistungskapazität für alle Knoten oder für alle Aggregate in einem Cluster überwachen oder Details für einen einzelnen Knoten oder ein Aggregat anzeigen.
+
+Die Werte für die genutzte Leistungskapazität werden im Dashboard, auf den Seiten „Leistungsinventar“, auf der Seite „Top-Performer“, auf der Seite „Schwellenwertrichtlinie erstellen“, auf den Seiten des Leistungs-Explorers und in Detaildiagrammen angezeigt.  Beispielsweise enthält die Seite „Leistung: Alle Aggregate“ eine Spalte „Verwendete Leistungskapazität“, um den Wert der verwendeten Leistungskapazität für alle Aggregate anzuzeigen.
+
+image::../media/node_inventory_used_headroom.gif[Ein UI-Screenshot der Seite „Leistung: Alle Aggregate“]
+
+Durch die Überwachung des Leistungskapazitätsverbrauchsindikators können Sie Folgendes ermitteln:
+
+* Ob Knoten oder Aggregate auf Clustern einen hohen Leistungskapazitätswert aufweisen
+* Ob Knoten oder Aggregate auf Clustern aktive Ereignisse zur Nutzung der Leistungskapazität haben
+* Die Knoten und Aggregate mit dem höchsten und niedrigsten Leistungskapazitätswert in einem Cluster
+* Latenz- und Auslastungsindikatorwerte in Verbindung mit Knoten oder Aggregaten, die über hohe Leistungskapazitätswerte verfügen
+* Wie sich der Ausfall eines Knotens auf die Werte der genutzten Leistungskapazität für Knoten in einem HA-Paar auswirkt
+* Die am stärksten ausgelasteten Volumes und LUNs auf einem Aggregat mit einem hohen Leistungskapazitätswert
+

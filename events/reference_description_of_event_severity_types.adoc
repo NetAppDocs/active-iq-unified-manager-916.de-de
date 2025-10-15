@@ -1,0 +1,41 @@
+---
+permalink: events/reference_description_of_event_severity_types.html 
+sidebar: sidebar 
+keywords: description, event, severity, types 
+summary: Jedem Ereignis ist ein Schweregrad zugeordnet, der Ihnen dabei hilft, die Ereignisse zu priorisieren, die sofortige Korrekturmaßnahmen erfordern. 
+---
+= Beschreibung der Ereignisschweregrade
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Jedem Ereignis ist ein Schweregrad zugeordnet, der Ihnen dabei hilft, die Ereignisse zu priorisieren, die sofortige Korrekturmaßnahmen erfordern.
+
+* *Kritisch*
++
+Es ist ein Problem aufgetreten, das zu einer Dienstunterbrechung führen kann, wenn nicht sofort Abhilfemaßnahmen ergriffen werden.
+
++
+Leistungskritische Ereignisse werden nur ab benutzerdefinierten Schwellenwerten gesendet.
+
+* *Fehler*
++
+Die Ereignisquelle funktioniert noch, es sind jedoch Korrekturmaßnahmen erforderlich, um eine Dienstunterbrechung zu vermeiden.
+
+* *Warnung*
++
+Bei der Ereignisquelle ist ein Vorfall aufgetreten, den Sie kennen sollten, oder ein Leistungsindikator für ein Clusterobjekt liegt außerhalb des normalen Bereichs und sollte überwacht werden, um sicherzustellen, dass er nicht den kritischen Schweregrad erreicht.  Ereignisse dieses Schweregrads verursachen keine Dienstunterbrechung und es sind möglicherweise keine sofortigen Korrekturmaßnahmen erforderlich.
+
++
+Leistungswarnungsereignisse werden von benutzerdefinierten, systemdefinierten oder dynamischen Schwellenwerten gesendet.
+
+* *Information*
++
+Das Ereignis tritt ein, wenn ein neues Objekt erkannt oder eine Benutzeraktion ausgeführt wird.  Wenn beispielsweise ein Speicherobjekt gelöscht wird oder Konfigurationsänderungen vorgenommen werden, wird das Ereignis mit dem Schweregrad „Informationen“ generiert.
+
++
+Informationsereignisse werden direkt von ONTAP gesendet, wenn eine Konfigurationsänderung erkannt wird.
+
+

@@ -1,0 +1,38 @@
+---
+permalink: data-protection/view-lun-relationships.html 
+sidebar: sidebar 
+keywords: LUN, SnapMirror active sync, Consistency Group, CG 
+summary: Einheitliche Ansicht der durch SnapMirror Active Sync geschützten LUNs. 
+---
+= Überwachen von LUNs in einer Konsistenzgruppenbeziehung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Ihre ONTAP Umgebung SnapMirror Active Sync zum Schutz von Anwendungen mit LUNs unterstützt, können Sie diese LUNs auf Active IQ Unified Manager anzeigen und überwachen.
+
+SnapMirror Active Sync gewährleistet beim Failover in SAN-Umgebungen eine Recovery Time Objective (RTO) von Null.  In einer typischen Bereitstellung, die SnapMirror Active Sync unterstützt, werden die LUNs auf Volumes durch Konsistenzgruppenbeziehungen geschützt.
+
+Diese primären und sekundären LUNs sind zusammengesetzte LUNs oder ein Replikat-LUN-Paar mit derselben UUID und Seriennummer.  Die E/A-Vorgänge (sowohl Lesen als auch Schreiben) werden über die Quell- und Zielstandorte dieser zusammengesetzten LUNs gemultiplext, um Transparenz zu gewährleisten.
+
+Zum Anzeigen zusammengesetzter LUNs sollten sowohl die primären als auch die sekundären Cluster mit den LUNs, die Teil der Konsistenzgruppenbeziehung sind, hinzugefügt und im Unified Manager erkannt werden.  Es werden nur iSCSI- und FCP-LUNs unterstützt.
+
+Informationen zur SnapMirror Active Sync finden Sie unterlink:https://docs.netapp.com/us-en/ontap/smbc/index.html["ONTAP 9-Dokumentation für SnapMirror Active Sync (früher SM-BC)"] .
+
+Um zusammengesetzte LUNs in Ihrer Umgebung anzuzeigen, führen Sie die folgenden Schritte aus:
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *LUNs*.
+. Wählen Sie im Menü „Ansicht“ die Option „Beziehung“ > „Alle LUNs“ aus.
++
+Die Ansicht „Beziehung: Alle LUNs“ wird angezeigt.
+
+
+
+Sie können die LUN-Details anzeigen, z. B. den LUN-Namen, das Volume, die Speicher-VM, auf der die LUN gehostet wird, den Cluster, die Konsistenzgruppe und die Partner-LUN.  Sie können auf jede dieser Komponenten klicken, um eine Detailansicht anzuzeigen.  Durch Klicken auf die Konsistenzgruppe gelangen Sie zur Seite „Beziehungen“.
+
+Durch Klicken auf die Partner-LUN können Sie deren Konfigurationsdetails auf der Registerkarte „SAN“ der Seite „Storage-VM-Details“ für die Storage-VM anzeigen, auf der die Partner-LUN gehostet wird.  Es werden Informationen wie die Initiatoren und Initiatorgruppen sowie andere Aspekte der Partner-LUN angezeigt.
+
+Sie können die Standardfunktionen auf Rasterebene zum Sortieren, Filtern, Generieren und Hochladen von Berichten für die geschützten LUNs in Ihrer Umgebung ausführen.

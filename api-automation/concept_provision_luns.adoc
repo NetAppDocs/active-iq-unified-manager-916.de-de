@@ -1,0 +1,276 @@
+---
+permalink: api-automation/concept_provision_luns.html 
+sidebar: sidebar 
+keywords: provision, luns 
+summary: 'Sie können LUNs auf Ihren Storage Virtual Machines (SVMs) bereitstellen, indem Sie die Bereitstellungs-APIs verwenden, die als Teil von Active IQ Unified Manager bereitgestellt werden.  Dieser Bereitstellungs-Workflow beschreibt detailliert die Schritte zum Abrufen der Schlüssel der SVMs, Leistungsservicelevel und Speichereffizienzrichtlinien vor dem Erstellen der LUN.' 
+---
+= Bereitstellen von LUNs mithilfe von APIs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können LUNs auf Ihren Storage Virtual Machines (SVMs) bereitstellen, indem Sie die Bereitstellungs-APIs verwenden, die als Teil von Active IQ Unified Manager bereitgestellt werden.  Dieser Bereitstellungs-Workflow beschreibt detailliert die Schritte zum Abrufen der Schlüssel der SVMs, Leistungsservicelevel und Speichereffizienzrichtlinien vor dem Erstellen der LUN.
+
+Das folgende Diagramm veranschaulicht die Schritte in einem LUN-Bereitstellungsworkflow.
+
+image::../media/create_luns.gif[LUNs erstellen]
+
+[NOTE]
+====
+Dieser Workflow setzt voraus, dass die ONTAP Cluster zu Unified Manager hinzugefügt wurden und der Clusterschlüssel abgerufen wurde.  Der Workflow geht außerdem davon aus, dass die SVMs bereits auf den Clustern erstellt wurden.
+
+====
+. Besorgen Sie sich den SVM-Schlüssel für die SVM, auf der Sie die LUN erstellen möchten, wie im Workflow-Thema „SVMs auf Clustern überprüfen“ beschrieben.
+. Rufen Sie den Schlüssel für das Performance-Service-Level ab, indem Sie die folgende API ausführen und den Schlüssel aus der Antwort abrufen.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Speicheranbieter
+ a| 
+ERHALTEN
+ a| 
+`/storage-provider/performance-service-levels`
+
+|===
++
+[NOTE]
+====
+Sie können die Details der systemdefinierten Performance Service Levels abrufen, indem Sie die `system_defined` Eingabeparameter zu `true` .  Ermitteln Sie aus der Ausgabe den Schlüssel des Performance Service Levels, den Sie auf die LUN anwenden möchten.
+
+====
+. Optional können Sie den Schlüssel der Speichereffizienzrichtlinie für die Speichereffizienzrichtlinie abrufen, die Sie auf die LUN anwenden möchten, indem Sie die folgende API ausführen und den Schlüssel aus der Antwort abrufen.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Speicheranbieter
+ a| 
+ERHALTEN
+ a| 
+`/storage-provider/storage-efficiency-policies`
+
+|===
+. Stellen Sie fest, ob Initiatorgruppen (igroups) erstellt wurden, um Zugriff auf das LUN-Ziel zu gewähren, das Sie erstellen möchten.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Rechenzentrum
+ a| 
+ERHALTEN
+ a| 
+`/datacenter/protocols/san/igroups`  `/datacenter/protocols/san/igroups/\{key}`
+
+|===
++
+Sie müssen den Parameterwert eingeben, um die SVM anzugeben, für die die igroup autorisierten Zugriff hat.  Wenn Sie außerdem eine bestimmte Igroup abfragen möchten, geben Sie den Igroup-Namen (Schlüssel) als Eingabeparameter ein.
+
+. Wenn Sie in der Ausgabe die Igroup finden, der Sie Zugriff gewähren möchten, rufen Sie den Schlüssel ab.  Andernfalls erstellen Sie die Igroup.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Rechenzentrum
+ a| 
+POST
+ a| 
+`/datacenter/protocols/san/igroups`
+
+|===
++
+Sie müssen die Details der Igroup, die Sie erstellen möchten, als Eingabeparameter eingeben.  Dies ist ein synchroner Aufruf und Sie können die Igroup-Erstellung in der Ausgabe überprüfen.  Im Falle eines Fehlers wird eine Meldung angezeigt, in der Sie zur Fehlerbehebung und erneuten Ausführung der API aufgefordert werden.
+
+. Erstellen Sie die LUN.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Speicheranbieter
+ a| 
+POST
+ a| 
+`/storage-provider/luns`
+
+|===
++
+Stellen Sie zum Erstellen der LUN sicher, dass Sie die abgerufenen Werte als obligatorische Eingabeparameter hinzugefügt haben.
+
++
+[NOTE]
+====
+Die Speichereffizienzrichtlinie ist ein optionaler Parameter zum Erstellen von LUNs.
+
+====
++
+*Beispiel-cURL*
+
++
+Sie müssen alle Details der LUN, die Sie erstellen möchten, als Eingabeparameter eingeben.
+
++
+Die JSON-Ausgabe zeigt einen Job-Objektschlüssel an, mit dem Sie die von Ihnen erstellte LUN überprüfen können.
+
+. Überprüfen Sie die LUN-Erstellung mithilfe des Job-Objektschlüssels, der bei der Job-Abfrage zurückgegeben wurde:
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Management-Server
+ a| 
+ERHALTEN
+ a| 
+`/management-server/jobs/\{key}`
+
+|===
++
+Am Ende der Antwort sehen Sie den Schlüssel der erstellten LUN.
+
+. Überprüfen Sie die Erstellung der LUN, indem Sie die folgende API mit dem zurückgegebenen Schlüssel ausführen:
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Speicheranbieter
+ a| 
+ERHALTEN
+ a| 
+`/storage-provider/luns/\{key}`
+
+|===
++
+*Beispiel für JSON-Ausgabe*
+
++
+Sie können sehen, dass die POST-Methode von `/storage-provider/luns` ruft intern alle für die einzelnen Funktionen erforderlichen APIs auf und erstellt das Objekt.  Beispielsweise ruft es die `/storage-provider/performance-service-levels/` API zum Zuweisen des Performance Service Levels auf der LUN.
+
++
+== Schritte zur Fehlerbehebung bei Fehlern bei der LUN-Erstellung oder -Zuordnung
+
+
+
+Nach Abschluss dieses Arbeitsablaufs kann es immer noch zu einem Fehler bei der LUN-Erstellung kommen.  Auch wenn die LUN erfolgreich erstellt wurde, kann die LUN-Zuordnung mit der igroup fehlschlagen, weil auf dem Knoten, auf dem Sie die LUN erstellen, kein SAN-LIF oder Zugriffsendpunkt verfügbar ist.  Im Falle eines Fehlers wird die folgende Meldung angezeigt:
+
+[listing]
+----
+The nodes <node_name> and <partner_node_name> have no LIFs configured with the iSCSI or FCP protocol for Vserver <server_name>. Use the access-endpoints API to create a LIF for the LUN.
+----
+Befolgen Sie diese Schritte zur Fehlerbehebung, um diesen Fehler zu umgehen.
+
+. Erstellen Sie einen Zugriffsendpunkt, der das ISCSI/FCP-Protokoll unterstützt, auf der SVM, auf der Sie versucht haben, die LUN zu erstellen.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Speicheranbieter
+ a| 
+POST
+ a| 
+`/storage-provider/access-endpoints`
+
+|===
++
+*Beispiel-cURL*
+
++
+Sie müssen die Details des Zugriffsendpunkts, den Sie erstellen möchten, als Eingabeparameter eingeben.
+
++
+[NOTE]
+====
+Stellen Sie sicher, dass Sie im Eingabeparameter die Adresse hinzugefügt haben, um den Home-Knoten der LUN anzugeben, und die ha_address, um den Partnerknoten des Home-Knotens anzugeben.  Wenn Sie diesen Vorgang ausführen, werden Zugriffsendpunkte sowohl auf dem Home-Knoten als auch auf dem Partnerknoten erstellt.
+
+====
+. Fragen Sie den Job mit dem in der JSON-Ausgabe zurückgegebenen Job-Objektschlüssel ab, um zu überprüfen, ob er erfolgreich ausgeführt wurde, um die Zugriffsendpunkte auf der SVM hinzuzufügen, und ob die iSCSI/FCP-Dienste auf der SVM aktiviert wurden.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Management-Server
+ a| 
+ERHALTEN
+ a| 
+`/management-server/jobs/\{key}`
+
+|===
++
+*Beispiel für JSON-Ausgabe*
+
++
+Am Ende der Ausgabe sehen Sie den Schlüssel der erstellten Zugriffsendpunkte.  In der folgenden Ausgabe gibt der Wert „name“: „accessEndpointKey“ den auf dem Home-Knoten der LUN erstellten Zugriffsendpunkt an, für den der Schlüssel 9c964258-14ef-11ea-95e2-00a098e32c28 lautet.  Der Wert „name“: „accessEndpointHAKey“ gibt den Zugriffsendpunkt an, der auf dem Partnerknoten des Home-Knotens erstellt wurde, für den der Schlüssel 9d347006-14ef-11ea-8760-00a098e3215f lautet.
+
+. Ändern Sie die LUN, um die Igroup-Zuordnung zu aktualisieren.  Weitere Informationen zur Änderung des Arbeitsablaufs finden Sie unter „Ändern von Speicher-Workloads“.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Speicheranbieter
+ a| 
+PATCH
+ a| 
+`/storage-provider/lun/\{key}`
+
+|===
++
+Geben Sie in der Eingabe den Igroup-Schlüssel an, mit dem Sie die LUN-Zuordnung aktualisieren möchten, zusammen mit dem LUN-Schlüssel.
+
++
+*Beispiel-cURL*
+
++
+Die JSON-Ausgabe zeigt einen Job-Objektschlüssel an, mit dem Sie überprüfen können, ob die Zuordnung erfolgreich war.
+
+. Überprüfen Sie die LUN-Zuordnung, indem Sie eine Abfrage mit dem LUN-Schlüssel durchführen.
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Speicheranbieter
+ a| 
+ERHALTEN
+ a| 
+`/storage-provider/luns/\{key}`
+
+|===
++
+*Beispiel für JSON-Ausgabe*
+
++
+In der Ausgabe können Sie sehen, dass die LUN erfolgreich der Igroup (Schlüssel d19ec2fa-fec7-11e8-b23d-00a098e32c28) zugeordnet wurde, mit der sie ursprünglich bereitgestellt wurde.
+
+

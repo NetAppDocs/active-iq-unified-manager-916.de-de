@@ -1,0 +1,35 @@
+---
+permalink: health-checker/task_add_alerts_for_security_events.html 
+sidebar: sidebar 
+keywords: add, alerts, security events 
+summary: Sie können Warnungen für einzelne Sicherheitsereignisse konfigurieren, genau wie für alle anderen Ereignisse, die von Unified Manager empfangen werden.  Wenn Sie außerdem alle Sicherheitsereignisse gleich behandeln und E-Mails an dieselbe Person senden möchten, können Sie eine einzelne Warnung erstellen, die Sie benachrichtigt, wenn Sicherheitsereignisse ausgelöst werden. 
+---
+= Hinzufügen von Warnungen für Sicherheitsereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Warnungen für einzelne Sicherheitsereignisse konfigurieren, genau wie für alle anderen Ereignisse, die von Unified Manager empfangen werden.  Wenn Sie außerdem alle Sicherheitsereignisse gleich behandeln und E-Mails an dieselbe Person senden möchten, können Sie eine einzelne Warnung erstellen, die Sie benachrichtigt, wenn Sicherheitsereignisse ausgelöst werden.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Das folgende Beispiel zeigt, wie Sie eine Warnung für das Sicherheitsereignis „Telnet-Protokoll aktiviert“ erstellen.  Dadurch wird eine Warnung gesendet, wenn der Telnet-Zugriff für den Remote-Verwaltungszugriff auf den Cluster konfiguriert ist.  Mit derselben Methode können Sie Warnungen für alle Sicherheitsereignisse erstellen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Alarm-Setup*.
+. Klicken Sie auf der Seite *Alarm-Setup* auf *Hinzufügen*.
+. Klicken Sie im Dialogfeld *Warnung hinzufügen* auf *Name* und geben Sie einen Namen und eine Beschreibung für die Warnung ein.
+. Klicken Sie auf *Ressourcen* und wählen Sie den Cluster oder die Cluster aus, für die Sie diese Warnung aktivieren möchten.
+. Klicken Sie auf *Ereignisse* und führen Sie die folgenden Aktionen aus:
++
+.. Wählen Sie in der Liste „Ereignisschweregrad“ *Warnung* aus.
+.. Wählen Sie in der Liste „Übereinstimmende Ereignisse“ *Telnet-Protokoll aktiviert* aus.
+
+
+. Klicken Sie auf *Aktionen* und wählen Sie dann im Feld *Diese Benutzer benachrichtigen* den Namen des Benutzers aus, der die Warn-E-Mail erhalten soll.
+. Konfigurieren Sie auf dieser Seite alle anderen Optionen für die Benachrichtigungshäufigkeit, das Ausgeben von SNMP-Taps und das Ausführen eines Skripts.
+. Klicken Sie auf *Speichern*.
+

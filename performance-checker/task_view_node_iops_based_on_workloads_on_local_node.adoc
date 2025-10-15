@@ -1,0 +1,33 @@
+---
+permalink: performance-checker/task_view_node_iops_based_on_workloads_on_local_node.html 
+sidebar: sidebar 
+keywords: view, node, iops, workloads, reside, only, local node 
+summary: 'Das Knoten-IOPS-Zählerdiagramm kann hervorheben, wo Vorgänge nur über den lokalen Knoten laufen, indem ein Netzwerk-LIF verwendet wird, um Lese-/Schreibvorgänge auf Volumes auf einem Remoteknoten durchzuführen.  Die Diagramme „IOPS – Gesamt (lokal)“ und „Aufschlüsselung (lokal)“ zeigen die IOPS für Daten an, die sich nur auf dem aktuellen Knoten in lokalen Volumes befinden.' 
+---
+= Anzeigen von Knoten-IOPS basierend auf Workloads, die sich nur auf dem lokalen Knoten befinden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Knoten-IOPS-Zählerdiagramm kann hervorheben, wo Vorgänge nur über den lokalen Knoten laufen, indem ein Netzwerk-LIF verwendet wird, um Lese-/Schreibvorgänge auf Volumes auf einem Remoteknoten durchzuführen.  Die Diagramme „IOPS – Gesamt (lokal)“ und „Aufschlüsselung (lokal)“ zeigen die IOPS für Daten an, die sich nur auf dem aktuellen Knoten in lokalen Volumes befinden.
+
+Die „lokalen“ Versionen dieser Zählerdiagramme ähneln den Knotendiagrammen für Leistungskapazität und -auslastung, da sie ebenfalls nur die Statistiken für Daten anzeigen, die sich auf lokalen Datenträgern befinden.
+
+Durch Vergleichen der „Lokalen“ Versionen dieser Zählerdiagramme mit den regulären Gesamtversionen dieser Zählerdiagramme können Sie erkennen, ob viel Datenverkehr über den lokalen Knoten fließt, um auf Volumes auf dem Remoteknoten zuzugreifen.  Diese Situation kann zu Leistungsproblemen führen, die sich möglicherweise durch eine hohe Auslastung des Knotens bemerkbar machen, wenn zu viele Vorgänge über den lokalen Knoten laufen, um ein Volume auf einem Remoteknoten zu erreichen.  In diesen Fällen möchten Sie möglicherweise ein Volume auf den lokalen Knoten verschieben oder ein LIF auf dem Remoteknoten erstellen, wo der Datenverkehr von Hosts, die auf dieses Volume zugreifen, verbunden werden kann.
+
+.Schritte
+. Wählen Sie auf der Seite *Leistung/Knoten-Explorer* für Ihren ausgewählten Knoten im IOPS-Diagramm im Dropdown-Menü die Option *Gesamt* aus.
++
+Das IOPS-Gesamtdiagramm wird angezeigt.
+
+. Klicken Sie auf *Zoom-Ansicht*, um eine größere Version des Diagramms in einem neuen Browser-Tab anzuzeigen.
+. Zurück auf der Seite *Leistung/Knoten-Explorer* wählen Sie im IOPS-Diagramm im Dropdown-Menü die Option *Gesamt (Lokal)* aus.
++
+Das Diagramm „IOPS – Gesamt (lokal)“ wird angezeigt.
+
+. Klicken Sie auf *Zoom-Ansicht*, um eine größere Version des Diagramms in einem neuen Browser-Tab anzuzeigen.
+. Sehen Sie sich beide Diagramme nebeneinander an und identifizieren Sie Bereiche, in denen die IOPS-Werte deutlich unterschiedlich zu sein scheinen.
+. Bewegen Sie den Cursor über diese Bereiche, um die lokalen und gesamten IOPS für einen bestimmten Zeitpunkt zu vergleichen.
+

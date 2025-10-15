@@ -1,0 +1,14 @@
+---
+permalink: data-protection/reference_description_of_protection_relationships_window.html 
+sidebar: sidebar 
+keywords: description, protect, relationships, windows, dialog boxes 
+summary: Sie können schutzbezogene Details wie Ressourcenpools, SVM-Zuordnungen und Schutzaufträge anzeigen und verwalten.  Sie können die entsprechende Seite „Integritätsschwellenwerte“ verwenden, um globale Integritätsschwellenwerte für Aggregate, Volumes und Beziehungen zu konfigurieren. 
+---
+= Beschreibung der Fenster und Dialogfelder zu Schutzbeziehungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können schutzbezogene Details wie Ressourcenpools, SVM-Zuordnungen und Schutzaufträge anzeigen und verwalten.  Sie können die entsprechende Seite „Integritätsschwellenwerte“ verwenden, um globale Integritätsschwellenwerte für Aggregate, Volumes und Beziehungen zu konfigurieren.

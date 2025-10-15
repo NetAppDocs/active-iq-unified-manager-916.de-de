@@ -1,0 +1,47 @@
+---
+permalink: health-checker/task_determine_if_volume_offline_condition_is_by_down_cluster_node.html 
+sidebar: sidebar 
+keywords: determine, volume, offline, host, node 
+summary: Sie können die Web-Benutzeroberfläche von Unified Manager verwenden, um die Möglichkeit zu bestätigen oder auszuschließen, dass ein Volume offline ist, weil sein Hostknoten ausgefallen ist und das Speicher-Failover zu seinem HA-Paarpartner nicht erfolgreich ist. 
+---
+= Ermitteln, ob ein Volume offline ist, weil sein Hostknoten ausgefallen ist
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Web-Benutzeroberfläche von Unified Manager verwenden, um die Möglichkeit zu bestätigen oder auszuschließen, dass ein Volume offline ist, weil sein Hostknoten ausgefallen ist und das Speicher-Failover zu seinem HA-Paarpartner nicht erfolgreich ist.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Um festzustellen, ob der Offlinezustand des Volumes durch einen Ausfall des Hostknotens und ein anschließendes fehlgeschlagenes Speicher-Failover verursacht wurde, führen Sie die folgenden Aktionen aus:
+
+.Schritte
+. Suchen Sie den Hypertext-Link, der unter SVM im Bereich *Verwandte Geräte* der Detailseite *Volume/Integrität* des Offline-Volumes angezeigt wird, und klicken Sie darauf.
++
+Auf der Seite „Storage VM / Health Details“ werden Informationen zur hostenden Storage Virtual Machine (SVM) des Offline-Volumes angezeigt.
+
+. Suchen Sie im Bereich *Verwandte Geräte* der Detailseite *Storage VM / Health* den unter „Volumes“ angezeigten Hypertext-Link und klicken Sie darauf.
++
+Die Ansicht „Integrität: Alle Volumes“ zeigt eine Tabelle mit Informationen zu allen vom SVM gehosteten Volumes an.
+
+. Klicken Sie in der Spaltenüberschrift „Health: All Volumes“ der Ansicht „State“ auf das Filtersymbolimage:../media/filtericon_um60.png["Symbol für Spaltenfilter"] , und wählen Sie dann die Option *Offline*.
++
+Es werden nur die SVM-Volumes aufgelistet, die sich im Offline-Status befinden.
+
+. Klicken Sie in der Ansicht „Health: All Volumes“ auf das Rastersymbolimage:../media/gridviewicon.gif["Symbol für die Rasteransicht"] und wählen Sie dann die Option *Clusterknoten* aus.
++
+Möglicherweise müssen Sie im Rasterauswahlfeld scrollen, um die Option *Clusterknoten* zu finden.
+
++
+Die Spalte „Clusterknoten“ wird zum Volume-Inventar hinzugefügt und zeigt den Namen des Knotens an, der jedes Offline-Volume hostet.
+
+. Suchen Sie in der Ansicht „Integrität: Alle Volumes“ den Eintrag für das Offline-Volume und klicken Sie in der Spalte „Clusterknoten“ auf den Namen des zugehörigen Hosting-Knotens.
++
+Auf der Registerkarte „Knoten“ auf der Seite „Cluster-/Integritätsdetails“ wird der Status des HA-Knotenpaars angezeigt, zu dem der Hosting-Knoten gehört.  Der Status des Hostknotens und der Erfolg aller Cluster-Failover-Vorgänge werden in der Anzeige angegeben.
+
+
+
+Nachdem Sie bestätigt haben, dass das Volume offline ist, weil sein Hostknoten ausgefallen ist und das Speicher-Failover zum HA-Paar-Partner fehlgeschlagen ist, wenden Sie sich an den entsprechenden Administrator oder Operator, um den ausgefallenen Knoten manuell neu zu starten und das Speicher-Failover-Problem zu beheben.

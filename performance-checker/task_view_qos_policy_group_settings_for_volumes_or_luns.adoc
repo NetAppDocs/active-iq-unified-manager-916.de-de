@@ -1,0 +1,31 @@
+---
+permalink: performance-checker/task_view_qos_policy_group_settings_for_volumes_or_luns.html 
+sidebar: sidebar 
+keywords: view, qos, policy, group, settings, applied, specific, volumes, luns 
+summary: Sie können die QoS-Richtliniengruppen anzeigen, die auf Ihre Volumes und LUNs angewendet wurden, und Sie können eine Verknüpfung zur Ansicht „Leistungs-/QoS-Richtliniengruppen“ herstellen, um die detaillierten Konfigurationseinstellungen für jede QoS-Richtlinie anzuzeigen. 
+---
+= Anzeigen der QoS-Richtliniengruppeneinstellungen, die auf bestimmte Volumes oder LUNs angewendet werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die QoS-Richtliniengruppen anzeigen, die auf Ihre Volumes und LUNs angewendet wurden, und Sie können eine Verknüpfung zur Ansicht „Leistungs-/QoS-Richtliniengruppen“ herstellen, um die detaillierten Konfigurationseinstellungen für jede QoS-Richtlinie anzuzeigen.
+
+Die Schritte zum Anzeigen der auf ein Volume angewendeten QoS-Richtlinie werden unten angezeigt.  Die Schritte zum Anzeigen dieser Informationen für eine LUN sind ähnlich.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Volumes*.
++
+Die Ansicht „Health: Alle Volumes“ wird standardmäßig angezeigt.
+
+. Wählen Sie im Menü „Ansicht“ die Option „Leistung: Volumes in der QoS-Richtliniengruppe“ aus.
+. Suchen Sie das Volume, das Sie überprüfen möchten, und scrollen Sie nach rechts, bis Sie die Spalte *QoS-Richtliniengruppe* sehen.
+. Klicken Sie auf den Namen der QoS-Richtliniengruppe.
++
+Die entsprechende Seite „Quality of Service“ wird angezeigt, je nachdem, ob es sich um eine herkömmliche QoS-Richtlinie, eine adaptive QoS-Richtlinie oder eine QoS-Richtlinie handelt, die mit Unified Manager Performance Service Levels erstellt wurde.
+
+. Zeigen Sie die detaillierten Konfigurationseinstellungen für die QoS-Richtliniengruppe an.
+. Klicken Sie auf die Schaltfläche „Erweitern“ (image:../media/chevron_down.gif[""] ) neben dem Namen der QoS-Richtliniengruppe, um weitere Details zur Richtliniengruppe anzuzeigen.
+

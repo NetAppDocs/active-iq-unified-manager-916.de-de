@@ -1,0 +1,36 @@
+---
+permalink: health-checker/task_view_cluster_list_and_details.html 
+sidebar: sidebar 
+keywords: view, cluster list, details 
+summary: 'Sie können die Ansicht „Integrität: Alle Cluster“ verwenden, um Ihren Clusterbestand anzuzeigen.  In der Ansicht „Kapazität: Alle Cluster“ können Sie zusammengefasste Informationen zur Speicherkapazität und -auslastung in allen Clustern anzeigen.' 
+---
+= Anzeigen der Clusterliste und Details
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Ansicht „Integrität: Alle Cluster“ verwenden, um Ihren Clusterbestand anzuzeigen.  In der Ansicht „Kapazität: Alle Cluster“ können Sie zusammengefasste Informationen zur Speicherkapazität und -auslastung in allen Clustern anzeigen.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Sie können auf der Seite „Cluster-/Integritätsdetails“ auch Details zu einzelnen Clustern anzeigen, z. B. Cluster-Integrität, Kapazität, Konfiguration, LIFs, Knoten und Datenträger in diesem Cluster.
+
+Die Details in der Ansicht „Integrität: Alle Cluster“, in der Ansicht „Kapazität: Alle Cluster“ und auf der Seite „Cluster-/Integritätsdetails“ helfen Ihnen bei der Planung Ihres Speichers.  Bevor Sie beispielsweise ein neues Aggregat bereitstellen, können Sie in der Ansicht „Integrität: Alle Cluster“ einen bestimmten Cluster auswählen und Kapazitätsdetails abrufen, um zu ermitteln, ob der Cluster über den erforderlichen Speicherplatz verfügt.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Cluster*.
+. Wählen Sie im Menü „Ansicht“ die Ansicht „*Integrität: Alle Cluster*“, um Integritätsinformationen anzuzeigen, oder die Ansicht „*Kapazität: Alle Cluster*“, um Details zur Speicherkapazität und -auslastung in allen Clustern anzuzeigen.
+. Klicken Sie auf den Namen eines Clusters, um auf der Detailseite *Cluster/Integrität* alle Details des Clusters anzuzeigen.
+
+
+*Verwandte Informationen*
+
+* link:../health-checker/reference_health_cluster_details_page.html["Cluster-/Integritätsdetailseite"]
+* link:../performance-checker/performance-view-all.html#performance-all-clusters-view["Leistung: Ansicht „Alle Cluster“"]
+* link:../storage-mgmt/task_monitor_metrocluster_configurations.html["Überwachung von MetroCluster -Konfigurationen"]
+* link:../health-checker/task_view_detailed_security_status_for_clusters_and_svms.html["Sicherheitsstatus für Cluster und Storage-VMs anzeigen"]
+* link:../health-checker/concept_what_security_criteria_is_being_evaluated.html["Welche Sicherheitskriterien werden bewertet"]
+

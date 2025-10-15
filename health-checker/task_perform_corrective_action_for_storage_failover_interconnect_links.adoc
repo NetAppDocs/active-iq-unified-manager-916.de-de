@@ -1,0 +1,61 @@
+---
+permalink: health-checker/task_perform_corrective_action_for_storage_failover_interconnect_links.html 
+sidebar: sidebar 
+keywords: perform, corrective action, storage failover, interconnect links 
+summary: Wenn Sie die Seite mit den Ereignisdetails eines Speicherfailover-bezogenen Ereignisses anzeigen, können Sie die zusammenfassenden Informationen der Seite überprüfen, um die Dringlichkeit des Ereignisses, die mögliche Ursache des Problems und eine mögliche Lösung des Problems zu ermitteln. 
+---
+= Führen Sie Korrekturmaßnahmen für ausgefallene Speicher-Failover-Verbindungsverbindungen durch
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie die Seite mit den Ereignisdetails eines Speicherfailover-bezogenen Ereignisses anzeigen, können Sie die zusammenfassenden Informationen der Seite überprüfen, um die Dringlichkeit des Ereignisses, die mögliche Ursache des Problems und eine mögliche Lösung des Problems zu ermitteln.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+In diesem Beispielszenario enthält die Ereigniszusammenfassung auf der Seite „Ereignisdetails“ die folgenden Informationen zum Zustand der unterbrochenen Speicher-Failover-Verbindung:
+
+[listing]
+----
+Event: Storage Failover Interconnect One or More Links Down
+
+Summary
+
+Severity: Warning
+State: New
+Impact Level: Risk
+Impact Area: Availability
+Source: aardvark
+Source Type: Node
+Acknowledged By:
+Resolved By:
+Assigned To:
+Cause: At least one storage failover interconnected link
+       between the nodes aardvark and bonobo is down.
+       RDMA interconnect is up (Link0 up, Link1 down)
+----
+Die Beispielereignisinformationen zeigen, dass eine Speicher-Failover-Verbindung (Link1) zwischen den HA-Paarknoten „Aardvark“ und „Bonobo“ ausgefallen ist, Link0 zwischen „Apple“ und „Boy“ jedoch aktiv ist.  Da eine Verbindung aktiv ist, funktioniert der Remote Dynamic Memory Access (RDMA) weiterhin und ein Speicherfailover-Job kann weiterhin erfolgreich sein.
+
+Um jedoch sicherzustellen, dass weder beide Links ausfallen noch der Speicher-Failover-Schutz vollständig deaktiviert wird, beschließen Sie, den Grund für den Ausfall von Link1 genauer zu untersuchen.
+
+.Schritte
+. Auf der Detailseite *Ereignis* können Sie auf den Link zum im Feld „Quelle“ angegebenen Ereignis klicken, um weitere Details zu anderen Ereignissen zu erhalten, die möglicherweise mit dem Zustand „Verbindungsunterbrechung der Speicher-Failover-Verbindung“ in Zusammenhang stehen.
++
+In diesem Beispiel ist die Quelle des Ereignisses der Knoten mit dem Namen „Erdferkel“.  Wenn Sie auf diesen Knotennamen klicken, werden die HA-Details für das betroffene HA-Paar (Aardvark und Bonobo) auf der Registerkarte „Knoten“ der Seite „Cluster-/Integritätsdetails“ angezeigt und andere Ereignisse angezeigt, die kürzlich auf dem betroffenen HA-Paar aufgetreten sind.
+
+. Weitere Informationen zur Veranstaltung finden Sie in den *HA-Details*.
++
+In diesem Beispiel befinden sich die relevanten Informationen in der Ereignistabelle.  Die Tabelle zeigt das Ereignis „Storage Failover Connection One or More Link Down“, den Zeitpunkt der Ereignisgenerierung und erneut den Knoten, von dem dieses Ereignis stammt.
+
+
+
+Fordern Sie mithilfe der Knotenstandortinformationen in den HA-Details eine physische Inspektion und Reparatur des Speicher-Failover-Problems auf den betroffenen HA-Paarknoten an oder führen Sie diese selbst durch.
+
+*Verwandte Informationen*
+
+link:../events/reference_event_details_page.html["Seite mit Veranstaltungsdetails"]
+
+link:../config/reference_unified_manager_roles_and_capabilities.html["Unified Manager-Benutzerrollen und -Funktionen"]

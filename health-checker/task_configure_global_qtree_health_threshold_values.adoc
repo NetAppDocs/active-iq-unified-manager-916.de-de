@@ -1,0 +1,27 @@
+---
+permalink: health-checker/task_configure_global_qtree_health_threshold_values.html 
+sidebar: sidebar 
+keywords: configure, global, qtree, health, threshold values 
+summary: Sie können die globalen Integritätsschwellenwerte für alle Qtrees konfigurieren, um alle Schwellenwertüberschreitungen zu verfolgen.  Bei Verletzungen von Integritätsschwellenwerten werden entsprechende Ereignisse generiert und Sie können auf Grundlage dieser Ereignisse vorbeugende Maßnahmen ergreifen.  Sie können die globalen Werte basierend auf den Best-Practice-Einstellungen für Schwellenwerte konfigurieren, die für alle überwachten Qtrees gelten. 
+---
+= Konfigurieren Sie globale Qtree-Integritätsschwellenwerte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die globalen Integritätsschwellenwerte für alle Qtrees konfigurieren, um alle Schwellenwertüberschreitungen zu verfolgen.  Bei Verletzungen von Integritätsschwellenwerten werden entsprechende Ereignisse generiert und Sie können auf Grundlage dieser Ereignisse vorbeugende Maßnahmen ergreifen.  Sie können die globalen Werte basierend auf den Best-Practice-Einstellungen für Schwellenwerte konfigurieren, die für alle überwachten Qtrees gelten.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Die Schwellenwertoptionen verfügen über Standardwerte zur besseren Überwachung. Sie können die Werte jedoch ändern, um sie an die Anforderungen Ihrer Umgebung anzupassen.
+
+Ereignisse werden für einen Qtree nur generiert, wenn für den Qtree ein Qtree-Kontingent oder ein Standardkontingent festgelegt wurde.  Es werden keine Ereignisse generiert, wenn der in einem Benutzer- oder Gruppenkontingent definierte Speicherplatz den Schwellenwert überschritten hat.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Ereignisschwellenwerte* > *Qtree*.
+. Konfigurieren Sie die entsprechenden Kapazitätsschwellenwerte.
+. Klicken Sie auf *Speichern*.
+

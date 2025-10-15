@@ -1,0 +1,252 @@
+---
+permalink: events/reference_metrocluster_connectivity_events.html 
+sidebar: sidebar 
+keywords: metrocluster, connectivity, events, impact area, availability 
+summary: Konnektivitätsereignisse liefern Ihnen Informationen zur Konnektivität zwischen den Komponenten eines Clusters und zwischen Clustern in einer MetroCluster -Konfiguration, sodass Sie potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad. 
+---
+= MetroCluster -Konnektivitätsereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Konnektivitätsereignisse liefern Ihnen Informationen zur Konnektivität zwischen den Komponenten eines Clusters und zwischen Clustern in MetroCluster over FC- und MetroCluster over IP-Konfigurationen, sodass Sie potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad.
+
+
+
+== In beiden Konfigurationen gemeinsame Ereignisse
+
+Diese Konnektivitätsereignisse sind sowohl für MetroCluster über FC- als auch für MetroCluster über IP-Konfigurationen üblich.
+
+
+
+=== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+Alle Links zwischen MetroCluster Partnern ausgefallen (ocumEvtMetroClusterAllLinksBetweenPartnersDown)
+ a| 
+Vorfall
+ a| 
+MetroCluster -Beziehung
+ a| 
+Kritisch
+
+
+
+ a| 
+MetroCluster Partner über Peering-Netzwerk nicht erreichbar (ocumEvtMetroClusterPartnersNotReachableOverPeeringNetwork)
+ a| 
+Vorfall
+ a| 
+MetroCluster -Beziehung
+ a| 
+Kritisch
+
+
+
+ a| 
+MetroCluster Disaster-Recovery-Funktion beeinträchtigt (ocumEvtMetroClusterDRStatusImpacted)
+ a| 
+Risiko
+ a| 
+MetroCluster -Beziehung
+ a| 
+Kritisch
+
+
+
+ a| 
+MetroCluster -Konfiguration umgeschaltet (ocumEvtMetroClusterDRStatusImpacted)
+ a| 
+Risiko
+ a| 
+MetroCluster -Beziehung
+ a| 
+Warnung
+
+|===
+
+
+== MetroCluster über FC-Konfiguration
+
+Diese Ereignisse beziehen sich auf MetroCluster über FC-Konfigurationen.
+
+
+
+=== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+Alle Inter-Switch-Verbindungen ausgefallen (ocumEvtMetroClusterAllISLBetweenSwitchesDown)
+ a| 
+Vorfall
+ a| 
+MetroCluster Inter-Switch-Verbindung
+ a| 
+Kritisch
+
+
+
+ a| 
+FC-SAS-Bridge zum Speicherstapel-Link Down (ocumEvtBridgeSasPortDown)
+ a| 
+Vorfall
+ a| 
+MetroCluster Bridge-Stack-Verbindung
+ a| 
+Kritisch
+
+
+
+ a| 
+MetroCluster -Konfiguration teilweise umgeschaltet (ocumEvtMetroClusterDRStatusPartiallyImpacted)
+ a| 
+Risiko
+ a| 
+MetroCluster -Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Knoten zum FC-Switch: Alle FC-VI-Verbindungsverbindungen unterbrochen (ocumEvtMccNodeSwitchFcviLinksDown)
+ a| 
+Vorfall
+ a| 
+MetroCluster -Knoten-Switch-Verbindung
+ a| 
+Kritisch
+
+
+
+ a| 
+Knoten zum FC-Switch: Eine oder mehrere FC-Initiator-Verbindungen ausgefallen (ocumEvtMccNodeSwitchFcLinksOneOrMoreDown)
+ a| 
+Risiko
+ a| 
+MetroCluster -Knoten-Switch-Verbindung
+ a| 
+Warnung
+
+
+
+ a| 
+Knoten zum FC-Switch: Alle FC-Initiator-Verbindungen unterbrochen (ocumEvtMccNodeSwitchFcLinksDown)
+ a| 
+Vorfall
+ a| 
+MetroCluster -Knoten-Switch-Verbindung
+ a| 
+Kritisch
+
+
+
+ a| 
+Wechseln Sie zur FC-SAS-Bridge. FC-Link ausgefallen (ocumEvtMccSwitchBridgeFcLinksDown)
+ a| 
+Vorfall
+ a| 
+MetroCluster -Switch-Bridge-Verbindung
+ a| 
+Kritisch
+
+
+
+ a| 
+Zwischen Knoten: Alle FC VI-InterConnect-Verbindungen ausgefallen (ocumEvtMccInterNodeLinksDown)
+ a| 
+Vorfall
+ a| 
+Verbindung zwischen Knoten
+ a| 
+Kritisch
+
+
+
+ a| 
+Zwischen Knoten: Eine oder mehrere FC VI-InterConnect-Verbindungen ausgefallen (ocumEvtMccInterNodeLinksOneOrMoreDown)
+ a| 
+Risiko
+ a| 
+Verbindung zwischen Knoten
+ a| 
+Warnung
+
+
+
+ a| 
+Knoten zur Bridge-Verbindung unterbrochen (ocumEvtMccNodeBridgeLinksDown)
+ a| 
+Vorfall
+ a| 
+Knotenbrückenverbindung
+ a| 
+Kritisch
+
+
+
+ a| 
+Knoten zum Speicherstapel: Alle SAS-Verbindungen unterbrochen (ocumEvtMccNodeStackLinksDown)
+ a| 
+Vorfall
+ a| 
+Knotenstapelverbindung
+ a| 
+Kritisch
+
+
+
+ a| 
+Knoten zum Speicherstapel: Eine oder mehrere SAS-Verbindungen unterbrochen (ocumEvtMccNodeStackLinksOneOrMoreDown)
+ a| 
+Risiko
+ a| 
+Knotenstapelverbindung
+ a| 
+Warnung
+
+|===
+
+
+== MetroCluster über IP-Konfiguration
+
+Diese Ereignisse beziehen sich auf MetroCluster -over-IP-Konfigurationen.
+
+
+
+=== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+Der Status der IP-Verbindung zwischen den Standorten von MetroCluster ist deaktiviert (mccIntersiteconnectivityStatusDown).
+ a| 
+Risiko
+ a| 
+MetroCluster -Beziehung
+ a| 
+Kritisch
+
+
+
+ a| 
+MetroCluster– IP-Knoten zum Offline-Schalten der Verbindung (mccIpPortStatusOffline)
+ a| 
+Risiko
+ a| 
+Node
+ a| 
+Fehler
+
+|===

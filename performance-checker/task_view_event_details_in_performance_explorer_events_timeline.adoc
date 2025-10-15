@@ -1,0 +1,49 @@
+---
+permalink: performance-checker/task_view_event_details_in_performance_explorer_events_timeline.html 
+sidebar: sidebar 
+keywords: view, event, details, timeline 
+summary: Sie können alle Ereignisse und die zugehörigen Details im Bereich „Ereigniszeitleiste“ des Performance Explorers anzeigen.  Dies ist eine schnelle und effiziente Methode zum Anzeigen aller Integritäts- und Leistungsereignisse, die während eines angegebenen Zeitraums beim Stammobjekt aufgetreten sind. Dies kann bei der Behebung von Leistungsproblemen hilfreich sein. 
+---
+= Ereignisdetails in der Ereigniszeitleiste anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können alle Ereignisse und die zugehörigen Details im Bereich „Ereigniszeitleiste“ des Performance Explorers anzeigen.  Dies ist eine schnelle und effiziente Methode zum Anzeigen aller Integritäts- und Leistungsereignisse, die während eines angegebenen Zeitraums beim Stammobjekt aufgetreten sind. Dies kann bei der Behebung von Leistungsproblemen hilfreich sein.
+
+Im Bereich „Ereigniszeitleiste“ werden kritische Ereignisse, Fehler-, Warn- und Informationsereignisse angezeigt, die während des ausgewählten Zeitraums beim Stammobjekt aufgetreten sind.  Jeder Ereignisschweregrad hat seinen eigenen Zeitrahmen.  Einzelne und mehrere Ereignisse werden durch einen Ereignispunkt auf der Zeitachse dargestellt.  Sie können Ihren Cursor über einen Ereignispunkt positionieren, um die Ereignisdetails anzuzeigen.  Um die visuelle Granularität mehrerer Ereignisse zu erhöhen, können Sie den Zeitbereich verringern.  Dadurch werden mehrere Ereignisse in einzelne Ereignisse aufgeteilt, sodass Sie jedes Ereignis separat anzeigen und untersuchen können.
+
+Jeder Performance-Ereignispunkt auf der Ereignis-Zeitleiste ist vertikal mit einer entsprechenden Spitze in den Trendlinien der Zählerdiagramme ausgerichtet, die unter der Ereignis-Zeitleiste angezeigt werden.  Dies ermöglicht eine direkte visuelle Korrelation zwischen Ereignissen und der Gesamtleistung.  Gesundheitsereignisse werden ebenfalls auf der Zeitachse angezeigt, diese Ereignistypen müssen jedoch nicht unbedingt mit einem Spitzenwert in einem der Leistungsdiagramme übereinstimmen.
+
+.Schritte
+. Positionieren Sie im Bereich *Ereigniszeitleiste* den Cursor über einem Ereignispunkt auf einer Zeitleiste, um eine Zusammenfassung des Ereignisses bzw. der Ereignisse an diesem Ereignispunkt anzuzeigen.
++
+In einem Popup-Dialogfeld werden Informationen zu den Ereignistypen, Datum und Uhrzeit des Auftretens der Ereignisse, der Status und die Ereignisdauer angezeigt.
+
+. Vollständige Ereignisdetails für ein oder mehrere Ereignisse anzeigen:
++
+|===
+| Um dies zu tun... | Klicken Sie hier... 
+
+
+ a| 
+Details zu einem einzelnen Ereignis anzeigen
+ a| 
+*Ereignisdetails anzeigen* im Popup-Dialog.
+
+
+
+ a| 
+Details für mehrere Ereignisse anzeigen
+ a| 
+*Ereignisdetails anzeigen* im Popup-Dialog.
+
+[NOTE]
+====
+Wenn Sie im Dialogfeld „Mehrere Ereignisse“ auf ein einzelnes Ereignis klicken, wird die entsprechende Seite mit den Ereignisdetails angezeigt.
+
+====
+|===
+

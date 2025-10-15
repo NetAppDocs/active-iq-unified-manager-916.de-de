@@ -1,0 +1,28 @@
+---
+permalink: health-checker/task_view_all_security_events.html 
+sidebar: sidebar 
+keywords: view, active, security events 
+summary: Sie können alle aktiven Sicherheitsereignisse anzeigen und jedes davon einem Benutzer zuweisen, der das Problem lösen kann.  Wenn es außerdem bestimmte Sicherheitsereignisse gibt, die Sie nicht erhalten möchten, kann Ihnen diese Liste dabei helfen, die Ereignisse zu identifizieren, die Sie deaktivieren möchten. 
+---
+= Alle aktiven Sicherheitsereignisse anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können alle aktiven Sicherheitsereignisse anzeigen und jedes davon einem Benutzer zuweisen, der das Problem lösen kann.  Wenn es außerdem bestimmte Sicherheitsereignisse gibt, die Sie nicht erhalten möchten, kann Ihnen diese Liste dabei helfen, die Ereignisse zu identifizieren, die Sie deaktivieren möchten.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Event Management*.
++
+Standardmäßig werden neue und bestätigte Ereignisse auf der Inventarseite der Ereignisverwaltung angezeigt.
+
+. Wählen Sie im Menü „Ansicht“ die Option „Aktive Sicherheitsereignisse“ aus.
++
+Auf der Seite werden alle neuen und bestätigten Sicherheitsereignisse angezeigt, die in den letzten 7 Tagen generiert wurden.
+
+

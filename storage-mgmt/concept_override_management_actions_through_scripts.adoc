@@ -1,0 +1,16 @@
+---
+permalink: storage-mgmt/concept_override_management_actions_through_scripts.html 
+sidebar: sidebar 
+keywords: override, management, actions, scripts 
+summary: Sie können benutzerdefinierte Skripte erstellen und sie mit Warnungen verknüpfen, um bei bestimmten Ereignissen bestimmte Aktionen auszuführen, und müssen sich nicht für die standardmäßigen Verwaltungsaktionen entscheiden, die auf der Seite „Verwaltungsaktionen“ oder im Unified Manager-Dashboard dafür verfügbar sind. 
+---
+= Überschreiben von Verwaltungsaktionen durch Skripte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können benutzerdefinierte Skripte erstellen und sie mit Warnungen verknüpfen, um bei bestimmten Ereignissen bestimmte Aktionen auszuführen, und müssen sich nicht für die standardmäßigen Verwaltungsaktionen entscheiden, die auf der Seite „Verwaltungsaktionen“ oder im Unified Manager-Dashboard dafür verfügbar sind.
+
+Wenn Sie bestimmte Aktionen für einen Ereignistyp ausführen möchten und diese nicht als Teil der von Unified Manager bereitgestellten Verwaltungsaktionsfunktion beheben möchten, können Sie ein benutzerdefiniertes Skript für die bestimmte Aktion konfigurieren.  Sie können das Skript dann mit einer Warnung für diesen Ereignistyp verknüpfen und sich einzeln um solche Ereignisse kümmern.  In diesem Fall werden für diesen bestimmten Ereignistyp keine Verwaltungsaktionen auf der Seite „Verwaltungsaktionen“ oder im Unified Manager-Dashboard generiert.

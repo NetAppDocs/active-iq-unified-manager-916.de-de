@@ -1,0 +1,54 @@
+---
+permalink: health-checker/task_view_node_list_and_details.html 
+sidebar: sidebar 
+keywords: view, node list, details 
+summary: 'Sie können die Ansicht „Integrität: Alle Knoten“ verwenden, um die Liste der Knoten in Ihren Clustern anzuzeigen.  Auf der Seite „Cluster-/Integritätsdetails“ können Sie ausführliche Informationen zu Knoten anzeigen, die Teil des überwachten Clusters sind.' 
+---
+= Anzeigen der Knotenliste und Details
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Ansicht „Integrität: Alle Knoten“ verwenden, um die Liste der Knoten in Ihren Clustern anzuzeigen.  Auf der Seite „Cluster-/Integritätsdetails“ können Sie ausführliche Informationen zu Knoten anzeigen, die Teil des überwachten Clusters sind.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Sie können Details wie den Knotenstatus, den Cluster, der den Knoten enthält, Details zur Gesamtkapazität (verwendet und gesamt) und Details zur Rohkapazität (verwendbar, frei und gesamt) anzeigen.  Sie können auch Informationen zu HA-Paaren, Festplatten-Shelves und Ports erhalten.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Knoten*.
+. Klicken Sie in der Ansicht *Integrität: Alle Knoten* auf den Knoten, dessen Details Sie anzeigen möchten.
++
+Die detaillierten Informationen zum ausgewählten Knoten werden auf der Seite „Cluster-/Integritätsdetails“ angezeigt.  Der linke Bereich zeigt die Liste der HA-Paare.  Standardmäßig sind die HA-Details geöffnet, in denen Details zum HA-Status und Ereignisse im Zusammenhang mit dem ausgewählten HA-Paar angezeigt werden.
+
+. Um weitere Details zum Knoten anzuzeigen, führen Sie die entsprechende Aktion aus:
++
+[cols="2*"]
+|===
+| Zum Anzeigen... | Klicken... 
+
+
+ a| 
+Details zu den Disk Shelfs
+ a| 
+*Festplattenregale*.
+
+
+
+ a| 
+Hafenbezogene Informationen
+ a| 
+*Anschlüsse*.
+
+|===
+
+
+Weitere Informationen finden Sie unter:
+
+* link:../performance-checker/performance-view-all.html#performance-all-nodes-view["Leistung: Alle Knoten anzeigen"]
+* link:../performance-checker/concept_view_node_and_aggregate_available_iops_values.html["Anzeigen von Knoten- und aggregierten verfügbaren IOPS-Werten"]
+* link:../performance-checker/concept_view_node_and_aggregate_performance_capacity_used_values.html["Anzeigen der verwendeten Knoten- und Gesamtleistungskapazitätswerte"]
+

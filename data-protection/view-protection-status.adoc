@@ -1,0 +1,97 @@
+---
+permalink: data-protection/view-protection-status.html 
+sidebar: sidebar 
+keywords: volume relationship, protection status, dashboard protection card, protection widget, lag, relationship health, healthy relationship, lag threshold, relationship event, source cluster, snapmirror, snapshot 
+summary: Die Seite „Datenschutz“ bietet eine ganzheitliche Ansicht der Datenschutzdetails für alle geschützten Volumes in Ihrem Rechenzentrum. 
+---
+= Anzeigen des Volume-Schutzstatus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Seite „Datenschutz“ bietet eine ganzheitliche Ansicht der Datenschutzdetails für alle geschützten Volumes in einem einzelnen Cluster oder für alle Cluster in einem Rechenzentrum.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Dashboard*.
+. Je nachdem, ob Sie den Datenschutzstatus für alle überwachten Cluster oder für einen einzelnen Cluster anzeigen möchten, wählen Sie *Alle Cluster* oder einen einzelnen Cluster aus dem Dropdown-Menü aus.
+. Klicken Sie oben im Bereich „Datenschutz“ auf den Rechtspfeil.  Die Seite *Datenschutz* wird angezeigt.
+
+
+Je nachdem, ob Sie einen einzelnen oder alle Cluster in Ihrem Rechenzentrum ausgewählt haben, wird auf dieser Seite der Datenschutzstatus der durch Snapshot-Kopien oder SnapMirror Richtlinien geschützten Volumes sowie die Anzahl der ungeschützten Volumes angezeigt.
+
+Wenn Sie einen Cluster aus der Liste *Einzelner Cluster* auswählen, werden der Snapshot-Schutz und der SnapMirror Beziehungsstatus der geschützten Volumes in diesem Cluster angezeigt.
+
+Wenn Sie auf dieser Seite auf die Ereignisse klicken, gelangen Sie zur Seite mit den Ereignisdetails.  Sie können auf den Link *Alle anzeigen* klicken, um alle aktiven Schutzereignisse auf der Inventarseite der Ereignisverwaltung anzuzeigen.  Sie können mit der Maus darüberfahren, um die jeweiligen Zählungen und Legenden anzuzeigen.  Sie können auf Folgendes klicken:
+
+* Die Balkendiagramme für ungeschützte Volumes und durch Snapshot-Kopien geschützte Volumes ermöglichen es Ihnen, zur Seite „Volumes“ zu gelangen und die Details anzuzeigen.
+* Die Balkendiagramme für alle Beziehungen führen zur Seite „Beziehungen“, wo die Details nach dem Quellcluster gefiltert werden.
+
+
+
+
+== Anzeigen des Schutzstatus von Volumes, die durch Snapshot-Kopien geschützt sind
+
+*Übersicht über Snapshot-Kopien*: Eine Übersicht über die durch Snapshot-Kopien geschützten Volumes, wie etwa:
+
+* Die Gesamtzahl der durch Snapshot-Kopien geschützten und nicht geschützten Volumes.
+* Die Gesamtzahl der Volumes, die den reservierten Speicherplatz für die Snapshot-Kopien verwenden oder überschreiten.
+
+
+*Analyse von Snapshot-Kopien* enthält die folgenden Informationen:
+
+* Einzelne Ereignisse für Snapshot-Kopien, einschließlich der in den letzten 24 Stunden ausgelösten Ereignisse.
+* Detailliertes Diagramm für durch Snapshot-Kopien geschützte und nicht geschützte Volumes.
+* Volumes, die die reservierte Snapshot-Kopierkapazität nutzen, nicht nutzen und überschreiten.
+* Die Aufschlüsselung der Volumezählung erfolgt anhand der Anzahl ihrer Snapshot-Kopien.
+
+
+
+
+=== Zu beachtende Punkte bei Snapshot-Kopien
+
+* Beim Zählen der durch Snapshot-Kopien geschützten Volumes werden sowohl Quell- als auch Zielvolumes berücksichtigt.
+* Die Anzahl der zurückgegebenen Snapshot-Kopien gilt nur für die Volumes, die online und verfügbar sind.
+* Der Diagrammbereich für die Anzahl der Snapshot-Kopien ist dynamisch.  Es wird basierend auf der Anzahl der im ausgewählten Cluster vorhandenen Snapshots generiert.
+* Damit ein Volume als geschützt gilt, muss der Zeitplan für die Snapshot-Kopie des Volumes aktiviert sein.
+* Der Wert für den reservierten Speicherplatz für Snapshot-Kopien ist wichtig, um die Menge des belegten Speicherplatzes anzuzeigen oder um den Speicherplatz zu berechnen, der zurückgewonnen werden kann, wenn eine oder mehrere Snapshot-Kopien gelöscht werden.
+
+
+
+
+== Schutzstatus für SnapMirror -Beziehungen anzeigen
+
+* SnapMirror -Übersicht*: Eine Übersicht über die durch SnapMirror -Richtlinien geschützten Volumes, wie z. B.:
+
+* Die Anzahl der durch die jeweiligen SnapMirror Richtlinien geschützten Volumes, z. B. Volume- SnapMirror -Beziehungen, Storage VM Disaster Recovery (SVM-DR) und deren Kombinationen.
+* Die Gesamtzahl der SnapMirror -Beziehungen, bei denen basierend auf dem Verzögerungsstatus eine Verzögerung des Recovery Point Objectives (RPO) auftritt.
+
+
+* SnapMirror -Analyse* enthält die folgenden Informationen:
+
+* Einzelne Ereignisse, die für SnapMirror -Beziehungen ausgelöst wurden, einschließlich der Ereignisse, die in den letzten 24 Stunden ausgelöst wurden
+* Die Anzahl der durch jeden SnapMirror Richtlinientyp geschützten Volumes.
+* Die Anzahl der durch die SnapMirror Beziehungstypen geschützten Beziehungen, z. B. Asynchronous Mirror, Asynchronous Vault, Asynchronous MirrorVault, StricxtSync, SnapMirror Active Sync Consistency Group und Sync.
+* Die Anzahl gesunder und ungesunder Beziehungen.
+* Aufschlüsselung der Volumenverhältniszählung.  Sie können die Diagramme nach RPO-Verzögerungszeit und -Status umschalten.
+* Verzögerungsschwellenwerte für nicht verwaltete Beziehungen.  Sie können auf das Einstellungssymbol (image:../media/Settings.PNG["Symbol für Verzögerungsschwellenwerteinstellungen"] ), um die Einstellungen für den Verzögerungsschwellenwert zu konfigurieren. Weitere Informationen finden Sie unter link:../health-checker/task_configure_lag_threshold_settings_for_unmanaged_protection.html["Konfigurieren von Verzögerungsschwellenwerteinstellungen für nicht verwaltete Schutzbeziehungen"].
+
+
+
+
+=== Zu beachtende Punkte für SnapMirror -Beziehungen
+
+* Zum Zählen der SnapMirror -Beziehungen werden die Quellvolumes gezählt, die zum Lesen und Schreiben aktiviert sind.  Ziel- und Stammvolumes werden nicht berücksichtigt.
+* Bei SnapMirror -Beziehungen werden die Ereignisse für den Quellcluster angezeigt.
+* Die SnapMirror Beziehungsanzahl umfasst die Anzahl der Volumes mit Quellen und Zielen auf demselben oder auf verschiedenen Clustern.
+* Die Verzögerungsdauer der RPO-Verzögerung bei der Datenreplikation basiert auf der SnapMirror -Beziehung.  Der Status wird kategorisiert als `ok` , `warning` , oder `error` , basierend auf dem festgelegten Beziehungsschwellenwert.  Sie können den Status überprüfen, um festzustellen, ob die Parameter wie erwartet funktionieren oder ob Sie ein Problem beheben müssen.
+* Wenn ein Volume über mehrere SnapMirror -Beziehungen verfügt, wird jeder Beziehungstyp für die RPO-Verzögerung gezählt.
+* Volume-Beziehungen gelten als fehlerhaft, wenn es Probleme bei der Datenreplikation zwischen Quelle und Ziel gibt, beispielsweise wenn die Beziehung unterbrochen ist.
+
+
+
+
+== Durch die MetroCluster Konfiguration geschützte Cluster anzeigen
+
+Das Bedienfeld * MetroCluster -Schutz* auf der Seite *Datenschutz* zeigt die Anzahl der Cluster an, die an Ihrem Standort durch MetroCluster über FC oder IP-Konfiguration geschützt oder nicht geschützt sind.  Wenn Sie auf die Balkendiagramme in diesem Bereich klicken, gelangen Sie zur Seite „Cluster“, auf der die Clusterdetails basierend auf den geschützten oder ungeschützten Clustern gefiltert werden.  Informationen zur Überwachung Ihrer MetroCluster -Konfiguration finden Sie unterlink:../storage-mgmt/task_monitor_metrocluster_configurations.html["Überwachung von MetroCluster -Konfigurationen"] .

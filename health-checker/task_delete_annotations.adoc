@@ -1,0 +1,29 @@
+---
+permalink: health-checker/task_delete_annotations.html 
+sidebar: sidebar 
+keywords: delete, annotations 
+summary: Sie können benutzerdefinierte Anmerkungen und ihre Werte löschen, wenn sie nicht mehr benötigt werden. 
+---
+= Anmerkungen löschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können benutzerdefinierte Anmerkungen und ihre Werte löschen, wenn sie nicht mehr benötigt werden.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Die Annotationswerte dürfen nicht in anderen Annotationen oder Gruppenregeln verwendet werden.
+
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Anmerkungen*.
+. Wählen Sie auf der Registerkarte *Anmerkungen* die Anmerkung aus, die Sie löschen möchten.
++
+Die Details der ausgewählten Anmerkung werden angezeigt.
+
+. Klicken Sie auf *Aktionen* > *Löschen*, um die ausgewählte Anmerkung und ihren Wert zu löschen.
+. Klicken Sie im Warndialogfeld auf *Ja*, um den Löschvorgang zu bestätigen.
+

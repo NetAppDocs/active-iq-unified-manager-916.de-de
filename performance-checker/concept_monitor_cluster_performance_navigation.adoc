@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/concept_monitor_cluster_performance_navigation.html 
+sidebar: sidebar 
+keywords: monitor, cluster, performance, navigation 
+summary: Sie können die Leistung aller von Unified Manager verwalteten Cluster überwachen.  Durch die Überwachung Ihrer Cluster erhalten Sie einen Überblick über die Cluster- und Objektleistung und können Leistungsereignisse überwachen.  Sie können Leistung und Ereignisse auf hoher Ebene anzeigen oder alle Details der Cluster- und Objektleistung sowie der Leistungsereignisse genauer untersuchen. 
+---
+= Navigation zur Überwachung der Clusterleistung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Leistung aller von Unified Manager verwalteten Cluster überwachen.  Durch die Überwachung Ihrer Cluster erhalten Sie einen Überblick über die Cluster- und Objektleistung und können Leistungsereignisse überwachen.  Sie können Leistung und Ereignisse auf hoher Ebene anzeigen oder alle Details der Cluster- und Objektleistung sowie der Leistungsereignisse genauer untersuchen.
+
+Dies ist ein Beispiel für viele mögliche Navigationspfade zur Clusterleistung:
+
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Aggregate*.
+. Um Informationen zur Leistung in diesen Aggregaten anzuzeigen, wählen Sie die Ansicht „Leistung: Alle Aggregate“ aus.
+. Identifizieren Sie das Aggregat, das Sie untersuchen möchten, und klicken Sie auf den Aggregatnamen, um zur Seite „Aggregate/Performance Explorer“ zu navigieren.
+. Wählen Sie optional im Menü „Anzeigen und Vergleichen“ andere Objekte aus, die mit diesem Aggregat verglichen werden sollen, und fügen Sie dann eines der Objekte zum Vergleichsbereich hinzu.
++
+Statistiken für beide Objekte werden zum Vergleich in den Zählerdiagrammen angezeigt.
+
+. Klicken Sie im Vergleichsbereich rechts auf der Explorer-Seite in einem der Zählerdiagramme auf *Zoom-Ansicht*, um Details zum Leistungsverlauf für dieses Aggregat anzuzeigen.
+
+
+image::../media/monitor_cluster_performance.png[Ein UI-Screenshot, der zeigt, wie Sie ein bestimmtes Aggregat untersuchen können.]

@@ -1,0 +1,14 @@
+---
+permalink: events/concept_manage_alerts.html 
+sidebar: sidebar 
+keywords: manage, alerts 
+summary: Sie können Warnmeldungen so konfigurieren, dass automatisch Benachrichtigungen gesendet werden, wenn bestimmte Ereignisse oder Ereignisse mit einem bestimmten Schweregrad eintreten.  Sie können einer Warnung auch ein Skript zuordnen, das ausgeführt wird, wenn eine Warnung ausgelöst wird. 
+---
+= Verwalten von Warnungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Warnmeldungen so konfigurieren, dass automatisch Benachrichtigungen gesendet werden, wenn bestimmte Ereignisse oder Ereignisse mit einem bestimmten Schweregrad eintreten.  Sie können einer Warnung auch ein Skript zuordnen, das ausgeführt wird, wenn eine Warnung ausgelöst wird.

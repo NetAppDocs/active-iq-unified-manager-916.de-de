@@ -1,0 +1,42 @@
+---
+permalink: health-checker/task_view_svm_list_and_details.html 
+sidebar: sidebar 
+keywords: view, storage vm list, details 
+summary: 'In der Ansicht „Integrität: Alle Storage-VMs“ können Sie Ihren Bestand an Storage-VMs (SVMs) überwachen.  Auf der Seite „Storage VM / Health Details“ können Sie ausführliche Informationen zu den überwachten SVMs anzeigen.' 
+---
+= Anzeigen der Storage-VM-Liste und Details
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In der Ansicht „Integrität: Alle Storage-VMs“ können Sie Ihren Bestand an Storage-VMs (SVMs) überwachen.  Auf der Seite „Storage VM / Health Details“ können Sie ausführliche Informationen zu den überwachten SVMs anzeigen.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Sie können SVM-Details wie Kapazität, Effizienz und Konfiguration einer SVM anzeigen.  Sie können auch Informationen zu den zugehörigen Geräten und zugehörigen Warnungen für diese SVM anzeigen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Speicher-VMs*.
+. Wählen Sie eine der folgenden Möglichkeiten, um die SVM-Details anzuzeigen:
++
+** Um Informationen zum Zustand aller SVMs in allen Clustern anzuzeigen, wählen Sie im Menü „Ansicht“ die Option „Zustand: Alle Storage-VMs anzeigen“.
+** Klicken Sie auf den Namen der Storage-VM, um die vollständigen Details anzuzeigen.
++
+Sie können die vollständigen Details auch anzeigen, indem Sie im Dialogfeld mit den minimalen Details auf *Details anzeigen* klicken.
+
+
+
+. Zeigen Sie die mit der SVM verknüpften Objekte an, indem Sie im Dialogfeld mit den minimalen Details auf *Verwandte anzeigen* klicken.
+
+
+*Verwandte Informationen*
+
+* link:../health-checker/reference_health_svm_details_page.html["Speicher-VM: Seite mit Integritätsdetails"]
+* link:../performance-checker/performance-view-all.html#performance-all-storage-vms-view["Leistung: Alle Storage-VMs anzeigen"]
+* link:../health-checker/task_view_antiransomware_status_of_all_volumes_storage_vms.html#view-security-details-of-all-volumes-with-anti-ransomware-detection["Sicherheit: Anti-Ransomware-Ansicht"]
+* link:../health-checker/task_view_detailed_security_status_for_clusters_and_svms.html["Sicherheitsstatus für Cluster und Storage-VMs anzeigen"]
+* link:../data-protection/reference_relationship_all_relationships_view.html["Beziehung: Ansicht „Alle Beziehungen“"]
+

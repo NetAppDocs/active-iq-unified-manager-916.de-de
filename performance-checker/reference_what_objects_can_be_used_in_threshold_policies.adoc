@@ -1,0 +1,97 @@
+---
+permalink: performance-checker/reference_what_objects_can_be_used_in_threshold_policies.html 
+sidebar: sidebar 
+keywords: objects, counters, combination, threshold, policies 
+summary: Nur einige Leistungsindikatoren können zusammen in Kombinationsrichtlinien verwendet werden.  Wenn primäre und sekundäre Leistungsindikatoren angegeben werden, müssen beide Leistungsindikatoren ihre Höchstgrenzen überschreiten, bevor ein Ereignis generiert wird. 
+---
+= Welche Objekte und Zähler können in Kombinationsschwellenwertrichtlinien verwendet werden?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nur einige Leistungsindikatoren können zusammen in Kombinationsrichtlinien verwendet werden.  Wenn primäre und sekundäre Leistungsindikatoren angegeben werden, müssen beide Leistungsindikatoren ihre Höchstgrenzen überschreiten, bevor ein Ereignis generiert wird.
+
+|===
+| Primäres Speicherobjekt und Zähler | Sekundäres Speicherobjekt und Zähler 
+
+
+ a| 
+Lautstärkelatenz
+ a| 
+Datenträger-IOPS
+
+
+
+ a| 
+Volumen MB/s
+
+
+
+ a| 
+Gesamtnutzung
+
+
+
+ a| 
+Verwendete Gesamtleistungskapazität
+
+
+
+ a| 
+Knotenauslastung
+
+
+
+ a| 
+Verwendete Knotenleistungskapazität
+
+
+
+ a| 
+Verwendete Knotenleistungskapazität – Übernahme
+
+
+
+ a| 
+LUN-Latenz
+ a| 
+LUN-IOPS
+
+
+
+ a| 
+LUN MB/s
+
+
+
+ a| 
+Gesamtnutzung
+
+
+
+ a| 
+Verwendete Gesamtleistungskapazität
+
+
+
+ a| 
+Knotenauslastung
+
+
+
+ a| 
+Verwendete Knotenleistungskapazität
+
+
+
+ a| 
+Verwendete Knotenleistungskapazität – Übernahme
+
+|===
+[NOTE]
+====
+Wenn eine Volume-Kombinationsrichtlinie auf ein FlexGroup Volume und nicht auf ein FlexVol volume angewendet wird, können nur die Attribute „Volume IOPS“ und „Volume MB/s“ als sekundärer Zähler ausgewählt werden.  Wenn die Schwellenwertrichtlinie eines der Knoten- oder Aggregatattribute enthält, wird die Richtlinie nicht auf das FlexGroup -Volume angewendet und Sie erhalten eine Fehlermeldung, die diesen Fall beschreibt.  Dies liegt daran, dass FlexGroup Volumes auf mehr als einem Knoten oder Aggregat vorhanden sein können.
+
+====

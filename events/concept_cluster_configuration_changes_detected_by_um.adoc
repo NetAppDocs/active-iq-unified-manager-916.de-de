@@ -1,0 +1,36 @@
+---
+permalink: events/concept_cluster_configuration_changes_detected_by_um.html 
+sidebar: sidebar 
+keywords: configuration, changes, detected, unified manager 
+summary: Unified Manager überwacht Ihre Cluster auf Konfigurationsänderungen, damit Sie feststellen können, ob eine Änderung ein Leistungsereignis verursacht oder dazu beigetragen hat.  Auf den Seiten des Performance Explorers wird ein Änderungsereignissymbol angezeigt, um das Datum und die Uhrzeit anzugeben, zu der die Änderung erkannt wurde. 
+---
+= Von Unified Manager erkannte Konfigurationsänderungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager überwacht Ihre Cluster auf Konfigurationsänderungen, damit Sie feststellen können, ob eine Änderung ein Leistungsereignis verursacht oder dazu beigetragen hat.  Auf den Seiten des Performance Explorers wird ein Symbol für Änderungsereignisse angezeigt (image:../media/opm_change_icon.gif["Symbol „Ereignis ändern“"] ), um das Datum und die Uhrzeit anzugeben, wann die Änderung erkannt wurde.
+
+Sie können die Leistungsdiagramme auf den Seiten des Leistungs-Explorers und auf der Seite „Arbeitslastanalyse“ überprüfen, um zu sehen, ob sich das Änderungsereignis auf die Leistung des ausgewählten Clusterobjekts ausgewirkt hat.  Wenn die Änderung ungefähr zur gleichen Zeit wie ein Leistungsereignis erkannt wurde, hat die Änderung möglicherweise zu dem Problem beigetragen, das zur Auslösung der Ereigniswarnung geführt hat.
+
+Unified Manager kann die folgenden Änderungsereignisse erkennen, die als Informationsereignisse kategorisiert werden:
+
+* Ein Volumen wird zwischen Aggregaten verschoben.
++
+Unified Manager kann erkennen, wann die Verschiebung läuft, abgeschlossen ist oder fehlgeschlagen ist.  Wenn Unified Manager während einer Volumeverschiebung ausfällt, erkennt es die Volumeverschiebung, wenn es wieder verfügbar ist, und zeigt ein Änderungsereignis dafür an.
+
+* Die Durchsatzgrenze (MB/s oder IOPS) einer QoS-Richtliniengruppe, die eine oder mehrere überwachte Workloads enthält, ändert sich.
++
+Das Ändern eines Richtliniengruppenlimits kann zu zeitweiligen Spitzen in der Latenz (Reaktionszeit) führen, die auch Ereignisse für die Richtliniengruppe auslösen können.  Die Latenz normalisiert sich allmählich und alle durch die Spitzen verursachten Ereignisse werden obsolet.
+
+* Ein Knoten in einem HA-Paar übernimmt den Speicher seines Partnerknotens oder gibt ihn zurück.
++
+Unified Manager kann erkennen, wann die Übernahme-, Teilübernahme- oder Rückgabeoperation abgeschlossen ist.  Wenn die Übernahme durch einen in Panik geratenen Knoten verursacht wird, erkennt Unified Manager das Ereignis nicht.
+
+* Ein ONTAP -Upgrade- oder Wiederherstellungsvorgang wurde erfolgreich abgeschlossen.
++
+Es werden die vorherige und die neue Version angezeigt.
+
+

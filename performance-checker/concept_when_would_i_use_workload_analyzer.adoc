@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_when_would_i_use_workload_analyzer.html 
+sidebar: sidebar 
+keywords: workload analyzer, use 
+summary: Normalerweise verwenden Sie den Workload-Analyzer, um ein von einem Benutzer gemeldetes Latenzproblem zu beheben, ein gemeldetes Ereignis oder eine Warnung gründlicher zu analysieren oder eine Workload zu untersuchen, die Ihrer Ansicht nach nicht normal funktioniert. 
+---
+= Wann würde ich den Workload-Analyzer verwenden?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Normalerweise verwenden Sie den Workload-Analyzer, um ein von einem Benutzer gemeldetes Latenzproblem zu beheben, ein gemeldetes Ereignis oder eine Warnung gründlicher zu analysieren oder eine Workload zu untersuchen, die Ihrer Ansicht nach nicht normal funktioniert.
+
+Falls Benutzer Sie kontaktiert haben und Ihnen mitteilen, dass die von ihnen verwendete Anwendung sehr langsam läuft, können Sie die Latenz-, Durchsatz- und Auslastungsdiagramme für die Arbeitslast überprüfen, mit der die Anwendung ausgeführt wird, um festzustellen, ob der Speicher die Ursache des Leistungsproblems ist.  Sie können das Kapazitätsdiagramm auch verwenden, um zu sehen, ob die Kapazität niedrig ist, da ein ONTAP -System, dessen Kapazität zu über 85 % genutzt wird, Leistungsprobleme verursachen kann.  Mithilfe dieser Diagramme können Sie feststellen, ob das Problem durch den Speicher, ein Netzwerkproblem oder ein anderes damit zusammenhängendes Problem verursacht wird.
+
+Falls Unified Manager ein Leistungsereignis generiert hat und Sie die Ursache des Problems genauer untersuchen möchten, können Sie den Workload-Analysator von der Seite „Ereignisdetails“ aus starten, indem Sie auf die Schaltfläche „Workload analysieren“ klicken, um einige der Latenz-, Durchsatz- und Kapazitätstrends für die Workload zu untersuchen.
+
+Falls Sie beim Anzeigen einer Workload-Inventarseite (Volume, LUN, Workload, NFS-Freigabe oder SMB/CIFS-Freigabe) feststellen, dass eine Workload nicht normal funktioniert, können Sie auf das Symbol „Mehr“ klicken.image:../media/more_icon.gif[""] und dann auf *Arbeitslast analysieren*, um die Seite „Arbeitslastanalyse“ zu öffnen und die Arbeitslast weiter zu untersuchen.

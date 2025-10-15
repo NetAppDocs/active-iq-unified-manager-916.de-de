@@ -1,0 +1,27 @@
+---
+permalink: events/task_edit_alerts.html 
+sidebar: sidebar 
+keywords: edit, alerts 
+summary: Sie können Alarmeigenschaften wie die Ressource, mit der der Alarm verknüpft ist, Ereignisse, Empfänger, Benachrichtigungsoptionen, Benachrichtigungshäufigkeit und zugehörige Skripte bearbeiten. 
+---
+= Benachrichtigungen bearbeiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Alarmeigenschaften wie die Ressource, mit der der Alarm verknüpft ist, Ereignisse, Empfänger, Benachrichtigungsoptionen, Benachrichtigungshäufigkeit und zugehörige Skripte bearbeiten.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ verfügen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Alarm-Setup*.
+. Wählen Sie auf der Seite *Alarm-Setup* den Alarm aus, den Sie bearbeiten möchten, und klicken Sie auf *Bearbeiten*.
+. Bearbeiten Sie im Dialogfeld *Alarm bearbeiten* nach Bedarf die Abschnitte „Name“, „Ressourcen“, „Ereignisse“ und „Aktionen“.
++
+Sie können das mit der Warnung verknüpfte Skript ändern oder entfernen.
+
+. Klicken Sie auf *Speichern*.
+

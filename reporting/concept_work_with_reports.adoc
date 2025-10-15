@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_work_with_reports.html 
+sidebar: sidebar 
+keywords: work, reports 
+summary: Erfahren Sie, wie Sie Inventarseitenansichten finden und in gemeinsam nutzbare, geplante Berichte umwandeln. 
+---
+= Arbeiten mit Berichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Erfahren Sie, wie Sie Inventarseitenansichten finden und in gemeinsam nutzbare, geplante Berichte umwandeln.

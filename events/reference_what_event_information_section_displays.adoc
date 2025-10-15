@@ -1,0 +1,168 @@
+---
+permalink: events/reference_what_event_information_section_displays.html 
+sidebar: sidebar 
+keywords: event, information, section, displays 
+summary: Im Abschnitt „Ereignisinformationen“ auf der Seite „Ereignisdetails“ können Sie die Details zu einem ausgewählten Ereignis anzeigen, z. B. den Schweregrad des Ereignisses, die Auswirkungsstufe, den Auswirkungsbereich und die Ereignisquelle. 
+---
+= Was im Abschnitt „Ereignisinformationen“ angezeigt wird
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Abschnitt „Ereignisinformationen“ auf der Seite „Ereignisdetails“ können Sie die Details zu einem ausgewählten Ereignis anzeigen, z. B. den Schweregrad des Ereignisses, die Auswirkungsstufe, den Auswirkungsbereich und die Ereignisquelle.
+
+Felder, die für den Ereignistyp nicht relevant sind, werden ausgeblendet.  Sie können die folgenden Ereignisdetails anzeigen:
+
+* *Ereignisauslösezeit*
++
+Der Zeitpunkt, zu dem das Ereignis generiert wurde.
+
+* *Zustand*
++
+Der Ereignisstatus: Neu, Bestätigt, Gelöst oder Veraltet.
+
+* *Veraltete Ursache*
++
+Die Aktionen, die dazu geführt haben, dass das Ereignis veraltet ist, z. B. wurde das Problem behoben.
+
+* *Veranstaltungsdauer*
++
+Bei aktiven (neuen und bestätigten) Ereignissen ist dies die Zeit zwischen der Erkennung und dem Zeitpunkt der letzten Analyse des Ereignisses.  Bei veralteten Ereignissen ist dies die Zeit zwischen der Erkennung und der Lösung des Ereignisses.
+
++
+Dieses Feld wird für alle Leistungsereignisse und für andere Ereignistypen nur angezeigt, nachdem sie gelöst oder veraltet wurden.
+
+* *Zuletzt gesehen*
++
+Das Datum und die Uhrzeit, zu der das Ereignis zuletzt als aktiv angesehen wurde.
+
++
+Bei Leistungsereignissen kann dieser Wert aktueller sein als die Ereignisauslösezeit, da dieses Feld nach jeder neuen Erfassung von Leistungsdaten aktualisiert wird, solange das Ereignis aktiv ist.  Bei anderen Ereignistypen wird dieser Inhalt im Status „Neu“ oder „Bestätigt“ nicht aktualisiert und das Feld ist daher ausgeblendet.
+
+* *Schwere*
++
+Der Schweregrad des Ereignisses: Kritisch (image:../media/sev_critical_um60.png[""] ), Fehler (image:../media/sev_error_um60.png[""] ), Warnung (image:../media/sev_warning_um60.png[""] ) und Informationen (image:../media/sev_information_um60.gif[""] ).
+
+* *Auswirkungsebene*
++
+Die Auswirkungsstufe des Ereignisses: Vorfall, Risiko, Ereignis oder Upgrade.
+
+* *Aufprallbereich*
++
+Der Auswirkungsbereich des Ereignisses: Verfügbarkeit, Kapazität, Leistung, Schutz, Konfiguration oder Sicherheit.
+
+* *Quelle*
++
+Der Name des Objekts, bei dem das Ereignis aufgetreten ist.
+
++
+Beim Anzeigen der Details für ein freigegebenes QoS-Richtlinienereignis werden in diesem Feld bis zu drei der Workload-Objekte aufgelistet, die die meisten IOPS oder MBps verbrauchen.
+
++
+Sie können auf den Link zum Quellennamen klicken, um die Seite mit den Integritäts- oder Leistungsdetails für dieses Objekt anzuzeigen.
+
+* *Quellenanmerkungen*
++
+Zeigt den Namen und Wert der Anmerkung für das Objekt an, mit dem das Ereignis verknüpft ist.
+
++
+Dieses Feld wird nur für Integritätsereignisse auf Clustern, SVMs und Volumes angezeigt.
+
+* *Quellgruppen*
++
+Zeigt die Namen aller Gruppen an, zu denen das betroffene Objekt gehört.
+
++
+Dieses Feld wird nur für Integritätsereignisse auf Clustern, SVMs und Volumes angezeigt.
+
+* *Quellentyp*
++
+Der Objekttyp (z. B. SVM, Volume oder Qtree), mit dem das Ereignis verknüpft ist.
+
+* *Auf Cluster*
++
+Der Name des Clusters, auf dem das Ereignis aufgetreten ist.
+
++
+Sie können auf den Link zum Clusternamen klicken, um die Seite mit den Integritäts- oder Leistungsdetails für diesen Cluster anzuzeigen.
+
+* *Anzahl der betroffenen Objekte*
++
+Die Anzahl der vom Ereignis betroffenen Objekte.
+
++
+Sie können auf den Objektlink klicken, um die Inventarseite mit den Objekten anzuzeigen, die derzeit von diesem Ereignis betroffen sind.
+
++
+Dieses Feld wird nur für Leistungsereignisse angezeigt.
+
+* *Betroffene Bände*
++
+Die Anzahl der Datenträger, die von diesem Ereignis betroffen sind.
+
++
+Dieses Feld wird nur für Leistungsereignisse auf Knoten oder Aggregaten angezeigt.
+
+* *Ausgelöste Richtlinie*
++
+Der Name der Schwellenwertrichtlinie, die das Ereignis ausgelöst hat.
+
++
+Sie können den Cursor über den Richtliniennamen bewegen, um die Details der Schwellenwertrichtlinie anzuzeigen.  Bei adaptiven QoS-Richtlinien werden auch die definierte Richtlinie, die Blockgröße und der Zuweisungstyp (zugewiesener Speicherplatz oder verwendeter Speicherplatz) angezeigt.
+
++
+Dieses Feld wird nur für Leistungsereignisse angezeigt.
+
+* *Regel-ID*
++
+Bei Active IQ -Plattformereignissen ist dies die Nummer der Regel, die zum Generieren des Ereignisses ausgelöst wurde.
+
+* *Bestätigt von*
++
+Der Name der Person, die das Ereignis bestätigt hat, und der Zeitpunkt der Bestätigung des Ereignisses.
+
+* *Gelöst von*
++
+Der Name der Person, die das Ereignis gelöst hat, und der Zeitpunkt der Lösung des Ereignisses.
+
+* *Zugewiesen an*
++
+Der Name der Person, die mit der Arbeit an der Veranstaltung beauftragt ist.
+
+* *Alarmeinstellungen*
++
+Die folgenden Informationen zu Warnungen werden angezeigt:
+
++
+** Wenn dem ausgewählten Ereignis keine Warnungen zugeordnet sind, wird der Link *Warnung hinzufügen* angezeigt.
++
+Sie können das Dialogfeld „Warnung hinzufügen“ öffnen, indem Sie auf den Link klicken.
+
+** Wenn dem ausgewählten Ereignis eine Warnung zugeordnet ist, wird der Name der Warnung angezeigt.
++
+Sie können das Dialogfeld „Warnung bearbeiten“ öffnen, indem Sie auf den Link klicken.
+
+** Wenn dem ausgewählten Ereignis mehr als eine Warnung zugeordnet ist, wird die Anzahl der Warnungen angezeigt.
++
+Sie können die Seite „Alarm-Setup“ öffnen, indem Sie auf den Link klicken, um weitere Details zu diesen Alarmen anzuzeigen.
+
+
+
++
+Deaktivierte Warnungen werden nicht angezeigt.
+
+* *Letzte Benachrichtigung gesendet*
++
+Datum und Uhrzeit der letzten Warnmeldung.
+
+* *Senden per*
++
+Der Mechanismus, der zum Senden der Alarmbenachrichtigung verwendet wurde: E-Mail oder SNMP-Trap.
+
+* *Vorheriger Skriptlauf*
++
+Der Name des Skripts, das beim Generieren der Warnung ausgeführt wurde.
+
+

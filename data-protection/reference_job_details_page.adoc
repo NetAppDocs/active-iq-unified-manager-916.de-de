@@ -1,0 +1,126 @@
+---
+permalink: data-protection/reference_job_details_page.html 
+sidebar: sidebar 
+keywords: job, details, page 
+summary: Auf der Seite „Auftragsdetails“ können Sie den Status und andere Informationen zu bestimmten Schutzauftragsaufgaben anzeigen, die ausgeführt werden, sich in der Warteschlange befinden oder abgeschlossen sind.  Sie können diese Informationen verwenden, um den Fortschritt von Schutzaufträgen zu überwachen und Auftragsfehler zu beheben. 
+---
+= Seite mit den Auftragsdetails
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Auftragsdetails“ können Sie den Status und andere Informationen zu bestimmten Schutzauftragsaufgaben anzeigen, die ausgeführt werden, sich in der Warteschlange befinden oder abgeschlossen sind.  Sie können diese Informationen verwenden, um den Fortschritt von Schutzaufträgen zu überwachen und Auftragsfehler zu beheben.
+
+
+
+== Jobübersicht
+
+In der Auftragszusammenfassung werden die folgenden Informationen angezeigt:
+
+* Auftrags-ID
+* Typ
+* Status
+* Eingereichte Zeit
+* Abgeschlossene Zeit
+* Dauer
+
+
+
+
+== Befehlsschaltflächen
+
+Mit den Befehlsschaltflächen können Sie die folgenden Aufgaben ausführen:
+
+* *Aktualisieren*
++
+Aktualisiert die Aufgabenliste und die mit jeder Aufgabe verknüpften Eigenschaften.
+
+* *Jobs anzeigen*
++
+Bringt Sie zurück zur Seite „Jobs“.
+
+
+
+
+
+== Liste der Arbeitsaufgaben
+
+Die Job-Aufgabenliste zeigt in einer Tabelle alle Aufgaben an, die mit einem bestimmten Job verknüpft sind, sowie die Eigenschaften jeder Aufgabe.
+
+* *Startzeit*
++
+Zeigt den Tag und die Uhrzeit an, zu der die Aufgabe gestartet wurde.  Standardmäßig werden die aktuellsten Aufgaben oben in der Spalte und ältere Aufgaben unten angezeigt.
+
+* *Typ*
++
+Zeigt den Aufgabentyp an.
+
+* *Zustand*
++
+Der Status einer bestimmten Aufgabe:
+
++
+** *Vollendet*
++
+Die Aufgabe ist abgeschlossen.
+
+** *In der Warteschlange*
++
+Die Aufgabe wird gleich ausgeführt.
+
+** *Läuft*
++
+Die Aufgabe wird ausgeführt.
+
+** *Warten*
++
+Ein Auftrag wurde übermittelt und einige zugehörige Aufgaben warten darauf, in die Warteschlange gestellt und ausgeführt zu werden.
+
+
+
+* *Status*
++
+Zeigt den Aufgabenstatus an:
+
++
+** *Fehler (image:../media/sev_error.gif[""] )*
++
+Die Aufgabe ist fehlgeschlagen.
+
+** *Normal (image:../media/sev_normal.gif[""] )*
++
+Die Aufgabe war erfolgreich.
+
+** *Übersprungen (image:../media/icon_skipped.gif[""] )*
++
+Eine Aufgabe ist fehlgeschlagen, was dazu führte, dass nachfolgende Aufgaben übersprungen wurden.
+
+
+
+* *Dauer*
++
+Zeigt die seit Beginn der Aufgabe verstrichene Zeit an.
+
+* *Abgeschlossene Zeit*
++
+Zeigt die Zeit an, zu der die Aufgabe abgeschlossen wurde.  Standardmäßig ist diese Spalte ausgeblendet.
+
+* *Aufgaben-ID*
++
+Zeigt die GUID an, die eine einzelne Aufgabe für einen Job identifiziert.  Die Spalte kann sortiert und gefiltert werden.  Standardmäßig ist diese Spalte ausgeblendet.
+
+* *Abhängigkeitsreihenfolge*
++
+Zeigt eine Ganzzahl an, die die Abfolge der Aufgaben in einem Diagramm darstellt, wobei der ersten Aufgabe die Null zugewiesen wird.  Standardmäßig ist diese Spalte ausgeblendet.
+
+* *Bereich „Aufgabendetails“*
++
+Zeigt zusätzliche Informationen zu jeder Jobaufgabe an, darunter den Aufgabennamen, die Aufgabenbeschreibung und, falls die Aufgabe fehlgeschlagen ist, den Grund für das Fehlschlagen.
+
+* *Aufgabennachrichtenbereich*
++
+Zeigt spezifische Nachrichten zur ausgewählten Aufgabe an.  Die Nachrichten können einen Grund für den Fehler und Vorschläge zur Fehlerbehebung enthalten.  Nicht alle Aufgaben zeigen Aufgabenmeldungen an.
+
+

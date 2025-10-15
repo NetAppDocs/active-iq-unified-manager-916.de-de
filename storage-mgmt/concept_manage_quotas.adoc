@@ -1,0 +1,14 @@
+---
+permalink: storage-mgmt/concept_manage_quotas.html 
+sidebar: sidebar 
+keywords: manage, quotas 
+summary: Mithilfe von Benutzer- und Gruppenkontingenten können Sie den Speicherplatz oder die Anzahl der Dateien begrenzen, die ein Benutzer oder eine Benutzergruppe verwenden kann.  Sie können Kontingentinformationen zu Benutzern und Benutzergruppen anzeigen, beispielsweise die Festplatten- und Dateinutzung und die verschiedenen für Festplatten festgelegten Beschränkungen. 
+---
+= Verwalten von Kontingenten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe von Benutzer- und Gruppenkontingenten können Sie den Speicherplatz oder die Anzahl der Dateien begrenzen, die ein Benutzer oder eine Benutzergruppe verwenden kann.  Sie können Kontingentinformationen zu Benutzern und Benutzergruppen anzeigen, beispielsweise die Festplatten- und Dateinutzung und die verschiedenen für Festplatten festgelegten Beschränkungen.

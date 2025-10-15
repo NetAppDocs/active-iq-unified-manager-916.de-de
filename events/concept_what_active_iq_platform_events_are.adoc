@@ -1,0 +1,24 @@
+---
+permalink: events/concept_what_active_iq_platform_events_are.html 
+sidebar: sidebar 
+keywords: active iq, platform, events 
+summary: Unified Manager kann Ereignisse anzeigen, die von der Active IQ Plattform erkannt wurden.  Diese Ereignisse werden erstellt, indem ein Regelsatz für AutoSupport -Nachrichten ausgeführt wird, die von allen von Unified Manager überwachten Speichersystemen generiert werden. 
+---
+= Was sind Active IQ Plattformereignisse?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager kann Ereignisse anzeigen, die von der Active IQ Plattform erkannt wurden.  Diese Ereignisse werden erstellt, indem ein Regelsatz für AutoSupport -Nachrichten ausgeführt wird, die von allen von Unified Manager überwachten Speichersystemen generiert werden.
+
+Weitere Informationen finden Sie unter link:../events/concept_how_active_iq_platform_events_are_generated.html["So werden Active IQ Plattformereignisse generiert"].
+
+Unified Manager sucht automatisch nach einer neuen Regeldatei und lädt nur dann eine neue Datei herunter, wenn neuere Regeln vorhanden sind.  An Standorten ohne externen Netzwerkzugriff müssen Sie die Regeln manuell über *Speicherverwaltung* > *Ereigniseinrichtung* > *Regeln hochladen* hochladen.
+
+Diese Active IQ -Ereignisse überschneiden sich nicht mit vorhandenen Unified Manager-Ereignissen und identifizieren Vorfälle oder Risiken in Bezug auf Systemkonfiguration, Verkabelung, bewährte Methoden und Verfügbarkeitsprobleme.
+
+Weitere Informationen zum Aktivieren von Plattformereignissen finden Sie unterlink:../config/concept_active_iq_platform_events.html["Aktivieren von Active IQ Portalereignissen"] .  Weitere Informationen zum Hochladen von Regeldateien finden Sie unterlink:../events/task_upload_new_active_iq_rules_file.html["Hochladen einer neuen Active IQ Regeldatei"] .
+
+NetApp Active IQ ist ein Cloud-basierter Service, der prädiktive Analysen und proaktiven Support zur Optimierung des Speichersystembetriebs in der NetApp Hybrid Cloud bietet.  Sehen https://www.netapp.com/us/products/data-infrastructure-management/active-iq.aspx["NetApp Active IQ"] für weitere Informationen.

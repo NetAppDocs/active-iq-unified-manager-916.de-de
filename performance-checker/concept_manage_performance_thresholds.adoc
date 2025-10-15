@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_manage_performance_thresholds.html 
+sidebar: sidebar 
+keywords: manage, performance, thresholds 
+summary: Mithilfe von Richtlinien für Leistungsschwellenwerte können Sie den Zeitpunkt bestimmen, an dem Unified Manager ein Ereignis generiert, um Systemadministratoren über Probleme zu informieren, die die Workload-Leistung beeinträchtigen könnten.  Diese Schwellenwertrichtlinien werden als benutzerdefinierte Leistungsschwellenwerte bezeichnet. 
+---
+= Leistungsschwellenwerte verwalten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe von Richtlinien für Leistungsschwellenwerte können Sie den Zeitpunkt bestimmen, an dem Unified Manager ein Ereignis generiert, um Systemadministratoren über Probleme zu informieren, die die Workload-Leistung beeinträchtigen könnten.  Diese Schwellenwertrichtlinien werden als _benutzerdefinierte_ Leistungsschwellenwerte bezeichnet.
+
+Diese Version unterstützt benutzerdefinierte, systemdefinierte und dynamische Leistungsschwellenwerte.  Mit dynamischen und systemdefinierten Leistungsschwellenwerten analysiert Unified Manager die Arbeitslastaktivität, um den entsprechenden Schwellenwert zu bestimmen.  Mit benutzerdefinierten Schwellenwerten können Sie die oberen Leistungsgrenzen für viele Leistungsindikatoren und viele Speicherobjekte definieren.
+
+[NOTE]
+====
+Systemdefinierte Leistungsschwellenwerte und dynamische Leistungsschwellenwerte werden von Unified Manager festgelegt und sind nicht konfigurierbar.  Wenn Sie unnötige Ereignisse von systemdefinierten Leistungsschwellenwertrichtlinien erhalten, können Sie einzelne Richtlinien auf der Seite „Ereigniseinrichtung“ deaktivieren.
+
+====

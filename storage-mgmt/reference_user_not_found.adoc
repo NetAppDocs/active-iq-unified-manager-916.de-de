@@ -1,0 +1,25 @@
+---
+permalink: storage-mgmt/reference_user_not_found.html 
+sidebar: sidebar 
+keywords: user, not, found 
+summary: 'Fehlerbehebung: Benutzer nicht gefunden' 
+---
+= Benutzer nicht gefunden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie einen authentifizierungsbezogenen Vorgang ausführen, z. B. Remotebenutzer oder -gruppen hinzufügen, bearbeiten, löschen oder testen, wird die folgende Fehlermeldung angezeigt: `User not found.`
+
+*Ursache*
+
+Dieses Problem kann auftreten, wenn der Benutzer auf dem AD-Server oder LDAP-Server vorhanden ist und Sie den Basis-Distinguished Name auf einen falschen Wert festgelegt haben.
+
+*Korrekturmaßnahme*
+
+. Klicken Sie im linken Navigationsbereich auf *Allgemein* > *Remote-Authentifizierung*.
+. Geben Sie die entsprechenden Informationen für den Basis-Distinguished Name ein.
+. Klicken Sie auf *Speichern*.
+

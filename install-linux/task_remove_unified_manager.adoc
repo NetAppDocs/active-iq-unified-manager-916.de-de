@@ -1,0 +1,38 @@
+---
+permalink: install-linux/task_remove_unified_manager.html 
+sidebar: sidebar 
+keywords: remove, unified manager 
+summary: Sie können Unified Manager mit einem einzigen Befehl vom Red Hat Enterprise Linux-Host stoppen und deinstallieren. 
+---
+= Unified Manager entfernen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Unified Manager mit einem einzigen Befehl vom Red Hat Enterprise Linux-Host stoppen und deinstallieren.
+
+.Bevor Sie beginnen
+* Sie müssen über Root-Benutzerzugriff auf den Server verfügen, von dem Sie Unified Manager entfernen möchten.
+* Security-Enhanced Linux (SELinux) muss auf dem Linux-System deaktiviert sein.  Ändern Sie den SELinux-Laufzeitmodus auf „Permissive“, indem Sie `setenforce 0` Befehl.
+* Alle Cluster (Datenquellen) müssen vom Unified Manager-Server entfernt werden, bevor die Software entfernt wird.
+* Sie sollten die Firewall-Regeln, die zum Zulassen oder Blockieren des MySQL-Ports 3306 erstellt wurden, manuell löschen.  Die Firewall-Regeln werden nicht automatisch gelöscht.
+
+
+.Schritte
+. Melden Sie sich als Root-Benutzer bei dem Server an, von dem Sie Unified Manager entfernen möchten.
+. Stoppen und entfernen Sie Unified Manager vom Server:
++
+`rpm -e netapp-um`
+
++
+Dieser Schritt entfernt alle zugehörigen NetApp RPM-Pakete.  Die erforderlichen Softwaremodule wie Java, MySQL und p7zip werden nicht entfernt.
+
+. *Optional:* Entfernen Sie gegebenenfalls die unterstützenden Softwaremodule wie Java, MySQL und p7zip:
++
+`rpm -e p7zip mysql-community-client mysql-community-server mysql-community-common mysql-community-libs java-x.y`
+
+
+
+Nach Abschluss dieses Vorgangs wird die Software entfernt.  Alle Daten aus der `/opt/netapp/data` Das Verzeichnis wird verschoben in das `/opt/netapp/data/BACKUP` Ordner nach der Deinstallation.  Durch die Deinstallation von Unified Manager werden auch die Java- und MySQL-Pakete entfernt, es sei denn, die Pakete werden von einer anderen Anwendung auf dem System benötigt und verwendet.  MySQL-Daten werden jedoch nicht gelöscht.

@@ -1,0 +1,46 @@
+---
+permalink: health-checker/task_determine_if_volume_is_offline_and_its_svm_is_stopped.html 
+sidebar: sidebar 
+keywords: determine, volume, offline, svm, node 
+summary: 'Sie können die Web-Benutzeroberfläche von Unified Manager verwenden, um die Möglichkeit zu bestätigen oder auszuschließen, dass ein Volume offline ist, weil die zugehörige Host-Storage-Virtual-Machine (SVM) angehalten wurde, weil der Knoten, auf dem sich das Stammvolume dieser SVM befindet, ausgefallen ist.' 
+---
+= Ermitteln Sie, ob ein Volume offline ist und sein SVM gestoppt wurde, weil ein Knoten ausgefallen ist
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Web-Benutzeroberfläche von Unified Manager verwenden, um die Möglichkeit zu bestätigen oder auszuschließen, dass ein Volume offline ist, weil die zugehörige Host-Storage-Virtual-Machine (SVM) angehalten wurde, weil der Knoten, auf dem sich das Stammvolume dieser SVM befindet, ausgefallen ist.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Um festzustellen, ob der Offlinezustand des Volumes darauf zurückzuführen ist, dass das Host-SVM angehalten wurde, weil der Knoten, auf dem sich das Stammvolume dieses SVM befindet, ausgefallen ist, führen Sie die folgenden Aktionen aus:
+
+.Schritte
+. Suchen Sie den Hypertext-Link, der unter dem SVM im Bereich *Verwandte Geräte* der Detailseite *Volume/Integrität* des Offline-Volumes angezeigt wird, und klicken Sie darauf.
++
+Auf der Seite „Storage VM / Health Details“ wird der Status „Läuft“ oder „Gestoppt“ der Host-SVM angezeigt.  Wenn der SVM-Status „Läuft“ lautet, wird der Offline-Zustand des Volumes nicht dadurch verursacht, dass der Knoten, auf dem sich das Stammvolume dieses SVM befindet, ausgefallen ist.
+
+. Wenn der SVM-Status „Beendet“ lautet, klicken Sie auf „SVMs anzeigen“, um die Ursache für das Beenden des Hosting-SVMs genauer zu ermitteln.
+. Klicken Sie in der Spaltenüberschrift der Ansicht „SVM“ *Health: All Storage VMs* auf das Filtersymbolimage:../media/filtericon_um60.png["Symbol für Spaltenfilter"] und geben Sie dann den Namen der gestoppten SVM ein.
++
+Die Informationen zu diesem SVM werden in einer Tabelle angezeigt.
+
+. Klicken Sie in der Ansicht *Health: All Storage VMs* aufimage:../media/gridviewicon.gif["Symbol für die Rasteransicht"] und wählen Sie dann die Option *Root Volume*.
++
+Die Spalte „Root-Volume“ wird zum SVM-Inventar hinzugefügt und zeigt den Namen des Root-Volumes der gestoppten SVM an.
+
+. Klicken Sie in der Spalte „Root-Volume“ auf den Namen des Root-Volumes, um die Detailseite *Storage VM / Health* für dieses Volume anzuzeigen.
++
+Wenn der Status des SVM-Stammvolumes (Online) lautet, liegt der Offline-Zustand des ursprünglichen Volumes nicht daran, dass der Knoten, auf dem sich das Stammvolume dieses SVM befindet, ausgefallen ist.
+
+. Wenn der Status des SVM-Stammvolumes (Offline) lautet, suchen Sie den Hypertext-Link, der unter „Aggregat“ im Bereich „Verwandte Geräte“ der Seite „Volume-/Integritätsdetails“ des SVM-Stammvolumes angezeigt wird, und klicken Sie darauf.
+. Suchen Sie den Hypertext-Link, der unter „Knoten“ im Bereich „Verwandte Geräte“ der Detailseite „Aggregat/Integrität“ des Aggregats angezeigt wird, und klicken Sie darauf.
++
+Auf der Registerkarte „Knoten“ auf der Seite „Cluster-/Integritätsdetails“ wird der Status des HA-Knotenpaars angezeigt, zu dem der Hosting-Knoten des SVM-Stammvolumes gehört.  Der Zustand des Knotens wird im Display angezeigt.
+
+
+
+Nachdem Sie bestätigt haben, dass der Offlinezustand des Volumes durch den Offlinezustand des Host-SVM dieses Volumes verursacht wird, der wiederum durch den Ausfall des Knotens verursacht wird, der das Stammvolume dieses SVM hostet, wenden Sie sich an den entsprechenden Administrator oder Operator, um den ausgefallenen Knoten manuell neu zu starten.

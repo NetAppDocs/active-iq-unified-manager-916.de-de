@@ -1,0 +1,46 @@
+---
+permalink: performance-checker/concept_what_data_continuity_collection_cycle_is.html 
+sidebar: sidebar 
+keywords: data, continuity, collection, cycle 
+summary: Ein Datenkontinuitätserfassungszyklus ruft Leistungsdaten außerhalb des Echtzeit-Clusterleistungserfassungszyklus ab, der standardmäßig alle fünf Minuten ausgeführt wird.  Durch die Datenkontinuitätserfassung kann Unified Manager Lücken in statistischen Daten schließen, die auftreten, wenn keine Echtzeitdaten erfasst werden konnten. 
+---
+= Was ein Datenkontinuitätserfassungszyklus ist
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein Datenkontinuitätserfassungszyklus ruft Leistungsdaten außerhalb des Echtzeit-Clusterleistungserfassungszyklus ab, der standardmäßig alle fünf Minuten ausgeführt wird.  Durch die Datenkontinuitätserfassung kann Unified Manager Lücken in statistischen Daten schließen, die auftreten, wenn keine Echtzeitdaten erfasst werden konnten.
+
+Unified Manager führt Abfragen zur Datenkontinuitätserfassung historischer Leistungsdaten durch, wenn die folgenden Ereignisse eintreten:
+
+* Zunächst wird ein Cluster zu Unified Manager hinzugefügt.
++
+Unified Manager sammelt historische Leistungsdaten der letzten 15 Tage.  Auf diese Weise können Sie einige Stunden nach dem Hinzufügen eines Clusters die historischen Leistungsinformationen der letzten zwei Wochen anzeigen.
+
++
+Darüber hinaus werden systemdefinierte Schwellenwertereignisse für den vorherigen Zeitraum gemeldet, sofern solche vorhanden sind.
+
+* Der aktuelle Zyklus zur Erfassung von Leistungsdaten wird nicht rechtzeitig abgeschlossen.
++
+Wenn die Echtzeit-Leistungsabfrage über den fünfminütigen Erfassungszeitraum hinausgeht, wird ein Datenkontinuitätserfassungszyklus eingeleitet, um die fehlenden Informationen zu erfassen.  Ohne die Datenkontinuitätserfassung wird der nächste Erfassungszeitraum übersprungen.
+
+* Unified Manager war für einen bestimmten Zeitraum nicht erreichbar und ist dann wieder online, beispielsweise in den folgenden Situationen:
++
+** Es wurde neu gestartet.
+** Es wurde während eines Software-Upgrades oder beim Erstellen einer Sicherungsdatei heruntergefahren.
+** Ein Netzwerkausfall wird behoben.
+
+
+* Auf einen Cluster kann für einen bestimmten Zeitraum nicht zugegriffen werden, er wird dann aber wieder online geschaltet, beispielsweise in den folgenden Situationen:
++
+** Ein Netzwerkausfall wird behoben.
+** Eine langsame Weitverkehrsnetzverbindung verzögerte die normale Erfassung von Leistungsdaten.
+
+
+
+
+Ein Datenkontinuitätserfassungszyklus kann maximal 24 Stunden historische Daten erfassen.  Wenn Unified Manager länger als 24 Stunden ausfällt, erscheint auf den UI-Seiten eine Lücke in den Leistungsdaten.
+
+Ein Datenkontinuitätserfassungszyklus und ein Echtzeitdatenerfassungszyklus können nicht gleichzeitig ausgeführt werden.  Der Datenkontinuitätserfassungszyklus muss abgeschlossen sein, bevor mit der Erfassung der Echtzeitleistungsdaten begonnen wird.  Wenn für die Datenkontinuitätserfassung mehr als eine Stunde historische Daten erfasst werden müssen, wird oben im Benachrichtigungsbereich eine Bannernachricht für diesen Cluster angezeigt.

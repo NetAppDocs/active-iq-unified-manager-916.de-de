@@ -1,0 +1,185 @@
+---
+permalink: events/reference_nvme_namespace_events.html 
+sidebar: sidebar 
+keywords: nvme, namespace, events, impact area, availability, performance 
+summary: NVMe-Namespace-Ereignisse liefern Ihnen Informationen zum Status Ihrer Namespaces, sodass Sie diese auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad. 
+---
+= NVMe-Namespace-Ereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NVMe-Namespace-Ereignisse liefern Ihnen Informationen zum Status Ihrer Namespaces, sodass Sie diese auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad.
+
+Ein Sternchen (*) kennzeichnet EMS-Ereignisse, die in Unified Manager-Ereignisse konvertiert wurden.
+
+
+
+== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+NVMeNS Offline *(nvmeNamespaceStatusOffline)
+ a| 
+Ereignis
+ a| 
+Namensraum
+ a| 
+Information
+
+
+
+ a| 
+NVMeNS Online *(nvmeNamespaceStatusOnline)
+ a| 
+Ereignis
+ a| 
+Namensraum
+ a| 
+Information
+
+
+
+ a| 
+Nicht genügend Speicherplatz für NVMeNS *(nvmeNamespaceSpaceOutOfSpace)
+ a| 
+Risiko
+ a| 
+Namensraum
+ a| 
+Warnung
+
+
+
+ a| 
+NVMeNS zerstören *(nvmeNamespaceDestroy)
+ a| 
+Ereignis
+ a| 
+Namensraum
+ a| 
+Information
+
+|===
+
+
+== Wirkungsbereich: Leistung
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+Kritischer IOPS-Schwellenwert für NVMe-Namespace überschritten (ocumNvmeNamespaceIopsIncident)
+ a| 
+Vorfall
+ a| 
+Namensraum
+ a| 
+Kritisch
+
+
+
+ a| 
+NVMe-Namespace-IOPS-Warnschwelle überschritten (ocumNvmeNamespaceIopsWarning)
+ a| 
+Risiko
+ a| 
+Namensraum
+ a| 
+Warnung
+
+
+
+ a| 
+Kritischer Schwellenwert für NVMe-Namespace MB/s überschritten (ocumNvmeNamespaceMbpsIncident)
+ a| 
+Vorfall
+ a| 
+Namensraum
+ a| 
+Kritisch
+
+
+
+ a| 
+NVMe-Namespace MB/s-Warnschwelle überschritten (ocumNvmeNamespaceMbpsWarning)
+ a| 
+Risiko
+ a| 
+Namensraum
+ a| 
+Warnung
+
+
+
+ a| 
+NVMe-Namespace-Latenz ms/op – kritischer Schwellenwert überschritten (ocumNvmeNamespaceLatencyIncident)
+ a| 
+Vorfall
+ a| 
+Namensraum
+ a| 
+Kritisch
+
+
+
+ a| 
+NVMe-Namespace-Latenz-ms/op-Warnschwelle überschritten (ocumNvmeNamespaceLatencyWarning)
+ a| 
+Risiko
+ a| 
+Namensraum
+ a| 
+Warnung
+
+
+
+ a| 
+NVMe-Namespace-Latenz und kritischer IOPS-Schwellenwert überschritten (ocumNvmeNamespaceLatencyIopsIncident)
+ a| 
+Vorfall
+ a| 
+Namensraum
+ a| 
+Kritisch
+
+
+
+ a| 
+NVMe-Namespace-Latenz- und IOPS-Warnschwelle überschritten (ocumNvmeNamespaceLatencyIopsWarning)
+ a| 
+Risiko
+ a| 
+Namensraum
+ a| 
+Warnung
+
+
+
+ a| 
+NVMe-Namespace-Latenz und kritischer MB/s-Schwellenwert überschritten (ocumNvmeNamespaceLatencyMbpsIncident)
+ a| 
+Vorfall
+ a| 
+Namensraum
+ a| 
+Kritisch
+
+
+
+ a| 
+NVMe-Namespace-Latenz und MB/s-Warnschwelle überschritten (ocumNvmeNamespaceLatencyMbpsWarning)
+ a| 
+Risiko
+ a| 
+Namensraum
+ a| 
+Warnung
+
+|===

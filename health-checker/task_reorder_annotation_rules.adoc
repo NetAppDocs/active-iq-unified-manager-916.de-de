@@ -1,0 +1,29 @@
+---
+permalink: health-checker/task_reorder_annotation_rules.html 
+sidebar: sidebar 
+keywords: reorder, annotation rules 
+summary: Sie können die Reihenfolge ändern, in der Unified Manager Anmerkungsregeln auf Speicherobjekte anwendet.  Annotationsregeln werden auf Speicherobjekte sequenziell basierend auf ihrem Rang angewendet.  Wenn Sie eine Anmerkungsregel konfigurieren, ist der Rang am niedrigsten.  Sie können den Rang der Anmerkungsregel jedoch je nach Ihren Anforderungen ändern. 
+---
+= Neuordnen von Anmerkungsregeln
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Reihenfolge ändern, in der Unified Manager Anmerkungsregeln auf Speicherobjekte anwendet.  Annotationsregeln werden auf Speicherobjekte sequenziell basierend auf ihrem Rang angewendet.  Wenn Sie eine Anmerkungsregel konfigurieren, ist der Rang am niedrigsten.  Sie können den Rang der Anmerkungsregel jedoch je nach Ihren Anforderungen ändern.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Sie können entweder eine einzelne Zeile oder mehrere Zeilen auswählen und viele Drag-and-Drop-Vorgänge durchführen, um den Rang der Anmerkungsregeln zu ändern.  Sie müssen die Änderungen jedoch speichern, damit die Neupriorisierung auf der Registerkarte „Anmerkungsregeln“ angezeigt wird.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Anmerkungen*.
+. Klicken Sie auf der Registerkarte *Anmerkungsregeln* auf *Neu anordnen*.
+. Im Dialogfeld *Anmerkungsregel neu anordnen* können Sie per Drag & Drop einzelne oder mehrere Zeilen verschieben, um die Reihenfolge der Anmerkungsregeln neu anzuordnen.
+. Klicken Sie auf *Speichern*.
++
+Damit die Nachbestellung angezeigt wird, müssen Sie die Änderungen speichern.
+
+

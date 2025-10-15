@@ -1,0 +1,26 @@
+---
+permalink: config/task_restart_unified_manager_virtual_machine.html 
+sidebar: sidebar 
+keywords: restart, unified manager, virtual, machine 
+summary: Sie können die virtuelle Maschine über die Wartungskonsole von Unified Manager neu starten.  Nach der Generierung eines neuen Sicherheitszertifikats oder bei einem Problem mit der virtuellen Maschine ist ein Neustart erforderlich. 
+---
+= Starten Sie die virtuelle Unified Manager-Maschine neu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die virtuelle Maschine über die Wartungskonsole von Unified Manager neu starten.  Nach der Generierung eines neuen Sicherheitszertifikats oder bei einem Problem mit der virtuellen Maschine ist ein Neustart erforderlich.
+
+.Bevor Sie beginnen
+Die virtuelle Appliance ist eingeschaltet.
+
+Sie sind als Wartungsbenutzer bei der Wartungskonsole angemeldet.
+
+Sie können die virtuelle Maschine auch von vSphere aus neu starten, indem Sie die Option *Gast neu starten* verwenden.  Weitere Informationen finden Sie in der VMware-Dokumentation.
+
+.Schritte
+. Greifen Sie auf die Wartungskonsole zu.
+. Wählen Sie *Systemkonfiguration* > *Virtuelle Maschine neu starten*.
+

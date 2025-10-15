@@ -1,0 +1,87 @@
+---
+permalink: performance-checker/task_add_alerts.html 
+sidebar: sidebar 
+keywords: add, alerts 
+summary: Sie können Warnmeldungen konfigurieren, die Sie benachrichtigen, wenn ein bestimmtes Ereignis generiert wird.  Sie können Warnungen für eine einzelne Ressource, für eine Gruppe von Ressourcen oder für Ereignisse eines bestimmten Schweregrads konfigurieren.  Sie können die Häufigkeit angeben, mit der Sie benachrichtigt werden möchten, und der Warnung ein Skript zuordnen. 
+---
+= Benachrichtigungen hinzufügen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Warnmeldungen konfigurieren, die Sie benachrichtigen, wenn ein bestimmtes Ereignis generiert wird.  Sie können Warnungen für eine einzelne Ressource, für eine Gruppe von Ressourcen oder für Ereignisse eines bestimmten Schweregrads konfigurieren.  Sie können die Häufigkeit angeben, mit der Sie benachrichtigt werden möchten, und der Warnung ein Skript zuordnen.
+
+.Bevor Sie beginnen
+* Sie müssen Benachrichtigungseinstellungen wie die E-Mail-Adresse des Benutzers, den SMTP-Server und den SNMP-Trap-Host konfiguriert haben, damit der Active IQ Unified Manager Server diese Einstellungen verwenden kann, um Benachrichtigungen an Benutzer zu senden, wenn ein Ereignis generiert wird.
+* Sie müssen die Ressourcen und Ereignisse kennen, für die Sie die Warnung auslösen möchten, sowie die Benutzernamen oder E-Mail-Adressen der Benutzer, die Sie benachrichtigen möchten.
+* Wenn Sie möchten, dass basierend auf dem Ereignis ein Skript ausgeführt wird, müssen Sie das Skript über die Seite „Skripte“ zu Unified Manager hinzugefügt haben.
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Sie können nach dem Empfang eines Ereignisses direkt auf der Seite „Ereignisdetails“ eine Warnung erstellen. Außerdem können Sie eine Warnung auch auf der Seite „Warnungseinrichtung“ erstellen, wie hier beschrieben.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Alarm-Setup*.
+. Klicken Sie auf der Seite *Alarm-Setup* auf *Hinzufügen*.
+. Klicken Sie im Dialogfeld *Warnung hinzufügen* auf *Name* und geben Sie einen Namen und eine Beschreibung für die Warnung ein.
+. Klicken Sie auf *Ressourcen* und wählen Sie die Ressourcen aus, die in die Warnung einbezogen oder davon ausgeschlossen werden sollen.
++
+Sie können einen Filter festlegen, indem Sie im Feld *Name enthält* eine Textzeichenfolge angeben, um eine Gruppe von Ressourcen auszuwählen.  Basierend auf der von Ihnen angegebenen Textzeichenfolge zeigt die Liste der verfügbaren Ressourcen nur die Ressourcen an, die der Filterregel entsprechen.  Bei der von Ihnen angegebenen Textzeichenfolge wird zwischen Groß- und Kleinschreibung unterschieden.
+
++
+Wenn eine Ressource sowohl den von Ihnen angegebenen Einschluss- als auch Ausschlussregeln entspricht, hat die Ausschlussregel Vorrang vor der Einschlussregel und für Ereignisse im Zusammenhang mit der ausgeschlossenen Ressource wird keine Warnung generiert.
+
+. Klicken Sie auf *Ereignisse* und wählen Sie basierend auf dem Ereignisnamen oder dem Schweregradtyp die Ereignisse aus, für die Sie eine Warnung auslösen möchten.
++
+[TIP]
+====
+Um mehr als ein Ereignis auszuwählen, drücken Sie die Strg-Taste, während Sie Ihre Auswahl treffen.
+
+====
+. Klicken Sie auf *Aktionen* und wählen Sie die Benutzer aus, die Sie benachrichtigen möchten, wählen Sie die Benachrichtigungshäufigkeit, wählen Sie, ob ein SNMP-Trap an den Trap-Empfänger gesendet werden soll, und weisen Sie ein Skript zu, das ausgeführt werden soll, wenn eine Warnung generiert wird.
++
+[NOTE]
+====
+Wenn Sie die für den Benutzer angegebene E-Mail-Adresse ändern und die Warnung zur Bearbeitung erneut öffnen, wird das Feld „Name“ leer angezeigt, da die geänderte E-Mail-Adresse nicht mehr dem zuvor ausgewählten Benutzer zugeordnet ist.  Wenn Sie die E-Mail-Adresse des ausgewählten Benutzers auf der Seite „Benutzer“ geändert haben, wird die geänderte E-Mail-Adresse für den ausgewählten Benutzer nicht aktualisiert.
+
+====
++
+Sie können Benutzer auch über SNMP-Traps benachrichtigen.
+
+. Klicken Sie auf *Speichern*.
+
+
+
+
+== Beispiel für das Hinzufügen einer Warnung
+
+Dieses Beispiel zeigt, wie Sie eine Warnung erstellen, die die folgenden Anforderungen erfüllt:
+
+* Warnungsname: HealthTest
+* Ressourcen: schließt alle Volumes ein, deren Name „`abc`“ enthält, und schließt alle Volumes aus, deren Name „`xyz`“ enthält.
+* Ereignisse: umfasst alle kritischen Gesundheitsereignisse
+* Aktionen: Enthält "+sample@domain.com+", ein "`Test`"-Skript und der Benutzer muss alle 15 Minuten benachrichtigt werden
+
+
+Führen Sie im Dialogfeld „Warnung hinzufügen“ die folgenden Schritte aus:
+
+. Klicken Sie auf *Name* und geben Sie ein `*HealthTest*` im Feld *Alarmname*.
+. Klicken Sie auf *Ressourcen* und wählen Sie auf der Registerkarte „Einschließen“ aus der Dropdownliste *Volumes* aus.
++
+.. Eingeben `*abc*` im Feld *Name enthält*, um die Volumes anzuzeigen, deren Name „`abc`“ enthält.
+.. Wählen Sie << *Alle Volumes, deren Name „abc“ enthält*>> aus dem Bereich „Verfügbare Ressourcen“ aus und verschieben Sie es in den Bereich „Ausgewählte Ressourcen“.
+.. Klicken Sie auf *Ausschließen* und geben Sie ein `*xyz*` in das Feld *Name enthält* ein und klicken Sie dann auf *Hinzufügen*.
+
+
+. Klicken Sie auf *Ereignisse* und wählen Sie im Feld „Ereignisschweregrad“ die Option *Kritisch* aus.
+. Wählen Sie im Bereich „Übereinstimmende Ereignisse“ die Option „Alle kritischen Ereignisse“ aus und verschieben Sie sie in den Bereich „Ausgewählte Ereignisse“.
+. Klicken Sie auf *Aktionen* und geben Sie ein `*sample@domain.com*` im Feld Diese Benutzer benachrichtigen.
+. Wählen Sie *Alle 15 Minuten erinnern*, um den Benutzer alle 15 Minuten zu benachrichtigen.
++
+Sie können einen Alarm so konfigurieren, dass den Empfängern für einen bestimmten Zeitraum wiederholt Benachrichtigungen gesendet werden.  Sie sollten den Zeitpunkt ermitteln, ab dem die Ereignisbenachrichtigung für den Alarm aktiv ist.
+
+. Wählen Sie im Menü „Auszuführendes Skript auswählen“ die Option „Skript *Test*“ aus.
+. Klicken Sie auf *Speichern*.
+

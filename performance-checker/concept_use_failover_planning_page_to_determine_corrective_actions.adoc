@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_use_failover_planning_page_to_determine_corrective_actions.html 
+sidebar: sidebar 
+keywords: node, failover, planning page, determine, corrective, actions 
+summary: Basierend auf den Informationen, die auf der Seite „Leistungs-/Knoten-Failover-Planung“ angezeigt werden, können Sie Maßnahmen ergreifen, um sicherzustellen, dass ein Failover nicht dazu führt, dass die Leistung eines HA-Paares unter ein akzeptables Niveau fällt. 
+---
+= Verwenden Sie die Seite „Knoten-Failover-Planung“, um Korrekturmaßnahmen festzulegen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Basierend auf den Informationen, die auf der Seite „Leistungs-/Knoten-Failover-Planung“ angezeigt werden, können Sie Maßnahmen ergreifen, um sicherzustellen, dass ein Failover nicht dazu führt, dass die Leistung eines HA-Paares unter ein akzeptables Niveau fällt.
+
+Um beispielsweise die geschätzten Auswirkungen eines Failovers auf die Leistung zu reduzieren, können Sie einige Volumes oder LUNs von einem Knoten im HA-Paar auf andere Knoten im Cluster verschieben.  Dadurch wird sichergestellt, dass der primäre Knoten nach einem Failover weiterhin eine akzeptable Leistung liefern kann.

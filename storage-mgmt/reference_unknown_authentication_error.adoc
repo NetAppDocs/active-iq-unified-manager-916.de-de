@@ -1,0 +1,30 @@
+---
+permalink: storage-mgmt/reference_unknown_authentication_error.html 
+sidebar: sidebar 
+keywords: unknown, authentication, error 
+summary: 'Fehlerbehebung: Unbekannter Authentifizierungsfehler' 
+---
+= Unbekannter Authentifizierungsfehler
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie einen authentifizierungsbezogenen Vorgang ausführen, z. B. Remotebenutzer oder -gruppen hinzufügen, bearbeiten, löschen oder testen, wird möglicherweise die folgende Fehlermeldung angezeigt: `Unknown authentication error.`
+
+*Ursache*
+
+Dieses Problem kann auftreten, wenn Sie für die folgenden Optionen einen falschen Wert festgelegt haben:
+
+* Administratorname des Active Directory-Authentifizierungsdienstes
+* Bind Distinguished Name des OpenLDAP-Authentifizierungsdienstes
+
+
+*Korrekturmaßnahme*
+
+. Klicken Sie im linken Navigationsbereich auf *Allgemein* > *Remote-Authentifizierung*.
+. Geben Sie basierend auf dem von Ihnen ausgewählten Authentifizierungsdienst die entsprechenden Informationen für den Administratornamen oder den Bind Distinguished Name ein.
+. Klicken Sie auf *Authentifizierung testen*, um die Authentifizierung mit den von Ihnen angegebenen Details zu testen.
+. Klicken Sie auf *Speichern*.
+

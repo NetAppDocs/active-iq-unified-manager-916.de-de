@@ -1,0 +1,19 @@
+---
+permalink: health-checker/task_view_annotation_list_and_details.html 
+sidebar: sidebar 
+keywords: view, annotation list, details 
+summary: 'Sie können die Liste der Anmerkungen anzeigen, die dynamisch mit Clustern, Volumes und virtuellen Speichermaschinen (SVMs) verknüpft sind.  Sie können auch Details wie die Beschreibung, den Ersteller, das Erstellungsdatum, Werte, Regeln und die mit der Anmerkung verknüpften Objekte anzeigen.' 
+---
+= Anzeigen der Anmerkungsliste und Details
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Liste der Anmerkungen anzeigen, die dynamisch mit Clustern, Volumes und virtuellen Speichermaschinen (SVMs) verknüpft sind.  Sie können auch Details wie die Beschreibung, den Ersteller, das Erstellungsdatum, Werte, Regeln und die mit der Anmerkung verknüpften Objekte anzeigen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Anmerkungen*.
+. Klicken Sie auf der Registerkarte *Anmerkungen* auf den Namen der Anmerkung, um die zugehörigen Details anzuzeigen.
+

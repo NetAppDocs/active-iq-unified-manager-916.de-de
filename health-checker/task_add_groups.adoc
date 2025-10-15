@@ -1,0 +1,26 @@
+---
+permalink: health-checker/task_add_groups.html 
+sidebar: sidebar 
+keywords: add, groups 
+summary: 'Sie können Gruppen erstellen, um Cluster, Volumes und virtuelle Speichermaschinen (SVMs) zur einfacheren Verwaltung zu kombinieren.' 
+---
+= Gruppen hinzufügen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Gruppen erstellen, um Cluster, Volumes und virtuelle Speichermaschinen (SVMs) zur einfacheren Verwaltung zu kombinieren.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Sie können Gruppenregeln definieren, um Mitglieder zur Gruppe hinzuzufügen oder daraus zu entfernen und um Gruppenaktionen für die Gruppe zu ändern.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Gruppen*.
+. Klicken Sie auf der Registerkarte *Gruppen* auf *Hinzufügen*.
+. Geben Sie im Dialogfeld *Gruppe hinzufügen* einen Namen und eine Beschreibung für die Gruppe ein.
+. Klicken Sie auf *Hinzufügen*.
+

@@ -1,0 +1,111 @@
+---
+permalink: api-automation/reference_authentication_errors.html 
+sidebar: sidebar 
+keywords: http, status, code, active iq, unified manager 
+summary: Beim Ausführen der APIs oder bei der Fehlerbehebung sollten Sie sich der verschiedenen HTTP-Statuscodes und Fehlercodes bewusst sein, die von den Active IQ Unified Manager -APIs verwendet werden. 
+---
+= Im Active IQ Unified Manager verwendete HTTP-Statuscodes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Beim Ausführen der APIs oder bei der Fehlerbehebung sollten Sie sich der verschiedenen HTTP-Statuscodes und Fehlercodes bewusst sein, die von den Active IQ Unified Manager -APIs verwendet werden.
+
+In der folgenden Tabelle sind die Fehlercodes im Zusammenhang mit der Authentifizierung aufgeführt:
+
+[cols="3*"]
+|===
+| HTTP-Statuscode | Titel des Statuscodes | Beschreibung 
+
+
+ a| 
+200
+ a| 
+OK
+ a| 
+Wird bei erfolgreicher Ausführung synchroner API-Aufrufe zurückgegeben.
+
+
+
+ a| 
+201
+ a| 
+Erstellt
+ a| 
+Erstellung neuer Ressourcen durch synchrone Aufrufe, beispielsweise Konfiguration von Active Directory.
+
+
+
+ a| 
+202
+ a| 
+Akzeptiert
+ a| 
+Wird bei erfolgreicher Ausführung asynchroner Aufrufe für Bereitstellungsfunktionen wie dem Erstellen von LUNs und Dateifreigaben zurückgegeben.
+
+
+
+ a| 
+400
+ a| 
+Ungültige Anfrage
+ a| 
+Zeigt einen Fehler bei der Eingabevalidierung an.  Der Benutzer muss die Eingaben korrigieren, beispielsweise gültige Schlüssel in einem Anforderungstext.
+
+
+
+ a| 
+401
+ a| 
+Nicht autorisierte Anfrage
+ a| 
+Sie sind nicht berechtigt, die Ressource anzuzeigen/Nicht autorisiert.
+
+
+
+ a| 
+403
+ a| 
+Verbotene Anfrage
+ a| 
+Der Zugriff auf die Ressource, die Sie erreichen wollten, ist verboten.
+
+
+
+ a| 
+404
+ a| 
+Ressource nicht gefunden
+ a| 
+Die Ressource, die Sie erreichen wollten, wurde nicht gefunden.
+
+
+
+ a| 
+405
+ a| 
+Methode nicht zulässig
+ a| 
+Methode nicht zulässig.
+
+
+
+ a| 
+429
+ a| 
+Zu viele Anfragen
+ a| 
+Wird zurückgegeben, wenn der Benutzer innerhalb einer bestimmten Zeit zu viele Anfragen sendet.
+
+
+
+ a| 
+500
+ a| 
+Interner Serverfehler
+ a| 
+Interner Serverfehler.  Die Antwort vom Server konnte nicht abgerufen werden.  Dieser interne Serverfehler kann dauerhaft sein, muss es aber nicht.  Wenn Sie beispielsweise eine `GET` oder `GET ALL` Wenn Sie den Vorgang ausführen und diesen Fehler erhalten, wird empfohlen, diesen Vorgang mindestens fünfmal zu wiederholen.  Handelt es sich um einen permanenten Fehler, lautet der zurückgegebene Statuscode weiterhin 500.  Wenn der Vorgang erfolgreich ist, lautet der zurückgegebene Statuscode 200.
+
+|===

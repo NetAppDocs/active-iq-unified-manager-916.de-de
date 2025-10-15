@@ -1,0 +1,20 @@
+---
+permalink: events/concept_what_um_maintenance_window_is.html 
+sidebar: sidebar 
+keywords: unified manager, maintenance, window 
+summary: Sie definieren ein Unified Manager-Wartungsfenster, um Ereignisse und Warnungen für einen bestimmten Zeitraum zu unterdrücken, wenn Sie eine Clusterwartung geplant haben und keine Flut unerwünschter Benachrichtigungen erhalten möchten. 
+---
+= Was ein Unified Manager-Wartungsfenster ist
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie definieren ein Unified Manager-Wartungsfenster, um Ereignisse und Warnungen für einen bestimmten Zeitraum zu unterdrücken, wenn Sie eine Clusterwartung geplant haben und keine Flut unerwünschter Benachrichtigungen erhalten möchten.
+
+Wenn das Wartungsfenster beginnt, wird auf der Inventarseite der Ereignisverwaltung ein Ereignis „Wartungsfenster für Objekte gestartet“ veröffentlicht.  Dieses Ereignis wird automatisch verworfen, wenn das Wartungsfenster endet.
+
+Während eines Wartungsfensters werden die Ereignisse im Zusammenhang mit allen Objekten in diesem Cluster weiterhin generiert, sie werden jedoch auf keiner der UI-Seiten angezeigt und es werden keine Warnungen oder andere Arten von Benachrichtigungen für diese Ereignisse gesendet.  Sie können jedoch die Ereignisse anzeigen, die während eines Wartungsfensters für alle Speicherobjekte generiert wurden, indem Sie auf der Inventarseite der Ereignisverwaltung eine der Anzeigeoptionen auswählen.
+
+Sie können ein Wartungsfenster für die Zukunft planen, Sie können die Start- und Endzeiten für ein geplantes Wartungsfenster ändern und Sie können ein geplantes Wartungsfenster abbrechen.

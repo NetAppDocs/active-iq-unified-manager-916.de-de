@@ -1,0 +1,99 @@
+---
+permalink: health-checker/reference_setup_autosupport_page.html 
+sidebar: sidebar 
+keywords: autosupport, messages, support bundles, technical support 
+summary: Auf der AutoSupport -Seite können Sie vordefinierte und On-Demand AutoSupport Nachrichten an Ihr technisches Supportteam senden, um einen ordnungsgemäßen Betrieb Ihrer Umgebung sicherzustellen und Sie bei der Aufrechterhaltung der Integrität Ihrer Umgebung zu unterstützen.  AutoSupport ist standardmäßig aktiviert und sollte nicht deaktiviert werden, damit Sie die Vorteile von NetAppActive IQ nutzen können. 
+---
+= Senden Sie AutoSupport -Nachrichten und Support-Pakete an den technischen Support
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der AutoSupport -Seite können Sie vordefinierte und On-Demand AutoSupport Nachrichten an Ihr technisches Supportteam senden, um einen ordnungsgemäßen Betrieb Ihrer Umgebung sicherzustellen und Sie bei der Aufrechterhaltung der Integrität Ihrer Umgebung zu unterstützen.  AutoSupport ist standardmäßig aktiviert und sollte nicht deaktiviert werden, damit Sie die Vorteile von NetAppActive IQ nutzen können.
+
+Sie können bei Bedarf diagnostische Systeminformationen und detaillierte Daten zum Unified Manager-Server in einer Nachricht senden, den regelmäßigen Versand einer Nachricht planen oder sogar Supportpakete erstellen und an das technische Supportteam senden.
+
+[NOTE]
+====
+Ein Benutzer mit der Rolle eines Speicheradministrators kann bei Bedarf AutoSupport Nachrichten und Supportpakete generieren und an den technischen Support senden.  Allerdings kann nur ein Administrator oder Wartungsbenutzer den regelmäßigen AutoSupport aktivieren oder deaktivieren und die HTTP-Einstellungen wie im Abschnitt „Einrichten des HTTP-Proxyservers“ beschrieben konfigurieren.  In einer Umgebung, in der ein HTTP-Proxyserver verwendet werden muss, sollte die Konfiguration abgeschlossen sein, bevor ein Speicheradministrator On-Demand- AutoSupport Nachrichten und Support-Pakete an den technischen Support senden kann.
+
+====
+
+
+== Senden Sie AutoSupport -Nachrichten auf Abruf
+
+Sie können eine On-Demand-Nachricht generieren und an den technischen Support oder an einen angegebenen E-Mail-Empfänger oder an beide senden.
+
+.Schritte
+. Navigieren Sie zu *Allgemein* > * AutoSupport* und führen Sie eine oder beide der folgenden Aktionen aus:
+. Wenn Sie die AutoSupport -Nachricht an den technischen Support senden möchten, aktivieren Sie das Kontrollkästchen *An technischen Support senden*.
+. Wenn Sie die AutoSupport -Nachricht an einen bestimmten E-Mail-Empfänger senden möchten, aktivieren Sie das Kontrollkästchen *An E-Mail-Empfänger senden* und geben Sie die E-Mail-Adresse des Empfängers ein.
+. Klicken Sie auf *Speichern*.
+. Klicken Sie auf * AutoSupport generieren und senden*.
+
+
+
+
+== Aktivieren Sie den regelmäßigen AutoSupport
+
+Sie können dem technischen Support regelmäßig bestimmte, vordefinierte Nachrichten zur Problemdiagnose und -lösung senden.  Diese Funktion ist standardmäßig aktiviert.  Wenn deaktiviert, kann ein Administrator oder Wartungsbenutzer die Einstellungen aktivieren.
+
+.Schritte
+. Navigieren Sie zu *Allgemein* > * AutoSupport*.
+. Aktivieren Sie im Abschnitt „Periodischer AutoSupport“ das Kontrollkästchen *Regelmäßiges Senden von AutoSupport -Daten an Active IQ aktivieren*.
+. Definieren Sie bei Bedarf den Namen, den Port und die Authentifizierungsinformationen für den HTTP-Proxyserver, wie im Abschnitt „Einrichten des HTTP-Proxyservers“ beschrieben.
+. Klicken Sie auf *Speichern*.
+
+
+
+
+== Laden Sie ein On-Demand-Supportpaket hoch
+
+Sie können je nach Bedarf zur Fehlerbehebung ein Supportpaket erstellen und an den technischen Support senden.  Unified Manager speichert nur die beiden zuletzt erstellten Support-Pakete.  Ältere Support-Pakete werden aus dem System gelöscht.
+
+Da einige Supportdatentypen große Mengen an Clusterressourcen beanspruchen oder ihre Fertigstellung viel Zeit in Anspruch nehmen kann, können Sie bei Auswahl des vollständigen Supportpakets bestimmte Datentypen ein- oder ausschließen, um die Größe des Supportpakets zu reduzieren.  Sie haben auch die Möglichkeit, ein einfaches Supportpaket zu erstellen, das nur 30 Tage Protokolle und Konfigurationsdatenbankeinträge enthält – Leistungsdaten, Erfassungsaufzeichnungsdateien und Server-Heap-Dumps sind davon ausgenommen.
+
+.Schritte
+. Navigieren Sie zu *Allgemein* > * AutoSupport*.
+. Klicken Sie im Abschnitt „On-Demand-Support-Paket“ auf *Support-Paket generieren und senden*.
+. Um ein Light-Support-Paket an den technischen Support zu senden, aktivieren Sie im Popup „Support-Paket generieren und senden“ das Kontrollkästchen **Light-Support-Paket generieren**.
+. Alternativ können Sie zum Senden eines vollständigen Support-Pakets das Kontrollkästchen *Vollständiges Support-Paket generieren* aktivieren.  Wählen Sie die spezifischen Datentypen aus, die in das Support-Paket aufgenommen oder davon ausgeschlossen werden sollen.
++
+[NOTE]
+====
+Auch wenn Sie keinen Datentyp auswählen, wird das Support-Paket dennoch mit anderen Unified Manager-Daten generiert.
+
+====
+. Aktivieren Sie das Kontrollkästchen *Paket an den technischen Support senden*, um das Paket zu erstellen und an den technischen Support zu senden.  Wenn Sie dieses Kontrollkästchen nicht aktivieren, wird das Paket generiert und lokal auf dem Unified Manager-Server gespeichert.  Das generierte Support-Paket steht zur späteren Verwendung im Verzeichnis /support auf VMware-Systemen zur Verfügung, in `/opt/netapp/data/support/` auf Linux-Systemen und in `ProgramData\NetApp\OnCommandAppData\ocum\support` auf Windows-Systemen.
+. Klicken Sie auf *Senden*.
+
+
+
+
+== Einrichten eines HTTP-Proxyservers
+
+Sie können einen Proxy für den Internetzugang festlegen, um AutoSupport Inhalte an den Support zu senden, wenn Ihre Umgebung keinen direkten Zugriff vom Unified Manager-Server bietet.  Dieser Abschnitt ist nur für Administrator- und Wartungsbenutzer verfügbar.
+
+* *HTTP-Proxy verwenden*
++
+Aktivieren Sie dieses Kontrollkästchen, um den als HTTP-Proxy verwendeten Server zu identifizieren.
+
++
+Geben Sie den Hostnamen oder die IP-Adresse des Proxyservers und die Portnummer ein, die für die Verbindung mit dem Server verwendet wird.
+
+* *Authentifizierung verwenden*
++
+Aktivieren Sie dieses Kontrollkästchen, wenn Sie Authentifizierungsinformationen angeben müssen, um auf den als HTTP-Proxy verwendeten Server zuzugreifen.
+
++
+Geben Sie den Benutzernamen und das Kennwort ein, die zur Authentifizierung beim HTTP-Proxy erforderlich sind.
+
+
+
+[NOTE]
+====
+HTTP-Proxys, die nur eine Basisauthentifizierung bereitstellen, werden nicht unterstützt.
+
+====

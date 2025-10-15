@@ -1,0 +1,45 @@
+---
+permalink: performance-checker/task_respond_to_system_defined_node_resources_overutilized.html 
+sidebar: sidebar 
+keywords: node, resources, overutilized, performance, events 
+summary: Unified Manager generiert Warnereignisse zur Überauslastung von Knotenressourcen, wenn ein einzelner Knoten über die Grenzen seiner Betriebseffizienz hinaus betrieben wird und sich daher möglicherweise auf die Arbeitslastlatenzen auswirkt.  Diese systemdefinierten Ereignisse bieten die Möglichkeit, potenzielle Leistungsprobleme zu beheben, bevor viele Workloads von der Latenz betroffen sind. 
+---
+= Reagieren Sie auf Leistungsereignisse bei überlasteten Knotenressourcen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager generiert Warnereignisse zur Überauslastung von Knotenressourcen, wenn ein einzelner Knoten über die Grenzen seiner Betriebseffizienz hinaus betrieben wird und sich daher möglicherweise auf die Arbeitslastlatenzen auswirkt.  Diese systemdefinierten Ereignisse bieten die Möglichkeit, potenzielle Leistungsprobleme zu beheben, bevor viele Workloads von der Latenz betroffen sind.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Es müssen neue oder veraltete Leistungsereignisse vorliegen.
+
+
+Unified Manager generiert Warnereignisse für Richtlinienverstöße bei überlasteten Knotenressourcen, indem er nach Knoten sucht, die länger als 30 Minuten mehr als 100 % ihrer Leistungskapazität nutzen.
+
+Sie können System Manager oder die ONTAP -Befehle verwenden, um diese Art von Leistungsproblemen zu beheben, einschließlich der folgenden Aufgaben:
+
+* Erstellen und Anwenden einer QoS-Richtlinie auf alle Volumes oder LUNs, die Systemressourcen übermäßig nutzen
+* Reduzieren des maximalen QoS-Durchsatzlimits einer Richtliniengruppe, auf die Workloads angewendet wurden
+* Verschieben einer Arbeitslast auf ein anderes Aggregat oder einen anderen Knoten
+* Erhöhen Sie die Kapazität durch Hinzufügen von Festplatten zum Knoten oder durch ein Upgrade auf einen Knoten mit einer schnelleren CPU und mehr RAM
+
+
+.Schritte
+. Zeigen Sie die Seite *Ereignisdetails* an, um Informationen zum Ereignis anzuzeigen.
+. Überprüfen Sie die *Beschreibung*, in der die Schwellenwertüberschreitung beschrieben wird, die das Ereignis verursacht hat.
++
+Beispielsweise wird die Meldung „`Perf.  Der Wert „Kapazitätsnutzung“ von 139 % auf simplicity-02 hat ein WARNUNG-Ereignis ausgelöst, um potenzielle Leistungsprobleme in der Datenverarbeitungseinheit zu identifizieren. „“ zeigt an, dass die Leistungskapazität auf Knoten simplicity-02 überbeansprucht ist und die Knotenleistung beeinträchtigt.
+
+. Überprüfen Sie im Abschnitt *Systemdiagnose* die drei Diagramme: eines für die auf dem Knoten verwendete Leistungskapazität, eines für die durchschnittlichen Speicher-IOPS, die von den wichtigsten Workloads verwendet werden, und eines für die Latenz bei den wichtigsten Workloads.  Bei dieser Anordnung können Sie erkennen, welche Workloads die Ursache für die Latenz auf dem Knoten sind.
++
+Sie können anzeigen, auf welche Workloads QoS-Richtlinien angewendet werden und auf welche nicht, indem Sie den Cursor über das IOPS-Diagramm bewegen.
+
+. Überprüfen Sie die Vorschläge im Abschnitt *Vorgeschlagene Maßnahmen* und legen Sie fest, welche Maßnahmen Sie durchführen sollten, um eine Erhöhung der Latenz für die Arbeitslast zu vermeiden.
++
+Klicken Sie bei Bedarf auf die Schaltfläche *Hilfe*, um weitere Details zu den vorgeschlagenen Aktionen anzuzeigen, die Sie ausführen können, um das Leistungsproblem zu beheben.
+
+

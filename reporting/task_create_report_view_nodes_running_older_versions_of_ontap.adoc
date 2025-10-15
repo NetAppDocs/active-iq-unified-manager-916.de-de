@@ -1,0 +1,36 @@
+---
+permalink: reporting/task_create_report_view_nodes_running_older_versions_of_ontap.html 
+sidebar: sidebar 
+keywords: create, report, view, nodes, running, older versions, ONTAP 
+summary: Sie können einen Bericht erstellen, um die Version der ONTAP -Software anzuzeigen, die auf allen Clusterknoten installiert ist, sodass Sie sehen können, welche Knoten Sie aktualisieren sollten. 
+---
+= Erstellen Sie einen Bericht, um Knoten anzuzeigen, auf denen ältere Versionen von ONTAP ausgeführt werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um die Version der ONTAP -Software anzuzeigen, die auf allen Clusterknoten installiert ist, sodass Sie sehen können, welche Knoten Sie aktualisieren sollten.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Führen Sie die folgenden Schritte aus, um eine benutzerdefinierte Ansicht zu erstellen, die Knoten mit älteren Versionen von ONTAP anzeigt, und planen Sie dann die Generierung eines Berichts für diese Ansicht.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Knoten*.
+. Wählen Sie *Anzeigen/Ausblenden*, um alle Spalten zu entfernen, die Sie nicht im Bericht haben möchten.
+. Ziehen Sie die Spalte „Betriebssystemversion“ in die Nähe der Spalte „Knoten“.
+. Klicken Sie oben auf die Spalte „Betriebssystemversion“, um die Ergebnisse nach der ältesten ONTAP-Version zu sortieren.
+. Speichern Sie die Ansicht unter einem bestimmten Namen, der widerspiegelt, was die Ansicht anzeigt, z. B. „Knoten nach ONTAP -Version“.
+. Klicken Sie auf der Inventarseite auf die Schaltfläche *Geplante Berichte*.
+. Klicken Sie auf *Zeitplan hinzufügen*, um der Seite „Berichtszeitpläne“ eine neue Zeile hinzuzufügen, damit Sie die Zeitplanmerkmale für den neuen Bericht definieren können.
+. Geben Sie einen Namen für den Berichtszeitplan ein und füllen Sie die anderen Berichtsfelder aus. Klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""] ) am Ende der Zeile.
++
+Der Bericht wird sofort testweise versendet.  Anschließend wird der Bericht generiert und in der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Basierend auf den im Bericht angezeigten Ergebnissen möchten Sie möglicherweise Knoten aktualisieren, auf denen ältere Versionen von ONTAP ausgeführt werden.

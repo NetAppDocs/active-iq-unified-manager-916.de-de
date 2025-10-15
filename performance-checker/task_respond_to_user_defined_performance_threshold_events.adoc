@@ -1,0 +1,51 @@
+---
+permalink: performance-checker/task_respond_to_user_defined_performance_threshold_events.html 
+sidebar: sidebar 
+keywords: user-defined, performance, threshold, events 
+summary: Mit Unified Manager können Sie Leistungsereignisse untersuchen, die dadurch verursacht werden, dass ein Leistungsindikator eine benutzerdefinierte Warnung oder einen kritischen Schwellenwert überschreitet.  Sie können Unified Manager auch verwenden, um den Zustand der Clusterkomponente zu überprüfen und festzustellen, ob kürzlich auf der Komponente erkannte Zustandsereignisse zum Leistungsereignis beigetragen haben. 
+---
+= Reagieren Sie auf benutzerdefinierte Leistungsschwellenwertereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit Unified Manager können Sie Leistungsereignisse untersuchen, die dadurch verursacht werden, dass ein Leistungsindikator eine benutzerdefinierte Warnung oder einen kritischen Schwellenwert überschreitet.  Sie können Unified Manager auch verwenden, um den Zustand der Clusterkomponente zu überprüfen und festzustellen, ob kürzlich auf der Komponente erkannte Zustandsereignisse zum Leistungsereignis beigetragen haben.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Es müssen neue oder veraltete Leistungsereignisse vorliegen.
+
+
+.Schritte
+. Zeigen Sie die Seite *Ereignisdetails* an, um Informationen zum Ereignis anzuzeigen.
+. Überprüfen Sie die *Beschreibung*, in der die Schwellenwertüberschreitung beschrieben wird, die das Ereignis verursacht hat.
++
+Beispielsweise zeigt die Meldung „Latenzwert von 456 ms/op hat basierend auf der Schwellenwerteinstellung von 400 ms/op ein WARNUNG-Ereignis ausgelöst“ an, dass für das Objekt ein Latenz-Warnereignis aufgetreten ist.
+
+. Bewegen Sie den Cursor über den Richtliniennamen, um Details zur Schwellenwertrichtlinie anzuzeigen, die das Ereignis ausgelöst hat.
++
+Hierzu gehören der Richtlinienname, der auszuwertende Leistungsindikator, der Indikatorwert, der überschritten werden muss, damit dies als kritisches Ereignis oder Warnereignis gilt, und die Dauer, um die der Indikator den Wert überschreiten muss.
+
+. Notieren Sie sich die *Ereignisauslösezeit*, damit Sie untersuchen können, ob möglicherweise gleichzeitig andere Ereignisse aufgetreten sind, die zu diesem Ereignis beigetragen haben könnten.
+. Führen Sie eine der folgenden Optionen aus, um das Ereignis genauer zu untersuchen und festzustellen, ob Sie Maßnahmen zur Behebung des Leistungsproblems ergreifen müssen:
++
+|===
+| Option | Mögliche Untersuchungsmaßnahmen 
+
+
+ a| 
+Klicken Sie auf den Namen des Quellobjekts, um die Explorer-Seite für dieses Objekt anzuzeigen.
+ a| 
+Auf dieser Seite können Sie die Objektdetails anzeigen und dieses Objekt mit anderen ähnlichen Speicherobjekten vergleichen, um festzustellen, ob bei anderen Speicherobjekten etwa zur gleichen Zeit ein Leistungsproblem auftritt.  Beispielsweise um festzustellen, ob bei anderen Volumes auf demselben Aggregat ebenfalls ein Leistungsproblem vorliegt.
+
+
+
+ a| 
+Klicken Sie auf den Clusternamen, um die Seite „Clusterübersicht“ anzuzeigen.
+ a| 
+Auf dieser Seite können Sie die Details für den Cluster anzeigen, auf dem sich dieses Objekt befindet, um festzustellen, ob etwa zur gleichen Zeit andere Leistungsprobleme aufgetreten sind.
+
+|===
+

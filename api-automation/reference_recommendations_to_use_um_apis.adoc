@@ -1,0 +1,29 @@
+---
+permalink: api-automation/reference_recommendations_to_use_um_apis.html 
+sidebar: sidebar 
+keywords: recommendations, apis, active iq, unified, manager 
+summary: Wenn Sie die APIs in Active IQ Unified Manager verwenden, sollten Sie bestimmte empfohlene Vorgehensweisen befolgen. 
+---
+= Empfehlungen zur Verwendung der APIs für Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie die APIs in Active IQ Unified Manager verwenden, sollten Sie bestimmte empfohlene Vorgehensweisen befolgen.
+
+* Für eine gültige Ausführung müssen alle Antwortinhaltstypen das folgende Format aufweisen:
++
+[listing]
+----
+application/json
+----
+* Die API-Versionsnummer hat nichts mit der Produktversionsnummer zu tun.  Sie sollten die neueste Version der API verwenden, die für Ihre Unified Manager-Instanz verfügbar ist.  Weitere Informationen zu den API-Versionen von Unified Manager finden Sie im Abschnitt „REST-API-Versionierung in Active IQ Unified Manager“.
+* Beim Aktualisieren von Array-Werten mithilfe einer Unified Manager-API müssen Sie die gesamte Wertezeichenfolge aktualisieren.  Sie können einem Array keine Werte anhängen.  Sie können nur ein vorhandenes Array ersetzen.
+* Sie können Filteroperatoren wie Pipe (|) und Platzhalter (+*+) für alle Abfrageparameter verwenden, mit Ausnahme von Doppelwerten, beispielsweise IOPS und Leistung in den Metrik-APIs.
+* Vermeiden Sie die Abfrage von Objekten, indem Sie eine Kombination der Filteroperatoren Platzhalter (+*+) und Pipe (|) verwenden.  Möglicherweise wird eine falsche Anzahl von Objekten abgerufen.
+* Bei der Verwendung von Werten für Filter ist darauf zu achten, dass der Wert keine `?` Charakter.  Dies dient dazu, das Risiko einer SQL-Injection zu verringern.
+* Beachten Sie, dass die `GET` (Alle) Anfragen für eine beliebige API geben maximal 1000 Datensätze zurück.  Auch wenn Sie die Abfrage ausführen, indem Sie die `max_records` auf einen Wert über 1000 setzen, werden nur 1000 Datensätze zurückgegeben.
+* Für die Durchführung administrativer Funktionen wird die Verwendung der Unified Manager-Benutzeroberfläche empfohlen.
+

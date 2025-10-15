@@ -1,0 +1,31 @@
+---
+permalink: api-automation/concept_storage_resource_model.html 
+sidebar: sidebar 
+keywords: storage, resource, ONTAP 
+summary: Die Speicherressourcen in ONTAP können grob in physische und logische Speicherressourcen unterteilt werden.  Um Ihre ONTAP -Systeme mithilfe der in Active IQ Unified Manager bereitgestellten APIs effektiv zu verwalten, müssen Sie das Speicherressourcenmodell und die Beziehung zwischen verschiedenen Speicherressourcen verstehen. 
+---
+= Speicherressourcen in ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Speicherressourcen in ONTAP können grob in _physische Speicherressourcen_ und _logische Speicherressourcen_ unterteilt werden. Um Ihre ONTAP Systeme mithilfe der in Active IQ Unified Manager bereitgestellten APIs effektiv zu verwalten, müssen Sie das Speicherressourcenmodell und die Beziehung zwischen verschiedenen Speicherressourcen verstehen.
+
+* *Physische Speicherressourcen*
++
+Bezieht sich auf die von ONTAP bereitgestellten physischen Speicherobjekte.  Zu den physischen Speicherressourcen gehören Festplatten, Cluster, Speichercontroller, Knoten und Aggregate.
+
+* *Logische Speicherressourcen*
++
+Bezieht sich auf die von ONTAP bereitgestellten Speicherressourcen, die nicht an eine physische Ressource gebunden sind.  Diese Ressourcen sind mit einer virtuellen Speichermaschine (SVM, früher als VServer bezeichnet) verknüpft und existieren unabhängig von bestimmten physischen Speicherressourcen wie einer Festplatte, einem Array-LUN oder einem Aggregat.
+
++
+Zu den logischen Speicherressourcen gehören Volumes aller Typen und Qtrees sowie die Funktionen und Konfigurationen, die Sie mit diesen Ressourcen verwenden können, wie z. B. Snapshot-Kopien, Deduplizierung, Komprimierung und Kontingente.
+
+
+
+Die folgende Abbildung zeigt die Speicherressourcen in einem 2-Knoten-Cluster:
+
+image::../media/storage_resource_model.gif[Ein UI-Screenshot, der Speicherressourcen in einem 2-Knoten-Cluster zeigt.]

@@ -1,0 +1,78 @@
+---
+permalink: health-checker/task_add_group_rules.html 
+sidebar: sidebar 
+keywords: add, group rules 
+summary: 'Sie können Gruppenregeln für eine Gruppe erstellen, um Speicherobjekte wie Volumes, Cluster oder Storage Virtual Machines (SVMs) dynamisch zur Gruppe hinzuzufügen.  Sie müssen mindestens eine Bedingungsgruppe mit mindestens einer Bedingung konfigurieren, um eine Gruppenregel zu erstellen.' 
+---
+= Gruppenregeln hinzufügen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Gruppenregeln für eine Gruppe erstellen, um Speicherobjekte wie Volumes, Cluster oder Storage Virtual Machines (SVMs) dynamisch zur Gruppe hinzuzufügen.  Sie müssen mindestens eine Bedingungsgruppe mit mindestens einer Bedingung konfigurieren, um eine Gruppenregel zu erstellen.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Aktuell überwachte Speicherobjekte werden hinzugefügt, sobald die Gruppenregel erstellt wird.  Neue Objekte werden erst nach Abschluss des Überwachungszyklus hinzugefügt.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Gruppen*.
+. Klicken Sie auf der Registerkarte *Gruppenregeln* auf *Hinzufügen*.
+. Geben Sie im Dialogfeld *Gruppenregel hinzufügen* einen Namen für die Gruppenregel an.
+. Wählen Sie im Feld *Zielobjekttyp* den Typ des Speicherobjekts aus, das Sie gruppieren möchten.
+. Wählen Sie im Feld *Gruppe* die gewünschte Gruppe aus, für die Sie Gruppenregeln erstellen möchten.
+. Führen Sie im Abschnitt *Bedingungen* die folgenden Schritte aus, um eine Bedingung, eine Bedingungsgruppe oder beides zu erstellen:
++
+[cols="2*"]
+|===
+| Erstellen.... | Machen Sie Folgendes... 
+
+
+ a| 
+Eine Bedingung
+ a| 
+.. Wählen Sie einen Operanden aus der Operandenliste aus.
+.. Wählen Sie als Operator entweder *Enthält* oder *Ist* aus.
+.. Geben Sie einen Wert ein oder wählen Sie einen Wert aus der verfügbaren Liste aus.
+
+
+
+
+ a| 
+Eine Bedingungsgruppe
+ a| 
+.. Klicken Sie auf *Bedingungsgruppe hinzufügen*
+.. Wählen Sie einen Operanden aus der Operandenliste aus.
+.. Wählen Sie als Operator entweder *Enthält* oder *Ist* aus.
+.. Geben Sie einen Wert ein oder wählen Sie einen Wert aus der verfügbaren Liste aus.
+.. Klicken Sie auf *Bedingung hinzufügen*, um bei Bedarf weitere Bedingungen zu erstellen, und wiederholen Sie die Schritte a bis d für jede Bedingung.
+
+
+|===
+. Klicken Sie auf *Hinzufügen*.
+
+
+
+
+== Beispiel zum Erstellen einer Gruppenregel
+
+Führen Sie im Dialogfeld „Gruppenregel hinzufügen“ die folgenden Schritte aus, um eine Gruppenregel zu erstellen, einschließlich der Konfiguration einer Bedingung und des Hinzufügens einer Bedingungsgruppe:
+
+.Schritte
+. Geben Sie einen Namen für die Gruppenregel an.
+. Wählen Sie als Objekttyp „Storage Virtual Machine“ (SVM) aus.
+. Wählen Sie eine Gruppe aus der Gruppenliste aus.
+. Wählen Sie im Abschnitt „Bedingungen“ als Operanden „*Objektname*“ aus.
+. Wählen Sie als Operator *Enthält* aus.
+. Geben Sie den Wert als `svm_data` .
+. Klicken Sie auf *Bedingungsgruppe hinzufügen*.
+. Wählen Sie als Operand *Objektname*.
+. Wählen Sie als Operator *Enthält* aus.
+. Geben Sie den Wert als `vol` .
+. Klicken Sie auf *Bedingung hinzufügen*.
+. Wiederholen Sie die Schritte 8 bis 10, indem Sie in Schritt 8 *data-priority* als Operanden, in Schritt 9 *Is* als Operator und in Schritt 10 *critical* als Wert auswählen.
+. Klicken Sie auf *Hinzufügen*, um die Bedingung für die Gruppenregel zu erstellen.
+

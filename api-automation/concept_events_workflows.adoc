@@ -1,0 +1,43 @@
+---
+permalink: api-automation/concept_events_workflows.html 
+sidebar: sidebar 
+keywords: determine, issues, storage, objects, events 
+summary: Wenn ein Speicherobjekt in Ihrem Rechenzentrum einen Schwellenwert überschreitet, erhalten Sie eine Benachrichtigung über dieses Ereignis.  Mithilfe dieser Benachrichtigung können Sie das Problem analysieren und mithilfe der Ereignis-APIs Korrekturmaßnahmen ergreifen. 
+---
+= Ermitteln Sie Probleme in Speicherobjekten mithilfe von Ereignis-APIs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn ein Speicherobjekt in Ihrem Rechenzentrum einen Schwellenwert überschreitet, erhalten Sie eine Benachrichtigung über dieses Ereignis.  Mithilfe dieser Benachrichtigung können Sie das Problem analysieren und Korrekturmaßnahmen ergreifen, indem Sie die `events` APIs.
+
+Dieser Workflow verwendet als Beispiel ein Volume als Ressourcenobjekt.  Sie können die `events` APIs zum Abrufen der Liste der Ereignisse im Zusammenhang mit einem Volume, Analysieren der kritischen Probleme für dieses Volume und Ergreifen von Korrekturmaßnahmen zur Behebung des Problems.
+
+image::../media/handling_event_related_issues_of_a_storage_object_flowchart.gif[Handhabung ereignisbezogener Probleme eines Speicherobjekt-Flussdiagramms]
+
+Befolgen Sie diese Schritte, um die Probleme in Ihrem Volume zu ermitteln, bevor Sie Abhilfemaßnahmen ergreifen.
+
+.Schritte
+. Analysieren Sie die kritischen Active IQ Unified Manager Ereignisbenachrichtigungen für die Volumes in Ihrem Rechenzentrum.
+. Fragen Sie alle Ereignisse für die Volumes ab, indem Sie die folgenden Parameter in der API „/management-server/events“ verwenden:
+`"*resource_type": "volume*"`
+`"*severity": "critical*"`
++
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Management-Server
+ a| 
+ERHALTEN
+ a| 
+/Management-Server/Ereignisse
+
+|===
+. Sehen Sie sich die Ausgabe an und analysieren Sie die Probleme in den jeweiligen Bänden.
+. Führen Sie die erforderlichen Aktionen mithilfe der Unified Manager-REST-APIs oder der Web-Benutzeroberfläche durch, um die Probleme zu beheben.
+

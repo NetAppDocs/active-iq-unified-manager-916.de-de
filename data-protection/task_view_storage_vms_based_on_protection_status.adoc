@@ -1,0 +1,62 @@
+---
+permalink: data-protection/task_view_storage_vms_based_on_protection_status.html 
+sidebar: sidebar 
+keywords: storage vm, view protection status 
+summary: Sie können die Seite „Speicher-VMs“ des Inventars verwenden, um alle Speicher-VMs in Active IQ Unified Manager anzuzeigen und die Speicher-VMs basierend auf ihrem Schutzstatus zu filtern. 
+---
+= Anzeigen von Speicher-VMs basierend auf dem Schutzstatus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Seite „Speicher-VMs“ des Inventars verwenden, um alle Speicher-VMs in Active IQ Unified Manager anzuzeigen und die Speicher-VMs basierend auf ihrem Schutzstatus zu filtern.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Der Ansicht „Speicher-VMs“ wurde eine neue Spalte „Schutzrolle“ hinzugefügt, die Informationen darüber bereitstellt, ob die Speicher-VM geschützt oder ungeschützt ist.
+
+[NOTE]
+====
+Wenn ein Quellcluster nicht zu Active IQ Unified Manager hinzugefügt wird, sind alle Informationen zu diesem Cluster in den Rastern nicht verfügbar.
+
+====
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *STORAGE* > *Storage-VMs*.
+. Wählen Sie im Menü *ANSICHT* die Option *Integrität* > *Alle Speicher-VMs*.
++
+Der Zustand: Alle Speicher-VMs wird angezeigt.
+
+. Klicken Sie auf *Filter*, um eine der folgenden Speicher-VMs anzuzeigen.
++
+[cols="2*"]
+|===
+| Zum Ansehen | Filterwert 
+
+
+ a| 
+*Geschützte Speicher-VMs*
+ a| 
+*Schutzrolle* ist *Geschützt*
+
+
+
+ a| 
+*Ungeschützte Speicher-VMs*
+ a| 
+*Schutzrolle* ist *Ungeschützt*
+
+|===
++
+[NOTE]
+====
+Sie können die geschützten und ungeschützten Speicher-VMs nicht gleichzeitig anzeigen.  Sie müssen den vorhandenen Filter löschen, um eine neue Filteroption erneut anzuwenden.
+
+====
+. Klicken Sie auf *Filter anwenden*.
++
+In der Ansicht „Nicht gespeichert“ werden alle Speicher-VMs angezeigt, die je nach Ihren Filterauswahlen durch die Notfallwiederherstellung der Speicher-VM entweder geschützt oder ungeschützt sind.
+
+

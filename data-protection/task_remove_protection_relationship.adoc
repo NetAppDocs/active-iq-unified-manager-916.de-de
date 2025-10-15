@@ -1,0 +1,30 @@
+---
+permalink: data-protection/task_remove_protection_relationship.html 
+sidebar: sidebar 
+keywords: remove, protection, relationship, volume, relationships page 
+summary: 'Auf der Seite „Volume-Beziehungen“ können Sie eine Schutzbeziehung entfernen, um eine bestehende Beziehung zwischen der ausgewählten Quelle und dem ausgewählten Ziel dauerhaft zu löschen: beispielsweise, wenn Sie eine Beziehung mit einem anderen Ziel erstellen möchten.  Dieser Vorgang entfernt alle Metadaten und kann nicht rückgängig gemacht werden.' 
+---
+= Entfernen einer Schutzbeziehung von der Seite „Volume-Beziehungen“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Volume-Beziehungen“ können Sie eine Schutzbeziehung entfernen, um eine bestehende Beziehung zwischen der ausgewählten Quelle und dem ausgewählten Ziel dauerhaft zu löschen: beispielsweise, wenn Sie eine Beziehung mit einem anderen Ziel erstellen möchten.  Dieser Vorgang entfernt alle Metadaten und kann nicht rückgängig gemacht werden.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen die Workflow-Automatisierung eingerichtet haben.
+
+
+.Schritte
+. Wählen Sie auf der Seite *Volume-Beziehungen* ein oder mehrere Volumes mit Schutzbeziehungen aus, die Sie entfernen möchten, und klicken Sie in der Symbolleiste auf *Entfernen*.
++
+Das Dialogfeld „Beziehung entfernen“ wird angezeigt.
+
+. Klicken Sie auf *Weiter*, um die Beziehung zu entfernen.
++
+Die Beziehung wird von der Seite „Volumenbeziehungen“ entfernt.
+
+

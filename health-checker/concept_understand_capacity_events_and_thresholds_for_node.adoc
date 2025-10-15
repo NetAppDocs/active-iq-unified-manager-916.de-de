@@ -1,0 +1,21 @@
+---
+permalink: health-checker/concept_understand_capacity_events_and_thresholds_for_node.html 
+sidebar: sidebar 
+keywords: understand, events, thresholds, node, root, aggregates 
+summary: Sie können das Knotenstammaggregat mithilfe von Unified Manager überwachen.  Die beste Vorgehensweise besteht darin, das Stammvolume im Stammaggregat dick bereitzustellen, um ein Anhalten des Knotens zu verhindern. 
+---
+= Verstehen Sie Ereignisse und Schwellenwerte für Knotenstammaggregate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das Knotenstammaggregat mithilfe von Unified Manager überwachen.  Die beste Vorgehensweise besteht darin, das Stammvolume im Stammaggregat dick bereitzustellen, um ein Anhalten des Knotens zu verhindern.
+
+Standardmäßig werden für Root-Aggregate keine Kapazitäts- und Leistungsereignisse generiert.  Außerdem sind die von Unified Manager verwendeten Schwellenwerte nicht auf die Knotenstammaggregate anwendbar.  Nur ein Mitarbeiter des technischen Supports kann die Einstellungen für die Generierung dieser Ereignisse ändern.  Wenn die Einstellungen vom technischen Supportmitarbeiter geändert werden, werden die Kapazitätsschwellenwerte auf das Knotenstammaggregat angewendet.
+
+Sie können mithilfe des ONTAP System Manager oder der ONTAP CLI geeignete Maßnahmen ergreifen, um ein Anhalten des Knotens zu verhindern.
+
+
+NOTE: Die Funktion zur Überwachung von Knoten-Root-Aggregaten ist nicht verfügbar, wenn auf Clustern ONTAP Version 9.14.1 oder höher ausgeführt wird.

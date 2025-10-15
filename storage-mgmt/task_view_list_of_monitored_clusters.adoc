@@ -1,0 +1,24 @@
+---
+permalink: storage-mgmt/task_view_list_of_monitored_clusters.html 
+sidebar: sidebar 
+keywords: view, list, monitored, clusters 
+summary: Auf der Seite „Cluster-Setup“ können Sie Ihren Clusterbestand anzeigen.  Sie können Details zu den Clustern anzeigen, beispielsweise deren Namen oder IP-Adresse und Kommunikationsstatus. 
+---
+= Liste der überwachten Cluster anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Cluster-Setup“ können Sie Ihren Clusterbestand anzeigen.  Sie können Details zu den Clustern anzeigen, beispielsweise deren Namen oder IP-Adresse und Kommunikationsstatus.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+.Schritt
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Cluster-Setup*.
++
+Alle von Unified Manager verwalteten Cluster in Ihrer Speicherumgebung werden angezeigt. Die Liste der Cluster ist nach der Spalte mit dem Schweregrad des Erfassungsstatus sortiert.  Sie können auf eine Spaltenüberschrift klicken, um die Cluster nach verschiedenen Spalten zu sortieren.
+
+

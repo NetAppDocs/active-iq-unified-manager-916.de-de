@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/reference_performance_cluster_landing_page.html 
+sidebar: sidebar 
+keywords: performance, cluster, landing page 
+summary: Auf der Zielseite des Leistungsclusters wird der allgemeine Leistungsstatus eines ausgewählten Clusters angezeigt.  Auf der Seite können Sie auf alle Details jedes Leistungsindikators für die Speicherobjekte im ausgewählten Cluster zugreifen. 
+---
+= Zielseite des Performance-Clusters
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Zielseite des Leistungsclusters wird der allgemeine Leistungsstatus eines ausgewählten Clusters angezeigt.  Auf der Seite können Sie auf alle Details jedes Leistungsindikators für die Speicherobjekte im ausgewählten Cluster zugreifen.
+
+Die Zielseite des Performance-Clusters enthält vier Registerkarten, die die Clusterdetails in vier Informationsbereiche unterteilen:
+
+* Zusammenfassungsseite
++
+** Bereich „Clusterereignisse“
+** MB/s- und IOPS-Leistungsdiagramme
+** Bereich „Verwaltete Objekte“
+
+
+* Seite „Top-Performer“
+* Explorer-Seite
+* Informationsseite
+

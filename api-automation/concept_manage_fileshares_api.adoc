@@ -1,0 +1,109 @@
+---
+permalink: api-automation/concept_manage_fileshares_api.html 
+sidebar: sidebar 
+keywords: manage, file, share 
+summary: Sie können die API /storage-provider/file-shares verwenden, um die CIFS- und NFS-Dateifreigabevolumes in Ihrer Rechenzentrumsumgebung anzuzeigen, hinzuzufügen, zu ändern und zu löschen. 
+---
+= Verwalten von Dateifreigaben mithilfe von APIs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die `/storage-provider/file-shares` API zum Anzeigen, Hinzufügen, Ändern und Löschen der CIFS- und NFS-Dateifreigabevolumes in Ihrer Rechenzentrumsumgebung.
+
+Stellen Sie vor der Bereitstellung der Dateifreigabevolumes sicher, dass die SVM mit den unterstützten Protokollen erstellt und bereitgestellt wurde.  Wenn Sie während der Bereitstellung Performance Service Levels (PSLs) oder Storage Efficiency Policies (SEPs) zuweisen, sollten die PSLs oder SEPs vor dem Erstellen der Dateifreigaben erstellt werden.
+
+
+
+== Dateifreigaben anzeigen
+
+Mit der folgenden Methode können Sie die in Ihrer Unified Manager-Umgebung verfügbaren Dateifreigabevolumes anzeigen.  Wenn Sie einen ONTAP Cluster als Datenquelle zu Active IQ Unified Manager hinzugefügt haben, werden die Speicher-Workloads für diese Cluster automatisch zu Ihrer Unified Manager-Instanz hinzugefügt.  Diese API ruft die Dateifreigaben automatisch ab und wird manuell zu Ihrer Unified Manager-Instanz hinzugefügt.  Sie können die Details einer bestimmten Dateifreigabe anzeigen, indem Sie diese API mit dem Dateifreigabeschlüssel ausführen.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Speicheranbieter
+ a| 
+ERHALTEN
+ a| 
+`/storage-provider/file-shares`
+
+`/storage-provider/file-shares/\{key}`
+
+|===
+
+
+== Dateifreigaben hinzufügen
+
+Mit der folgenden Methode können Sie CIFS- und NFS-Dateifreigaben in Ihrem SVM hinzufügen.  Sie müssen die Details der Dateifreigabe, die Sie erstellen möchten, als Eingabeparameter eingeben.  Sie können diese API nicht zum Hinzufügen von FlexGroup -Volumes verwenden.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Speicheranbieter
+ a| 
+POST
+ a| 
+`/storage-provider/file-shares`
+
+|===
+[NOTE]
+====
+Je nachdem, ob die Parameter der Zugriffskontrollliste (ACL) oder der Exportrichtlinienparameter angegeben sind, werden CIFS-Freigaben oder NFS-Dateifreigaben erstellt.  Wenn Sie die Werte für die ACL-Parameter nicht angeben, werden keine CIFS-Freigaben erstellt und standardmäßig werden NFS-Freigaben erstellt, die allen Zugriff gewähren.
+
+====
+*Erstellen von Datensicherungsvolumes*: Wenn Sie Dateifreigaben zu Ihrer SVM hinzufügen, ist der Typ des gemounteten Volumes standardmäßig `rw` (Lesen/Schreiben).  Geben Sie zum Erstellen von Datensicherungsvolumes (DP) Folgendes an: `dp` als Wert für die `type` Parameter.
+
+
+
+== Dateifreigaben löschen
+
+Mit der folgenden Methode können Sie eine bestimmte Dateifreigabe löschen.  Sie müssen den Dateifreigabeschlüssel als Eingabeparameter eingeben, um eine bestimmte Dateifreigabe zu löschen.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Speicheranbieter
+ a| 
+LÖSCHEN
+ a| 
+`/storage-provider/file-shares/\{key}`
+
+|===
+
+
+== Ändern von Dateifreigaben
+
+Mit der folgenden Methode können Sie eine Dateifreigabe ändern und ihre Eigenschaften aktualisieren.
+
+Sie müssen den Dateifreigabeschlüssel angeben, um eine bestimmte Dateifreigabe zu ändern.  Darüber hinaus müssen Sie die Eigenschaft, die Sie aktualisieren möchten, zusammen mit ihrem Wert eingeben.
+
+[NOTE]
+====
+Beachten Sie, dass Sie bei einem einzelnen Aufruf dieser API nur eine Eigenschaft aktualisieren können.  Für mehrere Updates müssen Sie diese API genauso oft ausführen.
+
+====
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Speicheranbieter
+ a| 
+PATCH
+ a| 
+`/storage-provider/file-shares/\{key}`
+
+|===

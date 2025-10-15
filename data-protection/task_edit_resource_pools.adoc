@@ -1,0 +1,33 @@
+---
+permalink: data-protection/task_edit_resource_pools.html 
+sidebar: sidebar 
+keywords: edit, resource, pools 
+summary: Sie können einen vorhandenen Ressourcenpool bearbeiten, wenn Sie den Namen und die Beschreibung des Ressourcenpools ändern möchten. 
+---
+= Ressourcenpools bearbeiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen vorhandenen Ressourcenpool bearbeiten, wenn Sie den Namen und die Beschreibung des Ressourcenpools ändern möchten.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Die Schaltfläche *Bearbeiten* ist nur aktiviert, wenn ein Ressourcenpool ausgewählt ist.  Wenn mehr als ein Ressourcenpool ausgewählt ist, ist die Schaltfläche *Bearbeiten* deaktiviert.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Schutz* > *Ressourcenpools*.
+. Wählen Sie einen Ressourcenpool aus der Liste aus.
+. Klicken Sie auf *Bearbeiten*.
++
+Das Fenster „Ressourcenpool bearbeiten“ wird angezeigt.
+
+. Bearbeiten Sie den Namen und die Beschreibung des Ressourcenpools nach Bedarf.
+. Klicken Sie auf *Speichern*.
++
+Der neue Name und die neue Beschreibung werden in der Ressourcenpoolliste angezeigt.
+
+

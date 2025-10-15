@@ -1,0 +1,28 @@
+---
+permalink: health-checker/task_delete_groups.html 
+sidebar: sidebar 
+keywords: delete, groups 
+summary: Sie können eine Gruppe aus Unified Manager löschen, wenn die Gruppe nicht mehr benötigt wird. 
+---
+= Gruppen löschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Gruppe aus Unified Manager löschen, wenn die Gruppe nicht mehr benötigt wird.
+
+.Bevor Sie beginnen
+* Keines der Speicherobjekte (Cluster, SVMs oder Volumes) darf einer Gruppenregel zugeordnet sein, die der Gruppe zugeordnet ist, die Sie löschen möchten.
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Gruppen*.
+. Wählen Sie auf der Registerkarte *Gruppen* die Gruppe aus, die Sie löschen möchten, und klicken Sie dann auf *Löschen*.
+. Bestätigen Sie im Dialogfeld *Warnung* den Löschvorgang mit einem Klick auf *Ja*.
++
+Durch das Löschen einer Gruppe werden die mit der Gruppe verknüpften Gruppenaktionen nicht gelöscht.  Die Zuordnung dieser Gruppenaktionen wird jedoch aufgehoben, nachdem die Gruppe gelöscht wurde.
+
+

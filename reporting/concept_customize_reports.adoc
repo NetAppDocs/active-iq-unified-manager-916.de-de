@@ -1,0 +1,26 @@
+---
+permalink: reporting/concept_customize_reports.html 
+sidebar: sidebar 
+keywords: customize, reports 
+summary: Es gibt viele Möglichkeiten, Ansichten anzupassen, sodass Sie einen Bericht erstellen können, der alle Informationen enthält, die Sie zur Verwaltung Ihrer ONTAP Cluster benötigen. 
+---
+= Berichte anpassen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es gibt viele Möglichkeiten, Ansichten anzupassen, sodass Sie einen Bericht erstellen können, der alle Informationen enthält, die Sie zur Verwaltung Ihrer ONTAP Cluster benötigen.
+
+Beginnen Sie mit einer Standardinventarseite oder einer benutzerdefinierten Ansicht und passen Sie sie dann an, indem Sie Spalten hinzufügen oder entfernen, die Spaltenreihenfolge ändern, die Daten filtern oder nach einer bestimmten Spalte in aufsteigender oder absteigender Reihenfolge sortieren.
+
+Ab Unified Manager 9.8 können Sie die Ansicht auch in Excel herunterladen, um sie mit erweiterten Funktionen anzupassen.  Wenn Sie fertig sind, laden Sie die angepasste Excel-Datei hoch.  Wenn Sie einen Bericht mit dieser Ansicht planen, wird die angepasste Excel-Datei verwendet, um robuste Berichte zu erstellen, die Sie weitergeben können.
+
+Weitere Informationen zum Anpassen von Berichten mit Excel finden Sie unter _Beispielberichte zu Microsoft Excel_.
+
+[NOTE]
+====
+Zum Verwalten von Berichten müssen Sie über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+====

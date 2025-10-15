@@ -1,0 +1,54 @@
+---
+permalink: config/reference_definitions_of_user_roles.html 
+sidebar: sidebar 
+keywords: definitions, user roles 
+summary: Der Wartungsbenutzer oder Anwendungsadministrator weist jedem Benutzer eine Rolle zu.  Jede Rolle beinhaltet bestimmte Privilegien.  Der Umfang der Aktivitäten, die Sie in Unified Manager ausführen können, hängt von der Ihnen zugewiesenen Rolle und den mit der Rolle verbundenen Berechtigungen ab. 
+---
+= Definitionen von Benutzerrollen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der Wartungsbenutzer oder Anwendungsadministrator weist jedem Benutzer eine Rolle zu.  Jede Rolle beinhaltet bestimmte Privilegien.  Der Umfang der Aktivitäten, die Sie in Unified Manager ausführen können, hängt von der Ihnen zugewiesenen Rolle und den mit der Rolle verbundenen Berechtigungen ab.
+
+Unified Manager umfasst die folgenden vordefinierten Benutzerrollen:
+
+* *Operator*
++
+Zeigt Speichersysteminformationen und andere von Unified Manager erfasste Daten an, einschließlich Verlaufsdaten und Kapazitätstrends.  Mit dieser Rolle kann der Speicherbetreiber die Ereignisse anzeigen, zuordnen, bestätigen, beheben und Notizen hinzufügen.
+
+* *Speicheradministrator*
++
+Konfiguriert Speicherverwaltungsvorgänge innerhalb von Unified Manager.  Mit dieser Rolle kann der Speicheradministrator Schwellenwerte konfigurieren und Warnmeldungen sowie andere speicherverwaltungsspezifische Optionen und Richtlinien erstellen.
+
+* *Anwendungsadministrator*
++
+Konfiguriert Einstellungen, die nichts mit der Speicherverwaltung zu tun haben.  Diese Rolle ermöglicht die Verwaltung von Benutzern, Sicherheitszertifikaten, Datenbankzugriff und Verwaltungsoptionen, einschließlich Authentifizierung, SMTP, Netzwerk und AutoSupport.
+
++
+[NOTE]
+====
+Wenn Unified Manager auf Linux-Systemen installiert wird, erhält der erste Benutzer mit der Rolle des Anwendungsadministrators automatisch den Namen „umadmin“.
+
+====
+* *Integrationsschema*
++
+Diese Rolle ermöglicht schreibgeschützten Zugriff auf Unified Manager-Datenbankansichten zur Integration von Unified Manager mit OnCommand Workflow Automation (WFA).
+
+* *Berichtsschema*
++
+Diese Rolle ermöglicht schreibgeschützten Zugriff auf Berichte und andere Datenbankansichten direkt aus der Unified Manager-Datenbank.  Zu den einsehbaren Datenbanken gehören:
+
++
+** netapp_model_view
+** netapp_performance
+** ocum
+** ocum_report
+** ocum_report_birt
+** opm
+** Waagenmonitor
+
+
+

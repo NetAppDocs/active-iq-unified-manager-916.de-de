@@ -1,0 +1,58 @@
+---
+permalink: storage-mgmt/task_create_and_edit_psls.html 
+sidebar: sidebar 
+keywords: create, edit, performance, service, Levels 
+summary: Wenn die systemdefinierten Performance-Service-Levels nicht Ihren Workload-Anforderungen entsprechen, können Sie Ihre eigenen Performance-Service-Levels erstellen, die für Ihre Workloads optimiert sind. 
+---
+= Erstellen und Bearbeiten von Performance Service Levels
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn die systemdefinierten Performance-Service-Levels nicht Ihren Workload-Anforderungen entsprechen, können Sie Ihre eigenen Performance-Service-Levels erstellen, die für Ihre Workloads optimiert sind.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ verfügen.
+* Der Name des Performance Service Level muss eindeutig sein und Sie dürfen die folgenden reservierten Schlüsselwörter nicht verwenden:
++
+`Prime`, `Extreme` , `Performance` , `Value` , `Unassigned` , `Learning` , `Idle` , `Default` , Und `None` .
+
+
+
+Sie erstellen und bearbeiten benutzerdefinierte Performance-Service-Levels auf der Seite „Performance-Service-Levels“, indem Sie die Service-Level-Ziele definieren, die Sie für die Anwendungen benötigen, die auf den Speicher zugreifen.
+
+[NOTE]
+====
+Sie können einen Performance-Servicelevel nicht ändern, wenn er aktuell einer Arbeitslast zugewiesen ist.
+
+====
+.Schritte
+. Wählen Sie im linken Navigationsbereich unter *Einstellungen* *Richtlinien* > *Leistungsservicelevel* aus.
+. Klicken Sie auf der Seite *Performance-Service-Levels* auf die entsprechende Schaltfläche, je nachdem, ob Sie ein neues Performance-Service-Level erstellen oder ein vorhandenes Performance-Service-Level bearbeiten möchten.
++
+|===
+| Zu... | Befolgen Sie diese Schritte... 
+
+
+ a| 
+Erstellen eines neuen Performance-Service-Levels
+ a| 
+Klicken Sie auf *Hinzufügen*.
+
+
+
+ a| 
+Bearbeiten eines vorhandenen Performance-Service-Levels
+ a| 
+Wählen Sie ein vorhandenes Performance-Service-Level aus und klicken Sie dann auf *Bearbeiten*.
+
+|===
++
+Die Seite zum Hinzufügen oder Bearbeiten eines Performance-Service-Levels wird angezeigt.
+
+. Passen Sie das Performance-Service-Level an, indem Sie die Leistungsziele angeben, und klicken Sie dann auf *Senden*, um das Performance-Service-Level zu speichern.
+
+
+Sie können das neue oder geänderte Performance-Service-Level auf Workloads (LUNs, NFS-Dateifreigaben, CIFS-Freigaben) von der Seite „Workloads“ oder beim Bereitstellen eines neuen Workloads anwenden.

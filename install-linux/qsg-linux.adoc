@@ -1,0 +1,74 @@
+---
+permalink: install-linux/qsg-linux.html 
+sidebar: sidebar 
+keywords: quick start guide, getting started, QSG, Linux QSG, RHEL QSG, quick installation 
+summary: Kurzanleitung für Unified Manager auf der Linux-Plattform. 
+---
+= Schnellstartanleitung für Linux-Installationen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das Installationspaket herunterladen und Unified Manager auf einer physischen oder virtuellen Red Hat Enterprise Linux-Plattform installieren.
+
+
+
+== Systemanforderungen
+
+* Betriebssystem: Red Hat Enterprise Linux Versionen 8.x und 9.4, basierend auf der x86_64-Architektur, installiert mit der Basisumgebung „Server mit GUI“ aus der Option *Softwareauswahl* des Betriebssysteminstallationsprogramms
+* RAM: 12 GB, CPU: 9572 MHz gesamt
+* Freier Speicherplatz: 100 GB Speicherplatz im `/opt/netapp/data` Verzeichnis, 50 GB in der Root-Partition.  Für separat montierte `/opt` Und `/var/log` Verzeichnisse, stellen Sie sicher, dass `/opt` hat 15 GB, `/var/log` hat 16 GB und `/tmp` hat 10 GB freien Speicherplatz.
+
+
+Ausführliche Systemanforderungen und Informationen zur Installation des Produkts an einem sicheren Standort finden Sie imlink:../install-linux/concept_requirements_for_install_unified_manager.html["Voraussetzungen für die Installation von Unified Manager"] und dielink:http://mysupport.netapp.com/matrix["Interoperabilitätsmatrix"] .
+
+
+
+== Installieren Sie Active IQ Unified Manager
+
+
+
+=== Laden Sie das Installationsprogramm herunter
+
+. Laden Sie die `ActiveIQUnifiedManager-<version>.zip` Installationspaket zusammen mit Code Signing-Zertifikat(`.pem` ) und digitale Signatur(`.sig` ) .
+. Führen Sie in dem Verzeichnis, in das Sie die Installationsdatei heruntergeladen haben, Folgendes aus:
++
+`# unzip ActiveIQUnifiedManager-<version>.zip`
+
+
+
+
+
+=== Integrität überprüfen
+
+Führen Sie die folgenden Befehle aus, um die Integrität des Installationspakets zu überprüfen:
+
+* Laufen `openssl x509 -pubkey -noout -in AIQUM-RHEL-CLIENT-INTER-ROOT.pem > <public_key_file_name>` um eine Datei mit dem öffentlichen Schlüssel aus dem Codesignaturzertifikat zu erstellen.
+* Laufen `openssl dgst -sha256 -verify <public_key_file_name> -signature <signature_file_name> ActiveIQUnifiedManager-<version>.zip` um die Signatur des Installationspakets zu überprüfen.
+
+
+
+
+=== Überprüfen der Repository-Konfiguration
+
+Die Verfahren zum Konfigurieren eines Red Hat Enterprise Linux-Repository sind standortspezifisch.  Sie können die `pre_install_check.sh` im Installationspaket enthaltenes Skript zum Überprüfen der Konfiguration Ihres Betriebssystems.  Wenn Ihr System mit dem Internet verbunden ist, erhalten Sie automatisch Anweisungen zum Einrichten des Red Hat Enterprise Linux-Repository.
+
+`# sudo ./pre_install_check.sh`
+
+
+
+=== Unified Manager installieren
+
+Unified Manager verwendet die `yum` Dienstprogramm zum Installieren der Software und aller abhängigen Software.  Da es unterschiedliche Images von Red Hat Enterprise Linux gibt, hängen die installierten Pakete von der in den Images vorhandenen Software ab.  Der `yum` Das Dienstprogramm ermittelt die abhängigen Softwarepakete für die Installation.  Wenn Sie weitere Informationen zu den abhängigen Softwarepaketen benötigen, lesen Sie dielink:../install-linux/reference_red_hat_software_and_installation_requirements.html["Linux-Software und Installationsanforderungen"] .
+
+Um Unified Manager zu installieren, führen Sie den folgenden Befehl entweder als Root-Benutzer oder mit `sudo` , aus dem Verzeichnis, in dem die Installationsdatei entpackt wurde:
+
+`# yum install netapp-um<version>.x86_64.rpm`
+
+oder
+
+`% sudo yum install netapp-um<version>.x86_64.rpm`
+
+Am Ende der Installation werden die Informationen zur Verbindung mit der Unified Manager-Web-Benutzeroberfläche angezeigt.  Wenn Sie keine Verbindung zur Web-Benutzeroberfläche herstellen können, lesen Sie die `README` Weitere Informationen zu den Einschränkungen für Port 443 finden Sie in der mit der Software gelieferten Datei.

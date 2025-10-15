@@ -1,0 +1,24 @@
+---
+permalink: config/task_configure_audit_logs.html 
+sidebar: sidebar 
+keywords: configure, audit logs 
+summary: Sie können die Schaltfläche „Konfigurieren“ im Abschnitt „Audit-Protokolle“ verwenden, um die fortlaufende Richtlinie für Audit-Protokolldateien zu konfigurieren und auch die Remote-Protokollierung für die Audit-Protokolle zu aktivieren. 
+---
+= Konfigurieren von Überwachungsprotokollen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Schaltfläche *Konfigurieren* im Abschnitt „Audit-Protokolle“ verwenden, um die fortlaufende Richtlinie für Audit-Protokolldateien zu konfigurieren und auch die Remote-Protokollierung für die Audit-Protokolle zu aktivieren.
+
+Sie können die Werte für *MAXIMALE DATEIGRÖSSE* und *AUFBEWAHRUNGSTAGE DES PRÜFPROTOKOLLS* entsprechend der gewünschten Menge und Häufigkeit der Daten festlegen, die Sie im System speichern möchten.  Der Wert im Feld *TOTAL AUDIT LOG SIZE* ist die Größe der gesamten im System vorhandenen Audit-Protokolldaten.  Die Rollover-Richtlinie wird durch die Werte in den Feldern *AUFBEWAHRUNGSZEIT DES AUDIT-LOGS*, *MAXIMALE DATEIGRÖSSE* und *GESAMTGRÖSSE DES AUDIT-LOGS* bestimmt.  Wenn die Größe der Audit-Protokollsicherung den in *TOTAL AUDIT LOG SIZE* konfigurierten Wert erreicht, wird die zuerst archivierte Datei gelöscht.  Dies bedeutet, dass die älteste Datei gelöscht wird.  Der Dateieintrag ist jedoch weiterhin in der Datenbank vorhanden und mit „Rollover Delete“ gekennzeichnet.  Der Wert *AUFBEWAHRUNGSTAGE DES AUDIT-LOGS* gibt die Anzahl der Tage an, die die Audit-Log-Dateien aufbewahrt werden.  Alle Dateien, die älter sind als der in diesem Feld festgelegte Wert, werden übernommen.
+
+.Schritte
+. Klicken Sie auf *Audit-Protokolle* > > *Konfigurieren*.
+. Geben Sie Werte für *MAXIMALE DATEIGRÖSSE*, *GESAMTGRÖSSE DES AUDIT-PROTOKOLLS* und *AUFBEWAHRUNGSTAGE DES AUDIT-PROTOKOLLS* ein.
++
+Wenn Sie die Remote-Protokollierung aktivieren möchten, sollten Sie *Remote-Protokollierung aktivieren* auswählen.  /// 2025-6-11, OTHERDOC-133
+
+

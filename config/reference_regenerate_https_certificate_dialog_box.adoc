@@ -1,0 +1,68 @@
+---
+permalink: config/reference_regenerate_https_certificate_dialog_box.html 
+sidebar: sidebar 
+keywords: regenerate, https certificate, dialog, box 
+summary: Im Dialogfeld „HTTPS-Zertifikat neu generieren“ können Sie die Sicherheitsinformationen anpassen und dann mit diesen Informationen ein neues HTTPS-Zertifikat generieren. 
+---
+= Dialogfeld „HTTPS-Zertifikat neu generieren“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „HTTPS-Zertifikat neu generieren“ können Sie die Sicherheitsinformationen anpassen und dann mit diesen Informationen ein neues HTTPS-Zertifikat generieren.
+
+Auf dieser Seite werden die aktuellen Zertifikatsinformationen angezeigt.
+
+Mit der Auswahl „Mithilfe der aktuellen Zertifikatsattribute neu generieren“ und „Aktualisieren der aktuellen Zertifikatsattribute“ können Sie das Zertifikat mit den aktuellen Informationen neu generieren oder ein Zertifikat mit neuen Informationen erstellen.
+
+* *Allgemeiner Name*
++
+Erforderlich. Der vollqualifizierte Domänenname (FQDN), den Sie sichern möchten.
+
++
+Verwenden Sie in Hochverfügbarkeitskonfigurationen von Unified Manager die virtuelle IP-Adresse.
+
+* *E-Mail*
++
+Optional. Eine E-Mail-Adresse zur Kontaktaufnahme mit Ihrer Organisation; normalerweise die E-Mail-Adresse des Zertifikatadministrators oder der IT-Abteilung.
+
+* *Unternehmen*
++
+Optional. Normalerweise der eingetragene Name Ihres Unternehmens.
+
+* *Abteilung*
++
+Optional. Der Name der Abteilung in Ihrem Unternehmen.
+
+* *Stadt*
++
+Optional. Der Stadtstandort Ihres Unternehmens.
+
+* *Zustand*
++
+Optional. Der Bundesstaat oder die Provinz, in der sich Ihr Unternehmen befindet (nicht abgekürzt).
+
+* *Land*
++
+Optional. Der Standort Ihres Unternehmens.  Dies ist normalerweise ein zweistelliger ISO-Code des Landes.
+
+* *Alternative Namen*
++
+Erforderlich. Zusätzliche, nicht primäre Domänennamen, die zusätzlich zu den vorhandenen Localhost- oder anderen Netzwerkadressen für den Zugriff auf diesen Server verwendet werden können.  Trennen Sie jeden alternativen Namen durch ein Komma.
+
++
+Aktivieren Sie das Kontrollkästchen „Lokale Identifizierungsinformationen ausschließen (z. B. localhost)“, wenn Sie die lokalen Identifizierungsinformationen aus dem Feld „Alternative Namen“ im Zertifikat entfernen möchten.  Wenn dieses Kontrollkästchen aktiviert ist, wird im Feld „Alternative Namen“ nur das verwendet, was Sie in das Feld eingeben.  Wenn dieses Feld leer gelassen wird, enthält das resultierende Zertifikat überhaupt kein Feld für alternative Namen.
+
+* *SCHLÜSSELGRÖSSE (SCHLÜSSELALGORITHMUS: RSA)*
++
+Der Schlüsselalgorithmus ist auf RSA eingestellt.  Sie können eine der Schlüsselgrößen auswählen: 2048, 3072 oder 4096 Bit.  Die Standardschlüsselgröße ist auf 2048 Bit eingestellt.
+
+* *GÜLTIGKEITSDAUER*
++
+Die Standardgültigkeitsdauer beträgt 397 Tage.  Wenn Sie ein Upgrade von einer früheren Version durchgeführt haben, bleibt die Gültigkeit des vorherigen Zertifikats möglicherweise unverändert.
+
+
+
+Weitere Informationen finden Sie unter link:../config/task_generate_an_https_security_certificate_ocf.html["Generieren von HTTPS-Zertifikaten"].

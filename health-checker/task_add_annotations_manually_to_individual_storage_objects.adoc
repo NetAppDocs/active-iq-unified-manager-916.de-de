@@ -1,0 +1,55 @@
+---
+permalink: health-checker/task_add_annotations_manually_to_individual_storage_objects.html 
+sidebar: sidebar 
+keywords: add, annotations, manually, individual, storage objects 
+summary: Sie können ausgewählte Volumes, Cluster und SVMs manuell mit Anmerkungen versehen, ohne Anmerkungsregeln zu verwenden.  Sie können ein einzelnes Speicherobjekt oder mehrere Speicherobjekte mit Anmerkungen versehen und die erforderliche Name-Wert-Paarkombination für die Anmerkung angeben. 
+---
+= Fügen Sie einzelnen Speicherobjekten manuell Anmerkungen hinzu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ausgewählte Volumes, Cluster und SVMs manuell mit Anmerkungen versehen, ohne Anmerkungsregeln zu verwenden.  Sie können ein einzelnes Speicherobjekt oder mehrere Speicherobjekte mit Anmerkungen versehen und die erforderliche Name-Wert-Paarkombination für die Anmerkung angeben.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+.Schritte
+. Navigieren Sie zu den Speicherobjekten, die Sie mit Anmerkungen versehen möchten:
++
+[cols="2*"]
+|===
+| So fügen Sie eine Anmerkung hinzu zu... | Machen Sie Folgendes... 
+
+
+ a| 
+Cluster
+ a| 
+.. Klicken Sie auf *Speicher* > *Cluster*.
+.. Wählen Sie einen oder mehrere Cluster aus.
+
+
+
+
+ a| 
+Bände
+ a| 
+.. Klicken Sie auf *Speicher* > *Volumes*.
+.. Wählen Sie ein oder mehrere Volumes aus.
+
+
+
+
+ a| 
+SVMs
+ a| 
+.. Klicken Sie auf *Speicher* > *SVMs*.
+.. Wählen Sie eine oder mehrere SVMs aus.
+
+
+|===
+. Klicken Sie auf *Kommentieren* und wählen Sie ein Name-Wert-Paar aus.
+. Klicken Sie auf *Übernehmen*.
+

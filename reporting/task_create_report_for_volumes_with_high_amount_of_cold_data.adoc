@@ -1,0 +1,45 @@
+---
+permalink: reporting/task_create_report_for_volumes_with_high_amount_of_cold_data.html 
+sidebar: sidebar 
+keywords: display, volumes, cold, data, non-fabricpool, aggregate, identify 
+summary: Sie können einen Bericht erstellen, um Volumes mit einer großen Menge kalter Daten auf einem Nicht- FabricPool -Aggregat anzuzeigen.  Dies kann Ihnen dabei helfen, Volumes zu identifizieren, die in ein FabricPool Aggregat verschoben werden sollten. 
+---
+= Erstellen Sie einen Bericht, um Volumes mit einer großen Menge kalter Daten auf einem Aggregat anzuzeigen, das nicht FabricPool-fähig ist.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um Volumes mit einer großen Menge kalter Daten auf einem Nicht- FabricPool -Aggregat anzuzeigen.  Dies kann Ihnen dabei helfen, Volumes zu identifizieren, die in ein FabricPool Aggregat verschoben werden sollten.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Führen Sie die folgenden Schritte aus, um eine benutzerdefinierte Ansicht für Volumes mit einer großen Menge kalter Daten auf einem nicht FabricPool-fähigen Aggregat zu erstellen und dann die Generierung eines Berichts für diese Ansicht zu planen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Volumes*.
+. Wählen Sie im Menü „Ansicht“ die Option „Leistung“ > „Alle Volumes“ aus.
+. Wählen Sie *Anzeigen/Ausblenden*, um sicherzustellen, dass die Spalte „Datenträgertyp“ in der Ansicht angezeigt wird.
++
+Fügen Sie weitere Spalten hinzu oder entfernen Sie sie, um eine für Ihren Bericht wichtige Ansicht zu erstellen.
+
+. Ziehen Sie die Spalte „Datenträgertyp“ in die Nähe der Spalte „Kalte Daten“.
+. Klicken Sie auf das Filtersymbol, fügen Sie den folgenden Filter hinzu und klicken Sie dann auf *Filter anwenden*:
++
+** Kalte Daten größer als 100 GB
+** Der Datenträgertyp enthält SSD
+
+
+. Klicken Sie oben auf die Spalte „Datenträgertyp“, um die Volumes nach Datenträgertyp zu sortieren, sodass der Datenträgertyp SSD (FabricPool) unten angezeigt wird.
+. Speichern Sie die Ansicht unter einem bestimmten Namen, der widerspiegelt, was die Ansicht anzeigt, z. B. „`Cold data vols not FabricPool`“.
+. Klicken Sie auf der Inventarseite auf die Schaltfläche *Geplante Berichte*.
+. Geben Sie einen Namen für den Berichtszeitplan ein und füllen Sie die anderen Berichtsfelder aus. Klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""] ) am Ende der Zeile.
++
+Der Bericht wird sofort testweise versendet.  Anschließend wird der Bericht generiert und in der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Anhand der im Bericht angezeigten Ergebnisse können Sie Volumes finden, die sich gut für die Verschiebung in FabricPool Aggregate eignen.

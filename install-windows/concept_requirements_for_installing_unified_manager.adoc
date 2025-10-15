@@ -1,0 +1,24 @@
+---
+permalink: install-windows/concept_requirements_for_installing_unified_manager.html 
+sidebar: sidebar 
+keywords: requirements, install, unified manager 
+summary: Stellen Sie vor Beginn des Installationsvorgangs sicher, dass der Server, auf dem Sie Unified Manager installieren möchten, die spezifischen Software-, Hardware-, CPU- und Speicheranforderungen erfüllt. 
+---
+= Voraussetzungen für die Installation von Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Stellen Sie vor Beginn des Installationsvorgangs sicher, dass der Server, auf dem Sie Unified Manager installieren möchten, die spezifischen Software-, Hardware-, CPU- und Speicheranforderungen erfüllt.
+
+NetApp unterstützt keine Änderungen am Unified Manager-Anwendungscode.  Wenn Sie Sicherheitsmaßnahmen auf dem Unified Manager-Server anwenden müssen, sollten Sie diese Änderungen am Betriebssystem vornehmen, auf dem Unified Manager installiert ist.
+
+Weitere Einzelheiten zum Anwenden von Sicherheitsmaßnahmen auf den Unified Manager-Server finden Sie im Knowledge Base-Artikel.
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/Active_IQ_Unified_Manager/Supportability_for_Security_Measures_applied_to_Active_IQ_Unified_Manager_for_Clustered_Data_ONTAP["Unterstützung für Sicherheitsmaßnahmen, die auf Active IQ Unified Manager für Clustered Data ONTAP angewendet werden"^]
+
+*Verwandte Informationen*
+
+https://mysupport.netapp.com/matrix["NetApp Interoperabilitätsmatrix-Tool"^]

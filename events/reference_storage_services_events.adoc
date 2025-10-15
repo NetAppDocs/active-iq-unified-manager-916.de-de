@@ -1,0 +1,84 @@
+---
+permalink: events/reference_storage_services_events.html 
+sidebar: sidebar 
+keywords: storage, services, events, impact area, configuration, protection 
+summary: Speicherdienstereignisse liefern Ihnen Informationen zur Erstellung und zum Abonnement von Speicherdiensten, sodass Sie diese auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad. 
+---
+= Speicherdienstereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Speicherdienstereignisse liefern Ihnen Informationen zur Erstellung und zum Abonnement von Speicherdiensten, sodass Sie diese auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad.
+
+
+
+== Wirkungsbereich: Konfiguration
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+Speicherdienst erstellt (Nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Lagerservice
+ a| 
+Information
+
+
+
+ a| 
+Abonnierter Speicherdienst (Nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Lagerservice
+ a| 
+Information
+
+
+
+ a| 
+Speicherdienst abgemeldet (Nicht zutreffend)
+ a| 
+Ereignis
+ a| 
+Lagerservice
+ a| 
+Information
+
+|===
+
+
+== Aufprallbereich: Schutz
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+Unerwartete Löschung der verwalteten SnapMirror -BeziehungocumEvtStorageServiceUnsupportedRelationshipDeletion
+ a| 
+Risiko
+ a| 
+Lagerservice
+ a| 
+Warnung
+
+
+
+ a| 
+Unerwartete Löschung des Storage Service Member Volumes (ocumEvtStorageServiceUnexpectedVolumeDeletion)
+ a| 
+Vorfall
+ a| 
+Lagerservice
+ a| 
+Kritisch
+
+|===

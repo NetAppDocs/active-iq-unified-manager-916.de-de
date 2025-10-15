@@ -1,0 +1,33 @@
+---
+permalink: storage-mgmt/task_remove_clusters.html 
+sidebar: sidebar 
+keywords: remove, cluster 
+summary: Sie können einen Cluster über die Seite „Cluster-Setup“ aus Unified Manager entfernen.  Sie können beispielsweise einen Cluster entfernen, wenn die Clustererkennung fehlschlägt oder wenn Sie ein Speichersystem außer Betrieb nehmen möchten. 
+---
+= Cluster entfernen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Cluster über die Seite „Cluster-Setup“ aus Unified Manager entfernen.  Sie können beispielsweise einen Cluster entfernen, wenn die Clustererkennung fehlschlägt oder wenn Sie ein Speichersystem außer Betrieb nehmen möchten.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Diese Aufgabe entfernt den ausgewählten Cluster aus Unified Manager.  Nachdem ein Cluster entfernt wurde, wird er nicht mehr überwacht.  Die beim entfernten Cluster registrierte Instanz von Unified Manager wird ebenfalls vom Cluster abgemeldet.
+
+Durch das Entfernen eines Clusters werden auch alle zugehörigen Speicherobjekte, Verlaufsdaten, Speicherdienste und alle zugehörigen Ereignisse aus Unified Manager gelöscht.  Diese Änderungen werden nach dem nächsten Datenerfassungszyklus auf den Inventarseiten und den Detailseiten angezeigt.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Cluster-Setup*.
+. Wählen Sie auf der Seite „Cluster-Setup“ den Cluster aus, den Sie entfernen möchten, und klicken Sie auf *Entfernen*.
+. Klicken Sie im Meldungsdialogfeld *Datenquelle entfernen* auf *Entfernen*, um die Entfernungsanforderung zu bestätigen.
+
+
+*Verwandte Informationen*
+
+link:../config/task_add_users.html["Benutzer hinzufügen"]
+
+link:../health-checker/task_view_cluster_list_and_details.html["Anzeigen der Clusterliste und Details"]

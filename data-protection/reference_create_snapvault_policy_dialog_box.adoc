@@ -1,0 +1,78 @@
+---
+permalink: data-protection/reference_create_snapvault_policy_dialog_box.html 
+sidebar: sidebar 
+keywords: create, snapvault, policy, dialog box 
+summary: Im Dialogfeld „SnapVault -Richtlinie erstellen“ können Sie eine Richtlinie erstellen, um die Priorität für SnapVault Übertragungen festzulegen.  Sie verwenden Richtlinien, um die Effizienz von Übertragungen vom primären zum sekundären Volume zu maximieren. 
+---
+= Dialogfeld „SnapVault -Richtlinie erstellen“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Dialogfeld „SnapVault -Richtlinie erstellen“ können Sie eine Richtlinie erstellen, um die Priorität für SnapVault Übertragungen festzulegen.  Sie verwenden Richtlinien, um die Effizienz von Übertragungen vom primären zum sekundären Volume zu maximieren.
+
+* *Zielcluster*
++
+Der Name des Clusters, den Sie auf der Registerkarte „SnapVault “ des Dialogfelds „Schutz konfigurieren“ ausgewählt haben.
+
+* *Ziel-SVM*
++
+Der Name der SVM, die Sie auf der Registerkarte „SnapVault “ des Dialogfelds „Schutz konfigurieren“ ausgewählt haben.
+
+* *Richtlinienname*
++
+Der Name, den Sie für die neue Richtlinie angeben.  Richtliniennamen können aus den Zeichen A bis Z, a bis z, 0 bis 9, Punkt (.), Bindestrich (-) und Unterstrich (_) bestehen.
+
+* *Transferpriorität*
++
+Die Priorität, mit der die Übertragung ausgeführt wird.  Sie können entweder „Normal“ oder „Niedrig“ auswählen.  Übertragungsbeziehungen mit Richtlinien, die eine normale Übertragungspriorität festlegen, werden vor denen mit Richtlinien ausgeführt, die eine niedrige Übertragungspriorität festlegen.  Die Standardeinstellung ist „Normal“.
+
+* *Kommentar*
++
+Ein optionales Feld, in dem Sie einen Kommentar mit bis zu 255 Zeichen zur SnapVault -Richtlinie hinzufügen können.
+
+* *Zugriffszeit ignorieren*
++
+Gibt an, ob inkrementelle Übertragungen für Dateien ignoriert werden, bei denen sich nur die Zugriffszeit geändert hat.
+
+* *Replikationsbezeichnung*
++
+Listet in einer Tabelle die Regeln auf, die mit von ONTAP ausgewählten Snapshot-Kopien verknüpft sind, die in einer Richtlinie über ein bestimmtes Replikationslabel verfügen.  Darüber hinaus stehen folgende Informationen und Aktionen zur Verfügung:
+
++
+** Befehlsschaltflächen
++
+Mit den Befehlsschaltflächen können Sie die folgenden Aktionen ausführen:
+
++
+*** Hinzufügen
++
+Ermöglicht Ihnen das Erstellen einer Snapshot-Kopierbezeichnung und einer Aufbewahrungsanzahl.
+
+*** Aufbewahrungsanzahl bearbeiten
++
+Ermöglicht Ihnen, die Aufbewahrungsanzahl für eine vorhandene Snapshot-Kopiebezeichnung zu ändern.  Die Anzahl der Aufbewahrungen muss eine Zahl zwischen 1 und 251 sein.  Die Summe aller Aufbewahrungszahlen für alle Regeln darf 251 nicht überschreiten.
+
+*** Löschen
++
+Ermöglicht Ihnen, eine vorhandene Snapshot-Kopierbezeichnung zu löschen.
+
+
+
+** Snapshot-Kopie-Etikett
++
+Zeigt die Bezeichnung der Snapshot-Kopie an.  Wenn Sie ein oder mehrere Volumes mit derselben lokalen Snapshot-Kopierrichtlinie auswählen, wird für jede Bezeichnung in der Richtlinie ein Eintrag angezeigt.  Wenn Sie mehrere Volumes auswählen, die über zwei oder mehr lokale Snapshot-Kopierrichtlinien verfügen, werden in der Tabelle alle Bezeichnungen aller Richtlinien angezeigt.
+
+** Zeitplan
++
+Zeigt den mit jedem Snapshot-Kopierlabel verknüpften Zeitplan an.  Wenn einem Label mehr als ein Zeitplan zugeordnet ist, werden die Zeitpläne für dieses Label in einer durch Kommas getrennten Liste angezeigt.  Wenn Sie mehrere Volumes mit derselben Bezeichnung, aber unterschiedlichen Zeitplänen auswählen, wird im Zeitplan „Verschiedene“ angezeigt, um darauf hinzuweisen, dass den ausgewählten Volumes mehr als ein Zeitplan zugeordnet ist.
+
+** Zielaufbewahrungsanzahl
++
+Zeigt die Anzahl der Snapshot-Kopien mit der angegebenen Bezeichnung an, die auf dem sekundären SnapVault aufbewahrt werden.  Die Aufbewahrungszahlen für Labels mit mehreren Zeitplänen zeigen die Summe der Aufbewahrungszahlen jedes Label- und Zeitplanpaars an.  Wenn Sie mehrere Volumes mit zwei oder mehr lokalen Snapshot-Kopierrichtlinien auswählen, ist die Aufbewahrungsanzahl leer.
+
+
+
+

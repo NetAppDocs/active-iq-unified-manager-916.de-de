@@ -1,0 +1,28 @@
+---
+permalink: config/task_view_https_security_certificate_ocf.html 
+sidebar: sidebar 
+keywords: view, https, security, certificate 
+summary: Sie können die HTTPS-Zertifikatdetails mit dem abgerufenen Zertifikat in Ihrem Browser vergleichen, um sicherzustellen, dass die verschlüsselte Verbindung Ihres Browsers zu Unified Manager nicht abgefangen wird. 
+---
+= Zeigen Sie das HTTPS-Sicherheitszertifikat an
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die HTTPS-Zertifikatdetails mit dem abgerufenen Zertifikat in Ihrem Browser vergleichen, um sicherzustellen, dass die verschlüsselte Verbindung Ihres Browsers zu Unified Manager nicht abgefangen wird.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Durch Anzeigen des Zertifikats können Sie den Inhalt eines neu generierten Zertifikats überprüfen oder Subject Alt Names (SAN) anzeigen, von denen aus Sie auf Unified Manager zugreifen können.
+
+.Schritt
+. Klicken Sie im linken Navigationsbereich auf *Allgemein* > *HTTPS-Zertifikat*.
++
+Das HTTPS-Zertifikat wird oben auf der Seite angezeigt
+
+
+
+Wenn Sie ausführlichere Informationen zum Sicherheitszertifikat benötigen als die, die auf der Seite „HTTPS-Zertifikat“ angezeigt werden, können Sie das Verbindungszertifikat in Ihrem Browser anzeigen.

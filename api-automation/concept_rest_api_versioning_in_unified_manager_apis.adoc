@@ -1,0 +1,23 @@
+---
+permalink: api-automation/concept_rest_api_versioning_in_unified_manager_apis.html 
+sidebar: sidebar 
+keywords: api, version, active iq, unified, manager 
+summary: 'Die REST-API-URIs in Active IQ Unified Manager geben eine Versionsnummer an.  Beispiel: /v2/datacenter/svm/svms.  Die Versionsnummer v2 in /v2/datacenter/svm/svms gibt die in einer bestimmten Version verwendete API-Version an.  Die Versionsnummer minimiert die Auswirkungen von API-Änderungen auf die Client-Software, indem sie eine Antwort zurücksendet, die der Client verarbeiten kann.' 
+---
+= API-Version im Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die REST-API-URIs in Active IQ Unified Manager geben eine Versionsnummer an.  Zum Beispiel, `/v2/datacenter/svm/svms.` Die Versionsnummer `v2` In `/v2/datacenter/svm/svms` gibt die in einer bestimmten Version verwendete API-Version an.  Die Versionsnummer minimiert die Auswirkungen von API-Änderungen auf die Client-Software, indem sie eine Antwort zurücksendet, die der Client verarbeiten kann.
+
+Der numerische Teil dieser Versionsnummer ist in Bezug auf die Releases inkrementell.  URIs mit einer Versionsnummer bieten eine konsistente Schnittstelle, die die Abwärtskompatibilität in zukünftigen Versionen gewährleistet.  Sie finden die gleichen APIs auch ohne Versionsangabe, zum Beispiel `/datacenter/svm/svms,` die die Basis-APIs ohne Version angeben.  Bei den Basis-APIs handelt es sich immer um die neueste Version der APIs.
+
+[NOTE]
+====
+In der oberen rechten Ecke Ihrer Swagger-Oberfläche können Sie die zu verwendende API-Version auswählen.  Standardmäßig ist die höchste Version ausgewählt.  Es wird empfohlen, die höchste Version einer bestimmten API (in Bezug auf die inkrementelle Ganzzahl) zu verwenden, die in Ihrer Unified Manager-Instanz verfügbar ist.
+
+====
+Bei allen Anfragen müssen Sie explizit die API-Version anfordern, die Sie verwenden möchten.  Wenn die Versionsnummer angegeben ist, gibt der Dienst keine Antwortelemente zurück, für deren Verarbeitung Ihre Anwendung nicht ausgelegt ist.  In REST-Anfragen sollten Sie den Versionsparameter einschließen.  Die früheren Versionen der APIs werden nach einigen Veröffentlichungen möglicherweise verworfen.  In dieser Version `v1` Version der APIs ist veraltet.

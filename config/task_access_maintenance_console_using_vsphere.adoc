@@ -1,0 +1,29 @@
+---
+permalink: config/task_access_maintenance_console_using_vsphere.html 
+sidebar: sidebar 
+keywords: access, maintenance, console, using, vsphere, vm console 
+summary: Wenn die Benutzeroberfläche des Unified Managers nicht in Betrieb ist oder Sie Funktionen ausführen müssen, die in der Benutzeroberfläche nicht verfügbar sind, können Sie auf die Wartungskonsole zugreifen, um Ihre virtuelle Appliance neu zu konfigurieren. 
+---
+= Greifen Sie über die vSphere VM-Konsole auf die Wartungskonsole zu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn die Benutzeroberfläche des Unified Managers nicht in Betrieb ist oder Sie Funktionen ausführen müssen, die in der Benutzeroberfläche nicht verfügbar sind, können Sie auf die Wartungskonsole zugreifen, um Ihre virtuelle Appliance neu zu konfigurieren.
+
+.Bevor Sie beginnen
+* Sie müssen der Wartungsbenutzer sein.
+* Um auf die Wartungskonsole zugreifen zu können, muss die virtuelle Appliance eingeschaltet sein.
+
+
+.Schritte
+. Suchen Sie im vSphere-Client nach der virtuellen Unified Manager-Appliance.
+. Klicken Sie auf die Registerkarte *Konsole*.
+. Klicken Sie in das Konsolenfenster, um sich anzumelden.
+. Melden Sie sich mit Ihrem Benutzernamen und Kennwort bei der Wartungskonsole an.
++
+Nach 15 Minuten Inaktivität werden Sie von der Wartungskonsole abgemeldet.
+
+

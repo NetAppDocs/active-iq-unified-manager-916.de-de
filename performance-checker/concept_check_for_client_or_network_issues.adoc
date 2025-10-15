@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept_check_for_client_or_network_issues.html 
+sidebar: sidebar 
+keywords: check, client, network, issues 
+summary: Wenn die E/A-Anforderungen der mit Volumes in einem Cluster verbundenen Clients steigen, muss der Cluster mehr arbeiten, um die Nachfrage zu erfüllen.  Die erhöhte Nachfrage nach dem Cluster kann zu Konflikten zwischen einer Komponente und deren Nutzung führen, die Latenz der Workloads erhöhen und ein Ereignis im Unified Manager auslösen. 
+---
+= Suchen Sie nach Client- oder Netzwerkproblemen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn die E/A-Anforderungen der mit Volumes in einem Cluster verbundenen Clients steigen, muss der Cluster mehr arbeiten, um die Nachfrage zu erfüllen.  Die erhöhte Nachfrage nach dem Cluster kann zu Konflikten zwischen einer Komponente und deren Nutzung führen, die Latenz der Workloads erhöhen und ein Ereignis im Unified Manager auslösen.
+
+Auf der Seite „Ereignisdetails“ werden im Abschnitt „Systemdiagnose“ die größten Volume-Workloads angezeigt, die die umstrittene Komponente verwenden.  Wenn Sie wissen, welcher Client auf ein bestimmtes Volume zugreift, können Sie zum Client gehen, um festzustellen, ob die Client-Hardware oder eine Anwendung nicht wie erwartet funktioniert oder mehr Arbeit als üblich leistet.  Möglicherweise müssen Sie sich an Ihren Clientadministrator oder Anwendungsanbieter wenden, um Hilfe zu erhalten.
+
+Sie können Ihre Netzwerkinfrastruktur überprüfen, um festzustellen, ob Hardwareprobleme, Engpässe oder konkurrierende Arbeitslasten vorliegen, die möglicherweise dazu geführt haben, dass E/A-Anfragen zwischen dem Cluster und den verbundenen Clients langsamer als erwartet ausgeführt werden.  Möglicherweise müssen Sie sich an Ihren Netzwerkadministrator wenden, um Hilfe zu erhalten.

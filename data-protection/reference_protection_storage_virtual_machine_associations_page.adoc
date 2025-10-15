@@ -1,0 +1,100 @@
+---
+permalink: data-protection/reference_protection_storage_virtual_machine_associations_page.html 
+sidebar: sidebar 
+keywords: svm, association, page 
+summary: Auf der Seite „Storage-VM-Zuordnung“ können Sie vorhandene Storage-VM-Zuordnungen zwischen Quell- und Ziel-Storage-VMs anzeigen. 
+---
+= Grundlegendes zu Storage-VM-Zuordnungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei Zuordnungen virtueller Speichermaschinen (Storage-VMs) handelt es sich um Zuordnungen von einer Quell-Storage-VM zu einer Ziel-Storage-VM, die von Partneranwendungen zur Ressourcenauswahl und Bereitstellung sekundärer Volumes verwendet werden.
+
+Es werden Verknüpfungen zwischen einer Quell-Speicher-VM und einer Ziel-Speicher-VM erstellt, unabhängig davon, ob es sich bei der Ziel-Speicher-VM um ein sekundäres oder ein tertiäres Ziel handelt.  Sie können keine sekundäre Zielspeicher-VM als Quelle verwenden, um eine Zuordnung zu einer tertiären Zielspeicher-VM herzustellen.
+
+Als Anwendungsadministrator oder Speicheradministrator können Sie die Speicher-VM-Zuordnungen in Ihrer Umgebung auf der Seite *Schutz* > *Speicher-VM-Zuordnungen* anzeigen.
+
+Sie können SVMs auf drei Arten zuordnen:
+
+* *Beliebige Speicher-VM zuordnen*: Sie können eine Zuordnung zwischen jeder primären Quell-Speicher-VM und einer oder mehreren Ziel-SVMs erstellen.  Dies bedeutet, dass alle vorhandenen SVMs, die derzeit Schutz benötigen, sowie alle SVMs, die in Zukunft erstellt werden, mit den angegebenen Ziel-SVMs verknüpft werden.  Beispielsweise möchten Sie möglicherweise Anwendungen aus mehreren unterschiedlichen Quellen an unterschiedlichen Standorten auf einer oder mehreren Ziel-SVMs an einem Standort sichern.
+* *Eine bestimmte Speicher-VM zuordnen*: Sie können eine Zuordnung zwischen einer bestimmten Quell-Speicher-VM und einer oder mehreren bestimmten Ziel-SVMs erstellen.  Wenn Sie beispielsweise Speicherdienste für viele Clients bereitstellen, deren Daten voneinander getrennt sein müssen, können Sie diese Option wählen, um eine bestimmte Quellspeicher-VM einer bestimmten Zielspeicher-VM zuzuordnen, die nur diesem Client zugewiesen ist.
+* *Mit einer externen Speicher-VM verknüpfen*: Sie können eine Verknüpfung zwischen einer Quellspeicher-VM und einem externen flexiblen Volume einer Zielspeicher-VM erstellen.
+
+
+
+
+== Erstellen von Speicher-VM-Zuordnungen
+
+Der Assistent „Zuordnungen virtueller Speichermaschinen erstellen“ ermöglicht Partnerschutzanwendungen, eine Quellspeicher-VM mit einer Zielspeicher-VM zur Verwendung mit SnapMirror und SnapVault -Beziehungen zu verknüpfen.  Partneranwendungen verwenden diese Zuordnungen zum Zeitpunkt der ersten Bereitstellung von Zielvolumes, um zu bestimmen, welche Ressourcen ausgewählt werden sollen.dd
+
+.Bevor Sie beginnen
+* Die Speicher-VM, die Sie zuordnen, muss bereits vorhanden sein.
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Für jede Quellspeicher-VM und jeden Beziehungstyp können Sie auf jedem Zielcluster nur eine Zielspeicher-VM auswählen.
+
+Das Ändern von Zuordnungen mithilfe der Lösch- und Erstellungsfunktionen wirkt sich nur auf zukünftige Bereitstellungsvorgänge aus.  Vorhandene Zielvolumes werden nicht verschoben.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Schutz* > *Speicher-VM-Zuordnungen*.
+. Klicken Sie auf der Seite *Storage-VM-Zuordnungen* auf *Erstellen*.
++
+Der Assistent *Zuordnungen virtueller Speichermaschinen erstellen* wird gestartet.
+
+. Wählen Sie eine der folgenden Quellen:
++
+** *Beliebig*
++
+Wählen Sie diese Option, wenn Sie eine Verknüpfung zwischen einer beliebigen primären Speicher-VM-Quelle und einer oder mehreren Ziel-Speicher-VMs erstellen möchten.  Dies bedeutet, dass alle vorhandenen Speicher-VMs, die derzeit geschützt werden müssen, sowie alle Speicher-VMs, die in Zukunft erstellt werden, mit der angegebenen Ziel-Speicher-VM verknüpft werden.  Beispielsweise möchten Sie möglicherweise Anwendungen aus mehreren unterschiedlichen Quellen an unterschiedlichen Standorten auf einer oder mehreren Zielspeicher-VMs an einem Standort sichern.
+
+** *Einzel*
++
+Wählen Sie diese Option, wenn Sie eine bestimmte Quell-Speicher-VM auswählen möchten, die mit einer oder mehreren Ziel-Speicher-VMs verknüpft ist.  Wenn Sie beispielsweise Speicherdienste für viele Clients bereitstellen, deren Daten voneinander getrennt sein müssen, wählen Sie diese Option, um eine bestimmte Speicher-VM-Quelle einem bestimmten Speicher-VM-Ziel zuzuordnen, das nur diesem Client zugewiesen ist.
+
+** *Keine (Extern)*
++
+Wählen Sie diese Option, wenn Sie eine Zuordnung zwischen einer Quellspeicher-VM und einem externen flexiblen Volume einer Zielspeicher-VM erstellen möchten.
+
+
+
+. Wählen Sie einen oder beide Schutzbeziehungstypen aus, die Sie erstellen möchten:
++
+** * SnapMirror*
+** * SnapVault*
+
+
+. Klicken Sie auf *Weiter*.
+. Wählen Sie ein oder mehrere Speicher-VM-Schutzziele aus.
+. Klicken Sie auf *Fertig*.
+
+
+
+
+== Speicher-VM-Zuordnungen löschen
+
+Sie können Speicher-VM-Zuordnungen für Partneranwendungen löschen, um die sekundäre Bereitstellungsbeziehung zwischen Quell- und Ziel-Speicher-VM zu entfernen. Dies können Sie beispielsweise tun, wenn die Ziel-Speicher-VM voll ist und Sie neue Speicher-VM-Schutzzuordnungen erstellen möchten.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Die Schaltfläche *Löschen* ist deaktiviert, bis mindestens eine Speicher-VM-Zuordnung ausgewählt ist.  Das Ändern von Zuordnungen mithilfe der Lösch- und Erstellungsfunktionen wirkt sich nur auf zukünftige Bereitstellungsvorgänge aus; vorhandene Zielvolumes werden dadurch nicht verschoben.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Schutz* > *Speicher-VM-Zuordnungen*.
+. Wählen Sie mindestens eine Speicher-VM-Zuordnung aus.
++
+Die Schaltfläche *Löschen* ist aktiviert.
+
+. Klicken Sie auf *Löschen*.
++
+Es wird ein Warndialogfeld angezeigt.
+
+. Klicken Sie auf *Ja*, um fortzufahren.
++
+Die ausgewählte Speicher-VM-Zuordnung wird aus der Liste entfernt.
+
+

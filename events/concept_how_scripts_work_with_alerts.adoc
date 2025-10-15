@@ -1,0 +1,52 @@
+---
+permalink: events/concept_how_scripts_work_with_alerts.html 
+sidebar: sidebar 
+keywords: scripts, work, alerts 
+summary: Sie können Ihrem Skript eine Warnung zuordnen, sodass das Skript ausgeführt wird, wenn für ein Ereignis in Unified Manager eine Warnung ausgelöst wird.  Sie können die Skripts verwenden, um Probleme mit Speicherobjekten zu beheben oder zu ermitteln, welche Speicherobjekte die Ereignisse generieren. 
+---
+= So funktionieren Skripte mit Warnungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Ihrem Skript eine Warnung zuordnen, sodass das Skript ausgeführt wird, wenn für ein Ereignis in Unified Manager eine Warnung ausgelöst wird.  Sie können die Skripts verwenden, um Probleme mit Speicherobjekten zu beheben oder zu ermitteln, welche Speicherobjekte die Ereignisse generieren.
+
+Wenn für ein Ereignis in Unified Manager eine Warnung generiert wird, wird eine Warn-E-Mail an die angegebenen Empfänger gesendet.  Wenn Sie eine Warnung mit einem Skript verknüpft haben, wird das Skript ausgeführt.  Die Einzelheiten zu den an das Skript übergebenen Argumenten können Sie der Warn-E-Mail entnehmen.
+
+[NOTE]
+====
+Wenn Sie ein benutzerdefiniertes Skript erstellt und es mit einer Warnung für einen bestimmten Ereignistyp verknüpft haben, werden Aktionen basierend auf Ihrem benutzerdefinierten Skript für diesen Ereignistyp ausgeführt und die Aktionen *Fix it* sind standardmäßig auf der Seite „Verwaltungsaktionen“ oder im Unified Manager-Dashboard nicht verfügbar.
+
+====
+Das Skript verwendet die folgenden Argumente zur Ausführung:
+
+* `-eventID`
+* -`eventName`
+* -`eventSeverity`
+* -`eventSourceID`
+* -`eventSourceName`
+* -`eventSourceType`
+* -`eventState`
+* -`eventArgs`
+
+
+Sie können die Argumente in Ihren Skripten verwenden und zugehörige Ereignisinformationen sammeln oder Speicherobjekte ändern.
+
+
+
+== Beispiel zum Abrufen von Argumenten aus Skripten
+
+[listing]
+----
+`print "$ARGV[0] : $ARGV[1]\n"`
+`print "$ARGV[7] : $ARGV[8]\n"`
+----
+Wenn eine Warnung generiert wird, wird dieses Skript ausgeführt und die folgende Ausgabe angezeigt:
+
+[listing]
+----
+-`eventID : 290`
+-`eventSourceID : 4138`
+----

@@ -1,0 +1,14 @@
+---
+permalink: storage-mgmt/concept_about_quotas.html 
+sidebar: sidebar 
+keywords: about, quotas 
+summary: Kontingente bieten eine Möglichkeit, den Speicherplatz und die Anzahl der von einem Benutzer, einer Gruppe oder einem Qtree verwendeten Dateien einzuschränken oder zu verfolgen.  Sie geben Kontingente mithilfe der Datei /etc/quotas an.  Kontingente werden auf ein bestimmtes Volume oder einen bestimmten Qtree angewendet. 
+---
+= Informationen zu Kontingenten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Kontingente bieten eine Möglichkeit, den Speicherplatz und die Anzahl der von einem Benutzer, einer Gruppe oder einem Qtree verwendeten Dateien einzuschränken oder zu verfolgen.  Sie legen Quoten fest, indem Sie `/etc/quotas` Datei.  Kontingente werden auf ein bestimmtes Volume oder einen bestimmten Qtree angewendet.

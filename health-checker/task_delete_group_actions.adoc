@@ -1,0 +1,25 @@
+---
+permalink: health-checker/task_delete_group_actions.html 
+sidebar: sidebar 
+keywords: delete, group actions 
+summary: Sie können eine Gruppenaktion aus Unified Manager löschen, wenn die Gruppenaktion nicht mehr benötigt wird. 
+---
+= Gruppenaktionen löschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Gruppenaktion aus Unified Manager löschen, wenn die Gruppenaktion nicht mehr benötigt wird.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Wenn Sie die Gruppenaktion für den Volume-Integritätsschwellenwert löschen, werden globale Schwellenwerte auf die Speicherobjekte in dieser Gruppe angewendet.  Auf Objektebene festgelegte Integritätsschwellenwerte für das Speicherobjekt sind hiervon nicht betroffen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Gruppen*.
+. Wählen Sie auf der Registerkarte *Gruppenaktionen* die Gruppenaktion aus, die Sie löschen möchten, und klicken Sie dann auf *Löschen*.
+. Bestätigen Sie im Dialogfeld *Warnung* den Löschvorgang mit einem Klick auf *Ja*.
+

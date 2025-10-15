@@ -1,0 +1,29 @@
+---
+permalink: data-protection/task_configure_protection_destination_settings.html 
+sidebar: sidebar 
+keywords: configure, destination, efficiency, settings 
+summary: Sie können Zieleffizienzeinstellungen wie Deduplizierung, Komprimierung, automatische Vergrößerung und Speicherplatzgarantie auf einem Schutzziel mithilfe des Dialogfelds „Erweiterte Zieleinstellungen“ konfigurieren.  Sie verwenden diese Einstellungen, wenn Sie die Speicherplatznutzung auf einem Ziel- oder sekundären Volume maximieren möchten. 
+---
+= Konfigurieren der Zieleffizienzeinstellungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Zieleffizienzeinstellungen wie Deduplizierung, Komprimierung, automatische Vergrößerung und Speicherplatzgarantie auf einem Schutzziel mithilfe des Dialogfelds „Erweiterte Zieleinstellungen“ konfigurieren.  Sie verwenden diese Einstellungen, wenn Sie die Speicherplatznutzung auf einem Ziel- oder sekundären Volume maximieren möchten.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Standardmäßig entsprechen die Effizienzeinstellungen denen des Quellvolumes, mit Ausnahme der Komprimierungseinstellungen in einer SnapVault -Beziehung, die standardmäßig deaktiviert sind.
+
+.Schritte
+. Klicken Sie im Dialogfeld *Schutz konfigurieren* entweder auf die Registerkarte * SnapMirror* oder auf die Registerkarte * SnapVault*, je nachdem, welche Art von Beziehung Sie konfigurieren.
+. Klicken Sie im Bereich *Zielinformationen* auf *Erweitert*.
++
+Das Dialogfeld „Erweiterte Zieleinstellungen“ wird geöffnet.
+
+. Aktivieren oder deaktivieren Sie die Effizienzeinstellungen für Deduplizierung, Komprimierung, Autogrow und Speicherplatzgarantie nach Bedarf.
+. Klicken Sie auf *Übernehmen*, um Ihre Auswahl zu speichern und zum Dialogfeld *Schutz konfigurieren* zurückzukehren.
+

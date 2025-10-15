@@ -1,0 +1,53 @@
+---
+permalink: performance-checker/task_respond_to_system_defined_qos_policy_group_performance_event.html 
+sidebar: sidebar 
+keywords: qos, policy, group, performance, events 
+summary: 'Unified Manager generiert QoS-Richtlinienwarnungsereignisse, wenn der Workload-Durchsatz (IOPS, IOPS/TB oder MBps) die definierte ONTAP QoS-Richtlinieneinstellung überschritten hat und die Workload-Latenz beeinträchtigt wird.  Diese systemdefinierten Ereignisse bieten die Möglichkeit, potenzielle Leistungsprobleme zu beheben, bevor viele Workloads von der Latenz betroffen sind.' 
+---
+= Reagieren auf Leistungsereignisse der QoS-Richtliniengruppe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager generiert QoS-Richtlinienwarnungsereignisse, wenn der Workload-Durchsatz (IOPS, IOPS/TB oder MBps) die definierte ONTAP QoS-Richtlinieneinstellung überschritten hat und die Workload-Latenz beeinträchtigt wird.  Diese systemdefinierten Ereignisse bieten die Möglichkeit, potenzielle Leistungsprobleme zu beheben, bevor viele Workloads von der Latenz betroffen sind.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Es müssen neue, anerkannte oder veraltete Leistungsereignisse vorliegen.
+
+
+Unified Manager generiert Warnereignisse für Verstöße gegen die QoS-Richtlinie, wenn der Workload-Durchsatz während jedes Leistungserfassungszeitraums der vorherigen Stunde die definierte QoS-Richtlinieneinstellung überschritten hat.  Der Workload-Durchsatz kann den QoS-Schwellenwert während jedes Erfassungszeitraums nur für einen kurzen Zeitraum überschreiten, Unified Manager zeigt im Diagramm jedoch nur den „durchschnittlichen“ Durchsatz während des Erfassungszeitraums an.  Aus diesem Grund erhalten Sie möglicherweise QoS-Ereignisse, obwohl der Durchsatz für eine Arbeitslast den im Diagramm angezeigten Richtlinienschwellenwert möglicherweise nicht überschritten hat.
+
+Sie können System Manager oder die ONTAP -Befehle verwenden, um Richtliniengruppen zu verwalten, einschließlich der folgenden Aufgaben:
+
+* Erstellen einer neuen Richtliniengruppe für die Arbeitslast
+* Hinzufügen oder Entfernen von Workloads in einer Richtliniengruppe
+* Verschieben einer Arbeitslast zwischen Richtliniengruppen
+* Ändern des Durchsatzlimits einer Richtliniengruppe
+* Verschieben einer Arbeitslast auf ein anderes Aggregat oder einen anderen Knoten
+
+
+.Schritte
+. Zeigen Sie die Seite *Ereignisdetails* an, um Informationen zum Ereignis anzuzeigen.
+. Überprüfen Sie die *Beschreibung*, in der die Schwellenwertüberschreitung beschrieben wird, die das Ereignis verursacht hat.
++
+Beispielsweise weist die Meldung „IOPS-Wert von 1.352 IOPS auf vol1_NFS1 hat ein WARNUNG-Ereignis ausgelöst, um potenzielle Leistungsprobleme für die Arbeitslast zu ermitteln“ darauf hin, dass auf dem Volume vol1_NFS1 ein QoS Max IOPS-Ereignis aufgetreten ist.
+
+. Weitere Einzelheiten dazu, wann das Ereignis stattgefunden hat und wie lange es aktiv war, finden Sie im Abschnitt *Ereignisinformationen*.
++
+Darüber hinaus können Sie für Volumes oder LUNs, die den Durchsatz einer QoS-Richtlinie gemeinsam nutzen, die Namen der drei Workloads mit dem höchsten IOPS- oder MBps-Verbrauch sehen.
+
+. Sehen Sie sich im Abschnitt *Systemdiagnose* die beiden Diagramme an: eines für die durchschnittlichen IOPS oder MBps (je nach Ereignis) und eines für die Latenz.  Bei dieser Anordnung können Sie sehen, welche Clusterkomponenten die Latenz am stärksten beeinflussen, wenn sich die Arbeitslast dem QoS-Maximum-Limit nähert.
++
+Bei einem gemeinsamen QoS-Richtlinienereignis werden die drei höchsten Arbeitslasten im Durchsatzdiagramm angezeigt.  Wenn mehr als drei Workloads die QoS-Richtlinie gemeinsam nutzen, werden zusätzliche Workloads in einer Kategorie „Andere Workloads“ zusammengefasst.  Darüber hinaus zeigt das Latenzdiagramm die durchschnittliche Latenz aller Workloads, die Teil der QoS-Richtlinie sind.
+
++
+Beachten Sie, dass bei adaptiven QoS-Richtlinienereignissen die IOPS- und MBps-Diagramme IOPS- oder MBps-Werte anzeigen, die ONTAP basierend auf der Größe des Volumes aus der zugewiesenen IOPS/TB-Schwellenwertrichtlinie konvertiert hat.
+
+. Überprüfen Sie die Vorschläge im Abschnitt *Vorgeschlagene Maßnahmen* und legen Sie fest, welche Maßnahmen Sie durchführen sollten, um eine Erhöhung der Latenz für die Arbeitslast zu vermeiden.
++
+Klicken Sie bei Bedarf auf die Schaltfläche *Hilfe*, um weitere Details zu den vorgeschlagenen Aktionen anzuzeigen, die Sie ausführen können, um das Leistungsproblem zu beheben.
+
+

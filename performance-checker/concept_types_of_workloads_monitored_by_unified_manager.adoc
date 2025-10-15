@@ -1,0 +1,53 @@
+---
+permalink: performance-checker/concept_types_of_workloads_monitored_by_unified_manager.html 
+sidebar: sidebar 
+keywords: types, workloads, monitored, unified manager 
+summary: 'Mit Unified Manager können Sie die Leistung von zwei Arten von Workloads überwachen: benutzerdefiniert und systemdefiniert.' 
+---
+= Von Unified Manager überwachte Workloadtypen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit Unified Manager können Sie die Leistung von zwei Arten von Workloads überwachen: benutzerdefiniert und systemdefiniert.
+
+* *_Benutzerdefinierte Workloads_*
++
+Der E/A-Durchsatz von Anwendungen zum Cluster.  Dies sind Prozesse, die an Lese- und Schreibanforderungen beteiligt sind.  Ein Volume, eine LUN, eine NFS-Freigabe, eine SMB/CIFS-Freigabe und eine Arbeitslast sind benutzerdefinierte Arbeitslasten.
+
++
+[NOTE]
+====
+Unified Manager überwacht nur die Workload-Aktivität im Cluster.  Es überwacht weder die Anwendungen, die Clients noch die Pfade zwischen den Anwendungen und dem Cluster.
+
+====
++
+Wenn eine oder mehrere der folgenden Bedingungen für eine Arbeitslast zutreffen, kann sie nicht von Unified Manager überwacht werden:
+
++
+** Es handelt sich um eine Datenschutzkopie (DP) im schreibgeschützten Modus.  (DP-Volumes werden auf benutzergenerierten Datenverkehr überwacht.)
+** Es handelt sich um einen Offline-Datenklon.
+** Es handelt sich um ein gespiegeltes Volume in einer MetroCluster -Konfiguration.
+
+
+* *_Systemdefinierte Workloads_*
++
+Die internen Prozesse, die mit Speichereffizienz, Datenreplikation und Systemintegrität verbunden sind, einschließlich:
+
++
+** Speichereffizienz, z. B. Deduplizierung
+** Festplattenzustand, einschließlich RAID-Rekonstruktion, Festplattenbereinigung usw.
+** Datenreplikation, beispielsweise SnapMirror -Kopien
+** Managementaktivitäten
+** Integrität des Dateisystems, einschließlich verschiedener WAFL Aktivitäten
+** Dateisystem-Scanner, wie z. B. WAFL -Scan
+** Copy-Offload, z. B. Auslagerung von Speichereffizienzvorgängen von VMware-Hosts
+** Systemzustand, z. B. Datenträgerverschiebungen, Datenkomprimierung usw.
+** Nicht überwachte Volumes
+
+
+
+
+Leistungsdaten für systemdefinierte Workloads werden in der GUI nur dann angezeigt, wenn die von diesen Workloads verwendete Clusterkomponente im Konflikt steht.  Sie können beispielsweise nicht nach dem Namen einer systemdefinierten Arbeitslast suchen, um deren Leistungsdaten in der GUI anzuzeigen.

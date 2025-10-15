@@ -1,0 +1,119 @@
+---
+permalink: events/reference_edit_alert_dialog_box.html 
+sidebar: sidebar 
+keywords: edit, alert, dialog box, name, resources, events, actions 
+summary: Sie können Alarmeigenschaften wie die Ressource, mit der der Alarm verknüpft ist, Ereignisse, Skripts und Benachrichtigungsoptionen bearbeiten. 
+---
+= Dialogfeld „Warnung bearbeiten“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Alarmeigenschaften wie die Ressource, mit der der Alarm verknüpft ist, Ereignisse, Skripts und Benachrichtigungsoptionen bearbeiten.
+
+
+
+== Name
+
+In diesem Bereich können Sie den Namen und die Beschreibung der Warnung bearbeiten.
+
+* *Name der Warnung*
++
+Ermöglicht Ihnen, den Alarmnamen zu bearbeiten.
+
+* *Alarmbeschreibung*
++
+Ermöglicht Ihnen, eine Beschreibung für die Warnung anzugeben.
+
+* *Alarmzustand*
++
+Ermöglicht Ihnen, den Alarm zu aktivieren oder zu deaktivieren.
+
+
+
+
+
+== Ressourcen
+
+In diesem Bereich können Sie eine einzelne Ressource auswählen oder die Ressourcen basierend auf einer dynamischen Regel gruppieren, für die Sie den Alarm auslösen möchten.  Sie können nach Ressourcen suchen, indem Sie einen Ressourcentyp aus der Dropdown-Liste auswählen, oder Sie können den genauen Ressourcennamen angeben, um eine bestimmte Ressource anzuzeigen.
+
+* *Enthalten*
++
+Ermöglicht Ihnen, die Ressourcen einzuschließen, für die Sie Warnungen auslösen möchten.  Sie können eine Textzeichenfolge angeben, um Ressourcen zu gruppieren, die der Zeichenfolge entsprechen, und diese Gruppe für die Einbeziehung in die Warnung auswählen.  Sie können beispielsweise alle Volumes gruppieren, deren Name die Zeichenfolge „`vol0`“ enthält.
+
+* *Ausschließen*
++
+Ermöglicht Ihnen, Ressourcen auszuschließen, für die Sie keine Warnungen auslösen möchten.  Sie können beispielsweise alle Volumes ausschließen, deren Name die Zeichenfolge „xyz“ enthält.
+
++
+[NOTE]
+====
+Die Registerkarte „Ausschließen“ wird nur angezeigt, wenn Sie alle Ressourcen eines bestimmten Ressourcentyps auswählen, z. B. +<<All Volumes>> + oder +<<All Volumes whose name contains 'xyz'>> +.
+
+====
+
+
+
+
+== Veranstaltungen
+
+In diesem Bereich können Sie die Ereignisse auswählen, für die Sie die Warnungen auslösen möchten.  Sie können eine Warnung für Ereignisse basierend auf einem bestimmten Schweregrad oder für eine Reihe von Ereignissen auslösen.
+
+* *Ereignisschwere*
++
+Ermöglicht Ihnen die Auswahl von Ereignissen basierend auf dem Schweregradtyp, der „Kritisch“, „Fehler“ oder „Warnung“ sein kann.
+
+* *Ereignisname enthält*
++
+Ermöglicht Ihnen die Auswahl von Ereignissen, deren Name die angegebenen Zeichen enthält.
+
+
+
+
+
+== Aktionen
+
+In diesem Bereich können Sie die Benachrichtigungsmethode und die Benachrichtigungshäufigkeit festlegen.
+
+* *Diese Benutzer benachrichtigen*
++
+Ermöglicht Ihnen, die E-Mail-Adresse oder den Benutzernamen zu bearbeiten oder eine neue E-Mail-Adresse oder einen neuen Benutzernamen zum Empfangen von Benachrichtigungen anzugeben.
+
+* *Benachrichtigungshäufigkeit*
++
+Ermöglicht Ihnen, die Häufigkeit zu bearbeiten, mit der der Verwaltungsserver Benachrichtigungen sendet, bis das Ereignis bestätigt, gelöst oder in den veralteten Status versetzt wird.
+
++
+Sie können zwischen folgenden Benachrichtigungsmethoden wählen:
+
++
+** Nur einmal benachrichtigen
+** Benachrichtigung in einer festgelegten Häufigkeit
+** Benachrichtigen Sie in einer bestimmten Häufigkeit innerhalb eines bestimmten Zeitbereichs
+
+
+* *SNMP-Trap ausgeben*
++
+Ermöglicht Ihnen anzugeben, ob SNMP-Traps an den global konfigurierten SNMP-Host gesendet werden sollen.
+
+* *Skript ausführen*
++
+Ermöglicht Ihnen, der Warnung ein Skript zuzuordnen.  Dieses Skript wird ausgeführt, wenn eine Warnung generiert wird.
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Speichern*
++
+Speichert die Änderungen und schließt das Dialogfeld.
+
+* *Stornieren*
++
+Verwirft die Änderungen und schließt das Dialogfeld.
+
+

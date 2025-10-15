@@ -1,0 +1,74 @@
+---
+permalink: storage-mgmt/concept_workloads_dashboard.html 
+sidebar: sidebar 
+keywords: workloads, overview, data center, sections 
+summary: 'Eine Arbeitslast stellt die Eingabe-/Ausgabevorgänge (E/A) eines Speicherobjekts dar, beispielsweise eines Volumes oder einer LUN.  Die Art und Weise der Speicherbereitstellung basiert auf den erwarteten Arbeitslastanforderungen.  Workload-Statistiken werden von Active IQ Unified Manager erst verfolgt, wenn Datenverkehr zum und vom Speicherobjekt stattfindet.  Beispielsweise sind die IOPS- und Latenzwerte der Arbeitslast verfügbar, nachdem Benutzer mit der Verwendung einer Datenbank- oder E-Mail-Anwendung begonnen haben.' 
+---
+= Übersicht über Workloads
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Arbeitslast stellt die Eingabe-/Ausgabevorgänge (E/A) eines Speicherobjekts dar, beispielsweise eines Volumes oder einer LUN.  Die Art und Weise der Speicherbereitstellung basiert auf den erwarteten Arbeitslastanforderungen.  Workload-Statistiken werden von Active IQ Unified Manager erst verfolgt, wenn Datenverkehr zum und vom Speicherobjekt stattfindet.  Beispielsweise sind die IOPS- und Latenzwerte der Arbeitslast verfügbar, nachdem Benutzer mit der Verwendung einer Datenbank- oder E-Mail-Anwendung begonnen haben.
+
+Auf der Seite „Workloads“ wird eine Zusammenfassung der Speicher-Workloads der von Unified Manager verwalteten ONTAP Cluster angezeigt.  Es bietet auf einen Blick kumulative Informationen zu den Speicher-Workloads, die dem Performance Service Level entsprechen, sowie zu den nicht konformen Speicher-Workloads.  Darüber hinaus können Sie die gesamte, verfügbare und genutzte Kapazität und Leistung (IOPS) der Cluster in Ihrem Rechenzentrum beurteilen.
+
+[NOTE]
+====
+Es wird empfohlen, die Anzahl der Speicher-Workloads zu ermitteln, die nicht konform, nicht verfügbar oder von keinem Performance Service Level verwaltet werden, und die erforderlichen Maßnahmen zu ergreifen, um ihre Konformität, Kapazitätsnutzung und IOPS sicherzustellen.
+
+====
+Die Seite „Workloads“ enthält die folgenden zwei Abschnitte:
+
+* Übersicht über Workloads: Bietet eine Übersicht über die Anzahl der Speicher-Workloads auf den von Unified Manager verwalteten ONTAP Clustern.
+* Rechenzentrumsübersicht: Bietet eine Übersicht über die Kapazität und IOPS der Speicher-Workloads im Rechenzentrum.  Die relevanten Daten werden auf Rechenzentrumsebene und für einzelne angezeigt.
+
+
+
+
+== Abschnitt „Workloads – Übersicht“
+
+Der Abschnitt „Workloadsübersicht“ bietet auf einen Blick zusammengefasste Informationen zu den Speicher-Workloads.  Der Status der Speicher-Workloads wird basierend auf zugewiesenen und nicht zugewiesenen Performance-Service-Levels angezeigt.
+
+* *Zugewiesen*: Für Speicher-Workloads, denen Performance-Service-Level zugewiesen wurden, werden die folgenden Status gemeldet:
++
+** *Konform*: Die Leistung von Speicher-Workloads basiert auf den ihnen zugewiesenen Performance Service Levels.  Wenn die Speicher-Workloads innerhalb der in den zugehörigen Performance Service Levels definierten Schwellenlatenz liegen, werden sie als „konform“ gekennzeichnet.  Die konformen Arbeitslasten sind blau markiert.
+** *Nicht konform*: Während der Leistungsüberwachung werden Speicher-Workloads als „nicht konform“ markiert, wenn die Latenz der Speicher-Workloads die im zugehörigen Leistungs-Servicelevel definierte Schwellenlatenz überschreitet.  Die nicht konformen Arbeitslasten sind orange markiert.
+** *Nicht verfügbar*: Speicher-Workloads werden als „nicht verfügbar“ markiert, wenn sie offline sind oder der entsprechende Cluster nicht erreichbar ist.  Die nicht verfügbaren Workloads sind rot markiert.
+
+
+* *Nicht zugewiesen*: Speicher-Workloads, denen kein Performance-Service-Level zugewiesen ist, werden als „nicht zugewiesen“ gemeldet.  Die Nummer wird durch das Informationssymbol übermittelt.
+
+
+Die Gesamtzahl der Arbeitslasten ist die Summe der zugewiesenen und nicht zugewiesenen Arbeitslasten.
+
+Sie können auf die Gesamtzahl der in diesem Abschnitt angezeigten Workloads klicken und sie auf der Seite „Workloads“ anzeigen.
+
+Der Unterabschnitt „Konformität nach Leistungsserviceleveln“ zeigt die Gesamtzahl der verfügbaren Speicherarbeitslasten an:
+
+* Konform mit jedem Typ von Performance Service Level
+* Bei denen eine Diskrepanz zwischen den zugewiesenen und den empfohlenen Performance Service Levels besteht
+
+
+
+
+== Abschnitt „Übersicht über das Rechenzentrum“
+
+Der Abschnitt „Rechenzentrumsübersicht“ stellt die verfügbare und genutzte Kapazität sowie die IOPS für alle Cluster im Rechenzentrum grafisch dar.  Mithilfe dieser Daten sollten Sie die Kapazität und IOPS der Speicher-Workloads verwalten.  Der Abschnitt zeigt außerdem die folgenden Informationen zu den Speicherarbeitslasten aller Cluster an:
+
+* Die gesamte, verfügbare und genutzte Kapazität für alle Cluster in Ihrem Rechenzentrum
+* Die gesamten, verfügbaren und verwendeten IOPS für alle Cluster in Ihrem Rechenzentrum
+* Die verfügbare und genutzte Kapazität basierend auf jedem Performance Service Level
+* Die verfügbaren und genutzten IOPS basierend auf jedem Performance Service Level
+* Der gesamte Speicherplatz und die IOPS, die von den Workloads verwendet werden, denen kein Performance Service Level zugewiesen ist
+
+
+*Wie die Kapazität und Leistung von Rechenzentren basierend auf Performance Service Levels berechnet wird*
+
+Die genutzte Kapazität und die IOPS werden im Hinblick auf die insgesamt genutzte Kapazität und Leistung aller Speicher-Workloads in den Clustern abgerufen.
+
+Die verfügbaren IOPS werden basierend auf der erwarteten Latenz und den empfohlenen Leistungsserviceleveln auf den Knoten berechnet.  Es umfasst die verfügbaren IOPS für alle Performance-Service-Levels, deren erwartete Latenz kleiner oder gleich ihrer eigenen erwarteten Latenz ist.
+
+Die verfügbare Kapazität wird basierend auf der erwarteten Latenz und den empfohlenen Leistungsserviceleveln für Aggregate berechnet.  Es umfasst die verfügbare Kapazität für alle Performance-Service-Levels, deren erwartete Latenz kleiner oder gleich ihrer eigenen erwarteten Latenz ist.

@@ -1,0 +1,46 @@
+---
+permalink: performance-checker/task_respond_to_performance_incident_caused_by_ha_takeover.html 
+sidebar: sidebar 
+keywords: dynamic, performance, event, ha, takeover 
+summary: 'Sie können Unified Manager verwenden, um ein Leistungsereignis zu untersuchen, das durch eine hohe Datenverarbeitung auf einem Clusterknoten verursacht wird, der sich in einem Hochverfügbarkeitspaar (HA) befindet.  Sie können Unified Manager auch verwenden, um den Zustand der Knoten zu überprüfen und festzustellen, ob kürzlich auf den Knoten erkannte Zustandsereignisse zum Leistungsereignis beigetragen haben.' 
+---
+= Reagieren Sie auf ein dynamisches Leistungsereignis, das durch die HA-Übernahme verursacht wurde
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Unified Manager verwenden, um ein Leistungsereignis zu untersuchen, das durch eine hohe Datenverarbeitung auf einem Clusterknoten verursacht wird, der sich in einem Hochverfügbarkeitspaar (HA) befindet.  Sie können Unified Manager auch verwenden, um den Zustand der Knoten zu überprüfen und festzustellen, ob kürzlich auf den Knoten erkannte Zustandsereignisse zum Leistungsereignis beigetragen haben.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Es müssen neue, anerkannte oder veraltete Leistungsereignisse vorliegen.
+
+
+.Schritte
+. Zeigen Sie die Seite *Ereignisdetails* an, um Informationen zum Ereignis anzuzeigen.
+. Lesen Sie die *Beschreibung*, in der die am Ereignis beteiligten Arbeitslasten und die betroffene Clusterkomponente beschrieben werden.
++
+Es gibt ein Opfervolume, dessen Latenz durch die konkurrierende Clusterkomponente beeinträchtigt wurde.  Der Datenverarbeitungsknoten, der alle Arbeitslasten von seinem Partnerknoten übernommen hat, ist die umstrittene Clusterkomponente.  Unter „Komponente im Konflikt“ wird das Symbol „Data Processing“ rot hervorgehoben und der Name des Knotens, der zum Zeitpunkt des Ereignisses die Datenverarbeitung durchführte, wird in Klammern angezeigt.
+
+. Klicken Sie in der *Beschreibung* auf den Namen des Datenträgers.
++
+Die Seite „Volume Performance Explorer“ wird angezeigt.  Oben auf der Seite, in der Zeitleiste „Ereignisse“, wird ein Symbol zum Ändern von Ereignissen (image:../media/opm_change_icon.gif["Symbol „Ereignis ändern“"] ) gibt den Zeitpunkt an, zu dem Unified Manager den Beginn der HA-Übernahme erkannt hat.
+
+. Zeigen Sie mit dem Cursor auf das Änderungsereignissymbol für die HA-Übernahme. Details zur HA-Übernahme werden im Hover-Text angezeigt.
++
+Im Latenzdiagramm zeigt ein Ereignis an, dass das ausgewählte Volume aufgrund hoher Latenz etwa zur gleichen Zeit wie die HA-Übernahme den Leistungsschwellenwert überschritten hat.
+
+. Klicken Sie auf *Zoom-Ansicht*, um das Latenzdiagramm auf einer neuen Seite anzuzeigen.
+. Wählen Sie im Menü „Ansicht“ die Option „Clusterkomponenten“ aus, um die Gesamtlatenz nach Clusterkomponente anzuzeigen.
+. Bewegen Sie den Mauszeiger auf das Änderungsereignissymbol für den Beginn der HA-Übernahme und vergleichen Sie die Latenz für die Datenverarbeitung mit der Gesamtlatenz.
++
+Zum Zeitpunkt der HA-Übernahme kam es aufgrund der erhöhten Arbeitslast auf dem Datenverarbeitungsknoten zu einem Anstieg der Datenverarbeitung.  Die erhöhte CPU-Auslastung erhöhte die Latenz und löste das Ereignis aus.
+
+. Nachdem Sie den ausgefallenen Knoten repariert haben, führen Sie mit ONTAP System Manager ein HA-Giveback durch, bei dem die Workloads vom Partnerknoten auf den reparierten Knoten verschoben werden.
+. Nachdem die HA-Rückgabe abgeschlossen ist, suchen Sie nach der nächsten Konfigurationserkennung in Unified Manager (ca. 15 Minuten) auf der Inventarseite *Event Management* nach dem Ereignis und der Arbeitslast, die durch die HA-Übernahme ausgelöst wurden.
++
+Das durch die HA-Übernahme ausgelöste Ereignis hat jetzt den Status „Veraltet“, was darauf hinweist, dass das Ereignis aufgelöst ist.  Die Latenzzeit bei der Datenverarbeitungskomponente hat sich verringert, wodurch sich die Gesamtlatenzzeit verringert hat.  Der Knoten, den das ausgewählte Volume jetzt zur Datenverarbeitung verwendet, hat das Ereignis aufgelöst.
+
+

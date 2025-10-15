@@ -1,0 +1,36 @@
+---
+permalink: performance-checker/task_view_performance_charts_to_compare_volumes_or_luns_in_qos_policy.html 
+sidebar: sidebar 
+keywords: view, performance, charts, compare, volumes, luns, same, qos, policy, group 
+summary: Sie können die Volumes und LUNs anzeigen, die sich in denselben QoS-Richtliniengruppen befinden, und dann die Leistung anhand eines einzelnen IOPS-, MB/s- oder IOPS/TB-Diagramms vergleichen, um etwaige Probleme zu identifizieren. 
+---
+= Zeigen Sie Leistungsdiagramme an, um Volumes oder LUNs zu vergleichen, die sich in derselben QoS-Richtliniengruppe befinden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Volumes und LUNs anzeigen, die sich in denselben QoS-Richtliniengruppen befinden, und dann die Leistung anhand eines einzelnen IOPS-, MB/s- oder IOPS/TB-Diagramms vergleichen, um etwaige Probleme zu identifizieren.
+
+Die Schritte zum Vergleichen der Leistung von Volumes in derselben QoS-Richtliniengruppe werden unten angezeigt.  Die Schritte zum Anzeigen dieser Informationen für eine LUN sind ähnlich.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Volumes*.
++
+Die Ansicht „Health: Alle Volumes“ wird standardmäßig angezeigt.
+
+. Wählen Sie im Menü „Ansicht“ die Option „Leistung: Volumes in der QoS-Richtliniengruppe“ aus.
+. Klicken Sie auf den Namen des Bandes, den Sie überprüfen möchten.
++
+Für das Volume wird die Seite „Performance Explorer“ angezeigt.
+
+. Wählen Sie im Menü „Anzeigen und Vergleichen“ die Option „Volumes in derselben QoS-Richtliniengruppe“ aus.
++
+Die anderen Volumes mit derselben QoS-Richtlinie sind in der folgenden Tabelle aufgeführt.
+
+. Klicken Sie auf die Schaltfläche *Hinzufügen*, um diese Volumes zu den Diagrammen hinzuzufügen, damit Sie die IOPS, MB/s, IOPS/TB und andere Leistungsindikatoren für alle ausgewählten Volumes in den Diagrammen vergleichen können.
++
+Sie können den Zeitbereich ändern, um die Leistung über andere Zeitintervalle als die Standardeinstellung von 72 Stunden anzuzeigen.
+
+

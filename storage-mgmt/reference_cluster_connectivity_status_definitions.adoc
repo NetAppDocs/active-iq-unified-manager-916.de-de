@@ -1,0 +1,51 @@
+---
+permalink: storage-mgmt/reference_cluster_connectivity_status_definitions.html 
+sidebar: sidebar 
+keywords: cluster, connectivity, status, definitions 
+summary: 'Die Konnektivität zwischen den Clustern in einer MetroCluster -Konfiguration kann einen der folgenden Status aufweisen: Optimal, Beeinträchtigt oder Ausgefallen.  Wenn Sie den Verbindungsstatus verstehen, können Sie Ihre MetroCluster -Konfigurationen effektiv verwalten.' 
+---
+= Cluster-Konnektivitätsstatusdefinitionen für die MetroCluster über-FC-Konfiguration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Konnektivität zwischen den Clustern in einer MetroCluster -über-FC-Konfiguration kann einen der folgenden Status aufweisen: Optimal, Beeinträchtigt oder Ausgefallen.  Wenn Sie den Verbindungsstatus verstehen, können Sie Ihre MetroCluster -Konfigurationen effektiv verwalten.
+
+|===
+| Verbindungsstatus | Beschreibung | Angezeigtes Symbol 
+
+
+ a| 
+Optimal
+ a| 
+Die Konnektivität zwischen den Clustern in der MetroCluster -Konfiguration ist normal.
+ a| 
+image:../media/metrocluster_connectivity_optimal.gif["Symbol für optimale Metrocluster-Konnektivität"]
+
+
+
+ a| 
+Betroffen
+ a| 
+Ein oder mehrere Fehler beeinträchtigen den Status der Failover-Verfügbarkeit; beide Cluster in der MetroCluster -Konfiguration sind jedoch noch aktiv.  Zum Beispiel, wenn die ISL-Verbindung ausgefallen ist, wenn die IP-Verbindung zwischen den Clustern ausgefallen ist oder wenn der Partnercluster nicht erreichbar ist.
+ a| 
+image:../media/metrocluster_connectivity_impacted.gif["Symbol „Metrocluster-Konnektivität beeinträchtigt“"]
+
+
+
+ a| 
+Runter
+ a| 
+Die Konnektivität zwischen den Clustern in der MetroCluster -Konfiguration ist unterbrochen, weil einer oder beide Cluster ausgefallen sind oder sich die Cluster im Failover-Modus befinden.  Beispielsweise, wenn der Partnercluster aufgrund einer Katastrophe ausfällt oder wenn eine Umstellung zu Testzwecken geplant ist.
+ a| 
+Umschaltung mit Fehlern:
+
+image::../media/metrocluster_connectivity_down.gif[Symbol für die Metrocluster-Konnektivität nach unten]
+
+Umschaltung erfolgreich:
+
+image::../media/metrocluster_connectivity_failover.gif[Symbol für Failover der Metrocluster-Konnektivität]
+
+|===

@@ -1,0 +1,14 @@
+---
+permalink: data-protection/concept_create_and_monitor_protection_relationships.html 
+sidebar: sidebar 
+keywords: create, monitor, troubleshoot, protection, relationships 
+summary: Mit Unified Manager können Sie Schutzbeziehungen erstellen, den Spiegelschutz und den Backup-Vault-Schutz von auf verwalteten Clustern gespeicherten Daten überwachen und Fehler beheben sowie Daten wiederherstellen, wenn diese überschrieben wurden oder verloren gegangen sind. 
+---
+= Erstellen, Überwachen und Beheben von Problemen mit Schutzbeziehungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit Unified Manager können Sie Schutzbeziehungen erstellen, den Spiegelschutz und den Backup-Vault-Schutz von auf verwalteten Clustern gespeicherten Daten überwachen und Fehler beheben sowie Daten wiederherstellen, wenn diese überschrieben wurden oder verloren gegangen sind.

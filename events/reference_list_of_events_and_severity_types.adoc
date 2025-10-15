@@ -1,0 +1,14 @@
+---
+permalink: events/reference_list_of_events_and_severity_types.html 
+sidebar: sidebar 
+keywords: list, events, severity, types 
+summary: Sie können die Ereignisliste verwenden, um sich mit den Ereigniskategorien, Ereignisnamen und dem Schweregrad jedes Ereignisses vertraut zu machen, die Sie möglicherweise in Unified Manager sehen.  Ereignisse werden in alphabetischer Reihenfolge nach Objektkategorie aufgelistet. 
+---
+= Liste der Ereignisse und Schweregrade
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Ereignisliste verwenden, um sich mit den Ereigniskategorien, Ereignisnamen und dem Schweregrad jedes Ereignisses vertraut zu machen, die Sie möglicherweise in Unified Manager sehen.  Ereignisse werden in alphabetischer Reihenfolge nach Objektkategorie aufgelistet.

@@ -1,0 +1,43 @@
+---
+permalink: health-checker/task_view_volume_list_and_details.html 
+sidebar: sidebar 
+keywords: view, volume list, details 
+summary: 'In der Ansicht „Health: All Volumes“ können Sie Ihren Volume-Bestand überwachen.  Mit der Ansicht „Kapazität: Alle Volumes“ können Sie Informationen zur Kapazität und Auslastung von Volumes in einem Cluster anzeigen.' 
+---
+= Anzeigen der Volumeliste und Details
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In der Ansicht „Health: All Volumes“ können Sie Ihren Volume-Bestand überwachen.  Mit der Ansicht „Kapazität: Alle Volumes“ können Sie Informationen zur Kapazität und Auslastung von Volumes in einem Cluster anzeigen.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Sie können auch die Seite „Volume-/Integritätsdetails“ verwenden, um ausführliche Informationen zu den überwachten Volumes anzuzeigen, einschließlich der Kapazität, Effizienz, Konfiguration und des Schutzes der Volumes.  Sie können auch Informationen zu den zugehörigen Geräten und zugehörigen Warnungen für ein bestimmtes Volume anzeigen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Volumes*.
+. Wählen Sie eine der folgenden Möglichkeiten, um die Volumedetails anzuzeigen:
++
+** Um ausführliche Informationen zum Zustand der Volumes in einem Cluster anzuzeigen, wählen Sie im Menü „Ansicht“ die Option „Integrität: Alle Volumes anzeigen“ aus.
+** Um detaillierte Informationen zur Kapazität und Auslastung von Volumes in einem Cluster anzuzeigen, wählen Sie im Menü „Ansicht“ die Option „Kapazität: Alle Volumes anzeigen“.
+** Klicken Sie auf den Datenträgernamen, um die vollständigen Details anzuzeigen.
++
+Sie können die vollständigen Details auch anzeigen, indem Sie im Dialogfeld mit den minimalen Details auf *Details anzeigen* klicken.
+
+
+
+. *Optional:* Zeigen Sie die mit dem Datenträger verknüpften Objekte an, indem Sie im Dialogfeld mit den minimalen Details auf *Verwandte anzeigen* klicken.
+
+
+*Verwandte Informationen*
+
+* link:../health-checker/reference_health_volume_details_page.html["Band: Seite mit Gesundheitsdetails"]
+* link:../performance-checker/performance-view-all.html#performance-all-volumes-view["Leistung: Ansicht „Alle Volumes“"]
+* link:../health-checker/task_view_antiransomware_status_of_all_volumes_storage_vms.html#view-security-details-of-all-volumes-with-anti-ransomware-detection["Sicherheit: Anti-Ransomware-Ansicht"]
+* link:../data-protection/task_view_volume_protection_relationships.html["Anzeigen von Volume-Schutzbeziehungen"]
+* link:../reporting/task_create_report_to_view_available_volume_capacity_charts.html["Erstellen eines Berichts zum Anzeigen von Diagrammen zur verfügbaren Datenträgerkapazität"]
+

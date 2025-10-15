@@ -1,0 +1,42 @@
+---
+permalink: reporting/task_create_report_to_identify_volumes_nearing_full_capacity.html 
+sidebar: sidebar 
+keywords: create, report, identify, volumes, full capacity, snapshot, autodelete, turned off 
+summary: Sie können einen Bericht erstellen, der die Liste der Volumes enthält, die sich der vollen Kapazität nähern, wenn die Funktion „Automatisches Löschen von Snapshots“ deaktiviert ist.  Die Ergebnisse können dabei helfen, Volumes zu identifizieren, bei denen Sie möglicherweise Snapshot Autodelete konfigurieren möchten. 
+---
+= Erstellen Sie einen Bericht, um Volumes zu identifizieren, die sich der vollen Kapazität nähern und bei denen die automatische Löschung von Snapshots deaktiviert ist.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, der die Liste der Volumes enthält, die sich der vollen Kapazität nähern, wenn die Funktion „Automatisches Löschen von Snapshots“ deaktiviert ist.  Die Ergebnisse können dabei helfen, Volumes zu identifizieren, bei denen Sie möglicherweise Snapshot Autodelete konfigurieren möchten.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Führen Sie die folgenden Schritte aus, um eine benutzerdefinierte Ansicht zu erstellen, in der die erforderlichen Spalten in der richtigen Reihenfolge angezeigt werden, und planen Sie dann die Generierung eines Berichts für diese Ansicht.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Volumes*.
+. Wählen Sie im Menü „Ansicht“ die Option „Kapazität“ > „Alle Volumes“ aus.
+. Wählen Sie *Anzeigen/Ausblenden*, um alle Spalten zu entfernen, die Sie nicht im Bericht haben möchten.
+. Ziehen Sie die Spalten „Snapshot Autodelete“ und „Days To Full“ per Drag & Drop in die Nähe der Spalte „Verfügbare Datenkapazität“.
+. Klicken Sie auf das Filtersymbol, fügen Sie die folgenden zwei Filter hinzu und klicken Sie dann auf *Filter anwenden*:
++
+** Tage bis zur vollständigen Fertigstellung weniger als 30 Tage
+** Automatisches Löschen von Snapshots ist deaktiviert
+
+
+. Klicken Sie oben auf die Spalte *Tage bis zur Vollendung*, sodass die Datenträger mit den wenigsten verbleibenden Tagen oben in der Liste angezeigt werden.
+. Speichern Sie die Ansicht unter einem bestimmten Namen, der widerspiegelt, was die Ansicht anzeigt, z. B. „Vols near capacity“.
+. Klicken Sie auf der Inventarseite auf die Schaltfläche *Geplante Berichte*.
+. Geben Sie einen Namen für den Berichtszeitplan ein und füllen Sie die anderen Berichtsfelder aus. Klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""] ) am Ende der Zeile.
++
+Der Bericht wird sofort testweise versendet.  Anschließend wird der Bericht generiert und in der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Basierend auf den im Bericht angezeigten Ergebnissen möchten Sie möglicherweise die automatische Löschung von Snapshots auf den Volumes aktivieren oder eine Möglichkeit finden, den verfügbaren Speicherplatz zu erhöhen.

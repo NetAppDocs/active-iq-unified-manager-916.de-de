@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_what_information_is_contained_in_an_alert_email.html 
+sidebar: sidebar 
+keywords: information, contained, alert, email 
+summary: Warn-E-Mails von Unified Manager enthalten den Ereignistyp, den Schweregrad des Ereignisses, den Namen der Richtlinie oder des Schwellenwerts, der bzw. die das Ereignis verursacht hat, sowie eine Beschreibung des Ereignisses.  Die E-Mail-Nachricht enthält außerdem einen Hyperlink für jedes Ereignis, über den Sie die Detailseite für das Ereignis in der Benutzeroberfläche anzeigen können. 
+---
+= Welche Informationen sind in einer Warn-E-Mail enthalten?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Warn-E-Mails von Unified Manager enthalten den Ereignistyp, den Schweregrad des Ereignisses, den Namen der Richtlinie oder des Schwellenwerts, der bzw. die das Ereignis verursacht hat, sowie eine Beschreibung des Ereignisses.  Die E-Mail-Nachricht enthält außerdem einen Hyperlink für jedes Ereignis, über den Sie die Detailseite für das Ereignis in der Benutzeroberfläche anzeigen können.
+
+Warn-E-Mails werden an alle Benutzer gesendet, die den Erhalt von Warnmeldungen abonniert haben.
+
+Wenn sich ein Leistungsindikator oder Kapazitätswert während eines Erfassungszeitraums stark ändert, kann dies dazu führen, dass für dieselbe Schwellenwertrichtlinie gleichzeitig ein kritisches Ereignis und ein Warnereignis ausgelöst werden.  In diesem Fall erhalten Sie möglicherweise eine E-Mail für das Warnereignis und eine für das kritische Ereignis.  Dies liegt daran, dass Sie mit Unified Manager separate Abonnements für den Empfang von Warnmeldungen bei Warnungen und kritischen Schwellenwertüberschreitungen abschließen können.
+
+Nachfolgend sehen Sie ein Beispiel für eine Warn-E-Mail:
+
+image::../media/um_email_alert.gif[Ein UI-Screenshot, der ein Beispiel für eine Warn-E-Mail zeigt.]

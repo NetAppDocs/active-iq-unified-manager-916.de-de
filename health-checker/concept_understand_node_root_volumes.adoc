@@ -1,0 +1,19 @@
+---
+permalink: health-checker/concept_understand_node_root_volumes.html 
+sidebar: sidebar 
+keywords: understand, node, root, volumes 
+summary: Sie können das Knotenstammvolume mit Unified Manager überwachen.  Die beste Vorgehensweise besteht darin, dass das Stammvolume des Knotens über ausreichend Kapazität verfügt, um einen Ausfall des Knotens zu verhindern. 
+---
+= Grundlegendes zu Knotenstammvolumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das Knotenstammvolume mit Unified Manager überwachen.  Die beste Vorgehensweise besteht darin, dass das Stammvolume des Knotens über ausreichend Kapazität verfügt, um einen Ausfall des Knotens zu verhindern.
+
+Wenn die genutzte Kapazität des Knotenstammdatenträgers 80 Prozent der Gesamtkapazität des Knotenstammdatenträgers überschreitet, wird das Ereignis „Speicherplatz des Knotenstammdatenträgers fast voll“ generiert.  Sie können einen Alarm für das Ereignis konfigurieren, um eine Benachrichtigung zu erhalten.  Sie können mithilfe des ONTAP System Manager oder der ONTAP CLI geeignete Maßnahmen ergreifen, um einen Ausfall des Knotens zu verhindern.
+
+
+NOTE: Die Funktion zum Überwachen von Knoten-Root-Volumes ist nicht verfügbar, wenn auf Clustern ONTAP Version 9.14.1 oder höher ausgeführt wird.

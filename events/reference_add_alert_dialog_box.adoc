@@ -1,0 +1,130 @@
+---
+permalink: events/reference_add_alert_dialog_box.html 
+sidebar: sidebar 
+keywords: add, alert, dialog, box, name, resources, events, actions, command buttons 
+summary: Sie können Warnmeldungen erstellen, die Sie benachrichtigen, wenn ein bestimmtes Ereignis generiert wird, sodass Sie das Problem schnell beheben und dadurch die Auswirkungen auf Ihre Umgebung minimieren können.  Sie können Warnungen für eine einzelne Ressource oder eine Gruppe von Ressourcen sowie für Ereignisse eines bestimmten Schweregrads erstellen.  Sie können auch die Benachrichtigungsmethode und die Häufigkeit der Warnungen angeben. 
+---
+= Dialogfeld „Warnung hinzufügen“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Warnmeldungen erstellen, die Sie benachrichtigen, wenn ein bestimmtes Ereignis generiert wird, sodass Sie das Problem schnell beheben und dadurch die Auswirkungen auf Ihre Umgebung minimieren können.  Sie können Warnungen für eine einzelne Ressource oder eine Gruppe von Ressourcen sowie für Ereignisse eines bestimmten Schweregrads erstellen.  Sie können auch die Benachrichtigungsmethode und die Häufigkeit der Warnungen angeben.
+
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+
+== Name
+
+In diesem Bereich können Sie einen Namen und eine Beschreibung für die Warnung angeben:
+
+* *Name der Warnung*
++
+Ermöglicht Ihnen, einen Alarmnamen anzugeben.
+
+* *Alarmbeschreibung*
++
+Ermöglicht Ihnen, eine Beschreibung für die Warnung anzugeben.
+
+
+
+
+
+== Ressourcen
+
+In diesem Bereich können Sie eine einzelne Ressource auswählen oder die Ressourcen basierend auf einer dynamischen Regel gruppieren, für die Sie den Alarm auslösen möchten.  Eine _dynamische Regel_ ist der Satz von Ressourcen, der basierend auf der von Ihnen angegebenen Textzeichenfolge gefiltert wird.  Sie können nach Ressourcen suchen, indem Sie einen Ressourcentyp aus der Dropdown-Liste auswählen, oder Sie können den genauen Ressourcennamen angeben, um eine bestimmte Ressource anzuzeigen.
+
+Wenn Sie eine Warnung von einer der Detailseiten des Speicherobjekts aus erstellen, wird das Speicherobjekt automatisch in die Warnung aufgenommen.
+
+* *Enthalten*
++
+Ermöglicht Ihnen, die Ressourcen einzuschließen, für die Sie Warnungen auslösen möchten.  Sie können eine Textzeichenfolge angeben, um Ressourcen zu gruppieren, die der Zeichenfolge entsprechen, und diese Gruppe für die Einbeziehung in die Warnung auswählen.  Sie können beispielsweise alle Datenträger gruppieren, deren Name die Zeichenfolge „abc“ enthält.
+
+* *Ausschließen*
++
+Ermöglicht Ihnen, Ressourcen auszuschließen, für die Sie keine Warnungen auslösen möchten.  Sie können beispielsweise alle Volumes ausschließen, deren Name die Zeichenfolge „xyz“ enthält.
+
++
+Die Registerkarte „Ausschließen“ wird nur angezeigt, wenn Sie alle Ressourcen eines bestimmten Ressourcentyps auswählen: beispielsweise +<<All Volumes>> oder<<All Volumes whose name contains 'xyz'>> +.
+
++
+Wenn eine Ressource sowohl den von Ihnen angegebenen Einschluss- als auch Ausschlussregeln entspricht, hat die Ausschlussregel Vorrang vor der Einschlussregel und die Warnung wird für das Ereignis nicht generiert.
+
+
+
+
+
+== Veranstaltungen
+
+In diesem Bereich können Sie die Ereignisse auswählen, für die Sie Benachrichtigungen erstellen möchten.  Sie können Warnungen für Ereignisse basierend auf einem bestimmten Schweregrad oder für eine Reihe von Ereignissen erstellen.
+
+Um mehr als ein Ereignis auszuwählen, sollten Sie die Strg-Taste gedrückt halten, während Sie Ihre Auswahl treffen.
+
+* *Ereignisschwere*
++
+Ermöglicht Ihnen die Auswahl von Ereignissen basierend auf dem Schweregradtyp, der „Kritisch“, „Fehler“ oder „Warnung“ sein kann.
+
+* *Ereignisname enthält*
++
+Ermöglicht Ihnen die Auswahl von Ereignissen, deren Name bestimmte Zeichen enthält.
+
+
+
+
+
+== Aktionen
+
+In diesem Bereich können Sie die Benutzer angeben, die Sie benachrichtigen möchten, wenn ein Alarm ausgelöst wird.  Sie können auch die Benachrichtigungsmethode und die Benachrichtigungshäufigkeit angeben.
+
+* *Diese Benutzer benachrichtigen*
++
+Ermöglicht Ihnen, die E-Mail-Adresse oder den Benutzernamen des Benutzers anzugeben, der Benachrichtigungen erhalten soll.
+
++
+Wenn Sie die für den Benutzer angegebene E-Mail-Adresse ändern und die Warnung zur Bearbeitung erneut öffnen, wird das Feld „Name“ leer angezeigt, da die geänderte E-Mail-Adresse nicht mehr dem zuvor ausgewählten Benutzer zugeordnet ist.  Wenn Sie die E-Mail-Adresse des ausgewählten Benutzers auf der Seite „Benutzer“ geändert haben, wird die geänderte E-Mail-Adresse für den ausgewählten Benutzer nicht aktualisiert.
+
+* *Benachrichtigungshäufigkeit*
++
+Ermöglicht Ihnen, die Häufigkeit anzugeben, mit der der Verwaltungsserver Benachrichtigungen sendet, bis das Ereignis bestätigt, behoben oder in den veralteten Status versetzt wird.
+
++
+Sie können zwischen folgenden Benachrichtigungsmethoden wählen:
+
++
+** Nur einmal benachrichtigen
+** Benachrichtigung in einer festgelegten Häufigkeit
+** Benachrichtigen Sie in einer bestimmten Häufigkeit innerhalb eines bestimmten Zeitbereichs
+
+
+* *SNMP-Trap ausgeben*
++
+Durch Aktivieren dieses Kontrollkästchens können Sie angeben, ob SNMP-Traps an den global konfigurierten SNMP-Host gesendet werden sollen.
+
+* *Skript ausführen*
++
+Ermöglicht Ihnen, der Warnung Ihr benutzerdefiniertes Skript hinzuzufügen.  Dieses Skript wird ausgeführt, wenn eine Warnung generiert wird.
+
++
+[NOTE]
+====
+Wenn diese Funktion in der Benutzeroberfläche nicht verfügbar ist, liegt das daran, dass Ihr Administrator sie deaktiviert hat.  Bei Bedarf können Sie diese Funktion unter *Speicherverwaltung* > *Funktionseinstellungen* aktivieren.
+
+====
+
+
+
+
+== Befehlsschaltflächen
+
+* *Speichern*
++
+Erstellt eine Warnung und schließt das Dialogfeld.
+
+* *Stornieren*
++
+Verwirft die Änderungen und schließt das Dialogfeld.
+
+

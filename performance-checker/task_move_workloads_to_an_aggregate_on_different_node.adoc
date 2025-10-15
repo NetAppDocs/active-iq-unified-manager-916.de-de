@@ -1,0 +1,85 @@
+---
+permalink: performance-checker/task_move_workloads_to_an_aggregate_on_different_node.html 
+sidebar: sidebar 
+keywords: moving, workloads, aggregate, different, node 
+summary: Sie können Unified Manager verwenden, um ein Aggregat auf einem anderen Knoten zu identifizieren, der weniger ausgelastet ist als der Knoten, auf dem Ihre Workloads derzeit ausgeführt werden. Anschließend können Sie ausgewählte Volumes in dieses Aggregat verschieben.  Durch die Verschiebung leistungsstarker Workloads auf ein Aggregat auf einem weniger ausgelasteten Knoten können die Workloads auf beiden Knoten effizienter ausgeführt werden. 
+---
+= Verschieben von Workloads in ein Aggregat auf einem anderen Knoten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Unified Manager verwenden, um ein Aggregat auf einem anderen Knoten zu identifizieren, der weniger ausgelastet ist als der Knoten, auf dem Ihre Workloads derzeit ausgeführt werden. Anschließend können Sie ausgewählte Volumes in dieses Aggregat verschieben.  Durch die Verschiebung leistungsstarker Workloads auf ein Aggregat auf einem weniger ausgelasteten Knoten können die Workloads auf beiden Knoten effizienter ausgeführt werden.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen den Namen des Knotens aufgezeichnet haben, bei dem derzeit ein Leistungsproblem auftritt.
+* Sie müssen das Datum und die Uhrzeit aufgezeichnet haben, zu der der Knoten das Leistungsereignis empfangen hat.
+* Unified Manager muss mindestens einen Monat lang Leistungsdaten gesammelt und analysiert haben.
+
+
+Mithilfe dieser Schritte können Sie die folgenden Ressourcen identifizieren, sodass Sie leistungsstarke Workloads auf einen Knoten mit geringerer Auslastung verschieben können:
+
+* Die Knoten im selben Cluster, die weniger genutzt werden
+* Die Aggregate auf dem neuen Knoten, die am wenigsten genutzt werden
+* Die leistungsstärksten Volumes auf dem aktuellen Knoten
+
+
+.Schritte
+. Identifizieren Sie einen Knoten im Cluster, der am wenigsten genutzt wird:
++
+.. Klicken Sie auf der Detailseite *Ereignis* auf den Namen des Clusters, auf dem sich der Knoten befindet.
++
+Die Clusterdetails werden auf der Leistungs-/Cluster-Startseite angezeigt.
+
+.. Klicken Sie auf der Seite *Zusammenfassung* im Bereich *Verwaltete Objekte* auf *Knoten*.
++
+Die Liste der Knoten in diesem Cluster wird angezeigt.
+
+.. Klicken Sie auf die Spalte *Auslastung*, um die Knoten nach der geringsten Auslastung zu sortieren.
++
+Sie können auch die Knoten identifizieren, die über die größte *freie Kapazität* verfügen.  Dadurch wird eine Liste potenzieller Knoten bereitgestellt, auf die Sie möglicherweise Arbeitslasten verschieben möchten.
+
+.. Notieren Sie den Namen des Knotens, auf den Sie die Workloads verschieben möchten.
+
+
+. Identifizieren Sie ein Aggregat auf dem neuen Knoten, das am wenigsten genutzt wird:
++
+.. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Aggregate* und wählen Sie im Menü „Ansicht“ die Option *Leistung* > *Alle Aggregate* aus.
++
+Die Ansicht „Leistung: Alle Aggregate“ wird angezeigt.
+
+.. Klicken Sie auf *Filtern*, wählen Sie *Knoten* aus dem linken Dropdown-Menü, geben Sie den Namen des Knotens in das Textfeld ein und klicken Sie dann auf *Filter anwenden*.
++
+Die Ansicht „Leistung: Alle Aggregate“ wird erneut mit der Liste der auf diesem Knoten verfügbaren Aggregate angezeigt.
+
+.. Klicken Sie auf die Spalte *Auslastung*, um die Aggregate nach der geringsten Auslastung zu sortieren.
++
+Sie können auch die Aggregate identifizieren, die die größte *freie Kapazität* haben.  Dadurch wird eine Liste potenzieller Aggregate bereitgestellt, auf die Sie möglicherweise Arbeitslasten verschieben möchten.
+
+.. Notieren Sie den Namen des Aggregats, in das Sie die Workloads verschieben möchten.
+
+
+. Identifizieren Sie die leistungsstarken Workloads des Knotens, der das Ereignis empfangen hat:
++
+.. Kehren Sie zur Detailseite *Event* für das Event zurück.
+.. Klicken Sie im Feld *Betroffene Volumes* auf den Link für die Anzahl der Volumes.
++
+Die Ansicht „Leistung: Alle Volumes“ wird mit einer gefilterten Liste der Volumes auf diesem Knoten angezeigt.
+
+.. Klicken Sie auf die Spalte *Gesamtkapazität*, um die Volumes nach dem größten zugewiesenen Speicherplatz zu sortieren.
++
+Dadurch wird eine Liste potenzieller Datenträger bereitgestellt, die Sie möglicherweise verschieben möchten.
+
+.. Notieren Sie die Namen der Volumes, die Sie verschieben möchten, und die Namen der aktuellen Aggregate, auf denen sie sich befinden.
+
+
+. Verschieben Sie die Volumes auf die Aggregate, die Ihrer Meinung nach auf dem neuen Knoten eine geringe Auslastung aufweisen.
++
+Sie können den Verschiebevorgang mithilfe von ONTAP System Manager, OnCommand Workflow Automation, ONTAP -Befehlen oder einer Kombination dieser Tools durchführen.
+
+
+
+Überprüfen Sie nach einigen Tagen, ob Sie von diesem Knoten oder Aggregat denselben Ereignistyp erhalten.

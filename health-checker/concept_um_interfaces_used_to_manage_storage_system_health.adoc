@@ -1,0 +1,32 @@
+---
+permalink: health-checker/concept_um_interfaces_used_to_manage_storage_system_health.html 
+sidebar: sidebar 
+keywords: unified manager, interfaces, manage, storage system, health 
+summary: Dieser Abschnitt enthält Informationen zu den beiden Benutzeroberflächen, die Active IQ Unified Manager zur Behebung von Problemen mit der Datenspeicherkapazität, -verfügbarkeit und dem Schutz bereitstellt.  Die beiden Benutzeroberflächen sind die Unified Manager-Webbenutzeroberfläche und die Wartungskonsole. 
+---
+= Unified Manager-Schnittstellen zur Verwaltung der Speichersystemintegrität
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead lead"]
+Diese Abschnitte enthalten Informationen zu den beiden Benutzeroberflächen, die Active IQ Unified Manager zur Behebung von Problemen mit der Datenspeicherkapazität, -verfügbarkeit und dem Schutz bereitstellt.  Die beiden Benutzeroberflächen sind die Unified Manager-Webbenutzeroberfläche und die Wartungskonsole.
+
+Wenn Sie die Schutzfunktionen in Unified Manager verwenden möchten, müssen Sie auch OnCommand Workflow Automation (WFA) installieren und konfigurieren.
+
+
+
+== Unified Manager-Web-Benutzeroberfläche
+
+Über die Web-Benutzeroberfläche von Unified Manager kann ein Administrator Clusterprobleme im Zusammenhang mit der Datenspeicherkapazität, -verfügbarkeit und -sicherheit überwachen und beheben.
+
+In diesen Abschnitten werden einige allgemeine Arbeitsabläufe beschrieben, die ein Administrator befolgen kann, um Probleme mit der Speicherkapazität, der Datenverfügbarkeit oder dem Schutz zu beheben, die in der Web-Benutzeroberfläche von Unified Manager angezeigt werden.
+
+
+
+== Wartungskonsole
+
+Mit der Wartungskonsole von Unified Manager kann ein Administrator Betriebssystemprobleme, Probleme bei Versionsaktualisierungen, Probleme beim Benutzerzugriff und Netzwerkprobleme im Zusammenhang mit dem Unified Manager-Server selbst überwachen, diagnostizieren und beheben.  Wenn die Web-Benutzeroberfläche von Unified Manager nicht verfügbar ist, ist die Wartungskonsole die einzige Möglichkeit, auf Unified Manager zuzugreifen.
+
+Sie können diese Informationen verwenden, um auf die Wartungskonsole zuzugreifen und damit Probleme im Zusammenhang mit der Funktion des Unified Manager-Servers zu lösen.

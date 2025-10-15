@@ -1,0 +1,55 @@
+---
+permalink: events/reference_storage_shelf_events.html 
+sidebar: sidebar 
+keywords: storage, shelf, events, impact area, availability 
+summary: Durch Speicherregalereignisse werden Sie über ungewöhnliche Zustände Ihres Speicherregals informiert, sodass Sie es auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad. 
+---
+= Lagerregalereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Durch Speicherregalereignisse werden Sie über ungewöhnliche Zustände Ihres Speicherregals informiert, sodass Sie es auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad.
+
+
+
+== Wirkungsbereich: Verfügbarkeit
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+Abnormaler Spannungsbereich (ocumEvtShelfVoltageAbnormal)
+ a| 
+Risiko
+ a| 
+Ablageboden
+ a| 
+Warnung
+
+
+
+ a| 
+Abnormaler Strombereich (ocumEvtShelfCurrentAbnormal)
+ a| 
+Risiko
+ a| 
+Ablageboden
+ a| 
+Warnung
+
+
+
+ a| 
+Abnormale Temperatur (ocumEvtShelfTemperatureAbnormal)
+ a| 
+Risiko
+ a| 
+Ablageboden
+ a| 
+Warnung
+
+|===

@@ -1,0 +1,30 @@
+---
+permalink: storage-mgmt/task_rediscover_clusters.html 
+sidebar: sidebar 
+keywords: rediscover clusters, 
+summary: Sie können einen Cluster manuell über die Seite „Cluster-Setup“ erneut erkennen, um die neuesten Informationen zum Zustand, Überwachungsstatus und Leistungsstatus des Clusters zu erhalten. 
+---
+= Cluster neu entdecken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Cluster manuell über die Seite „Cluster-Setup“ erneut erkennen, um die neuesten Informationen zum Zustand, Überwachungsstatus und Leistungsstatus des Clusters zu erhalten.
+
+Sie können einen Cluster manuell erneut erkennen, wenn Sie ihn aktualisieren möchten – etwa durch Erhöhen der Größe eines Aggregats, wenn nicht genügend Speicherplatz vorhanden ist – und Unified Manager die von Ihnen vorgenommenen Änderungen erkennen soll.
+
+Wenn Unified Manager mit OnCommand Workflow Automation (WFA) gekoppelt wird, löst die Kopplung die erneute Erfassung der von WFA zwischengespeicherten Daten aus.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Cluster-Setup*.
+. Klicken Sie auf der Seite *Cluster-Setup* auf *Neu erkennen*.
++
+Unified Manager erkennt den ausgewählten Cluster erneut und zeigt den neuesten Integritäts- und Leistungsstatus an.
+
+
+
+*Verwandte Informationen*
+
+link:../health-checker/task_view_cluster_list_and_details.html["Anzeigen der Clusterliste und Details"]

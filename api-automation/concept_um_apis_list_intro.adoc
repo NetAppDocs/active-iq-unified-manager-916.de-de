@@ -1,0 +1,32 @@
+---
+permalink: api-automation/concept_um_apis_list_intro.html 
+sidebar: sidebar 
+keywords: unified, manager, rest, api 
+summary: Die REST-APIs für Active IQ Unified Manager sind in diesem Abschnitt nach Kategorien aufgelistet. 
+---
+= Unified Manager REST-APIs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die REST-APIs für Active IQ Unified Manager sind in diesem Abschnitt nach Kategorien aufgelistet.
+
+Sie können die Online-Dokumentationsseite Ihrer Unified Manager-Instanz anzeigen, die die Details jedes REST-API-Aufrufs enthält.  Dieses Dokument wiederholt nicht die Details der Online-Dokumentation.  Jeder in diesem Dokument aufgeführte oder beschriebene API-Aufruf enthält nur die Informationen, die Sie benötigen, um den Aufruf auf der Dokumentationsseite zu finden.  Nachdem Sie einen bestimmten API-Aufruf gefunden haben, können Sie die vollständigen Details dieses Aufrufs überprüfen, einschließlich der Eingabeparameter, Ausgabeformate, HTTP-Statuscodes und des Anforderungsverarbeitungstyps.
+
+Die folgenden Informationen sind für jeden API-Aufruf innerhalb eines Workflows enthalten, um das Auffinden des Aufrufs auf der Dokumentationsseite zu erleichtern:
+
+* Kategorie
++
+Die API-Aufrufe sind auf der Dokumentationsseite in funktional verwandte Bereiche oder Kategorien unterteilt.  Um einen bestimmten API-Aufruf zu finden, scrollen Sie zum Ende der Seite und klicken Sie dann auf die entsprechende API-Kategorie.
+
+* HTTP-Verb (Aufruf)
++
+Das HTTP-Verb identifiziert die an einer Ressource ausgeführte Aktion. Jeder API-Aufruf wird über ein einzelnes HTTP-Verb ausgeführt.
+
+* Weg
++
+Der Pfad bestimmt die spezifische Ressource, die die Aktion im Rahmen der Ausführung eines Aufrufs verwendet. Die Pfadzeichenfolge wird an die Kern-URL angehängt, um die vollständige URL zur Identifizierung der Ressource zu bilden.
+
+

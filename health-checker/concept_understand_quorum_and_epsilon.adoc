@@ -1,0 +1,30 @@
+---
+permalink: health-checker/concept_understand_quorum_and_epsilon.html 
+sidebar: sidebar 
+keywords: understand, quorum, epsilon 
+summary: Quorum und Epsilon sind wichtige Messwerte für die Gesundheit und Funktion von Clustern, die zusammen Aufschluss darüber geben, wie Cluster mit potenziellen Kommunikations- und Konnektivitätsproblemen umgehen. 
+---
+= Quorum und Epsilon verstehen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quorum und Epsilon sind wichtige Messwerte für die Gesundheit und Funktion von Clustern, die zusammen Aufschluss darüber geben, wie Cluster mit potenziellen Kommunikations- und Konnektivitätsproblemen umgehen.
+
+_Quorum_ ist eine Voraussetzung für einen voll funktionsfähigen Cluster.  Wenn ein Cluster im Quorum ist, ist eine einfache Mehrheit der Knoten fehlerfrei und kann miteinander kommunizieren.  Wenn das Quorum verloren geht, kann der Cluster keine normalen Clustervorgänge mehr durchführen.  Es kann immer nur eine Knotensammlung das Quorum haben, da alle Knoten gemeinsam eine einzige Datenansicht nutzen.  Wenn also zwei nicht kommunizierende Knoten die Daten auf unterschiedliche Weise ändern dürfen, ist es nicht mehr möglich, die Daten in einer einzigen Datenansicht zusammenzuführen.
+
+Jeder Knoten im Cluster nimmt an einem Abstimmungsprotokoll teil, bei dem ein Knotenmaster gewählt wird; jeder verbleibende Knoten ist ein sekundärer Knoten.  Der Masterknoten ist für die Synchronisierung von Informationen im gesamten Cluster verantwortlich.  Wenn die Beschlussfähigkeit erreicht ist, wird sie durch fortlaufende Abstimmung aufrechterhalten.  Wenn der Masterknoten offline geht und der Cluster noch im Quorum ist, wird von den Knoten, die online bleiben, ein neuer Master gewählt.
+
+Da in einem Cluster mit einer geraden Anzahl von Knoten die Möglichkeit eines Gleichstands besteht, erhält ein Knoten ein zusätzliches, gebrochenes Stimmgewicht, das als Epsilon bezeichnet wird.  Wenn die Konnektivität zwischen zwei gleichen Teilen eines großen Clusters ausfällt, behält die Gruppe von Knoten, die Epsilon enthält, das Quorum bei, vorausgesetzt, dass alle Knoten fehlerfrei sind.  Die folgende Abbildung zeigt beispielsweise einen Cluster mit vier Knoten, in dem zwei Knoten ausgefallen sind.  Da jedoch einer der überlebenden Knoten Epsilon hält, bleibt der Cluster im Quorum, auch wenn keine einfache Mehrheit gesunder Knoten vorhanden ist.
+
+image::../media/epsilon_preserving_quorum.gif[Dieses Bild wird durch den umgebenden Text erklärt.]
+
+Epsilon wird beim Erstellen des Clusters automatisch dem ersten Knoten zugewiesen.  Wenn der Knoten, der Epsilon enthält, fehlerhaft wird, seinen Hochverfügbarkeitspartner übernimmt oder von seinem Hochverfügbarkeitspartner übernommen wird, wird Epsilon automatisch einem fehlerfreien Knoten in einem anderen HA-Paar neu zugewiesen.
+
+Das Offlineschalten eines Knotens kann die Fähigkeit des Clusters beeinträchtigen, im Quorum zu bleiben.  Daher gibt ONTAP eine Warnmeldung aus, wenn Sie einen Vorgang versuchen, der den Cluster entweder aus dem Quorum nimmt oder ihn einen Ausfall von einem Quorumverlust entfernt.  Sie können die Quorum-Warnmeldungen deaktivieren, indem Sie den Befehl „cluster quorum-service options modify“ auf der erweiterten Berechtigungsebene verwenden.
+
+Im Allgemeinen ist ein größerer Cluster stabiler als ein kleinerer Cluster, vorausgesetzt, die Konnektivität zwischen den Knoten des Clusters ist zuverlässig.  Die Quorum-Anforderung einer einfachen Mehrheit von der Hälfte der Knoten plus Epsilon ist in einem Cluster mit 24 Knoten leichter einzuhalten als in einem Cluster mit zwei Knoten.
+
+Ein Cluster mit zwei Knoten stellt einige einzigartige Herausforderungen hinsichtlich der Aufrechterhaltung des Quorums dar.  Cluster mit zwei Knoten verwenden Cluster-HA, bei dem keiner der Knoten Epsilon hält. Stattdessen werden beide Knoten kontinuierlich abgefragt, um sicherzustellen, dass beim Ausfall eines Knotens der andere vollen Lese- und Schreibzugriff auf die Daten sowie Zugriff auf logische Schnittstellen und Verwaltungsfunktionen hat.

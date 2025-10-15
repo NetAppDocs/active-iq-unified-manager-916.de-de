@@ -1,0 +1,73 @@
+---
+permalink: health-checker/task_retrieve_support_bundle_using_unix_or_linux_client.html 
+sidebar: sidebar 
+keywords: retrieve, support bundle, unix, linux, client 
+summary: 'Wenn Sie ein UNIX- oder Linux-Benutzer sind, können Sie das Support-Paket von Ihrer vApp abrufen, indem Sie die Befehlszeilenschnittstelle (CLI) auf Ihrem Linux-Clientserver verwenden.  Sie können entweder SCP oder SFTP verwenden, um das Support-Paket abzurufen.' 
+---
+= Rufen Sie das Support-Paket mit einem UNIX- oder Linux-Client ab
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie ein UNIX- oder Linux-Benutzer sind, können Sie das Support-Paket von Ihrer vApp abrufen, indem Sie die Befehlszeilenschnittstelle (CLI) auf Ihrem Linux-Clientserver verwenden.  Sie können entweder SCP oder SFTP verwenden, um das Support-Paket abzurufen.
+
+.Bevor Sie beginnen
+Sie müssen der Wartungsbenutzer sein, um diese Aufgabe auszuführen.
+
+Sie müssen mithilfe der Wartungskonsole ein Support-Paket erstellt haben und über den Namen des Support-Pakets verfügen.
+
+.Schritte
+. Greifen Sie über Telnet oder die Konsole auf die CLI zu, indem Sie Ihren Linux-Clientserver verwenden.
+. Zugriff auf die/`support` Verzeichnis.
+. Rufen Sie das Support-Paket ab und kopieren Sie es mit dem folgenden Befehl in das lokale Verzeichnis:
++
+[cols="2*"]
+|===
+| Wenn Sie verwenden... | Verwenden Sie dann den folgenden Befehl ... 
+
+
+ a| 
+SCP
+ a| 
+`scp <maintenance-user>@<vApp-name-or-ip>:/support/support_bundle_file_name.7z <destination-directory>`
+
+
+
+ a| 
+SFTP
+ a| 
+`sftp <maintenance-user>@<vApp-name-or-ip>:/support/support_bundle_file_name.7z <destination-directory>`
+
+|===
++
+Der Name des Support-Pakets wird Ihnen mitgeteilt, wenn Sie es mithilfe der Wartungskonsole generieren.
+
+. Geben Sie das Kennwort des Wartungsbenutzers ein.
+
+
+
+
+== Beispiele
+
+Im folgenden Beispiel wird SCP zum Abrufen des Support-Pakets verwendet:
+
+[listing]
+----
+
+        `$ scp admin@10.10.12.69:/support/support_bundle_20160216_145359.7z .`
+Password: `<maintenance_user_password>`
+support_bundle_20160216_145359.7z   100%  119MB  11.9MB/s   00:10
+----
+Im folgenden Beispiel wird SFTP zum Abrufen des Support-Pakets verwendet:
+
+[listing]
+----
+
+        `$ sftp admin@10.10.12.69:/support/support_bundle_20160216_145359.7z .`
+Password: `<maintenance_user_password>`
+Connected to 10.228.212.69.
+Fetching /support/support_bundle_20130216_145359.7z to ./support_bundle_20130216_145359.7z
+/support/support_bundle_20160216_145359.7z
+----

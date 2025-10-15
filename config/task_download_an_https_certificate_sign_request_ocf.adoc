@@ -1,0 +1,25 @@
+---
+permalink: config/task_download_an_https_certificate_sign_request_ocf.html 
+sidebar: sidebar 
+keywords: download, https, certificate, signing, request 
+summary: Sie können eine Zertifizierungssignaturanforderung für das aktuelle HTTPS-Sicherheitszertifikat herunterladen, sodass Sie die Datei einer Zertifizierungsstelle zur Signierung vorlegen können.  Ein von einer Zertifizierungsstelle signiertes Zertifikat trägt dazu bei, Man-in-the-Middle-Angriffe zu verhindern und bietet einen besseren Sicherheitsschutz als ein selbstsigniertes Zertifikat. 
+---
+= Laden Sie eine HTTPS-Zertifikatsignieranforderung herunter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Zertifizierungssignaturanforderung für das aktuelle HTTPS-Sicherheitszertifikat herunterladen, sodass Sie die Datei einer Zertifizierungsstelle zur Signierung vorlegen können.  Ein von einer Zertifizierungsstelle signiertes Zertifikat trägt dazu bei, Man-in-the-Middle-Angriffe zu verhindern und bietet einen besseren Sicherheitsschutz als ein selbstsigniertes Zertifikat.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ verfügen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Allgemein* > *HTTPS-Zertifikat*.
+. Klicken Sie auf *HTTPS-Zertifikatsignieranforderung herunterladen*.
+. Speichern Sie die `<hostname>.csr` Datei.
+
+
+Sie können die Datei einer Zertifizierungsstelle zur Signierung vorlegen und anschließend das signierte Zertifikat installieren.

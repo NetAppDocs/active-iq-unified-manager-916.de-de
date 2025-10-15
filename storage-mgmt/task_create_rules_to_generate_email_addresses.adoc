@@ -1,0 +1,40 @@
+---
+permalink: storage-mgmt/task_create_rules_to_generate_email_addresses.html 
+sidebar: sidebar 
+keywords: create, rules, generate, email, addresses 
+summary: 'Sie können Regeln erstellen, um die E-Mail-Adresse basierend auf dem Benutzerkontingent anzugeben, das Clustern, virtuellen Speichermaschinen (SVMs), Volumes, Qtrees, Benutzern oder Benutzergruppen zugeordnet ist.  Bei einer Quotenüberschreitung wird eine Benachrichtigung an die angegebene E-Mail-Adresse gesendet.' 
+---
+= Erstellen Sie Regeln zum Generieren von E-Mail-Adressen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Regeln erstellen, um die E-Mail-Adresse basierend auf dem Benutzerkontingent anzugeben, das Clustern, virtuellen Speichermaschinen (SVMs), Volumes, Qtrees, Benutzern oder Benutzergruppen zugeordnet ist.  Bei einer Quotenüberschreitung wird eine Benachrichtigung an die angegebene E-Mail-Adresse gesendet.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen die Richtlinien auf der Seite „Regeln zum Generieren von E-Mail-Adressen für Benutzer- und Gruppenkontingente“ gelesen haben.
+
+
+Sie müssen die Regeln für Kontingent-E-Mail-Adressen definieren und sie in der Reihenfolge eingeben, in der Sie sie ausführen möchten.  Wenn Sie beispielsweise die E-Mail-Adresse abc@xyz.com verwenden möchten, um Benachrichtigungen über Kontingentverletzungen für abc zu erhalten, und die E-Mail-Adresse dl-$GROUP@$DOMAIN für alle anderen Gruppen verwenden möchten, müssen die Regeln in der folgenden Reihenfolge aufgeführt werden:
+
+* wenn ( $USER == 'abc' ) dann abc@xyz.com
+* wenn ( $GROUP == * ) dann dl-$GROUP@$DOMAIN
+
+
+Wenn keines der Kriterien der von Ihnen angegebenen Regeln erfüllt ist, wird die Standardregel verwendet:
+
+wenn ( $USER_OR_GROUP == * ) dann $USER_OR_GROUP@$DOMAIN
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Allgemein* > *Kontingent-E-Mail-Regeln*.
+. Geben Sie die Regel basierend auf Ihren Kriterien ein.
+. Klicken Sie auf *Validieren*, um die Syntax der Regel zu validieren.
++
+Wenn die Syntax der Regel falsch ist, wird eine Fehlermeldung angezeigt.  Sie müssen die Syntax korrigieren und erneut auf *Validieren* klicken.
+
+. Klicken Sie auf *Speichern*.
+. Überprüfen Sie, ob die von Ihnen erstellte E-Mail-Adresse auf der Registerkarte „Benutzer- und Gruppenkontingente“ der Detailseite „Speicher-VM/Integrität“ angezeigt wird.
+

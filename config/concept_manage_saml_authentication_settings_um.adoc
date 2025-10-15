@@ -1,0 +1,16 @@
+---
+permalink: config/concept_manage_saml_authentication_settings_um.html 
+sidebar: sidebar 
+keywords: manage, saml, authentication, settings 
+summary: 'Nachdem Sie die Remote-Authentifizierungseinstellungen konfiguriert haben, können Sie die Security Assertion Markup Language (SAML)-Authentifizierung aktivieren, sodass Remote-Benutzer von einem sicheren Identitätsanbieter (IdP) authentifiziert werden, bevor sie auf die Unified Manager-Web-Benutzeroberfläche zugreifen können.' 
+---
+= Verwalten der SAML-Authentifizierungseinstellungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie die Remote-Authentifizierungseinstellungen konfiguriert haben, können Sie die Security Assertion Markup Language (SAML)-Authentifizierung aktivieren, sodass Remote-Benutzer von einem sicheren Identitätsanbieter (IdP) authentifiziert werden, bevor sie auf die Unified Manager-Web-Benutzeroberfläche zugreifen können.
+
+Beachten Sie, dass nach der Aktivierung der SAML-Authentifizierung nur Remote-Benutzer Zugriff auf die grafische Benutzeroberfläche von Unified Manager haben.  Lokale Benutzer und Wartungsbenutzer können nicht auf die Benutzeroberfläche zugreifen.  Diese Konfiguration hat keine Auswirkungen auf Benutzer, die auf die Wartungskonsole zugreifen.

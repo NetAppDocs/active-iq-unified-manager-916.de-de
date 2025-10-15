@@ -1,0 +1,103 @@
+---
+permalink: api-automation/concept_manage_sep.html 
+sidebar: sidebar 
+keywords: manage, storage, efficiency, policy 
+summary: Sie können Speichereffizienzrichtlinien mithilfe der APIs des Speicheranbieters anzeigen, erstellen, ändern und löschen. 
+---
+= Verwalten von Speichereffizienzrichtlinien mithilfe von APIs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Speichereffizienzrichtlinien mithilfe der APIs des Speicheranbieters anzeigen, erstellen, ändern und löschen.
+
+[NOTE]
+====
+Beachten Sie die folgenden Punkte:
+
+* Es ist nicht zwingend erforderlich, beim Erstellen einer Arbeitslast auf Unified Manager eine Speichereffizienzrichtlinie zuzuweisen.
+* Sie können die Zuweisung einer Speichereffizienzrichtlinie zu einer Arbeitslast nicht mehr aufheben, nachdem ihr eine Richtlinie zugewiesen wurde.
+* Wenn für eine Arbeitslast einige Speichereinstellungen auf ONTAP Volumes angegeben sind, z. B. Deduplizierung und Komprimierung, können diese Einstellungen durch die in der Speichereffizienzrichtlinie angegebenen Einstellungen überschrieben werden, die Sie anwenden, wenn Sie die Speicherarbeitslasten zu Unified Manager hinzufügen.
+
+
+====
+
+
+== Richtlinien zur Speichereffizienz anzeigen
+
+Mit der folgenden Methode können Sie die Speichereffizienzrichtlinien anzeigen, bevor Sie sie Speicher-Workloads zuweisen.  Diese API listet alle systemdefinierten und benutzererstellten Speichereffizienzrichtlinien auf und ruft die Attribute aller Speichereffizienzrichtlinien ab.  Wenn Sie eine bestimmte Speichereffizienzrichtlinie abfragen möchten, müssen Sie die eindeutige ID der Richtlinie eingeben, um ihre Details abzurufen.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Speicheranbieter
+ a| 
+ERHALTEN
+ a| 
+`/storage-provider/storage-efficiency-policies`
+
+`/storage-provider/storage-efficiency-policies/\{key}`
+
+|===
+
+
+== Hinzufügen von Richtlinien zur Speichereffizienz
+
+Mit der folgenden Methode können Sie benutzerdefinierte Speichereffizienzrichtlinien erstellen und diese Ihren Speicher-Workloads zuweisen, wenn die systemdefinierten Richtlinien die Bereitstellungsanforderungen für Ihre Speicher-Workloads nicht erfüllen.  Geben Sie die Details der Speichereffizienzrichtlinie, die Sie erstellen möchten, als Eingabeparameter ein.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Speicheranbieter
+ a| 
+POST
+ a| 
+`/storage-provider/storage-efficiency-policies`
+
+|===
+
+
+== Richtlinien zur Speichereffizienz löschen
+
+Sie können die folgende Methode verwenden, um eine bestimmte Speichereffizienzrichtlinie zu löschen.  Sie können eine Speichereffizienzrichtlinie nicht löschen, wenn sie einer Arbeitslast zugewiesen ist oder wenn es sich um die einzige verfügbare Speichereffizienzrichtlinie handelt.  Sie müssen die eindeutige ID der Speichereffizienzrichtlinie als Eingabeparameter angeben, um eine bestimmte Speichereffizienzrichtlinie zu löschen.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Speicheranbieter
+ a| 
+LÖSCHEN
+ a| 
+`/storage-provider/storage-efficiency-policies/\{key}`
+
+|===
+
+
+== Ändern Sie die Richtlinien zur Speichereffizienz
+
+Mit der folgenden Methode können Sie eine Speichereffizienzrichtlinie ändern und ihre Eigenschaften aktualisieren.  Sie können keine Speichereffizienzrichtlinie ändern, die systemdefiniert ist oder einer Arbeitslast zugewiesen ist.  Sie müssen die eindeutige ID der Speichereffizienzrichtlinie angeben, um eine bestimmte Speichereffizienzrichtlinie zu ändern.  Darüber hinaus müssen Sie die Eigenschaft, die Sie aktualisieren möchten, zusammen mit ihrem Wert angeben.
+
+[cols="3*"]
+|===
+| Kategorie | HTTP-Verb | Weg 
+
+
+ a| 
+Speicheranbieter
+ a| 
+PATCH
+ a| 
+`/storage-provider/storage-efficiency-policies/\{key}`
+
+|===

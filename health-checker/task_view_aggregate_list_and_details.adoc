@@ -1,0 +1,41 @@
+---
+permalink: health-checker/task_view_aggregate_list_and_details.html 
+sidebar: sidebar 
+keywords: view, aggregate list, details 
+summary: 'In der Ansicht „Integrität: Alle Aggregate“ können Sie Ihren Aggregatbestand überwachen.  Mit der Ansicht „Kapazität: Alle Aggregate“ können Sie Informationen zur Kapazität und Auslastung von Aggregaten in allen Clustern anzeigen.' 
+---
+= Gesamtliste und Details anzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In der Ansicht „Integrität: Alle Aggregate“ können Sie Ihren Aggregatbestand überwachen.  Mit der Ansicht „Kapazität: Alle Aggregate“ können Sie Informationen zur Kapazität und Auslastung von Aggregaten in allen Clustern anzeigen.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Sie können Details wie Gesamtkapazität und -konfiguration sowie Datenträgerinformationen auf der Seite „Aggregat-/Integritätsdetails“ anzeigen.  Sie können diese Angaben verwenden, bevor Sie bei Bedarf die Schwellenwerteinstellungen konfigurieren.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Aggregate*.
+. Wählen Sie eine der folgenden Möglichkeiten, um die aggregierten Details anzuzeigen:
++
+** Um Informationen zum Zustand aller Aggregate in allen Clustern anzuzeigen, wählen Sie im Menü „Ansicht“ die Option „Zustand: Alle Aggregate anzeigen“ aus.
+** Um Informationen zur Kapazität und Auslastung aller Aggregate in allen Clustern anzuzeigen, wählen Sie im Menü „Ansicht“ die Option „Kapazität: Alle Aggregate anzeigen“ aus.
+** Klicken Sie auf den Aggregatnamen, um die vollständigen Details anzuzeigen.
++
+Sie können die vollständigen Details auch anzeigen, indem Sie im Dialogfeld mit den minimalen Details auf *Details anzeigen* klicken.
+
+
+
+. Zeigen Sie die mit dem Aggregat verknüpften Objekte an, indem Sie im Dialogfeld mit den minimalen Details auf *Verwandte anzeigen* klicken.
+
+
+*Verwandte Informationen*
+
+* link:../health-checker/reference_health_aggregate_details_page.html["Seite mit Aggregat-/Gesundheitsdetails"]
+* link:../performance-checker/performance-view-all.html#performance-all-aggregates-view["Leistung: Alle Aggregate anzeigen"]
+* link:../reporting/concept_customize_aggregate_capacity_reports.html["Anpassen aggregierter Kapazitätsberichte"]
+

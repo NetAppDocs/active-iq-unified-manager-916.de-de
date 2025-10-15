@@ -1,0 +1,53 @@
+---
+permalink: config/task_perform_initial_setup_of_unified_manager_web_ui.html 
+sidebar: sidebar 
+keywords: perform, initial, setup, unified manager web ui 
+summary: Um Unified Manager zu verwenden, müssen Sie zunächst die anfänglichen Einrichtungsoptionen konfigurieren, einschließlich des NTP-Servers, der E-Mail-Adresse des Wartungsbenutzers, des SMTP-Serverhosts und des Hinzufügens von ONTAP Clustern. 
+---
+= Führen Sie die Ersteinrichtung der Unified Manager-Web-Benutzeroberfläche durch
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um Unified Manager zu verwenden, müssen Sie zunächst die anfänglichen Einrichtungsoptionen konfigurieren, einschließlich des NTP-Servers, der E-Mail-Adresse des Wartungsbenutzers, des SMTP-Serverhosts und des Hinzufügens von ONTAP Clustern.
+
+.Bevor Sie beginnen
+Sie müssen die folgenden Vorgänge ausgeführt haben:
+
+* Die Unified Manager-Web-Benutzeroberfläche wurde über die nach der Installation bereitgestellte URL gestartet.
+* Angemeldet mit dem Wartungsbenutzernamen und -kennwort (Umadmin-Benutzer für Linux-Installationen), die während der Installation erstellt wurden
+
+
+Die Seite „Erste Schritte“ von Active IQ Unified Manager wird nur angezeigt, wenn Sie zum ersten Mal auf die Web-Benutzeroberfläche zugreifen.  Die folgende Seite stammt aus einer Installation auf VMware.
+
+image::../media/first_experience_wizard.JPG[Ein UI-Screenshot, der eine Seite der Installation auf VMware zeigt.]
+
+Wenn Sie eine dieser Optionen später ändern möchten, können Sie Ihre Auswahl aus den allgemeinen Optionen im linken Navigationsbereich des Unified Managers treffen.  Beachten Sie, dass die NTP-Einstellung nur für VMware-Installationen gilt und später über die Wartungskonsole von Unified Manager geändert werden kann.
+
+.Schritte
+. Geben Sie auf der Seite „Ersteinrichtung“ von Active IQ Unified Manager die E-Mail-Adresse des Wartungsbenutzers, den Hostnamen des SMTP-Servers und alle zusätzlichen SMTP-Optionen sowie den NTP-Server ein (nur VMware-Installationen). Klicken Sie dann auf *Weiter*.
++
+[NOTE]
+====
+Wenn Sie die Option *STARTLS verwenden* oder *SSL verwenden* ausgewählt haben, wird nach dem Klicken auf die Schaltfläche *Weiter* eine Zertifikatsseite angezeigt.  Überprüfen Sie die Zertifikatdetails und akzeptieren Sie das Zertifikat, um mit den anfänglichen Einrichtungseinstellungen der Web-Benutzeroberfläche fortzufahren.
+
+====
+. Klicken Sie auf der AutoSupport -Seite auf *Zustimmen und fortfahren*, um das Senden von AutoSupport -Nachrichten von Unified Manager an NetAppActive IQ zu aktivieren.
++
+Wenn Sie einen Proxy für den Internetzugang festlegen müssen, um AutoSupport Inhalte zu senden, oder wenn Sie AutoSupport deaktivieren möchten, verwenden Sie die Option *Allgemein* > * AutoSupport* in der Web-Benutzeroberfläche.
+
+. Ändern Sie auf Red Hat-Systemen das Umadmin-Benutzerkennwort von der Standardzeichenfolge „`admin`“ in eine personalisierte Zeichenfolge.
+. Wählen Sie auf der Seite „API-Gateway einrichten“ aus, ob Sie die API-Gateway-Funktion verwenden möchten, mit der Unified Manager die ONTAP Cluster verwalten kann, die Sie mithilfe von ONTAP REST-APIs überwachen möchten. Klicken Sie dann auf *Weiter*.
++
+Sie können diese Einstellung später in der Web-Benutzeroberfläche unter *Allgemein* > *Funktionseinstellungen* > *API-Gateway* aktivieren oder deaktivieren.  Weitere Informationen zu den APIs finden Sie unterlink:../api-automation/concept_get_started_with_um_apis.html["Erste Schritte mit Active IQ Unified Manager REST-APIs"] .
+
+. Fügen Sie die Cluster hinzu, die Unified Manager verwalten soll, und klicken Sie dann auf *Weiter*.  Für jeden Cluster, den Sie verwalten möchten, benötigen Sie den Hostnamen oder die IP-Adresse (IPv4 oder IPv6) für die Clusterverwaltung sowie den Benutzernamen und das Kennwort. Der Benutzer muss über die Rolle „admin“ verfügen.
++
+Dieser Schritt ist optional.  Sie können Cluster später in der Web-Benutzeroberfläche unter *Speicherverwaltung* > *Cluster-Setup* hinzufügen.
+
+. Überprüfen Sie auf der Seite „Zusammenfassung“, ob alle Einstellungen korrekt sind, und klicken Sie auf „Fertig stellen“.
+
+
+Die Seite „Erste Schritte“ wird geschlossen und die Seite „Unified Manager Dashboard“ wird angezeigt.

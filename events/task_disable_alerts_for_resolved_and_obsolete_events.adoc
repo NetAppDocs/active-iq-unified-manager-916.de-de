@@ -1,0 +1,42 @@
+---
+permalink: events/task_disable_alerts_for_resolved_and_obsolete_events.html 
+sidebar: sidebar 
+keywords: enable, disable, alerts, resolved, obsolete, events 
+summary: 'Für alle Ereignisse, die Sie zum Senden von Warnungen konfiguriert haben, wird eine Warnmeldung gesendet, wenn diese Ereignisse alle verfügbaren Status durchlaufen: Neu, Bestätigt, Gelöst und Veraltet.  Wenn Sie keine Warnmeldungen für Ereignisse erhalten möchten, die in den Status „Gelöst“ oder „Veraltet“ wechseln, können Sie eine globale Einstellung konfigurieren, um diese Warnmeldungen zu unterdrücken.' 
+---
+= Aktivieren und Deaktivieren von Warnungen für behobene und veraltete Ereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für alle Ereignisse, die Sie zum Senden von Warnungen konfiguriert haben, wird eine Warnmeldung gesendet, wenn diese Ereignisse alle verfügbaren Status durchlaufen: Neu, Bestätigt, Gelöst und Veraltet.  Wenn Sie keine Warnmeldungen für Ereignisse erhalten möchten, die in den Status „Gelöst“ oder „Veraltet“ wechseln, können Sie eine globale Einstellung konfigurieren, um diese Warnmeldungen zu unterdrücken.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Standardmäßig werden für Ereignisse, die in den Status „Gelöst“ oder „Veraltet“ wechseln, keine Warnungen gesendet.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Alarm-Setup*.
+. Führen Sie auf der Seite *Alarm-Setup* mithilfe des Schiebereglers neben dem Element *Alarme für behobene und veraltete Ereignisse* eine der folgenden Aktionen aus:
++
+|===
+| Zu... | Machen Sie Folgendes... 
+
+
+ a| 
+Beenden Sie das Senden von Warnmeldungen, wenn Ereignisse behoben oder veraltet sind
+ a| 
+Bewegen Sie den Schieberegler nach links
+
+
+
+ a| 
+Beginnen Sie mit dem Senden von Warnmeldungen, wenn Ereignisse behoben oder verworfen werden
+ a| 
+Bewegen Sie den Schieberegler nach rechts
+
+|===
+

@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_cluster_storage_reports.html 
+sidebar: sidebar 
+keywords: customize, cluster, storage, reports 
+summary: Die Beispielberichte zum Clusterspeicher in diesem Abschnitt sind lediglich Beispiele, die Ihnen dabei helfen sollen, zu verstehen, wie Sie Berichte zur Clusterkapazität erstellen, die Ihnen bei der Überwachung Ihrer Speichersystemressourcen helfen. 
+---
+= Anpassen von Cluster-Speicherberichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Beispielberichte zum Clusterspeicher in diesem Abschnitt sind lediglich Beispiele, die Ihnen dabei helfen sollen, zu verstehen, wie Sie Berichte zur Clusterkapazität erstellen, die Ihnen bei der Überwachung Ihrer Speichersystemressourcen helfen.

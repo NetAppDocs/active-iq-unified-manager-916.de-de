@@ -1,0 +1,16 @@
+---
+permalink: health-checker/concept_what_storage_capacity_health_thresholds_are.html 
+sidebar: sidebar 
+keywords: storage, capacity, health, thresholds 
+summary: Ein Integritätsschwellenwert für die Speicherkapazität ist der Punkt, an dem der Unified Manager-Server Ereignisse generiert, um etwaige Kapazitätsprobleme mit Speicherobjekten zu melden.  Sie können Warnmeldungen konfigurieren, um bei Auftreten solcher Ereignisse eine Benachrichtigung zu senden. 
+---
+= Welche Schwellenwerte für die Speicherkapazität gelten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein Integritätsschwellenwert für die Speicherkapazität ist der Punkt, an dem der Unified Manager-Server Ereignisse generiert, um etwaige Kapazitätsprobleme mit Speicherobjekten zu melden.  Sie können Warnmeldungen konfigurieren, um bei Auftreten solcher Ereignisse eine Benachrichtigung zu senden.
+
+Die Integritätsschwellenwerte der Speicherkapazität für alle Aggregate, Volumes und Qtrees sind auf Standardwerte eingestellt.  Sie können die Einstellungen nach Bedarf für ein Objekt oder eine Gruppe von Objekten ändern.

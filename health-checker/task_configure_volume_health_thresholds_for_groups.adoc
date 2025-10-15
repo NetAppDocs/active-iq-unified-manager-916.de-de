@@ -1,0 +1,30 @@
+---
+permalink: health-checker/task_configure_volume_health_thresholds_for_groups.html 
+sidebar: sidebar 
+keywords: configure, volume, health, thresholds, groups 
+summary: Sie können Volume-Integritätsschwellenwerte auf Gruppenebene für Kapazität, Snapshot-Kopien, Qtree-Kontingente, Wachstum und Inodes konfigurieren. 
+---
+= Konfigurieren von Volume-Integritätsschwellenwerten für Gruppen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Volume-Integritätsschwellenwerte auf Gruppenebene für Kapazität, Snapshot-Kopien, Qtree-Kontingente, Wachstum und Inodes konfigurieren.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Der Gruppenaktionstyp „Volume-Integritätsschwelle“ wird nur auf Volumes einer Gruppe angewendet.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Gruppen*.
+. Klicken Sie auf der Registerkarte *Gruppenaktionen* auf *Hinzufügen*.
+. Geben Sie einen Namen und eine Beschreibung für die Gruppenaktion ein.
+. Wählen Sie aus der Dropdown-Liste *Gruppe* eine Gruppe aus, für die Sie eine Gruppenaktion konfigurieren möchten.
+. Wählen Sie *Aktionstyp* als Schwellenwert für die Volumeintegrität aus.
+. Wählen Sie die Kategorie aus, für die Sie den Schwellenwert festlegen möchten.
+. Geben Sie die erforderlichen Werte für den Integritätsschwellenwert ein.
+. Klicken Sie auf *Hinzufügen*.
+

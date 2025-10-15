@@ -1,0 +1,37 @@
+---
+permalink: reporting/task_create_report_to_view_capacity_by_cluster_model.html 
+sidebar: sidebar 
+keywords: create, report, view, capacity, cluster, model 
+summary: Sie können einen Bericht erstellen, um die Speicherkapazität und Auslastung von Clustern basierend auf dem Speichersystemmodell zu analysieren. 
+---
+= Erstellen Sie einen Bericht, um die Kapazität nach Clustermodell anzuzeigen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Bericht erstellen, um die Speicherkapazität und Auslastung von Clustern basierend auf dem Speichersystemmodell zu analysieren.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+
+Führen Sie die folgenden Schritte aus, um eine benutzerdefinierte Ansicht zu erstellen, die die Kapazität nach Clustermodell anzeigt, und planen Sie dann die Generierung eines Berichts für diese Ansicht.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Cluster*.
+. Wählen Sie im Menü „Ansicht“ die Option „Kapazität“ > „Alle Cluster“ aus.
+. Wählen Sie *Anzeigen/Ausblenden*, um alle Spalten zu entfernen, die Sie nicht im Bericht haben möchten, z. B. „Cluster-FQDN“ und „Betriebssystemversion“.
+. Ziehen Sie die „Gesamtrohkapazität“, das „Modell/Familie“ und die drei aggregierten Spalten in die Nähe der Spalte „Cluster“.
+. Klicken Sie oben auf die Spalte „Modell/Familie“, um die Ergebnisse nach Clustertyp zu sortieren.
+. Speichern Sie die Ansicht unter einem bestimmten Namen, der widerspiegelt, was die Ansicht anzeigt, z. B. „Kapazität nach Clustermodell“.
+. Klicken Sie auf der Inventarseite auf die Schaltfläche *Geplante Berichte*.
+. Klicken Sie auf *Zeitplan hinzufügen*, um der Seite *Berichtszeitpläne* eine neue Zeile hinzuzufügen, damit Sie die Zeitplanmerkmale für den neuen Bericht definieren können.
+. Geben Sie einen Namen für den Berichtszeitplan ein und füllen Sie die anderen Berichtsfelder aus. Klicken Sie dann auf das Häkchen (image:../media/blue_check.gif[""] ) am Ende der Zeile.
++
+Der Bericht wird sofort testweise versendet.  Anschließend wird der Bericht generiert und in der angegebenen Häufigkeit per E-Mail an die aufgeführten Empfänger gesendet.
+
+
+
+Basierend auf den im Bericht angezeigten Ergebnissen möchten Sie möglicherweise bestimmten Clustern mehr Kapazität hinzufügen oder ältere Clustermodelle aktualisieren.

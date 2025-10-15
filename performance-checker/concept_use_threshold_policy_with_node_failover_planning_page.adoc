@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_use_threshold_policy_with_node_failover_planning_page.html 
+sidebar: sidebar 
+keywords: threshold, policy, node, failover, planning page 
+summary: Sie können eine Knotenschwellenwertrichtlinie erstellen, sodass Sie auf der Seite „Leistung/Knoten-Failover-Planung“ benachrichtigt werden, wenn ein potenzielles Failover die Leistung des Übernahmeknotens auf ein inakzeptables Niveau beeinträchtigen würde. 
+---
+= Verwenden einer Schwellenwertrichtlinie mit der Seite „Knoten-Failover-Planung“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine Knotenschwellenwertrichtlinie erstellen, sodass Sie auf der Seite „Leistung/Knoten-Failover-Planung“ benachrichtigt werden, wenn ein potenzielles Failover die Leistung des Übernahmeknotens auf ein inakzeptables Niveau beeinträchtigen würde.
+
+Die systemdefinierte Leistungsschwellenwertrichtlinie mit dem Namen „Node HA pair over-utilized“ generiert ein Warnereignis, wenn der Schwellenwert sechs aufeinanderfolgende Erfassungszeiträume (30 Minuten) lang überschritten wird.  Der Schwellenwert gilt als überschritten, wenn die kombinierte Leistungskapazität der Knoten in einem HA-Paar 200 % überschreitet.
+
+Das Ereignis aus der systemdefinierten Schwellenwertrichtlinie weist Sie darauf hin, dass ein Failover dazu führt, dass die Latenz des Übernahmeknotens auf ein inakzeptables Niveau ansteigt.  Wenn Sie ein Ereignis sehen, das von dieser Richtlinie für einen bestimmten Knoten generiert wird, können Sie zur Seite „Leistung/Knoten-Failover-Planung“ für diesen Knoten navigieren, um den vorhergesagten Latenzwert aufgrund eines Failovers anzuzeigen.
+
+Zusätzlich zur Verwendung dieser systemdefinierten Schwellenwertrichtlinie können Sie Schwellenwertrichtlinien mithilfe des Zählers „Verwendete Leistungskapazität – Übernahme“ erstellen und die Richtlinie dann auf ausgewählte Knoten anwenden.  Wenn Sie einen Schwellenwert unter 200 % angeben, können Sie ein Ereignis empfangen, bevor der Schwellenwert für die systemdefinierte Richtlinie überschritten wird.  Sie können den Mindestzeitraum, für den der Schwellenwert überschritten wird, auch auf weniger als 30 Minuten festlegen, wenn Sie benachrichtigt werden möchten, bevor das systemdefinierte Richtlinienereignis generiert wird.
+
+Sie können beispielsweise eine Schwellenwertrichtlinie definieren, um ein Warnereignis zu generieren, wenn die kombinierte Leistungskapazität der Knoten in einem HA-Paar länger als 10 Minuten 175 % überschreitet.  Sie können diese Richtlinie auf Knoten1 und Knoten2 anwenden, die ein HA-Paar bilden.  Nachdem Sie eine Warnereignisbenachrichtigung für Knoten1 oder Knoten2 erhalten haben, können Sie die Seite „Leistung/Knoten-Failover-Planung“ für diesen Knoten anzeigen, um die geschätzten Auswirkungen auf die Leistung des Übernahmeknotens zu beurteilen.  Sie können Korrekturmaßnahmen ergreifen, um eine Überlastung des Übernahmeknotens zu vermeiden, wenn es zu einem Failover kommt.  Wenn Sie Maßnahmen ergreifen, wenn die kombinierte Leistungskapazität der Knoten unter 200 % liegt, erreicht die Latenz des Übernahmeknotens kein inakzeptables Niveau, selbst wenn während dieser Zeit ein Failover stattfindet.

@@ -1,0 +1,25 @@
+---
+permalink: reporting/concept_understand_reports.html 
+sidebar: sidebar 
+keywords: understanding, reports 
+summary: Berichte zeigen detaillierte Informationen zu Speicher, Netzwerk, Dienstqualität und Schutzbeziehungen an und helfen Ihnen, potenzielle Probleme zu erkennen und zu lösen, bevor sie auftreten. 
+---
+= Berichte verstehen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Berichte zeigen detaillierte Informationen zu Speicher, Netzwerk, Dienstqualität und Schutzbeziehungen an und helfen Ihnen, potenzielle Probleme zu erkennen und zu lösen, bevor sie auftreten.
+
+Wenn Sie eine Ansicht anpassen, können Sie sie für die zukünftige Verwendung unter einem eindeutigen Namen speichern.  Sie können einen auf dieser Ansicht basierenden Bericht so planen, dass er regelmäßig ausgeführt wird, und ihn mit anderen teilen.  Sie können die Ansicht auch in Excel herunterladen, um sie mit erweiterten Excel-Funktionen anzupassen, und die Datei dann wieder in Unified Manager hochladen.  Wenn Sie einen Bericht mit dieser Ansicht planen, wird die von Ihnen hochgeladene Excel-Datei verwendet, um aussagekräftige Berichte zu erstellen, die Sie weitergeben können.
+
+Sie können alle geplanten Berichte auf der Seite „Berichtszeitpläne“ verwalten.
+
+[NOTE]
+====
+Zum Verwalten von Berichten müssen Sie über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+====
+Sie können Berichte als durch Kommas getrennte Werte (CSV), Excel- oder PDF-Dateien herunterladen.

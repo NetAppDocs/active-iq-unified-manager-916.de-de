@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept_review_impact_of_configuration_changes.html 
+sidebar: sidebar 
+keywords: review, impact, configuration, changes, workload, performance 
+summary: Konfigurationsänderungen am Cluster, wie etwa ein Festplattenfehler, ein HA-Failover oder ein verschobenes Volume, können sich negativ auf die Volume-Leistung auswirken und zu einer erhöhten Latenz führen. 
+---
+= Überprüfen Sie die Auswirkungen von Konfigurationsänderungen auf die Workload-Leistung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Konfigurationsänderungen am Cluster, wie etwa ein Festplattenfehler, ein HA-Failover oder ein verschobenes Volume, können sich negativ auf die Volume-Leistung auswirken und zu einer erhöhten Latenz führen.
+
+In Unified Manager können Sie auf der Seite „Workload-Analyse“ nachsehen, wann kürzlich eine Konfigurationsänderung stattgefunden hat, und diese mit den Vorgängen und der Latenz (Reaktionszeit) vergleichen, um festzustellen, ob es für die ausgewählte Volume-Workload eine Änderung der Aktivität gab.
+
+Die Leistungsseiten von Unified Manager können nur eine begrenzte Anzahl von Änderungsereignissen erkennen.  Die Integritätsseiten bieten Warnungen für andere Ereignisse, die durch Konfigurationsänderungen verursacht werden.  Sie können im Unified Manager nach dem Volume suchen, um den Ereignisverlauf anzuzeigen.

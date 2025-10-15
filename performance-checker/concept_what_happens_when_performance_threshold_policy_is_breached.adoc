@@ -1,0 +1,27 @@
+---
+permalink: performance-checker/concept_what_happens_when_performance_threshold_policy_is_breached.html 
+sidebar: sidebar 
+keywords: happens, performance, threshold, policy, breached 
+summary: Wenn ein Zählerwert seinen definierten Leistungsschwellenwert für die in der Dauer angegebene Zeit überschreitet, wird der Schwellenwert überschritten und ein Ereignis gemeldet. 
+---
+= Was passiert, wenn eine Leistungsschwellenrichtlinie verletzt wird?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn ein Zählerwert seinen definierten Leistungsschwellenwert für die in der Dauer angegebene Zeit überschreitet, wird der Schwellenwert überschritten und ein Ereignis gemeldet.
+
+Das Ereignis führt dazu, dass folgende Aktionen eingeleitet werden:
+
+* Das Ereignis wird im Dashboard, auf der Seite „Leistungsclusterübersicht“, auf der Seite „Ereignisse“ und auf der objektspezifischen Seite „Leistungsinventar“ angezeigt.
+* (optional) Eine E-Mail-Benachrichtigung über das Ereignis kann an einen oder mehrere E-Mail-Empfänger gesendet werden, und ein SNMP-Trap kann an einen Trap-Empfänger gesendet werden.
+* (optional) Ein Skript kann ausgeführt werden, um Speicherobjekte automatisch zu ändern oder zu aktualisieren.
+
+
+Es wird immer die erste Aktion ausgeführt.  Sie konfigurieren auf der Seite „Alarm-Setup“, ob die optionalen Aktionen ausgeführt werden.  Sie können eindeutige Aktionen definieren, je nachdem, ob eine Warn- oder eine kritische Schwellenwertrichtlinie verletzt wird.
+
+Nachdem bei einem Speicherobjekt ein Verstoß gegen die Richtlinie zum Leistungsschwellenwert aufgetreten ist, werden für diese Richtlinie keine weiteren Ereignisse generiert, bis der Zählerwert unter den Schwellenwert fällt. An diesem Punkt wird die Dauer für diesen Grenzwert zurückgesetzt.  Während der Schwellenwert weiterhin überschritten wird, wird die Endzeit des Ereignisses kontinuierlich aktualisiert, um anzuzeigen, dass dieses Ereignis andauert.
+
+Ein Schwellenwertereignis erfasst oder friert die Informationen zum Schweregrad und zur Richtliniendefinition ein, sodass eindeutige Schwellenwertinformationen mit dem Ereignis angezeigt werden, auch wenn die Schwellenwertrichtlinie in der Zukunft geändert wird.

@@ -1,0 +1,21 @@
+---
+permalink: storage-mgmt/concept_why_you_use_quotas.html 
+sidebar: sidebar 
+keywords: use, quotas 
+summary: Sie können Kontingente verwenden, um die Ressourcennutzung in FlexVol -Volumes zu begrenzen, eine Benachrichtigung zu senden, wenn die Ressourcennutzung bestimmte Werte erreicht, oder um die Ressourcennutzung zu verfolgen. 
+---
+= Warum Sie Kontingente verwenden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Kontingente verwenden, um die Ressourcennutzung in FlexVol -Volumes zu begrenzen, eine Benachrichtigung zu senden, wenn die Ressourcennutzung bestimmte Werte erreicht, oder um die Ressourcennutzung zu verfolgen.
+
+Sie legen aus folgenden Gründen ein Kontingent fest:
+
+* Um den Speicherplatz oder die Anzahl der Dateien zu begrenzen, die von einem Benutzer oder einer Gruppe verwendet werden können oder die in einem Qtree enthalten sein können
+* Um den Speicherplatz oder die Anzahl der von einem Benutzer, einer Gruppe oder einem Qtree verwendeten Dateien zu verfolgen, ohne eine Begrenzung festzulegen
+* Um Benutzer zu warnen, wenn ihre Festplatten- oder Dateinutzung hoch ist
+

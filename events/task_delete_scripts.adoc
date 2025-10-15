@@ -1,0 +1,25 @@
+---
+permalink: events/task_delete_scripts.html 
+sidebar: sidebar 
+keywords: delete, scripts 
+summary: Sie können ein Skript aus Unified Manager löschen, wenn das Skript nicht mehr benötigt wird oder nicht mehr gültig ist. 
+---
+= Skripte löschen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein Skript aus Unified Manager löschen, wenn das Skript nicht mehr benötigt wird oder nicht mehr gültig ist.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Das Skript darf nicht mit einer Warnung verknüpft sein.
+
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Skripte*.
+. Wählen Sie auf der Seite *Skripte* das Skript aus, das Sie löschen möchten, und klicken Sie dann auf *Löschen*.
+. Bestätigen Sie im Dialogfeld *Warnung* den Löschvorgang mit einem Klick auf *Ja*.
+

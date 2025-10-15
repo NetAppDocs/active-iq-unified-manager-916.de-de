@@ -1,0 +1,25 @@
+---
+permalink: data-protection/concept_what_resource_pools_are.html 
+sidebar: sidebar 
+keywords: resource pools 
+summary: Ressourcenpools sind Gruppen von Aggregaten, die von einem Speicheradministrator mithilfe von Unified Manager erstellt werden, um Partneranwendungen die Bereitstellung für die Sicherungsverwaltung zu ermöglichen. 
+---
+= Was sind Ressourcenpools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ressourcenpools sind Gruppen von Aggregaten, die von einem Speicheradministrator mithilfe von Unified Manager erstellt werden, um Partneranwendungen die Bereitstellung für die Sicherungsverwaltung zu ermöglichen.
+
+Sie können Ihre Ressourcen basierend auf Attributen wie Leistung, Kosten, physischem Standort oder Verfügbarkeit bündeln.  Durch die Gruppierung verwandter Ressourcen in einem Pool können Sie den Pool für die Überwachung und Bereitstellung als eine einzelne Einheit behandeln.  Dies vereinfacht die Verwaltung dieser Ressourcen und ermöglicht eine flexiblere und effizientere Nutzung des Speichers.
+
+Während der Bereitstellung des sekundären Speichers ermittelt Unified Manager anhand der folgenden Kriterien das für den Schutz am besten geeignete Aggregat im Ressourcenpool:
+
+* Das Aggregat ist ein Datenaggregat (kein Stammaggregat) und es ist ONLINE.
+* Das Aggregat befindet sich auf einem Zielclusterknoten, dessen ONTAP -Version gleich oder höher als die Hauptversion des Quellclusters ist.
+* Das Aggregat verfügt von allen Aggregaten im Ressourcenpool über den größten verfügbaren Speicherplatz.
+* Nach der Bereitstellung des Zielvolumes liegt der aggregierte Speicherplatz innerhalb des für das Aggregat definierten Schwellenwerts für „fast voll“ und „fast überbelegt“ (je nachdem, welcher Schwellenwert zutrifft: globaler oder lokaler Schwellenwert).
+* Die Anzahl der FlexVol -Volumes auf dem Zielknoten darf das Plattformlimit nicht überschreiten.
+

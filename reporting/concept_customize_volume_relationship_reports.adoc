@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_volume_relationship_reports.html 
+sidebar: sidebar 
+keywords: customize, volume, relationship, reports 
+summary: Mit dem Bericht „Volume Relationships Inventory“ können Sie die Speicherinventardetails in einem Cluster analysieren, den für Volumes erforderlichen Schutzgrad ermitteln und die Volumedetails basierend auf Fehlerquelle, Muster und Zeitplänen filtern. 
+---
+= Anpassen von Volumenbeziehungsberichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit dem Bericht „Volume Relationships Inventory“ können Sie die Speicherinventardetails in einem Cluster analysieren, den für Volumes erforderlichen Schutzgrad ermitteln und die Volumedetails basierend auf Fehlerquelle, Muster und Zeitplänen filtern.

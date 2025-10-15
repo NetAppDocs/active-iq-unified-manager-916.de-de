@@ -1,0 +1,39 @@
+---
+permalink: config/task_disable_saml_authentication_from_maintenance_console_um.html 
+sidebar: sidebar 
+keywords: disable, saml authentication, maintenance, console 
+summary: Möglicherweise müssen Sie die SAML-Authentifizierung über die Wartungskonsole deaktivieren, wenn kein Zugriff auf die Unified Manager-GUI besteht.  Dies kann bei Fehlkonfigurationen oder wenn der IdP nicht erreichbar ist, passieren. 
+---
+= Deaktivieren Sie die SAML-Authentifizierung über die Wartungskonsole
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Möglicherweise müssen Sie die SAML-Authentifizierung über die Wartungskonsole deaktivieren, wenn kein Zugriff auf die Unified Manager-GUI besteht.  Dies kann bei Fehlkonfigurationen oder wenn der IdP nicht erreichbar ist, passieren.
+
+.Bevor Sie beginnen
+Sie müssen als Wartungsbenutzer Zugriff auf die Wartungskonsole haben.
+
+Wenn die SAML-Authentifizierung deaktiviert ist, führen die konfigurierten Verzeichnisdienstanbieter wie Active Directory oder LDAP die Anmeldeauthentifizierung durch.  Neben konfigurierten Remote-Benutzern können auch lokale Benutzer und Wartungsbenutzer auf die grafische Benutzeroberfläche zugreifen.
+
+Sie können die SAML-Authentifizierung auch auf der Seite „Setup/Authentifizierung“ in der Benutzeroberfläche deaktivieren.
+
+[NOTE]
+====
+Unified Manager wird automatisch neu gestartet, nachdem die SAML-Authentifizierung deaktiviert wurde.
+
+====
+.Schritte
+. Melden Sie sich bei der Wartungskonsole an.
+. Geben Sie im *Hauptmenü* die Nummer für die Option *SAML-Authentifizierung deaktivieren* ein.
++
+Es wird eine Meldung angezeigt, in der Sie bestätigen müssen, dass Sie die SAML-Authentifizierung deaktivieren und Unified Manager neu starten möchten.
+
+. Geben Sie *y* ein und drücken Sie dann die Eingabetaste. Unified Manager wird neu gestartet.
+
+
+Wenn Remote-Benutzer das nächste Mal versuchen, auf die grafische Benutzeroberfläche von Unified Manager zuzugreifen, geben sie ihre Anmeldeinformationen auf der Anmeldeseite von Unified Manager statt auf der Anmeldeseite des IdP ein.
+
+Greifen Sie bei Bedarf auf Ihren IdP zu und löschen Sie die URL und Metadaten des Unified Manager-Servers.

@@ -1,0 +1,29 @@
+---
+permalink: health-checker/concept_configure_backup_for_linux.html 
+sidebar: sidebar 
+keywords: netapp, snapshot copy, copies, linux, operate, system, configure, backup 
+summary: Wenn Ihr Active IQ Unified Manager auf einem Linux-Computer installiert ist, können Sie Ihre Sicherung und Wiederherstellung mithilfe von NetApp Snapshots konfigurieren. 
+---
+= Konfigurieren der Sicherung unter Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Ihr Active IQ Unified Manager auf einem Linux-Computer installiert ist, können Sie Ihre Sicherung und Wiederherstellung mithilfe von NetApp Snapshots konfigurieren.
+
+Snapshot-Kopien dauern nur sehr wenig Zeit, normalerweise nur wenige Minuten, und die Unified Manager-Datenbank wird für einen sehr kurzen Zeitraum gesperrt, sodass Ihre Installation kaum unterbrochen wird.  Das Image benötigt nur minimalen Speicherplatz und verursacht nur einen vernachlässigbaren Leistungsaufwand, da es nur die Änderungen an Dateien seit der letzten Snapshot-Kopie aufzeichnet.  Da der Snapshot auf einem ONTAP Cluster erstellt wird, können Sie bei Bedarf andere NetApp -Funktionen wie SnapMirror nutzen, um einen sekundären Schutz zu erstellen.
+
+Vor Beginn eines Sicherungsvorgangs führt Unified Manager eine Integritätsprüfung durch, um sicherzustellen, dass das Zielsystem verfügbar ist.
+
+[NOTE]
+====
+* Sie können eine Snapshot-Kopie nur auf derselben Version von Active IQ Unified Manager wiederherstellen.
++
+Wenn Sie beispielsweise ein Backup auf Unified Manager 9.16 erstellt haben, kann das Backup nur auf Unified Manager 9.16-Systemen wiederhergestellt werden.
+
+* Wenn sich die Snapshot-Konfiguration ändert, kann dies dazu führen, dass der Snapshot ungültig wird.
+
+
+====

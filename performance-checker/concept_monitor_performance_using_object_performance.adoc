@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_monitor_performance_using_object_performance.html 
+sidebar: sidebar 
+keywords: monitoring, performance, inventory, pages 
+summary: Auf den Leistungsseiten des Objektbestands werden Leistungsinformationen, Leistungsereignisse und der Objektzustand für alle Objekte innerhalb einer Objekttypkategorie angezeigt.  Dadurch erhalten Sie auf einen Blick einen Überblick über den Leistungsstatus jedes Objekts innerhalb eines Clusters, beispielsweise für alle Knoten oder alle Volumes. 
+---
+= Überwachen Sie die Leistung mithilfe der Leistungsinventarseiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf den Leistungsseiten des Objektbestands werden Leistungsinformationen, Leistungsereignisse und der Objektzustand für alle Objekte innerhalb einer Objekttypkategorie angezeigt.  Dadurch erhalten Sie auf einen Blick einen Überblick über den Leistungsstatus jedes Objekts innerhalb eines Clusters, beispielsweise für alle Knoten oder alle Volumes.
+
+Die Leistungsseiten des Objektbestands bieten einen umfassenden Überblick über den Objektstatus und ermöglichen Ihnen die Bewertung der Gesamtleistung aller Objekte sowie den Vergleich von Objektleistungsdaten.  Sie können den Inhalt der Objektinventarseiten durch Suchen, Sortieren und Filtern verfeinern.  Dies ist bei der Überwachung und Verwaltung der Objektleistung von Vorteil, da Sie so schnell Objekte mit Leistungsproblemen finden und mit der Fehlerbehebung beginnen können.
+
+image::../media/perf_node_inventory.gif[Ein UI-Screenshot, der die Details des Objekts auf der Inventarseite „Leistung/Alle Knoten“ zeigt.]
+
+Standardmäßig werden Objekte auf den Seiten des Leistungsinventars nach der Leistungskritikalität des Objekts sortiert.  Objekte mit neuen kritischen Leistungsereignissen werden zuerst aufgeführt, Objekte mit Warnereignissen an zweiter Stelle.  Dadurch wird sofort visuell angezeigt, welche Probleme behoben werden müssen.  Alle Leistungsdaten basieren auf einem 72-Stunden-Durchschnitt.
+
+Sie können ganz einfach von der Leistungsseite des Objektbestands zu einer Objektdetailseite navigieren, indem Sie in der Spalte „Objektname“ auf den Objektnamen klicken.  Klicken Sie beispielsweise auf der Inventarseite „Leistung/Alle Knoten“ auf ein Knotenobjekt in der Spalte *Knoten*.  Die Objektdetailseite bietet ausführliche Informationen und Einzelheiten zum ausgewählten Objekt, einschließlich eines Nebeneinandervergleichs aktiver Ereignisse.

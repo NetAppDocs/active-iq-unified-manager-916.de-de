@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept_analyze_performance_events.html 
+sidebar: sidebar 
+keywords: analyze, performance, events 
+summary: 'Sie können Leistungsereignisse analysieren, um festzustellen, wann sie erkannt wurden, ob sie aktiv (neu oder bestätigt) oder veraltet sind, welche Arbeitslasten und Clusterkomponenten beteiligt sind und welche Optionen Sie zum Beheben der Ereignisse selbst haben.' 
+---
+= Analysieren von Leistungsereignissen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Leistungsereignisse analysieren, um festzustellen, wann sie erkannt wurden, ob sie aktiv (neu oder bestätigt) oder veraltet sind, welche Arbeitslasten und Clusterkomponenten beteiligt sind und welche Optionen Sie zum Beheben der Ereignisse selbst haben.

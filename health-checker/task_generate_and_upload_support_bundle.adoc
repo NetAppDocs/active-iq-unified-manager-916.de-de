@@ -1,0 +1,89 @@
+---
+permalink: health-checker/task_generate_and_upload_support_bundle.html 
+sidebar: sidebar 
+keywords: generate, upload, support bundle 
+summary: Sie können ein Support-Paket mit Diagnoseinformationen erstellen, sodass Sie es zur Hilfe bei der Fehlerbehebung an den technischen Support senden können.  Sie können das Support-Paket auch von der Wartungskonsole auf NetApp hochladen. 
+---
+= Erstellen und Hochladen eines Support-Pakets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein Support-Paket mit Diagnoseinformationen erstellen, sodass Sie es zur Hilfe bei der Fehlerbehebung an den technischen Support senden können.
+
+Ab Unified Manager 9.8 können Sie das Support-Paket auch von der Wartungskonsole auf NetApp hochladen, wenn Ihr Unified Manager-Server mit dem Internet verbunden ist.
+
+.Bevor Sie beginnen
+Sie müssen als Wartungsbenutzer Zugriff auf die Wartungskonsole haben.
+
+Da manche Supportdatentypen große Mengen an Clusterressourcen beanspruchen oder ihre Verarbeitung viel Zeit in Anspruch nehmen kann, können Sie bei Auswahl des vollständigen Supportpakets die einzuschließenden oder auszuschließenden Datentypen angeben, um die Größe des Supportpakets zu reduzieren.  Sie haben auch die Möglichkeit, ein einfaches Supportpaket zu erstellen, das nur 30 Tage Protokolle und Konfigurationsdatenbankeinträge enthält – Leistungsdaten, Erfassungsaufzeichnungsdateien und Server-Heap-Dumps sind davon ausgenommen.
+
+Unified Manager speichert nur die beiden zuletzt erstellten Support-Pakete.  Ältere Support-Pakete werden aus dem System gelöscht.
+
+.Schritte
+. Wählen Sie im *Hauptmenü* der Wartungskonsole *Support/Diagnose*.
+. Wählen Sie *Light-Support-Paket generieren* oder *Support-Paket generieren*, je nachdem, wie detailliert das Support-Paket sein soll.
+. Wenn Sie das vollständige Support-Paket auswählen, wählen Sie die folgenden Datentypen aus oder heben Sie die Auswahl auf, um sie in das Support-Paket aufzunehmen oder davon auszuschließen:
++
+** *Datenbank-Dump*
++
+Ein Dump der MySQL-Serverdatenbank.
+
+** *Heap-Dump*
++
+Eine Momentaufnahme des Status der wichtigsten Unified Manager-Serverprozesse.  Diese Option ist standardmäßig deaktiviert und sollte nur auf Anfrage des Kundensupports ausgewählt werden.
+
+** *Akquisitionsaufzeichnungen*
++
+Eine Aufzeichnung der gesamten Kommunikation zwischen Unified Manager und den überwachten Clustern.
+
+
+
++
+[NOTE]
+====
+Wenn Sie alle Datentypen abwählen, wird das Support-Paket dennoch mit anderen Unified Manager-Daten generiert.
+
+====
+. Typ `g` und drücken Sie dann die Eingabetaste, um das Support-Paket zu generieren.
++
+Da die Generierung eines Support-Pakets ein speicherintensiver Vorgang ist, werden Sie aufgefordert zu bestätigen, dass Sie das Support-Paket zu diesem Zeitpunkt wirklich generieren möchten.
+
+. Typ `y` und drücken Sie dann die Eingabetaste, um das Support-Paket zu generieren.
++
+Wenn Sie das Support-Paket jetzt nicht generieren möchten, geben Sie `n` und drücken Sie dann die Eingabetaste.
+
+. Wenn Sie Datenbank-Dump-Dateien in das vollständige Support-Paket aufgenommen haben, werden Sie aufgefordert, den Zeitraum anzugeben, für den Leistungsstatistiken einbezogen werden sollen.  Das Einbeziehen von Leistungsstatistiken kann viel Zeit und Speicherplatz beanspruchen. Sie können die Datenbank daher auch ohne Einbeziehen von Leistungsstatistiken sichern:
++
+.. Geben Sie das Startdatum im Format JJJJMMTT ein.
++
+Geben Sie beispielsweise `20210101` für den 1. Januar 2021.  Eingeben `n` wenn Sie nicht möchten, dass Leistungsstatistiken einbezogen werden.
+
+.. Geben Sie die Anzahl der Tage ein, für die Statistiken ab 0:00 Uhr des angegebenen Startdatums einbezogen werden sollen.
++
+Sie können eine Zahl zwischen 1 und 10 eingeben.
+
+
+
++
+Wenn Sie Leistungsstatistiken einbeziehen, zeigt das System den Zeitraum an, für den Leistungsstatistiken erfasst werden.
+
+. Nachdem das Support-Paket erstellt wurde, werden Sie gefragt, ob Sie es zu NetApp hochladen möchten.  Typ `y` und drücken Sie dann die Eingabetaste.
++
+Sie werden aufgefordert, Ihre Support-Fallnummer einzugeben.
+
+. Wenn Sie bereits eine Fallnummer haben, geben Sie die Nummer ein und drücken Sie die Eingabetaste.  Andernfalls drücken Sie einfach die Eingabetaste.
++
+Das Support-Paket wird auf NetApp hochgeladen.
+
+
+
+Wenn Ihr Unified Manager-Server nicht mit dem Internet verbunden ist oder Sie das Support-Paket aus einem anderen Grund nicht hochladen können, können Sie es abrufen und manuell senden.  Sie können es mit einem SFTP-Client oder mithilfe von UNIX- oder Linux-CLI-Befehlen abrufen.  Bei Windows-Installationen können Sie Remote Desktop (RDP) verwenden, um das Support-Paket abzurufen.
+
+Das generierte Support-Paket befindet sich auf VMware-Systemen im Verzeichnis /support, auf Linux-Systemen in /opt/netapp/data/support/ und auf Windows-Systemen in ProgramData\ NetApp\OnCommandAppData\ocum\support.
+
+*Verwandte Informationen*
+
+link:../config/reference_unified_manager_roles_and_capabilities.html["Unified Manager-Benutzerrollen und -Funktionen"]

@@ -1,0 +1,26 @@
+---
+permalink: performance-checker/concept_how_cluster_operations_can_affect_workload_latency.html 
+sidebar: sidebar 
+keywords: cluster, operations, affect, workload, latency 
+summary: 'Operationen (IOPS) stellen die Aktivität aller benutzerdefinierten und systemdefinierten Workloads auf einem Cluster dar.  Mithilfe der IOPS-Statistiken können Sie feststellen, ob Clusterprozesse, wie etwa das Erstellen von Sicherungen oder das Ausführen von Deduplizierungen, die Arbeitslastlatenz (Reaktionszeit) beeinträchtigen oder ein Leistungsereignis verursacht oder dazu beigetragen haben könnten.' 
+---
+= Wie Clustervorgänge die Workload-Latenz beeinflussen können
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Operationen (IOPS) stellen die Aktivität aller benutzerdefinierten und systemdefinierten Workloads auf einem Cluster dar.  Mithilfe der IOPS-Statistiken können Sie feststellen, ob Clusterprozesse, wie etwa das Erstellen von Sicherungen oder das Ausführen von Deduplizierungen, die Arbeitslastlatenz (Reaktionszeit) beeinträchtigen oder ein Leistungsereignis verursacht oder dazu beigetragen haben könnten.
+
+Beim Analysieren von Leistungsereignissen können Sie mithilfe der IOPS-Statistiken feststellen, ob ein Leistungsereignis durch ein Problem im Cluster verursacht wurde.  Sie können die spezifischen Arbeitslastaktivitäten identifizieren, die möglicherweise am meisten zum Leistungsereignis beigetragen haben.  IOPS werden in Operationen pro Sekunde (Ops/Sek.) gemessen.
+
+image::../media/opm_ops_chart_png.png[Unified Manager IOPS-Diagramm]
+
+Dieses Beispiel zeigt das IOPS-Diagramm.  Die tatsächliche Betriebsstatistik ist eine blaue Linie und die IOPS-Prognose der Betriebsstatistik ist grün.
+
+[NOTE]
+====
+In einigen Fällen, in denen ein Cluster überlastet ist, zeigt Unified Manager möglicherweise die Meldung an `Data collection is taking too long on Cluster _cluster_name_` .  Dies bedeutet, dass nicht genügend Statistiken für die Analyse durch Unified Manager gesammelt wurden.  Sie müssen die vom Cluster verwendeten Ressourcen reduzieren, damit Statistiken erfasst werden können.
+
+====

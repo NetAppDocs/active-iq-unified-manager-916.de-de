@@ -1,0 +1,44 @@
+---
+permalink: events/task_enable_and_disable_active_iq_event_reporting.html 
+sidebar: sidebar 
+keywords: enable, disable, active iq, event, report 
+summary: Active IQ Plattformereignisse werden standardmäßig generiert und in der Benutzeroberfläche des Unified Managers angezeigt.  Wenn Sie feststellen, dass diese Ereignisse zu „laut“ sind oder Sie diese Ereignisse nicht in Unified Manager anzeigen möchten, können Sie die Generierung dieser Ereignisse deaktivieren.  Sie können sie zu einem späteren Zeitpunkt aktivieren, wenn Sie diese Benachrichtigungen weiterhin erhalten möchten. 
+---
+= Aktivieren und Deaktivieren der Active IQ -Ereignisberichterstattung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Plattformereignisse werden standardmäßig generiert und in der Benutzeroberfläche des Unified Managers angezeigt.  Wenn Sie feststellen, dass diese Ereignisse zu „laut“ sind oder Sie diese Ereignisse nicht in Unified Manager anzeigen möchten, können Sie die Generierung dieser Ereignisse deaktivieren.  Sie können sie zu einem späteren Zeitpunkt aktivieren, wenn Sie diese Benachrichtigungen weiterhin erhalten möchten.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ verfügen.
+
+Wenn Sie diese Funktion deaktivieren, empfängt Unified Manager sofort keine Active IQ Plattformereignisse mehr.
+
+Wenn Sie diese Funktion aktivieren, beginnt Unified Manager, basierend auf der Zeitzone des Clusters, kurz nach Mitternacht mit dem Empfang von Active IQ -Plattformereignissen.  Die Startzeit basiert darauf, wann Unified Manager AutoSupport Nachrichten von jedem Cluster empfängt.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Allgemein* > *Funktionseinstellungen*.
+. Deaktivieren oder aktivieren Sie auf der Seite *Funktionseinstellungen* Active IQ -Plattformereignisse, indem Sie eine der folgenden Optionen auswählen:
++
+|===
+| Wenn Sie wollen... | Dann tun Sie Folgendes ... 
+
+
+ a| 
+Deaktivieren von Active IQ Plattformereignissen
+ a| 
+Bewegen Sie im Bereich * Active IQ Portalereignisse* den Schieberegler nach links.
+
+
+
+ a| 
+Aktivieren von Active IQ Plattformereignissen
+ a| 
+Bewegen Sie im Bereich * Active IQ Portalereignisse* den Schieberegler nach rechts.
+
+|===
+

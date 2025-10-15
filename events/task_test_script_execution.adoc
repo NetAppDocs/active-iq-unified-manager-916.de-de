@@ -1,0 +1,53 @@
+---
+permalink: events/task_test_script_execution.html 
+sidebar: sidebar 
+keywords: test, script, execution 
+summary: Sie können überprüfen, ob Ihr Skript korrekt ausgeführt wird, wenn eine Warnung für ein Speicherobjekt generiert wird. 
+---
+= Testskriptausführung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können überprüfen, ob Ihr Skript korrekt ausgeführt wird, wenn eine Warnung für ein Speicherobjekt generiert wird.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen ein Skript im unterstützten Dateiformat in Unified Manager hochgeladen haben.
+
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Skripte*.
+. Fügen Sie auf der Seite *Skripte* Ihr Testskript hinzu.
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Alarm-Setup*.
+. Führen Sie auf der Seite *Alarm-Setup* eine der folgenden Aktionen aus:
++
+|===
+| Zu... | Machen Sie Folgendes... 
+
+
+ a| 
+Hinzufügen einer Benachrichtigung
+ a| 
+.. Klicken Sie auf *Hinzufügen*.
+.. Ordnen Sie im Abschnitt „Aktionen“ die Warnung Ihrem Testskript zu.
+
+
+
+
+ a| 
+Bearbeiten einer Benachrichtigung
+ a| 
+.. Wählen Sie eine Warnung aus und klicken Sie dann auf *Bearbeiten*.
+.. Ordnen Sie im Abschnitt „Aktionen“ die Warnung Ihrem Testskript zu.
+
+
+|===
+. Klicken Sie auf *Speichern*.
+. Wählen Sie auf der Seite *Alarm-Setup* den Alarm aus, den Sie hinzugefügt oder geändert haben, und klicken Sie dann auf *Test*.
++
+Das Skript wird mit dem Argument „-test“ ausgeführt und eine Benachrichtigungswarnung wird an die E-Mail-Adressen gesendet, die beim Erstellen der Warnung angegeben wurden.
+
+

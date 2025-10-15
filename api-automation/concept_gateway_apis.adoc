@@ -1,0 +1,116 @@
+---
+permalink: api-automation/concept_gateway_apis.html 
+sidebar: sidebar 
+keywords: access, ONTAP, APIs, proxy, access 
+summary: Die Gateway-APIs bieten Ihnen den Vorteil, dass Sie die Active IQ Unified Manager Anmeldeinformationen zum Ausführen von ONTAP REST-APIs und zum Verwalten von Speicherobjekten verwenden können.  Diese APIs sind verfügbar, wenn die API-Gateway-Funktion über die Unified Manager-Web-Benutzeroberfläche aktiviert ist. 
+---
+= Greifen Sie über Proxy-Zugriff auf ONTAP -APIs zu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Gateway-APIs bieten Ihnen den Vorteil, dass Sie die Active IQ Unified Manager Anmeldeinformationen zum Ausführen von ONTAP REST-APIs und zum Verwalten von Speicherobjekten verwenden können.  Diese APIs sind verfügbar, wenn die API-Gateway-Funktion über die Unified Manager-Web-Benutzeroberfläche aktiviert ist.
+
+Unified Manager REST-APIs unterstützen nur eine ausgewählte Reihe von Aktionen, die auf den Unified Manager-Datenquellen, d. h. ONTAP Clustern, ausgeführt werden können.  Sie können die anderen Funktionen über ONTAP -APIs nutzen.  Die Gateway-APIs ermöglichen es Unified Manager, als Pass-Through-Schnittstelle zum Tunneln aller API-Anfragen zu fungieren, die auf den von ihm verwalteten ONTAP Clustern ausgeführt werden sollen, ohne dass eine Anmeldung bei jedem Rechenzentrumscluster einzeln erforderlich ist.  Es fungiert als zentraler Verwaltungspunkt für die Ausführung der APIs in den ONTAP Clustern, die von Ihrer Unified Manager-Instanz verwaltet werden.  Die API-Gateway-Funktion ermöglicht es Unified Manager, eine einzige Steuerebene zu sein, von der aus Sie mehrere ONTAP Cluster verwalten können, ohne sich einzeln bei ihnen anmelden zu müssen.  Mit den Gateway-APIs können Sie bei Unified Manager angemeldet bleiben und die ONTAP Cluster verwalten, indem Sie ONTAP REST-API-Operationen ausführen.
+
+[NOTE]
+====
+Alle Benutzer können mithilfe der GET-Operation eine Abfrage ausführen.  Anwendungsadministratoren können alle ONTAP REST-Vorgänge ausführen.
+
+====
+Das Gateway fungiert als Proxy zum Tunneln der API-Anfragen, indem es die Header- und Body-Anfragen im gleichen Format wie in den ONTAP -APIs verwaltet.  Sie können Ihre Unified Manager-Anmeldeinformationen verwenden und die spezifischen Vorgänge ausführen, um auf die ONTAP -Cluster zuzugreifen und sie zu verwalten, ohne einzelne Cluster-Anmeldeinformationen weiterzugeben.  Es verwaltet weiterhin die Clusterauthentifizierung und das Clustermanagement, leitet die API-Anfragen jedoch um, sodass sie direkt auf dem jeweiligen Cluster ausgeführt werden.  Die von den APIs zurückgegebene Antwort ist dieselbe wie die Antwort, die von den jeweiligen ONTAP REST-APIs zurückgegeben wird, die direkt von ONTAP ausgeführt werden.
+
+[cols="3*"]
+|===
+| HTTP-Verb | Pfad (URL) | Beschreibung 
+
+
+ a| 
+`GET`
+ a| 
+`/gateways`
+ a| 
+Diese GET-Methode ruft die Liste aller von Unified Manager verwalteten Cluster ab, die ONTAP REST-Aufrufe unterstützen.  Sie können die Clusterdetails überprüfen und basierend auf der Cluster-UUID oder der Universal Unique Identifier (UUID) andere Methoden ausführen.
+
+[NOTE]
+====
+Die Gateway-APIs rufen nur die Cluster ab, die von ONTAP 9.5 oder höher unterstützt und über HTTPS zu Unified Manager hinzugefügt wurden.
+
+====
+
+
+ a| 
+`GET`
+
+`POST`
+
+`DELETE`
+
+`PATCH`
+
+`OPTIONS`(nicht auf Swagger verfügbar)
+
+`HEAD`(nicht auf Swagger verfügbar)
+ a| 
+`/gateways/\{uuid}/\{path}`
+
+[NOTE]
+====
+Der Wert für \{uuid} muss durch die Cluster-UUID ersetzt werden, auf der die REST-Operation ausgeführt werden soll.  Stellen Sie außerdem sicher, dass die UUID zum Cluster gehört, der von ONTAP 9.5 oder höher unterstützt wird, und über HTTPS zu Unified Manager hinzugefügt wurde.  \{path} muss durch die ONTAP REST-URL ersetzt werden.  Sie müssen entfernen `/api/` aus der URL.
+
+==== a| 
+Dies ist eine Single-Point-Proxy-API, die POST-, DELETE-, PATCH-Operationen und GET für alle ONTAP REST-APIs unterstützt.  Für die API gelten keine Einschränkungen, solange sie von ONTAP unterstützt wird.  Die Tunnel- oder Proxy-Funktionalität kann nicht deaktiviert werden.
+
+Der `OPTIONS` Die Methode gibt alle von einer ONTAP REST-API unterstützten Vorgänge zurück.  Wenn beispielsweise eine ONTAP -API nur die `GET` Betrieb, Ausführen der `OPTIONS` Methode durch Verwendung dieser Gateway-API gibt `GET` als Antwort.  Diese Methode wird von Swagger nicht unterstützt, kann aber mit anderen API-Tools ausgeführt werden.
+
+Der `OPTIONS` Methode ermittelt, ob eine Ressource verfügbar ist.  Mit diesem Vorgang können die Metadaten zu einer Ressource in den HTTP-Antwortheadern angezeigt werden.  Diese Methode wird von Swagger nicht unterstützt, kann aber mit anderen API-Tools ausgeführt werden.
+
+|===
+
+
+== Verstehen Sie das API Gateway-Tunneling
+
+Mit den Gateway-APIs können Sie ONTAP Objekte über Unified Manager verwalten.  Unified Manager verwaltet die Cluster und Authentifizierungsdetails und leitet die Anfragen an den ONTAP REST-Endpunkt weiter.  Die Gateway-API transformiert die URL und Hypermedia als Engine of Application State (HATEOAS)-Links im Header und Antworttext mit der Basis-URL des API-Gateways.  Die Gateway-API fungiert als Proxy-Basis-URL, an die Sie die ONTAP REST-URL anhängen und den erforderlichen ONTAP REST-Endpunkt ausführen.
+
+
+NOTE: Damit eine ONTAP -API erfolgreich über das API-Gateway ausgeführt werden kann, muss die API von der Version des ONTAP Clusters unterstützt werden, auf dem sie ausgeführt wird.  Das Ausführen einer API, die auf dem ONTAP Cluster nicht unterstützt wird, liefert keine Ergebnisse.
+
+In diesem Beispiel lautet die Gateway-API (Proxy-Basis-URL): `+/gateways/{uuid}/+`
+
+Die verwendete ONTAP -API ist: `/storage/volumes` .  Sie müssen die ONTAP API REST-URL als Wert für den Pfadparameter hinzufügen.
+
+[NOTE]
+====
+Achten Sie beim Hinzufügen des Pfads darauf, dass Sie das "`/`" symbol at the beginning of the URL. For the API `/storage/volumes,` hinzufügen `storage/volumes.`
+
+====
+Die angehängte URL lautet: `+/gateways/{uuid}/storage/volumes+`
+
+Beim Ausführen des `GET` Bei dieser Operation lautet die generierte URL wie folgt: `GEThttps://<hostname\>/api/gateways/<cluster_UUID\>/storage/volumes`
+
+Der `/api` Tag der ONTAP REST-URL wird in der angehängten URL entfernt und der für die Gateway-API bleibt erhalten.
+
+*Beispiel für einen cURL-Befehl*
+
+[listing]
+----
+curl -X GET "https://<hostname>/api/gateways/1cd8a442-86d1-11e0-ae1c-9876567890123/storage/volumes" -H "accept: application/hal+json" -H "Authorization: Basic <Base64EncodedCredentials>"
+----
+Die API gibt die Liste der Speichervolumes in diesem Cluster zurück.  Das Antwortformat ist dasselbe, das Sie erhalten, wenn Sie dieselbe API von ONTAP ausführen.  Die zurückgegebenen Statuscodes sind die ONTAP REST-Statuscodes.
+
+
+
+== API-Bereich festlegen
+
+Für alle APIs ist ein Kontext innerhalb des Clusterbereichs festgelegt.  APIs, die auf Basis von Storage-VMs arbeiten, haben ebenfalls den Cluster als Geltungsbereich, d. h. die API-Operationen werden auf einer bestimmten Storage-VM innerhalb eines verwalteten Clusters ausgeführt.  Wenn Sie das `/gateways/\{uuid}/\{path}` API: Stellen Sie sicher, dass Sie die Cluster-UUID (Unified Manager-Datenquellen-UUID) für den Cluster eingeben, auf dem Sie den Vorgang ausführen.  Um den Kontext auf eine bestimmte Speicher-VM innerhalb dieses Clusters festzulegen, geben Sie den Speicher-VM-Schlüssel als Parameter X-Dot-SVM-UUID oder den Speicher-VM-Namen als Parameter X-Dot-SVM-Name ein.  Der Parameter wird als Filter im String-Header hinzugefügt und der Vorgang wird im Rahmen dieser Speicher-VM innerhalb dieses Clusters ausgeführt.
+
+*Beispiel für einen cURL-Befehl*
+
+[listing]
+----
+curl -X GET "https://<hostname>/api/gateways/e4f33f90-f75f-11e8-9ed9-00a098e3215f/storage/volume" -H "accept: application/hal+json" -H "X-Dot-SVM-UUID: d9c33ec0-5b61-11e9-8760-00a098e3215f"
+-H "Authorization: Basic <Base64EncodedCredentials>"
+----
+Weitere Informationen zur Verwendung von ONTAP REST APIs finden Sie unterhttps://docs.netapp.com/us-en/ontap-automation/index.html["ONTAP REST API-Automatisierung"]

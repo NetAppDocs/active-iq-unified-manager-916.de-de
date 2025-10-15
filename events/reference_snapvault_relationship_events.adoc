@@ -1,0 +1,99 @@
+---
+permalink: events/reference_snapvault_relationship_events.html 
+sidebar: sidebar 
+keywords: snapvault, relationship, events, impact area, protection 
+summary: SnapVault Beziehungsereignisse liefern Ihnen Informationen zum Status Ihrer SnapVault -Beziehungen, sodass Sie diese auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad. 
+---
+= SnapVault -Beziehungsereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapVault Beziehungsereignisse liefern Ihnen Informationen zum Status Ihrer SnapVault -Beziehungen, sodass Sie diese auf potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad.
+
+
+
+== Aufprallbereich: Schutz
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+Asynchroner Tresor fehlerhaft (ocumEvtSnapVaultRelationshipUnhealthy)
+ a| 
+Risiko
+ a| 
+SnapMirror -Beziehung
+ a| 
+Warnung
+
+
+
+ a| 
+Asynchroner Tresor abgebrochen (ocumEvtSnapVaultRelationshipStateBrokenoff)
+ a| 
+Risiko
+ a| 
+SnapMirror -Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Asynchrone Vault-Initialisierung fehlgeschlagen (ocumEvtSnapVaultRelationshipInitializeFailed)
+ a| 
+Risiko
+ a| 
+SnapMirror -Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Asynchrone Vault-Aktualisierung fehlgeschlagen (ocumEvtSnapVaultRelationshipUpdateFailed)
+ a| 
+Risiko
+ a| 
+SnapMirror -Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Asynchroner Vault-Lag-Fehler (ocumEvtSnapVaultRelationshipLagError)
+ a| 
+Risiko
+ a| 
+SnapMirror -Beziehung
+ a| 
+Fehler
+
+
+
+ a| 
+Asynchrone Vault-Verzögerungswarnung (ocumEvtSnapVaultRelationshipLagWarning)
+ a| 
+Risiko
+ a| 
+SnapMirror -Beziehung
+ a| 
+Warnung
+
+
+
+ a| 
+Asynchrone Vault-Neusynchronisierung fehlgeschlagen (ocumEvtSnapvaultRelationshipResyncFailed)
+ a| 
+Risiko
+ a| 
+SnapMirror -Beziehung
+ a| 
+Fehler
+
+|===

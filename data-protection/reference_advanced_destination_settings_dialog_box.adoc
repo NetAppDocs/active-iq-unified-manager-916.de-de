@@ -1,0 +1,29 @@
+---
+permalink: data-protection/reference_advanced_destination_settings_dialog_box.html 
+sidebar: sidebar 
+keywords: advanced, destination, settings, dialog box 
+summary: Sie können das Dialogfeld „Erweiterte Zieleinstellungen“ verwenden, um die Speicherplatzgarantieeinstellungen auf einem Zielvolume zu aktivieren.  Sie können erweiterte Einstellungen auswählen, wenn die Speicherplatzgarantie auf der Quelle deaktiviert ist, Sie sie aber auf dem Ziel aktivieren möchten.  Die Einstellungen für Deduplizierung, Komprimierung und Autogrow in einer SnapMirror -Beziehung werden vom Quellvolume übernommen und können nicht geändert werden. 
+---
+= Dialogfeld „Erweiterte Zieleinstellungen“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das Dialogfeld „Erweiterte Zieleinstellungen“ verwenden, um die Speicherplatzgarantieeinstellungen auf einem Zielvolume zu aktivieren.  Sie können erweiterte Einstellungen auswählen, wenn die Speicherplatzgarantie auf der Quelle deaktiviert ist, Sie sie aber auf dem Ziel aktivieren möchten.  Die Einstellungen für Deduplizierung, Komprimierung und Autogrow in einer SnapMirror -Beziehung werden vom Quellvolume übernommen und können nicht geändert werden.
+
+
+
+== Platzgarantie
+
+Stellt sicher, dass auf dem Zielvolume genügend Speicherplatz zugewiesen wird, damit die Datenübertragung immer erfolgreich ist.  Die Speicherplatzgarantie kann eine der folgenden Einstellungen sein:
+
+* Datei
+* Volumen
+* Keine
+
+
+Beispielsweise verfügen Sie möglicherweise über ein 200 GB großes Volume mit insgesamt 50 GB großen Dateien, diese Dateien enthalten jedoch nur 10 GB Daten.  Die Volumengarantie weist dem Zielvolumen 200 GB zu, unabhängig vom Inhalt der Quelle.  Die Dateigarantie weist 50 GB zu, um sicherzustellen, dass auf dem Ziel genügend Speicherplatz für Quelldateien reserviert ist. Wenn Sie in diesem Szenario *Keine* auswählen, bedeutet dies, dass auf dem Ziel nur 10 GB für den tatsächlich von den Dateidaten auf der Quelle verwendeten Speicherplatz zugewiesen werden.
+
+Die Speicherplatzgarantie ist standardmäßig auf Volume eingestellt.

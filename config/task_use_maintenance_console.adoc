@@ -1,0 +1,14 @@
+---
+permalink: config/task_use_maintenance_console.html 
+sidebar: sidebar 
+keywords: use, maintenance, console 
+summary: Sie können die Wartungskonsole verwenden, um Netzwerkeinstellungen zu konfigurieren, das System, auf dem Unified Manager installiert ist, zu konfigurieren und zu verwalten und andere Wartungsaufgaben auszuführen, die Ihnen helfen, mögliche Probleme zu verhindern und zu beheben. 
+---
+= Verwenden der Wartungskonsole
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Wartungskonsole verwenden, um Netzwerkeinstellungen zu konfigurieren, das System, auf dem Unified Manager installiert ist, zu konfigurieren und zu verwalten und andere Wartungsaufgaben auszuführen, die Ihnen helfen, mögliche Probleme zu verhindern und zu beheben.

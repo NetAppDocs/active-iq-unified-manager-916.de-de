@@ -1,0 +1,68 @@
+---
+permalink: data-protection/reference_resynchronize_dialog_box.html 
+sidebar: sidebar 
+keywords: resynchronize, dialog box 
+summary: Über das Dialogfeld „Neu synchronisieren“ können Sie Daten einer SnapMirror oder SnapVault -Beziehung neu synchronisieren, die zuvor unterbrochen wurde und deren Ziel dann zu einem Lese-/Schreib-Volume gemacht wurde.  Sie können die Synchronisierung auch dann erneut durchführen, wenn eine erforderliche gemeinsame Snapshot-Kopie auf dem Quellvolume gelöscht wird und dadurch SnapMirror oder SnapVault -Updates fehlschlagen. 
+---
+= Dialogfeld „Neu synchronisieren“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Über das Dialogfeld „Neu synchronisieren“ können Sie Daten einer SnapMirror oder SnapVault -Beziehung neu synchronisieren, die zuvor unterbrochen wurde und deren Ziel dann zu einem Lese-/Schreib-Volume gemacht wurde.  Sie können die Synchronisierung auch dann erneut durchführen, wenn eine erforderliche gemeinsame Snapshot-Kopie auf dem Quellvolume gelöscht wird und dadurch SnapMirror oder SnapVault -Updates fehlschlagen.
+
+
+
+== Registerkarte „Resynchronisierungsoptionen“
+
+Auf der Registerkarte „Resynchronisierungsoptionen“ können Sie die Übertragungspriorität und die maximale Übertragungsrate für die Schutzbeziehung festlegen, die Sie neu synchronisieren.
+
+* *Transferpriorität*
++
+Die Priorität, mit der die Übertragung ausgeführt wird.  Sie können entweder „Normal“ oder „Niedrig“ auswählen.  Beziehungen mit Richtlinien, die eine normale Übertragungspriorität angeben, werden vor denen mit Richtlinien ausgeführt, die eine niedrige Übertragungspriorität angeben.
+
+* *Maximale Übertragungsrate*
++
+Gibt die maximale Rate an, mit der Daten zwischen Clustern über das Netzwerk übertragen werden.  Wenn diese Option ausgewählt ist, wird die Netzwerkbandbreite auf den von Ihnen angegebenen Wert begrenzt.  Sie können einen numerischen Wert eingeben und dann entweder Kilobyte pro Sekunde (KBps), Megabyte pro Sekunde (MBps), Gigabyte pro Sekunde (GBps) oder TBps auswählen.  Wenn Sie keine maximale Übertragungsrate verwenden möchten, ist die Basisübertragung zwischen Beziehungen unbegrenzt.
+
+
+
+
+
+== Registerkarte „Quell-Snapshot-Kopien“
+
+Auf der Registerkarte „Quell-Snapshot-Kopien“ werden die folgenden Informationen zur Quell-Snapshot-Kopie angezeigt, die für die Baseline-Übertragung verwendet wird:
+
+* *Quellvolumen*
++
+Zeigt die Namen der entsprechenden Quellvolumes an.
+
+* *Zielvolumen*
++
+Zeigt die Namen der ausgewählten Zielvolumes an.
+
+* *Quellentyp*
++
+Zeigt den Datenträgertyp an: entweder Lesen/Schreiben oder Datenschutz.
+
+* *Schnappschusskopie*
++
+Zeigt die Snapshot-Kopie an, die für die Datenübertragung verwendet wird.  Wenn Sie auf den Wert „Snapshot-Kopie“ klicken, wird das Dialogfeld „Quellen-Snapshot-Kopie auswählen“ angezeigt, in dem Sie je nach Art Ihrer Schutzbeziehung und der von Ihnen ausgeführten Operation eine bestimmte Snapshot-Kopie für Ihre Übertragung auswählen können.
+
+
+
+
+
+== Befehlsschaltflächen
+
+* *Einreichen*
++
+Startet den Resynchronisierungsprozess und schließt das Dialogfeld „Resynchronisieren“.
+
+* *Stornieren*
++
+Bricht Ihre Auswahl ab und schließt das Dialogfeld „Neu synchronisieren“.
+
+

@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/concept_what_happens_when_performance_threshold_policy_is_changed.html 
+sidebar: sidebar 
+keywords: happens, performance, threshold, policy, changed 
+summary: Wenn Sie den Zählerwert oder die Dauer einer vorhandenen Leistungsschwellenwertrichtlinie anpassen, wird die Richtlinienänderung auf alle Speicherobjekte angewendet, die die Richtlinie verwenden.  Die neue Einstellung wird sofort wirksam und Unified Manager beginnt, die Leistungsindikatorwerte mit den neuen Schwellenwerteinstellungen für alle neu erfassten Leistungsdaten zu vergleichen. 
+---
+= Was passiert, wenn eine Leistungsschwellenwertrichtlinie geändert wird?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie den Zählerwert oder die Dauer einer vorhandenen Leistungsschwellenwertrichtlinie anpassen, wird die Richtlinienänderung auf alle Speicherobjekte angewendet, die die Richtlinie verwenden.  Die neue Einstellung wird sofort wirksam und Unified Manager beginnt, die Leistungsindikatorwerte mit den neuen Schwellenwerteinstellungen für alle neu erfassten Leistungsdaten zu vergleichen.
+
+Wenn aktive Ereignisse für Objekte vorhanden sind, die die geänderte Schwellenwertrichtlinie verwenden, werden die Ereignisse als veraltet markiert und die Schwellenwertrichtlinie beginnt mit der Überwachung des Zählers als neu definierte Schwellenwertrichtlinie.
+
+Wenn Sie den Zähler, auf den der Schwellenwert angewendet wurde, in der Detailansicht der Zählerdiagramme anzeigen, spiegeln die kritischen und Warnschwellenwertlinien die aktuellen Schwellenwerteinstellungen wider.  Die ursprünglichen Schwellenwerteinstellungen werden auf dieser Seite nicht angezeigt, auch wenn Sie historische Daten anzeigen, als die alte Schwellenwerteinstellung wirksam war.
+
+[NOTE]
+====
+Da ältere Schwellenwerteinstellungen nicht in der Detailansicht der Zählerdiagramme angezeigt werden, werden möglicherweise historische Ereignisse angezeigt, die unterhalb der aktuellen Schwellenwertlinien liegen.
+
+====

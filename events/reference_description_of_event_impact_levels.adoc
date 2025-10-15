@@ -1,0 +1,32 @@
+---
+permalink: events/reference_description_of_event_impact_levels.html 
+sidebar: sidebar 
+keywords: description, event, impact, levels 
+summary: 'Jedem Ereignis ist eine Auswirkungsstufe (Vorfall, Risiko, Ereignis oder Upgrade) zugeordnet, damit Sie die Ereignisse priorisieren können, die sofortige Korrekturmaßnahmen erfordern.' 
+---
+= Beschreibung der Ereignisauswirkungsstufen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Jedem Ereignis ist eine Auswirkungsstufe (Vorfall, Risiko, Ereignis oder Upgrade) zugeordnet, damit Sie die Ereignisse priorisieren können, die sofortige Korrekturmaßnahmen erfordern.
+
+* *Vorfall*
++
+Ein Vorfall ist eine Reihe von Ereignissen, die dazu führen können, dass ein Cluster dem Client keine Daten mehr bereitstellt und nicht mehr genügend Speicherplatz für die Daten zur Verfügung steht.  Ereignisse mit der Auswirkungsstufe „Vorfall“ sind die schwerwiegendsten.  Um eine Unterbrechung des Dienstes zu vermeiden, sollten umgehend Korrekturmaßnahmen ergriffen werden.
+
+* *Risiko*
++
+Ein Risiko ist eine Reihe von Ereignissen, die möglicherweise dazu führen können, dass ein Cluster keine Daten mehr an den Client liefert und nicht mehr genügend Speicherplatz für die Daten zur Verfügung steht.  Ereignisse mit der Auswirkungsstufe „Risiko“ können zu Dienstunterbrechungen führen.  Möglicherweise sind Korrekturmaßnahmen erforderlich.
+
+* *Ereignis*
++
+Ein Ereignis ist eine Zustands- oder Statusänderung von Speicherobjekten und ihren Attributen.  Ereignisse mit der Auswirkungsstufe „Ereignis“ haben informativen Charakter und erfordern keine Korrekturmaßnahmen.
+
+* *Upgrade*
++
+Upgrade-Ereignisse sind ein bestimmter Ereignistyp, der von der Active IQ Plattform gemeldet wird.  Diese Ereignisse identifizieren Probleme, für deren Lösung Sie ein Upgrade der ONTAP -Software, der Knoten-Firmware oder der Betriebssystemsoftware (für Sicherheitshinweise) benötigen.  Bei einigen dieser Probleme möchten Sie möglicherweise sofort Abhilfemaßnahmen ergreifen, während andere Probleme möglicherweise bis zu Ihrer nächsten planmäßigen Wartung warten können.
+
+

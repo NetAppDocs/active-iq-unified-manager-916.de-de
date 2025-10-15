@@ -1,0 +1,31 @@
+---
+permalink: config/task_access_unified_manager_web_ui.html 
+sidebar: sidebar 
+keywords: access, unified manager, web ui 
+summary: Nachdem Sie Unified Manager installiert haben, können Sie auf die Web-Benutzeroberfläche zugreifen, um Unified Manager einzurichten und mit der Überwachung Ihrer ONTAP -Systeme zu beginnen. 
+---
+= Zugriff auf die Unified Manager-Web-Benutzeroberfläche
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie Unified Manager installiert haben, können Sie auf die Web-Benutzeroberfläche zugreifen, um Unified Manager einzurichten und mit der Überwachung Ihrer ONTAP -Systeme zu beginnen.
+
+.Bevor Sie beginnen
+* Wenn Sie zum ersten Mal auf die Web-Benutzeroberfläche zugreifen, müssen Sie sich als Wartungsbenutzer (oder als Umadmin-Benutzer bei Linux-Installationen) anmelden.
+* Wenn Sie Benutzern den Zugriff auf Unified Manager über den Kurznamen statt über den vollqualifizierten Domänennamen (FQDN) oder die IP-Adresse ermöglichen möchten, muss Ihre Netzwerkkonfiguration diesen Kurznamen in einen gültigen FQDN auflösen.
+* Wenn der Server ein selbstsigniertes digitales Zertifikat verwendet, zeigt der Browser möglicherweise eine Warnung an, dass das Zertifikat nicht vertrauenswürdig ist.  Sie können entweder das Risiko akzeptieren, um den Zugriff fortzusetzen, oder ein von einer Zertifizierungsstelle (CA) signiertes digitales Zertifikat zur Serverauthentifizierung installieren.
+
+
+.Schritte
+. Starten Sie die Unified Manager-Web-Benutzeroberfläche von Ihrem Browser aus, indem Sie die URL verwenden, die am Ende der Installation angezeigt wird.  Die URL ist die IP-Adresse oder der vollqualifizierte Domänenname (FQDN) des Unified Manager-Servers.
++
+Der Link hat das folgende Format: `\https://URL` .
+
+. Melden Sie sich mit Ihren Wartungsbenutzeranmeldeinformationen bei der Unified Manager-Web-Benutzeroberfläche an.
+
+
+
+NOTE: Wenn Sie innerhalb einer Stunde drei erfolglose Anmeldeversuche bei der Web-Benutzeroberfläche unternehmen, werden Sie aus dem System ausgesperrt und müssen sich an Ihren Systemadministrator wenden.  Dies gilt nur für lokale Benutzer.

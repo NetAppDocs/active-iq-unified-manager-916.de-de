@@ -1,0 +1,36 @@
+---
+permalink: data-protection/task_add_resource_pool_members.html 
+sidebar: sidebar 
+keywords: add, resource, pool, members 
+summary: Ein Ressourcenpool besteht aus einer Reihe von Mitgliedsaggregaten.  Sie können Aggregate zu vorhandenen Ressourcenpools hinzufügen, um den für die Bereitstellung sekundärer Volumes verfügbaren Speicherplatz zu erhöhen. 
+---
+= Hinzufügen von Ressourcenpoolmitgliedern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein Ressourcenpool besteht aus einer Reihe von Mitgliedsaggregaten.  Sie können Aggregate zu vorhandenen Ressourcenpools hinzufügen, um den für die Bereitstellung sekundärer Volumes verfügbaren Speicherplatz zu erhöhen.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Sie können einem Ressourcenpool nicht mehr als 200 Aggregate gleichzeitig hinzufügen.  Im Dialogfeld „Aggregate“ angezeigte Aggregate gehören keinem anderen Ressourcenpool an.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Schutz* > *Ressourcenpools*.
+. Wählen Sie einen Ressourcenpool aus der Liste *Ressourcenpools* aus.
++
+Die Mitglieder des Ressourcenpools werden im Bereich unterhalb der Ressourcenpoolliste angezeigt.
+
+. Klicken Sie im Mitgliederbereich des Ressourcenpools auf *Hinzufügen*.
++
+Das Dialogfeld „Aggregate“ wird angezeigt.
+
+. Wählen Sie ein oder mehrere Aggregate aus.
+. Klicken Sie auf *Hinzufügen*.
++
+Das Dialogfeld wird geschlossen und die Aggregate werden in der Mitgliederliste für den ausgewählten Ressourcenpool angezeigt.
+
+

@@ -1,0 +1,52 @@
+---
+permalink: performance-checker/task_analyze_performance_incident_on_cluster_in_metrocluster.html 
+sidebar: sidebar 
+keywords: analyze, dynamic, performance, event, cluster, metrocluster, configuration 
+summary: Sie können Unified Manager verwenden, um den Cluster in einer MetroCluster -Konfiguration zu analysieren, in der ein Leistungsereignis erkannt wurde.  Sie können den Clusternamen, die Ereigniserkennungszeit und die damit verbundenen Arbeitslasten von Tätern und Opfern identifizieren. 
+---
+= Analysieren Sie ein dynamisches Leistungsereignis auf einem Cluster in einer MetroCluster -Konfiguration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Unified Manager verwenden, um den Cluster in einer MetroCluster -Konfiguration zu analysieren, in der ein Leistungsereignis erkannt wurde.  Sie können den Clusternamen, die Ereigniserkennungszeit und die beteiligten _Bully_- und _Opfer_-Workloads identifizieren.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Für eine MetroCluster Konfiguration müssen neue, bestätigte oder veraltete Leistungsereignisse vorliegen.
+* Beide Cluster in der MetroCluster -Konfiguration müssen von derselben Instanz von Unified Manager überwacht werden.
+
+
+.Schritte
+. Zeigen Sie die Seite *Ereignisdetails* an, um Informationen zum Ereignis anzuzeigen.
+. Überprüfen Sie die Ereignisbeschreibung, um die Namen und die Anzahl der beteiligten Workloads anzuzeigen.
++
+In diesem Beispiel ist das Symbol „MetroCluster -Ressourcen“ rot, was darauf hinweist, dass es um die MetroCluster -Ressourcen geht.  Sie positionieren Ihren Cursor über dem Symbol, um eine Beschreibung des Symbols anzuzeigen.
+
++
+image::../media/opm_mcc_incident_summary_png.gif[Zusammenfassung des Leistungsereignisses für die MetroCluster -Konfiguration]
+
+. Notieren Sie sich den Clusternamen und die Ereigniserkennungszeit, die Sie zur Analyse von Leistungsereignissen auf dem Partnercluster verwenden können.
+. Überprüfen Sie in den Diagrammen die Arbeitslasten der Opfer, um sicherzustellen, dass ihre Reaktionszeiten über dem Leistungsschwellenwert liegen.
++
+In diesem Beispiel wird die Arbeitsbelastung des Opfers im Hover-Text angezeigt.  Die Latenzdiagramme zeigen auf hoher Ebene ein konsistentes Latenzmuster für die beteiligten Arbeitslasten der Opfer.  Auch wenn die anormale Latenz der betroffenen Workloads das Ereignis ausgelöst hat, kann ein konsistentes Latenzmuster darauf hinweisen, dass die Workloads innerhalb des erwarteten Bereichs arbeiten, aber dass eine Spitze bei den E/A-Vorgängen die Latenz erhöht und das Ereignis ausgelöst hat.
+
++
+image::../media/opm_mcc_incident_victim_workloads_png.gif[Opfer-Workloads im Leistungsereignis für die MetroCluster -Konfiguration]
+
++
+Wenn Sie vor Kurzem eine Anwendung auf einem Client installiert haben, der auf diese Volumen-Workloads zugreift, und diese Anwendung eine große Menge an E/A an sie sendet, können Sie mit einer Erhöhung der Latenzen rechnen.  Wenn die Latenz für die Workloads wieder in den erwarteten Bereich zurückkehrt, der Ereignisstatus in „veraltet“ wechselt und länger als 30 Minuten in diesem Status bleibt, können Sie das Ereignis wahrscheinlich ignorieren.  Wenn das Ereignis andauert und im neuen Zustand verbleibt, können Sie es weiter untersuchen, um festzustellen, ob andere Probleme die Ursache des Ereignisses waren.
+
+. Wählen Sie im Diagramm „Workload-Durchsatz“ *Bully-Workloads* aus, um die Bully-Workloads anzuzeigen.
++
+Das Vorhandensein von Bully-Workloads weist darauf hin, dass das Ereignis möglicherweise durch eine oder mehrere Workloads auf dem lokalen Cluster verursacht wurde, die die MetroCluster Ressourcen überbeansprucht haben.  Die Bully-Workloads weisen eine hohe Abweichung beim Schreibdurchsatz (MB/s) auf.
+
++
+Dieses Diagramm zeigt auf hoher Ebene das Schreibdurchsatzmuster (MB/s) für die Workloads.  Sie können das MB/s-Schreibmuster überprüfen, um einen abnormalen Durchsatz zu ermitteln, der darauf hinweisen könnte, dass eine Arbeitslast die MetroCluster -Ressourcen übermäßig nutzt.
+
++
+Wenn keine Bully-Workloads an dem Ereignis beteiligt sind, wurde das Ereignis möglicherweise durch ein Integritätsproblem mit der Verbindung zwischen den Clustern oder ein Leistungsproblem auf dem Partnercluster verursacht.  Sie können Unified Manager verwenden, um den Zustand beider Cluster in einer MetroCluster -Konfiguration zu überprüfen.  Sie können Unified Manager auch verwenden, um Leistungsereignisse im Partnercluster zu prüfen und zu analysieren.
+
+

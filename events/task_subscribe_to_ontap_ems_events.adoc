@@ -1,0 +1,54 @@
+---
+permalink: events/task_subscribe_to_ontap_ems_events.html 
+sidebar: sidebar 
+keywords: subscribe, ontap, ems events 
+summary: 'Sie können den Empfang von Event Management System (EMS)-Ereignissen abonnieren, die von Systemen generiert werden, auf denen ONTAP -Software installiert ist.  Eine Teilmenge der EMS-Ereignisse wird automatisch an Unified Manager gemeldet, zusätzliche EMS-Ereignisse werden jedoch nur gemeldet, wenn Sie diese Ereignisse abonniert haben.' 
+---
+= Abonnieren Sie ONTAP EMS-Events
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Empfang von Event Management System (EMS)-Ereignissen abonnieren, die von Systemen generiert werden, auf denen ONTAP -Software installiert ist.  Eine Teilmenge der EMS-Ereignisse wird automatisch an Unified Manager gemeldet, zusätzliche EMS-Ereignisse werden jedoch nur gemeldet, wenn Sie diese Ereignisse abonniert haben.
+
+.Bevor Sie beginnen
+Abonnieren Sie keine EMS-Ereignisse, die bereits automatisch zu Unified Manager hinzugefügt wurden, da dies zu Verwirrung führen kann, wenn Sie zwei Ereignisse für dasselbe Problem erhalten.
+
+Sie können beliebig viele EMS-Events abonnieren.  Alle Ereignisse, die Sie abonnieren, werden validiert und nur die validierten Ereignisse werden auf die Cluster angewendet, die Sie in Unified Manager überwachen.  Der _ONTAP 9 EMS-Ereigniskatalog_ bietet detaillierte Informationen zu allen EMS-Nachrichten für die angegebene Version der ONTAP 9-Software.  Suchen Sie auf der Seite „ONTAP 9-Produktdokumentation“ nach der entsprechenden Version des _EMS-Ereigniskatalogs_, um eine Liste der entsprechenden Ereignisse zu erhalten.
+
+https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["ONTAP 9 Produktbibliothek"]
+
+Sie können Warnmeldungen für die ONTAP EMS-Ereignisse konfigurieren, die Sie abonnieren, und Sie können benutzerdefinierte Skripte erstellen, die für diese Ereignisse ausgeführt werden.
+
+[NOTE]
+====
+Wenn Sie die abonnierten ONTAP EMS-Ereignisse nicht erhalten, liegt möglicherweise ein Problem mit der DNS-Konfiguration des Clusters vor, das verhindert, dass der Cluster den Unified Manager-Server erreicht.  Um dieses Problem zu beheben, muss der Clusteradministrator die DNS-Konfiguration des Clusters korrigieren und anschließend Unified Manager neu starten.  Dadurch werden die ausstehenden EMS-Ereignisse auf den Unified Manager-Server übertragen.
+
+====
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Ereigniseinrichtung*.
+. Klicken Sie auf der Seite „Ereigniseinrichtung“ auf die Schaltfläche *EMS-Ereignisse abonnieren*.
+. Geben Sie im Dialogfeld „EMS-Ereignisse abonnieren“ den Namen des ONTAP EMS-Ereignisses ein, das Sie abonnieren möchten.
++
+Um die Namen der EMS-Ereignisse anzuzeigen, die Sie abonnieren können, können Sie in der ONTAP Cluster-Shell die folgenden Befehle verwenden: `event route show` Befehl (vor ONTAP 9) oder der `event catalog show` Befehl (ONTAP 9 oder höher).
+
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_and_receive_alerts_from_ONTAP_EMS_Event_Subscription_in_Active_IQ_Unified_Manager["So konfigurieren und empfangen Sie Warnungen vom ONTAP EMS Event Subscription in Active IQ Unified Manager"]
+
+. Klicken Sie auf *Hinzufügen*.
++
+Das EMS-Ereignis wird der Liste „Abonnierte EMS-Ereignisse“ hinzugefügt, aber in der Spalte „Gilt für Cluster“ wird für das von Ihnen hinzugefügte EMS-Ereignis der Status „Unbekannt“ angezeigt.
+
+. Klicken Sie auf *Speichern und schließen*, um das EMS-Ereignisabonnement beim Cluster zu registrieren.
+. Klicken Sie erneut auf *EMS-Events abonnieren*.
++
+Für das von Ihnen hinzugefügte EMS-Ereignis wird in der Spalte „Gilt für Cluster“ der Status „Ja“ angezeigt.
+
++
+Wenn der Status nicht „Ja“ lautet, überprüfen Sie die Schreibweise des ONTAP EMS-Ereignisnamens.  Wenn der Name falsch eingegeben wurde, müssen Sie das falsche Ereignis entfernen und das Ereignis anschließend erneut hinzufügen.
+
+
+
+Wenn das ONTAP EMS-Ereignis eintritt, wird das Ereignis auf der Seite „Ereignisse“ angezeigt.  Sie können das Ereignis auswählen, um Details zum EMS-Ereignis auf der Seite „Ereignisdetails“ anzuzeigen.  Sie können auch die Disposition des Ereignisses verwalten oder Warnungen für das Ereignis erstellen.

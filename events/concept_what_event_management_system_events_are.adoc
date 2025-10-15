@@ -1,0 +1,87 @@
+---
+permalink: events/concept_what_event_management_system_events_are.html 
+sidebar: sidebar 
+keywords: event management, system, 
+summary: 'Das Event Management System (EMS) sammelt Ereignisdaten aus verschiedenen Teilen des ONTAP Kernels und stellt Mechanismen zur Ereignisweiterleitung bereit.  Diese ONTAP -Ereignisse können als EMS-Ereignisse im Unified Manager gemeldet werden.  Zentralisierte Überwachung und Verwaltung erleichtern die Konfiguration kritischer EMS-Ereignisse und Warnbenachrichtigungen basierend auf diesen EMS-Ereignissen.' 
+---
+= Was sind Event Management System-Ereignisse?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Event Management System (EMS) sammelt Ereignisdaten aus verschiedenen Teilen des ONTAP Kernels und stellt Mechanismen zur Ereignisweiterleitung bereit.  Diese ONTAP -Ereignisse können als EMS-Ereignisse im Unified Manager gemeldet werden.  Zentralisierte Überwachung und Verwaltung erleichtern die Konfiguration kritischer EMS-Ereignisse und Warnbenachrichtigungen basierend auf diesen EMS-Ereignissen.
+
+Die Unified Manager-Adresse wird dem Cluster als Benachrichtigungsziel hinzugefügt, wenn Sie den Cluster zu Unified Manager hinzufügen.  Ein EMS-Ereignis wird gemeldet, sobald das Ereignis im Cluster auftritt.
+
+Es gibt zwei Methoden zum Empfangen von EMS-Ereignissen in Unified Manager:
+
+* Eine bestimmte Anzahl wichtiger EMS-Ereignisse wird automatisch gemeldet.
+* Sie können den Empfang einzelner EMS-Ereignisse abonnieren.
+
+
+Die von Unified Manager generierten EMS-Ereignisse werden je nach der Methode, mit der das Ereignis generiert wurde, unterschiedlich gemeldet:
+
+|===
+| Funktionalität | Automatische EMS-Nachrichten | Abonnierte EMS-Nachrichten 
+
+
+ a| 
+Verfügbare EMS-Ereignisse
+ a| 
+Teilmenge der EMS-Ereignisse
+ a| 
+Alle EMS-Veranstaltungen
+
+
+
+ a| 
+Name der EMS-Nachricht bei Auslösung
+ a| 
+Unified Manager-Ereignisname (konvertiert vom EMS-Ereignisnamen)
+ a| 
+Unspezifisch im Format „Fehler EMS empfangen“.  Die detaillierte Meldung enthält das Punktnotationsformat des tatsächlichen EMS-Ereignisses
+
+
+
+ a| 
+Empfangene Nachrichten
+ a| 
+Sobald der Cluster entdeckt wurde
+ a| 
+Nach dem Hinzufügen jedes erforderlichen EMS-Ereignisses zu Unified Manager und nach dem nächsten 15-minütigen Abfragezyklus
+
+
+
+ a| 
+Ereignislebenszyklus
+ a| 
+Wie bei anderen Unified Manager-Ereignissen: Status „Neu“, „Bestätigt“, „Gelöst“ und „Veraltet“
+ a| 
+Das EMS-Ereignis wird nach der Aktualisierung des Clusters, 15 Minuten nach der Erstellung des Ereignisses, obsolet.
+
+
+
+ a| 
+Erfasst Ereignisse während der Ausfallzeit von Unified Manager
+ a| 
+Ja, wenn das System startet, kommuniziert es mit jedem Cluster, um fehlende Ereignisse abzurufen
+ a| 
+Nein
+
+
+
+ a| 
+Veranstaltungsdetails
+ a| 
+Vorgeschlagene Korrekturmaßnahmen werden direkt aus ONTAP importiert, um konsistente Lösungen zu gewährleisten
+ a| 
+Korrekturmaßnahmen sind auf der Seite „Ereignisdetails“ nicht verfügbar
+
+|===
+[NOTE]
+====
+Einige der neuen automatischen EMS-Ereignisse sind Informationsereignisse, die darauf hinweisen, dass ein vorheriges Ereignis behoben wurde.  Beispielsweise zeigt das Informationsereignis „FlexGroup -Bestandteile – Speicherplatzstatus alles in Ordnung“ an, dass das Fehlerereignis „FlexGroup -Bestandteile haben Speicherplatzprobleme“ behoben wurde.  Informationsereignisse können nicht mit demselben Ereignislebenszyklus wie andere Ereignisschweretypen verwaltet werden. Das Ereignis wird jedoch automatisch verworfen, wenn auf demselben Datenträger ein weiteres Fehlerereignis vom Typ „Speicherplatzprobleme“ auftritt.
+
+====

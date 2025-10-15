@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/concept_monitor_cluster_object_navigation.html 
+sidebar: sidebar 
+keywords: monitor, cluster, object, navigation 
+summary: Sie können die Leistung aller Objekte in jedem von Unified Manager verwalteten Cluster überwachen.  Durch die Überwachung Ihrer Speicherobjekte erhalten Sie einen Überblick über die Cluster- und Objektleistung und können Leistungsereignisse überwachen.  Sie können Leistung und Ereignisse auf hoher Ebene anzeigen oder alle Details der Objektleistung und Leistungsereignisse genauer untersuchen. 
+---
+= Überwachen Sie die Clusterobjektnavigation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Leistung aller Objekte in jedem von Unified Manager verwalteten Cluster überwachen.  Durch die Überwachung Ihrer Speicherobjekte erhalten Sie einen Überblick über die Cluster- und Objektleistung und können Leistungsereignisse überwachen.  Sie können Leistung und Ereignisse auf hoher Ebene anzeigen oder alle Details der Objektleistung und Leistungsereignisse genauer untersuchen.
+
+Dies ist ein Beispiel für viele mögliche Clusterobjektnavigationen:
+
+. Überprüfen Sie auf der Dashboard-Seite die Details im Bereich „Leistungskapazität“, um den Cluster zu identifizieren, der die meiste Leistungskapazität nutzt, und klicken Sie auf das Balkendiagramm, um zur Liste der Knoten für diesen Cluster zu navigieren.
+. Identifizieren Sie den Knoten mit dem höchsten Wert für die genutzte Leistungskapazität und klicken Sie auf diesen Knoten.
+. Klicken Sie auf der Seite „Knoten-/Leistungs-Explorer“ im Menü „Anzeigen und Vergleichen“ auf „*Aggregate auf diesem Knoten*“.
+. Identifizieren Sie das Aggregat, das die meiste Leistungskapazität nutzt, und klicken Sie auf dieses Aggregat.
+. Klicken Sie auf der Seite „Aggregate/Performance Explorer“ im Menü „Anzeigen und Vergleichen“ auf *Volumes auf diesem Aggregat*.
+. Identifizieren Sie die Volumes, die die meisten IOPS verwenden.
+
+
+Sie sollten diese Volumes untersuchen, um festzustellen, ob Sie eine QoS-Richtlinie oder eine Performance-Service-Level-Richtlinie anwenden oder die Richtlinieneinstellungen ändern sollten, damit diese Volumes keinen so großen Prozentsatz der IOPS auf dem Cluster verwenden.
+
+image::../media/monitor_cluster_object.png[Ein UI-Screenshot, der ein Beispiel für viele mögliche Clusterobjektnavigationen zeigt.]

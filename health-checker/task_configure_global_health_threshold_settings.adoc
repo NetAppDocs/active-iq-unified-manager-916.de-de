@@ -1,0 +1,36 @@
+---
+permalink: health-checker/task_configure_global_health_threshold_settings.html 
+sidebar: sidebar 
+keywords: configure, global health, threshold settings 
+summary: Sie können globale Integritätsschwellenwerte für Kapazität, Wachstum, Snapshot-Reserve, Kontingente und Inodes konfigurieren, um Ihre Gesamt-, Volumen- und Qtree-Größe effektiv zu überwachen.  Sie können auch die Einstellungen zum Generieren von Ereignissen beim Überschreiten von Verzögerungsschwellenwerten bearbeiten. 
+---
+= Konfigurieren der globalen Integritätsschwellenwerteinstellungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können globale Integritätsschwellenwerte für Kapazität, Wachstum, Snapshot-Reserve, Kontingente und Inodes konfigurieren, um Ihre Gesamt-, Volumen- und Qtree-Größe effektiv zu überwachen.  Sie können auch die Einstellungen zum Generieren von Ereignissen beim Überschreiten von Verzögerungsschwellenwerten bearbeiten.
+
+Globale Integritätsschwellenwerteinstellungen gelten für alle Objekte, mit denen sie verknüpft sind, z. B. Aggregate, Volumes usw.  Beim Überschreiten von Schwellenwerten wird ein Ereignis generiert und, sofern Warnmeldungen konfiguriert sind, eine Warnmeldung gesendet.  Die Schwellenwerte sind standardmäßig auf empfohlene Werte eingestellt, Sie können sie jedoch ändern, um Ereignisse in Intervallen zu generieren, die Ihren spezifischen Anforderungen entsprechen.  Wenn Schwellenwerte geändert werden, werden Ereignisse im nächsten Überwachungszyklus generiert oder verworfen.
+
+Auf die globalen Integritätsschwellenwerteinstellungen kann über den Abschnitt „Ereignisschwellenwerte“ im linken Navigationsmenü zugegriffen werden.  Sie können die Schwellenwerteinstellungen für einzelne Objekte auch auf der Inventarseite oder der Detailseite für das jeweilige Objekt ändern.
+
+* Weitere Informationen finden Sie unterlink:task_configure_global_aggregate_health_threshold_values.html["Konfigurieren globaler aggregierter Integritätsschwellenwerte"] .
++
+Sie können die Integritätsschwellenwerteinstellungen für Kapazität, Wachstum und Snapshot-Kopien für alle Aggregate konfigurieren, um alle Schwellenwertüberschreitungen zu verfolgen.
+
+* Weitere Informationen finden Sie unterlink:task_configure_global_volume_health_threshold_values.html["Konfigurieren globaler Schwellenwerte für die Volumeintegrität"] .
++
+Sie können die Integritätsschwellenwerteinstellungen für Kapazität, Snapshot-Kopien, Qtree-Kontingente, Volume-Wachstum, Reservespeicherplatz zum Überschreiben und Inodes für alle Volumes bearbeiten, um etwaige Schwellenwertüberschreitungen zu verfolgen.
+
+* Weitere Informationen finden Sie unterlink:task_configure_global_qtree_health_threshold_values.html["Konfigurieren globaler Qtree-Integritätsschwellenwerte"] .
++
+Sie können die Integritätsschwellenwerteinstellungen für die Kapazität aller Qtrees bearbeiten, um alle Schwellenwertüberschreitungen zu verfolgen.
+
+* Weitere Informationen finden Sie unterlink:task_configure_lag_threshold_settings_for_unmanaged_protection.html["Bearbeiten der Lag-Health-Schwellenwerteinstellungen für nicht verwaltete Schutzbeziehungen"] .
++
+Sie können den Prozentsatz der Verzögerungszeit für Warnungen oder Fehler erhöhen oder verringern, sodass Ereignisse in Intervallen generiert werden, die Ihren Anforderungen besser entsprechen.
+
+

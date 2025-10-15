@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_analyze_events_from_dynamic_performance_thresholds.html 
+sidebar: sidebar 
+keywords: analyze, events, dynamic, performance, thresholds 
+summary: 'Aus dynamischen Schwellenwerten generierte Ereignisse weisen darauf hin, dass die tatsächliche Antwortzeit (Latenz) für eine Arbeitslast im Vergleich zum erwarteten Antwortzeitbereich zu hoch oder zu niedrig ist.  Auf der Seite „Ereignisdetails“ können Sie das Leistungsereignis analysieren und gegebenenfalls Korrekturmaßnahmen ergreifen, um die Leistung wieder auf den Normalwert zu bringen.' 
+---
+= Analysieren Sie Ereignisse anhand dynamischer Leistungsschwellenwerte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Aus dynamischen Schwellenwerten generierte Ereignisse weisen darauf hin, dass die tatsächliche Antwortzeit (Latenz) für eine Arbeitslast im Vergleich zum erwarteten Antwortzeitbereich zu hoch oder zu niedrig ist.  Auf der Seite „Ereignisdetails“ können Sie das Leistungsereignis analysieren und gegebenenfalls Korrekturmaßnahmen ergreifen, um die Leistung wieder auf den Normalwert zu bringen.
+
+[NOTE]
+====
+Dynamische Leistungsschwellenwerte sind auf Cloud Volumes ONTAP, ONTAP Edge- oder ONTAP Select Systemen nicht aktiviert.
+
+====

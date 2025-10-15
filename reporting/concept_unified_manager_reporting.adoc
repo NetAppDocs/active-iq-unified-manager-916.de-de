@@ -1,0 +1,32 @@
+---
+permalink: reporting/concept_unified_manager_reporting.html 
+sidebar: sidebar 
+keywords: unified, manager, reporting 
+summary: 'Active IQ Unified Manager (früher OnCommand Unified Manager) bietet die Möglichkeit, Berichte für Ihre ONTAP Speichersysteme anzuzeigen, anzupassen, herunterzuladen und zu planen.  Die Berichte können Einzelheiten zur Kapazität, Integrität, Leistung und den Schutzbeziehungen des Speichersystems liefern.' 
+---
+= Einheitliche Manager-Berichterstellung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager (früher OnCommand Unified Manager) bietet die Möglichkeit, Berichte für Ihre ONTAP Speichersysteme anzuzeigen, anzupassen, herunterzuladen und zu planen.  Die Berichte können Einzelheiten zu Kapazität, Zustand, Leistung, Sicherheit und Schutzbeziehungen des Speichersystems liefern.
+
+Die neue Berichts- und Planungsfunktion von Unified Manager, die in Active IQ Unified Manager 9.6 eingeführt wurde, ersetzt die vorherige Berichts-Engine, die in Unified Manager Version 9.5 eingestellt wurde.
+
+Die Berichterstellung bietet verschiedene Ansichten Ihres Netzwerks und liefert verwertbare Informationen zu Kapazität, Integrität, Leistung, Sicherheit und Schutzdaten.  Sie können Ihre Ansichten anpassen, indem Sie Spalten ein- und ausblenden und neu anordnen, Daten filtern, Daten sortieren und die Ergebnisse durchsuchen.  Sie können benutzerdefinierte Ansichten zur Wiederverwendung speichern, sie als Berichte herunterladen und sie als wiederkehrende Berichte zur Verteilung per E-Mail planen.
+
+Sie können Ansichten im Microsoft® Excel-Format herunterladen und anpassen.  Sie können erweiterte Excel-Funktionen wie komplexe Sortierungen, mehrschichtige Filter, Pivot-Tabellen und Diagramme verwenden.  Wenn Sie mit dem resultierenden Excel-Bericht zufrieden sind, können Sie die Excel-Datei hochladen, um sie bei jeder Planung und Freigabe des Berichts zu verwenden.
+
+Zusätzlich zum Erstellen von Berichten über die Benutzeroberfläche können Sie mithilfe dieser zusätzlichen Methoden Integritäts-, Sicherheits- und Leistungsdaten aus Unified Manager extrahieren:
+
+* Verwenden von Open Database Connectivity (ODBC) und ODBC-Tools für den direkten Zugriff auf die Datenbank für Clusterinformationen
+* Ausführen von Unified Manager REST-APIs, um die Informationen zurückzugeben, die Sie überprüfen möchten
+
+
+Ab dieser Version von Active IQ Unified Manager wurden die folgenden Verbesserungen an den Berichten vorgenommen:
+
+* Für einen Bericht wird gemäß dem konfigurierten Zeitplan eine E-Mail gesendet.  Auch wenn Sie einen On-Demand-Bericht erstellen, erhalten Sie eine E-Mail.
+* Der Dateiname des Berichts und die Metadaten des Berichts enthalten den Hostnamen, von dem aus der Bericht generiert wurde.  Selbst wenn jemand den Dateinamen ändert, können Sie dank dieser Verbesserung immer noch den Hostnamen identifizieren, von dem der Bericht generiert wurde.
+

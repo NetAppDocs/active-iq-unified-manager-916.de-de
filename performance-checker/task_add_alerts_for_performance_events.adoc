@@ -1,0 +1,40 @@
+---
+permalink: performance-checker/task_add_alerts_for_performance_events.html 
+sidebar: sidebar 
+keywords: add, alerts, performance, events 
+summary: Sie können Warnmeldungen für einzelne Leistungsereignisse konfigurieren, genau wie für alle anderen Ereignisse, die Unified Manager empfängt.  Wenn Sie außerdem alle Leistungsereignisse gleich behandeln und E-Mails an dieselbe Person senden möchten, können Sie eine einzelne Warnung erstellen, die Sie benachrichtigt, wenn kritische oder warnende Leistungsereignisse ausgelöst werden. 
+---
+= Hinzufügen von Warnungen für Leistungsereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Warnmeldungen für einzelne Leistungsereignisse konfigurieren, genau wie für alle anderen Ereignisse, die Unified Manager empfängt.  Wenn Sie außerdem alle Leistungsereignisse gleich behandeln und E-Mails an dieselbe Person senden möchten, können Sie eine einzelne Warnung erstellen, die Sie benachrichtigt, wenn kritische oder warnende Leistungsereignisse ausgelöst werden.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+Das folgende Beispiel zeigt, wie ein Ereignis für alle kritischen Latenz-, IOPS- und MBps-Ereignisse erstellt wird.  Sie können dieselbe Methode verwenden, um Ereignisse aus allen Leistungsindikatoren und für alle Warnereignisse auszuwählen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicherverwaltung* > *Alarm-Setup*.
+. Klicken Sie auf der Seite „Alarm-Setup“ auf *Hinzufügen*.
+. Klicken Sie im Dialogfeld „Warnung hinzufügen“ auf *Name* und geben Sie einen Namen und eine Beschreibung für die Warnung ein.
+. Wählen Sie auf der Seite *Ressourcen* keine Ressourcen aus.
++
+Da keine Ressourcen ausgewählt sind, wird die Warnung auf alle Cluster, Aggregate, Volumes usw. angewendet, für die diese Ereignisse empfangen werden.
+
+. Klicken Sie auf *Ereignisse* und führen Sie die folgenden Aktionen aus:
++
+.. Wählen Sie in der Liste „Ereignisschweregrad“ *Kritisch* aus.
+.. Geben Sie im Feld „Ereignisname enthält“ Folgendes ein: `*latency*` und klicken Sie dann auf den Pfeil, um alle passenden Ereignisse auszuwählen.
+.. Geben Sie im Feld „Ereignisname enthält“ Folgendes ein: `*iops*` und klicken Sie dann auf den Pfeil, um alle passenden Ereignisse auszuwählen.
+.. Geben Sie im Feld „Ereignisname enthält“ Folgendes ein: `*mbps*` und klicken Sie dann auf den Pfeil, um alle passenden Ereignisse auszuwählen.
+
+
+. Klicken Sie auf *Aktionen* und wählen Sie dann im Feld *Diese Benutzer benachrichtigen* den Namen des Benutzers aus, der die Warn-E-Mail erhalten soll.
+. Konfigurieren Sie auf dieser Seite alle anderen Optionen zum Ausgeben von SNMP-Taps und Ausführen eines Skripts.
+. Klicken Sie auf *Speichern*.
+

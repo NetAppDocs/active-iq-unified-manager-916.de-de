@@ -1,0 +1,26 @@
+---
+permalink: storage-mgmt/task_view_user_and_user_group_quotas.html 
+sidebar: sidebar 
+keywords: view, user, user, group, quotas 
+summary: Auf der Seite „Storage VM / Health Details“ werden Informationen zu den Benutzer- und Benutzergruppenkontingenten angezeigt, die auf der SVM konfiguriert sind.  Sie können den Namen des Benutzers oder der Benutzergruppe, die für die Datenträger und Dateien festgelegten Beschränkungen, den verwendeten Datenträger- und Dateispeicherplatz sowie die E-Mail-Adresse für Benachrichtigungen anzeigen. 
+---
+= Anzeigen von Benutzer- und Benutzergruppenkontingenten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Storage VM / Health Details“ werden Informationen zu den Benutzer- und Benutzergruppenkontingenten angezeigt, die auf der SVM konfiguriert sind.  Sie können den Namen des Benutzers oder der Benutzergruppe, die für die Datenträger und Dateien festgelegten Beschränkungen, den verwendeten Datenträger- und Dateispeicherplatz sowie die E-Mail-Adresse für Benachrichtigungen anzeigen.
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Operator“, „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Speicher* > *Speicher-VMs*.
+. Wählen Sie in der Ansicht *Integrität: Alle Storage-VMs* eine Storage-VM aus und klicken Sie dann auf die Registerkarte *Benutzer- und Gruppenkontingente*.
+
+
+*Verwandte Informationen*
+
+link:../config/task_add_users.html["Benutzer hinzufügen"]

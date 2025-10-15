@@ -1,0 +1,35 @@
+---
+permalink: data-protection/task_resume_scheduled_transfers_voldtls_page.html 
+sidebar: sidebar 
+keywords: resume schedule, transfers, quiesce, relationship,  volume, health details page 
+summary: 'Nachdem Sie eine Beziehung stillgelegt haben, um geplante Übertragungen zu verhindern, können Sie auf der Seite „Volume-/Integritätsdetails“ mit „Fortsetzen“ geplante Übertragungen wieder aktivieren, sodass die Daten auf dem Quell- oder Primärvolume geschützt sind.  Die Übertragungen werden ab einem Prüfpunkt (sofern vorhanden) beim nächsten geplanten Übertragungsintervall fortgesetzt.' 
+---
+= Fortsetzen geplanter Übertragungen in einer stillgelegten Beziehung von der Seite „Volumen-/Gesundheitsdetails“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie eine Beziehung stillgelegt haben, um geplante Übertragungen zu verhindern, können Sie auf der Seite „Volume-/Integritätsdetails“ mit „*Fortsetzen*“ geplante Übertragungen wieder aktivieren, sodass die Daten auf dem Quell- oder Primärvolume geschützt sind.  Die Übertragungen werden ab einem Prüfpunkt (sofern vorhanden) beim nächsten geplanten Übertragungsintervall fortgesetzt.
+
+.Bevor Sie beginnen
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen die Workflow-Automatisierung eingerichtet haben.
+
+
+.Schritte
+. Klicken Sie auf der Registerkarte *Schutz* der Detailseite *Volume/Integrität* in der Topologieansicht mit der rechten Maustaste auf eine stillgelegte Beziehung, die Sie fortsetzen möchten.
++
+Alternativ können Sie im Menü *Aktionen* > *Beziehung* die Option *Fortsetzen* auswählen.
+
+. Klicken Sie im Dialogfeld *Fortsetzen* auf *Weiter*.
++
+Sie werden zur Seite mit den Volumen-/Gesundheitsdetails zurückgeleitet.
+
+. Um die zugehörigen Jobaufgaben anzuzeigen und ihren Fortschritt zu verfolgen, klicken Sie auf den Joblink, der oben auf der Detailseite *Volumen/Integrität* angezeigt wird.
+. Klicken Sie auf der Detailseite des *Auftrags* auf *Aktualisieren*, um die Aufgabenliste und die Aufgabendetails zu aktualisieren, die mit dem Schutzkonfigurationsauftrag verknüpft sind, und um festzustellen, wann der Auftrag abgeschlossen ist.
++
+Nachdem die Aufträge abgeschlossen sind, werden die Datenübertragungen im nächsten geplanten Übertragungsintervall fortgesetzt.
+
+

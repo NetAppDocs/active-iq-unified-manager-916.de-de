@@ -1,0 +1,66 @@
+---
+permalink: events/reference_user_and_group_quota_events.html 
+sidebar: sidebar 
+keywords: user, group, quota, events, impact area, capacity 
+summary: Benutzer- und Gruppenkontingentereignisse liefern Ihnen Informationen zur Kapazität des Benutzer- und Benutzergruppenkontingents sowie zu den Datei- und Datenträgerlimits, sodass Sie potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad. 
+---
+= Benutzer- und Gruppenkontingentereignisse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Benutzer- und Gruppenkontingentereignisse liefern Ihnen Informationen zur Kapazität des Benutzer- und Benutzergruppenkontingents sowie zu den Datei- und Datenträgerlimits, sodass Sie potenzielle Probleme überwachen können.  Ereignisse werden nach Auswirkungsbereich gruppiert und enthalten den Ereignis- und Trap-Namen, die Auswirkungsstufe, den Quellentyp und den Schweregrad.
+
+
+
+== Wirkungsbereich: Kapazität
+
+|===
+| Ereignisname (Trap-Name) | Auswirkungsstufe | Quellentyp | Schwere 
+
+
+ a| 
+Soft-Limit für Benutzer- oder Gruppenkontingentspeicherplatz überschritten (ocumEvtUserOrGroupQuotaDiskSpaceSoftLimitBreached)
+ a| 
+Risiko
+ a| 
+Benutzer- oder Gruppenkontingent
+ a| 
+Warnung
+
+
+
+ a| 
+Hartes Speicherplatzlimit für Benutzer- oder Gruppenkontingente erreicht (ocumEvtUserOrGroupQuotaDiskSpaceHardLimitReached)
+ a| 
+Vorfall
+ a| 
+Benutzer- oder Gruppenkontingent
+ a| 
+Kritisch
+
+
+
+ a| 
+Soft-Limit für die Anzahl der Dateien im Benutzer- oder Gruppenkontingent überschritten (ocumEvtUserOrGroupQuotaFileCountSoftLimitBreached)
+ a| 
+Risiko
+ a| 
+Benutzer- oder Gruppenkontingent
+ a| 
+Warnung
+
+
+
+ a| 
+Festes Limit für die Anzahl der Dateien im Benutzer- oder Gruppenkontingent erreicht (ocumEvtUserOrGroupQuotaFileCountHardLimitReached)
+ a| 
+Vorfall
+ a| 
+Benutzer- oder Gruppenkontingent
+ a| 
+Kritisch
+
+|===

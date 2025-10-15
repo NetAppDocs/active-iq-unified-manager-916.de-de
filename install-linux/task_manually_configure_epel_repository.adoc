@@ -1,0 +1,35 @@
+---
+permalink: install-linux/task_manually_configure_epel_repository.html 
+sidebar: sidebar 
+keywords: manually, configure, epel repository 
+summary: 'Wenn das System, auf dem Sie Unified Manager installieren, keinen Zugriff auf das Extra Packages for Enterprise Linux (EPEL)-Repository hat, müssen Sie das Repository für eine erfolgreiche Installation manuell herunterladen und konfigurieren.' 
+---
+= Manuelles Konfigurieren des EPEL-Repositorys
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn das System, auf dem Sie Unified Manager installieren, keinen Zugriff auf das Extra Packages for Enterprise Linux (EPEL)-Repository hat, müssen Sie das Repository für eine erfolgreiche Installation manuell herunterladen und konfigurieren.
+
+Das EPEL-Repository bietet Zugriff auf die erforderlichen Dienstprogramme von Drittanbietern, die auf Ihrem System installiert werden müssen.  Sie verwenden das EPEL-Repository, um Unified Manager auf einem Red Hat Enterprise Linux-System zu installieren.
+
+.Schritte
+. Laden Sie das EPEL-Repository für Ihre Installation herunter.  Laden Sie Version 8 herunter von:
++
+`+wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm+`
+
++
+Laden Sie Version 9 herunter von:
+
++
+`wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm`
+
+. Konfigurieren Sie das EPEL-Repository:
++
+`yum install epel-release-latest-<version>.noarch.rpm`
+
+
+
+Wenn Sie für Red Hat Enterprise Linux 8-Systeme beispielsweise interne Repositories mit modularen RPM-Paketen haben, `_javapackages-filesystem-<version>.module.rpm_` Stellen Sie sicher, dass die Metadaten für die modularen Pakete auch im selben Repository verfügbar sind.

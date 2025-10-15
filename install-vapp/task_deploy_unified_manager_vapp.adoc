@@ -1,0 +1,46 @@
+---
+permalink: install-vapp/task_deploy_unified_manager_vapp.html 
+sidebar: sidebar 
+keywords: deploy, unified manager 
+summary: Die Bereitstellung von Unified Manager umfasst das Herunterladen von Software, die Bereitstellung der virtuellen Appliance, das Erstellen eines Wartungsbenutzernamens und -kennworts und die Durchführung der Ersteinrichtung in der Web-Benutzeroberfläche. 
+---
+= Unified Manager bereitstellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Bereitstellung von Unified Manager umfasst das Herunterladen von Software, die Bereitstellung der virtuellen Appliance, das Erstellen eines Wartungsbenutzernamens und -kennworts und die Durchführung der Ersteinrichtung in der Web-Benutzeroberfläche.
+
+.Bevor Sie beginnen
+* Sie sollten die Systemanforderungen für die Bereitstellung überprüfen und erfüllen.
++
+Sehenlink:concept_requirements_for_installing_unified_manager.html["Systemanforderungen"] .
+
+* Stellen Sie sicher, dass Sie über die folgenden Informationen verfügen:
++
+** Anmeldeinformationen für die NetApp Support Site
+** Anmeldeinformationen für den Zugriff auf den VMware vCenter Server und den vSphere Web Client
+** IP-Adresse des ESXi-Servers, auf dem Sie die virtuelle Unified Manager-Appliance bereitstellen
+** Details zum Rechenzentrum, wie Speicherplatz im Datastore und Speicherbedarf
+** Wenn Sie die IPv6-Adressierung verwenden möchten, sollte IPv6 auf dem Host aktiviert sein.
+
+
+
+
+Sie können Unified Manager als virtuelle Appliance auf einem VMware ESXi-Server bereitstellen.
+
+Sie sollten über die VMware-Konsole und nicht über SSH auf die Wartungskonsole zugreifen.
+
+[NOTE]
+====
+Ab Unified Manager 9.8 wurden VMware Tools durch Open VM Tools ersetzt `open-vm-tools` ).  Sie müssen VMware Tools nicht mehr als Teil der Installation installieren, da `open-vm-tools` ist im Unified Manager-Installationspaket enthalten.
+
+====
+Nach Abschluss der Bereitstellung und Ersteinrichtung können Sie entweder Cluster hinzufügen oder zusätzliche Netzwerkeinstellungen in der Wartungskonsole konfigurieren und dann auf die Web-Benutzeroberfläche zugreifen.
+
+.Schritte
+. Befolgen Sie die Schritte inlink:task_download_unified_manager_ova_file.html["Unified Manager herunterladen"] .
+. Befolgen Sie außerdem die Schritte inlink:task_deploy_unified_manager_virtual_appliance_vapp.html["Bereitstellen der virtuellen Unified Manager-Appliance"] .
+

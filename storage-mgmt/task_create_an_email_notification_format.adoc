@@ -1,0 +1,26 @@
+---
+permalink: storage-mgmt/task_create_an_email_notification_format.html 
+sidebar: sidebar 
+keywords: create, email, notification, format, user, group, quotas 
+summary: 'Sie können ein Benachrichtigungsformat für die E-Mails erstellen, die an einen Benutzer oder eine Benutzergruppe gesendet werden, wenn ein kontingentbezogenes Problem vorliegt (weiches Limit überschritten oder hartes Limit erreicht).' 
+---
+= Erstellen Sie ein E-Mail-Benachrichtigungsformat für Benutzer- und Benutzergruppenkontingente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein Benachrichtigungsformat für die E-Mails erstellen, die an einen Benutzer oder eine Benutzergruppe gesendet werden, wenn ein kontingentbezogenes Problem vorliegt (weiches Limit überschritten oder hartes Limit erreicht).
+
+.Bevor Sie beginnen
+Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+.Schritte
+. Klicken Sie im linken Navigationsbereich auf *Allgemein* > *Kontingent-E-Mail-Format*.
+. Geben Sie die Details in den Feldern *Von*, *Betreff* und *E-Mail-Details* ein oder ändern Sie sie.
+. Klicken Sie auf *Vorschau*, um eine Vorschau der E-Mail-Benachrichtigung anzuzeigen.
+. Klicken Sie auf *Schließen*, um das Vorschaufenster zu schließen.
+. Ändern Sie bei Bedarf den Inhalt der E-Mail-Benachrichtigung.
+. Klicken Sie auf *Speichern*.
+

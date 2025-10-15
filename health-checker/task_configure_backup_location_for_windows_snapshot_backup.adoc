@@ -1,0 +1,48 @@
+---
+permalink: health-checker/task_configure_backup_location_for_windows_snapshot_backup.html 
+sidebar: sidebar 
+keywords: configure, backup, location, windows, snapshot copy, copies 
+summary: Sie sollten das Volume zum Speichern von Snapshot-Kopien konfigurieren, nachdem Sie Unified Manager unter Windows gesichert haben. 
+---
+= Konfigurieren des Sicherungsspeicherorts für Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten das Volume zum Speichern von Snapshot-Kopien konfigurieren, nachdem Sie Unified Manager unter Windows gesichert haben.
+
+.Bevor Sie beginnen
+Cluster, Speicher-VM und Volume müssen die folgenden Anforderungen erfüllen:
+
+* Clusteranforderungen:
++
+** ONTAP 9.3 oder höher muss installiert sein
+** Es sollte sich geografisch in der Nähe des Unified Manager-Servers befinden
+** Es wird von Unified Manager überwacht
+
+
+* Anforderungen an die Speicher-VM:
++
+** iSCSI-Konnektivität auf ONTAP Cluster
+** Das iSCSI-Protokoll muss für die konfigurierte Maschine aktiviert sein
+** Sie sollten über ein dediziertes Volume und LUN für die Sicherungskonfiguration verfügen.  Das ausgewählte Volume sollte nur eine LUN und sonst nichts enthalten.
+** Die Größe der LUN sollte mindestens doppelt so groß sein wie die Datengröße, die voraussichtlich im 9.9 Active IQ Unified Manager verarbeitet werden kann.
++
+Dadurch werden auch für das Volumen dieselben Größenanforderungen festgelegt.
+
+** Stellen Sie sicher, dass „Alle Lese-/Schreibzugriffe“ ausgewählt ist.
+** Stellen Sie sicher, dass der Superuser-Zugriff in der Exportrichtlinie auf „any“ eingestellt ist.
+
+
+* Volume- und LUN-Anforderungen:
++
+** Das Volume sollte mindestens doppelt so groß sein wie das MySQL-Datenverzeichnis von Unified Manager.
+** Der Sicherheitsstil muss auf Windows eingestellt sein
+** Die lokale Snapshot-Richtlinie muss deaktiviert sein
+** Die automatische Volume-Größe sollte aktiviert sein
+** Das Leistungs-Servicelevel sollte auf eine Richtlinie mit hohen IOPS und geringer Latenz eingestellt werden, z. B. „Extrem“.
+
+
+

@@ -1,0 +1,86 @@
+---
+permalink: performance-checker/reference_performance_event_analysis_and_notification.html 
+sidebar: sidebar 
+keywords: performance, event, analysis, notification 
+summary: Leistungsereignisse benachrichtigen Sie über E/A-Leistungsprobleme bei einer Arbeitslast, die durch Konflikte bei einer Clusterkomponente verursacht werden.  Unified Manager analysiert das Ereignis, um alle beteiligten Workloads und die umstrittene Komponente zu identifizieren und festzustellen, ob das Ereignis immer noch ein Problem darstellt, das Sie möglicherweise lösen müssen. 
+---
+= Analyse und Benachrichtigung von Leistungsereignissen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Leistungsereignisse benachrichtigen Sie über E/A-Leistungsprobleme bei einer Arbeitslast, die durch Konflikte bei einer Clusterkomponente verursacht werden.  Unified Manager analysiert das Ereignis, um alle beteiligten Workloads und die umstrittene Komponente zu identifizieren und festzustellen, ob das Ereignis immer noch ein Problem darstellt, das Sie möglicherweise lösen müssen.
+
+Unified Manager überwacht die E/A-Latenz (Reaktionszeit) und IOPS (Operationen) für Volumes in einem Cluster.  Wenn beispielsweise andere Workloads eine Clusterkomponente übermäßig beanspruchen, ist die Komponente überlastet und kann die optimale Leistung nicht erbringen, um die Workload-Anforderungen zu erfüllen.  Die Leistung anderer Workloads, die dieselbe Komponente verwenden, kann beeinträchtigt werden, was zu einer Erhöhung ihrer Latenzen führt.  Wenn die Latenz den dynamischen Leistungsschwellenwert überschreitet, löst Unified Manager ein Leistungsereignis aus, um Sie zu benachrichtigen.
+
+
+
+== Ereignisanalyse
+
+Unified Manager führt die folgenden Analysen durch und verwendet dabei die Leistungsstatistiken der letzten 15 Tage, um die Opfer-Workloads, die Bully-Workloads und die an einem Ereignis beteiligte Clusterkomponente zu identifizieren:
+
+* Identifiziert betroffene Workloads, deren Latenz den dynamischen Leistungsschwellenwert überschritten hat, der die Obergrenze der Latenzprognose darstellt:
++
+** Bei Volumes auf HDD- oder Flash Pool-Hybridaggregaten (lokale Ebene) werden Ereignisse nur ausgelöst, wenn die Latenz größer als 5 Millisekunden (ms) ist und die IOPS mehr als 10 Vorgänge pro Sekunde (Ops/Sek.) betragen.
+** Bei Volumes auf reinen SSD-Aggregaten oder FabricPool Aggregaten (Cloud-Ebene) werden Ereignisse nur ausgelöst, wenn die Latenz größer als 1 ms und die IOPS über 100 Ops/Sek. liegen.
+
+
+* Identifiziert die konkurrierende Clusterkomponente.
++
+[NOTE]
+====
+Wenn die Latenz der Opfer-Workloads an der Cluster-Verbindung größer als 1 ms ist, behandelt Unified Manager dies als signifikant und löst ein Ereignis für die Cluster-Verbindung aus.
+
+====
+* Identifiziert die Bully-Workloads, die die Clusterkomponente überbeanspruchen und zu Konflikten führen.
+* Ordnet die beteiligten Arbeitslasten anhand ihrer Abweichung bei der Nutzung oder Aktivität einer Clusterkomponente ein, um zu ermitteln, bei welchen Tätern die größten Änderungen bei der Nutzung der Clusterkomponente auftreten und welche Opfer am stärksten betroffen sind.
+
+
+Ein Ereignis kann nur für einen kurzen Moment auftreten und sich dann selbst korrigieren, nachdem die verwendete Komponente nicht mehr im Konflikt steht.  Ein kontinuierliches Ereignis ist ein Ereignis, das für dieselbe Clusterkomponente innerhalb eines Fünf-Minuten-Intervalls erneut auftritt und im aktiven Zustand bleibt.  Bei kontinuierlichen Ereignissen löst Unified Manager einen Alarm aus, nachdem das gleiche Ereignis während zwei aufeinanderfolgender Analyseintervalle erkannt wurde.
+
+Wenn ein Ereignis behoben ist, bleibt es im Unified Manager als Teil der Aufzeichnung früherer Leistungsprobleme für ein Volume verfügbar.  Jedes Ereignis verfügt über eine eindeutige ID, die den Ereignistyp und die beteiligten Volumes, Cluster und Clusterkomponenten identifiziert.
+
+[NOTE]
+====
+Ein einzelnes Volume kann gleichzeitig an mehreren Ereignissen beteiligt sein.
+
+====
+
+
+== Ereignisstatus
+
+Ereignisse können sich in einem der folgenden Zustände befinden:
+
+* *Aktiv*
++
+Zeigt an, dass das Leistungsereignis derzeit aktiv ist (neu oder bestätigt).  Das Problem, das das Ereignis verursacht hat, hat sich nicht von selbst behoben oder wurde nicht gelöst.  Der Leistungsindikator für das Speicherobjekt bleibt über dem Leistungsschwellenwert.
+
+* *Veraltet*
++
+Zeigt an, dass das Ereignis nicht mehr aktiv ist.  Das Problem, das das Ereignis verursacht hat, hat sich von selbst behoben oder wurde gelöst.  Der Leistungsindikator für das Speicherobjekt liegt nicht mehr über dem Leistungsschwellenwert.
+
+
+
+
+
+== Ereignisbenachrichtigung
+
+Die Ereignisse werden auf der Dashboard-Seite und auf vielen anderen Seiten der Benutzeroberfläche angezeigt und Benachrichtigungen zu diesen Ereignissen werden an angegebene E-Mail-Adressen gesendet.  Auf der Seite „Ereignisdetails“ und auf der Seite „Arbeitslastanalyse“ können Sie detaillierte Analyseinformationen zu einem Ereignis anzeigen und Vorschläge zur Lösung des Ereignisses erhalten.
+
+
+
+== Ereignisinteraktion
+
+Auf der Seite „Ereignisdetails“ und auf der Seite „Arbeitslastanalyse“ können Sie auf folgende Weise mit Ereignissen interagieren:
+
+* Wenn Sie die Maus über ein Ereignis bewegen, wird eine Meldung mit Datum und Uhrzeit der Ereigniserkennung angezeigt.
++
+Wenn für denselben Zeitraum mehrere Ereignisse vorliegen, zeigt die Meldung die Anzahl der Ereignisse an.
+
+* Wenn Sie auf ein einzelnes Ereignis klicken, wird ein Dialogfeld mit ausführlicheren Informationen zu dem Ereignis angezeigt, einschließlich der beteiligten Clusterkomponenten.
++
+Die umstrittene Komponente ist eingekreist und rot hervorgehoben.  Sie können auf *Vollständige Analyse anzeigen* klicken, um die vollständige Analyse auf der Seite mit den Ereignisdetails anzuzeigen.  Wenn für denselben Zeitraum mehrere Ereignisse vorliegen, werden im Dialogfeld Details zu den drei aktuellsten Ereignissen angezeigt.  Sie können auf ein Ereignis klicken, um die Ereignisanalyse auf der Seite „Ereignisdetails“ anzuzeigen.
+
+

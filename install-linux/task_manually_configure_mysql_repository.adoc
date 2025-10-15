@@ -1,0 +1,60 @@
+---
+permalink: install-linux/task_manually_configure_mysql_repository.html 
+sidebar: sidebar 
+keywords: manually configure mysql repository, mysql key, keys update 
+summary: Wenn das System, auf dem Sie Unified Manager installieren, keinen Zugriff auf das MySQL Community Edition-Repository hat, müssen Sie das Repository für eine erfolgreiche Installation manuell herunterladen und konfigurieren. 
+---
+= Manuelles Konfigurieren des MySQL-Repositorys
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn das System, auf dem Sie Unified Manager installieren, keinen Zugriff auf das MySQL Community Edition-Repository hat, müssen Sie das Repository für eine erfolgreiche Installation manuell herunterladen und konfigurieren.
+
+Das MySQL-Repository bietet Zugriff auf die erforderliche MySQL-Software, die auf Ihrem System installiert werden muss.
+
+[NOTE]
+====
+Diese Aufgabe kann fehlschlagen, wenn das System keine Internetverbindung hat.  Lesen Sie die MySQL-Dokumentation, wenn das System, auf dem Sie Unified Manager installieren, keinen Internetzugang hat.
+
+====
+.Schritte
+. Laden Sie das entsprechende MySQL-Repository für Ihre Installation herunter.  Laden Sie Version 8 herunter von:
++
+`wget http://repo.mysql.com/yum/mysql-8.4-community/el/8/x86_64/mysql84-community-release-el8-1.noarch.rpm`
+
++
+Laden Sie Version 9 herunter von:
+
++
+`wget http://repo.mysql.com/yum/mysql-8.4-community/el/9/x86_64/mysql84-community-release-el9-1.noarch.rpm`
+
+. Konfigurieren Sie das MySQL-Repository:
++
+`yum install mysql84-community-release-.noarch.rpm`
+
+
+
+Wenn Sie für das Red Hat Enterprise Linux 8-System interne Repositorys mit Java-11-OpenJDK, P7Zip und anderen vom AppStream-Repository bereitgestellten Softwarepaketen haben, müssen Sie Ihr AppStream-Repository deaktivieren und MySQL Community Server installieren. Führen Sie den folgenden Befehl aus:
+
+[listing]
+----
+# sudo yum --disablerepo=rhel-8-for-x86_64-appstream-rpms install  mysql-community-server
+----
+Wenn Sie eine Fehlermeldung über einen fehlenden oder nicht übereinstimmenden Schlüssel erhalten und Ihre Installation fehlschlägt, versuchen Sie Folgendes:
+
+* Importieren Sie auf einem verbundenen System den aktualisierten MySQL-Schlüssel, indem Sie den folgenden Befehl ausführen:
+
+
+[listing]
+----
+rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-<xxxx>
+
+for example:
+
+rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2023
+----
+* Aktualisieren Sie auf einem System ohne Internetverbindung Ihre MySQL-Repo-Datei und deaktivieren Sie `gpgcheck` durch Markierung `gpgcheck=0` .
+
