@@ -43,9 +43,6 @@ Unified Manager umfasst die folgenden Funktionen:
 * Berichterstellung und Verwaltung von Speicherobjektinformationen wie physische und logische Kapazität, Auslastung, Platzeinsparungen, Leistung und verwandte Ereignisse
 * Integration mit OnCommand Workflow Automation zur Ausführung von Workflows
 +
-Der Storage Automation Store enthält NetApp-zertifizierte automatisierte Speicher-Workflow-Pakete, die für die Verwendung mit OnCommand Workflow Automation (WFA) entwickelt wurden.  Sie können die Pakete herunterladen und sie dann in WFA importieren, um sie auszuführen.  Die automatisierten Workflows sind hier verfügbar:
-
-+
-https://automationstore.netapp.com["Speicherautomatisierungs-Shop"]
+https://mysupport.netapp.com/site/products/all/details/ocwfa/downloads-tab["WFA-Download"^]
 
 

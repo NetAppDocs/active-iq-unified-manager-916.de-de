@@ -26,7 +26,7 @@ Laden Sie beispielsweise herunter `jdk-11.0.18_windows-x64_bin.zip from https://
 
 +
 
-NOTE: Zum Herunterladen der Datei ist ein Oracle-Konto erforderlich.  Wenn Sie kein Oracle-Konto haben, gehen Sie zulink:https://login.oracle.com/mysso/signon.jsp?request_id=007["Oracle-Kontoanmeldung"] Seite, um eine zu erstellen.
+NOTE: Zum Herunterladen der Datei benötigen Sie ein Oracle-Konto. Falls Sie noch kein Oracle-Konto besitzen, gehen Sie zur link:https://signon.oracle.com/signin["Oracle-Kontoanmeldung"^] Seite, um eines zu erstellen.
 
 . Verwenden Sie die Windows-Dienstekonsole, um die folgenden Unified Manager-Dienste zu stoppen:
 +
