@@ -17,6 +17,7 @@ Stellen Sie vor der Bereitstellung der Dateifreigabevolumes sicher, dass die SVM
 
 
 
+[[view-file-shares]]
 == Dateifreigaben anzeigen
 
 Mit der folgenden Methode können Sie die in Ihrer Unified Manager-Umgebung verfügbaren Dateifreigabevolumes anzeigen.  Wenn Sie einen ONTAP Cluster als Datenquelle zu Active IQ Unified Manager hinzugefügt haben, werden die Speicher-Workloads für diese Cluster automatisch zu Ihrer Unified Manager-Instanz hinzugefügt.  Diese API ruft die Dateifreigaben automatisch ab und wird manuell zu Ihrer Unified Manager-Instanz hinzugefügt.  Sie können die Details einer bestimmten Dateifreigabe anzeigen, indem Sie diese API mit dem Dateifreigabeschlüssel ausführen.
@@ -38,6 +39,7 @@ ERHALTEN
 |===
 
 
+[[add-file-shares]]
 == Dateifreigaben hinzufügen
 
 Mit der folgenden Methode können Sie CIFS- und NFS-Dateifreigaben in Ihrem SVM hinzufügen.  Sie müssen die Details der Dateifreigabe, die Sie erstellen möchten, als Eingabeparameter eingeben.  Sie können diese API nicht zum Hinzufügen von FlexGroup -Volumes verwenden.
@@ -64,6 +66,7 @@ Je nachdem, ob die Parameter der Zugriffskontrollliste (ACL) oder der Exportrich
 
 
 
+[[delete-file-shares]]
 == Dateifreigaben löschen
 
 Mit der folgenden Methode können Sie eine bestimmte Dateifreigabe löschen.  Sie müssen den Dateifreigabeschlüssel als Eingabeparameter eingeben, um eine bestimmte Dateifreigabe zu löschen.
@@ -83,6 +86,7 @@ LÖSCHEN
 |===
 
 
+[[modify-file-shares]]
 == Ändern von Dateifreigaben
 
 Mit der folgenden Methode können Sie eine Dateifreigabe ändern und ihre Eigenschaften aktualisieren.

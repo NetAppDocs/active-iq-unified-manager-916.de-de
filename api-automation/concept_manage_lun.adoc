@@ -17,6 +17,7 @@ Stellen Sie vor der Bereitstellung der LUNs sicher, dass die SVM mit den unterst
 
 
 
+[[view-luns]]
 == LUNs anzeigen
 
 Sie können die folgende Methode verwenden, um die LUNs in Ihrer Unified Manager-Umgebung anzuzeigen.  Wenn Sie einen ONTAP Cluster als Datenquelle zu Active IQ Unified Manager hinzugefügt haben, werden die Speicher-Workloads für diese Cluster automatisch zu Ihrer Unified Manager-Instanz hinzugefügt.  Diese API ruft alle LUNs ab, die Ihrer Unified Manager-Instanz automatisch und manuell hinzugefügt wurden.  Sie können die Details einer bestimmten LUN anzeigen, indem Sie diese API mit dem LUN-Schlüssel ausführen.
@@ -38,6 +39,7 @@ ERHALTEN
 |===
 
 
+[[add-luns]]
 == LUNs hinzufügen
 
 Sie können die folgende Methode verwenden, um Ihren SVMs LUNs hinzuzufügen.
@@ -62,6 +64,7 @@ Wenn Sie in Ihrer cURL-Anfrage einen Wert für den optionalen Parameter volume_n
 ====
 
 
+[[delete-luns]]
 == Löschen von LUNs
 
 Sie können die folgende Methode verwenden, um eine bestimmte LUN zu löschen.  Sie müssen den LUN-Schlüssel angeben, um eine bestimmte LUN zu löschen.
@@ -86,6 +89,7 @@ LÖSCHEN
 |===
 
 
+[[modify-luns]]
 == LUNs ändern
 
 Mit der folgenden Methode können Sie eine LUN ändern und ihre Eigenschaften aktualisieren.  Sie müssen den LUN-Schlüssel angeben, um eine bestimmte LUN zu ändern.  Sie müssen außerdem die LUN-Eigenschaft, die Sie aktualisieren möchten, zusammen mit ihrem Wert eingeben.  Zum Aktualisieren von LUN-Arrays mithilfe dieser API sollten Sie die Empfehlungen unter „Empfehlungen zur Verwendung der APIs“ lesen.

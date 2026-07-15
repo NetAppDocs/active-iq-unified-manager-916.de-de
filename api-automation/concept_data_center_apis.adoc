@@ -28,6 +28,7 @@ Die CURL-Befehle, Beispiele, Anfragen und Antworten an die APIs sind auf Ihrer S
 ====
 
 
+[[apis-for-storage-objects-in-your-data-center]]
 == APIs für Speicherobjekte in Ihrem Rechenzentrum
 
 [cols="3*"]
@@ -203,6 +204,7 @@ Wenn Sie die SLO-basierte Workloadbereitstellung in Ihrer Umgebung aktiviert hab
 
 
 
+[[apis-for-network-elements-in-your-data-center]]
 == APIs für Netzwerkelemente in Ihrem Rechenzentrum
 
 Die folgenden APIs in der Kategorie „Rechenzentrum“ rufen Informationen zu den Ports und Netzwerkschnittstellen in Ihrer Umgebung ab, insbesondere zu den FC-Ports, FC-Schnittstellen, Ethernet-Ports und IP-Schnittstellen.

@@ -15,6 +15,7 @@ Sie können die `jobs` API unter der `management-server` Kategorie, um die Ausf�
 
 
 
+[[view-jobs]]
 == Jobs anzeigen
 
 In Active IQ Unified Manager werden Vorgänge wie das Hinzufügen und Ändern von Ressourcen durch synchrone und asynchrone API-Aufrufe ausgeführt.  Aufrufe, die für die asynchrone Ausführung geplant sind, können durch ein für diesen Aufruf erstelltes Job-Objekt verfolgt werden.  Jedes Job-Objekt verfügt über einen eindeutigen Schlüssel zur Identifizierung.  Jedes Job-Objekt gibt die Job-Objekt-URI zurück, damit Sie auf den Job zugreifen und seinen Fortschritt verfolgen können.  Sie können diese API verwenden, um die Details jeder Ausführung abzurufen.
@@ -51,6 +52,7 @@ Gibt die Details des spezifischen Jobobjekts zurück.
 |===
 
 
+[[view-system-details]]
 == Systemdetails anzeigen
 
 Mithilfe der `/management-server/system` API können Sie die instanzspezifischen Details Ihrer Unified Manager-Umgebung abfragen.  Die API gibt Informationen zu den Produkten und Diensten zurück, beispielsweise die auf Ihrem System installierte Version von Unified Manager, UUID, Herstellername, Host-Betriebssystem sowie Name, Beschreibung und Status der auf der Unified Manager-Instanz ausgeführten Dienste.

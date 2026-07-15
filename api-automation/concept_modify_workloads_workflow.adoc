@@ -22,6 +22,7 @@ Der Workflow geht davon aus, dass die LUN oder Dateifreigabe mit Performance Ser
 ====
 
 
+[[modify-file-shares]]
 == Ändern von Dateifreigaben
 
 Beim Ändern einer Dateifreigabe können Sie die folgenden Parameter aktualisieren:
@@ -191,6 +192,7 @@ Sehen Sie sich die Details der Dateifreigabe in der Ausgabe an.
 
 
 
+[[update-luns]]
 == LUNs aktualisieren
 
 Beim Aktualisieren einer LUN können Sie die folgenden Parameter ändern:

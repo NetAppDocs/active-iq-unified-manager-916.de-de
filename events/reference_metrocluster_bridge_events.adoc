@@ -15,6 +15,7 @@ MetroCluster Bridge-Ereignisse liefern Ihnen Informationen zum Status der Bridge
 
 
 
+[[impact-area-availability]]
 == Wirkungsbereich: Verfügbarkeit
 
 |===

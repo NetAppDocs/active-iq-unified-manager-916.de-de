@@ -15,6 +15,7 @@ Sie können Performance-Service-Levels anzeigen, erstellen, ändern und löschen
 
 
 
+[[view-performance-service-levels]]
 == Leistungsservicelevel anzeigen
 
 Mit der folgenden Methode können Sie die Performance-Service-Levels anzeigen, um sie Speicher-Workloads zuzuweisen.  Die API listet alle systemdefinierten und benutzererstellten Performance Service Levels auf und ruft die Attribute aller Performance Service Levels ab.  Wenn Sie ein bestimmtes Performance Service Level abfragen möchten, müssen Sie die eindeutige ID des Performance Service Levels eingeben, um dessen Details abzurufen.
@@ -36,6 +37,7 @@ ERHALTEN
 |===
 
 
+[[add-performance-service-levels]]
 == Performance-Service-Levels hinzufügen
 
 Mit der folgenden Methode können Sie benutzerdefinierte Performance-Service-Levels erstellen und sie Ihren Speicher-Workloads zuweisen, wenn die systemdefinierten Performance-Service-Levels die erforderlichen Service Level Objectives (SLOs) für die Speicher-Workloads nicht erfüllen.  Geben Sie die Details für das Performance-Service-Level ein, das Sie erstellen möchten.  Stellen Sie bei den IOPS-Eigenschaften sicher, dass Sie einen gültigen Wertebereich eingeben.
@@ -55,6 +57,7 @@ POST
 |===
 
 
+[[delete-performance-service-levels]]
 == Leistungsservicelevel löschen
 
 Mit der folgenden Methode können Sie einen bestimmten Performance-Service-Level löschen.  Sie können einen Performance-Service-Level nicht löschen, wenn er einer Arbeitslast zugewiesen ist oder wenn es sich um den einzigen verfügbaren Performance-Service-Level handelt.  Sie müssen die eindeutige ID des Performance-Service-Levels als Eingabeparameter angeben, um ein bestimmtes Performance-Service-Level zu löschen.
@@ -74,6 +77,7 @@ LÖSCHEN
 |===
 
 
+[[modify-performance-service-levels]]
 == Leistungsservicelevel ändern
 
 Mit der folgenden Methode können Sie einen Performance-Service-Level ändern und seine Eigenschaften aktualisieren.  Sie können einen Performance-Service-Level, der systemdefiniert ist oder einer Arbeitslast zugewiesen ist, nicht ändern.  Sie müssen die eindeutige ID angeben, um ein bestimmtes Performance-Service-Level zu ändern.  Sie müssen außerdem die IOPS-Eigenschaft, die Sie aktualisieren möchten, zusammen mit einem gültigen Wert eingeben.
@@ -93,6 +97,7 @@ PATCH
 |===
 
 
+[[view-aggregate-capabilities-based-on-performance-service-levels]]
 == Anzeigen aggregierter Funktionen basierend auf Performance Service Levels
 
 Mit der folgenden Methode können Sie die aggregierten Funktionen basierend auf Performance-Service-Levels abfragen.  Diese API gibt die Liste der in Ihrem Rechenzentrum verfügbaren Aggregate zurück und gibt die Funktionen in Bezug auf die Leistungsservicelevel an, die in diesen Aggregaten unterstützt werden können.  Während Sie Workloads auf einem Volume bereitstellen, können Sie die Fähigkeit eines Aggregats zur Unterstützung eines bestimmten Performance Service Levels anzeigen und Workloads basierend auf dieser Fähigkeit bereitstellen.  Sie können das Aggregat nur angeben, wenn Sie eine Arbeitslast mithilfe von APIs bereitstellen.  Diese Funktion ist in der Unified Manager-Web-Benutzeroberfläche nicht verfügbar.

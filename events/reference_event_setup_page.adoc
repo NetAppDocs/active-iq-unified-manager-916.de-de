@@ -17,6 +17,7 @@ Sie können auf diese Seite nur zugreifen, wenn Sie über die Rolle „Anwendung
 
 
 
+[[command-buttons]]
 == Befehlsschaltflächen
 
 Mit den Befehlsschaltflächen können Sie für ausgewählte Ereignisse die folgenden Aufgaben ausführen:
@@ -41,6 +42,7 @@ Startet das Dialogfeld „EMS-Ereignisse abonnieren“, in dem Sie den Empfang b
 
 
 
+[[list-view]]
 == Listenansicht
 
 In der Listenansicht werden (in Tabellenform) Informationen zu deaktivierten Ereignissen angezeigt.  Mithilfe der Spaltenfilter können Sie die angezeigten Daten anpassen.

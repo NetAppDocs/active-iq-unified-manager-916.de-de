@@ -15,6 +15,7 @@ Auf der Seite „Aggregat-/Integritätsdetails“ können Sie ausführliche Info
 
 
 
+[[command-buttons]]
 == Befehlsschaltflächen
 
 [NOTE]
@@ -48,6 +49,7 @@ Ermöglicht Ihnen die Navigation zur Ansicht „Integrität: Alle Aggregate“.
 
 
 
+[[capacity-tab]]
 == Registerkarte „Kapazität“
 
 Auf der Registerkarte „Kapazität“ werden ausführliche Informationen zum ausgewählten Aggregat angezeigt, beispielsweise dessen Kapazität, Schwellenwerte und tägliche Wachstumsrate.
@@ -204,6 +206,7 @@ Sie können das Diagramm, das Sie anzeigen möchten, aus den Dropdown-Listen aus
 
 
 
+[[disk-information-tab]]
 == Registerkarte „Datenträgerinformationen“
 
 Zeigt detaillierte Informationen zu den Festplatten im ausgewählten Aggregat an, einschließlich RAID-Typ und -Größe sowie den Typ der im Aggregat verwendeten Festplatten.  Die Registerkarte zeigt auch grafisch die RAID-Gruppen und die verwendeten Festplattentypen (z. B. SAS, ATA, FCAL, SSD oder VMDISK) an.  Sie können weitere Informationen anzeigen, beispielsweise den Schacht, das Regal und die Rotationsgeschwindigkeit der Festplatte, indem Sie den Cursor über die Paritätsfestplatten und Datenfestplatten bewegen.
@@ -385,6 +388,7 @@ Zeigt den Namen der Cloud-Ebene an, wenn Sie ein FabricPool-fähiges Aggregat ko
 
 
 
+[[configuration-tab]]
 == Registerkarte „Konfiguration“
 
 Auf der Registerkarte „Konfiguration“ werden Details zum ausgewählten Aggregat angezeigt, z. B. Clusterknoten, Blocktyp, RAID-Typ, RAID-Größe und Anzahl der RAID-Gruppen:
@@ -456,6 +460,7 @@ Zeigt an, ob die SSL-Verschlüsselung für die Cloud-Ebene aktiviert ist.
 
 
 
+[[history-area]]
 == Geschichtsbereich
 
 Im Bereich „Verlauf“ werden Diagramme angezeigt, die Informationen zur Kapazität des ausgewählten Aggregats liefern.  Darüber hinaus können Sie auf die Schaltfläche *Exportieren* klicken, um einen Bericht im CSV-Format für das Diagramm zu erstellen, das Sie gerade anzeigen.
@@ -480,6 +485,7 @@ Zeigt den Trend der Nutzung der Gesamtkapazität basierend auf dem Nutzungsverla
 
 
 
+[[events-list]]
 == Ereignisliste
 
 In der Ereignisliste werden Details zu neuen und bestätigten Ereignissen angezeigt:
@@ -500,6 +506,7 @@ Zeigt die Zeit an, die seit der Generierung des Ereignisses vergangen ist.  Wenn
 
 
 
+[[related-devices-pane]]
 == Bereich „Verwandte Geräte“
 
 Im Bereich „Verwandte Geräte“ können Sie die Clusterknoten, Volumes und Datenträger anzeigen, die mit dem Aggregat in Zusammenhang stehen:
@@ -528,6 +535,7 @@ Zeigt die Anzahl der Festplatten im ausgewählten Aggregat an.
 
 
 
+[[related-alerts-pane]]
 == Bereich „Zugehörige Warnungen“
 
 Im Bereich „Verwandte Warnungen“ können Sie die Liste der Warnungen anzeigen, die für das ausgewählte Aggregat erstellt wurden.  Sie können auch eine Warnung hinzufügen, indem Sie auf den Link „Warnung hinzufügen“ klicken, oder eine vorhandene Warnung bearbeiten, indem Sie auf den Warnungsnamen klicken.

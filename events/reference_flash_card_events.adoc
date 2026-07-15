@@ -15,6 +15,7 @@ Flashkartenereignisse liefern Ihnen Informationen zum Status der auf den Knoten 
 
 
 
+[[impact-area-availability]]
 == Wirkungsbereich: Verfügbarkeit
 
 |===

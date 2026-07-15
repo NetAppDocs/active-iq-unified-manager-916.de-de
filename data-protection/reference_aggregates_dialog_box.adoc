@@ -15,6 +15,7 @@ Sie können das Dialogfeld „Aggregate“ verwenden, um die Aggregate auszuwäh
 
 
 
+[[command-buttons]]
 == Befehlsschaltflächen
 
 Mit den Befehlsschaltflächen können Sie die folgenden Aufgaben ausführen:
@@ -31,6 +32,7 @@ Verwirft die Änderungen und schließt das Dialogfeld „Aggregate“.
 
 
 
+[[aggregates-list]]
 == Aggregatliste
 
 Die Liste „Aggregate“ zeigt (in Tabellenform) die Namen und Eigenschaften der überwachten Aggregate an.

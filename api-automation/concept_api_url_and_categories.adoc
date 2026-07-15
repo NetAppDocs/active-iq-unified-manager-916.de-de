@@ -16,6 +16,7 @@ Mit den Active IQ Unified Manager -APIs können Sie Speicherobjekte in Ihrer Umg
 
 
 
+[[construct-a-url-to-directly-access-rest-apis]]
 == Erstellen Sie eine URL für den direkten Zugriff auf REST-APIs
 
 Sie können über eine Programmiersprache wie Python, C#, C{pp}, JavaScript usw. direkt auf die REST-APIs zugreifen.  Geben Sie den Hostnamen oder die IP-Adresse und die URL für den Zugriff auf die REST-APIs im Format
@@ -29,6 +30,7 @@ Der Standardport ist 443. Sie können den Port entsprechend den Anforderungen Ih
 ====
 
 
+[[access-the-online-api-documentation-page]]
 == Greifen Sie auf die Online-API-Dokumentationsseite zu
 
 Sie können auf die Referenzinhaltsseite „API-Dokumentation“ zugreifen, die zusammen mit dem Produkt geliefert wird, um die API-Dokumentation anzuzeigen und manuell einen API-Aufruf zu tätigen (auf der Schnittstelle, beispielsweise Swagger).  Sie können auf diese Dokumentation zugreifen, indem Sie auf die *Menüleiste* > *Hilfe-Schaltfläche* > *API-Dokumentation* klicken.
@@ -39,6 +41,7 @@ Alternativ geben Sie den Hostnamen oder die IP-Adresse und die URL für den Zugr
 
 
 
+[[categories]]
 == Kategorien
 
 Die API-Aufrufe sind funktional nach Bereichen oder Kategorien organisiert.  Um eine bestimmte API zu finden, klicken Sie auf die entsprechende API-Kategorie.

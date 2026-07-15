@@ -15,6 +15,7 @@ Die erforderlichen Ports und Protokolle ermöglichen die Kommunikation zwischen 
 
 
 
+[[connections-to-the-unified-manager-server]]
 == Verbindungen zum Unified Manager-Server
 
 Bei typischen Installationen müssen Sie beim Herstellen einer Verbindung mit der Unified Manager-Web-Benutzeroberfläche keine Portnummern angeben, da immer Standardports verwendet werden.  Da Unified Manager beispielsweise immer versucht, auf seinem Standardport zu laufen, können Sie Folgendes eingeben: `+https://<host>+` anstatt `+https://<host>:443+` .
@@ -153,6 +154,7 @@ Der Standardport für MySQL, 3306, ist bei der Installation von Unified Manager 
 ====
 
 
+[[connections-from-the-unified-manager-server]]
 == Verbindungen vom Unified Manager-Server
 
 Sie sollten Ihre Firewall so konfigurieren, dass Ports geöffnet werden, die die Kommunikation zwischen dem Unified Manager-Server und verwalteten Speichersystemen, Servern und anderen Komponenten ermöglichen.  Wenn ein Port nicht geöffnet ist, schlägt die Kommunikation fehl.

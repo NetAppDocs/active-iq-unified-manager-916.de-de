@@ -15,6 +15,7 @@ Ereignisse der Speicherfailover-Einstellungen (SFO) liefern Ihnen Informationen 
 
 
 
+[[impact-area-availability]]
 == Wirkungsbereich: Verfügbarkeit
 
 |===

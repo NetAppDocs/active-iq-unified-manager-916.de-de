@@ -15,6 +15,7 @@ Sie verwenden das Dialogfeld „Quell-Snapshot-Kopie auswählen“, um eine best
 
 
 
+[[default]]
 == Standard
 
 Ermöglicht Ihnen, das Standardverhalten auszuwählen, um zu bestimmen, welche Snapshot-Kopie zum Initialisieren, Aktualisieren und erneuten Synchronisieren von Übertragungen für SnapVault und SnapMirror -Beziehungen verwendet wird.
@@ -87,6 +88,7 @@ Erstellt eine neue Snapshot-Kopie und überträgt dann alle Snapshot-Kopien von 
 |===
 
 
+[[existing-snapshot-copy]]
 == Vorhandene Snapshot-Kopie
 
 Ermöglicht Ihnen, eine vorhandene Snapshot-Kopie aus der Liste auszuwählen, wenn die Auswahl einer Snapshot-Kopie für diesen Vorgang zulässig ist.
@@ -169,6 +171,7 @@ Die Auswahl der Quell-Snapshot-Kopie wird für Datensicherungsvolumes nicht unte
 |===
 
 
+[[command-buttons]]
 == Befehlsschaltflächen
 
 Mit den Befehlsschaltflächen können Sie die folgenden Aufgaben ausführen:

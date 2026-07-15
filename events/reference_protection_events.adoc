@@ -15,6 +15,7 @@ Schutzereignisse informieren Sie darüber, ob ein Job fehlgeschlagen ist oder ab
 
 
 
+[[impact-area-protection]]
 == Aufprallbereich: Schutz
 
 |===

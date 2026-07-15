@@ -15,6 +15,7 @@ Lüfterereignisse liefern Ihnen Informationen zum Status der Lüfter auf Knoten 
 
 
 
+[[impact-area-availability]]
 == Wirkungsbereich: Verfügbarkeit
 
 |===

@@ -23,6 +23,7 @@ Sie können den Speicherbedarf Ihrer Clusterobjekte auch anhand der in den Kapaz
 
 
 
+[[physical-and-logical-capacity]]
 == Körperliche und logische Leistungsfähigkeit
 
 Unified Manager nutzt die Konzepte des physischen und logischen Speicherplatzes, die für ONTAP Speicherobjekte verwendet werden.
@@ -33,6 +34,7 @@ Unified Manager nutzt die Konzepte des physischen und logischen Speicherplatzes,
 
 
 
+[[capacity-measurement-units]]
 == Kapazitätsmesseinheiten
 
 Unified Manager berechnet die Speicherkapazität basierend auf Binäreinheiten von 1024 (2^10^) Bytes.  In ONTAP 9.10.0 und früher wurden diese Einheiten als KB, MB, GB, TB und PB angezeigt.  Ab ONTAP 9.10.1 werden sie im Unified Manager als KiB, MiB, GiB, TiB und PiB angezeigt.

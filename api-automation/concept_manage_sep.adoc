@@ -25,6 +25,7 @@ Beachten Sie die folgenden Punkte:
 ====
 
 
+[[view-storage-efficiency-policies]]
 == Richtlinien zur Speichereffizienz anzeigen
 
 Mit der folgenden Methode können Sie die Speichereffizienzrichtlinien anzeigen, bevor Sie sie Speicher-Workloads zuweisen.  Diese API listet alle systemdefinierten und benutzererstellten Speichereffizienzrichtlinien auf und ruft die Attribute aller Speichereffizienzrichtlinien ab.  Wenn Sie eine bestimmte Speichereffizienzrichtlinie abfragen möchten, müssen Sie die eindeutige ID der Richtlinie eingeben, um ihre Details abzurufen.
@@ -46,6 +47,7 @@ ERHALTEN
 |===
 
 
+[[add-storage-efficiency-policies]]
 == Hinzufügen von Richtlinien zur Speichereffizienz
 
 Mit der folgenden Methode können Sie benutzerdefinierte Speichereffizienzrichtlinien erstellen und diese Ihren Speicher-Workloads zuweisen, wenn die systemdefinierten Richtlinien die Bereitstellungsanforderungen für Ihre Speicher-Workloads nicht erfüllen.  Geben Sie die Details der Speichereffizienzrichtlinie, die Sie erstellen möchten, als Eingabeparameter ein.
@@ -65,6 +67,7 @@ POST
 |===
 
 
+[[delete-storage-efficiency-policies]]
 == Richtlinien zur Speichereffizienz löschen
 
 Sie können die folgende Methode verwenden, um eine bestimmte Speichereffizienzrichtlinie zu löschen.  Sie können eine Speichereffizienzrichtlinie nicht löschen, wenn sie einer Arbeitslast zugewiesen ist oder wenn es sich um die einzige verfügbare Speichereffizienzrichtlinie handelt.  Sie müssen die eindeutige ID der Speichereffizienzrichtlinie als Eingabeparameter angeben, um eine bestimmte Speichereffizienzrichtlinie zu löschen.
@@ -84,6 +87,7 @@ LÖSCHEN
 |===
 
 
+[[modify-storage-efficiency-policies]]
 == Ändern Sie die Richtlinien zur Speichereffizienz
 
 Mit der folgenden Methode können Sie eine Speichereffizienzrichtlinie ändern und ihre Eigenschaften aktualisieren.  Sie können keine Speichereffizienzrichtlinie ändern, die systemdefiniert ist oder einer Arbeitslast zugewiesen ist.  Sie müssen die eindeutige ID der Speichereffizienzrichtlinie angeben, um eine bestimmte Speichereffizienzrichtlinie zu ändern.  Darüber hinaus müssen Sie die Eigenschaft, die Sie aktualisieren möchten, zusammen mit ihrem Wert angeben.

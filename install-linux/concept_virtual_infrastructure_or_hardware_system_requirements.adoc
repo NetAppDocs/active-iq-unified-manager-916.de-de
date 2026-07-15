@@ -60,24 +60,27 @@ Unified Manager kann auf Systemen mit wenig Arbeitsspeicher installiert werden, 
 
 Darüber hinaus gibt es eine Begrenzung für die Anzahl der Knoten, die eine einzelne Instanz von Unified Manager überwachen kann, bevor Sie eine zweite Instanz von Unified Manager installieren.  Weitere Informationen finden Sie im _Best Practices Guide_.
 
-https://www.netapp.com/pdf.html?item=/media/13504-tr4621pdf.pdf["Technischer Bericht 4621: Leitfaden zu Best Practices für Unified Manager"^]
+https://www.netapp.com/pdf.html?item=/media/13504-tr4621.pdf["Technischer Bericht 4621: Leitfaden zu Best Practices für Unified Manager"^]
 
 Das Auslagern von Speicherseiten wirkt sich negativ auf die Leistung des Systems und der Verwaltungsanwendung aus.  Der Wettbewerb um CPU-Ressourcen, die aufgrund der Gesamtauslastung des Hosts nicht verfügbar sind, kann die Leistung beeinträchtigen.
 
 
 
+[[requirement-for-dedicated-use]]
 == Voraussetzung für die dedizierte Nutzung
 
 Das physische oder virtuelle System, auf dem Sie Unified Manager installieren, sollte ausschließlich für Unified Manager verwendet und nicht mit anderen Anwendungen geteilt werden.  Andere Anwendungen verbrauchen möglicherweise Systemressourcen und können die Leistung von Unified Manager drastisch reduzieren.
 
 
 
+[[space-requirements-for-backups]]
 == Speicherplatzbedarf für Backups
 
 Wenn Sie die Sicherungs- und Wiederherstellungsfunktion von Unified Manager verwenden möchten, weisen Sie zusätzliche Kapazität zu, sodass das Verzeichnis oder die Festplatte „`data`“ über 150 GB Speicherplatz verfügt.  Eine Sicherung kann an ein lokales oder ein Remote-Ziel geschrieben werden.  Die beste Vorgehensweise besteht darin, einen Remote-Standort außerhalb des Unified Manager-Hostsystems zu identifizieren, der über mindestens 150 GB Speicherplatz verfügt.
 
 
 
+[[requirements-for-host-connectivity]]
 == Anforderungen für die Hostkonnektivität
 
 Das physische oder virtuelle System, auf dem Sie Unified Manager installieren, sollte so konfiguriert sein, dass Sie erfolgreich `ping` der Hostname vom Host selbst.  Bei einer IPv6-Konfiguration sollten Sie überprüfen, ob `ping6` zum Hostnamen erfolgreich ist, um sicherzustellen, dass die Installation von Unified Manager erfolgreich ist.

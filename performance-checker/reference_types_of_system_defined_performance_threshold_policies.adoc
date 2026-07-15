@@ -22,6 +22,7 @@ Wenn Sie unnötige Ereignisse von systemdefinierten Richtlinien für Leistungssc
 
 
 
+[[cluster-threshold-policies]]
 == Cluster-Schwellenwertrichtlinien
 
 Die systemdefinierten Richtlinien für Cluster-Leistungsschwellenwerte werden standardmäßig jedem Cluster zugewiesen, der von Unified Manager überwacht wird:
@@ -44,6 +45,7 @@ Dies geschieht durch Vergleichen des verwendeten Kapazitätswerts für alle Aggr
 
 
 
+[[node-threshold-policies]]
 == Knotenschwellenwertrichtlinien
 
 Die systemdefinierten Richtlinien für Knotenleistungsschwellenwerte werden standardmäßig jedem Knoten in den Clustern zugewiesen, die von Unified Manager überwacht werden:
@@ -79,6 +81,7 @@ Die Richtlinie „Knoten-Festplattenfragmentierung“ analysiert nur HDD-Aggrega
 
 
 
+[[aggregate-threshold-policies]]
 == Richtlinien für aggregierte Schwellenwerte
 
 Die systemdefinierte Richtlinie für aggregierte Leistungsschwellenwerte wird standardmäßig jedem Aggregat in den von Unified Manager überwachten Clustern zugewiesen:
@@ -105,6 +108,7 @@ Die Richtlinie „Aggregate disks over-utilized“ analysiert reine HDD-Aggregat
 ====
 
 
+[[workload-latency-threshold-policies]]
 == Richtlinien für Workload-Latenzschwellenwerte
 
 Die systemdefinierten Richtlinien für die Schwellenwerte für die Arbeitslastlatenz werden jeder Arbeitslast zugewiesen, für die eine konfigurierte Leistungsservicelevelrichtlinie mit einem definierten Wert für die „erwartete Latenz“ vorliegt:
@@ -120,6 +124,7 @@ Dies geschieht durch die Suche nach Arbeitslasten, die in der letzten Stunde 30 
 
 
 
+[[qos-threshold-policies]]
 == QoS-Schwellenwertrichtlinien
 
 Die systemdefinierten QoS-Leistungsschwellenwertrichtlinien werden allen Workloads zugewiesen, für die eine ONTAP QoS-Richtlinie für den maximalen Durchsatz (IOPS, IOPS/TB oder MB/s) konfiguriert ist.  Unified Manager löst ein Ereignis aus, wenn der Workload-Durchsatzwert 15 % unter dem konfigurierten QoS-Wert liegt:

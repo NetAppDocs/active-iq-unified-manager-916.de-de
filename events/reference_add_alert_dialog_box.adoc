@@ -17,6 +17,7 @@ Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradmini
 
 
 
+[[name]]
 == Name
 
 In diesem Bereich können Sie einen Namen und eine Beschreibung für die Warnung angeben:
@@ -33,6 +34,7 @@ Ermöglicht Ihnen, eine Beschreibung für die Warnung anzugeben.
 
 
 
+[[resources]]
 == Ressourcen
 
 In diesem Bereich können Sie eine einzelne Ressource auswählen oder die Ressourcen basierend auf einer dynamischen Regel gruppieren, für die Sie den Alarm auslösen möchten.  Eine _dynamische Regel_ ist der Satz von Ressourcen, der basierend auf der von Ihnen angegebenen Textzeichenfolge gefiltert wird.  Sie können nach Ressourcen suchen, indem Sie einen Ressourcentyp aus der Dropdown-Liste auswählen, oder Sie können den genauen Ressourcennamen angeben, um eine bestimmte Ressource anzuzeigen.
@@ -57,6 +59,7 @@ Wenn eine Ressource sowohl den von Ihnen angegebenen Einschluss- als auch Aussch
 
 
 
+[[events]]
 == Veranstaltungen
 
 In diesem Bereich können Sie die Ereignisse auswählen, für die Sie Benachrichtigungen erstellen möchten.  Sie können Warnungen für Ereignisse basierend auf einem bestimmten Schweregrad oder für eine Reihe von Ereignissen erstellen.
@@ -75,6 +78,7 @@ Ermöglicht Ihnen die Auswahl von Ereignissen, deren Name bestimmte Zeichen enth
 
 
 
+[[actions]]
 == Aktionen
 
 In diesem Bereich können Sie die Benutzer angeben, die Sie benachrichtigen möchten, wenn ein Alarm ausgelöst wird.  Sie können auch die Benachrichtigungsmethode und die Benachrichtigungshäufigkeit angeben.
@@ -117,6 +121,7 @@ Wenn diese Funktion in der Benutzeroberfläche nicht verfügbar ist, liegt das d
 
 
 
+[[command-buttons]]
 == Befehlsschaltflächen
 
 * *Speichern*

@@ -55,6 +55,7 @@ Sie können Benutzer auch über SNMP-Traps benachrichtigen.
 
 
 
+[[example-of-adding-an-alert]]
 == Beispiel für das Hinzufügen einer Warnung
 
 Dieses Beispiel zeigt, wie Sie eine Warnung erstellen, die die folgenden Anforderungen erfüllt:

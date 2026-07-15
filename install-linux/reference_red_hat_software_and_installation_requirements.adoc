@@ -15,6 +15,7 @@ Das Linux-System, auf dem Sie Unified Manager installieren, erfordert bestimmte 
 
 
 
+[[operating-system-software]]
 == Betriebssystemsoftware
 
 Auf dem Linux-System müssen die folgenden Versionen des Betriebssystems und der unterstützenden Software installiert sein:
@@ -33,6 +34,7 @@ NOTE: Schwachstellenscanner (wie Qualys) können zu einer hohen CPU-Auslastung f
 
 
 
+[[third-party-software]]
 == Software von Drittanbietern
 
 Unified Manager wird auf einem WildFly-Webserver bereitgestellt.  WildFly 26.1.3 ist mit Unified Manager gebündelt und konfiguriert.
@@ -52,6 +54,7 @@ Sie müssen eine laufende Instanz von Unified Manager herunterfahren, bevor Sie 
 ====
 
 
+[[user-authorization-requirements]]
 == Anforderungen an die Benutzerautorisierung
 
 Die Installation von Unified Manager auf einem Linux-System kann vom Root-Benutzer oder von Nicht-Root-Benutzern mithilfe des `sudo` Befehl.
@@ -60,6 +63,7 @@ Darüber hinaus enthält die Standardinstallation von Unified Manager den Benutz
 
 
 
+[[installation-requirements]]
 == Installationsvoraussetzungen
 
 Nachfolgend sind die Best Practices für die Installation von Red Hat Enterprise Linux und den zugehörigen Repositories auf Ihrem System aufgeführt.  Bei Systemen, die anders installiert oder konfiguriert sind oder außerhalb des Unternehmens (in der Cloud) bereitgestellt werden, sind möglicherweise zusätzliche Schritte erforderlich, und Unified Manager wird bei solchen Bereitstellungen möglicherweise nicht ordnungsgemäß ausgeführt.
@@ -96,6 +100,7 @@ Sie dürfen die erforderliche Drittanbietersoftware nicht aus anderen als den hi
 ====
 
 
+[[port-443-requirement]]
 == Port 443-Anforderung
 
 Generische Images von Red Hat Enterprise Linux blockieren möglicherweise den externen Zugriff auf Port 443.  Aufgrund dieser Einschränkung können Sie nach der Installation von Unified Manager möglicherweise keine Verbindung zur Administrator-Web-Benutzeroberfläche herstellen.  Durch Ausführen des folgenden Befehls wird allen externen Benutzern und Anwendungen auf einem generischen Red Hat Enterprise Linux der Zugriff auf Port 443 ermöglicht.

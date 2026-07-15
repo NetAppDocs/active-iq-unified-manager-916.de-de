@@ -21,6 +21,7 @@ Sie können Active IQ Unified Manager (Unified Manager) verwenden, um die Betrie
 
 
 
+[[determine-cluster-health-in-metrocluster-over-fc-configuration]]
 == Bestimmen Sie die Clusterintegrität in der MetroCluster -über-FC-Konfiguration
 
 Befolgen Sie diese Schritte, um die Clusterintegrität in einer MetroCluster über-FC-Konfiguration zu bestimmen.
@@ -59,6 +60,7 @@ Wenn in diesem Beispiel das NVRAM -Symbol auf dem lokalen oder Partnercluster ge
 
 
 
+[[determine-cluster-health-in-metrocluster-over-ip-configuration]]
 == Bestimmen Sie die Clusterintegrität in der MetroCluster over IP-Konfiguration
 
 Befolgen Sie diese Schritte, um die Clusterintegrität in einer MetroCluster over-IP-Konfiguration zu bestimmen.

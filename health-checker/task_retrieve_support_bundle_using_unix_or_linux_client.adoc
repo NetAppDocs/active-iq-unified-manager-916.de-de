@@ -49,6 +49,7 @@ Der Name des Support-Pakets wird Ihnen mitgeteilt, wenn Sie es mithilfe der Wart
 
 
 
+[[examples]]
 == Beispiele
 
 Im folgenden Beispiel wird SCP zum Abrufen des Support-Pakets verwendet:

@@ -15,6 +15,7 @@ Auf der Seite „Auftragsdetails“ können Sie den Status und andere Informatio
 
 
 
+[[job-summary]]
 == Jobübersicht
 
 In der Auftragszusammenfassung werden die folgenden Informationen angezeigt:
@@ -29,6 +30,7 @@ In der Auftragszusammenfassung werden die folgenden Informationen angezeigt:
 
 
 
+[[command-buttons]]
 == Befehlsschaltflächen
 
 Mit den Befehlsschaltflächen können Sie die folgenden Aufgaben ausführen:
@@ -45,6 +47,7 @@ Bringt Sie zurück zur Seite „Jobs“.
 
 
 
+[[job-tasks-list]]
 == Liste der Arbeitsaufgaben
 
 Die Job-Aufgabenliste zeigt in einer Tabelle alle Aufgaben an, die mit einem bestimmten Job verknüpft sind, sowie die Eigenschaften jeder Aufgabe.

@@ -17,6 +17,7 @@ Die Arbeitsabläufe beschreiben einige der häufig verwendeten Anwendungsfälle 
 
 
 
+[[understand-the-api-calls-used-in-the-workflows]]
 == Verstehen Sie die in den Workflows verwendeten API-Aufrufe
 
 Sie können die Online-Dokumentationsseite Ihrer Unified Manager-Instanz anzeigen, die die Details jedes REST-API-Aufrufs enthält.  Dieses Dokument wiederholt nicht die Details der Online-Dokumentation.  Jeder in den Workflow-Beispielen in diesem Dokument verwendete API-Aufruf enthält nur die Informationen, die Sie benötigen, um den Aufruf auf der Dokumentationsseite zu finden. Nachdem Sie einen bestimmten API-Aufruf gefunden haben, können Sie die vollständigen Details des Aufrufs überprüfen, einschließlich der Eingabeparameter, Ausgabeformate, HTTP-Statuscodes und des Anfrageverarbeitungstyps.

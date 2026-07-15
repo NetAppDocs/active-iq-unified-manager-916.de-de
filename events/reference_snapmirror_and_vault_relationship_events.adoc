@@ -15,6 +15,7 @@ Ereignisse für asynchrone Mirror- und Vault-Beziehungen liefern Ihnen Informati
 
 
 
+[[impact-area-protection]]
 == Aufprallbereich: Schutz
 
 [NOTE]

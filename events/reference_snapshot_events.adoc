@@ -15,6 +15,7 @@ Snapshot-Ereignisse liefern Informationen zum Status von Snapshots, sodass Sie d
 
 
 
+[[impact-area-availability]]
 == Wirkungsbereich: Verfügbarkeit
 
 |===

@@ -21,6 +21,7 @@ Während der Mittagspause zwischen 12:00 und 13:00 Uhr und am Ende des Arbeitsta
 
 
 
+[[how-the-latency-forecast-is-formed]]
 == Wie die Latenzprognose erstellt wird
 
 Unified Manager muss mindestens 3 Tage Workload-Aktivität erfassen, bevor er mit der Analyse beginnen kann und bevor die Latenzprognose für die E/A-Reaktionszeit in der GUI angezeigt werden kann.  Die erforderliche Mindestdatenerfassung berücksichtigt nicht alle Änderungen, die durch die Arbeitslastaktivität entstehen.  Nach der Erfassung der Aktivitäten der ersten drei Tage passt Unified Manager die Latenzprognose alle 24 Stunden um 0:00 Uhr an, um Änderungen der Arbeitslastaktivität widerzuspiegeln und einen genaueren dynamischen Leistungsschwellenwert festzulegen.

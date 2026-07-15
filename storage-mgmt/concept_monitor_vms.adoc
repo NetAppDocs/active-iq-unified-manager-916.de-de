@@ -26,6 +26,7 @@ Sie können den E/A-Pfad und die Latenzen auf Komponentenebene aus topologischer
 
 
 
+[[view-summary-topology]]
 == Anzeigen der Übersichtstopologie
 
 So ermitteln Sie Leistungsprobleme, indem Sie die VMs in einer Übersichtstopologie anzeigen:
@@ -53,6 +54,7 @@ vCenter Server erlauben Sonderzeichen (wie %, &, *, $, #, @, !, \, /, :, *, ?, "
 
 
 
+[[view-expanded-topology]]
 == Erweiterte Topologie anzeigen
 
 Sie können zu jeder Komponente einzeln einen Drilldown durchführen, indem Sie die erweiterte Topologie der VM anzeigen.

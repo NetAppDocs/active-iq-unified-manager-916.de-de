@@ -20,6 +20,7 @@ Weitere Informationen zu den verschiedenen Anti-Ransomware-Status finden Sie unt
 
 
 
+[[view-security-details-of-all-volumes-with-anti-ransomware-detection]]
 == Zeigen Sie Sicherheitsdetails aller Volumes mit Anti-Ransomware-Erkennung an
 
 .Schritte
@@ -33,6 +34,7 @@ NOTE: Anti-Ransomware wird nicht für Offline-Volumes, eingeschränkte Volumes, 
 
 
 
+[[view-security-details-of-all-storage-vms-with-anti-ransomware-detection]]
 == Sicherheitsdetails aller Storage-VMs mit Anti-Ransomware-Erkennung anzeigen
 
 .Schritte

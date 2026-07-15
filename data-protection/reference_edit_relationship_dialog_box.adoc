@@ -15,6 +15,7 @@ Sie können eine vorhandene Schutzbeziehung bearbeiten, um die maximale Übertra
 
 
 
+[[destination-information]]
 == Zielinformationen
 
 * *Zielcluster*
@@ -56,6 +57,7 @@ Gibt die ONTAP SnapMirror -Richtlinie für die Beziehung an.  Zu den verfügbare
 
 
 
+[[command-buttons]]
 == Befehlsschaltflächen
 
 Mit den Befehlsschaltflächen können Sie die folgenden Aufgaben ausführen:

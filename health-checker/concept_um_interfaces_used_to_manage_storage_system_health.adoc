@@ -17,6 +17,7 @@ Wenn Sie die Schutzfunktionen in Unified Manager verwenden möchten, müssen Sie
 
 
 
+[[unified-manager-web-ui]]
 == Unified Manager-Web-Benutzeroberfläche
 
 Über die Web-Benutzeroberfläche von Unified Manager kann ein Administrator Clusterprobleme im Zusammenhang mit der Datenspeicherkapazität, -verfügbarkeit und -sicherheit überwachen und beheben.
@@ -25,6 +26,7 @@ In diesen Abschnitten werden einige allgemeine Arbeitsabläufe beschrieben, die 
 
 
 
+[[maintenance-console]]
 == Wartungskonsole
 
 Mit der Wartungskonsole von Unified Manager kann ein Administrator Betriebssystemprobleme, Probleme bei Versionsaktualisierungen, Probleme beim Benutzerzugriff und Netzwerkprobleme im Zusammenhang mit dem Unified Manager-Server selbst überwachen, diagnostizieren und beheben.  Wenn die Web-Benutzeroberfläche von Unified Manager nicht verfügbar ist, ist die Wartungskonsole die einzige Möglichkeit, auf Unified Manager zuzugreifen.

@@ -70,6 +70,7 @@ Der `OPTIONS` Methode ermittelt, ob eine Ressource verfügbar ist.  Mit diesem V
 |===
 
 
+[[understand-the-api-gateway-tunneling]]
 == Verstehen Sie das API Gateway-Tunneling
 
 Mit den Gateway-APIs können Sie ONTAP Objekte über Unified Manager verwalten.  Unified Manager verwaltet die Cluster und Authentifizierungsdetails und leitet die Anfragen an den ONTAP REST-Endpunkt weiter.  Die Gateway-API transformiert die URL und Hypermedia als Engine of Application State (HATEOAS)-Links im Header und Antworttext mit der Basis-URL des API-Gateways.  Die Gateway-API fungiert als Proxy-Basis-URL, an die Sie die ONTAP REST-URL anhängen und den erforderlichen ONTAP REST-Endpunkt ausführen.
@@ -102,6 +103,7 @@ Die API gibt die Liste der Speichervolumes in diesem Cluster zurück.  Das Antwo
 
 
 
+[[set-api-scope]]
 == API-Bereich festlegen
 
 Für alle APIs ist ein Kontext innerhalb des Clusterbereichs festgelegt.  APIs, die auf Basis von Storage-VMs arbeiten, haben ebenfalls den Cluster als Geltungsbereich, d. h. die API-Operationen werden auf einer bestimmten Storage-VM innerhalb eines verwalteten Clusters ausgeführt.  Wenn Sie das `/gateways/\{uuid}/\{path}` API: Stellen Sie sicher, dass Sie die Cluster-UUID (Unified Manager-Datenquellen-UUID) für den Cluster eingeben, auf dem Sie den Vorgang ausführen.  Um den Kontext auf eine bestimmte Speicher-VM innerhalb dieses Clusters festzulegen, geben Sie den Speicher-VM-Schlüssel als Parameter X-Dot-SVM-UUID oder den Speicher-VM-Namen als Parameter X-Dot-SVM-Name ein.  Der Parameter wird als Filter im String-Header hinzugefügt und der Vorgang wird im Rahmen dieser Speicher-VM innerhalb dieses Clusters ausgeführt.

@@ -15,6 +15,7 @@ Durch Speicherregalereignisse werden Sie über ungewöhnliche Zustände Ihres Sp
 
 
 
+[[impact-area-availability]]
 == Wirkungsbereich: Verfügbarkeit
 
 |===

@@ -15,6 +15,7 @@ Benutzer- und Gruppenkontingentereignisse liefern Ihnen Informationen zur Kapazi
 
 
 
+[[impact-area-capacity]]
 == Wirkungsbereich: Kapazität
 
 |===

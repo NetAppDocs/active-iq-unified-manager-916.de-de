@@ -22,6 +22,7 @@ Eine Gruppenregel ist ein Kriterium, das Sie definieren, um die Aufnahme von Spe
 
 
 
+[[conditions]]
 == Bedingungen
 
 Sie können mehrere Bedingungsgruppen erstellen und jede Bedingungsgruppe kann eine oder mehrere Bedingungen haben.  Sie können alle definierten Bedingungsgruppen in einer Gruppenregel für Gruppen anwenden, um festzulegen, welche Speicherobjekte in die Gruppe aufgenommen werden.
@@ -93,6 +94,7 @@ Das Wertefeld ändert sich je nach ausgewähltem Operanden.
 
 
 
+[[example-of-a-group-rule-with-conditions]]
 == Beispiel einer Gruppenregel mit Bedingungen
 
 Betrachten Sie eine Bedingungsgruppe für ein Volume mit den folgenden zwei Bedingungen:
@@ -105,12 +107,14 @@ Diese Bedingungsgruppe wählt alle Volumes aus, deren Namen „`vol`“ enthalte
 
 
 
+[[condition-groups]]
 == Bedingungsgruppen
 
 Bedingungsgruppen werden mithilfe eines logischen ODER ausgeführt und dann auf Speicherobjekte angewendet.  Um in eine Gruppe aufgenommen zu werden, müssen die Speicherobjekte eine der Bedingungsgruppen erfüllen.  Die Lagerobjekte aller Konditionsgruppen werden zusammengefasst.  Mithilfe von Bedingungsgruppen können Sie den Umfang der in eine Gruppe aufzunehmenden Speicherobjekte erweitern.
 
 
 
+[[example-of-a-group-rule-with-condition-groups]]
 == Beispiel einer Gruppenregel mit Bedingungsgruppen
 
 Betrachten Sie zwei Bedingungsgruppen für ein Volume, wobei jede Gruppe die folgenden zwei Bedingungen enthält:

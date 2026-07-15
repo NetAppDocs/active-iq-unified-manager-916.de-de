@@ -22,6 +22,7 @@ Eine Annotationsregel ist ein von Ihnen definiertes Kriterium zum Annotieren von
 
 
 
+[[conditions]]
 == Bedingungen
 
 Sie können mehrere Bedingungsgruppen erstellen und jede Bedingungsgruppe kann eine oder mehrere Bedingungen haben.  Sie können alle definierten Bedingungsgruppen in einer Annotationsregel einer Annotation anwenden, um Speicherobjekte zu annotieren.
@@ -72,6 +73,7 @@ Wenn Sie eine Annotation als Operand für ein beliebiges Speicherobjekt auswähl
 
 
 
+[[example-of-an-annotation-rule-with-conditions]]
 == Beispiel einer Annotationsregel mit Bedingungen
 
 Betrachten Sie eine Anmerkungsregel mit einer Bedingungsgruppe für ein Volume mit den folgenden zwei Bedingungen:
@@ -84,12 +86,14 @@ Diese Annotationsregel versieht alle Volumes, deren Namen „`vol`“ enthalten 
 
 
 
+[[condition-groups]]
 == Bedingungsgruppen
 
 Bedingungsgruppen werden mithilfe eines logischen ODER ausgeführt und dann auf Speicherobjekte angewendet.  Um annotiert zu werden, müssen die Speicherobjekte die Anforderungen einer der Bedingungsgruppen erfüllen.  Die Speicherobjekte, die die Bedingungen aller Bedingungsgruppen erfüllen, werden annotiert.  Mithilfe von Bedingungsgruppen können Sie den Umfang der zu annotierenden Speicherobjekte erweitern.
 
 
 
+[[example-of-an-annotation-rule-with-condition-groups]]
 == Beispiel einer Annotationsregel mit Bedingungsgruppen
 
 Betrachten Sie eine Anmerkungsregel mit zwei Bedingungsgruppen für ein Volume. Jede Gruppe enthält die folgenden zwei Bedingungen:

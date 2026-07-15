@@ -15,6 +15,7 @@ Ereignisse der Verwaltungsstation liefern Ihnen Informationen zum Status des Ser
 
 
 
+[[impact-area-configuration]]
 == Wirkungsbereich: Konfiguration
 
 |===
@@ -154,6 +155,7 @@ Warnung
 |===
 
 
+[[impact-area-performance]]
 == Wirkungsbereich: Leistung
 
 |===

@@ -15,12 +15,14 @@ Auf der Seite „Regeln zum Generieren von E-Mail-Adressen mit Benutzer- und Gru
 
 
 
+[[rules-area]]
 == Regelbereich
 
 Sie müssen die Regeln für eine Kontingent-E-Mail-Adresse definieren.  Sie können auch Kommentare hinzufügen, um die Regeln zu erläutern.
 
 
 
+[[how-you-define-rules]]
 == So definieren Sie Regeln
 
 Sie müssen die Regeln in der Reihenfolge eingeben, in der Sie sie ausführen möchten.  Wenn das Kriterium der ersten Regel erfüllt ist, wird die E-Mail-Adresse basierend auf dieser Regel generiert.  Wenn das Kriterium nicht erfüllt ist, wird das Kriterium für die nächste Regel berücksichtigt und so weiter.  Jede Zeile listet eine separate Regel auf.  Die Standardregel ist die letzte Regel in der Liste.  Sie können die Prioritätsreihenfolge der Regeln ändern.  Sie können die Reihenfolge der Standardregel jedoch nicht ändern.
@@ -39,12 +41,14 @@ Wenn mehrere Benutzer über dasselbe Kontingent verfügen, werden die Namen der 
 
 
 
+[[how-you-add-comments]]
 == So fügen Sie Kommentare hinzu
 
 Sie können Kommentare hinzufügen, um die Regeln zu erläutern.  Sie sollten am Anfang jedes Kommentars # verwenden und jede Zeile einen separaten Kommentar auflisten.
 
 
 
+[[rules-syntax]]
 == Regelsyntax
 
 Die Syntax der Regel muss eine der folgenden sein:
@@ -61,6 +65,7 @@ if ist ein Schlüsselwort und wird in Kleinbuchstaben geschrieben.  Der Operator
 
 
 
+[[command-buttons]]
 == Befehlsschaltflächen
 
 Mit den Befehlsschaltflächen können Sie die erstellten Regeln speichern, bestätigen oder abbrechen:

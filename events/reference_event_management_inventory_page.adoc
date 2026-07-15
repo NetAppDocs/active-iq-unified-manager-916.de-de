@@ -17,6 +17,7 @@ Die Informationen auf dieser Seite werden alle 5 Minuten automatisch aktualisier
 
 
 
+[[filter-components]]
 == Filterkomponenten
 
 Ermöglicht Ihnen, die in der Ereignisliste angezeigten Informationen anzupassen.  Sie können die Liste der angezeigten Ereignisse mithilfe der folgenden Komponenten verfeinern:
@@ -31,6 +32,7 @@ Dazu gehören Elemente wie alle aktiven (neuen und bestätigten) Ereignisse, akt
 
 
 
+[[command-buttons]]
 == Befehlsschaltflächen
 
 Mit den Befehlsschaltflächen können Sie die folgenden Aufgaben ausführen:
@@ -86,6 +88,7 @@ Ermöglicht Ihnen, die auf der Seite anzuzeigenden Spalten auszuwählen und die 
 
 
 
+[[events-list]]
 == Ereignisliste
 
 Zeigt Details aller Ereignisse sortiert nach Auslösezeit an.

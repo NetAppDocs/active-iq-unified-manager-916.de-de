@@ -15,6 +15,7 @@ summary: Über das Dialogfeld „Initialisieren/Aktualisieren“ können Sie ein
 
 
 
+[[transfer-options-tab]]
 == Registerkarte „Übertragungsoptionen“
 
 Auf der Registerkarte „Übertragungsoptionen“ können Sie die Initialisierungspriorität einer Übertragung und die während der Übertragungen verwendete Bandbreite ändern.
@@ -46,6 +47,7 @@ Wenn diese Option ausgewählt ist, wird die Netzwerkbandbreite auf den von Ihnen
 
 
 
+[[source-snapshot-copies-tab]]
 == Registerkarte „Quell-Snapshot-Kopien“
 
 Auf der Registerkarte „Quell-Snapshot-Kopien“ werden die folgenden Informationen zur Quell-Snapshot-Kopie angezeigt, die für die Baseline-Übertragung verwendet wird:
@@ -70,6 +72,7 @@ Zeigt die Snapshot-Kopie an, die für die Datenübertragung verwendet wird.  Wen
 
 
 
+[[command-buttons]]
 == Befehlsschaltflächen
 
 Mit den Befehlsschaltflächen können Sie die folgenden Aufgaben ausführen:

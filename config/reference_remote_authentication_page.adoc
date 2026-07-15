@@ -134,6 +134,7 @@ Wenn Sie den Authentifizierungsdienst ändern möchten, stellen Sie sicher, dass
 
 
 
+[[authentication-servers-area]]
 == Bereich „Authentifizierungsserver“
 
 Im Bereich „Authentifizierungsserver“ werden die Authentifizierungsserver angezeigt, mit denen der Verwaltungsserver kommuniziert, um Remotebenutzer zu finden und zu authentifizieren.  Die Anmeldeinformationen für Remotebenutzer oder -gruppen werden vom Authentifizierungsserver verwaltet.

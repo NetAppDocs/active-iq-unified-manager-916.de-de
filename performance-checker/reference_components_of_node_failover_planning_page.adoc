@@ -15,6 +15,7 @@ Die Komponenten der Seite „Leistung/Knoten-Failover-Planung“ werden in einem
 
 
 
+[[performance-statistics-grid]]
 == Leistungsstatistikraster
 
 Auf der Seite „Leistung/Knoten-Failover-Planung“ wird ein Raster mit Statistiken zu Latenz, IOPS, Auslastung und verwendeter Leistungskapazität angezeigt.
@@ -49,6 +50,7 @@ Sie können auf den Namen des Partnerknotens klicken, wenn dieser zum Stammobjek
 
 
 
+[[comparing-pane]]
 == Vergleichsbereich
 
 Die folgende Liste beschreibt die Komponenten, die standardmäßig im Vergleichsbereich angezeigt werden:

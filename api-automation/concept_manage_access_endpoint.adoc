@@ -15,6 +15,7 @@ Sie müssen Zugriffsendpunkte oder logische Schnittstellen (LIFs) erstellen, die
 
 
 
+[[view-access-endpoints]]
 == Zugriffsendpunkte anzeigen
 
 Sie können eine Liste der Zugriffsendpunkte in Ihrer Unified Manager-Umgebung mithilfe der folgenden Methode anzeigen.  Um eine Liste der Zugriffsendpunkte einer bestimmten SVM, LUN oder Dateifreigabe abzufragen, müssen Sie die eindeutige Kennung für die SVM, LUN oder Dateifreigabe eingeben.  Sie können auch den eindeutigen Zugriffsendpunktschlüssel eingeben, um die Details des jeweiligen Zugriffsendpunkts abzurufen.
@@ -36,6 +37,7 @@ ERHALTEN
 |===
 
 
+[[add-access-endpoints]]
 == Hinzufügen von Zugriffsendpunkten
 
 Sie können benutzerdefinierte Zugriffsendpunkte erstellen und ihnen die erforderlichen Eigenschaften zuweisen.  Sie müssen die Details des Zugriffsendpunkts, den Sie erstellen möchten, als Eingabeparameter eingeben.  Sie können diese API oder den System Manager oder die ONTAP CLI verwenden, um auf jedem Knoten einen Zugriffsendpunkt zu erstellen.  Für die Erstellung von Zugriffsendpunkten werden sowohl IPv4- als auch IPv6-Adressen unterstützt.
@@ -60,6 +62,7 @@ POST
 |===
 
 
+[[delete-access-endpoints]]
 == Löschen von Zugriffsendpunkten
 
 Sie können einen bestimmten Zugriffsendpunkt mit der folgenden Methode löschen.  Sie müssen den Zugriffsendpunktschlüssel als Eingabeparameter angeben, um einen bestimmten Zugriffsendpunkt zu löschen.
@@ -79,6 +82,7 @@ LÖSCHEN
 |===
 
 
+[[modify-access-endpoints]]
 == Zugriffsendpunkte ändern
 
 Sie können einen Zugriffsendpunkt ändern und seine Eigenschaften aktualisieren, indem Sie die folgende Methode verwenden.  Sie müssen den Zugriffsendpunktschlüssel angeben, um einen bestimmten Zugriffsendpunkt zu ändern.  Sie müssen außerdem die Eigenschaft, die Sie aktualisieren möchten, zusammen mit ihrem Wert eingeben.

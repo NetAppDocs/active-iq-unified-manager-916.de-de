@@ -15,6 +15,7 @@ Für einige gängige Leistungsindikatoren, wie etwa IOPS und MB/s, können Schwe
 
 
 
+[[available-performance-counters]]
 == Verfügbare Leistungsindikatoren
 
 |===

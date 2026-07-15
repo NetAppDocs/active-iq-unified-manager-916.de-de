@@ -89,6 +89,7 @@ Standardwert: 1 h
 |===
 
 
+[[output-sample-for-metrics-apis]]
 == Ausgabebeispiel für Metrik-APIs
 
 Zum Beispiel die `/datacenter/cluster/nodes/\{key}/metrics` Die API ruft (unter anderem) die folgenden Details für einen Knoten ab:
@@ -166,6 +167,7 @@ NOTE: Das 95. Perzentil im Zusammenfassungswert gibt an, dass 95 % der für den 
 ----
 
 
+[[output-sample-for-analytics-apis]]
 == Ausgabebeispiel für Analyse-APIs
 
 Zum Beispiel die `/datacenter/cluster/nodes/analytics` Die API ruft (unter anderem) die folgenden Werte für alle Knoten ab:
@@ -208,6 +210,7 @@ Zum Beispiel die `/datacenter/cluster/nodes/analytics` Die API ruft (unter ander
 ----
 
 
+[[list-of-the-available-apis]]
 == Liste der verfügbaren APIs
 
 Die folgende Tabelle beschreibt die `/metrics` Und `/analytics` APIs im Detail.

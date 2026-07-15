@@ -15,6 +15,7 @@ Statusereignisse zur Volumeverschiebung informieren Sie über den Status Ihrer V
 
 
 
+[[impact-area-capacity]]
 == Wirkungsbereich: Kapazität
 
 |===

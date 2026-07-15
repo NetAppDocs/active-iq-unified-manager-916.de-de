@@ -15,6 +15,7 @@ Netzteilereignisse liefern Ihnen Informationen zum Status Ihrer Hardware, sodass
 
 
 
+[[impact-area-availability]]
 == Wirkungsbereich: Verfügbarkeit
 
 |===

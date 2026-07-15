@@ -28,6 +28,7 @@ Die Seite „Workloads“ enthält die folgenden zwei Abschnitte:
 
 
 
+[[workloads-overview-section]]
 == Abschnitt „Workloads – Übersicht“
 
 Der Abschnitt „Workloadsübersicht“ bietet auf einen Blick zusammengefasste Informationen zu den Speicher-Workloads.  Der Status der Speicher-Workloads wird basierend auf zugewiesenen und nicht zugewiesenen Performance-Service-Levels angezeigt.
@@ -54,6 +55,7 @@ Der Unterabschnitt „Konformität nach Leistungsserviceleveln“ zeigt die Gesa
 
 
 
+[[data-center-overview-section]]
 == Abschnitt „Übersicht über das Rechenzentrum“
 
 Der Abschnitt „Rechenzentrumsübersicht“ stellt die verfügbare und genutzte Kapazität sowie die IOPS für alle Cluster im Rechenzentrum grafisch dar.  Mithilfe dieser Daten sollten Sie die Kapazität und IOPS der Speicher-Workloads verwalten.  Der Abschnitt zeigt außerdem die folgenden Informationen zu den Speicherarbeitslasten aller Cluster an:

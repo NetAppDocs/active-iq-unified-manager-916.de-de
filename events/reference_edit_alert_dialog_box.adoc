@@ -15,6 +15,7 @@ Sie können Alarmeigenschaften wie die Ressource, mit der der Alarm verknüpft i
 
 
 
+[[name]]
 == Name
 
 In diesem Bereich können Sie den Namen und die Beschreibung der Warnung bearbeiten.
@@ -35,6 +36,7 @@ Ermöglicht Ihnen, den Alarm zu aktivieren oder zu deaktivieren.
 
 
 
+[[resources]]
 == Ressourcen
 
 In diesem Bereich können Sie eine einzelne Ressource auswählen oder die Ressourcen basierend auf einer dynamischen Regel gruppieren, für die Sie den Alarm auslösen möchten.  Sie können nach Ressourcen suchen, indem Sie einen Ressourcentyp aus der Dropdown-Liste auswählen, oder Sie können den genauen Ressourcennamen angeben, um eine bestimmte Ressource anzuzeigen.
@@ -57,6 +59,7 @@ Die Registerkarte „Ausschließen“ wird nur angezeigt, wenn Sie alle Ressourc
 
 
 
+[[events]]
 == Veranstaltungen
 
 In diesem Bereich können Sie die Ereignisse auswählen, für die Sie die Warnungen auslösen möchten.  Sie können eine Warnung für Ereignisse basierend auf einem bestimmten Schweregrad oder für eine Reihe von Ereignissen auslösen.
@@ -73,6 +76,7 @@ Ermöglicht Ihnen die Auswahl von Ereignissen, deren Name die angegebenen Zeiche
 
 
 
+[[actions]]
 == Aktionen
 
 In diesem Bereich können Sie die Benachrichtigungsmethode und die Benachrichtigungshäufigkeit festlegen.
@@ -106,6 +110,7 @@ Ermöglicht Ihnen, der Warnung ein Skript zuzuordnen.  Dieses Skript wird ausgef
 
 
 
+[[command-buttons]]
 == Befehlsschaltflächen
 
 * *Speichern*

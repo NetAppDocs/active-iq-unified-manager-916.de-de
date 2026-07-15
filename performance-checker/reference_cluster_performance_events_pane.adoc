@@ -15,6 +15,7 @@ Im Bereich „Cluster-Leistungsereignisse“ werden Leistungsstatistiken und all
 
 
 
+[[all-events-on-this-cluster-pane]]
 == Alle Ereignisse in diesem Clusterbereich
 
 Im Bereich „Alle Ereignisse in diesem Cluster“ werden alle aktiven Cluster-Leistungsereignisse der letzten 72 Stunden angezeigt.  Ganz links wird die Gesamtzahl der aktiven Ereignisse angezeigt. Diese Zahl stellt die Summe aller neuen und bestätigten Ereignisse für alle Speicherobjekte in diesem Cluster dar.  Sie können auf den Link „Gesamtzahl aktiver Ereignisse“ klicken, um zur Seite „Ereignisinventar“ zu navigieren, die gefiltert ist, um diese Ereignisse anzuzeigen.
@@ -37,6 +38,7 @@ Sie können kritische Ereignisse und Warnereignisse im Leistungsdiagramm „Gesa
 
 
 
+[[counter-panels]]
 == Thekenpaneele
 
 Die Zählerfelder zeigen die Clusteraktivität und Leistungsereignisse der letzten 72 Stunden an und umfassen die folgenden Zähler:

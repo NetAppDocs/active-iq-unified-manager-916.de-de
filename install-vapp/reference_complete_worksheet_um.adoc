@@ -15,6 +15,7 @@ Bevor Sie Unified Manager installieren und konfigurieren, sollten Sie bestimmte 
 
 
 
+[[unified-manager-installation-information]]
 == Unified Manager-Installationsinformationen
 
 Die zur Installation von Unified Manager erforderlichen Details.
@@ -85,6 +86,7 @@ Wartungsbenutzerkennwort
 |===
 
 
+[[unified-manager-configuration-information]]
 == Unified Manager-Konfigurationsinformationen
 
 Die Details zur Konfiguration von Unified Manager nach der Installation.  Einige Werte sind je nach Ihrer Konfiguration optional.
@@ -186,6 +188,7 @@ SNMP-Port
 |===
 
 
+[[cluster-information]]
 == Cluster-Informationen
 
 Die Details für die Speichersysteme, die Sie mit Unified Manager verwalten.

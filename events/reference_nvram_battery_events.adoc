@@ -15,6 +15,7 @@ NVRAM Batterieereignisse liefern Ihnen Informationen zum Status Ihrer Batterien,
 
 
 
+[[impact-area-availability]]
 == Wirkungsbereich: Verfügbarkeit
 
 |===

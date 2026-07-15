@@ -24,12 +24,14 @@ Einige der unten aufgeführten Bedienfelder werden je nach Ihrer Konfiguration a
 ====
 
 
+[[management-actions-panel]]
 == Bereich „Verwaltungsaktionen“
 
 Es gibt bestimmte Probleme, die Unified Manager gründlich diagnostizieren und eine einzige Lösung bereitstellen kann.  Sofern verfügbar, werden diese Lösungen in diesem Bereich mit der Schaltfläche *Fix It* oder *Fix All* angezeigt.  Sie können diese Probleme sofort über Unified Manager beheben, anstatt ONTAP System Manager oder die ONTAP CLI verwenden zu müssen.  Um alle Ausgaben anzuzeigen, klicken Sie auf „Anzeigen“link:concept_fix_ontap_issues_directly_from_unified_manager.html["Beheben Sie ONTAP -Probleme direkt vom Unified Manager aus"] für weitere Informationen.
 
 
 
+[[capacity-panel]]
 == Kapazitätspanel
 
 Beim Anzeigen aller Cluster zeigt dieses Fenster die physisch genutzte Kapazität (nach Anwendung der Einsparungen bei der Speichereffizienz) und die physisch verfügbare Kapazität (ohne potenzielle Einsparungen bei der Speichereffizienz) für jeden Cluster, die Anzahl der Tage bis zur voraussichtlichen Volllast der Festplatten und das Datenreduktionsverhältnis (ohne Snapshot-Kopien) basierend auf den konfigurierten ONTAP Einstellungen zur Speichereffizienz an.  Außerdem wird die genutzte Kapazität für alle konfigurierten Cloud-Ebenen aufgelistet.  Durch Klicken auf das Balkendiagramm gelangen Sie zur Aggregate-Inventarseite für diesen Cluster.  Wenn Sie auf den Text „Tage bis zur Vollauslastung“ klicken, wird eine Meldung angezeigt, die das Aggregat mit der geringsten Anzahl verbleibender Kapazitätstage identifiziert. Klicken Sie auf den Aggregatnamen, um weitere Details anzuzeigen.
@@ -38,6 +40,7 @@ Beim Anzeigen eines einzelnen Clusters zeigt dieses Fenster die physisch genutzt
 
 
 
+[[performance-capacity-panel]]
 == Leistungskapazitätspanel
 
 Beim Anzeigen aller Cluster zeigt dieses Fenster den Leistungskapazitätswert für jeden Cluster (Durchschnittswert der letzten Stunde) und die Anzahl der Tage an, bis die Leistungskapazität die Obergrenze erreicht (basierend auf der täglichen Wachstumsrate).  Durch Klicken auf das Balkendiagramm gelangen Sie zur Knotenbestandsseite für diesen Cluster.  Beachten Sie, dass auf der Seite „Knoteninventar“ die durchschnittliche Leistungskapazität der letzten 72 Stunden angezeigt wird.  Wenn Sie auf den Text „Tage bis zur Volllast“ klicken, wird eine Meldung angezeigt, die den Knoten mit der geringsten Anzahl verbleibender Tage für die Leistungskapazität identifiziert. Klicken Sie auf den Knotennamen, um weitere Details anzuzeigen.
@@ -46,18 +49,21 @@ Beim Anzeigen eines einzelnen Clusters zeigt dieses Fenster den Prozentsatz der 
 
 
 
+[[workload-iops-panel]]
 == Arbeitslast-IOPS-Panel
 
 Beim Anzeigen eines einzelnen Clusters zeigt dieses Fenster die Gesamtzahl der Workloads an, die derzeit in einem bestimmten IOPS-Bereich ausgeführt werden, und gibt die Anzahl für jeden Datenträgertyp an, wenn Sie mit dem Cursor über das Diagramm fahren.
 
 
 
+[[workload-performance-panel]]
 == Bereich „Arbeitslastleistung“
 
 In diesem Bereich wird die Gesamtzahl der konformen und nicht konformen Workloads angezeigt, die jeder Performance Service Level (PSL)-Richtlinie zugewiesen sind.  Außerdem wird die Anzahl der Workloads angezeigt, denen keine PSL zugewiesen ist.  Durch Klicken auf ein Balkendiagramm gelangen Sie zu den entsprechenden Arbeitslasten, die dieser Richtlinie auf der Seite „Arbeitslasten“ zugewiesen sind.  Wenn Sie auf die Zahl hinter dem Balkendiagramm klicken, gelangen Sie zu den konformen und nicht konformen Arbeitslasten, die dieser Richtlinie zugewiesen sind.
 
 
 
+[[security-panel]]
 == Sicherheitspanel
 
 Das Sicherheitsfenster zeigt den allgemeinen Sicherheitsstatus für alle Cluster oder einen einzelnen Cluster an, je nach Ihrer aktuellen Ansicht.  Dieses Fenster zeigt Folgendes an:
@@ -75,6 +81,7 @@ Die Einhaltung basiert auf der https://www.netapp.com/pdf.html?item=/media/10674
 
 
 
+[[data-protection-panel]]
 == Datenschutzpanel
 
 In diesem Bereich wird die Datenschutzzusammenfassung für einen einzelnen oder alle Cluster in einem Rechenzentrum angezeigt.  Es zeigt die Gesamtzahl der Datenschutzereignisse, MetroCluster -Ereignisse und die Anzahl der aktiven Ereignisse an, die in den letzten 24 Stunden in ONTAP ausgelöst wurden.  Wenn Sie auf den Link jedes dieser Ereignisse klicken, gelangen Sie zur Seite mit den Ereignisdetails.  Sie können auf den Link *Alle anzeigen* klicken, um alle aktiven Schutzereignisse auf der Inventarseite der Ereignisverwaltung anzuzeigen.  Das Bedienfeld zeigt Folgendes an:
@@ -96,6 +103,7 @@ Weitere Informationen finden Sie unter link:../data-protection/view-protection-s
 
 
 
+[[usage-overview-panel]]
 == Bedienfeld „Nutzungsübersicht“
 
 Beim Anzeigen aller Cluster können Sie die Cluster nach den höchsten IOPS, dem höchsten Durchsatz (MB/s) oder der höchsten genutzten physischen Kapazität sortiert anzeigen.

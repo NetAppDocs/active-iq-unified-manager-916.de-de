@@ -15,6 +15,7 @@ Serviceprozessorereignisse liefern Ihnen Informationen zum Status Ihres Prozesso
 
 
 
+[[impact-area-availability]]
 == Wirkungsbereich: Verfügbarkeit
 
 |===

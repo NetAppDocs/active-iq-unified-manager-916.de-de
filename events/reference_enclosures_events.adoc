@@ -15,6 +15,7 @@ Gehäuseereignisse liefern Ihnen Informationen zum Status der Festplattengehäus
 
 
 
+[[impact-area-availability]]
 == Wirkungsbereich: Verfügbarkeit
 
 |===
@@ -72,6 +73,7 @@ Warnung
 |===
 
 
+[[impact-area-configuration]]
 == Wirkungsbereich: Konfiguration
 
 |===

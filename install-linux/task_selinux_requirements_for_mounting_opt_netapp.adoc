@@ -17,6 +17,7 @@ Wenn Sie planen, `/opt/netapp` oder `/opt/netapp/data` von einem anderen Ort als
 
 
 
+[[configure-the-selinux-context-when-optnetappdata-is-mounted]]
 == Konfigurieren Sie den SELinux-Kontext, wenn `/opt/netapp/data` ist montiert
 
 Wenn Sie montiert haben `/opt/netapp/data` in Ihrem System und SELinux ist eingestellt auf `Enforcing` , stellen Sie sicher, dass der SELinux-Kontexttyp für `/opt/netapp/data` ist eingestellt auf `mysqld_db_t` , das Standardkontextelement für den Speicherort der Datenbankdateien.
@@ -66,6 +67,7 @@ drwxr-xr-x. mysql root unconfined_u:object_r:mysqld_db_t:s0 /opt/netapp/data/
 ----
 
 
+[[configure-the-selinux-context-when-optnetapp-is-mounted-and-optnetappdata-is-also-mounted-separately]]
 == Konfigurieren Sie den SELinux-Kontext, wenn `/opt/netapp` montiert ist und `/opt/netapp/data/` wird auch separat montiert
 
 In diesem Szenario sollten Sie zunächst den Kontext für `/opt/netapp/data/` wie im vorherigen Abschnitt beschrieben.  Nachdem Sie den richtigen Kontext für `/opt/netapp/data/` , stellen Sie sicher, dass das übergeordnete Verzeichnis `/opt/netapp` hat den SELinux-Kontext nicht auf `file_t` .
@@ -125,6 +127,7 @@ drwxr-xr-x. mysql root unconfined_u:object_r:usr_t:s0 /opt/netapp
 ----
 
 
+[[configure-the-selinux-context-when-optnetapp-is-mounted-and-optnetappdata-is-not-mounted-separately]]
 == Konfigurieren Sie den SELinux-Kontext, wenn `/opt/netapp` montiert ist und `/opt/netapp/data/` wird nicht separat montiert
 
 Wenn Sie montiert haben `/opt/netapp` in Ihrem System und SELinux ist eingestellt auf `Enforcing` , stellen Sie sicher, dass der SELinux-Kontexttyp für `/opt/netapp` ist eingestellt auf `mysqld_db_t` , das Standardkontextelement für den Speicherort der Datenbankdateien.

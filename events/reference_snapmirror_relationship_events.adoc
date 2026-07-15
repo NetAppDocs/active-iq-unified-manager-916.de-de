@@ -15,6 +15,7 @@ SnapMirror Beziehungsereignisse liefern Ihnen Informationen zum Status Ihrer asy
 
 
 
+[[impact-area-protection]]
 == Aufprallbereich: Schutz
 
 Ein Sternchen (*) kennzeichnet EMS-Ereignisse, die in Unified Manager-Ereignisse konvertiert wurden.

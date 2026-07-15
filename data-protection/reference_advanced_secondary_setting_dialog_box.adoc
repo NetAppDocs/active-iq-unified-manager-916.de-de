@@ -72,6 +72,7 @@ Die Speicherplatzgarantie ist standardmäßig auf Volume eingestellt.
 
 
 
+[[command-buttons]]
 == Befehlsschaltflächen
 
 Mit den Befehlsschaltflächen können Sie die folgenden Aufgaben ausführen:

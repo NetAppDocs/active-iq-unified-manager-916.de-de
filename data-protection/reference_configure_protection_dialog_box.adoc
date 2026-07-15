@@ -15,6 +15,7 @@ Sie können das Dialogfeld „Schutz konfigurieren“ verwenden, um SnapMirror u
 
 
 
+[[source-tab]]
 == Registerkarte „Quelle“
 
 * *Topologieansicht*
@@ -65,6 +66,7 @@ Zeigt die Snapshot-Kopie an, die für die Baseline-Übertragung verwendet wird. 
 
 
 
+[[snapmirror-tab]]
 == Registerkarte „SnapMirror “
 
 Ermöglicht Ihnen, beim Erstellen einer SnapMirror -Beziehung einen Zielcluster, eine Storage Virtual Machine (SVM) und ein Aggregat für eine Schutzbeziehung sowie eine Namenskonvention für Ziele anzugeben.  Sie können auch eine SnapMirror -Richtlinie und einen Zeitplan angeben.
@@ -157,6 +159,7 @@ Gibt die ONTAP SnapMirror -Richtlinie für die Beziehung an.  Zu den verfügbare
 
 
 
+[[snapvault-tab]]
 == Registerkarte „SnapVault “
 
 Ermöglicht Ihnen, beim Erstellen einer SnapVault -Beziehung einen sekundären Cluster, SVM und ein Aggregat für eine Schutzbeziehung sowie eine Namenskonvention für sekundäre Volumes anzugeben.  Sie können auch eine SnapVault -Richtlinie und einen Zeitplan angeben.
@@ -249,6 +252,7 @@ Gibt den ONTAP SnapVault -Zeitplan für die Beziehung an.  Zu den verfügbaren Z
 
 
 
+[[command-buttons]]
 == Befehlsschaltflächen
 
 Mit den Befehlsschaltflächen können Sie die folgenden Aufgaben ausführen:

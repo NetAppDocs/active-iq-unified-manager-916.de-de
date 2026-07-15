@@ -21,4 +21,4 @@ Diese Active IQ -Ereignisse überschneiden sich nicht mit vorhandenen Unified Ma
 
 Weitere Informationen zum Aktivieren von Plattformereignissen finden Sie unterlink:../config/concept_active_iq_platform_events.html["Aktivieren von Active IQ Portalereignissen"] .  Weitere Informationen zum Hochladen von Regeldateien finden Sie unterlink:../events/task_upload_new_active_iq_rules_file.html["Hochladen einer neuen Active IQ Regeldatei"] .
 
-NetApp Active IQ ist ein Cloud-basierter Service, der prädiktive Analysen und proaktiven Support zur Optimierung des Speichersystembetriebs in der NetApp Hybrid Cloud bietet.  Sehen https://www.netapp.com/us/products/data-infrastructure-management/active-iq.aspx["NetApp Active IQ"] für weitere Informationen.
+NetApp Active IQ ist ein cloudbasierter Service, der prädiktive Analysen und proaktiven Support zur Optimierung des Speichersystembetriebs in der NetApp Hybrid Cloud bietet. Siehe  https://docs.netapp.com/us-en/active-iq/index.html["NetApp Active IQ"^] für weitere Informationen.

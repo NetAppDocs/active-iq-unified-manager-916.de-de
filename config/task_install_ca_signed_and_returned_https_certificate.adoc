@@ -41,6 +41,7 @@ Weitere Informationen finden Sie unterlink:concept_install_https_certificate_gen
 
 
 
+[[example-certificate-chain]]
 == Beispiel einer Zertifikatskette
 
 Das folgende Beispiel zeigt, wie die Zertifikatskettendatei aussehen könnte:

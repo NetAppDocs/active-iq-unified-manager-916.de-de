@@ -15,6 +15,7 @@ Datenträgerereignisse liefern Ihnen Informationen zum Status von Datenträgern,
 
 
 
+[[impact-area-availability]]
 == Wirkungsbereich: Verfügbarkeit
 
 |===

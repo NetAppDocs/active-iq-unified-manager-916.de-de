@@ -26,6 +26,7 @@ Wenn Sie ein Objekt in einen anderen Cluster verschieben, wird die benutzerdefin
 ====
 
 
+[[threshold-policy-functionality-during-ha-takeover-and-giveback]]
 == Schwellenwertrichtlinienfunktionalität während der HA-Übernahme und -Rückgabe
 
 Wenn in einer Hochverfügbarkeitskonfiguration (HA) ein Übernahme- oder Rückgabevorgang stattfindet, behalten Objekte, die von einem Knoten zum anderen verschoben werden, ihre Schwellenwertrichtlinien auf dieselbe Weise bei wie bei manuellen Verschiebungsvorgängen.  Da Unified Manager alle 15 Minuten nach Änderungen an der Clusterkonfiguration sucht, werden die Auswirkungen der Umstellung auf den neuen Knoten erst bei der nächsten Abfrage der Clusterkonfiguration erkannt.
@@ -37,12 +38,14 @@ Wenn innerhalb des 15-minütigen Erfassungszeitraums für Konfigurationsänderun
 ====
 
 
+[[threshold-policy-functionality-during-aggregate-relocation]]
 == Schwellenwertrichtlinienfunktionalität während der Aggregatverlagerung
 
 Wenn Sie ein Aggregat von einem Knoten zu einem anderen Knoten verschieben, indem Sie `aggregate relocation start` Befehl werden sowohl einzelne als auch kombinierte Schwellenwertrichtlinien für alle Objekte beibehalten und der Knotenteil der Schwellenwertrichtlinie wird auf den neuen Knoten angewendet.
 
 
 
+[[threshold-policy-functionality-during-metrocluster-switchover]]
 == Schwellenwertrichtlinienfunktionalität während der MetroCluster -Umschaltung
 
 Objekte, die in einer MetroCluster -Konfiguration von einem Cluster zu einem anderen Cluster verschoben werden, behalten ihre benutzerdefinierten Schwellenwertrichtlinieneinstellungen nicht bei.  Bei Bedarf können Sie Schwellenwertrichtlinien auf die Volumes und LUNs anwenden, die in den Partnercluster verschoben wurden.  Nachdem ein Objekt wieder in seinen ursprünglichen Cluster verschoben wurde, wird die benutzerdefinierte Schwellenwertrichtlinie automatisch erneut angewendet.

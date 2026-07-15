@@ -17,6 +17,7 @@ Gruppen unterstützen eindeutige Gruppenaktionstypen.  Sie können eine Gruppe m
 
 
 
+[[example-of-unique-group-actions]]
 == Beispiel für einzigartige Gruppenaktionen
 
 Stellen Sie sich ein Volume A vor, das zu den Gruppen G1 und G2 gehört. Für diese Gruppen sind die folgenden Volume-Integritätsschwellenwert-Gruppenaktionen konfiguriert:

@@ -17,6 +17,7 @@ Unified Manager überwacht die E/A-Latenz (Reaktionszeit) und IOPS (Operationen)
 
 
 
+[[event-analysis]]
 == Ereignisanalyse
 
 Unified Manager führt die folgenden Analysen durch und verwendet dabei die Leistungsstatistiken der letzten 15 Tage, um die Opfer-Workloads, die Bully-Workloads und die an einem Ereignis beteiligte Clusterkomponente zu identifizieren:
@@ -49,6 +50,7 @@ Ein einzelnes Volume kann gleichzeitig an mehreren Ereignissen beteiligt sein.
 ====
 
 
+[[event-state]]
 == Ereignisstatus
 
 Ereignisse können sich in einem der folgenden Zustände befinden:
@@ -65,12 +67,14 @@ Zeigt an, dass das Ereignis nicht mehr aktiv ist.  Das Problem, das das Ereignis
 
 
 
+[[event-notification]]
 == Ereignisbenachrichtigung
 
 Die Ereignisse werden auf der Dashboard-Seite und auf vielen anderen Seiten der Benutzeroberfläche angezeigt und Benachrichtigungen zu diesen Ereignissen werden an angegebene E-Mail-Adressen gesendet.  Auf der Seite „Ereignisdetails“ und auf der Seite „Arbeitslastanalyse“ können Sie detaillierte Analyseinformationen zu einem Ereignis anzeigen und Vorschläge zur Lösung des Ereignisses erhalten.
 
 
 
+[[event-interaction]]
 == Ereignisinteraktion
 
 Auf der Seite „Ereignisdetails“ und auf der Seite „Arbeitslastanalyse“ können Sie auf folgende Weise mit Ereignissen interagieren:

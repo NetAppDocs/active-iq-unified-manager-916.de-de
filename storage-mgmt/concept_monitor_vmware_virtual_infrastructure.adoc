@@ -43,6 +43,7 @@ image::../media/vm_workflow.gif[VM-Workflow]
 
 
 
+[[what-is-not-supported]]
 == Was wird nicht unterstützt?
 
 * Datenspeicher außerhalb von ONTAP , die den vCenter Server-Instanzen zugeordnet sind, werden von Unified Manager nicht unterstützt.  VMs mit virtuellen Datenträgern auf diesen Datenspeichern werden ebenfalls nicht unterstützt.

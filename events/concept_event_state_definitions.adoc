@@ -41,6 +41,7 @@ Sie können ein veraltetes Ereignis weder bestätigen noch beheben.
 
 
 
+[[example-of-different-states-of-an-event]]
 == Beispiel für verschiedene Zustände eines Ereignisses
 
 Die folgenden Beispiele veranschaulichen die manuellen und automatischen Ereignisstatusänderungen.

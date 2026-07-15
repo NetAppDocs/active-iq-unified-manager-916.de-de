@@ -26,6 +26,7 @@ Sie können SVMs auf drei Arten zuordnen:
 
 
 
+[[create-storage-vm-associations]]
 == Erstellen von Speicher-VM-Zuordnungen
 
 Der Assistent „Zuordnungen virtueller Speichermaschinen erstellen“ ermöglicht Partnerschutzanwendungen, eine Quellspeicher-VM mit einer Zielspeicher-VM zur Verwendung mit SnapMirror und SnapVault -Beziehungen zu verknüpfen.  Partneranwendungen verwenden diese Zuordnungen zum Zeitpunkt der ersten Bereitstellung von Zielvolumes, um zu bestimmen, welche Ressourcen ausgewählt werden sollen.dd
@@ -74,6 +75,7 @@ Wählen Sie diese Option, wenn Sie eine Zuordnung zwischen einer Quellspeicher-V
 
 
 
+[[delete-storage-vm-associations]]
 == Speicher-VM-Zuordnungen löschen
 
 Sie können Speicher-VM-Zuordnungen für Partneranwendungen löschen, um die sekundäre Bereitstellungsbeziehung zwischen Quell- und Ziel-Speicher-VM zu entfernen. Dies können Sie beispielsweise tun, wenn die Ziel-Speicher-VM voll ist und Sie neue Speicher-VM-Schutzzuordnungen erstellen möchten.

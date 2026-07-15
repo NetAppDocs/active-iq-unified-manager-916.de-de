@@ -15,6 +15,7 @@ Sie können das Dialogfeld „Wiederherstellen“ verwenden, um Daten aus einer 
 
 
 
+[[restore-from]]
 == Wiederherstellen von
 
 Im Bereich „Wiederherstellen von“ können Sie angeben, von wo aus Sie die Daten wiederherstellen möchten.
@@ -35,6 +36,7 @@ Standardmäßig werden maximal 995 Objekte in der Liste angezeigt.  Sie können 
 
 
 
+[[select-items-to-restore]]
 == Auswählen der wiederherzustellenden Elemente
 
 Im Bereich „Elemente zum Wiederherstellen auswählen“ können Sie entweder das gesamte Volume oder bestimmte Dateien und Ordner auswählen, die Sie wiederherstellen möchten.  Sie können maximal 10 Dateien, Ordner oder eine Kombination aus beidem auswählen.  Wenn die maximale Anzahl von Elementen ausgewählt ist, werden die Kontrollkästchen zur Elementauswahl deaktiviert.
@@ -65,6 +67,7 @@ Sie können NTFS-Dateistreams nicht wiederherstellen.
 ====
 
 
+[[restore-to]]
 == Wiederherstellen in
 
 Im Bereich „Wiederherstellen nach“ können Sie angeben, wo Sie die Daten wiederherstellen möchten.
@@ -92,6 +95,7 @@ Wenn diese Option aktiviert ist, bleibt die Struktur der Originaldatei oder des 
 
 
 
+[[command-buttons]]
 == Befehlsschaltflächen
 
 Mit den Befehlsschaltflächen können Sie die folgenden Aufgaben ausführen:
